@@ -32,10 +32,10 @@ body#tinymce.wp-editor {
 	@import "partials/mixins";
 
 	width: 731px;
-	font-family: $lato;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
+	color: $copy-color;
   -webkit-font-smoothing: antialiased;
 
   /*********************
@@ -151,7 +151,7 @@ body#tinymce.wp-editor {
 			padding: 0 0 0 0.75em;
 			border-left: 3px solid $blue;
 			font-style: italic;
-			color: $meta-gray;
+			color: #9fa6b4;
 
 			&:before {}
 

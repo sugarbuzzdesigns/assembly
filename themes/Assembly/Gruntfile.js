@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['jshint']);
+	grunt.registerTask('default', ['jshint', 'sassBuild']);
 	grunt.registerTask('sassBuild', ['sass', 'cssmin']);
 
 	require('load-grunt-tasks')(grunt);

@@ -39,6 +39,10 @@ box-shadow: 0 0 4px rgba(0,0,0,0.3);
     @return rgba(255,255,255,$opacity);
 }
 
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
+
 
 /*********************
 RESPONSIVE HELPER FUNCTION
