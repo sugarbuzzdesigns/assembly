@@ -7,8 +7,9 @@
 
  		<?php echo file_get_contents( get_template_directory_uri() . '/library/images/svg/down-arrow-mobile.svg' ) ?>
 	</section>
-	<section>
-
+	<section id="company-statement">
+		<?php echo file_get_contents( get_template_directory_uri() . '/library/images/svg/bg-shape-1.svg' ) ?>
+		<p>insert company statement sit amet, consectetur lala adipiscing, sed do eiusmod tempor incididunt ut idunt ut labore et dolore magna labore et dolore magna</p>
 	</section>
 </div>
 

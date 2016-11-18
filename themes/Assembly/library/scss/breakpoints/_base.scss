@@ -65,6 +65,8 @@ BASIC ELEMENT STYLES
 
 p {
 	font-size: rem(11);
+	line-height: rem(19);
+	font-family: 'roboto_monoregular';
 }
 
 blockquote {
@@ -221,6 +223,13 @@ HEADER STYLES
 }
 
 /*********************
+GENERIC SVG SHAPES
+**********************/
+.svg-shape-1 {
+	width: 200px;
+}
+
+/*********************
 HOME PAGE STYLES
 **********************/
 
@@ -261,9 +270,26 @@ HOME PAGE STYLES
 	    left: 50%;
 	    transform: translate(-50%,0);
 	}
+
+	#company-statement {
+		position: relative;
+		padding-top: 60px;
+
+		.svg-shape-1 {
+		    position: absolute;
+		    left: 50%;
+		    transform: translate(-50%, 0);
+		}
+
+		p {
+		    position: relative;
+		    z-index: 1;
+		    width: 78%;
+		    margin: 25px auto 0;
+		}
+	}
+
 }
-
-
 
 /*********************
 NAVIGATION STYLES
