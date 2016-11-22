@@ -165,8 +165,19 @@ h5, .h5 {
 /*********************
 NAVIGATION STYLES
 *********************/
-nav {
+#main-menu {
 	display: none;
+	background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.menu-open {
+	#main-menu {
+		display: block;
+	}
 }
 
 /*********************
@@ -212,7 +223,8 @@ HEADER STYLES
 	}
 }
 
-.menu-icon {
+.main-menu-btn {
+	display: block;
 	float: right;
 	margin-top: -20px;
 }

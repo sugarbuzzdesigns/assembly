@@ -26,6 +26,14 @@ a mess. Let's clean it up by
 removing all the junk we don't
 need.
 *********************/
+// Use minified libraries if SCRIPT_DEBUG is turned off
+if(defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG) {
+	$suffix = '';
+	$dir = 'build';
+} else {
+	$suffix = '.min';
+	$dir = 'dist';
+}
 
 function bones_head_cleanup() {
 	// category feeds
@@ -120,7 +128,7 @@ SCRIPTS & ENQUEUEING
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+  global $wp_styles, $suffix, $dir; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
   if (!is_admin()) {
 
@@ -139,7 +147,9 @@ function bones_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/scripts' . $suffix . '.js', array( 'jquery' ), '', true );
+		//adding scripts file in the footer
+		wp_register_script( 'bones-navigation', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.navigation' . $suffix . '.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -155,6 +165,7 @@ function bones_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'bones-navigation' );
 
 	}
 }
