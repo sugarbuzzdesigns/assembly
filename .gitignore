@@ -38,3 +38,4 @@ vendor
 .Trashes
 ehthumbs.db
 Thumbs.db
+.sass-cache/

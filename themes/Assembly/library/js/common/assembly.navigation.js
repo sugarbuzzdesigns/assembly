@@ -1,3 +1,6 @@
+/*!
+ * Assembly Menu Navigation
+ */
 var assembly = assembly || {};
 
 (function($){

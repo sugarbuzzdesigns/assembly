@@ -1381,7 +1381,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #7d7d7d;
-  background-color: #fff;
+  background-color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1391,12 +1391,15 @@ SOCIAL SPRITE
 *********************/
 .social {
   overflow: auto;
+  margin: 0;
 }
 .social li {
-  display: block;
-  float: left;
+  display: inline-block;
   margin: 0 10px 0 0;
   padding: 0;
+}
+.social li:last-child {
+  margin-right: 0;
 }
 .social li.instaram a {
   background-position: 0 0;
@@ -1411,13 +1414,18 @@ SOCIAL SPRITE
   display: block;
   height: 24px;
   width: 24px;
-  background: url(../../images/icons/social-sprite.png);
+  background: url(../../images/icons/social-sprite-light.png);
   background-size: cover;
 }
 
 /*********************
 BASIC ELEMENT STYLES
 **********************/
+img {
+  display: block;
+  max-width: 100%;
+}
+
 p {
   font-size: 0.6875rem;
   line-height: 1.1875rem;
@@ -1505,28 +1513,71 @@ h5, .h5 {
 }
 
 /*********************
-NAVIGATION STYLES
-*********************/
-#main-menu {
-  display: none;
-  background: #000;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
+BUTTONS
+**********************/
+button {
+  background: #8ed6db;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border: none;
+  padding: 19px 46px 13px;
 }
 
-.menu-open #main-menu {
-  display: block;
+/*********************
+NAVIGATION STYLES
+*********************/
+.main-menu {
+  background: #000;
+  position: absolute;
+  transition: transform 0.5s ease;
+  transform: translate3d(-100%, 0, 0);
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.menu-open .main-menu {
+  transform: translate3d(0, 0, 0);
+}
+
+/*********************
+VIDEO CONTENT
+**********************/
+.videos {
+  padding-bottom: 16%;
+}
+.videos .video-wrapper {
+  position: relative;
+}
+.videos .video-placeholder {
+  width: 100%;
+}
+.videos .video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
 }
 
 /*********************
 REUSEABLE BACKGROUNDS
 **********************/
 .mesh-bg {
+  position: absolute;
   height: 352px;
   width: 236px;
   background: url(../../images/backgrounds/dot-mesh-bg.png);
+}
+
+.mesh-bg.dark {
+  background: url(../../images/backgrounds/dot-mesh-dark-bg.png);
+}
+
+.mesh-bg.wide {
+  width: 261px;
 }
 
 /*********************
@@ -1540,29 +1591,102 @@ HEADER STYLES
   padding: 5% 6% 0 6%;
 }
 
-#logo {
+.logo {
   font-size: 0px;
+  float: left;
   margin: 0;
+  z-index: 1;
+  position: relative;
+  width: 32%;
+  padding-top: 2px;
 }
-#logo a {
+.logo a {
   color: #fff;
 }
-#logo .svg-logo {
-  width: 118px;
-  height: 22px;
+.logo .svg-logo {
+  width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
-#logo span {
+.logo span {
   font-size: 33px;
   display: inline-block;
   vertical-align: middle;
 }
 
 .main-menu-btn {
-  display: block;
   float: right;
-  margin-top: -20px;
+  width: 7%;
+  height: 5%;
+  position: relative;
+  margin: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.main-menu-btn span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+/* Icon 3 */
+.main-menu-btn span:nth-child(1) {
+  top: 0px;
+}
+
+.main-menu-btn span:nth-child(2), .main-menu-btn span:nth-child(3) {
+  top: 7px;
+}
+
+.main-menu-btn span:nth-child(4) {
+  top: 15px;
+}
+
+.menu-open .main-menu-btn span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu-open .main-menu-btn span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-open .main-menu-btn span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu-open .main-menu-btn span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 .logo-svg-icon {
@@ -1574,14 +1698,20 @@ HEADER STYLES
 GENERIC SVG SHAPES
 **********************/
 .svg-shape-1 {
-  width: 200px;
+  width: 143px;
+}
+
+/*********************
+SECTION STYLES
+**********************/
+section {
+  position: relative;
 }
 
 /*********************
 HOME PAGE STYLES
 **********************/
 .home section {
-  min-height: 100vh;
   background: #fff;
 }
 .home .landing {
@@ -1593,12 +1723,12 @@ HOME PAGE STYLES
   background-color: #000;
 }
 .home .landing .mesh-bg {
-  margin-left: 2%;
-  margin-top: 25%;
+  left: 2%;
+  top: 25%;
 }
 .home .landing h2 {
   color: #fff;
-  font-size: 2.063em;
+  font-size: 1.963em;
   line-height: 1.175em;
   margin: 0 0 0 8%;
   position: absolute;
@@ -1612,20 +1742,144 @@ HOME PAGE STYLES
   left: 50%;
   transform: translate(-50%, 0);
 }
-.home #company-statement {
+.home .company-statement {
   position: relative;
   padding-top: 60px;
+  padding-bottom: 83px;
 }
-.home #company-statement .svg-shape-1 {
+.home .company-statement .svg-shape-1 {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
-.home #company-statement p {
+.home .company-statement p {
   position: relative;
   z-index: 1;
   width: 78%;
   margin: 25px auto 0;
+}
+
+/*********************
+PROJECTS SECTION
+- Homepage
+**********************/
+.projects {
+  overflow: auto;
+  padding-top: 75px;
+}
+.projects .mesh-bg {
+  left: 2%;
+  top: 0%;
+}
+
+/*********************
+PROJECT THUMBS,
+EMPLOYEE THUMBS
+- Homepage
+**********************/
+.project {
+  position: relative;
+  font-family: 'gridnikregular';
+  width: 65%;
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 18%;
+  font-size: 0.75rem;
+  color: #221f20;
+}
+.project:nth-child(even) {
+  float: right;
+  margin-left: 0;
+  margin-right: 10%;
+}
+.project .project-img {
+  margin-bottom: 0.9375rem;
+}
+.project .project-img img {
+  max-width: 100%;
+}
+.project .project-title,
+.project .employee-name {
+  text-transform: uppercase;
+}
+.project .project-desc,
+.project .employee-title {
+  display: none;
+}
+.project .project-desc::before,
+.project .employee-title::before {
+  content: '|';
+  display: inline-block;
+  margin-right: 2px;
+}
+.project.group2 {
+  float: right;
+  margin-left: 0;
+  margin-right: 10%;
+}
+.project.group2:nth-child(even) {
+  float: left;
+  margin-left: 10%;
+  margin-right: 0;
+}
+
+/*********************
+EMPLOYEES
+**********************/
+.employees {
+  overflow: auto;
+  padding-bottom: 14%;
+}
+
+.employee {
+  width: 100%;
+  position: relative;
+  font-family: 'gridnikregular';
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.employee .col {
+  width: 55%;
+  float: left;
+}
+.employee .col + .col {
+  width: 45%;
+}
+.employee .employee-img {
+  padding-top: 6.125rem;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 100%;
+}
+.employee .employee-name {
+  text-transform: uppercase;
+}
+.employee .employee-name,
+.employee .employee-title {
+  display: block;
+  font-size: 0.6875rem;
+}
+.employee .employee-title {
+  display: none;
+}
+.employee .years-experience {
+  margin-bottom: 4.2rem;
+  margin-left: -0.5rem;
+}
+.employee .years-experience .num {
+  font-family: 'pangrambold';
+  color: #f0f0f0;
+  font-size: 10.375rem;
+  line-height: 7.9rem;
+  display: block;
+  overflow: hidden;
+}
+.employee .years-experience .text {
+  display: block;
+  transform: rotate(-90deg) translate(96%, 325%);
+  font-size: .625rem;
+  color: #d3d3d3;
+  text-transform: uppercase;
 }
 
 /*********************
@@ -1641,15 +1895,22 @@ and more scalable.
 .nav {
   border-bottom: 0;
   margin: 0;
+  padding-top: 4em;
+  padding-left: 2.1em;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
+.nav li {
+  margin-bottom: 0.6em;
+}
 .nav li a {
+  font-size: 1.25rem;
+  text-transform: lowercase;
+  font-family: 'pangrambold';
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 0.75em;
 }
 
 /* end .nav */
@@ -1659,13 +1920,43 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #000;
-  height: 160px;
-  padding: 34px 3% 0;
+  padding: 34px 3% 10%;
+  text-align: center;
 }
-.footer p {
-  margin: 0;
+.footer a[href*="contact"] {
+  color: #fff;
+  border: solid #d7d8da 1px;
+  text-decoration: none;
+  padding: 10px 20px 11px 20px;
+  font-family: 'pangrambold';
+  display: inline-block;
+}
+.footer .assembly-logo-icon {
+  display: block;
+  width: 33px;
+  margin: 12% auto 7%;
+}
+.footer .copyright {
+  margin: 0 0 7% 0;
+}
+.footer .copyright span {
+  display: block;
 }
 
+@media only screen and (min-width: 321px) {
+  /******************************************************************
+  Stylesheet: 321px and Up Stylesheet
+  
+  Phones larger than the iPhone 5 321px width
+  ******************************************************************/
+  .mesh-bg {
+    width: 261px;
+  }
+
+  .home .landing h2 {
+    font-size: 2.25rem;
+  }
+}
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

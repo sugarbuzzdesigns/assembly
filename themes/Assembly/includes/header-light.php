@@ -1,9 +1,14 @@
 <header class="light section-header">
-    <h1 id="logo">
+    <h1 class="logo">
         <a href="/">
             <!-- logo SVG file -->
-            <?php echo file_get_contents( get_template_directory_uri() . '/library/images/svg/full-logo.svg' ) ?>
+            <?php include __DIR__ . '/../library/images/svg/full-logo.svg'; ?>
         </a>
     </h1>
-    <a class="main-menu-btn" href="#"><img class="menu-icon mobile-only" src="<?php echo get_template_directory_uri() ?>/library/images/icons/mobile-menu-icon.png" alt=""></a>
+	<div class="main-menu-btn">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 </header>

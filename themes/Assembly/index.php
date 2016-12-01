@@ -5,11 +5,108 @@
 		<h2>here today. remembered tomorrow.</h2>
 		<div class="mesh-bg"></div>
 
- 		<?php echo file_get_contents( get_template_directory_uri() . '/library/images/svg/down-arrow-mobile.svg' ) ?>
+ 		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
 	</section>
-	<section id="company-statement">
-		<?php echo file_get_contents( get_template_directory_uri() . '/library/images/svg/bg-shape-1.svg' ) ?>
+	<section class="company-statement">
+		<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
 		<p>insert company statement sit amet, consectetur lala adipiscing, sed do eiusmod tempor incididunt ut idunt ut labore et dolore magna labore et dolore magna</p>
+	</section>
+	<section class="projects">
+		<div class="mesh-bg dark wide"></div>
+		<div class="projects-wrapper">
+		<?php
+		$projectsArgs1 = array(
+			'post_type'  => 'project',
+			'posts_per_page'=> 2
+		);
+		// The Query
+		$the_query = new WP_Query( $projectsArgs1 );
+
+		// The Loop
+		if ( $the_query->have_posts() ) {
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post();
+		?>
+			<div class="project group1">
+				<div class="project-img">
+					<?php echo get_featured_image_html($post); ?>
+				</div>
+				<div class="project-info">
+					<span class="project-title"><?php echo get_the_title(); ?></span>
+					<span class="project-desc"><?php echo get_the_title(); ?></span>
+				</div>
+			</div>
+		<?php
+			}
+			/* Restore original Post Data */
+			wp_reset_postdata();
+		}
+		?>
+		</div>
+	</section>
+	<section class="videos">
+		<div class="video-wrapper">
+			<div class="video">
+				<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder.jpg" alt="">
+				<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
+			</div>
+		</div>
+	</section>
+	<section class="employees">
+		<div class="employee">
+			<div class="col">
+				<div class="employee-img">
+					<img class="employee-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="">
+				</div>
+				<div class="employee-info">
+					<span class="employee-name">GORDON MACHIELSEN</span>
+					<span class="employee-title">Title Lorem Ipsum</span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="years-experience">
+					<span class="num">2</span>
+					<span class="num">6</span>
+					<span class="text">years experience</span>
+				</div>
+				<button type="button">about</button>
+			</div>
+		</div>
+	</section>
+	<section class="projects">
+		<div class="mesh-bg dark wide"></div>
+		<div class="projects-wrapper">
+		<?php
+		$projectsArgs2 = array(
+			'post_type'  => 'project',
+			'posts_per_page'=> 2,
+			'offset'=> 2,
+		);
+
+		// The Query
+		$the_query = new WP_Query( $projectsArgs2 );
+
+		// The Loop
+		if ( $the_query->have_posts() ) {
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post();
+		?>
+			<div class="project group2">
+				<div class="project-img">
+					<?php echo get_featured_image_html($post); ?>
+				</div>
+				<div class="project-info">
+					<span class="project-title"><?php echo get_the_title(); ?></span>
+					<span class="project-desc"><?php echo get_the_title(); ?></span>
+				</div>
+			</div>
+		<?php
+			}
+			/* Restore original Post Data */
+			wp_reset_postdata();
+		}
+		?>
+		</div>
 	</section>
 </div>
 

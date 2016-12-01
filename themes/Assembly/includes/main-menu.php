@@ -1,4 +1,4 @@
-			<div id="main-menu">
+			<div class="main-menu">
 				<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu(array(
 					'container' => false,                           // remove nav container

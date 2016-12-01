@@ -19,6 +19,28 @@ URL: http://themble.com/bones/
 
 */
 
+require_once( 'mobile-detect.php' );
+
+$detect = new Mobile_Detect;
+
+if($detect->isMobile()){
+	$deviceType = 'mobile';
+}
+
+if($detect->isTablet()){
+	$deviceType = 'tablet';
+}
+
+if(!$detect->isTablet() && !$detect->isMobile()){
+	$deviceType = 'desktop';
+}
+
+if( $detect->isiOS() == '1'){
+	$isiOS = 'true';
+} else {
+	$isiOS = 'false';
+}
+
 /*********************
 WP_HEAD GOODNESS
 The default wordpress head is
@@ -100,6 +122,33 @@ function bones_remove_wp_ver_css_js( $src ) {
 	return $src;
 }
 
+// Remove jQuery migrate and default jQuery
+add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+
+function dequeue_jquery_migrate( &$scripts){
+	if(!is_admin()){
+		$scripts->remove( 'jquery');
+		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+	}
+}
+
+function my_deregister_scripts(){
+  wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+//Making jQuery Google API
+function modify_jquery() {
+	if (!is_admin()) {
+		// comment out the next two lines to load the local copy of jQuery
+		wp_deregister_script('jquery');
+	}
+}
+add_action('init', 'modify_jquery');
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 // remove injected CSS for recent comments widget
 function bones_remove_wp_widget_recent_comments_style() {
 	if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
@@ -128,18 +177,14 @@ SCRIPTS & ENQUEUEING
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
 
-  global $wp_styles, $suffix, $dir; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+  global $wp_styles, $suffix, $dir, $detect, $deviceType, $isiOS; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
   if (!is_admin()) {
-
-		// modernizr (without media query polyfill)
-		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-
 		// register main stylesheet
-		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/dist/style.min.css', array(), '', 'all' );
+		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/dist/css/style.min.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/dist/ie.min.css', array(), '' );
+		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/dist/css/ie.min.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -147,9 +192,10 @@ function bones_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/scripts' . $suffix . '.js', array( 'jquery' ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js', array(  ), '', true );
+		// echo get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js';
 		//adding scripts file in the footer
-		wp_register_script( 'bones-navigation', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.navigation' . $suffix . '.js', array( 'jquery' ), '', true );
+		// wp_register_script( 'bones-navigation', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.navigation' . $suffix . '.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -163,12 +209,57 @@ function bones_scripts_and_styles() {
 		using the google cdn. That way it stays cached
 		and your site will load faster.
 		*/
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'bones-js' );
-		wp_enqueue_script( 'bones-navigation' );
 
+		wp_enqueue_script( 'bones-js' );
+
+		$dataToBePassed = array(
+		    'home'        => get_stylesheet_directory_uri(),
+		    'deviceType'  => $deviceType,
+		    'isiOS'		  => $isiOS
+		);
+
+		wp_localize_script( 'bones-js', 'php_vars', $dataToBePassed );
 	}
 }
+
+function is_mobile(){
+	global $detect;
+
+	if($detect->isMobile() && !$detect->isTablet()){
+		return true;
+	}
+}
+
+
+function is_tablet(){
+	global $detect;
+
+	if($detect->isTablet()){
+		return true;
+	}
+}
+
+function is_desktop(){
+	global $detect;
+
+	if(!$detect->isMobile() && !$detect->isTablet()){
+		return true;
+	}
+}
+
+function get_device_type(){
+	global $deviceType;
+
+	return $deviceType;
+}
+
+function browser_body_classes($classes){
+	$classes[] = get_device_type();
+
+	return $classes;
+}
+
+add_filter('body_class', 'browser_body_classes');
 
 /*********************
 THEME SUPPORT

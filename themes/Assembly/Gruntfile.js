@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['clean', 'jsBuild', 'sassBuild', 'usebanner']);
+	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'usebanner', 'watch']);
 
-	grunt.registerTask('jsBuild', ['eslint', 'concat', 'copy', 'uglify']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'concat:dist', 'clean:tmp']);
 
-	grunt.registerTask('sassBuild', ['sass', 'cssmin']);
+	grunt.registerTask('sassBuildDist', ['sass', 'cssmin']);
 
 	require('load-grunt-tasks')(grunt);
 
@@ -21,6 +21,7 @@ module.exports = function(grunt) {
 
 		jsSrcDir: 'library/js',
 		jsBuildDir: 'library/build/js',
+		jsBuildTmpDir: 'library/build/js/tmp',
 		jsDistDir: 'library/dist/js',
 
 		gitinfo: {
@@ -33,6 +34,9 @@ module.exports = function(grunt) {
 			all: [
 				'<%= distDir %>',
 				'<%= buildDir %>'
+			],
+			tmp: [
+				'<%= jsBuildTmpDir %>'
 			]
 		},
 
@@ -61,50 +65,65 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			js: {
-				files: [
-					// includes files within path
-					{
-						expand: false,
-						src: ['<%= jsSrcDir %>/common/assembly.navigation.js'],
-						dest: '<%= jsBuildDir %>/assembly.navigation.js',
-						filter: 'isFile'
-					}
-				]
-			}
-		},
-
-		concat: {
-		    options: {
-				separator: ';'
-		    },
-		    dist: {
-				src: [
-					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
-					'<%= jsSrcDir %>/scripts.js'
-				],
-				dest: '<%= jsBuildDir %>/scripts.js'
-		    }
+			// js: {
+			// 	files: [
+			// 		// includes files within path
+			// 		{
+			// 			expand: false,
+			// 			src: ['<%= jsSrcDir %>/common/assembly.navigation.js'],
+			// 			dest: '<%= jsBuildDir %>/assembly.navigation.js',
+			// 			filter: 'isFile'
+			// 		}
+			// 	]
+			// }
 		},
 
 		uglify: {
 			options: {
-				preserveComments: false,
+				preserveComments: true,
 				beautify: false, // set to true to expand the code
 				mangle: false, // set to false to preserve variable names
 				sourceMap: false,
 				sourceMapIncludeSources: false
 			},
-			dist: {
-				options: {
-					sourceMapName: '<%= dirDist %>/scripts.map',
-					sourceMapUrl: 'scripts.map'
-				},
-				files: {
-					'<%= jsDistDir %>/scripts.min.js' : '<%= jsBuildDir %>/scripts.js',
-					'<%= jsDistDir %>/assembly.navigation.min.js' : '<%= jsBuildDir %>/assembly.navigation.js'
-				}
+			common: {
+               	src: ['<%= jsBuildTmpDir %>/assembly.common.js'],
+            	dest: '<%= jsBuildTmpDir %>/assembly.common.min.js'
 			}
+		},
+
+		concat: {
+			libs: {
+				src: [
+					'<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
+					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
+					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js'
+				],
+				dest: '<%= jsBuildTmpDir %>/libs.js'
+			},
+		    common: {
+		    	options: {
+		    		process: function(src, filepath) {
+		    			return '/*! Source: ' + filepath + '*/\n' + src;
+		    		}
+		    	},
+				src: [
+					'<%= jsSrcDir %>/common/assembly.util.js',
+					'<%= jsSrcDir %>/common/assembly.navigation.js'
+				],
+				dest: '<%= jsBuildTmpDir %>/assembly.common.js'
+		    },
+		    build: {
+		    	src: ['<%= jsBuildTmpDir %>/libs.js', '<%= jsBuildTmpDir %>/assembly.common.js'],
+		    	dest: '<%= jsBuildDir %>/assembly.scripts.js'
+		    },
+		    dist: {
+				src: [
+					'<%= jsBuildTmpDir %>/libs.js',
+					'<%= jsBuildTmpDir %>/assembly.common.min.js'
+				],
+				dest: '<%= jsDistDir %>/assembly.scripts.min.js'
+		    }
 		},
 
 		sass: {
@@ -114,11 +133,11 @@ module.exports = function(grunt) {
 					style: 'expanded'
 				},
 				files: {
-					'<%= cssBuildDir %>/style.css': '<%= sassDir %>/style.scss',
-					'<%= cssBuildDir %>/admin.css': '<%= sassDir %>/admin.scss',
-					'<%= cssBuildDir %>/editor-style.css': '<%= sassDir %>/editor-style.scss',
-					'<%= cssBuildDir %>/ie.css': '<%= sassDir %>/ie.scss',
-					'<%= cssBuildDir %>/login.css': '<%= sassDir %>/login.scss'
+					'<%= buildDir %>/css/style.css': '<%= sassDir %>/style.scss',
+					'<%= buildDir %>/css/admin.css': '<%= sassDir %>/admin.scss',
+					'<%= buildDir %>/css/editor-style.css': '<%= sassDir %>/editor-style.scss',
+					'<%= buildDir %>/css/ie.css': '<%= sassDir %>/ie.scss',
+					'<%= buildDir %>/css/login.css': '<%= sassDir %>/login.scss'
 				}
 			}
 		},
@@ -147,7 +166,7 @@ module.exports = function(grunt) {
 				files: [
 					'<%= sassDir %>/**/*.scss'
 				],
-				tasks: ['sassBuild']
+				tasks: ['sassBuildDist']
 			},
 			js: {
 				options: {

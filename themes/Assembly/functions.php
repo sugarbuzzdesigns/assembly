@@ -105,6 +105,14 @@ function bones_custom_image_sizes( $sizes ) {
     ) );
 }
 
+function get_featured_image_html($post){
+	$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+	$thumbnail_id = get_post_thumbnail_id($post->ID);
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+
+	return '<img src="'. $feat_image .'" alt="'. $alt .'">';
+}
+
 /*
 The function above adds the ability to use the dropdown menu to select
 the new images sizes you have just created from within the media manager
