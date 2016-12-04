@@ -1523,6 +1523,9 @@ button {
   border: none;
   padding: 19px 46px 13px;
 }
+button:focus {
+  outline: none;
+}
 
 /*********************
 NAVIGATION STYLES
@@ -1773,11 +1776,10 @@ PROJECTS SECTION
 }
 
 /*********************
-PROJECT THUMBS,
-EMPLOYEE THUMBS
+Tiles
 - Homepage
 **********************/
-.project {
+.tile {
   position: relative;
   font-family: 'gridnikregular';
   width: 65%;
@@ -1787,37 +1789,34 @@ EMPLOYEE THUMBS
   font-size: 0.75rem;
   color: #221f20;
 }
-.project:nth-child(even) {
+.tile:nth-child(even) {
   float: right;
   margin-left: 0;
   margin-right: 10%;
 }
-.project .project-img {
+.tile .tile-img {
   margin-bottom: 0.9375rem;
 }
-.project .project-img img {
+.tile .tile-img img {
   max-width: 100%;
 }
-.project .project-title,
-.project .employee-name {
+.tile .tile-title {
   text-transform: uppercase;
 }
-.project .project-desc,
-.project .employee-title {
+.tile .tile-desc {
   display: none;
 }
-.project .project-desc::before,
-.project .employee-title::before {
+.tile .tile-desc::before {
   content: '|';
   display: inline-block;
   margin-right: 2px;
 }
-.project.group2 {
+.tile.group2 {
   float: right;
   margin-left: 0;
   margin-right: 10%;
 }
-.project.group2:nth-child(even) {
+.tile.group2:nth-child(even) {
   float: left;
   margin-left: 10%;
   margin-right: 0;
@@ -1880,6 +1879,25 @@ EMPLOYEES
   font-size: .625rem;
   color: #d3d3d3;
   text-transform: uppercase;
+}
+
+/*********************
+SERVICES Tile(s)
+**********************/
+.services {
+  overflow: auto;
+}
+
+/*********************
+PRODUCTS Tile(s)
+**********************/
+.products {
+  overflow: auto;
+}
+.products .tile {
+  float: right;
+  margin-left: 0;
+  margin-right: 10%;
 }
 
 /*********************

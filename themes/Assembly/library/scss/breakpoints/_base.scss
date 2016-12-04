@@ -182,6 +182,10 @@ button {
 	text-transform: uppercase;
 	border: none;
 	padding: 19px 46px 13px;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 /*********************
@@ -458,11 +462,10 @@ PROJECTS SECTION
 }
 
 /*********************
-PROJECT THUMBS,
-EMPLOYEE THUMBS
+Tiles
 - Homepage
 **********************/
-.project {
+.tile {
 	position: relative;
 	font-family: 'gridnikregular';
 	width: 65%;
@@ -478,7 +481,7 @@ EMPLOYEE THUMBS
 		margin-right: 10%;
 	}
 
-	.project-img {
+	.tile-img {
 		margin-bottom: rem(15);
 
 		img {
@@ -486,12 +489,10 @@ EMPLOYEE THUMBS
 		}
 	}
 
-	.project-title,
-	.employee-name {
+	.tile-title {
 		text-transform: uppercase;
 	}
-	.project-desc,
-	.employee-title {
+	.tile-desc {
 		// don't show the description and pipe
 		// separator on mobile.
 		display: none;
@@ -581,6 +582,26 @@ EMPLOYEES
 		    color: #d3d3d3;
 		    text-transform: uppercase;
 		}
+	}
+}
+
+/*********************
+SERVICES Tile(s)
+**********************/
+.services {
+	overflow: auto;
+}
+
+/*********************
+PRODUCTS Tile(s)
+**********************/
+.products {
+	overflow: auto;
+
+	.tile {
+		float: right;
+		margin-left: 0;
+		margin-right: 10%;
 	}
 }
 

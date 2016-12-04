@@ -31,6 +31,6 @@
 		});
 	}
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1_tEvdK6p0WPh2YLwiGW2ExOf0GOhTjE&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATWCunxrfGV3slogS1TJJdOTb0htqjV3w=initMap" async defer></script>
 
 <?php get_footer(); ?>

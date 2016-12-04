@@ -15,6 +15,8 @@
 		<div class="mesh-bg dark wide"></div>
 		<div class="projects-wrapper">
 		<?php
+		// echo get_projects_html(2, 1);
+
 		$projectsArgs1 = array(
 			'post_type'  => 'project',
 			'posts_per_page'=> 2
@@ -27,13 +29,13 @@
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 		?>
-			<div class="project group1">
-				<div class="project-img">
+			<div class="tile group1">
+				<div class="tile-img">
 					<?php echo get_featured_image_html($post); ?>
 				</div>
-				<div class="project-info">
-					<span class="project-title"><?php echo get_the_title(); ?></span>
-					<span class="project-desc"><?php echo get_the_title(); ?></span>
+				<div class="tile-info">
+					<span class="tile-title"><?php echo get_the_title(); ?></span>
+					<span class="tile-desc"><?php echo get_the_title(); ?></span>
 				</div>
 			</div>
 		<?php
@@ -42,6 +44,28 @@
 			wp_reset_postdata();
 		}
 		?>
+		</div>
+	</section>
+	<section class="services">
+		<div class="tile">
+			<div class="tile-img">
+				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/services_placeholder.jpg" alt="">
+			</div>
+			<div class="tile-info">
+				<span class="tile-title">services</span>
+				<span class="tile-desc"></span>
+			</div>
+		</div>
+	</section>
+	<section class="products">
+		<div class="tile">
+			<div class="tile-img">
+				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/services_placeholder.jpg" alt="">
+			</div>
+			<div class="tile-info">
+				<span class="tile-title">products</span>
+				<span class="tile-desc"></span>
+			</div>
 		</div>
 	</section>
 	<section class="videos">
@@ -91,13 +115,13 @@
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 		?>
-			<div class="project group2">
-				<div class="project-img">
+			<div class="tile group2">
+				<div class="tile-img">
 					<?php echo get_featured_image_html($post); ?>
 				</div>
-				<div class="project-info">
-					<span class="project-title"><?php echo get_the_title(); ?></span>
-					<span class="project-desc"><?php echo get_the_title(); ?></span>
+				<div class="tile-info">
+					<span class="tile-title"><?php echo get_the_title(); ?></span>
+					<span class="tile-desc"><?php echo get_the_title(); ?></span>
 				</div>
 			</div>
 		<?php

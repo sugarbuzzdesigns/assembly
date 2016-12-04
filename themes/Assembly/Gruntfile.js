@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 		concat: {
 			libs: {
 				src: [
-					'<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
+					// '<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
 					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
 					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js'
 				],
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
 				files: [
 					'<%= jsSrcDir %>/**/*.js'
 				],
-				tasks: ['jsBuild']
+				tasks: ['jsBuildDist']
 			}
 		}
 	});

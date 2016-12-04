@@ -20,6 +20,7 @@ URL: http://themble.com/bones/
 */
 
 require_once( 'mobile-detect.php' );
+require_once( 'custom-functions.php' );
 
 $detect = new Mobile_Detect;
 
@@ -122,29 +123,10 @@ function bones_remove_wp_ver_css_js( $src ) {
 	return $src;
 }
 
-// Remove jQuery migrate and default jQuery
-add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
-
-function dequeue_jquery_migrate( &$scripts){
-	if(!is_admin()){
-		$scripts->remove( 'jquery');
-		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
-	}
-}
-
 function my_deregister_scripts(){
   wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
-
-//Making jQuery Google API
-function modify_jquery() {
-	if (!is_admin()) {
-		// comment out the next two lines to load the local copy of jQuery
-		wp_deregister_script('jquery');
-	}
-}
-add_action('init', 'modify_jquery');
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -192,13 +174,13 @@ function bones_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js', array(  ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js', array( 'jquery' ), '', true );
 		// echo get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js';
 		//adding scripts file in the footer
 		// wp_register_script( 'bones-navigation', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.navigation' . $suffix . '.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'bones-modernizr' );
+		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
 
@@ -209,7 +191,7 @@ function bones_scripts_and_styles() {
 		using the google cdn. That way it stays cached
 		and your site will load faster.
 		*/
-
+		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
 		$dataToBePassed = array(
