@@ -1331,6 +1331,201 @@ select {
   background-position: 97.5% center;
 }
 
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+/** RESET AND LAYOUT
+===================================*/
+.bxslider {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/** THEME
+===================================*/
+.bx-wrapper .bx-viewport {
+  background: #fff;
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(../../images/bxslider/bx_loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(../../images/bxslider/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(../../images/bxslider/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+  background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(../../images/bxslider/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(../../images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1416,6 +1611,9 @@ SOCIAL SPRITE
   width: 24px;
   background: url(../../images/icons/social-sprite-light.png);
   background-size: cover;
+}
+.social.dark a {
+  background-image: url(../../images/icons/social-sprite-dark.png);
 }
 
 /*********************
@@ -1526,6 +1724,10 @@ button {
 button:focus {
   outline: none;
 }
+button.dark {
+  background: transparent;
+  border: solid 1px #fff;
+}
 
 /*********************
 NAVIGATION STYLES
@@ -1584,6 +1786,19 @@ REUSEABLE BACKGROUNDS
 }
 
 /*********************
+SELECT ELEMENT STYLES
+**********************/
+select {
+  border: 0;
+  background-color: transparent;
+  border: solid 1px #000;
+  border-radius: 0;
+  background-image: url(../../images/icons/select-arrow.png);
+  background-size: 13px 8px;
+  -webkit-appearance: none;
+}
+
+/*********************
 HEADER STYLES
 *********************/
 .header {
@@ -1592,6 +1807,7 @@ HEADER STYLES
 
 .section-header {
   padding: 5% 6% 0 6%;
+  overflow: auto;
 }
 
 .logo {
@@ -1615,6 +1831,10 @@ HEADER STYLES
   font-size: 33px;
   display: inline-block;
   vertical-align: middle;
+}
+
+.header-icon-logo {
+  fill: #fff;
 }
 
 .main-menu-btn {
@@ -1695,6 +1915,18 @@ HEADER STYLES
 .logo-svg-icon {
   height: 32px;
   width: 179px;
+}
+
+header.dark .main-menu-btn span {
+  background-color: #000;
+}
+header.dark #mask-2 {
+  fill: #000;
+}
+header.dark svg path,
+header.dark svg polygon,
+header.dark svg mask {
+  fill: #000;
 }
 
 /*********************
@@ -1954,11 +2186,202 @@ FOOTER STYLES
   width: 33px;
   margin: 12% auto 7%;
 }
+.footer .assembly-logo-icon .main-path {
+  fill: #fff;
+}
 .footer .copyright {
   margin: 0 0 7% 0;
 }
 .footer .copyright span {
   display: block;
+}
+
+/*********************
+CONTACT
+**********************/
+.page-contact form {
+  width: 80%;
+  margin: 0 auto 30px;
+}
+.page-contact form label {
+  display: none;
+}
+.page-contact form label.active {
+  display: block;
+}
+.page-contact form p {
+  color: #fff;
+  line-height: 2.125rem;
+  font-family: 'pangrambold';
+  font-size: 1.875rem;
+  margin: 0;
+}
+.page-contact form p:first-child {
+  padding-top: 16%;
+}
+.page-contact form .pager {
+  font-family: 'gridnikregular';
+  font-size: 0.75rem;
+}
+.page-contact form button {
+  padding: 14px 28px 13px;
+  border: solid .75px #a7a6a6;
+  margin-top: 6%;
+}
+.page-contact form ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #4e4e4e;
+}
+.page-contact form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #4e4e4e;
+}
+.page-contact form :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #4e4e4e;
+}
+.page-contact form :-moz-placeholder {
+  /* Firefox 18- */
+  color: #4e4e4e;
+}
+.page-contact form input {
+  background-color: transparent;
+  font-family: 'pangrambold';
+  padding: 0;
+  font-size: 1.3125rem;
+  color: #4e4e4e;
+  border-bottom: solid 1px #8f8f8f;
+}
+.page-contact form input:focus, .page-contact form input:active {
+  background: transparent;
+}
+.page-contact .add-photo-icon {
+  width: 154px;
+  float: left;
+}
+.page-contact .add-photo {
+  overflow: auto;
+  background-color: #f4f4f4;
+}
+.page-contact .add-photo h3 {
+  font-family: 'gridnikregular';
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: center;
+}
+.page-contact .add-photo .photos-wrap {
+  overflow: auto;
+}
+.page-contact .add-photo .photos {
+  width: 100%;
+  overflow: auto;
+}
+.page-contact .add-photo .empty .photo {
+  margin: 0 auto;
+  float: none;
+}
+.page-contact .add-photo .photo {
+  width: 154px;
+  height: 118px;
+  float: left;
+}
+.page-contact .add-photo .photo img {
+  width: 100%;
+  display: block;
+}
+.page-contact .footer {
+  padding: 14px 3% 10%;
+  background-color: #fff;
+}
+.page-contact .footer .assembly-logo-icon .main-path {
+  fill: #000;
+}
+.page-contact .footer .contact-info a {
+  display: block;
+  text-decoration: none;
+  font-family: 'roboto_monoregular';
+  font-size: 0.6875rem;
+  margin-bottom: 20px;
+}
+.page-contact .footer .contact-info a[href^="tel:"] {
+  margin-bottom: 50px;
+}
+
+#contact-map {
+  height: 500px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+#contact-map .gm-svpc {
+  display: none;
+}
+
+/*********************
+CASE STUDIES Page
+**********************/
+.page-case-studies .landing > div {
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  font-family: 'pangrambold';
+  font-size: 2.9375rem;
+}
+.page-case-studies .landing h3 {
+  overflow: auto;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  top: 30%;
+  left: 6.1%;
+  letter-spacing: -4px;
+}
+.page-case-studies .landing h3 span {
+  display: block;
+  float: left;
+}
+.page-case-studies .section-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-case-studies .section-header .header-icon-logo {
+  fill: #000;
+}
+.page-case-studies .section-header .main-menu-btn span {
+  background: #000;
+}
+.page-case-studies .landing .modular {
+  background-image: url(../../images/case-study-modular-bg.jpg);
+}
+.page-case-studies .landing .custom {
+  background-image: url(../../images/case-study-custom-bg.jpg);
+}
+.page-case-studies .landing .white-square {
+  width: 55%;
+  height: 49%;
+  top: 21%;
+  left: 32%;
+  background: #fff;
+  position: absolute;
+}
+
+/*********************
+SERVICES Page
+**********************/
+body.page-services {
+  background-color: #fff;
+}
+body.page-services h1 {
+  font-family: 'pangrambold';
+  font-size: 2rem;
+}
+body.page-services section {
+  margin: 0 auto;
+  width: 77%;
 }
 
 @media only screen and (min-width: 321px) {

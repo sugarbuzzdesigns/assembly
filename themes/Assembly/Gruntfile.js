@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'usebanner', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'concat:dist', 'clean:tmp']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp']);
 
 	grunt.registerTask('sassBuildDist', ['sass', 'cssmin']);
 
@@ -65,17 +65,16 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			// js: {
-			// 	files: [
-			// 		// includes files within path
-			// 		{
-			// 			expand: false,
-			// 			src: ['<%= jsSrcDir %>/common/assembly.navigation.js'],
-			// 			dest: '<%= jsBuildDir %>/assembly.navigation.js',
-			// 			filter: 'isFile'
-			// 		}
-			// 	]
-			// }
+			js: {
+				files: [
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.contact.js'],
+						dest: '<%= jsBuildDir %>/assembly.contact.js',
+						filter: 'isFile'
+					}
+				]
+			}
 		},
 
 		uglify: {
@@ -89,6 +88,11 @@ module.exports = function(grunt) {
 			common: {
                	src: ['<%= jsBuildTmpDir %>/assembly.common.js'],
             	dest: '<%= jsBuildTmpDir %>/assembly.common.min.js'
+			},
+			pages: {
+				files: {
+					'<%= jsDistDir %>/assembly.contact.min.js': ['<%= jsSrcDir %>/pages/assembly.contact.js']
+				}
 			}
 		},
 
@@ -97,7 +101,8 @@ module.exports = function(grunt) {
 				src: [
 					// '<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
 					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
-					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js'
+					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js',
+					'<%= jsSrcDir %>/libs/bxslider.min.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/libs.js'
 			},

@@ -178,6 +178,9 @@ function bones_scripts_and_styles() {
 		// echo get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js';
 		//adding scripts file in the footer
 		// wp_register_script( 'bones-navigation', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.navigation' . $suffix . '.js', array( 'jquery' ), '', true );
+		if(is_page('contact')){
+			wp_enqueue_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), true );
+		}
 
 		// enqueue styles and scripts
 		// wp_enqueue_script( 'bones-modernizr' );
@@ -380,6 +383,14 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
-
+//Page Slug Body Class
+function add_slug_body_class($classes) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
 
 ?>
