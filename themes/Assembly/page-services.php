@@ -3,10 +3,9 @@
 	<section>
 		<h1>services</h1>
 		<select>
-		  <option value="volvo">Volvo</option>
-		  <option value="saab">Saab</option>
-		  <option value="mercedes">Mercedes</option>
-		  <option value="audi">Audi</option>
+		  <option value="all">All</option>
+		  <option value="modular">Modular</option>
+		  <option value="custom">Custom</option>
 		</select>
 		<div class="services-toggle">
 

@@ -165,16 +165,6 @@ hr {
 }
 
 /*
- * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
-*/
-p {
-  -webkit-hyphens: auto;
-  -epub-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-
-/*
  * Addresses margins set differently in IE6/7.
  */
 pre {
@@ -1806,7 +1796,7 @@ HEADER STYLES
 }
 
 .section-header {
-  padding: 5% 6% 0 6%;
+  padding: 6% 5% 0;
   overflow: auto;
 }
 
@@ -1839,7 +1829,8 @@ HEADER STYLES
 
 .main-menu-btn {
   float: right;
-  width: 7%;
+  width: 8%;
+  max-width: 28px;
   height: 5%;
   position: relative;
   margin: 0;
@@ -1959,12 +1950,14 @@ HOME PAGE STYLES
 }
 .home .landing .mesh-bg {
   left: 2%;
-  top: 25%;
+  top: 24.1%;
+  opacity: 0.5;
 }
 .home .landing h2 {
   color: #fff;
   font-size: 1.963em;
   line-height: 1.175em;
+  letter-spacing: 1px;
   margin: 0 0 0 8%;
   position: absolute;
   top: 50%;
@@ -1984,7 +1977,8 @@ HOME PAGE STYLES
 }
 .home .company-statement .svg-shape-1 {
   position: absolute;
-  left: 50%;
+  left: 45%;
+  top: 23%;
   transform: translate(-50%, 0);
 }
 .home .company-statement p {
@@ -2019,6 +2013,7 @@ Tiles
   margin-left: 10%;
   margin-bottom: 18%;
   font-size: 0.75rem;
+  letter-spacing: 1px;
   color: #221f20;
 }
 .tile:nth-child(even) {
@@ -2087,6 +2082,7 @@ EMPLOYEES
 }
 .employee .employee-name,
 .employee .employee-title {
+  color: #221f20;
   display: block;
   font-size: 0.6875rem;
 }
@@ -2107,7 +2103,7 @@ EMPLOYEES
 }
 .employee .years-experience .text {
   display: block;
-  transform: rotate(-90deg) translate(96%, 325%);
+  transform: rotate(-90deg) translate(84%, 325%);
   font-size: .625rem;
   color: #d3d3d3;
   text-transform: uppercase;
@@ -2396,6 +2392,132 @@ body.page-services section {
 
   .home .landing h2 {
     font-size: 2.25rem;
+  }
+}
+/*********************
+PLUS SIZE (MOBILE) Iphone #+
+**********************/
+@media only screen and (min-width: 376px) {
+  /******************************************************************
+  Stylesheet: 321px and Up Stylesheet
+  
+  Phones larger than the iPhone 6 375px width
+  ******************************************************************/
+  /*********************
+  GENERIC SVG SHAPES
+  **********************/
+  .svg-shape-1 {
+    width: 168px;
+  }
+
+  /*********************
+  REUSEABLE BACKGROUNDS
+  **********************/
+  .mesh-bg {
+    height: 402px;
+    width: 282px;
+  }
+
+  .mesh-bg.wide {
+    width: 341px;
+  }
+
+  /*********************
+  VIDEO CONTENT
+  **********************/
+  .videos {
+    padding-bottom: 16%;
+  }
+
+  /*********************
+  HOME PAGE STYLES
+  **********************/
+  .home .landing h2 {
+    font-size: 2.5rem;
+    line-height: 2.775rem;
+    top: 49%;
+    margin: 0 0 0 6.8%;
+  }
+  .home .down-arrow {
+    bottom: 35px;
+  }
+  .home .company-statement {
+    position: relative;
+    padding-top: 128px;
+    padding-bottom: 93px;
+  }
+  .home .company-statement .svg-shape-1 {
+    top: 34.5%;
+  }
+  .home .company-statement p {
+    font-size: 0.8125rem;
+    line-height: 1.4375rem;
+  }
+
+  /*********************
+  PROJECTS SECTION
+  - Homepage
+  **********************/
+  .projects {
+    overflow: auto;
+    padding-top: 75px;
+  }
+  .projects .mesh-bg {
+    left: 2%;
+    top: 0%;
+  }
+
+  /*********************
+  Tiles
+  - Homepage
+  **********************/
+  .tile {
+    font-size: 0.8125rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 21%;
+  }
+  .tile .tile-img {
+    margin-bottom: 1.0375rem;
+  }
+
+  /*********************
+  PRODUCTS Tile(s)
+  **********************/
+  .products.two .tile {
+    margin-bottom: 15.4%;
+  }
+
+  /*********************
+  EMPLOYEES
+  **********************/
+  .employees {
+    overflow: auto;
+    padding-bottom: 14%;
+  }
+  .employees .diagonals {
+    background: url(../../images/backgrounds/diagonal-lines-bg.png);
+    height: 415px;
+    width: 371px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  .employee .employee-img {
+    padding-top: 9.125rem;
+    padding-bottom: 9%;
+  }
+  .employee .employee-name,
+  .employee .employee-title {
+    font-size: 0.8125rem;
+  }
+  .employee .years-experience .num {
+    font-size: 13.375rem;
+    line-height: 10.4rem;
+  }
+  .employee .years-experience .text {
+    font-size: 0.75rem;
+    transform: rotate(-90deg) translate(94%, 372%);
   }
 }
 /*********************

@@ -75,9 +75,6 @@ body#tinymce.wp-editor {
    * Address differences between Firefox and other browsers.
    */
   /*
-   * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
-  */
-  /*
    * Addresses margins set differently in IE6/7.
    */
   /**
@@ -411,12 +408,6 @@ body#tinymce.wp-editor hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
-}
-body#tinymce.wp-editor p {
-  -webkit-hyphens: auto;
-  -epub-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
 }
 body#tinymce.wp-editor pre {
   margin: 0;

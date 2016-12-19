@@ -3,3 +3,144 @@ Stylesheet: 321px and Up Stylesheet
 
 Phones larger than the iPhone 6 375px width
 ******************************************************************/
+/*********************
+GENERIC SVG SHAPES
+**********************/
+.svg-shape-1 {
+	width: 168px;
+}
+
+/*********************
+REUSEABLE BACKGROUNDS
+**********************/
+.mesh-bg {
+	height: 402px;
+	width: 282px;
+}
+
+.mesh-bg.wide {
+    width: 341px;
+}
+
+/*********************
+VIDEO CONTENT
+**********************/
+// play btn svg width="58px" height="58px"
+.videos {
+	padding-bottom: 16%;
+}
+
+/*********************
+HOME PAGE STYLES
+**********************/
+.home {
+	// Landing Section
+	.landing {
+
+		h2 {
+			font-size: rem(40);
+		    line-height: 2.775rem;
+		    top: 49%;
+			margin: 0 0 0 6.8%;
+		}
+	}
+
+	.down-arrow {
+	    bottom: 35px;
+	}
+
+	.company-statement {
+		position: relative;
+	    padding-top: 128px;
+	    padding-bottom: 93px;
+
+    	.svg-shape-1 {
+    		top: 34.5%;
+    	}
+
+		p {
+			font-size: rem(13);
+			line-height: rem(23);
+		}
+	}
+}
+
+/*********************
+PROJECTS SECTION
+- Homepage
+**********************/
+.projects {
+	overflow: auto;
+	padding-top: 75px;
+
+	.mesh-bg {
+		left: 2%;
+		top: 0%;
+	}
+}
+
+/*********************
+Tiles
+- Homepage
+**********************/
+.tile {
+	font-size: rem(13);
+	letter-spacing: 1.3px;
+	margin-bottom: 21%;
+
+	.tile-img {
+    	margin-bottom: 1.0375rem;
+    }
+}
+
+/*********************
+PRODUCTS Tile(s)
+**********************/
+.products {
+	&.two {
+		.tile {
+			margin-bottom: 15.4%;
+		}
+	}
+}
+
+/*********************
+EMPLOYEES
+**********************/
+.employees {
+	overflow: auto;
+	padding-bottom: 14%;
+
+	.diagonals {
+		background: url(../../images/backgrounds/diagonal-lines-bg.png);
+	    height: 415px;
+	    width: 371px;
+	    position: absolute;
+	    top: 5%;
+	    left: 5%;
+	}
+}
+
+.employee {
+	.employee-img {
+		padding-top: 9.125rem;
+		padding-bottom: 9%;
+	}
+
+	.employee-name,
+	.employee-title {
+		font-size: rem(13);
+	}
+
+	.years-experience {
+		.num {
+			font-size: 13.375rem;
+			line-height: 10.4rem;
+		}
+
+		.text {
+			font-size: rem(12);
+			transform: rotate(-90deg) translate(94%,372%);
+		}
+	}
+}

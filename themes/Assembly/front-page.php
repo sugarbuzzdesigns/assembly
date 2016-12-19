@@ -57,7 +57,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="products">
+	<section class="products two">
 		<div class="tile">
 			<div class="tile-img">
 				<img class="placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/services_placeholder.jpg" alt="">
@@ -77,6 +77,7 @@
 		</div>
 	</section>
 	<section class="employees">
+		<div class="diagonals"></div>
 		<div class="employee">
 			<div class="col">
 				<div class="employee-img">
@@ -91,7 +92,7 @@
 				<div class="years-experience">
 					<span class="num">2</span>
 					<span class="num">6</span>
-					<span class="text">years experience</span>
+					<span class="text">years of experience</span>
 				</div>
 				<button type="button">about</button>
 			</div>
