@@ -33,15 +33,24 @@ var assembly = assembly || {};
 		initContactForm: function(){
 			var _this = this,
 				formFields = $('form label'),
-				numFormFields = formFields.length;
+				numFormFields = formFields.length,
+				$cur = $('.pager .current'),
+				$total = $('.pager .total');
 
-			$('.pager .current').html('1');
-			$('.pager .total').html(numFormFields);
+			$cur.html('1');
+			$total.html(numFormFields);
 		},
 
 		showNextFormInput: function($currentInput){
-			$currentInput.removeClass('active');
-			$currentInput.next().addClass('active');
+			var curIndex = $currentInput.index() + 1;
+
+			if(curIndex === $('form label').length){
+				console.log('at the end');
+			} else {
+				$('.pager .current').html(curIndex + 1);
+				$currentInput.removeClass('active');
+				$currentInput.next().addClass('active');
+			}
 		}
 	};
 
