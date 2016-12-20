@@ -144,3 +144,23 @@ EMPLOYEES
 		}
 	}
 }
+
+/*********************
+CONTACT
+**********************/
+.page-contact {
+	background: url(../../images/backgrounds/contact-bg.jpg);
+
+	form {
+
+		p {
+			font-size: rem(38);
+			line-height: rem(43);
+			width: 90%;
+		}
+
+		.pager {
+			margin-top: 20px;
+		}
+	}
+}

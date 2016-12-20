@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'usebanner', 'watch']);
+	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'usebanner']);
+
+	grunt.registerTask('dev', ['default', 'watch']);
 
 	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp']);
 

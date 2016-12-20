@@ -18,6 +18,19 @@
 </form>
 
 <section class="add-photo">
+	<div class="addable-images">
+	<?php
+
+	// var_dump(wp_get_attachment_metadata(42)["width"]);
+
+	?>
+	<?php $images = getAddableImages(); ?>
+
+		<?php foreach ($images as $image) : ?>
+			<!-- <img src="<?php echo $image; ?>" alt=""> -->
+		<?php endforeach; ?>
+
+	</div>
 	<h3>add photo</h3>
 	<div class="photos-wrap">
 		<ul class="photos empty">

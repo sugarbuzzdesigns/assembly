@@ -978,3 +978,18 @@ body.page-services {
 		width: 77%;
 	}
 }
+
+/*********************
+ABOUT US Page
+**********************/
+.page-about-us {
+	background: #fff;
+
+	.landing {
+		position: relative;
+	}
+
+	h1 {
+		font-size: rem(35);
+	}
+}
