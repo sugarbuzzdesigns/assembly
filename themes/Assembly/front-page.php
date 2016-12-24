@@ -7,10 +7,13 @@
 
  		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
 	</section>
-	<section class="company-statement">
-		<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
-		<p>insert company statement sit amet, consectetur lala adipiscing, sed do eiusmod tempor incididunt ut idunt ut labore et dolore magna labore et dolore magna</p>
+	<section class="main-content">
+		<div class="company-statement">
+			<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
+			<p>insert company statement sit amet, consectetur lala adipiscing, sed do eiusmod tempor incididunt ut idunt ut labore et dolore magna labore et dolore magna</p>
+		</div>
 	</section>
+
 	<section class="projects">
 		<div class="mesh-bg dark wide"></div>
 		<div class="projects-wrapper">

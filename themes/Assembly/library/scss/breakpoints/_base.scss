@@ -200,23 +200,136 @@ button {
 }
 
 /*********************
-NAVIGATION STYLES
+MENU & NAVIGATION STYLES
 *********************/
 .main-menu {
-	background: #000;
     position: absolute;
-    transition: transform 0.5s ease;
-    transform: translate3d(-100%,0,0);
     width: 100%;
     height: 100vh;
     z-index: 1;
+    pointer-events: none;
+    display: none;
 }
+
+.menu-bg {
+    background: #000;
+    position: absolute;
+    opacity: 0;
+	top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+/*********************
+nav
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+	border-bottom: 0;
+	margin: 0;
+    padding-top: 4em;
+    padding-left: 2.1em;
+    position: relative;
+
+	li {
+		margin-bottom: 0.6em;
+		transition: opacity 1s;
+		opacity: 0;
+		transform: translate3d(0,10px,0);
+
+		a {
+			font-size: rem(20);
+			text-transform: lowercase;
+			font-family: 'pangrambold';
+			display: block;
+			color: $white;
+			text-decoration: none;
+
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
 
 .menu-open {
 	.main-menu {
-		transform: translate3d(0,0,0);
+		pointer-events: all;
+		display: block;
+	}
+
+	.menu-bg {
+	    animation: showmenu;
+	    animation-duration: 1.5s;
+	    animation-fill-mode: forwards;
+	}
+
+	li.show-nav-item {
+		animation: showmenuitems;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
 	}
 }
+
+// .menu-open.close-menu {
+// 	.menu-bg {
+// 	    animation: hidemenu;
+// 	    animation-duration: 1.5s;
+// 	    animation-fill-mode: forwards;
+// 	}
+// }
+
+@keyframes showmenu {
+  100% {
+  	opacity: 1;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+@keyframes showmenuitems {
+  100% {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+  }
+}
+
+// @keyframes hidemenu {
+//   100% {
+//     opacity: 0;
+// 	top: 10px;
+//     right: 10px;
+//     height: 30px;
+//     width: 30px;
+//   }
+// }
 
 /*********************
 VIDEO CONTENT
@@ -268,12 +381,60 @@ SELECT ELEMENT STYLES
 **********************/
 select {
 	border: 0;
-	background-color: transparent;
-	border: solid 1px #000;
+	background-color: #fff;
+	border: solid 1px #221f20;
 	border-radius: 0;
 	background-image: url(../../images/icons/select-arrow.png);
-	background-size: 13px 8px;
+	background-size: 16px 9px;
 	-webkit-appearance: none;
+	height: 44px;
+	font-family: 'pangrambold';
+	font-size: rem(24);
+	color: #221f20;
+	text-transform: lowercase;
+	padding: 0 18px;
+	background-position: right 18px center;
+	margin-bottom: 27px;
+}
+
+.toggle-filter {
+	overflow: auto;
+	margin-bottom: 27%;
+
+	a {
+		text-align: center;
+		font-family: 'gridnikregular';
+		font-size: rem(20);
+		text-decoration: none;
+		float: left;
+		display: block;
+		padding: 17px 0 11px;
+		width: 60px;
+		border: solid 1px #979797;
+		color: #B8B8B8;
+
+		background: repeating-linear-gradient(
+		  45deg,
+		  #c1c1c1,
+		  #d6d6d6 1px,
+		  #fff 1px,
+		  #fff 5px
+		);
+
+		& + a {
+			border-left: none;
+		}
+
+		&.active {
+			background: transparent;
+			color: #221F20;
+		}
+	}
+}
+
+.filter-wrap {
+	margin: 0 auto;
+    width: 77%;
 }
 
 /*********************
@@ -323,7 +484,7 @@ HEADER STYLES
 	float: right;
 	width: 8%;
 	max-width: 28px;
-	height: 5%;
+	height: 20px;
 	position: relative;
 	margin: 0;
 	-webkit-transform: rotate(0deg);
@@ -336,6 +497,16 @@ HEADER STYLES
 	transition: .5s ease-in-out;
 	cursor: pointer;
 	z-index: 1000;
+
+	&:after {
+		content: '';
+		background: transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }
 
 .main-menu-btn  span {
@@ -540,7 +711,8 @@ Tiles
 		}
 	}
 
-	.tile-title {
+	.tile-title,
+	.tile-cat {
 		text-transform: uppercase;
 	}
 	.tile-desc {
@@ -656,57 +828,6 @@ PRODUCTS Tile(s)
 		margin-right: 10%;
 	}
 }
-
-/*********************
-NAVIGATION STYLES
-*********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
-.nav {
-	border-bottom: 0;
-	margin: 0;
-    padding-top: 4em;
-    padding-left: 2.1em;
-
-	li {
-		margin-bottom: 0.6em;
-
-		a {
-			font-size: rem(20);
-			text-transform: lowercase;
-			font-family: 'pangrambold';
-			display: block;
-			color: $white;
-			text-decoration: none;
-
-			&:hover, &:focus {
-
-			}
-		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
-} /* end .nav */
 
 /*********************
 FOOTER STYLES
@@ -960,6 +1081,15 @@ CASE STUDIES Page
 			position: absolute;
 		}
 	}
+
+	.content {
+		background: #fff;
+		overflow: auto;
+	}
+
+	section {
+		background: #fff;
+	}
 }
 
 /*********************
@@ -971,11 +1101,41 @@ body.page-services {
 	h1 {
 		font-family: 'pangrambold';
 		font-size: rem(32);
+		margin: 24% auto 11%;
+		width: 77%;
+	}
+	.filter-wrap {
+		margin-bottom: 11%;
+	}
+
+	select {
+		margin-bottom: 0;
+
 	}
 
 	section {
-		margin: 0 auto;
-		width: 77%;
+	}
+
+	.mesh-bg {
+		top: 0;
+		margin-top: 20%;
+		width: 85%;
+		height: 60%;
+		z-index: -1;
+	}
+
+	.tile {
+		margin: 0 0 24% 17%;
+
+		&.tall-1 {
+			width: 60%;
+		}
+
+		&.wide-1 {
+			width: 80%;
+			margin: 0 0 24% 10%;
+			float: none;
+		}
 	}
 }
 

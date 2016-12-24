@@ -1,4 +1,3 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2016-12-19 01:32 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -125,6 +124,10 @@ var assembly = assembly || {};
 			_this.$mainMenuBtn.on('click', function(){
 				_this.toggleMainMenu(this);
 			});
+
+			$('.menu-bg').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(evt){
+				console.log(evt);
+			});
 		},
 
 		toggleMainMenu: function(){
@@ -138,10 +141,24 @@ var assembly = assembly || {};
 
 			function showMenu(){
 				$('html').addClass('menu-open');
+
+				var queue = $({}); //use the default animation queue
+			    $('nav li').each(function(i, elm) {
+			        queue.queue(createWorkQueueFunction($(this), i));
+			        queue.delay(200);
+			    });
+
+				function createWorkQueueFunction($element, i) {
+				    return function(next) {
+				        $element.addClass('show-nav-item');
+						next();
+				    };
+				}
 			};
 
 			function hideMenu(){
 				$('html').removeClass('menu-open');
+				$('nav li').removeClass('show-nav-item');
 			};
 		}
 	};
