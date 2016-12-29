@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', ['default', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'removelogging', 'clean:tmp']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp']);
 
 	grunt.registerTask('sassBuildDist', ['sass', 'cssmin']);
 
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			options: {
-				preserveComments: true,
+				preserveComments: false,
 				beautify: false, // set to true to expand the code
 				mangle: false, // set to false to preserve variable names
 				sourceMap: false,
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 
 		removelogging: {
 			dist: {
-				src: '<%= jsDistDir %>/**/*.js'
+				src: '<%= jsBuildDir %>/**/*.js'
 			}
 		},
 
