@@ -390,6 +390,7 @@ select {
 	height: 44px;
 	font-family: 'pangrambold';
 	font-size: rem(24);
+	line-height: rem(32);
 	color: #221f20;
 	text-transform: lowercase;
 	padding: 0 18px;
@@ -1134,7 +1135,11 @@ body.page-services {
 		&.wide-1 {
 			width: 80%;
 			margin: 0 0 24% 10%;
-			float: none;
+		}
+
+		&:nth-child(even){
+			margin-left: 0;
+			margin-right: 10%;
 		}
 	}
 }

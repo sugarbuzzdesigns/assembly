@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', ['default', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'removelogging', 'clean:tmp']);
 
 	grunt.registerTask('sassBuildDist', ['sass', 'cssmin']);
 
@@ -74,6 +74,12 @@ module.exports = function(grunt) {
 						src: ['<%= jsSrcDir %>/pages/assembly.contact.js'],
 						dest: '<%= jsBuildDir %>/assembly.contact.js',
 						filter: 'isFile'
+					},
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.services.js'],
+						dest: '<%= jsBuildDir %>/assembly.services.js',
+						filter: 'isFile'
 					}
 				]
 			}
@@ -93,8 +99,15 @@ module.exports = function(grunt) {
 			},
 			pages: {
 				files: {
-					'<%= jsDistDir %>/assembly.contact.min.js': ['<%= jsSrcDir %>/pages/assembly.contact.js']
+					'<%= jsDistDir %>/assembly.contact.min.js': ['<%= jsSrcDir %>/pages/assembly.contact.js'],
+					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js']
 				}
+			}
+		},
+
+		removelogging: {
+			dist: {
+				src: '<%= jsDistDir %>/**/*.js'
 			}
 		},
 

@@ -24,7 +24,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-eslint": "^19.0.0",
     "grunt-git-describe": "2.2.0",
-    "grunt-gitinfo": "^0.1.8"
+    "grunt-gitinfo": "^0.1.8",
+    "grunt-remove-logging": "^0.2.0"
   },
   "dependencies": {
     "load-grunt-tasks": "~0.2.0"

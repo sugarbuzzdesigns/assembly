@@ -41,6 +41,29 @@ function custom_post_service() {
 
 }
 
+// now let's add custom categories (these act like categories)
+register_taxonomy( 'service_category',
+	array('service'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __( 'Service Category', 'bonestheme' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Service Category', 'bonestheme' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Service Categories', 'bonestheme' ), /* search title for taxomony */
+			'all_items' => __( 'All Service Categories', 'bonestheme' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent Service Category', 'bonestheme' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent Service Category:', 'bonestheme' ), /* parent taxonomy title */
+			'edit_item' => __( 'Edit Service Category', 'bonestheme' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Service Category', 'bonestheme' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Service Category', 'bonestheme' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Service Category Name', 'bonestheme' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'service-cat' ),
+	)
+);
+
 // adding the function to the Wordpress init
 add_action( 'init', 'custom_post_service');
 

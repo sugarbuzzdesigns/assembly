@@ -182,6 +182,10 @@ function bones_scripts_and_styles() {
 			wp_enqueue_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), true );
 		}
 
+		if(is_page('services')){
+			wp_enqueue_script( 'services', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.services' . $suffix . '.js', array( 'jquery' ), true );
+		}
+
 		// enqueue styles and scripts
 		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
