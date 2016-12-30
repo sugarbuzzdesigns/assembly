@@ -4772,6 +4772,11 @@ REUSEABLE BACKGROUNDS
   width: 261px;
 }
 
+.mesh-bg.right {
+  left: auto;
+  right: 2%;
+}
+
 /*********************
 SELECT ELEMENT STYLES
 **********************/
@@ -5061,6 +5066,11 @@ PROJECTS SECTION
 }
 .projects .mesh-bg {
   left: 2%;
+  top: 0%;
+}
+.projects .mesh-bg.right {
+  left: auto;
+  right: 2%;
   top: 0%;
 }
 
@@ -5692,10 +5702,6 @@ PLUS SIZE (MOBILE) Iphone #+
   .projects {
     overflow: auto;
     padding-top: 75px;
-  }
-  .projects .mesh-bg {
-    left: 2%;
-    top: 0%;
   }
 
   /*********************

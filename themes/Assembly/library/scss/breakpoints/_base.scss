@@ -393,6 +393,11 @@ REUSEABLE BACKGROUNDS
 	width: 261px;
 }
 
+.mesh-bg.right {
+	left: auto;
+	right: 2%;
+}
+
 /*********************
 SELECT ELEMENT STYLES
 **********************/
@@ -720,6 +725,11 @@ PROJECTS SECTION
 	.mesh-bg {
 		left: 2%;
 		top: 0%;
+	}
+
+	.mesh-bg.right {
+		left: auto;
+		right: 2%;
 	}
 }
 

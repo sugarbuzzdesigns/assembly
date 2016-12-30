@@ -102,7 +102,7 @@
 		</div>
 	</section>
 	<section class="projects">
-		<div class="mesh-bg dark wide"></div>
+		<div class="mesh-bg dark wide right"></div>
 		<div class="projects-wrapper">
 		<?php
 		$projectsArgs2 = array(
