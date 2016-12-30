@@ -34,6 +34,7 @@ var assembly = assembly || {};
 
 			function showMenu(){
 				$('html').addClass('menu-open');
+				$('html').removeClass('close-menu');
 
 				var queue = $({}); //use the default animation queue
 			    $('nav li').each(function(i, elm) {
@@ -51,7 +52,7 @@ var assembly = assembly || {};
 
 			function hideMenu(){
 				$('html').removeClass('menu-open');
-				// $('html').addClass('close-menu');
+				$('html').addClass('close-menu');
 				$('nav li').removeClass('show-nav-item');
 			};
 		}

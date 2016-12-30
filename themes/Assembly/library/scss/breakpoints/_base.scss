@@ -209,6 +209,7 @@ MENU & NAVIGATION STYLES
     z-index: 1;
     pointer-events: none;
     opacity: 0;
+    transition: opacity 1.5s;
 }
 
 .menu-bg {
@@ -283,8 +284,8 @@ and more scalable.
 
 	.menu-bg {
 		opacity: 1;
-	    animation: showmenu;
-	    animation-duration: 1.5s;
+	    animation: showMenuBg;
+	    animation-duration: 0.75s;
 	    animation-fill-mode: forwards;
 	}
 
@@ -296,22 +297,44 @@ and more scalable.
 	}
 }
 
-// .menu-open.close-menu {
-// 	.menu-bg {
-// 	    animation: hidemenu;
-// 	    animation-duration: 1.5s;
-// 	    animation-fill-mode: forwards;
-// 	}
-// }
+.close-menu {
+	.main-menu {
+		pointer-events: none;
+		opacity: 0;
+	}
 
-@keyframes showmenu {
-  100% {
-  	opacity: 1;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-  }
+	.menu-bg {
+	    animation: hideMenuBg;
+	    animation-duration: 0.75s;
+	    animation-fill-mode: forwards;
+	}
+}
+
+@keyframes showMenuBg {
+	100% {
+		opacity: 1;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+	}
+}
+
+@keyframes hideMenuBg {
+	0% {
+		opacity: 1;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+	}
+	100% {
+		opacity: 1;
+		top: 10px;
+		right: 10px;
+		height: 30px;
+		width: 30px;
+	}
 }
 
 @keyframes showmenuitems {
@@ -320,16 +343,6 @@ and more scalable.
 	transform: translate3d(0,0,0);
   }
 }
-
-// @keyframes hidemenu {
-//   100% {
-//     opacity: 0;
-// 	top: 10px;
-//     right: 10px;
-//     height: 30px;
-//     width: 30px;
-//   }
-// }
 
 /*********************
 VIDEO CONTENT
