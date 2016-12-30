@@ -126,7 +126,9 @@ var assembly = assembly || {};
 			});
 
 			$('.menu-bg').on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(evt){
-				console.log(evt);
+				if(evt.originalEvent.animationName === 'hideMenuBg'){
+					$('html').removeClass('close-menu');
+				}
 			});
 		},
 

@@ -212,8 +212,6 @@ MENU & NAVIGATION STYLES
     height: 100vh;
     z-index: 1;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 1.5s;
 }
 
 .menu-bg {
@@ -223,6 +221,7 @@ MENU & NAVIGATION STYLES
     right: 10px;
     height: 30px;
     width: 30px;
+    opacity: 0;
 }
 
 /*********************
@@ -283,7 +282,6 @@ and more scalable.
 .menu-open {
 	.main-menu {
 		pointer-events: all;
-		opacity: 1;
 	}
 
 	.menu-bg {
@@ -304,7 +302,9 @@ and more scalable.
 .close-menu {
 	.main-menu {
 		pointer-events: none;
-		opacity: 0;
+	    animation: hideMainMenu;
+	    animation-duration: 0.75s;
+	    animation-fill-mode: forwards;
 	}
 
 	.menu-bg {
@@ -314,9 +314,17 @@ and more scalable.
 	}
 }
 
-@keyframes showMenuBg {
+@keyframes hideMainMenu {
 	100% {
+
+	}
+}
+
+@keyframes showMenuBg {
+	0% {
 		opacity: 1;
+	}
+	100% {
 		right: 0;
 		top: 0;
 		height: 100vh;
@@ -332,8 +340,15 @@ and more scalable.
 		height: 100vh;
 		width: 100%;
 	}
-	100% {
+	50% {
 		opacity: 1;
+	}
+	75% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 0;
 		top: 10px;
 		right: 10px;
 		height: 30px;
