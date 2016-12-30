@@ -51,6 +51,7 @@ var assembly = assembly || {};
 
 			function hideMenu(){
 				$('html').removeClass('menu-open');
+				// $('html').addClass('close-menu');
 				$('nav li').removeClass('show-nav-item');
 			};
 		}

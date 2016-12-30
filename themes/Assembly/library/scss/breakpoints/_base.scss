@@ -208,13 +208,12 @@ MENU & NAVIGATION STYLES
     height: 100vh;
     z-index: 1;
     pointer-events: none;
-    display: none;
+    opacity: 0;
 }
 
 .menu-bg {
     background: #000;
     position: absolute;
-    opacity: 0;
 	top: 10px;
     right: 10px;
     height: 30px;
@@ -279,10 +278,11 @@ and more scalable.
 .menu-open {
 	.main-menu {
 		pointer-events: all;
-		display: block;
+		opacity: 1;
 	}
 
 	.menu-bg {
+		opacity: 1;
 	    animation: showmenu;
 	    animation-duration: 1.5s;
 	    animation-fill-mode: forwards;
@@ -575,6 +575,10 @@ HEADER STYLES
 header.dark {
 	.main-menu-btn  span {
 		background-color: #000;
+		-webkit-transition: background-color .5s ease-in-out;
+		-moz-transition: background-color .5s ease-in-out;
+		-o-transition: background-color .5s ease-in-out;
+		transition: background-color .5s ease-in-out;
 	}
 
 	#mask-2 {
@@ -585,7 +589,26 @@ header.dark {
 		polygon,
 		mask {
 			fill: #000;
+			-webkit-transition: fill .5s ease-in-out 0.5s;
+			-moz-transition: fill .5s ease-in-out 0.5s;
+			-o-transition: fill .5s ease-in-out 0.5s;
+			transition: fill .5s ease-in-out 0.5s;
 		}
+	}
+}
+
+.menu-open {
+	header.dark {
+		.main-menu-btn  span {
+			background-color: #fff;
+		}
+	}
+
+	header.dark #mask-2,
+	header.dark svg mask,
+	header.dark svg path,
+	header.dark svg polygon {
+		fill: #fff;
 	}
 }
 
