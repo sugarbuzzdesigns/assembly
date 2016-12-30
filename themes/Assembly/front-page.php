@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
 	<section class="landing">
-		<?php include 'includes/header-light.php'; ?>
+		<?php include 'includes/header-light-home.php'; ?>
 		<h2>here today. remembered tomorrow.</h2>
 		<div class="mesh-bg"></div>
 

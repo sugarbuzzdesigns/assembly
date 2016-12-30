@@ -12,5 +12,8 @@
 			</div>
 		</div>
 	</section>
+	<section class="slider">
+		<h3>For The moment.</h3>
+	</section>
 
 <?php get_footer(); ?>

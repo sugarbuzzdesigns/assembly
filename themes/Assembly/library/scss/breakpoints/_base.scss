@@ -1188,9 +1188,28 @@ ABOUT US Page
 
 	.landing {
 		position: relative;
+		padding-top: 20%;
+
+		.mesh-bg {
+			top: 45px;
+			left: 75px;
+		}
+	}
+
+	.videos {
+		padding: 0 0 12% 0 ;
 	}
 
 	h1 {
 		font-size: rem(35);
+		margin: 0 0 22% 10%;
+	}
+
+	h3 {
+		font-family: 'gridnikregular';
+		font-size: rem(14);
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 6%;
 	}
 }
