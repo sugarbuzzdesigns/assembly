@@ -181,13 +181,17 @@ h5, .h5 {
 /*********************
 BUTTONS
 **********************/
-button {
+button,
+[type="button"],
+.button {
 	background: $teal;
 	color: #fff;
 	font-size: rem(12);
 	text-transform: uppercase;
 	border: none;
-	padding: 19px 46px 13px;
+	padding: 16px 46px 15px;
+	display: inline-block;
+	text-decoration: none;
 
 	&:focus {
 		outline: none;
@@ -1189,6 +1193,7 @@ ABOUT US Page
 	.landing {
 		position: relative;
 		padding-top: 20%;
+		overflow: hidden;
 
 		.mesh-bg {
 			top: 45px;
@@ -1210,6 +1215,149 @@ ABOUT US Page
 		font-size: rem(14);
 		text-transform: uppercase;
 		text-align: center;
-		margin-bottom: 6%;
+		margin-bottom: 17%;
+	}
+
+	.slider {
+		width: 100%;
+
+		.slide {
+			width: 100%;
+			position: relative;
+			z-index: 1;
+
+			.slide-inner {
+				width: 56%;
+				margin: 0 auto 0 11%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.slide-title {
+				margin-top: rem(20);
+				margin-bottom: rem(27);
+				font-size: rem(13);
+				line-height: rem(16);
+				letter-spacing: 1.3px;
+				text-transform: uppercase;
+				font-family: 'gridnikregular';
+			}
+
+			.slide-description {
+				font-size: rem(13);
+				line-height: rem(23);
+			}
+		}
+
+		.mesh-bg {
+			margin-top: 28.5%;
+			height: 362px;
+			pointer-events: none;
+		}
+	}
+
+	.callout {
+		width: 62%;
+		font-family: 'roboto_monoregular';
+		margin: 23% auto 20% auto;
+
+		p {
+			font-size: rem(13);
+			line-height: rem(23);
+			margin: 0 0 17% 0;
+		}
+
+		.button {
+    		padding: 16px 26px 15px;
+		}
+	}
+
+	.employees {
+		margin-top: 16%;
+	}
+
+	.our-approach {
+		h3 {
+			text-transform: lowercase;
+			font-family: 'pangrambold';
+			font-size: rem(39);
+			line-height: rem(33);
+			text-align: left;
+			margin-left: 10%;
+			margin-bottom: 0;
+
+			span {
+				display: block;
+			}
+		}
+
+		.svg-slider {
+			.num {
+				font-family: 'pangrambold';
+				font-size: rem(86);
+				line-height: rem(91);
+				color: #f0f0f0;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			.viewport {
+			    overflow: hidden;
+			    width: 100%;
+				svg {
+				    width: 96%;
+				    margin-left: 3%;
+				}
+			}
+			.description {
+				width: 62%;
+				margin: -25% auto 0 11%;
+				h4 {
+					font-family: 'gridnikregular';
+					font-size: rem(13);
+					line-height: rem(20);
+					letter-spacing: 1.08px;
+				}
+
+				p {
+					font-size: rem(13);
+					line-height: 1.8;
+				}
+			}
+
+			.slider-nav {
+				ul {
+					margin: 10% 0 0 0;
+					padding: 0;
+					text-align: center;
+
+					li {
+						height: 11px;
+						width: 11px;
+						border-radius: 50%;
+						background-color: #000;
+						display: inline-block;
+						opacity: .24;
+						cursor: pointer;
+						margin-right: 4%;
+
+						&.active {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	a[href="/case-studies"] {
+		width: 58%;
+		margin: 21% auto 17%;
+		display: block;
+
+		svg {
+			width: 100%;
+		}
 	}
 }

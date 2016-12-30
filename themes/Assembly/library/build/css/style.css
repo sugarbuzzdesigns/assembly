@@ -4593,18 +4593,26 @@ h5, .h5 {
 /*********************
 BUTTONS
 **********************/
-button {
+button,
+[type="button"],
+.button {
   background: #8ed6db;
   color: #fff;
   font-size: 0.75rem;
   text-transform: uppercase;
   border: none;
-  padding: 19px 46px 13px;
+  padding: 16px 46px 15px;
+  display: inline-block;
+  text-decoration: none;
 }
-button:focus {
+button:focus,
+[type="button"]:focus,
+.button:focus {
   outline: none;
 }
-button.dark {
+button.dark,
+[type="button"].dark,
+.button.dark {
   background: transparent;
   border: solid 1px #fff;
 }
@@ -5445,6 +5453,7 @@ ABOUT US Page
 .page-about-us .landing {
   position: relative;
   padding-top: 20%;
+  overflow: hidden;
 }
 .page-about-us .landing .mesh-bg {
   top: 45px;
@@ -5462,7 +5471,125 @@ ABOUT US Page
   font-size: 0.875rem;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 6%;
+  margin-bottom: 17%;
+}
+.page-about-us .slider {
+  width: 100%;
+}
+.page-about-us .slider .slide {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.page-about-us .slider .slide .slide-inner {
+  width: 56%;
+  margin: 0 auto 0 11%;
+}
+.page-about-us .slider .slide .slide-inner img {
+  width: 100%;
+}
+.page-about-us .slider .slide .slide-title {
+  margin-top: 1.25rem;
+  margin-bottom: 1.6875rem;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  font-family: 'gridnikregular';
+}
+.page-about-us .slider .slide .slide-description {
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+}
+.page-about-us .slider .mesh-bg {
+  margin-top: 28.5%;
+  height: 362px;
+  pointer-events: none;
+}
+.page-about-us .callout {
+  width: 62%;
+  font-family: 'roboto_monoregular';
+  margin: 23% auto 20% auto;
+}
+.page-about-us .callout p {
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  margin: 0 0 17% 0;
+}
+.page-about-us .callout .button {
+  padding: 16px 26px 15px;
+}
+.page-about-us .employees {
+  margin-top: 16%;
+}
+.page-about-us .our-approach h3 {
+  text-transform: lowercase;
+  font-family: 'pangrambold';
+  font-size: 2.4375rem;
+  line-height: 2.0625rem;
+  text-align: left;
+  margin-left: 10%;
+  margin-bottom: 0;
+}
+.page-about-us .our-approach h3 span {
+  display: block;
+}
+.page-about-us .our-approach .svg-slider .num {
+  font-family: 'pangrambold';
+  font-size: 5.375rem;
+  line-height: 5.6875rem;
+  color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-about-us .our-approach .svg-slider .viewport {
+  overflow: hidden;
+  width: 100%;
+}
+.page-about-us .our-approach .svg-slider .viewport svg {
+  width: 96%;
+  margin-left: 3%;
+}
+.page-about-us .our-approach .svg-slider .description {
+  width: 62%;
+  margin: -25% auto 0 11%;
+}
+.page-about-us .our-approach .svg-slider .description h4 {
+  font-family: 'gridnikregular';
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  letter-spacing: 1.08px;
+}
+.page-about-us .our-approach .svg-slider .description p {
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+.page-about-us .our-approach .svg-slider .slider-nav ul {
+  margin: 10% 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+.page-about-us .our-approach .svg-slider .slider-nav ul li {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: #000;
+  display: inline-block;
+  opacity: .24;
+  cursor: pointer;
+  margin-right: 4%;
+}
+.page-about-us .our-approach .svg-slider .slider-nav ul li.active {
+  opacity: 1;
+}
+.page-about-us a[href="/case-studies"] {
+  width: 58%;
+  margin: 21% auto 17%;
+  display: block;
+}
+.page-about-us a[href="/case-studies"] svg {
+  width: 100%;
 }
 
 @media only screen and (min-width: 321px) {
