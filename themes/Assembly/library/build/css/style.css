@@ -5515,6 +5515,25 @@ PLUS SIZE (MOBILE) Iphone #+
   }
 
   /*********************
+  nav
+  *********************/
+  /*
+  all navs have a .nav class applied via
+  the wp_menu function; this is so we can
+  easily write one group of styles for
+  the navs on the site so our css is cleaner
+  and more scalable.
+  */
+  .nav {
+    padding-top: 6em;
+    /* end .menu li */
+  }
+  .nav li {
+    margin-bottom: 1.4em;
+  }
+
+  /* end .nav */
+  /*********************
   HOME PAGE STYLES
   **********************/
   .home .landing h2 {
