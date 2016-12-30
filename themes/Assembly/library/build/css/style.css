@@ -5557,8 +5557,8 @@ ABOUT US Page
   line-height: 5.6875rem;
   color: #f0f0f0;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: 11%;
 }
 .page-about-us .our-approach .svg-slider .viewport {
   overflow: hidden;
