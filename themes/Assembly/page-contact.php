@@ -23,7 +23,22 @@
 		<div class="mesh-bg dark"></div>
 		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
 		<p>What are you interested in?</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/add_photo_placeholder.jpg" alt="">
+		<div class="assembly-slider">
+			<ul class="slider">
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_1.jpg" alt="">
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_2.jpg" alt="">
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_3.jpg" alt="">
+				</li>
+				<li>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_4.jpg" alt="">
+				</li>
+			</ul>
+		</div>
 		<a href="#" class="add-photo-btn">
 			<span></span>
 			<span></span>

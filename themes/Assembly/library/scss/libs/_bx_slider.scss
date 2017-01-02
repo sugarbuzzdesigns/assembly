@@ -202,3 +202,62 @@
 	font-size: .85em;
 	padding: 10px;
 }
+
+
+.assembly-slider {
+	background: #fff;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.slider {
+	background-color: #fff;
+	height: 100%;
+}
+
+.slider li {
+	padding: 0 10px;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+.slider li img {
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.slider li:nth-child(odd) img {
+	transform: translate3d(0, -5%, 0);
+}
+
+.slider li:nth-child(even) img {
+	transform: translate3d(0, 15%, 4%);
+}
+
+.slider li.active-slide img {
+	transform: translate3d(0, 0, 0);
+}
+
+.slider li:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.slider img {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 95%;
+	opacity: .5;
+}
+
+.bx-viewport {
+	/*width: 120% !important;*/
+	padding: 0 20px;
+}
+
+.active-slide img {
+	opacity: 1;
+}

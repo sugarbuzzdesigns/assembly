@@ -74,6 +74,24 @@ var assembly = assembly || {};
 
 	$(function(){
 		assembly.contact.init();
+
+		var slideWidth = $(window).width() * .9;
+		var slider = $('.slider').bxSlider({
+			slideWidth: slideWidth,
+			infiniteLoop: false,
+			controls: false,
+			pager: false,
+		    onSliderLoad: function(currentIndex) {
+		      $('.bx-viewport').find('ul').children().eq(currentIndex).addClass('active-slide');
+		    },
+		    onSlideBefore: function($slideElement){
+		      $('.bx-viewport').find('ul').children().removeClass('active-slide');
+		      $slideElement.addClass('active-slide');
+		    }
+		});
+
+		$('.bx-wrapper').first().css('max-width', '90%');
+		$('.bx-viewport').css({overflow: 'visible'})
 	});
 })(jQuery);
 
