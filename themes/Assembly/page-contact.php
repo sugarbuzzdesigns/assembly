@@ -6,6 +6,7 @@
 			<p>what kind of structure are you looking for? </p>
 			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 			<input type="text" name="" value="" placeholder="type here">
+			<div class="error-message">Please Fill our the field.</div>
 			<button class="dark" type="button">next</button>
 		</label>
 		<label>
@@ -18,6 +19,16 @@
 </form>
 
 <section class="add-photo">
+	<div class="add-photo-overlay">
+		<div class="mesh-bg dark"></div>
+		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
+		<p>What are you interested in?</p>
+		<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/add_photo_placeholder.jpg" alt="">
+		<a href="#" class="add-photo-btn">
+			<span></span>
+			<span></span>
+		</a>
+	</div>
 	<div class="addable-images">
 	<?php
 
@@ -60,7 +71,8 @@
 			scaleControl: false,
 			streetViewControl: false,
 			rotateControl: false,
-			fullscreenControl: false
+			fullscreenControl: false,
+			scrollwheel:  false
 		});
 
 		var marker = new google.maps.Marker({

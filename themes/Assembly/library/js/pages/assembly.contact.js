@@ -20,7 +20,12 @@ var assembly = assembly || {};
 			var _this = this;
 
 			$('form button').on('click', function formButtonHandler(){
-				_this.showNextFormInput($(this.closest('form .active')));
+				if(_this.validField($(this.closest('form .active')).find('input').val())){
+					_this.showNextFormInput($(this.closest('form .active')));
+					$('form .error-message').hide();
+				} else {
+					$('form .error-message').show();
+				}
 			});
 
 			this.$addPhotoIcon.on('click', function addPhotoClickHandler(){
@@ -41,11 +46,24 @@ var assembly = assembly || {};
 			$total.html(numFormFields);
 		},
 
+		validField: function(fieldValue){
+			if (fieldValue) {
+				return true;
+			} else {
+				return false;
+			}
+		},
+
 		showNextFormInput: function($currentInput){
-			var curIndex = $currentInput.index() + 1;
+			var curIndex = $currentInput.index() + 1,
+				nextIndex = curIndex + 1;
+
+			if(nextIndex === $('form label').length){
+				$('form button').addClass('disabled');
+			}
 
 			if(curIndex === $('form label').length){
-				console.log('at the end');
+				return;
 			} else {
 				$('.pager .current').html(curIndex + 1);
 				$currentInput.removeClass('active');
