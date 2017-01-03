@@ -169,5 +169,6 @@ var assembly = assembly || {};
 
 	$(function(){
 		assembly.navigation.init();
+		$('.main-menu-btn').addClass('animate'); //temporary
 	});
 })(jQuery);

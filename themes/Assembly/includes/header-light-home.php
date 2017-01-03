@@ -5,10 +5,5 @@
             <?php include __DIR__ . '/../library/images/svg/full-logo.svg'; ?>
         </a>
     </h1>
-	<div class="main-menu-btn">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
+	<?php include __DIR__ . '/../includes/menu-btn.php'; ?>
 </header>

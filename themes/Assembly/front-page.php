@@ -2,7 +2,17 @@
 <div class="container">
 	<section class="landing">
 		<?php include 'includes/header-light-home.php'; ?>
-		<h2>here today. remembered tomorrow.</h2>
+		<h2>
+			<div>
+				<span>here</span> <span>today. </span>
+			</div>
+			<div>
+				<span>remembered</span>
+			</div>
+			<div>
+				<span>tomorrow.</span>
+			</div>
+		</h2>
 		<div class="mesh-bg"></div>
 
  		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
