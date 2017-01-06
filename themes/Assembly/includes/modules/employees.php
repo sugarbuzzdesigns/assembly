@@ -16,7 +16,7 @@
 					<span class="num">6</span>
 					<span class="text">years of experience</span>
 				</div>
-				<button type="button">about</button>
+				<a href="#" class="button">about</button>
 			</div>
 		</div>
 	</section>

@@ -117,7 +117,9 @@ module.exports = function(grunt) {
 					// '<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
 					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
 					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js',
-					'<%= jsSrcDir %>/libs/bxslider.min.js'
+					'<%= jsSrcDir %>/libs/bxslider.min.js',
+					'<%= jsSrcDir %>/libs/slick.min.js',
+					'<%= jsSrcDir %>/libs/videojs.min.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/libs.js'
 			},
@@ -129,7 +131,9 @@ module.exports = function(grunt) {
 		    	},
 				src: [
 					'<%= jsSrcDir %>/common/assembly.util.js',
-					'<%= jsSrcDir %>/common/assembly.navigation.js'
+					'<%= jsSrcDir %>/common/assembly.navigation.js',
+					'<%= jsSrcDir %>/common/assembly.carousel.js',
+					'<%= jsSrcDir %>/common/assembly.video.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/assembly.common.js'
 		    },

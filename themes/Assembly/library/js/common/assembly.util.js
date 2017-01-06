@@ -1,3 +1,4 @@
+jQuery.migrateMute = true;
 /*!
  * Assembly Utility Object
  */

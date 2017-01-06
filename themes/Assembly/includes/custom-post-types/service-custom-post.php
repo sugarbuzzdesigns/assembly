@@ -40,51 +40,105 @@ function custom_post_service() {
 	/* this adds your post tags to your custom post type */
 
 }
-
-// now let's add custom categories (these act like categories)
-register_taxonomy( 'service_category',
-	array('service'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	array('hierarchical' => true,     /* if this is true, it acts like categories */
-		'labels' => array(
-			'name' => __( 'Service Category', 'bonestheme' ), /* name of the custom taxonomy */
-			'singular_name' => __( 'Service Category', 'bonestheme' ), /* single taxonomy name */
-			'search_items' =>  __( 'Search Service Categories', 'bonestheme' ), /* search title for taxomony */
-			'all_items' => __( 'All Service Categories', 'bonestheme' ), /* all title for taxonomies */
-			'parent_item' => __( 'Parent Service Category', 'bonestheme' ), /* parent title for taxonomy */
-			'parent_item_colon' => __( 'Parent Service Category:', 'bonestheme' ), /* parent taxonomy title */
-			'edit_item' => __( 'Edit Service Category', 'bonestheme' ), /* edit custom taxonomy title */
-			'update_item' => __( 'Update Service Category', 'bonestheme' ), /* update title for taxonomy */
-			'add_new_item' => __( 'Add New Service Category', 'bonestheme' ), /* add new title for taxonomy */
-			'new_item_name' => __( 'New Service Category Name', 'bonestheme' ) /* name title for taxonomy */
-		),
-		'show_admin_column' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'service-cat' ),
-	)
-);
-
 // adding the function to the Wordpress init
 add_action( 'init', 'custom_post_service');
 
-register_taxonomy( 'service_image_size_tag',
-	array('service'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	array('hierarchical' => true,     /* if this is true, it acts like categories */
-		'labels' => array(
-			'name' => __( 'Service Image Size', 'bonestheme' ), /* name of the custom taxonomy */
-			'singular_name' => __( 'Service Image Size Tag', 'bonestheme' ), /* single taxonomy name */
-			'search_items' =>  __( 'Search Service Image Size', 'bonestheme' ), /* search title for taxomony */
-			'all_items' => __( 'All Service Image Size', 'bonestheme' ), /* all title for taxonomies */
-			'parent_item' => __( 'Parent Service Image Size Tag', 'bonestheme' ), /* parent title for taxonomy */
-			'parent_item_colon' => __( 'Parent Service Image Size Tag:', 'bonestheme' ), /* parent taxonomy title */
-			'edit_item' => __( 'Edit Service Image Size Tag', 'bonestheme' ), /* edit custom taxonomy title */
-			'update_item' => __( 'Update Service Image Size Tag', 'bonestheme' ), /* update title for taxonomy */
-			'add_new_item' => __( 'Add New Service Image Size Tag', 'bonestheme' ), /* add new title for taxonomy */
-			'new_item_name' => __( 'New Service Image Size Tag Name', 'bonestheme' ) /* name title for taxonomy */
-		),
-		'show_admin_column' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'service-image-size-tag' ),
-	)
-);
+// // now let's add custom categories (these act like categories)
+// register_taxonomy( 'service_category',
+// 	array('service'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
+// 		'labels' => array(
+// 			'name' => __( 'Service Category', 'bonestheme' ), /* name of the custom taxonomy */
+// 			'singular_name' => __( 'Service Category', 'bonestheme' ), /* single taxonomy name */
+// 			'search_items' =>  __( 'Search Service Categories', 'bonestheme' ), /* search title for taxomony */
+// 			'all_items' => __( 'All Service Categories', 'bonestheme' ), /* all title for taxonomies */
+// 			'parent_item' => __( 'Parent Service Category', 'bonestheme' ), /* parent title for taxonomy */
+// 			'parent_item_colon' => __( 'Parent Service Category:', 'bonestheme' ), /* parent taxonomy title */
+// 			'edit_item' => __( 'Edit Service Category', 'bonestheme' ), /* edit custom taxonomy title */
+// 			'update_item' => __( 'Update Service Category', 'bonestheme' ), /* update title for taxonomy */
+// 			'add_new_item' => __( 'Add New Service Category', 'bonestheme' ), /* add new title for taxonomy */
+// 			'new_item_name' => __( 'New Service Category Name', 'bonestheme' ) /* name title for taxonomy */
+// 		),
+// 		'show_admin_column' => true,
+// 		'show_ui' => true,
+// 		'query_var' => true,
+// 		'rewrite' => array( 'slug' => 'service-cat' ),
+// 	)
+// );
+
+// register_taxonomy( 'service_image_size_tag',
+// 	array('service'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+// 	array('hierarchical' => true,     /* if this is true, it acts like categories */
+// 		'labels' => array(
+// 			'name' => __( 'Service Image Size', 'bonestheme' ), /* name of the custom taxonomy */
+// 			'singular_name' => __( 'Service Image Size Tag', 'bonestheme' ), /* single taxonomy name */
+// 			'search_items' =>  __( 'Search Service Image Size', 'bonestheme' ), /* search title for taxomony */
+// 			'all_items' => __( 'All Service Image Size', 'bonestheme' ), /* all title for taxonomies */
+// 			'parent_item' => __( 'Parent Service Image Size Tag', 'bonestheme' ), /* parent title for taxonomy */
+// 			'parent_item_colon' => __( 'Parent Service Image Size Tag:', 'bonestheme' ), /* parent taxonomy title */
+// 			'edit_item' => __( 'Edit Service Image Size Tag', 'bonestheme' ), /* edit custom taxonomy title */
+// 			'update_item' => __( 'Update Service Image Size Tag', 'bonestheme' ), /* update title for taxonomy */
+// 			'add_new_item' => __( 'Add New Service Image Size Tag', 'bonestheme' ), /* add new title for taxonomy */
+// 			'new_item_name' => __( 'New Service Image Size Tag Name', 'bonestheme' ) /* name title for taxonomy */
+// 		),
+// 		'show_admin_column' => true,
+// 		'show_ui' => true,
+// 		'query_var' => true,
+// 		'rewrite' => array( 'slug' => 'service-image-size-tag' ),
+// 	)
+// );
+//
+
+function update_custom_terms($post_id) {
+
+    // only update terms if it's a post-type-B post
+    if ( 'service' != get_post_type($post_id)) {
+        return;
+    }
+
+    // don't create or update terms for system generated posts
+    if (get_post_status($post_id) == 'auto-draft') {
+        return;
+    }
+
+    /*
+    * Grab the post title and slug to use as the new
+    * or updated term name and slug
+    */
+    $term_title = get_the_title($post_id);
+    $term_slug = get_post( $post_id )->post_name;
+
+    /*
+    * Check if a corresponding term already exists by comparing
+    * the post ID to all existing term descriptions.
+    */
+    $existing_terms = get_terms('project_service_cat', array(
+        'hide_empty' => false
+        )
+    );
+
+    foreach($existing_terms as $term) {
+        if ($term->description == $post_id) {
+            //term already exists, so update it and we're done
+            wp_update_term($term->term_id, 'project_service_cat', array(
+                'name' => $term_title,
+                'slug' => $term_slug
+                )
+            );
+            return;
+        }
+    }
+
+    /*
+    * If we didn't find a match above, this is a new post,
+    * so create a new term.
+    */
+    wp_insert_term($term_title, 'project_service_cat', array(
+        'slug' => $term_slug,
+        'description' => $post_id
+        )
+    );
+}
+
+//run the update function whenever a post is created or edited
+add_action('save_post', 'update_custom_terms');

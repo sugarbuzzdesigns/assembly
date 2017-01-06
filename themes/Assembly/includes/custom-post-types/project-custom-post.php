@@ -45,3 +45,49 @@ function custom_post_project() {
 
 // adding the function to the Wordpress init
 add_action( 'init', 'custom_post_project');
+
+// now let's add custom categories (these act like categories)
+register_taxonomy( 'project_service_cat',
+	array('project'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __( 'Service Types', 'bonestheme' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Service Type', 'bonestheme' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Service Types', 'bonestheme' ), /* search title for taxomony */
+			'all_items' => __( 'All Service Types', 'bonestheme' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent Service Type', 'bonestheme' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent Service Type:', 'bonestheme' ), /* parent taxonomy title */
+			'edit_item' => __( 'Edit Service Type', 'bonestheme' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Service Type', 'bonestheme' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Service Type', 'bonestheme' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Service Type Name', 'bonestheme' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'project-service-cat' ),
+	)
+);
+
+// now let's add custom categories (these act like categories)
+register_taxonomy( 'project_img_type',
+	array('project'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __( 'Image Types', 'bonestheme' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Image Type', 'bonestheme' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Image Types', 'bonestheme' ), /* search title for taxomony */
+			'all_items' => __( 'All Image Types', 'bonestheme' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent Image Type', 'bonestheme' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent Image Type:', 'bonestheme' ), /* parent taxonomy title */
+			'edit_item' => __( 'Edit Image Type', 'bonestheme' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Image Type', 'bonestheme' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Image Type', 'bonestheme' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Image Type Name', 'bonestheme' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'project-img-type' ),
+	)
+);

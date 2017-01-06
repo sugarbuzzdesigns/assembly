@@ -182,7 +182,6 @@ h5, .h5 {
 BUTTONS
 **********************/
 button,
-[type="button"],
 .button {
 	background: $teal;
 	color: #fff;
@@ -364,29 +363,124 @@ and more scalable.
 }
 
 /*********************
-VIDEO CONTENT
+CAROUSEL MODULES
 **********************/
-// play btn svg width="58px" height="58px"
-.videos {
-	padding-bottom: 16%;
+// .carosuel-module[data-image-ratio="1to1"] {
+// 	min-height: 350px;
+// }
 
-	.video-wrapper {
-		position: relative;
+.carousel-wrapper.tile {
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+}
+
+.carousel-inner {
+	width: 100%;
+}
+
+.carousel {
+	display: none;
+	width: 100%;
+	padding-top: 60px;
+
+	&.slick-initialized {
+		display: block;
 	}
 
-	// TEMPORARY BG PLACEHOLDER
-	.video-placeholder {
+	.slick-list {
+		overflow: visible;
+	}
+
+   .slick-slide {
+   		opacity: 0.5;
+   		transform: translate3d(0, -20px, 0);
+   		transition: opacity 0.5s, transform 0.5s;
+
+     	&.slick-current {
+     		transform: translate3d(0, 0, 0);
+     		opacity: 1
+     	}
+    }
+
+    .tile-inner {
+    	padding: 0 10%;
+    }
+
+	img {
 		width: 100%;
 	}
 
-	.video-play-btn {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 58px;
-		height: 58px;
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+}
+
+/*********************
+VIDEO CONTENT
+**********************/
+.video.module {
+	margin-top: 46px;
+	margin-bottom: 36px;
+}
+// play btn svg width="58px" height="58px"
+.video-wrapper {
+	position: relative;
+}
+
+// TEMPORARY BG PLACEHOLDER
+.video-placeholder {
+	width: 100%;
+}
+
+.video-play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 58px;
+	height: 58px;
+}
+
+.video-js {
+	width: 100%;
+
+	&.vjs-paused {
+		.vjs-poster,
+		.vjs-big-play-button {
+			display: block;
+		}
+
+		.vjs-control-bar {
+			display: none;
+		}
 	}
+
+	button.vjs-big-play-button {
+		background-image: url(../../images/icons/video-play-btn.png);
+		background-repeat: no-repeat;
+	    background-color: transparent;
+	    background-size: cover;
+	    border: none;
+		height: calc(116px/2);
+		width: calc(116px/2);
+	    -webkit-border-radius: 0;
+	    -moz-border-radius: 0;
+	    border-radius: 0;
+	    -webkit-transition: none;
+	    -moz-transition: none;
+	    -o-transition: none;
+	    transition: none;
+
+	    &:before {
+	    	display: none;
+	    }
+	}
+}
+
+.vjs-poster {
+	background-size: cover;
 }
 
 /*********************
@@ -394,7 +488,7 @@ REUSEABLE BACKGROUNDS
 **********************/
 .mesh-bg {
 	position: absolute;
-	height: 352px;
+	height: 372px;
 	width: 236px;
 	background: url(../../images/backgrounds/dot-mesh-bg.png);
 }
@@ -683,6 +777,13 @@ section {
 }
 
 /*********************
+MODULES GENERIC STYLES
+**********************/
+.module {
+	position: relative;
+}
+
+/*********************
 HOME PAGE STYLES
 **********************/
 
@@ -732,13 +833,13 @@ HOME PAGE STYLES
 
 	.company-statement {
 		position: relative;
-		padding-top: 60px;
-		padding-bottom: 83px;
+		padding-top: 37%;
+		margin-bottom: 24%;
 
 		.svg-shape-1 {
 		    position: absolute;
 		    left: 45%;
-		    top: 23%;
+		    top: 43%;
 		    transform: translate(-50%, 0);
 		}
 
@@ -746,7 +847,7 @@ HOME PAGE STYLES
 		    position: relative;
 		    z-index: 1;
 		    width: 78%;
-		    margin: 25px auto 0;
+		    margin: 0 auto 0;
 		}
 	}
 
@@ -757,8 +858,7 @@ PROJECTS SECTION
 - Homepage
 **********************/
 .projects {
-	overflow: auto;
-	padding-top: 75px;
+	overflow: hidden;
 
 	.mesh-bg {
 		left: 2%;
@@ -769,6 +869,26 @@ PROJECTS SECTION
 		left: auto;
 		right: 2%;
 	}
+}
+
+.projects-1 {
+	.carousel {
+		padding-top: 75px;
+	}
+}
+
+.projects-4 {
+	padding-top: 12px;
+
+	.mesh-bg {
+		height: 200px;
+		left: auto;
+		right: 2%;
+	}
+}
+
+.projects-5 {
+	padding-bottom: 58px;
 }
 
 /*********************
@@ -786,11 +906,11 @@ Tiles
 	letter-spacing: 1px;
 	color: #221f20;
 
-	&:nth-child(even){
-		float: right;
-		margin-left: 0;
-		margin-right: 10%;
-	}
+	// &:nth-child(even){
+	// 	float: right;
+	// 	margin-left: 0;
+	// 	margin-right: 10%;
+	// }
 
 	.tile-img {
 		margin-bottom: rem(15);
@@ -833,68 +953,98 @@ Tiles
 EMPLOYEES
 **********************/
 .employees {
-	overflow: auto;
-	padding-bottom: 14%;
-}
-
-.employee {
-	width: 100%;
+	background-image: url(../../images/backgrounds/diagonal-lines-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 30px;
+	overflow: hidden;
+	padding-bottom: 16%;
 	position: relative;
-	font-family: 'gridnikregular';
-	padding-left: 10%;
-	padding-right: 10%;
 
-	.col {
-		width: 55%;
-		float: left;
+	.years-experience-numbers {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-right: 16%;
+		font-family: 'pangrambold';
+		font-size: rem(165);
+		line-height: 1;
+		color: #f0f0f0;
+		opacity: 1;
+		transition: opacity 0.5s;
 
-		& + .col {
-			width: 45%;
+		&.counting {
+			opacity: 0;
 		}
-	}
 
-	.employee-img {
-		padding-top: rem(98);
-		padding-bottom: 10px;
-		width: 100%;
-		max-width: 100%;
-	}
-
-	.employee-name {
-		text-transform: uppercase;
-	}
-
-	.employee-name,
-	.employee-title {
-		color: #221f20;
-		display: block;
-		font-size: rem(11);
-	}
-
-	.employee-title {
-		display: none;
-	}
-
-	.years-experience {
-		margin-bottom: 4.2rem;
-		margin-left: -0.5rem;
-
-		.num {
-			font-family: 'pangrambold';
-			color: #f0f0f0;
-			font-size: rem(166);
-			line-height: rem(126.4);
+		span {
 			display: block;
-			overflow: hidden;
+			width: 100px;
+
+			& + span {
+				margin-top: -41px
+			}
+		}
+	}
+
+	.years-experience-text {
+		font-family: 'gridnikregular';
+		font-size: rem(11);
+		color: #d3d3d3;
+	    text-transform: uppercase;
+	    position: absolute;
+	    top: 183px;
+	    right: -19px;
+	    transform: rotate(-90deg);
+	    z-index: 1;
+	    transition: transform 0.5s;
+	    transform-origin: top;
+	    letter-spacing: 1px;
+	}
+
+	.carousel {
+		padding-top: 128px;
+
+		.slick-slide {
+			transform: translate3d(0,-60px,0);
+
+			&.slick-current {
+				transform: translate3d(0,0,0);
+			}
 		}
 
-		.text {
-		    display: block;
-		    transform: rotate(-90deg) translate(84%,325%);
-		    font-size: .625rem;
-		    color: #d3d3d3;
-		    text-transform: uppercase;
+		.tile-inner {
+			padding: 0;
 		}
+
+		.tile-img {
+			width: 44%;
+			margin-left: 11%;
+		}
+
+		.tile-info {
+			margin-left: 11%;
+		}
+
+		.tile-title {
+			font-size: rem(11);
+		}
+
+		.slide img {
+			transition: transform 0.5s ease-in-out;
+			transform: translate3d(-40%,0,0);
+		}
+
+		.slide.slick-current img {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	button {
+		float: right;
+		padding: 16px 32px 15px;
+    	margin-right: 39px;
+    	margin-top: 10px;
 	}
 }
 

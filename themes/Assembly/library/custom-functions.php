@@ -24,6 +24,17 @@ function get_projects_html($num_projects){
 	return $html;
 }
 
+function get_featured_image_data($post){
+	$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+	$thumbnail_id = get_post_thumbnail_id($post->ID);
+	$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+
+	return array(
+		'src' => $feat_image,
+		'alt' => $alt
+	);
+}
+
 function get_featured_image_html($post){
 	$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 	$thumbnail_id = get_post_thumbnail_id($post->ID);
