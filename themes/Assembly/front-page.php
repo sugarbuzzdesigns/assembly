@@ -30,6 +30,7 @@
 				<div class="carousel-inner">
 					<div class="carousel" data-mobile-position="left" data-mobile-start="front">
 					<?php
+						$usedProjectIds = [];
 						$projectLimit = 3;
 						$projectNum = 0;
 
