@@ -98,7 +98,7 @@
 						$projectNum = 0;
 
 						foreach ($projects as $project) {
-							if (!in_array( $project['id'], $usedProjectIds ) && $project['img_type'] == 'tall-1') { $projectNum++; ?>
+							if (!in_array( $project['id'], $usedProjectIds ) && $project['img_type'] == 'tall-1' && $project['service_type'] != '') { $projectNum++; ?>
 							<div class="slide">
 								<div class="tile-inner">
 									<div class="tile-img <?php echo $project['img_type']; ?>">
