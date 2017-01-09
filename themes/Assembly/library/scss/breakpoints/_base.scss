@@ -502,11 +502,11 @@ REUSEABLE BACKGROUNDS
 	position: absolute;
 	height: 372px;
 	width: 236px;
-	background: url(../../images/backgrounds/dot-mesh-bg.png);
+	background-image: url(../../images/svg/mesh-dot.svg);
 }
 
 .mesh-bg.dark {
-	background: url(../../images/backgrounds/dot-mesh-dark-bg.png);
+	background-image: url(../../images/svg/mesh-dot-white.svg);
 }
 
 .mesh-bg.wide {
@@ -529,7 +529,7 @@ SELECT ELEMENT STYLES
 select, .select2.select2-container--default {
 	border: 0;
 	background-color: #fff;
-	border: solid 1px #221f20;
+	border: solid 1px #979797;
 	border-radius: 0;
 	-webkit-appearance: none;
 	height: 44px;
@@ -574,7 +574,8 @@ select, .select2.select2-container--default {
 }
 
 .select2-container--classic .select2-results>.select2-results__options, .select2-container--default .select2-results>.select2-results__options {
-	border: solid 1px #000;
+	border: solid 1px #979797;
+	max-height: none;
 }
 
 .select2-container--open .select2-dropdown--below {
@@ -1506,7 +1507,7 @@ SERVICES Page
 	}
 
 	.tile {
-		margin: 0 0 19% 0;
+		margin: 0 0 26% 0;
 		float: none;
 		width: auto;
 
@@ -1527,10 +1528,6 @@ SERVICES Page
 	}
 
 	.content.dynamic {
-		.intro-tile {
-			margin-left: 17%;
-		}
-
 		.wide-1 img,
 		.tall-1 img  {
 			width: 78%;
@@ -1580,11 +1577,10 @@ SERVICES Page
 }
 
 // NON DYNAMIC. NEEDS TO BE UPDATED
-.tile.visualisation {
-	.tile-inner {
-		margin-left: 17%;
-		width: 60%;
-	}
+.tile.visualisation .tile-inner,
+.visualisation-wrapper .intro-tile .tile-inner  {
+	margin-left: 17%;
+	width: 61%;
 }
 
 .tile.permitting {

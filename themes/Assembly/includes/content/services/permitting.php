@@ -12,6 +12,7 @@
 			</div>
 			<p class="service-desc">Anyone can apply for a structure permit, but our vast experience in working with different states and various building departments enables us to navigate the process quickly and efficiently.</p>
 			<div class="tile wide-1 content-tile left">
+				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-content-1-mobile.jpg" alt="permitting">
