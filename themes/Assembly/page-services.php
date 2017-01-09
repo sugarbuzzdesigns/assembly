@@ -7,13 +7,20 @@
 		<div class="filter-wrap">
 			<select class="select-filter">
 				<option value="all">All</option>
-				<?php foreach ($service_categories as $cat): ?>
-					<option value="<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></option>
-				<?php endforeach; ?>
+				<option value="visualisation">Visualisation</option>
+				<option value="permitting">Permitting</option>
+				<option value="team-player">Team Player</option>
+				<option value="engineering">Engineering</option>
+				<option value="interior-buildouts">Interior Buildouts</option>
+				<option value="imagine-experience">Imagine Experience</option>
+
+				<?php //foreach ($service_categories as $cat): ?>
+					<!-- <option value="<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></option> -->
+				<?php //endforeach; ?>
 			</select>
 		</div>
 	</section>
-	<section class="content">
+	<section class="content landing">
 		<?php //foreach ($projects as $project) : ?>
 <!-- 			<div class="tile <?php echo $project['img_type']; ?>">
 				<div class="tile-inner">
@@ -95,8 +102,16 @@
 				</div>
 			</div>
 		</div>
-	 	<a href="/case-studies" title="">
-			<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
-		</a>
 	</section>
+	<section class="content dynamic">
+		<?php include 'includes/content/services/visualisation.php'; ?>
+		<?php include 'includes/content/services/permitting.php'; ?>
+		<?php include 'includes/content/services/team-player.php'; ?>
+		<?php include 'includes/content/services/engineering.php'; ?>
+		<?php include 'includes/content/services/interior-buildouts.php'; ?>
+		<?php include 'includes/content/services/imagine-experience.php'; ?>
+	</section>
+ 	<a href="/case-studies" title="">
+		<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
+	</a>
 <?php get_footer(); ?>

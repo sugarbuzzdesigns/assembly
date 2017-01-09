@@ -1514,6 +1514,69 @@ SERVICES Page
 			margin-bottom: 3.6%;
 		}
 	}
+
+	.service-desc {
+		width: 77%;
+		margin: 0 auto 24%;
+		font-size: rem(13);
+		line-height: 1.76;
+	}
+
+	.individual-service {
+		display: none;
+	}
+
+	.content.dynamic {
+		.intro-tile {
+			margin-left: 17%;
+		}
+
+		.wide-1 img,
+		.tall-1 img  {
+			width: 78%;
+		}
+
+		.left img {
+			margin-left: 9%;
+		}
+
+		.right img {
+			margin-left: 13.7%;
+		}
+
+		.content-tile {
+			margin-bottom: 30%;
+		}
+
+		.permitting-wrapper,
+		.team-player-wrapper,
+		.engineering-wrapper,
+		.interior-buildouts-wrapper  {
+			.intro-tile {
+				margin-left: 0;
+
+				.tile-inner {
+					margin-left: 11.3%;
+					width: 78%;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.team-player-wrapper,
+		.imagine-experience-wrapper  {
+			.intro-tile {
+				margin-left: 0;
+
+				.tile-inner {
+					margin-left: 14.25%;
+					width: 68%;
+				}
+			}
+		}
+	}
 }
 
 // NON DYNAMIC. NEEDS TO BE UPDATED

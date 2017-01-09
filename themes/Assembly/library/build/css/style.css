@@ -8240,6 +8240,59 @@ SERVICES Page
 .page-services .tile .tile-img {
   margin-bottom: 3.6%;
 }
+.page-services .service-desc {
+  width: 77%;
+  margin: 0 auto 24%;
+  font-size: 0.8125rem;
+  line-height: 1.76;
+}
+.page-services .individual-service {
+  display: none;
+}
+.page-services .content.dynamic .intro-tile {
+  margin-left: 17%;
+}
+.page-services .content.dynamic .wide-1 img,
+.page-services .content.dynamic .tall-1 img {
+  width: 78%;
+}
+.page-services .content.dynamic .left img {
+  margin-left: 9%;
+}
+.page-services .content.dynamic .right img {
+  margin-left: 13.7%;
+}
+.page-services .content.dynamic .content-tile {
+  margin-bottom: 30%;
+}
+.page-services .content.dynamic .permitting-wrapper .intro-tile,
+.page-services .content.dynamic .team-player-wrapper .intro-tile,
+.page-services .content.dynamic .engineering-wrapper .intro-tile,
+.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner,
+.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner,
+.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner {
+  margin-left: 11.3%;
+  width: 78%;
+}
+.page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner img,
+.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner img,
+.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner img,
+.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner img {
+  width: 100%;
+}
+.page-services .content.dynamic .team-player-wrapper .intro-tile,
+.page-services .content.dynamic .imagine-experience-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content.dynamic .imagine-experience-wrapper .intro-tile .tile-inner {
+  margin-left: 14.25%;
+  width: 68%;
+}
 
 .tile.visualisation {
   margin-left: 17%;

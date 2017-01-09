@@ -25,20 +25,24 @@ var assembly = assembly || {};
 			});
 		},
 		filterProjectsByCategory: function(option){
-			console.log(option);
-			var $allTiles = $('.tile[data-sesrvice-category]'),
-				$itemsToFilterOut = $('.tile[data-sesrvice-category!="'+ option + '"]'),
-				$itemsInCategory = $('[data-sesrvice-category="'+ option + '"]');
+			var $landingContent = $('.landing.content'),
+				$allTiles = $('.individual-service[data-service]'),
+				$servicesToHide = $('.individual-service[data-service!="'+ option + '"]'),
+				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
+
+				console.log($servicesToShow);
 
 			if(option === 'all'){
-				$itemsInCategory = $allTiles;
+				$landingContent.show();
+				$allTiles.hide();
+			} else {
+				$landingContent.hide();
+				$servicesToHide.hide();
+				$servicesToShow.show();
+				// $.when($allTiles.fadeOut(500)).done(function(){
+				// 	$servicesToShow.fadeIn(500);
+				// });
 			}
-
-			$.when($allTiles.fadeOut(500)).done(function(){
-				$itemsInCategory.fadeIn(500);
-				$itemsInCategory.addClass('animated');
-			});
-
 		}
 	};
 
