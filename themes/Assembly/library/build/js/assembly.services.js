@@ -7,9 +7,14 @@ var assembly = assembly || {};
 	assembly.services = {
 		init: function(){
 			this.$selectFilter = $('.select-filter');
+			this.initSelect2();
 			this.bindEvents();
+		},
 
-			console.log(this.$selectFilter);
+		initSelect2: function(){
+			this.select2Filter = this.$selectFilter.select2({
+				minimumResultsForSearch: -1
+			});
 		},
 
 		bindEvents: function(){
@@ -20,6 +25,7 @@ var assembly = assembly || {};
 			});
 		},
 		filterProjectsByCategory: function(option){
+			console.log(option);
 			var $allTiles = $('.tile[data-sesrvice-category]'),
 				$itemsToFilterOut = $('.tile[data-sesrvice-category!="'+ option + '"]'),
 				$itemsInCategory = $('[data-sesrvice-category="'+ option + '"]');

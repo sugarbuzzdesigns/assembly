@@ -73,6 +73,9 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 // VideoJS CSS
 @import "libs/videojs-css";
 
+// VideoJS CSS
+@import "libs/select2";
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -86,17 +89,17 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @media only screen and (min-width: 321px) {
 
 	// styles in 481up.scss
-	@import "breakpoints/321up";
+	@import "breakpoints/375up";
 
 } // end of media query
 
 /*********************
 PLUS SIZE (MOBILE) Iphone #+
 **********************/
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 414px) {
 
 	// styles in 481up.scss
-	@import "breakpoints/376up";
+	@import "breakpoints/414up";
 
 } // end of media query
 

@@ -26,6 +26,15 @@ body {
 	background-color: #000;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+
+	&::before {
+		content: '320px and up';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		visibility: hidden;
+	}
 }
 
 /*********************
@@ -489,6 +498,7 @@ VIDEO CONTENT
 REUSEABLE BACKGROUNDS
 **********************/
 .mesh-bg {
+	pointer-events: none;
 	position: absolute;
 	height: 372px;
 	width: 236px;
@@ -512,13 +522,15 @@ REUSEABLE BACKGROUNDS
 /*********************
 SELECT ELEMENT STYLES
 **********************/
-select {
+.select2-container--default .select2-selection--single {
+	border: none;
+}
+
+select, .select2.select2-container--default {
 	border: 0;
 	background-color: #fff;
 	border: solid 1px #221f20;
 	border-radius: 0;
-	background-image: url(../../images/icons/select-arrow.png);
-	background-size: 16px 9px;
 	-webkit-appearance: none;
 	height: 44px;
 	font-family: 'pangrambold';
@@ -529,6 +541,63 @@ select {
 	padding: 0 18px;
 	background-position: right 18px center;
 	margin-bottom: 27px;
+
+	.select2-selection__arrow {
+	    top: 50%;
+	    right: 14px;
+	    transform: translate(0, -50%);
+
+		b {
+			border: none;
+			background-image: url(../../images/icons/select-arrow.png);
+			background-size: 16px 9px;
+			background-repeat: no-repeat;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 13px;
+	width: 20px;
+}
+
+.select2-container .select2-selection--single {
+	height: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 44px;
+	padding: 0;
+}
+
+.select2-container--classic .select2-results>.select2-results__options, .select2-container--default .select2-results>.select2-results__options {
+	border: solid 1px #000;
+}
+
+.select2-container--open .select2-dropdown--below {
+	border: none;
+	margin-top: 6px;
+}
+
+.select2-selection__rendered,
+.select2-selection {
+	padding-left: 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.select2-results__option {
+	font-family: pangrambold;
+	font-size: rem(25);
+	line-height: 2;
+	color: #000;
+	text-transform: lowercase;
+	padding: 0 0 0 18px;
 }
 
 .toggle-filter {
@@ -1053,8 +1122,13 @@ EMPLOYEES
 /*********************
 SERVICES Tile(s)
 **********************/
-.services {
+.page-services {
 	overflow: auto;
+
+	.tile {
+		margin: 0;
+		float: none;
+	}
 }
 
 /*********************
@@ -1402,7 +1476,7 @@ CASE STUDIES Page
 /*********************
 SERVICES Page
 **********************/
-body.page-services {
+.page-services {
 	background-color: #fff;
 
 	h1 {
@@ -1432,21 +1506,55 @@ body.page-services {
 	}
 
 	.tile {
-		margin: 0 0 24% 17%;
+		margin: 0 0 19% 0;
+		float: none;
+		width: auto;
 
-		&.tall-1 {
-			width: 60%;
+		.tile-img {
+			margin-bottom: 3.6%;
 		}
+	}
+}
 
-		&.wide-1 {
-			width: 80%;
-			margin: 0 0 24% 10%;
-		}
+// NON DYNAMIC. NEEDS TO BE UPDATED
+.tile.visualisation {
+	margin-left: 17%;
+}
 
-		&:nth-child(even){
-			margin-left: 0;
-			margin-right: 10%;
-		}
+.tile.permitting {
+	margin-left: 13.5%;
+}
+
+.tile.engineering {
+	margin-left: 9%;
+}
+
+.tile.interior-buildouts {
+	margin-left: 18%;
+
+	.mesh-bg {
+		top: -186px;
+		right: 4px;
+		left: auto;
+		height: 429px;
+		width: 283px;
+	}
+}
+
+.tile.team-player {
+	margin-left: 7.7%;
+}
+
+.tile.imagine-experience {
+	margin-left: 15.4%;
+
+	.mesh-bg {
+		right: auto;
+		left: -49px;
+		height: 449px;
+		width: 243px;
+		margin: 0;
+		top: 147px;
 	}
 }
 
@@ -1617,13 +1725,14 @@ ABOUT US Page
 			}
 		}
 	}
-	a[href="/case-studies"] {
-		width: 58%;
-		margin: 21% auto 17%;
-		display: block;
+}
 
-		svg {
-			width: 100%;
-		}
+a[href="/case-studies"] {
+	width: 58%;
+	margin: 51% auto 23.5%;
+	display: block;
+
+	svg {
+		width: 100%;
 	}
 }

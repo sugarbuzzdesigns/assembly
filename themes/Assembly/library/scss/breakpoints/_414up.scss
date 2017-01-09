@@ -1,8 +1,18 @@
 /******************************************************************
-Stylesheet: 321px and Up Stylesheet
+Stylesheet: 376px and Up Stylesheet
 
 Phones larger than the iPhone 6 375px width
 ******************************************************************/
+body {
+	&::before {
+		content: 'iphone 6+ and up';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		visibility: hidden;
+	}
+}
 /*********************
 GENERIC SVG SHAPES
 **********************/
@@ -62,7 +72,7 @@ HOME PAGE STYLES
 		h2 {
 			font-size: rem(40);
 		    line-height: 2.775rem;
-		    top: 49%;
+		    top: 49.5%;
 			margin: 0 0 0 6.8%;
 		}
 	}
@@ -73,11 +83,12 @@ HOME PAGE STYLES
 
 	.company-statement {
 		position: relative;
-	    padding-top: 128px;
+	    padding-top: 148px;
 	    padding-bottom: 93px;
+	    margin-bottom: 3%;
 
     	.svg-shape-1 {
-    		top: 34.5%;
+    		top: 36%;
     	}
 
 		p {
@@ -93,7 +104,19 @@ PROJECTS SECTION
 **********************/
 .projects {
 	overflow: auto;
-	padding-top: 75px;
+	padding-top: 2.75%;
+}
+
+.projects-1 {
+	padding-top: 6%;
+}
+
+/*********************
+SERVICES SECTION
+- Homepage
+**********************/
+.services {
+	padding-top: 5.75%;
 }
 
 /*********************

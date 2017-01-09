@@ -91,7 +91,6 @@
 		</div>
 
 		<div class="services module carousel-module">
-			<div class="mesh-bg dark wide"></div>
 			<div class="tile carousel-wrapper">
 				<div class="carousel-inner">
 					<div class="carousel" data-mobile-position="left" data-mobile-start="front">
