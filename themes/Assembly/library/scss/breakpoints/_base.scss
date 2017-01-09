@@ -1581,19 +1581,31 @@ SERVICES Page
 
 // NON DYNAMIC. NEEDS TO BE UPDATED
 .tile.visualisation {
-	margin-left: 17%;
+	.tile-inner {
+		margin-left: 17%;
+		width: 60%;
+	}
 }
 
 .tile.permitting {
-	margin-left: 13.5%;
+	.tile-inner {
+		margin-left: 13.5%;
+		width: 77%;
+	}
 }
 
 .tile.engineering {
-	margin-left: 9%;
+	.tile-inner {
+		margin-left: 9%;
+		width: 77%;
+	}
 }
 
 .tile.interior-buildouts {
-	margin-left: 18%;
+	.tile-inner {
+		margin-left: 18%;
+		width: 66%;
+	}
 
 	.mesh-bg {
 		top: -186px;
@@ -1605,11 +1617,17 @@ SERVICES Page
 }
 
 .tile.team-player {
-	margin-left: 7.7%;
+	.tile-inner {
+		margin-left: 7.7%;
+		width: 77%;
+	}
 }
 
 .tile.imagine-experience {
-	margin-left: 15.4%;
+	.tile-inner {
+		margin-left: 15.4%;
+		width: 70%;
+	}
 
 	.mesh-bg {
 		right: auto;
