@@ -502,11 +502,11 @@ REUSEABLE BACKGROUNDS
 	position: absolute;
 	height: 372px;
 	width: 236px;
-	background-image: url(../../images/svg/mesh-dot.svg);
+	background-image: url(../../images/svg/mesh-dot-light.svg);
 }
 
 .mesh-bg.dark {
-	background-image: url(../../images/svg/mesh-dot-white.svg);
+	background-image: url(../../images/svg/mesh-dot.svg);
 }
 
 .mesh-bg.wide {
@@ -538,30 +538,31 @@ select, .select2.select2-container--default {
 	line-height: rem(32);
 	color: #221f20;
 	text-transform: lowercase;
-	padding: 0 18px;
+	padding: 0 0 0 18px;
 	background-position: right 18px center;
-	margin-bottom: 27px;
+	margin-bottom: 0;
 
 	.select2-selection__arrow {
-	    top: 50%;
-	    right: 14px;
-	    transform: translate(0, -50%);
+		display: block;
+		height: 100%;
+		width: 100%;
+	    top: 0;
+	    right: 0;
 
 		b {
 			border: none;
 			background-image: url(../../images/icons/select-arrow.png);
-			background-size: 16px 9px;
+			background-size: 100%;
 			background-repeat: no-repeat;
 			display: block;
-			height: 100%;
-			width: 100%;
+			height: 13px;
+			width: 19px;
+			left: auto;
+			margin: 0;
+			right: 14px;
+			top: 16px;
 		}
 	}
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-	height: 13px;
-	width: 20px;
 }
 
 .select2-container .select2-selection--single {
@@ -1477,6 +1478,9 @@ CASE STUDIES Page
 /*********************
 SERVICES Page
 **********************/
+.fn-noCursor {
+	pointer-events: none;
+}
 .page-services {
 	background-color: #fff;
 
@@ -1487,7 +1491,7 @@ SERVICES Page
 		width: 77%;
 	}
 	.filter-wrap {
-		margin-bottom: 11%;
+		margin-bottom: 11.5%;
 	}
 
 	select {
@@ -1507,12 +1511,12 @@ SERVICES Page
 	}
 
 	.tile {
-		margin: 0 0 26% 0;
+		margin: 0 0 20% 0;
 		float: none;
 		width: auto;
 
 		.tile-img {
-			margin-bottom: 3.6%;
+			margin-bottom: 6%;
 		}
 	}
 
