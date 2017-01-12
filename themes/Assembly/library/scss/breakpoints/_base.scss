@@ -1631,6 +1631,16 @@ CASE STUDIES Page
 	section {
 		background: #fff;
 	}
+
+	.content [data-kit-type],
+	.case-study-landing {
+		display: none;
+	}
+
+	.case-study-landing.show,
+	.case-study-category.show {
+		display: block;
+	}
 }
 
 /*********************

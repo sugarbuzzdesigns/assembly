@@ -40,7 +40,20 @@ var assembly = assembly || {};
 		},
 
 		filterProjectsByCategory: function(option){
-			var _this = this;
+			var _this = this,
+				$defaultCats = $('.case-study-landing'),
+				$catsToHide = $('.case-study-category').not('[data-category='+ option +']'),
+				$catToShow = $('.case-study-category[data-category='+ option +']');
+
+			if(option != 'all'){
+				$defaultCats.removeClass('show');
+				$catsToHide.removeClass('show');
+				$catToShow.addClass('show');
+			}
+
+			console.log($catToShow);
+
+
 		}
 	};
 

@@ -8334,6 +8334,14 @@ CASE STUDIES Page
 .page-case-studies section {
   background: #fff;
 }
+.page-case-studies .content [data-kit-type],
+.page-case-studies .case-study-landing {
+  display: none;
+}
+.page-case-studies .case-study-landing.show,
+.page-case-studies .case-study-category.show {
+  display: block;
+}
 
 /*********************
 SERVICES Page
@@ -8828,6 +8836,7 @@ PLUS SIZE (MOBILE) Iphone #+
   .page-case-studies p {
     font-size: 0.8125rem;
     line-height: 1.77;
+    letter-spacing: 1.08px;
   }
 
   /*********************
