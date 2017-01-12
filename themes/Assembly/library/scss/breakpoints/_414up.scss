@@ -193,6 +193,35 @@ SERVICES Page
 }
 
 /*********************
+CASE STUDIES Page
+**********************/
+.page-case-studies {
+	.landing {
+		h3 {
+			top: calc(43% - 10px);
+			font-size: rem(62);
+			letter-spacing: -5px;
+		}
+
+		.custom {
+			h3 {
+				left: 15.5%;
+				letter-spacing: -4px;
+			}
+		}
+
+		.white-square {
+
+		}
+	}
+
+	p {
+		font-size: rem(13);
+		line-height: 1.77;
+	}
+}
+
+/*********************
 CONTACT
 **********************/
 .page-contact {

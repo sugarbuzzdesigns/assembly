@@ -8163,23 +8163,108 @@ CASE STUDIES Page
   font-family: 'pangrambold';
   font-size: 2.9375rem;
 }
+.page-case-studies .tile {
+  width: auto;
+  margin-bottom: 18.81%;
+}
+.page-case-studies .tile.left-margin-sm {
+  margin-left: 10.87%;
+}
+.page-case-studies .tile.left-margin-med {
+  margin-left: 11.84%;
+}
+.page-case-studies .tile.left-margin-lrg {
+  margin-left: 14.5%;
+}
+.page-case-studies p {
+  line-height: 1.77;
+  letter-spacing: 1.08px;
+}
+.page-case-studies .landing .case-study-category.hover h3 {
+  color: #fff;
+}
+.page-case-studies .landing .case-study-category.hover .hover-content {
+  transform: translate3d(0, 0, 0);
+}
 .page-case-studies .landing h3 {
-  overflow: auto;
+  overflow: visible;
   position: absolute;
   z-index: 1;
   margin: 0;
-  top: 30%;
-  left: 6.1%;
+  top: 43%;
+  left: 9.661%;
   letter-spacing: -4px;
+  z-index: 3;
+  color: #000;
+  transition: color .7s;
 }
 .page-case-studies .landing h3 span {
   display: block;
   float: left;
 }
-.page-case-studies .section-header {
+.page-case-studies .landing .hover-content {
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 3;
+  background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.page-case-studies .landing .hover-content {
+  transition: transform 0.7s;
+  transform: translate3d(-100%, 0, 0);
+}
+.page-case-studies .landing [data-letter] {
+  transition: transform 0.7s;
+  transform: translate3d(0, 0, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="m"] {
+  transform: translate3d(40px, -60px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="o"] {
+  transform: translate3d(50px, -60px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="d"] {
+  transform: translate3d(60px, -60px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="u"] {
+  transform: translate3d(-92px, 20px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="l"] {
+  transform: translate3d(-72px, 20px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="a"] {
+  transform: translate3d(-90px, 94px, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="r"] {
+  transform: translate3d(-70px, 94px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="c"] {
+  transform: translate3d(0, -60px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="u"] {
+  transform: translate3d(20px, -60px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="s"] {
+  transform: translate3d(-17px, 20px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="t"] {
+  transform: translate3d(20px, 20px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="o"] {
+  transform: translate3d(-122px, 110px, 0);
+}
+.page-case-studies .landing .custom.hover [data-letter="m"] {
+  transform: translate3d(-50px, 106px, 0);
+}
+.page-case-studies .section-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 .page-case-studies .section-header .header-icon-logo {
   fill: #000;
@@ -8193,17 +8278,57 @@ CASE STUDIES Page
 .page-case-studies .landing .custom {
   background-image: url(../../images/case-study-custom-bg.jpg);
 }
-.page-case-studies .landing .white-square {
-  width: 55%;
-  height: 49%;
-  top: 21%;
-  left: 32%;
-  background: #fff;
+.page-case-studies .landing .square {
+  width: 55.56%;
+  height: 55.7%;
+  top: 25%;
+  left: 33.091%;
   position: absolute;
 }
+.page-case-studies .landing .square.white.solid {
+  background: #fff;
+}
+.page-case-studies .landing .square.white.border {
+  background: transparent;
+  border: solid 1px #979797;
+}
 .page-case-studies .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
   background: #fff;
   overflow: auto;
+  padding-top: 29.47%;
+}
+.page-case-studies .content h2 {
+  font-size: 2.625rem;
+  line-height: 0.904;
+  margin: 0 auto 7%;
+  width: 77%;
+}
+.page-case-studies .content h2 span {
+  display: block;
+}
+.page-case-studies .content .select-filter {
+  margin-bottom: 7%;
+}
+.page-case-studies .content .case-study-desc {
+  width: 67.15%;
+  margin: 0 auto 17.39% 22.71%;
+}
+.page-case-studies .content blockquote {
+  clear: both;
+  width: 66.43%;
+  margin: 0 auto 20.53% 22.222%;
+}
+.page-case-studies .content blockquote strong {
+  font-family: 'gridnikregular';
+  font-size: 0.8125rem;
+  line-height: 2.77;
+  text-transform: uppercase;
+  color: #221F20;
 }
 .page-case-studies section {
   background: #fff;
@@ -8687,6 +8812,23 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   SERVICES Page
   **********************/
+  /*********************
+  CASE STUDIES Page
+  **********************/
+  .page-case-studies .landing h3 {
+    top: calc(43% - 10px);
+    font-size: 3.875rem;
+    letter-spacing: -5px;
+  }
+  .page-case-studies .landing .custom h3 {
+    left: 15.5%;
+    letter-spacing: -4px;
+  }
+  .page-case-studies p {
+    font-size: 0.8125rem;
+    line-height: 1.77;
+  }
+
   /*********************
   CONTACT
   **********************/
