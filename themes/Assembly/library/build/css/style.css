@@ -8311,7 +8311,8 @@ CASE STUDIES Page
 .page-case-studies .content h2 span {
   display: block;
 }
-.page-case-studies .content .select-filter {
+.page-case-studies .content .select-filter,
+.page-case-studies .content .select2 {
   margin-bottom: 7%;
 }
 .page-case-studies .content .case-study-desc {

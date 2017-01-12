@@ -38,8 +38,10 @@
 	<div class="filter-wrap">
 		<select class="select-filter">
 			<option value="all">All</option>
-			<option value="modular">Modular</option>
-			<option value="custom">Custom</option>
+			<option value="experiential">Experiential</option>
+			<option value="hospitality">Hospitality</option>
+			<option value="super">Super</option>
+			<option value="sporting">Sporting</option>
 		</select>
 		<div class="toggle-filter">
 			<a class="active" href="#" title="custom">C</a>

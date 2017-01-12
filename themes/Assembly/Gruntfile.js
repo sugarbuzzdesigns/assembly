@@ -80,6 +80,12 @@ module.exports = function(grunt) {
 						src: ['<%= jsSrcDir %>/pages/assembly.services.js'],
 						dest: '<%= jsBuildDir %>/assembly.services.js',
 						filter: 'isFile'
+					},
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.casestudies.js'],
+						dest: '<%= jsBuildDir %>/assembly.casestudies.js',
+						filter: 'isFile'
 					}
 				]
 			}
@@ -100,7 +106,8 @@ module.exports = function(grunt) {
 			pages: {
 				files: {
 					'<%= jsDistDir %>/assembly.contact.min.js': ['<%= jsSrcDir %>/pages/assembly.contact.js'],
-					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js']
+					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js'],
+					'<%= jsDistDir %>/assembly.casestudies.min.js': ['<%= jsSrcDir %>/pages/assembly.casestudies.js']
 				}
 			}
 		},
