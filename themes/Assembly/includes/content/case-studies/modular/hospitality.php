@@ -1,6 +1,6 @@
-	<div class="case-study-category case-study-container" data-kit-type="custom" data-category="hospitality">
+	<div class="case-study-category case-study-container" data-kit-type="modular" data-category="hospitality">
 		<div class="case-study-desc">
-			<h4>Custom Hospitality</h4>
+			<h4>Modular Hospitality</h4>
 			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
 			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
 		</div>

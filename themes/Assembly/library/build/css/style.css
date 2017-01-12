@@ -8337,12 +8337,30 @@ CASE STUDIES Page
 .page-case-studies .content [data-kit-type],
 .page-case-studies .case-study-landing {
   display: none;
+  opacity: 0;
 }
 .page-case-studies .case-study-landing.show,
 .page-case-studies .case-study-category.show {
   display: block;
 }
+.page-case-studies .case-study-container {
+  transition: transform 0.7s;
+  transform: translate3d(0, 150px, 0);
+}
+.page-case-studies .case-study-container.show {
+  animation: showAndUp 1s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes showAndUp {
+  1% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 /*********************
 SERVICES Page
 **********************/

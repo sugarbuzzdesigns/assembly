@@ -1,4 +1,4 @@
-	<div class="case-study-category" data-kit-type="modular" data-category="experiential">
+	<div class="case-study-category case-study-container" data-kit-type="custom" data-category="experiential">
 		<div class="case-study-desc">
 			<h4>Custom Experiential</h4>
 			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>

@@ -1635,11 +1635,33 @@ CASE STUDIES Page
 	.content [data-kit-type],
 	.case-study-landing {
 		display: none;
+		opacity: 0;
 	}
 
 	.case-study-landing.show,
 	.case-study-category.show {
 		display: block;
+	}
+
+	.case-study-container {
+		transition: transform 0.7s;
+		transform: translate3d(0,150px,0);
+
+		&.show {
+			animation: showAndUp 1s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+@keyframes showAndUp {
+	1% {
+		display: block;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(0,0,0);
 	}
 }
 

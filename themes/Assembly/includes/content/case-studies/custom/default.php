@@ -1,4 +1,4 @@
-	<div class="case-study-landing custom show">
+	<div class="case-study-landing case-study-container show" data-kit-type="custom" data-category="all">
 		<div class="case-study-desc">
 			<h4>Custom Kits</h4>
 			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
