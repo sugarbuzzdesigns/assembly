@@ -41,8 +41,6 @@ var assembly = assembly || {};
 
 		filterProjectsByCategory: function(option){
 			var _this = this;
-
-			console.log(option);
 		}
 	};
 
