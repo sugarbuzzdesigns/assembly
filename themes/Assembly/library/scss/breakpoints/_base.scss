@@ -218,7 +218,7 @@ MENU & NAVIGATION STYLES
     position: absolute;
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none;
 }
 
@@ -857,6 +857,55 @@ MODULES GENERIC STYLES
 }
 
 /*********************
+Years Experience Module
+**********************/
+.years-experience {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	.years-experience-numbers {
+		position: absolute;
+		top: 0;
+		margin-right: 16%;
+		font-family: 'pangrambold';
+		font-size: rem(165);
+		line-height: 1;
+		color: #f0f0f0;
+		opacity: 1;
+		transition: opacity 0.5s;
+
+		&.counting {
+			opacity: 0;
+		}
+
+		span {
+			display: block;
+			width: 100px;
+
+			& + span {
+				margin-top: -41px
+			}
+		}
+	}
+
+	.years-experience-text {
+		font-family: 'gridnikregular';
+		font-size: rem(11);
+		color: #d3d3d3;
+	    text-transform: uppercase;
+	    position: absolute;
+	    top: 183px;
+	    right: -19px;
+	    transform: rotate(-90deg);
+	    z-index: 1;
+	    transition: transform 0.5s;
+	    transform-origin: top;
+	    letter-spacing: 1px;
+	}
+}
+
+/*********************
 HOME PAGE STYLES
 **********************/
 
@@ -921,6 +970,12 @@ HOME PAGE STYLES
 		    z-index: 1;
 		    width: 78%;
 		    margin: 0 auto 0;
+		}
+	}
+
+	.years-experience {
+		.years-experience-numbers {
+			right: 0;
 		}
 	}
 
@@ -1033,47 +1088,6 @@ EMPLOYEES
 	overflow: hidden;
 	padding-bottom: 16%;
 	position: relative;
-
-	.years-experience-numbers {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin-right: 16%;
-		font-family: 'pangrambold';
-		font-size: rem(165);
-		line-height: 1;
-		color: #f0f0f0;
-		opacity: 1;
-		transition: opacity 0.5s;
-
-		&.counting {
-			opacity: 0;
-		}
-
-		span {
-			display: block;
-			width: 100px;
-
-			& + span {
-				margin-top: -41px
-			}
-		}
-	}
-
-	.years-experience-text {
-		font-family: 'gridnikregular';
-		font-size: rem(11);
-		color: #d3d3d3;
-	    text-transform: uppercase;
-	    position: absolute;
-	    top: 183px;
-	    right: -19px;
-	    transform: rotate(-90deg);
-	    z-index: 1;
-	    transition: transform 0.5s;
-	    transform-origin: top;
-	    letter-spacing: 1px;
-	}
 
 	.carousel {
 		padding-top: 128px;
@@ -1861,8 +1875,26 @@ ABOUT US Page
 		}
 	}
 
-	.videos {
-		padding: 0 0 12% 0 ;
+	// about us years exp
+	.years-experience {
+	    top: 32px;
+	    left: -45px;
+
+		.years-experience-numbers {
+			left: 0;
+		}
+
+		.years-experience-text {
+			top: 203px;
+			left: 43px;
+    		right: auto;
+		}
+	}
+
+	.video {
+		position: relative;
+		width: 64.98%;
+		margin: 0 0 0 28.74%;
 	}
 
 	h1 {
@@ -1870,12 +1902,30 @@ ABOUT US Page
 		margin: 0 0 22% 10%;
 	}
 
-	h3 {
-		font-family: 'gridnikregular';
-		font-size: rem(14);
-		text-transform: uppercase;
-		text-align: center;
-		margin-bottom: 17%;
+	.callout {
+	    width: 67.63%;
+	    margin: 0 0 21% 11.11%;
+	    background: #fff;
+	    position: relative;
+	    z-index: 1;
+	    padding: 0 0 5px 0;
+
+		h3 {
+			font-family: gridnikregular;
+			text-transform: uppercase;
+			font-size: rem(12.37);
+			line-height: 1.5;
+		}
+	}
+
+	.inner-callout {
+		width: 64.5%;
+		margin-left: 21.98%;
+		margin-top: 21.85%;
+
+		p {
+			line-height: 1.77;
+		}
 	}
 
 	.slider {
@@ -1918,39 +1968,42 @@ ABOUT US Page
 		}
 	}
 
-	.callout {
-		width: 62%;
-		font-family: 'roboto_monoregular';
-		margin: 23% auto 20% auto;
-
-		p {
-			font-size: rem(13);
-			line-height: rem(23);
-			margin: 0 0 17% 0;
-		}
-
-		.button {
-    		padding: 16px 26px 15px;
-		}
-	}
-
 	.employees {
 		margin-top: 16%;
+
+		.years-experience {
+			.years-experience-numbers {
+				left: auto;
+				right: 0;
+			}
+		}
 	}
 
 	.our-approach {
+		.copy {
+			margin-left: 10%;
+			width: 78%;
+		}
+
+		p {
+			margin-bottom: 11.4%;
+		}
+
 		h3 {
 			text-transform: lowercase;
 			font-family: 'pangrambold';
 			font-size: rem(39);
 			line-height: rem(33);
 			text-align: left;
-			margin-left: 10%;
-			margin-bottom: 0;
+			margin-bottom: 10.63%;
 
 			span {
 				display: block;
 			}
+		}
+
+		button {
+    		padding: 4.43% 4.94%;
 		}
 
 		.svg-slider {

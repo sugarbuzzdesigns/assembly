@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-12 08:52 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 12:13 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7146,7 +7146,7 @@ MENU & NAVIGATION STYLES
   position: absolute;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
   pointer-events: none;
 }
 
@@ -7703,6 +7703,50 @@ MODULES GENERIC STYLES
 }
 
 /*********************
+Years Experience Module
+**********************/
+.years-experience {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.years-experience .years-experience-numbers {
+  position: absolute;
+  top: 0;
+  margin-right: 16%;
+  font-family: 'pangrambold';
+  font-size: 10.3125rem;
+  line-height: 1;
+  color: #f0f0f0;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.years-experience .years-experience-numbers.counting {
+  opacity: 0;
+}
+.years-experience .years-experience-numbers span {
+  display: block;
+  width: 100px;
+}
+.years-experience .years-experience-numbers span + span {
+  margin-top: -41px;
+}
+.years-experience .years-experience-text {
+  font-family: 'gridnikregular';
+  font-size: 0.6875rem;
+  color: #d3d3d3;
+  text-transform: uppercase;
+  position: absolute;
+  top: 183px;
+  right: -19px;
+  transform: rotate(-90deg);
+  z-index: 1;
+  transition: transform 0.5s;
+  transform-origin: top;
+  letter-spacing: 1px;
+}
+
+/*********************
 HOME PAGE STYLES
 **********************/
 .home section {
@@ -7758,6 +7802,9 @@ HOME PAGE STYLES
   z-index: 1;
   width: 78%;
   margin: 0 auto 0;
+}
+.home .years-experience .years-experience-numbers {
+  right: 0;
 }
 
 /*********************
@@ -7848,42 +7895,6 @@ EMPLOYEES
   overflow: hidden;
   padding-bottom: 16%;
   position: relative;
-}
-.employees .years-experience-numbers {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 16%;
-  font-family: 'pangrambold';
-  font-size: 10.3125rem;
-  line-height: 1;
-  color: #f0f0f0;
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-.employees .years-experience-numbers.counting {
-  opacity: 0;
-}
-.employees .years-experience-numbers span {
-  display: block;
-  width: 100px;
-}
-.employees .years-experience-numbers span + span {
-  margin-top: -41px;
-}
-.employees .years-experience-text {
-  font-family: 'gridnikregular';
-  font-size: 0.6875rem;
-  color: #d3d3d3;
-  text-transform: uppercase;
-  position: absolute;
-  top: 183px;
-  right: -19px;
-  transform: rotate(-90deg);
-  z-index: 1;
-  transition: transform 0.5s;
-  transform-origin: top;
-  letter-spacing: 1px;
 }
 .employees .carousel {
   padding-top: 128px;
@@ -8526,19 +8537,48 @@ ABOUT US Page
   top: 45px;
   left: 75px;
 }
-.page-about-us .videos {
-  padding: 0 0 12% 0;
+.page-about-us .years-experience {
+  top: 32px;
+  left: -45px;
+}
+.page-about-us .years-experience .years-experience-numbers {
+  left: 0;
+}
+.page-about-us .years-experience .years-experience-text {
+  top: 203px;
+  left: 43px;
+  right: auto;
+}
+.page-about-us .video {
+  position: relative;
+  width: 64.98%;
+  margin: 0 0 0 28.74%;
 }
 .page-about-us h1 {
   font-size: 2.1875rem;
   margin: 0 0 22% 10%;
 }
-.page-about-us h3 {
-  font-family: 'gridnikregular';
-  font-size: 0.875rem;
+.page-about-us .callout {
+  width: 67.63%;
+  margin: 0 0 21% 11.11%;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 5px 0;
+}
+.page-about-us .callout h3 {
+  font-family: gridnikregular;
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 17%;
+  font-size: 0.77313rem;
+  line-height: 1.5;
+}
+.page-about-us .inner-callout {
+  width: 64.5%;
+  margin-left: 21.98%;
+  margin-top: 21.85%;
+}
+.page-about-us .inner-callout p {
+  line-height: 1.77;
 }
 .page-about-us .slider {
   width: 100%;
@@ -8573,21 +8613,19 @@ ABOUT US Page
   height: 362px;
   pointer-events: none;
 }
-.page-about-us .callout {
-  width: 62%;
-  font-family: 'roboto_monoregular';
-  margin: 23% auto 20% auto;
-}
-.page-about-us .callout p {
-  font-size: 0.8125rem;
-  line-height: 1.4375rem;
-  margin: 0 0 17% 0;
-}
-.page-about-us .callout .button {
-  padding: 16px 26px 15px;
-}
 .page-about-us .employees {
   margin-top: 16%;
+}
+.page-about-us .employees .years-experience .years-experience-numbers {
+  left: auto;
+  right: 0;
+}
+.page-about-us .our-approach .copy {
+  margin-left: 10%;
+  width: 78%;
+}
+.page-about-us .our-approach p {
+  margin-bottom: 11.4%;
 }
 .page-about-us .our-approach h3 {
   text-transform: lowercase;
@@ -8595,11 +8633,13 @@ ABOUT US Page
   font-size: 2.4375rem;
   line-height: 2.0625rem;
   text-align: left;
-  margin-left: 10%;
-  margin-bottom: 0;
+  margin-bottom: 10.63%;
 }
 .page-about-us .our-approach h3 span {
   display: block;
+}
+.page-about-us .our-approach button {
+  padding: 4.43% 4.94%;
 }
 .page-about-us .our-approach .svg-slider .num {
   font-family: 'pangrambold';

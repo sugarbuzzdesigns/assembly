@@ -133,12 +133,14 @@
 		</div>
 
 		<div class="employees employees-1 module">
-			<div class="years-experience-numbers">
-				<span class="num">2</span>
-				<span class="num">6</span>
-			</div>
-			<div class="years-experience-text">
-				<span>Years Experience</span>
+			<div class="years-experience">
+				<div class="years-experience-numbers">
+					<span class="num">2</span>
+					<span class="num">6</span>
+				</div>
+				<div class="years-experience-text">
+					<span>Years Experience</span>
+				</div>
 			</div>
 			<div class="tile carousel-wrapper">
 				<div class="carousel-inner">

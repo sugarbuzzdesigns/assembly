@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-12 08:52 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 11:52 am - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -227,17 +227,17 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position;
+			var $slides, start, position, $carousel, numSlides;
 
-			$('.carousel').not('.employee-carousel').each(function(i, carousel){
-				$carousel = $(carousel),
-				$slides = $carousel.find('.slide'),
-				numSlides = $slides = $slides.length;
+			$('.carousel-module').not('.employee-carousel').each(function(i, module){
+				$carousel = $(module).find('.carousel');
+				$slides = $carousel.find('.slide');
+				numSlides = $slides.length;
 
-				start = $(carousel).data('mobile-start') === 'front' ? 0 : numSlides - 1;
-				position = $(carousel).data('mobile-position');
+				start = $carousel.data('mobile-start') === 'front' ? 0 : numSlides - 1;
+				position = $carousel.data('mobile-position');
 
-				$(carousel).slick({
+				$carousel.slick({
 					slidesToShow: 1.2,
 					initialSlide: start,
 					infinite: false,
@@ -250,7 +250,7 @@ var assembly = assembly || {};
 
 			var employeeCarousel = $('.employee-carousel').slick({
 				slidesToShow: 1,
-				initialSlide: start,
+				initialSlide: 0,
 				infinite: false,
 				touchMove: false,
 				arrows: false,
