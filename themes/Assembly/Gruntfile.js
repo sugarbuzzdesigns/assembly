@@ -1,11 +1,11 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'usebanner']);
+	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist']);
 
 	grunt.registerTask('dev', ['default', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js']);
 
-	grunt.registerTask('sassBuildDist', ['sass', 'cssmin']);
+	grunt.registerTask('sassBuildDist', ['sass', 'cssmin', 'usebanner:css']);
 
 	require('load-grunt-tasks')(grunt);
 
@@ -43,7 +43,19 @@ module.exports = function(grunt) {
 		},
 
 		usebanner: {
-			all: {
+			js: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/**/*.js',
+						'library/dist/**/*.js'
+					]
+				}
+			},
+			css: {
 				options: {
 					banner: '<%= banner %>',
 					linebreak: false
@@ -51,9 +63,7 @@ module.exports = function(grunt) {
 				files: {
 					src: [
 						'library/build/**/*.css',
-						'library/build/**/*.js',
-						'library/dist/**/*.css',
-						'library/dist/**/*.js'
+						'library/dist/**/*.css'
 					]
 				}
 			}

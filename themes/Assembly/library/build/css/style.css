@@ -1,3 +1,4 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-12 08:52 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8164,7 +8165,7 @@ CASE STUDIES Page
   font-size: 2.9375rem;
 }
 .page-case-studies .tile {
-  width: auto;
+  width: 77.1%;
   margin-bottom: 18.81%;
 }
 .page-case-studies .tile.left-margin-sm {

@@ -36,7 +36,7 @@
 <section class="content">
 	<h2><span>custom</span><span>kits</span></h2>
 	<div class="filter-wrap">
-		<select class="select-filter">
+		<select class="select-filter" style="width: 100%">
 			<option value="all">All</option>
 			<option value="experiential">Experiential</option>
 			<option value="hospitality">Hospitality</option>
