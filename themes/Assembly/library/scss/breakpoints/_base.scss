@@ -2006,6 +2006,61 @@ ABOUT US Page
     		padding: 4.43% 4.94%;
 		}
 
+		.carousel-bg {
+			position: absolute;
+			width: 100%;
+		}
+
+		.carousel.our-approach {
+			.slick-slide {
+				width: 100vw;
+
+				.tile-inner {
+					padding: 0;
+					width: 100%;
+				}
+
+				svg {
+					margin: 0 auto;
+				}
+
+				&[data-slick-index="0"] {
+					svg {
+						width: 76.12%;
+						margin-left: 15.22%;
+					}
+				}
+
+				&[data-slick-index="1"] {
+					svg {
+						width: 89.13%;
+						margin-left: 4.83%;
+					}
+				}
+
+				&[data-slick-index="2"] {
+					svg {
+						width: 69.57%;
+						margin-left: 21.26%;
+					}
+				}
+
+				&[data-slick-index="3"] {
+					svg {
+						width: 75.36%;
+						margin-left: 12.32%;
+					}
+				}
+
+				&[data-slick-index="4"] {
+					svg {
+						width: 86.96%;
+						margin-left: 6.76%;
+					}
+				}
+			}
+		}
+
 		.svg-slider {
 			.num {
 				font-family: 'pangrambold';

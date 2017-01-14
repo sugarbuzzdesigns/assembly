@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 12:13 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 10:01 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8640,6 +8640,40 @@ ABOUT US Page
 }
 .page-about-us .our-approach button {
   padding: 4.43% 4.94%;
+}
+.page-about-us .our-approach .carousel-bg {
+  position: absolute;
+  width: 100%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide {
+  width: 100vw;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide .tile-inner {
+  padding: 0;
+  width: 100%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide svg {
+  margin: 0 auto;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="0"] svg {
+  width: 76.12%;
+  margin-left: 15.22%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="1"] svg {
+  width: 89.13%;
+  margin-left: 4.83%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="2"] svg {
+  width: 69.57%;
+  margin-left: 21.26%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="3"] svg {
+  width: 75.36%;
+  margin-left: 12.32%;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="4"] svg {
+  width: 86.96%;
+  margin-left: 6.76%;
 }
 .page-about-us .our-approach .svg-slider .num {
   font-family: 'pangrambold';

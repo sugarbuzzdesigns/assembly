@@ -10,9 +10,13 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides;
+			var $slides, start, position, $carousel, numSlides, hasVariableWidth = false;
 
 			$('.carousel-module').not('.employee-carousel').each(function(i, module){
+				if($(this).is('.our-approach')){
+					var hasVariableWidth = true;
+				}
+
 				$carousel = $(module).find('.carousel');
 				$slides = $carousel.find('.slide');
 				numSlides = $slides.length;
@@ -27,7 +31,8 @@ var assembly = assembly || {};
 					touchMove: false,
 					arrows: false,
 					easing: 'ease-in',
-					speed: 500
+					speed: 500,
+					variableWidth: hasVariableWidth
 				});
 			});
 
@@ -38,7 +43,8 @@ var assembly = assembly || {};
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
-				speed: 500
+				speed: 500,
+				variableWidth: hasVariableWidth
 			});
 
 			employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){

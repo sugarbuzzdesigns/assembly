@@ -124,11 +124,55 @@
 			</div>
 		</div>
 	</div>
-	<section class="our-approach">
+	<section class="our-approach carousel-module">
 		<div class="copy">
 			<h3><span>Our</span><span>Approach</span></h3>
 			<p>Your dedicated assembly team will deliver a powerful combination of industry leadership and strategic thinking, as well as “close to the customer” managers to control day-to-day interaction and oversee tactical execution. We meet with preferred vendors in advance -- for all projects, no matter the size -- to review the planned installation, event and dismantle process.</p>
 			<button type="button">create a space together</button>
+		</div>
+		<div class="tile carousel-wrapper">
+			<div class="carousel-inner">
+				<div class="carousel-bg">
+					<?php include 'library/images/svg/our-approach-dot-grid.svg'; ?>
+				</div>
+				<div class="carousel our-approach" data-mobile-position="left" data-mobile-start="front">
+					<div class="slide">
+						<div class="tile-inner">
+							<div class="tile-img">
+								<?php include 'library/images/svg/our-approach-01.svg'; ?>
+							</div>
+						</div>
+					</div>
+					<div class="slide" >
+						<div class="tile-inner">
+							<div class="tile-img">
+								<?php include 'library/images/svg/our-approach-02.svg'; ?>
+							</div>
+						</div>
+					</div>
+					<div class="slide" >
+						<div class="tile-inner">
+							<div class="tile-img">
+								<?php include 'library/images/svg/our-approach-03.svg'; ?>
+							</div>
+						</div>
+					</div>
+					<div class="slide" >
+						<div class="tile-inner">
+							<div class="tile-img">
+								<?php include 'library/images/svg/our-approach-04.svg'; ?>
+							</div>
+						</div>
+					</div>
+					<div class="slide" >
+						<div class="tile-inner">
+							<div class="tile-img">
+								<?php include 'library/images/svg/our-approach-05.svg'; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 <!-- 		<div class="svg-slider">
 			<div class="num">01</div>

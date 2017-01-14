@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 11:52 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 09:41 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -227,9 +227,13 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides;
+			var $slides, start, position, $carousel, numSlides, hasVariableWidth = false;
 
 			$('.carousel-module').not('.employee-carousel').each(function(i, module){
+				if($(this).is('.our-approach')){
+					var hasVariableWidth = true;
+				}
+
 				$carousel = $(module).find('.carousel');
 				$slides = $carousel.find('.slide');
 				numSlides = $slides.length;
@@ -244,7 +248,8 @@ var assembly = assembly || {};
 					touchMove: false,
 					arrows: false,
 					easing: 'ease-in',
-					speed: 500
+					speed: 500,
+					variableWidth: hasVariableWidth
 				});
 			});
 
@@ -255,7 +260,8 @@ var assembly = assembly || {};
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
-				speed: 500
+				speed: 500,
+				variableWidth: hasVariableWidth
 			});
 
 			employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
