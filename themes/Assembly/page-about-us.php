@@ -132,6 +132,7 @@
 		</div>
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
+				<div class="slide-number">01</div>
 				<div class="carousel-bg">
 					<?php include 'library/images/svg/our-approach-dot-grid.svg'; ?>
 				</div>
@@ -172,6 +173,9 @@
 						</div>
 					</div>
 				</div>
+				<a href="#" class="carousel-next">
+					<?php include 'library/images/svg/svg-carousel-next.svg'; ?>
+				</a>
 			</div>
 		</div>
 <!-- 		<div class="svg-slider">

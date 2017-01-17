@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-13 09:41 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-17 09:53 am - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -227,11 +227,12 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides, hasVariableWidth = false;
+			var $slides, start, position, $carousel, numSlides, slickCarousel, employeeCarousel, hasVariableWidth = false, dots = false;
 
-			$('.carousel-module').not('.employee-carousel').each(function(i, module){
+			$('.carousel-module').not('.employee-carousel, .our-approach').each(function(i, module){
 				if($(this).is('.our-approach')){
-					var hasVariableWidth = true;
+					hasVariableWidth = true;
+					dots = true;
 				}
 
 				$carousel = $(module).find('.carousel');
@@ -241,7 +242,7 @@ var assembly = assembly || {};
 				start = $carousel.data('mobile-start') === 'front' ? 0 : numSlides - 1;
 				position = $carousel.data('mobile-position');
 
-				$carousel.slick({
+				slickCarousel = $carousel.slick({
 					slidesToShow: 1.2,
 					initialSlide: start,
 					infinite: false,
@@ -253,7 +254,36 @@ var assembly = assembly || {};
 				});
 			});
 
-			var employeeCarousel = $('.employee-carousel').slick({
+			var $ourApproachCarousel = $('.carousel.our-approach');
+
+			$ourApproachCarousel.on('init', function(slick){
+				$('.our-approach .carousel-next').on('click', function(evt){
+					evt.preventDefault();
+
+					$ourApproachCarousel.slick('slickNext');
+				})
+			});
+
+			$ourApproachCarousel.slick({
+				init: function(slick){
+					console.log('initialized');
+				},
+				slidesToShow: 1,
+				initialSlide: 0,
+				infinite: false,
+				touchMove: false,
+				arrows: false,
+				easing: 'ease-in',
+				speed: 500,
+				dots: true,
+				variableWidth: hasVariableWidth
+			});
+
+			$ourApproachCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				updateCountText(nextSlide, $('.our-approach .slide-number'));
+			});
+
+			employeeCarousel = $('.employee-carousel').slick({
 				slidesToShow: 1,
 				initialSlide: 0,
 				infinite: false,
@@ -281,6 +311,19 @@ var assembly = assembly || {};
 
 				$('.years-experience-numbers').removeClass('counting');
 			});
+
+			function updateCountText(nextSlide, $num){
+				var num = nextSlide += 1,
+					newNum = 'error';
+
+				if(num.toString().length === 1){
+					newNum = '0' + num;
+				} else {
+					newNum = num;
+				}
+
+				$num.html(newNum);
+			}
 		}
 	}
 

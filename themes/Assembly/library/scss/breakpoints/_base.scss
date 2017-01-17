@@ -382,6 +382,7 @@ CAROUSEL MODULES
 	width: 100%;
 	margin: 0 auto;
 	float: none;
+	overflow: hidden;
 }
 
 .carousel-inner {
@@ -1980,6 +1981,8 @@ ABOUT US Page
 	}
 
 	.our-approach {
+		margin-top: 30%;
+
 		.copy {
 			margin-left: 10%;
 			width: 78%;
@@ -2011,9 +2014,66 @@ ABOUT US Page
 			width: 100%;
 		}
 
+		.slick-dots {
+			bottom: auto;
+			top: 18%;
+			text-align: left;
+			padding-left: 6.28%;
+		}
+
+		.slick-dots li {
+			margin-right: 7%;
+			margin-left: 0;
+		}
+
+		.slick-dots li button,
+		.slick-dots li {
+			height: 7px;
+			width: 7px;
+		}
+
+		.slick-dots li.slick-active button:before {
+			background-color: #98d8dc;
+		}
+
+		.slick-dots li button:before {
+			content: '';
+			height: 7px;
+			width: 7px;
+			background: #222527;
+    		border-radius: 50%;
+		}
+
+		.slide-number {
+			font-family: 'pangrambold';
+			color: #f0f0f0;
+			font-size: rem(105.12);
+			line-height: 1.45;
+			letter-spacing: -1.75px;
+			position: absolute;
+			left: -4.4%;
+			top: 3%;
+		}
+
+		.carousel-next {
+			display: block;
+			position: absolute;
+			bottom: 8%;
+			right: 11.59%;
+
+			svg {
+				height: 33px;
+				width: 33px;
+			}
+		}
+
 		.carousel.our-approach {
 			.slick-slide {
 				width: 100vw;
+
+				&:focus {
+					outline: none;
+				}
 
 				.tile-inner {
 					padding: 0;
@@ -2028,6 +2088,7 @@ ABOUT US Page
 					svg {
 						width: 76.12%;
 						margin-left: 15.22%;
+						margin-top: 8.5%;
 					}
 				}
 
@@ -2035,6 +2096,7 @@ ABOUT US Page
 					svg {
 						width: 89.13%;
 						margin-left: 4.83%;
+						margin-top: 10%;
 					}
 				}
 
@@ -2042,6 +2104,7 @@ ABOUT US Page
 					svg {
 						width: 69.57%;
 						margin-left: 21.26%;
+						margin-top: 7.9%;
 					}
 				}
 
@@ -2049,6 +2112,7 @@ ABOUT US Page
 					svg {
 						width: 75.36%;
 						margin-left: 12.32%;
+						margin-top: 9%;
 					}
 				}
 
@@ -2056,6 +2120,7 @@ ABOUT US Page
 					svg {
 						width: 86.96%;
 						margin-left: 6.76%;
+						margin-top: 7%;
 					}
 				}
 			}
