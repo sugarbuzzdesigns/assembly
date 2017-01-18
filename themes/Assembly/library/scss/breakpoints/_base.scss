@@ -1868,11 +1868,12 @@ ABOUT US Page
 	.landing {
 		position: relative;
 	    padding-top: 16.4%;
-	    overflow: hidden;
+	    overflow: visible;
 
 		.mesh-bg {
 			top: 45px;
 			left: 75px;
+			height: 425px;
 		}
 	}
 

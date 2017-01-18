@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-17 10:02 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-18 11:08 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8532,11 +8532,12 @@ ABOUT US Page
 .page-about-us .landing {
   position: relative;
   padding-top: 16.4%;
-  overflow: hidden;
+  overflow: visible;
 }
 .page-about-us .landing .mesh-bg {
   top: 45px;
   left: 75px;
+  height: 425px;
 }
 .page-about-us .years-experience {
   top: 37px;
@@ -8898,24 +8899,15 @@ PLUS SIZE (MOBILE) Iphone #+
   }
 
   /*********************
-  nav
-  *********************/
-  /*
-  all navs have a .nav class applied via
-  the wp_menu function; this is so we can
-  easily write one group of styles for
-  the navs on the site so our css is cleaner
-  and more scalable.
-  */
-  .nav {
-    padding-top: 6em;
-    /* end .menu li */
+  Years Experience Module
+  **********************/
+  .years-experience .years-experience-numbers {
+    font-size: 13.4375rem;
   }
-  .nav li {
-    margin-bottom: 1.4em;
+  .years-experience .years-experience-text {
+    font-size: 0.75rem;
   }
 
-  /* end .nav */
   /*********************
   HOME PAGE STYLES
   **********************/
@@ -9035,6 +9027,41 @@ PLUS SIZE (MOBILE) Iphone #+
     font-size: 0.8125rem;
     line-height: 1.77;
     letter-spacing: 1.08px;
+  }
+
+  /*********************
+  ABOUT US Page
+  **********************/
+  .page-about-us .landing .mesh-bg {
+    top: 62px;
+    left: 87px;
+  }
+  .page-about-us h1 {
+    font-size: 2.625rem;
+    line-height: 1.74;
+  }
+  .page-about-us .callout {
+    width: 62.63%;
+    margin-bottom: 16.5%;
+  }
+  .page-about-us .callout h3 {
+    font-size: 1rem;
+    letter-spacing: calc(1px/4);
+  }
+  .page-about-us .callout p {
+    line-height: 1.55;
+    letter-spacing: 1px;
+  }
+  .page-about-us .years-experience {
+    top: 45px;
+    left: -60px;
+  }
+  .page-about-us .years-experience .years-experience-text {
+    top: 284px;
+    left: 69px;
+  }
+  .page-about-us .employees .years-experience {
+    left: -55px;
   }
 
   /*********************
