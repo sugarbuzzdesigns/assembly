@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-17 09:53 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-17 09:04 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -257,17 +257,25 @@ var assembly = assembly || {};
 			var $ourApproachCarousel = $('.carousel.our-approach');
 
 			$ourApproachCarousel.on('init', function(slick){
+				$('.our-approach.carousel-module .carousel-next').appendTo($ourApproachCarousel);
+
 				$('.our-approach .carousel-next').on('click', function(evt){
 					evt.preventDefault();
 
 					$ourApproachCarousel.slick('slickNext');
-				})
+				});
+
+				$('.our-approach .slick-dots button').on('click', function(evt){
+					evt.preventDefault();
+					var slideNum = $(this).attr('tabindex');
+
+					$('.our-approach .slick-dots li.slick-active').removeClass('slick-active');
+					$(this).parent().addClass('slick-active');
+					$ourApproachCarousel.slick('slickGoTo', slideNum);
+				});
 			});
 
 			$ourApproachCarousel.slick({
-				init: function(slick){
-					console.log('initialized');
-				},
 				slidesToShow: 1,
 				initialSlide: 0,
 				infinite: false,
@@ -275,12 +283,12 @@ var assembly = assembly || {};
 				arrows: false,
 				easing: 'ease-in',
 				speed: 500,
-				dots: true,
 				variableWidth: hasVariableWidth
 			});
 
 			$ourApproachCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
 				updateCountText(nextSlide, $('.our-approach .slide-number'));
+				updateCustomDots(nextSlide);
 			});
 
 			employeeCarousel = $('.employee-carousel').slick({
@@ -323,6 +331,11 @@ var assembly = assembly || {};
 				}
 
 				$num.html(newNum);
+			}
+
+			function updateCustomDots(nextSlide){
+				$('.our-approach .slick-dots li.slick-active').removeClass('slick-active');
+				$('.our-approach .slick-dots li').eq(nextSlide).addClass('slick-active');
 			}
 		}
 	}

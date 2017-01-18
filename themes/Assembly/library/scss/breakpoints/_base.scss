@@ -1867,8 +1867,8 @@ ABOUT US Page
 
 	.landing {
 		position: relative;
-		padding-top: 20%;
-		overflow: hidden;
+	    padding-top: 16.4%;
+	    overflow: hidden;
 
 		.mesh-bg {
 			top: 45px;
@@ -1878,7 +1878,7 @@ ABOUT US Page
 
 	// about us years exp
 	.years-experience {
-	    top: 32px;
+	    top: 37px;
 	    left: -45px;
 
 		.years-experience-numbers {
@@ -1886,7 +1886,7 @@ ABOUT US Page
 		}
 
 		.years-experience-text {
-			top: 203px;
+			top: 213px;
 			left: 43px;
     		right: auto;
 		}
@@ -1895,93 +1895,108 @@ ABOUT US Page
 	.video {
 		position: relative;
 		width: 64.98%;
-		margin: 0 0 0 28.74%;
+		margin: 0 0 13.5% 28.74%;
 	}
 
 	h1 {
+		position: relative;
+		z-index: 1;
 		font-size: rem(35);
-		margin: 0 0 22% 10%;
+		margin: 0 0 11.5% 10%;
 	}
 
 	.callout {
 	    width: 67.63%;
-	    margin: 0 0 21% 11.11%;
+	    margin: 0 0 15% 11.11%;
 	    background: #fff;
 	    position: relative;
 	    z-index: 1;
-	    padding: 0 0 5px 0;
+	    padding: 3px 0 18px;
 
 		h3 {
 			font-family: gridnikregular;
 			text-transform: uppercase;
 			font-size: rem(12.37);
 			line-height: 1.5;
+			margin: 0 0 3.7% 0;
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.55;
 		}
 	}
 
 	.inner-callout {
 		width: 64.5%;
 		margin-left: 21.98%;
-		margin-top: 21.85%;
+		margin-top: 18.85%;
+    	margin-bottom: 8.5%;
 
 		p {
 			line-height: 1.77;
 		}
 	}
 
-	.slider {
-		width: 100%;
-
-		.slide {
-			width: 100%;
-			position: relative;
-			z-index: 1;
-
-			.slide-inner {
-				width: 56%;
-				margin: 0 auto 0 11%;
-
-				img {
-					width: 100%;
-				}
-			}
-
-			.slide-title {
-				margin-top: rem(20);
-				margin-bottom: rem(27);
-				font-size: rem(13);
-				line-height: rem(16);
-				letter-spacing: 1.3px;
-				text-transform: uppercase;
-				font-family: 'gridnikregular';
-			}
-
-			.slide-description {
-				font-size: rem(13);
-				line-height: rem(23);
-			}
-		}
+	.carousel-module.projects {
 
 		.mesh-bg {
-			margin-top: 28.5%;
-			height: 362px;
-			pointer-events: none;
+		    top: 110px;
+    		height: 402px;
+		}
+
+		.carousel-wrapper {
+			padding-bottom: 10%;
 		}
 	}
 
 	.employees {
 		margin-top: 16%;
+		background: transparent;
+		padding-bottom: 10%;
+
+		.years-experience .years-experience-text {
+			top: 183px;
+			left: auto;
+			right: -58px;
+		}
+
+		.carousel {
+			padding-top: 24%;
+
+			.slick-slide {
+				transform: translate3d(0,-26px,0);
+
+				&.slick-current {
+					transform: translate3d(0,0,0);
+				}
+			}
+
+			.tile-img {
+				width: 54.83%;
+			}
+		}
+
+		.mesh-bg {
+			right: 5px;
+    		width: 70%;
+    		height: 72.34%;
+		}
 
 		.years-experience {
+			top: -5px;
+			left: -45px;
+
 			.years-experience-numbers {
 				left: auto;
 				right: 0;
+				margin-right: 3%;
 			}
 		}
 	}
 
 	.our-approach {
-		margin-top: 30%;
+		margin-top: 0;
 
 		.copy {
 			margin-left: 10%;
@@ -1999,6 +2014,7 @@ ABOUT US Page
 			line-height: rem(33);
 			text-align: left;
 			margin-bottom: 10.63%;
+			margin-top: 0;
 
 			span {
 				display: block;
@@ -2009,16 +2025,25 @@ ABOUT US Page
     		padding: 4.43% 4.94%;
 		}
 
-		.carousel-bg {
-			position: absolute;
+		.carousel-wrapper {
+			padding-top: 13%;
+		}
+
+		.carousel {
+			background: url(../../images/svg/our-approach-dot-grid.svg) no-repeat;
+		}
+
+		.carousel-inner {
+			position: relative;
 			width: 100%;
+		    padding-top: 19%;
 		}
 
 		.slick-dots {
+			position: relative;
 			bottom: auto;
-			top: 18%;
 			text-align: left;
-			padding-left: 6.28%;
+			margin-left: 5.8%;
 		}
 
 		.slick-dots li {
@@ -2036,6 +2061,10 @@ ABOUT US Page
 			background-color: #98d8dc;
 		}
 
+		.slick-dots li button:focus {
+			background: transparent;
+		}
+
 		.slick-dots li button:before {
 			content: '';
 			height: 7px;
@@ -2048,18 +2077,24 @@ ABOUT US Page
 			font-family: 'pangrambold';
 			color: #f0f0f0;
 			font-size: rem(105.12);
-			line-height: 1.45;
+			line-height: 1;
 			letter-spacing: -1.75px;
+		}
+
+		.carousel-nav {
 			position: absolute;
-			left: -4.4%;
-			top: 3%;
+    		width: 100%;
+    		top: 0;
+    		left: 0;
+    		z-index: 2;
 		}
 
 		.carousel-next {
 			display: block;
 			position: absolute;
-			bottom: 8%;
+			top: 15px;
 			right: 11.59%;
+			margin-top: 75%;
 
 			svg {
 				height: 33px;
@@ -2073,6 +2108,28 @@ ABOUT US Page
 
 				&:focus {
 					outline: none;
+				}
+
+				.tile-copy {
+					width: 78%;
+					margin-left: 11.35%;
+					padding-top: 15%;
+
+					p:last-of-type {
+						margin-bottom: 0;
+					}
+
+					h4 {
+						font-family: 'gridnikregular';
+						font-size: rem(11);
+						text-transform: uppercase;
+						color: #000;
+						letter-spacing: 1.45px;
+					}
+
+					p {
+						color: #7d7d7d;
+					}
 				}
 
 				.tile-inner {
@@ -2183,6 +2240,10 @@ ABOUT US Page
 				}
 			}
 		}
+	}
+
+	a[href="/case-studies"] {
+		margin: 14% auto 23.5%;
 	}
 }
 

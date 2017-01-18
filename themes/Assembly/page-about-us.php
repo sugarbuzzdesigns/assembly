@@ -23,12 +23,13 @@
 	</div>
 	<div class="projects module carousel-module" data-image-ratio="1to1">
 		<div class="tile carousel-wrapper">
+			<div class="mesh-bg dark wide"></div>
 			<div class="carousel-inner">
 				<div class="carousel" data-mobile-position="left" data-mobile-start="front">
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_5.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-custom-case-studies-1.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Custom Case Studies</span>
@@ -39,7 +40,7 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_4.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-custom-case-studies-2.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Custom Case Studies</span>
@@ -61,7 +62,7 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_5.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-modular-case-studies-2.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Custom Case Studies</span>
@@ -72,7 +73,7 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_4.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-modular-case-studies-1.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Custom Case Studies</span>
@@ -86,6 +87,7 @@
 	</div>
 
 	<div class="employees employees-1 module">
+		<div class="mesh-bg dark wide"></div>
 		<div class="years-experience">
 			<div class="years-experience-numbers">
 				<span class="num">2</span>
@@ -132,15 +134,35 @@
 		</div>
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
-				<div class="slide-number">01</div>
-				<div class="carousel-bg">
-					<?php include 'library/images/svg/our-approach-dot-grid.svg'; ?>
+				<div class="carousel-nav">
+					<div class="slide-number">01</div>
+					<ul class="slick-dots" style="display: block;" role="tablist">
+						<li class="slick-active" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20">
+							<button type="button" data-role="none" role="button" tabindex="0">1</button>
+						</li>
+						<li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20">
+							<button type="button" data-role="none" role="button" tabindex="1">1</button>
+						</li>
+						<li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20">
+							<button type="button" data-role="none" role="button" tabindex="2">1</button>
+						</li>
+						<li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20">
+							<button type="button" data-role="none" role="button" tabindex="3">1</button>
+						</li>
+						<li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation20">
+							<button type="button" data-role="none" role="button" tabindex="4">1</button>
+						</li>
+					</ul>
 				</div>
 				<div class="carousel our-approach" data-mobile-position="left" data-mobile-start="front">
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
 								<?php include 'library/images/svg/our-approach-01.svg'; ?>
+							</div>
+							<div class="tile-copy">
+								<h4>Subheadline Here</h4>
+								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
 							</div>
 						</div>
 					</div>
@@ -149,12 +171,20 @@
 							<div class="tile-img">
 								<?php include 'library/images/svg/our-approach-02.svg'; ?>
 							</div>
+							<div class="tile-copy">
+								<h4>Subheadline Here</h4>
+								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+							</div>
 						</div>
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img">
 								<?php include 'library/images/svg/our-approach-03.svg'; ?>
+							</div>
+							<div class="tile-copy">
+								<h4>Subheadline Here</h4>
+								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
 							</div>
 						</div>
 					</div>
@@ -163,12 +193,20 @@
 							<div class="tile-img">
 								<?php include 'library/images/svg/our-approach-04.svg'; ?>
 							</div>
+							<div class="tile-copy">
+								<h4>Subheadline Here</h4>
+								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+							</div>
 						</div>
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img">
 								<?php include 'library/images/svg/our-approach-05.svg'; ?>
+							</div>
+							<div class="tile-copy">
+								<h4>Subheadline Here</h4>
+								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
 							</div>
 						</div>
 					</div>
@@ -178,15 +216,6 @@
 				</a>
 			</div>
 		</div>
-<!-- 		<div class="svg-slider">
-			<div class="num">01</div>
-			<div class="viewport">
-				<div class="svg-slide">
-					<?php include 'library/images/svg/our-approach-1.svg'; ?>
-
-				</div>
-			</div>
-		</div> -->
 	</section>
 	<a href="/case-studies" title="">
 		<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
