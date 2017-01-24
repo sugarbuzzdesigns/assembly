@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-18 09:24 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-23 09:42 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -265,6 +265,8 @@ var assembly = assembly || {};
 					$ourApproachCarousel.slick('slickNext');
 				});
 
+				$('.our-approach .carousel').data('slideCount', $('.our-approach .slick-slide').length);
+
 				$('.our-approach .slick-dots button').on('click', function(evt){
 					evt.preventDefault();
 					var slideNum = $(this).attr('tabindex');
@@ -287,8 +289,18 @@ var assembly = assembly || {};
 			});
 
 			$ourApproachCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				var slideCount = $('.our-approach .carousel').data('slideCount');
+
 				updateCountText(nextSlide, $('.our-approach .slide-number'));
 				updateCustomDots(nextSlide);
+
+				if(nextSlide + 1 === $('.our-approach .slick-slide').length){
+					$('.our-approach .carousel').addClass('atEnd');
+				} else {
+					if($('.our-approach .carousel').hasClass('atEnd')){
+						$('.our-approach .carousel').removeClass('atEnd');
+					}
+				}
 			});
 
 			employeeCarousel = $('.employee-carousel').slick({

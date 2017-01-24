@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-18 11:08 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-23 09:47 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -1795,9 +1795,6 @@ select {
 }
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
-}
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
 }
 .slick-dots li button:before {
   position: absolute;
@@ -7297,6 +7294,9 @@ CAROUSEL MODULES
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
+.carousel .slick-slide:focus {
+  outline: none;
+}
 .carousel .tile-inner {
   padding: 0 10%;
 }
@@ -8534,9 +8534,12 @@ ABOUT US Page
   padding-top: 16.4%;
   overflow: visible;
 }
-.page-about-us .landing .mesh-bg {
-  top: 45px;
-  left: 75px;
+.page-about-us .mesh-bg {
+  top: 0;
+  margin-top: 27.3%;
+  right: 2%;
+  left: auto;
+  width: 77.3%;
   height: 425px;
 }
 .page-about-us .years-experience {
@@ -8591,11 +8594,17 @@ ABOUT US Page
   line-height: 1.77;
 }
 .page-about-us .carousel-module.projects .mesh-bg {
-  top: 110px;
+  top: 0;
   height: 402px;
+  margin-top: 17.63%;
+  left: 2%;
+  width: 300px;
 }
 .page-about-us .carousel-module.projects .carousel-wrapper {
   padding-bottom: 10%;
+}
+.page-about-us .carousel-module.projects[data-image-ratio="1to1"] .carousel .tile-inner {
+  padding: 0 9% 0 11%;
 }
 .page-about-us .employees {
   margin-top: 16%;
@@ -8623,6 +8632,7 @@ ABOUT US Page
   right: 5px;
   width: 70%;
   height: 72.34%;
+  margin: 0;
 }
 .page-about-us .employees .years-experience {
   top: -5px;
@@ -8663,6 +8673,11 @@ ABOUT US Page
 }
 .page-about-us .our-approach .carousel {
   background: url(../../images/svg/our-approach-dot-grid.svg) no-repeat;
+}
+.page-about-us .our-approach .carousel.atEnd .carousel-next path:nth-child(1) {
+  fill: #d6d6d6;
+  stroke: #d6d6d6;
+  pointer-events: none;
 }
 .page-about-us .our-approach .carousel-inner {
   position: relative;
@@ -9032,17 +9047,21 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   ABOUT US Page
   **********************/
-  .page-about-us .landing .mesh-bg {
-    top: 62px;
-    left: 87px;
+  .page-about-us .landing + .mesh-bg {
+    width: 80.7%;
+    top: 0;
+    left: auto;
+    right: 0%;
+    margin-top: 27%;
+    height: 435px;
   }
   .page-about-us h1 {
     font-size: 2.625rem;
     line-height: 1.74;
   }
   .page-about-us .callout {
-    width: 62.63%;
-    margin-bottom: 16.5%;
+    width: 65.63%;
+    margin-bottom: 19.1%;
   }
   .page-about-us .callout h3 {
     font-size: 1rem;
@@ -9052,6 +9071,9 @@ PLUS SIZE (MOBILE) Iphone #+
     line-height: 1.55;
     letter-spacing: 1px;
   }
+  .page-about-us .video {
+    margin: 0 0 15.5% 28.74%;
+  }
   .page-about-us .years-experience {
     top: 45px;
     left: -60px;
@@ -9060,8 +9082,26 @@ PLUS SIZE (MOBILE) Iphone #+
     top: 284px;
     left: 69px;
   }
+  .page-about-us .projects .carousel .tile-inner {
+    padding: 0 18% 0 11%;
+  }
   .page-about-us .employees .years-experience {
-    left: -55px;
+    top: -15px;
+    left: -21.53%;
+  }
+  .page-about-us .employees .years-experience .years-experience-text {
+    top: 284px;
+    left: 69px;
+  }
+  .page-about-us .inner-callout {
+    width: 64.5%;
+    margin-top: 10.45%;
+    margin-bottom: 9.9%;
+  }
+  .page-about-us .inner-callout p {
+    font-size: 0.8125rem;
+    line-height: 1.77;
+    letter-spacing: 1.08px;
   }
 
   /*********************

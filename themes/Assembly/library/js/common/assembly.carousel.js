@@ -48,6 +48,8 @@ var assembly = assembly || {};
 					$ourApproachCarousel.slick('slickNext');
 				});
 
+				$('.our-approach .carousel').data('slideCount', $('.our-approach .slick-slide').length);
+
 				$('.our-approach .slick-dots button').on('click', function(evt){
 					evt.preventDefault();
 					var slideNum = $(this).attr('tabindex');
@@ -70,8 +72,18 @@ var assembly = assembly || {};
 			});
 
 			$ourApproachCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				var slideCount = $('.our-approach .carousel').data('slideCount');
+
 				updateCountText(nextSlide, $('.our-approach .slide-number'));
 				updateCustomDots(nextSlide);
+
+				if(nextSlide + 1 === $('.our-approach .slick-slide').length){
+					$('.our-approach .carousel').addClass('atEnd');
+				} else {
+					if($('.our-approach .carousel').hasClass('atEnd')){
+						$('.our-approach .carousel').removeClass('atEnd');
+					}
+				}
 			});
 
 			employeeCarousel = $('.employee-carousel').slick({

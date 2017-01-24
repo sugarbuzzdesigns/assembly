@@ -6,8 +6,8 @@
 			<h3>Experience To Build On</h3>
 			<p>Our team boasts more than 80 years of experience creating kits of temporary and custom designed structures for experiential activations, festivals, and sporting events.</p>
 		</div>
-		<div class="mesh-bg dark wide"></div>
 	</section>
+	<div class="mesh-bg dark wide"></div>
 	<div class="years-experience">
 		<div class="years-experience-numbers">
 			<span class="num">8</span>
@@ -21,7 +21,7 @@
 		<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 	</div>
-	<div class="projects module carousel-module" data-image-ratio="1to1">
+	<div class="projects module carousel-module">
 		<div class="tile carousel-wrapper">
 			<div class="mesh-bg dark wide"></div>
 			<div class="carousel-inner">
@@ -76,7 +76,7 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-modular-case-studies-1.jpg" alt="">
 							</div>
 							<div class="tile-info">
-								<span class="tile-title">Custom Case Studies</span>
+								<span class="tile-title">Modular Case Studies</span>
 								<span class="tile-desc"></span>
 							</div>
 						</div>
