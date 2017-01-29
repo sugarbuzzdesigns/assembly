@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-29 09:33 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-29 09:50 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7336,6 +7336,7 @@ Global Icons
   bottom: 7px;
   cursor: pointer;
   transition: opacity 0.5s;
+  display: none;
 }
 
 /*********************
@@ -9666,6 +9667,9 @@ you can add resource intensive styles.
   /*********************
   HOME PAGE STYLES
   **********************/
+  .home .nav-arrow-right {
+    display: block;
+  }
   .home .landing {
     background-image: url(../../images/backgrounds/landing-bg.jpg);
     background-size: 100%;

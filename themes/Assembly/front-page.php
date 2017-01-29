@@ -196,7 +196,7 @@
 										<span class="tile-title">GORDON MACHIELSEN</span>
 										<span class="tile-desc"></span>
 									</div>
-									<button type="button">about</button>
+									<!-- <button type="button">about</button> -->
 								</div>
 							</div>
 						</div>

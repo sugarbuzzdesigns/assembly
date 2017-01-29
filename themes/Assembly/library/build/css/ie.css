@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-29 09:33 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-29 09:50 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -349,6 +349,9 @@ VIDEO CONTENT
 /*********************
 HOME PAGE STYLES
 **********************/
+.home .nav-arrow-right {
+  display: block;
+}
 .home .landing {
   background-image: url(../../images/backgrounds/landing-bg.jpg);
   background-size: 100%;

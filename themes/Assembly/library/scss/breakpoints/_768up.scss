@@ -142,6 +142,10 @@ HOME PAGE STYLES
 **********************/
 
 .home {
+	.nav-arrow-right {
+		display: block;
+	}
+
 	.landing {
 		background-image: url(../../images/backgrounds/landing-bg.jpg);
 		background-size: 100%;
