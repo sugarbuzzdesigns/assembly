@@ -23,6 +23,12 @@ var assembly = assembly || {};
 					$('html').removeClass('close-menu');
 				}
 			});
+
+			$('.home .to-top').on('click', function(){
+				$('html, body').animate({
+					scrollTop: $('.main-content').offset().top
+				})
+			});
 		},
 
 		toggleMainMenu: function(){

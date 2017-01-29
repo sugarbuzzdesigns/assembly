@@ -136,6 +136,7 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js',
 					'<%= jsSrcDir %>/libs/bxslider.min.js',
 					'<%= jsSrcDir %>/libs/slick.min.js',
+					'<%= jsSrcDir %>/libs/owl.min.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
 					'<%= jsSrcDir %>/libs/select2.min.js'
 				],

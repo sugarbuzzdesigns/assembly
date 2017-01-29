@@ -10,9 +10,9 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides, slickCarousel, employeeCarousel, hasVariableWidth = false, dots = false;
+			var $slides, start, position, $carousel, numSlides, slickCarousel, employeeCarousel, hasVariableWidth = false, dots = false, slidesToShow = 1.2;
 
-			$('.carousel-module').not('.employee-carousel, .our-approach').each(function(i, module){
+			$('.carousel-module').not('.employee-carousel, .our-approach, .add-contact-photo').each(function(i, module){
 				if($(this).is('.our-approach')){
 					hasVariableWidth = true;
 					dots = true;
@@ -25,8 +25,33 @@ var assembly = assembly || {};
 				start = $carousel.data('mobile-start') === 'front' ? 0 : numSlides - 1;
 				position = $carousel.data('mobile-position');
 
+				if(assembly.util.useragent.deviceType != 'mobile'){
+					slidesToShow = 1;
+					start = 0;
+				}
+
+				$carousel.on('init', function(slick){
+
+					$curCarousel = $(this);
+
+					$curCarousel.closest('.carousel-inner').find('.nav-arrow-right').on('click', function(){
+						$(this).siblings('.carousel').slick('slickNext');
+					});
+				});
+
+				$carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+					var $thisCarousel = $(this);
+					var slideCount = $thisCarousel.find('.slide').length;
+
+					if(slideCount === nextSlide + 1){
+						$thisCarousel.closest('.carousel-module').addClass('atEnd');
+					} else {
+						$thisCarousel.closest('.carousel-module').removeClass('atEnd');
+					}
+				});
+
 				slickCarousel = $carousel.slick({
-					slidesToShow: 1.2,
+					slidesToShow: slidesToShow,
 					initialSlide: start,
 					infinite: false,
 					touchMove: false,

@@ -17,6 +17,20 @@ come into play. Have fun!
 }
 
 /*********************
+Years Experience Module
+**********************/
+.years-experience {
+	.years-experience-numbers {
+	    top: -40px;
+	}
+
+	.years-experience-text {
+		top: 245px;
+    	right: -17px;
+	}
+}
+
+/*********************
 MENU & NAVIGATION STYLES
 *********************/
 .main-menu-btn {
@@ -94,6 +108,36 @@ MENU & NAVIGATION STYLES
 }
 
 /*********************
+CAROUSEL MODULES
+**********************/
+.carousel {
+	.slick-slide {
+		transform: translate3d(0,0,0);
+	}
+	.tile-inner {
+		padding: 0;
+
+		.tile-title {
+			font-size: rem(12);
+		}
+
+		.tile-desc {
+
+		}
+	}
+}
+
+/*********************
+VIDEO CONTENT
+**********************/
+.video.module {
+	margin: 0;
+	clear: left;
+	float: left;
+	width: 55.3%;
+}
+
+/*********************
 HOME PAGE STYLES
 **********************/
 
@@ -104,6 +148,9 @@ HOME PAGE STYLES
 
 		.mesh-bg {
 			left: 11%;
+			top: 28.1%;
+		    height: 508px;
+		    width: 354px;
 		}
 
 		h2 {
@@ -112,4 +159,138 @@ HOME PAGE STYLES
 			margin: 0 0 0 20%;
 		}
 	}
+
+	.company-statement {
+		padding-top: 125px;
+		width: 55%;
+		float: right;
+
+		.svg-shape-1 {
+			top: 28%;
+		}
+
+		p {
+			font-size: rem(11);
+		}
+	}
+
+	.group {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.group-1 {
+		position: relative;
+		margin-top: -200px;
+	}
+
+	.group-2 {
+		margin-bottom: 55px;
+	}
+
+	.group-3 {
+	    overflow: hidden;
+	    padding-top: 240px;
+	    margin-top: -240px;
+	}
+
+	.group-4 {
+		margin-top: -60px;
+		padding-bottom: 60px;
+
+		.projects {
+			display: inline-block;
+		}
+	}
+
+	.years-experience .years-experience-numbers {
+		right: 43px;
+	}
+}
+
+/*********************
+PROJECTS SECTION
+- Homepage
+**********************/
+.projects-1, .projects-4 {
+	width: 34%;
+	float: left;
+}
+
+.projects-1 {
+	margin-left: 3.13%;
+	padding-top: 2%;
+	overflow: visible;
+
+	.mesh-bg {
+		width: 310px;
+		left: 10%;
+		height: 300px;
+	}
+}
+
+.projects-4 {
+	margin-left: 3.15%;
+}
+
+.projects-2, .projects-5 {
+	width: 53%;
+	float: right;
+}
+
+.projects-2 {
+	margin-right: 3.13%;
+	padding-top: 12%;
+}
+
+.projects-5 {
+	width: 28.96%;
+	margin-right: 14.6%;
+}
+
+.approach {
+	width: 35%;
+	float: right;
+	margin-right: 27.1%;
+	z-index: 1;
+}
+
+.employees {
+	width: 40%;
+	float: right;
+	background: transparent;
+	overflow: visible;
+	margin-top: -150px;
+
+	.stripes-bg {
+		display: block;
+	    position: absolute;
+	    top: -170px;
+	    left: -255px;
+	    width: 570px;
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+}
+
+/*********************
+SERVICES SECTION
+- Homepage
+**********************/
+.services {
+	padding: 0;
+	clear: left;
+    float: left;
+    width: 17.1%;
+    margin-left: 9.03%;
+}
+
+/*********************
+To Top BTN
+**********************/
+.to-top {
+	display: block;
+	padding-bottom: 15px;
 }

@@ -13,6 +13,10 @@ and will be used across all viewports.
 // import mixins
 @import "../partials/test_styles";
 
+.no-mobile {
+	display: none;
+}
+
 
 /*********************
 GENERAL STYLES
@@ -85,7 +89,6 @@ BASIC ELEMENT STYLES
 
 img {
 	display: block;
-	max-width: 100%;
 }
 
 p {
@@ -96,6 +99,20 @@ p {
 
 blockquote {
 
+}
+
+/*********************
+Global Icons
+**********************/
+.nav-arrow-right {
+	stroke: #808080;
+	height: 10px;
+	width: 11px;
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    cursor: pointer;
+    transition: opacity 0.5s;
 }
 
 /*********************
@@ -984,6 +1001,14 @@ HOME PAGE STYLES
 		}
 	}
 
+	.carousel-module {
+		&.atEnd {
+			.nav-arrow-right {
+				opacity: 0.3;
+				pointer-events: none;
+			}
+		}
+	}
 }
 
 /*********************
@@ -1051,6 +1076,10 @@ Tiles
 		img {
 			max-width: 100%;
 		}
+	}
+
+	.tile-info {
+		position: relative;
 	}
 
 	.tile-title,
@@ -1166,6 +1195,22 @@ PRODUCTS Tile(s)
 }
 
 /*********************
+To Top BTN
+**********************/
+.to-top {
+	display: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'gridnikregular';
+	font-size: rem(12);
+
+	svg {
+		width: 26px;
+		height: 17px;
+	}
+}
+
+/*********************
 FOOTER STYLES
 *********************/
 
@@ -1218,6 +1263,7 @@ CONTACT
 		background-color: #fff;
 		transition: height 0.7s;
 		padding-bottom: 7%;
+		overflow: hidden;
 
 		.mesh-bg {
 			margin-top: 45%;
@@ -1343,6 +1389,9 @@ CONTACT
 	}
 
 	.add-photo {
+		overflow: auto;
+		background-color: #f4f4f4;
+
 		h3 {
 			font-family: 'gridnikregular';
 			text-transform: uppercase;
@@ -1350,8 +1399,9 @@ CONTACT
 			text-align: center;
 		}
 
-		overflow: auto;
-		background-color: #f4f4f4;
+		.addable-images {
+			display: none;
+		}
 
 		.photos-wrap {
 			overflow: auto;
@@ -1377,6 +1427,10 @@ CONTACT
 			img {
 				width: 100%;
 				display: block;
+			}
+
+			&.hidden {
+				display: none;
 			}
 		}
 	}

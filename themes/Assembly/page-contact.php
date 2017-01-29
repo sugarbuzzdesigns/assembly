@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 <?php include 'includes/header-light.php'; ?>
+<?php include 'includes/page-data/contact-page-data.php'; ?>
+
 <form action="" method="get" accept-charset="utf-8">
 	<div class="form-viewport">
 		<label class="active">
@@ -23,53 +25,33 @@
 		<div class="mesh-bg dark"></div>
 		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
 		<p>What are you interested in?</p>
-		<div class="assembly-slider">
-			<ul class="slider">
-				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_1.jpg" alt="">
-				</li>
-				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_2.jpg" alt="">
-				</li>
-				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_3.jpg" alt="">
-				</li>
-				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_4.jpg" alt="">
-				</li>
-			</ul>
-		</div>
+			<div class="owl-carousel add-photos-carousel">
+				<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
+				<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
+					<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+				</div>
+				<?php endforeach; ?>
+			</div>
+
 		<a href="#" class="add-photo-btn">
 			<span></span>
 			<span></span>
 		</a>
 	</div>
 	<div class="addable-images">
-	<?php
-
-	// var_dump(wp_get_attachment_metadata(42)["width"]);
-
-	?>
-	<?php $images = getAddableImages(); ?>
-
-		<?php foreach ($images as $image) : ?>
-			<!-- <img src="<?php echo $image; ?>" alt=""> -->
+		<?php foreach ($contactPhotos as $photo) : ?>
+		<div class="photo">
+			<img data-src="<?php echo $img_dir . $photo['src']; ?>">
+		</div>
 		<?php endforeach; ?>
-
 	</div>
 	<h3>add photo</h3>
 	<div class="photos-wrap">
-		<ul class="photos empty">
-<!-- 			<li class="photo">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/add_photo_placeholder.jpg" alt="">
-			</li>
-			<li class="photo">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/add_photo_placeholder.jpg" alt="">
-			</li> -->
-			<li class="photo">
-				<img class="add-photo-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png" alt="">
-			</li>
-		</ul>
+		<div class="owl-carousel photo-list-carousel">
+			<div class="slide photo">
+				<img class="add-photos-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png" alt="">
+			</div>
+		</div>
 	</div>
 </section>
 
