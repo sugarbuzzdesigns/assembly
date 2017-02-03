@@ -21,22 +21,24 @@
 </form>
 
 <section class="add-photo">
-	<div class="add-photo-overlay">
-		<div class="mesh-bg dark"></div>
-		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
-		<p>What are you interested in?</p>
-			<div class="owl-carousel add-photos-carousel">
-				<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
-				<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
-					<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+	<div class="photo-overlay-wrap">
+		<div class="add-photo-overlay">
+			<div class="mesh-bg dark"></div>
+			<?php include 'includes/header-dark-contact-add-photo.php'; ?>
+			<p>What are you interested in?</p>
+				<div class="owl-carousel add-photos-carousel">
+					<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
+					<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
+						<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+					</div>
+					<?php endforeach; ?>
 				</div>
-				<?php endforeach; ?>
-			</div>
 
-		<a href="#" class="add-photo-btn">
-			<span></span>
-			<span></span>
-		</a>
+			<a href="#" class="add-photo-btn">
+				<span></span>
+				<span></span>
+			</a>
+		</div>
 	</div>
 	<div class="addable-images">
 		<?php foreach ($contactPhotos as $photo) : ?>
@@ -48,9 +50,10 @@
 	<h3>add photo</h3>
 	<div class="photos-wrap">
 		<div class="owl-carousel photo-list-carousel">
-			<div class="slide photo">
-				<img class="add-photos-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png" alt="">
-			</div>
+			<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
+<!-- 			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_2.jpg);"></div>
+			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_1.jpg);"></div>
+			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_3.jpg);"></div> -->
 		</div>
 	</div>
 </section>

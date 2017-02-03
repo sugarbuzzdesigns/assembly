@@ -3,9 +3,9 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', ['default', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
 
-	grunt.registerTask('sassBuildDist', ['sass', 'cssmin', 'usebanner:css']);
+	grunt.registerTask('sassBuildDist', ['sass', 'cssmin', 'usebanner:css', 'growl:cssBuild']);
 
 	require('load-grunt-tasks')(grunt);
 
@@ -137,6 +137,7 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/libs/bxslider.min.js',
 					'<%= jsSrcDir %>/libs/slick.min.js',
 					'<%= jsSrcDir %>/libs/owl.min.js',
+					// '<%= jsSrcDir %>/libs/owl.carousel-debug.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
 					'<%= jsSrcDir %>/libs/select2.min.js'
 				],
@@ -184,6 +185,17 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+
+	    growl : {
+	        jsBuild : {
+	            message : "Build Done",
+	            title : "JS"
+	        },
+	        cssBuild : {
+	            message : "Build Done",
+	            title : "CSS"
+	        }
+	    },
 
 		cssmin: {
 			options: {

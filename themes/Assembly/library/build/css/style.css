@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-01-29 09:50 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-03 06:41 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8323,6 +8323,10 @@ CONTACT
 .page-contact {
   position: relative;
 }
+.page-contact .photo-overlay-wrap {
+  overflow: hidden;
+  position: relative;
+}
 .page-contact .add-photo-overlay {
   left: 0;
   z-index: 1;
@@ -8367,6 +8371,25 @@ CONTACT
 }
 .page-contact .add-photo-overlay .add-photo-btn span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+.page-contact .add-photos-carousel .image {
+  padding: 25px;
+}
+.page-contact .add-photos-carousel .owl-wrapper {
+  display: table !important;
+}
+.page-contact .add-photos-carousel .owl-item {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+.page-contact .add-photos-carousel .owl-item.active {
+  opacity: 1;
+}
+.page-contact .add-photos-carousel .owl-item > div {
+  text-align: center;
 }
 .page-contact form {
   width: 80%;
@@ -8450,6 +8473,7 @@ CONTACT
 }
 .page-contact .add-photo .photos-wrap {
   overflow: auto;
+  padding-bottom: 7.25%;
 }
 .page-contact .add-photo .photos {
   width: 100%;
@@ -8460,9 +8484,11 @@ CONTACT
   float: none;
 }
 .page-contact .add-photo .photo {
-  width: 154px;
-  height: 118px;
-  float: left;
+  margin: 0 auto;
+  width: 138px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 108px;
 }
 .page-contact .add-photo .photo img {
   width: 100%;
@@ -8470,6 +8496,10 @@ CONTACT
 }
 .page-contact .add-photo .photo.hidden {
   display: none;
+}
+.page-contact .add-photo .open-add-images {
+  background-size: 100%;
+  background-position: center center;
 }
 .page-contact .footer {
   padding: 14px 3% 10%;

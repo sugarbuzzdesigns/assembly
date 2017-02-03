@@ -1256,6 +1256,11 @@ CONTACT
 .page-contact {
 	position: relative;
 
+	.photo-overlay-wrap {
+		overflow: hidden;
+		position: relative;
+	}
+
 	.add-photo-overlay {
 		// position: absolute;
 		left: 0;
@@ -1309,6 +1314,32 @@ CONTACT
 					transform: translate(-50%,-50%) rotate(90deg);
 				}
 			}
+		}
+	}
+
+	.add-photos-carousel {
+		.image {
+			padding: 25px;
+		}
+
+		.owl-wrapper {
+			display: table !important;
+		}
+
+		.owl-item {
+			display: table-cell;
+			float: none;
+			vertical-align: middle;
+			transition: opacity 0.5s;
+			opacity: 0.5;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+
+		.owl-item > div {
+			text-align: center;
 		}
 	}
 
@@ -1406,6 +1437,7 @@ CONTACT
 
 		.photos-wrap {
 			overflow: auto;
+			padding-bottom: 7.25%;
 		}
 
 		.photos {
@@ -1421,9 +1453,12 @@ CONTACT
 		}
 
 		.photo {
-			width: 154px;
-			height: 118px;
-			float: left;
+			margin: 0 auto;
+			width: 138px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			// padding-top: 73.54%;
+			padding-top: 108px;
 
 			img {
 				width: 100%;
@@ -1433,6 +1468,21 @@ CONTACT
 			&.hidden {
 				display: none;
 			}
+		}
+
+		.open-add-images {
+			background-size: 100%;
+    		background-position: center center;
+		}
+	}
+
+	.photo-list-carousel {
+		// .owl-stage {
+		// 	margin-right: -25px;
+		// }
+
+		.owl-item {
+
 		}
 	}
 
