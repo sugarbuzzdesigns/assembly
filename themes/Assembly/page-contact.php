@@ -8,15 +8,14 @@
 			<p>what kind of structure are you looking for? </p>
 			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 			<input type="text" name="" value="" placeholder="type here">
-			<div class="error-message">Please Fill our the field.</div>
-			<button class="dark" type="button">next</button>
 		</label>
 		<label>
 			<p>How about another question? </p>
 			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 			<input type="text" name="" value="" placeholder="type here">
-			<button class="dark" type="button">next</button>
 		</label>
+		<div class="error-message">Please Fill our the field.</div>
+		<button class="dark" type="button">next</button>
 	</div>
 </form>
 

@@ -31,8 +31,8 @@ var assembly = assembly || {};
 			var _this = this;
 
 			$('form button').on('click', function formButtonHandler(){
-				if(_this.validField($(this.closest('form .active')).find('input').val())){
-					_this.showNextFormInput($(this.closest('form .active')));
+				if(_this.validField($(this).closest('form').find('.active input').val())){
+					_this.showNextFormInput($(this).closest('form').find('.active'));
 					$('form .error-message').hide();
 				} else {
 					$('form .error-message').show();
@@ -143,11 +143,13 @@ var assembly = assembly || {};
 				nextIndex = curIndex + 1;
 
 			if(nextIndex === $('form label').length){
-				$('form button').addClass('disabled');
+				// $('form button').addClass('disabled');
 			}
 
 			if(curIndex === $('form label').length){
-				return;
+				$('html, body').animate({
+					scrollTop: $('.add-photo').offset().top
+				});
 			} else {
 				$('.pager .current').html(curIndex + 1);
 				$currentInput.removeClass('active');
