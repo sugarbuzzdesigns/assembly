@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-03 07:07 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-07 09:58 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -7,9 +7,12 @@ var assembly = assembly || {};
 (function($){
 	assembly.casestudies = {
 		init: function(){
-			this.$landingTiles = $('.case-study-landing .tile');
+			this.$landingSquares = $('.landing .case-study-category');
 			this.$customLanding = $('.case-study-landing[data-kit-type="custom"]');
 			this.$modularLanding = $('.case-study-landing[data-kit-type="modular"]');
+			this.$mainContent = $('.content');
+			this.mainContentHeight = $('.content').height();
+			this.$caseStudyLandingTiles = $('.case-study-landing .tile');
 			this.$selectFilter = $('.select-filter');
 			this.$toggleFilter = $('.toggle-filter');
 			this.$toggleFilterBtns = $('.toggle-filter a');
@@ -20,6 +23,8 @@ var assembly = assembly || {};
 			};
 			this.initSelect2();
 			this.bindEvents();
+
+			this.setContainerHeights();
 		},
 
 		initSelect2: function(){
@@ -41,7 +46,7 @@ var assembly = assembly || {};
 				_this.toggleCaseStudyType(this);
 			});
 
-			_this.$landingTiles.on('click', function tileFilterClickHandler(evt){
+			_this.$caseStudyLandingTiles.on('click', function tileFilterClickHandler(evt){
 				var kitType = $(this).parent().attr('data-kit-type'),
 					category = $(this).find('.tile-cat').html().trim().toLowerCase();
 
@@ -49,6 +54,44 @@ var assembly = assembly || {};
 				_this.currentFilerStatus.category = category;
 
 				_this.$selectFilter.val(category).trigger('change');
+			});
+
+			_this.$landingSquares.on('click', function landingSquareClickHandler(evt){
+				var $square = $(this);
+
+				setTimeout(function fakeTransitionEndEvent(argument) {
+					_this.showMainCaseStudies($square.closest('.case-study-category'));
+				}, 1000);
+			});
+		},
+
+		showMainCaseStudies: function($landingTileClicked){
+			var newContentHeight;
+
+			if($landingTileClicked.is('.modular')){
+				console.log($('.case-study-landing[data-kit-type="modular"]').outerHeight());
+				newContentHeight = this.$modularLanding.height();
+				this.$modularLanding.addClass('show');
+				this.$customLanding.removeClass('show');
+			} else {
+				newContentHeight = this.$customLanding.height();
+				this.$customLanding.addClass('show');
+				this.$modularLanding.removeClass('show');
+			}
+
+			this.$mainContent.css({
+				height: newContentHeight + $('.content header').outerHeight()
+			});
+
+			$('.landing-inner').css({
+				height: 0
+			});
+		},
+
+		setContainerHeights: function(){
+			this.$mainContent.data('initialheight', this.mainContentHeight);
+			this.$mainContent.css({
+				height: 0
 			});
 		},
 
@@ -82,18 +125,6 @@ var assembly = assembly || {};
 			$toShow.addClass('show');
 
 			this.$currentCaseStudyContainer = $toShow;
-			// var _this = this,
-			// curType = _this.currentFilerStatus.type,
-			// $defaultCats = $('.case-study-landing'),
-			// $catsToHide = $('.case-study-category').not('[data-category='+ option +']'),
-			// $catToShow = $('.case-study-category[data-category='+ option +'][data-kit-type='+ curType +']');
-
-			// if(option === 'all'){
-			// 	$('.case-study-landing[data-kit-type="'+ curType +'"]').addClass('show');
-			// 	$('.case-study-landing[data-kit-type!="'+ curType +'"]').removeClass('show');
-			// }
-
-			// console.log(curType, option);
 		}
 	};
 

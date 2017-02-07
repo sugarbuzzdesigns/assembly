@@ -8,7 +8,7 @@ var assembly = assembly || {};
 		init: function(){
 
 			this.$addPhotoSection = $('.add-photo');
-			this.$contactForm = $('.pager .current');
+			this.$pagerCurrent = $('.pager .current');
 			// button that adds an individual photo
 			this.$addphotoButton = $('.add-photo-overlay .add-photo-btn');
 			// button that opens the add photos section
@@ -123,7 +123,7 @@ var assembly = assembly || {};
 			var _this = this,
 				formFields = $('form label'),
 				numFormFields = formFields.length,
-				$cur = $('.pager .current'),
+				$cur = this.$pagerCurrent,
 				$total = $('.pager .total');
 
 			$cur.html('1');
@@ -142,16 +142,12 @@ var assembly = assembly || {};
 			var curIndex = $currentInput.index() + 1,
 				nextIndex = curIndex + 1;
 
-			if(nextIndex === $('form label').length){
-				// $('form button').addClass('disabled');
-			}
-
 			if(curIndex === $('form label').length){
 				$('html, body').animate({
 					scrollTop: $('.add-photo').offset().top
 				});
 			} else {
-				$('.pager .current').html(curIndex + 1);
+				this.$pagerCurrent.html(curIndex + 1);
 				$currentInput.removeClass('active');
 				$currentInput.next().addClass('active');
 			}
@@ -173,7 +169,7 @@ var assembly = assembly || {};
 
 			if(numSlides <= 1){
 				this.$photoListCarousel.data('owl.carousel').destroy();
-				$('.open-add-images').after($photo);
+				this.$addPhotoIcon.after($photo);
 			} else {
 				this.$photoListCarousel.data('owl.carousel').add($photo, 1);
 				this.$photoListCarousel.data('owl.carousel').destroy();
@@ -185,18 +181,6 @@ var assembly = assembly || {};
 				margin: 20,
 				stagePadding: 50
 			});
-
-
-
-			//
-			// // this.$photoListCarousel.data('owl.carousel').add($photo, 2);
-			// this.$photoListCarousel.data('owl.carousel').add('<p>ADDED</p>', 2);
-			// this.$photoListCarousel.on('add.owl.carousel', function() {
-			// 	console.log('item added');
-			// });
-			// this.$photoListCarousel.trigger('add.owl.carousel', [$('<div id="abcd" class="photo"><img src="http://byassembly.loc/wp-content/themes/Assembly/library/images/placeholders/project_placeholder_1.jpg"/></div>'), 2]);
-			// this.$photoListCarousel.data('owl.carousel').refresh();
-
 		}
 	};
 

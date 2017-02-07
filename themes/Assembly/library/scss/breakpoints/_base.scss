@@ -268,6 +268,7 @@ and more scalable.
     padding-top: 4em;
     padding-left: 2.1em;
     position: relative;
+    pointer-events: none;
 
 	li {
 		margin-bottom: 0.6em;
@@ -306,7 +307,7 @@ and more scalable.
 } /* end .nav */
 
 .menu-open {
-	.main-menu {
+	.main-menu, .nav {
 		pointer-events: all;
 	}
 
@@ -627,7 +628,6 @@ select, .select2.select2-container--default {
 
 .toggle-filter {
 	overflow: auto;
-	margin-bottom: 27%;
 
 	a {
 		text-align: center;
@@ -1530,8 +1530,7 @@ CONTACT
 CASE STUDIES Page
 **********************/
 .page-case-studies {
-	.landing > div {
-		background-size: cover;
+	.landing .case-study-category {
 		width: 100%;
 		height: 50vh;
 		position: relative;
@@ -1561,11 +1560,34 @@ CASE STUDIES Page
 		letter-spacing: 1.08px;
 	}
 
+	.section-header {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+
+		.header-icon-logo {
+			fill: #000;
+		}
+
+		.main-menu-btn span {
+			background: #000;
+		}
+	}
+
 	.landing {
+		.landing-inner {
+			overflow: hidden;
+			transition: height 0.7s;
+			height: 100vh;
+		}
+
 		.case-study-category {
-			&.hover {
-				h3 {
-					color: #fff;
+			&.hover,
+			&:hover {
+				.default-content {
+					width: 0;
 				}
 
 				.hover-content {
@@ -1601,11 +1623,12 @@ CASE STUDIES Page
 			z-index: 3;
 			background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
 			background-size: cover;
-		}
-
-		.hover-content {
 			transition: transform 0.7s;
-			transform: translate3d(-100%,0,0);
+			// transform: translate3d(-100%,0,0);
+
+			h3 {
+				color: #fff;
+			}
 		}
 
 		[data-letter] {
@@ -1614,7 +1637,8 @@ CASE STUDIES Page
 		}
 
 		.modular {
-			&.hover {
+			&.hover,
+			&:hover {
 				[data-letter="m"] {
 					transform: translate3d(40px,-60px,0);
 				}
@@ -1640,7 +1664,8 @@ CASE STUDIES Page
 		}
 
 		.custom {
-			&.hover {
+			&.hover,
+			&:hover {
 				[data-letter="c"] {
 					transform: translate3d(0,-60px,0);
 				}
@@ -1663,28 +1688,30 @@ CASE STUDIES Page
 		}
 	}
 
-	.section-header {
-		position: absolute;
-		width: 100%;
-		top: 0;
-		left: 0;
-		z-index: 1000;
-
-		.header-icon-logo {
-			fill: #000;
-		}
-
-		.main-menu-btn span {
-			background: #000;
-		}
-	}
-
 	.landing {
-		.modular {
+		.default-content {
+			background-size: cover;
+			width: 100%;
+			height: 50vh;
+			position: relative;
+			overflow: hidden;
+			float: right;
+			z-index: 4;
+			transition: width 1s;
+
+			.inner {
+			    width: 100vw;
+			    position: absolute;
+			    height: 50vh;
+			    right: 0;
+			}
+		}
+
+		.modular .default-content .inner {
 			background-image: url(../../images/case-study-modular-bg.jpg);
 		}
 
-		.custom {
+		.custom .default-content .inner {
 			background-image: url(../../images/case-study-custom-bg.jpg);
 		}
 
@@ -1707,19 +1734,23 @@ CASE STUDIES Page
 	}
 
 	.content {
-		position: absolute;
+		// position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		z-index: 3;
 		background: #fff;
-		overflow: auto;
-		padding-top: 29.47%;
+		overflow: hidden;
+
+		header {
+			padding-bottom: 20.77%;
+		}
 
 		h2 {
 			font-size: rem(42);
 			line-height: 0.904;
 		    margin: 0 auto 7%;
+		    padding-top: 29.47%;
 		    width: 77%;
 
 		    span {
@@ -1768,6 +1799,7 @@ CASE STUDIES Page
 	}
 
 	.case-study-container {
+		overflow: hidden;
 		transition: transform 0.7s;
 		transform: translate3d(0,150px,0);
 

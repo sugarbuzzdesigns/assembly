@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist']);
 
-	grunt.registerTask('dev', ['default', 'watch']);
+	grunt.registerTask('dev', ['default', 'browserSync', 'watch']);
 
 	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
 
@@ -211,6 +211,22 @@ module.exports = function(grunt) {
 					'<%= cssDistDir %>/login.min.css': '<%= cssBuildDir %>/login.css'
 				}
 			}
+		},
+
+		browserSync: {
+		    dev: {
+		        bsFiles: {
+		            src : [
+		            	'<%= buildDir %>/css/**/*.css',
+		            	'<%= buildDir %>/js/**/*.js',
+		            	'./*.php'
+		            ]
+		        },
+		        options: {
+		            proxy: "http://byassembly.loc/",
+		            watchTask: true
+		        }
+		    }
 		},
 
 		watch: {

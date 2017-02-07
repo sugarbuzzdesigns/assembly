@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-03 06:41 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-07 09:50 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7480,6 +7480,7 @@ and more scalable.
   padding-top: 4em;
   padding-left: 2.1em;
   position: relative;
+  pointer-events: none;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
@@ -7500,7 +7501,7 @@ and more scalable.
 }
 
 /* end .nav */
-.menu-open .main-menu {
+.menu-open .main-menu, .menu-open .nav {
   pointer-events: all;
 }
 .menu-open .menu-bg {
@@ -7783,7 +7784,6 @@ select .select2-selection__arrow b, .select2.select2-container--default .select2
 
 .toggle-filter {
   overflow: auto;
-  margin-bottom: 27%;
 }
 .toggle-filter a {
   text-align: center;
@@ -8534,8 +8534,7 @@ CONTACT
 /*********************
 CASE STUDIES Page
 **********************/
-.page-case-studies .landing > div {
-  background-size: cover;
+.page-case-studies .landing .case-study-category {
   width: 100%;
   height: 50vh;
   position: relative;
@@ -8559,10 +8558,28 @@ CASE STUDIES Page
   line-height: 1.77;
   letter-spacing: 1.08px;
 }
-.page-case-studies .landing .case-study-category.hover h3 {
-  color: #fff;
+.page-case-studies .section-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-.page-case-studies .landing .case-study-category.hover .hover-content {
+.page-case-studies .section-header .header-icon-logo {
+  fill: #000;
+}
+.page-case-studies .section-header .main-menu-btn span {
+  background: #000;
+}
+.page-case-studies .landing .landing-inner {
+  overflow: hidden;
+  transition: height 0.7s;
+  height: 100vh;
+}
+.page-case-studies .landing .case-study-category.hover .default-content, .page-case-studies .landing .case-study-category:hover .default-content {
+  width: 0;
+}
+.page-case-studies .landing .case-study-category.hover .hover-content, .page-case-studies .landing .case-study-category:hover .hover-content {
   transform: translate3d(0, 0, 0);
 }
 .page-case-studies .landing h3 {
@@ -8590,71 +8607,74 @@ CASE STUDIES Page
   z-index: 3;
   background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
   background-size: cover;
-}
-.page-case-studies .landing .hover-content {
   transition: transform 0.7s;
-  transform: translate3d(-100%, 0, 0);
+}
+.page-case-studies .landing .hover-content h3 {
+  color: #fff;
 }
 .page-case-studies .landing [data-letter] {
   transition: transform 0.7s;
   transform: translate3d(0, 0, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="m"] {
+.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
   transform: translate3d(40px, -60px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="o"] {
+.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular:hover [data-letter="o"] {
   transform: translate3d(50px, -60px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="d"] {
+.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular:hover [data-letter="d"] {
   transform: translate3d(60px, -60px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="u"] {
+.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular:hover [data-letter="u"] {
   transform: translate3d(-92px, 20px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="l"] {
+.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular:hover [data-letter="l"] {
   transform: translate3d(-72px, 20px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="a"] {
+.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular:hover [data-letter="a"] {
   transform: translate3d(-90px, 94px, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="r"] {
+.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular:hover [data-letter="r"] {
   transform: translate3d(-70px, 94px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="c"] {
+.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom:hover [data-letter="c"] {
   transform: translate3d(0, -60px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="u"] {
+.page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom:hover [data-letter="u"] {
   transform: translate3d(20px, -60px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="s"] {
+.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom:hover [data-letter="s"] {
   transform: translate3d(-17px, 20px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="t"] {
+.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom:hover [data-letter="t"] {
   transform: translate3d(20px, 20px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="o"] {
+.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom:hover [data-letter="o"] {
   transform: translate3d(-122px, 110px, 0);
 }
-.page-case-studies .landing .custom.hover [data-letter="m"] {
+.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
   transform: translate3d(-50px, 106px, 0);
 }
-.page-case-studies .section-header {
-  position: absolute;
+.page-case-studies .landing .default-content {
+  background-size: cover;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  float: right;
+  z-index: 4;
+  transition: width 1s;
 }
-.page-case-studies .section-header .header-icon-logo {
-  fill: #000;
+.page-case-studies .landing .default-content .inner {
+  width: 100vw;
+  position: absolute;
+  height: 50vh;
+  right: 0;
 }
-.page-case-studies .section-header .main-menu-btn span {
-  background: #000;
-}
-.page-case-studies .landing .modular {
+.page-case-studies .landing .modular .default-content .inner {
   background-image: url(../../images/case-study-modular-bg.jpg);
 }
-.page-case-studies .landing .custom {
+.page-case-studies .landing .custom .default-content .inner {
   background-image: url(../../images/case-study-custom-bg.jpg);
 }
 .page-case-studies .landing .square {
@@ -8672,19 +8692,21 @@ CASE STUDIES Page
   border: solid 1px #979797;
 }
 .page-case-studies .content {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 3;
   background: #fff;
-  overflow: auto;
-  padding-top: 29.47%;
+  overflow: hidden;
+}
+.page-case-studies .content header {
+  padding-bottom: 20.77%;
 }
 .page-case-studies .content h2 {
   font-size: 2.625rem;
   line-height: 0.904;
   margin: 0 auto 7%;
+  padding-top: 29.47%;
   width: 77%;
 }
 .page-case-studies .content h2 span {
@@ -8723,6 +8745,7 @@ CASE STUDIES Page
   display: block;
 }
 .page-case-studies .case-study-container {
+  overflow: hidden;
   transition: transform 0.7s;
   transform: translate3d(0, 150px, 0);
 }
