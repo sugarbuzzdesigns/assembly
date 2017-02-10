@@ -993,6 +993,9 @@ HOME PAGE STYLES
 		    z-index: 1;
 		    width: 78%;
 		    margin: 0 auto 0;
+		    text-align: justify;
+		    -moz-text-align-last: left; /* Code for Firefox */
+		    text-align-last: left;
 		}
 	}
 
@@ -1093,9 +1096,14 @@ Tiles
 		display: none;
 
 		&::before {
-			content: '|';
-			display: inline-block;
-			margin-right: 2px;
+		    content: '';
+		    display: inline-block;
+		    margin-right: 7px;
+		    margin-left: 5px;
+		    height: 13px;
+		    width: 1px;
+		    background: #221F20;
+		    vertical-align: middle;
 		}
 	}
 
@@ -1204,6 +1212,7 @@ To Top BTN
 	text-transform: uppercase;
 	font-family: 'gridnikregular';
 	font-size: rem(12);
+	cursor: pointer;
 
 	svg {
 		width: 26px;
@@ -1242,6 +1251,7 @@ FOOTER STYLES
 
 	.copyright {
 		margin: 0 0 7% 0;
+		color: #c5c5c5;
 
 		span {
 			display: block;

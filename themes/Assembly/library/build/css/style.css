@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-07 09:50 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-10 03:15 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8110,6 +8110,10 @@ HOME PAGE STYLES
   z-index: 1;
   width: 78%;
   margin: 0 auto 0;
+  text-align: justify;
+  -moz-text-align-last: left;
+  /* Code for Firefox */
+  text-align-last: left;
 }
 .home .years-experience .years-experience-numbers {
   right: 0;
@@ -8184,9 +8188,14 @@ Tiles
   display: none;
 }
 .tile .tile-desc::before {
-  content: '|';
+  content: '';
   display: inline-block;
-  margin-right: 2px;
+  margin-right: 7px;
+  margin-left: 5px;
+  height: 13px;
+  width: 1px;
+  background: #221F20;
+  vertical-align: middle;
 }
 .tile.group2 {
   float: right;
@@ -8279,6 +8288,7 @@ To Top BTN
   text-transform: uppercase;
   font-family: 'gridnikregular';
   font-size: 0.75rem;
+  cursor: pointer;
 }
 .to-top svg {
   width: 26px;
@@ -8312,6 +8322,7 @@ FOOTER STYLES
 }
 .footer .copyright {
   margin: 0 0 7% 0;
+  color: #c5c5c5;
 }
 .footer .copyright span {
   display: block;
@@ -9868,17 +9879,158 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name:
-  Author:
-  
   Stylesheet: Desktop Stylsheet
   
   This is the desktop size. It's larger than an iPad so it will only
   be seen on the Desktop.
   
   ******************************************************************/
-  .wrap {
-    width: 1040px;
+  /*********************
+  MAIN LOGO
+  **********************/
+  .logo {
+    width: 179px;
+  }
+
+  /*********************
+  Main Menu BTN
+  **********************/
+  .main-menu-btn {
+    top: 55px;
+    right: 55px;
+  }
+
+  /*********************
+  Generic Section Styles
+  **********************/
+  .section-header {
+    padding: 78px 0 0 87px;
+  }
+
+  /*********************
+  REUSEABLE BACKGROUNDS
+  **********************/
+  .mesh-bg.dark {
+    background-image: url(../../images/svg/mesh-dot-lrg.svg);
+  }
+
+  /*********************
+  Global Icons
+  **********************/
+  .nav-arrow-right {
+    height: 15px;
+    width: 15px;
+    bottom: 5px;
+  }
+
+  /*********************
+  Home Page
+  **********************/
+  .home .landing {
+    overflow: hidden;
+    background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
+  }
+  .home .landing h2 {
+    font-size: 4.0625rem;
+  }
+  .home .landing .mesh-bg {
+    left: 8.9%;
+    top: 19.3%;
+  }
+  .home .landing-inner {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  .home .company-statement {
+    padding-top: 0;
+    margin-top: 181px;
+  }
+  .home .company-statement .svg-shape-1 {
+    top: 0;
+    left: 52%;
+    width: 227px;
+  }
+  .home .company-statement p {
+    width: 53%;
+    padding-top: 73px;
+    letter-spacing: 0.85px;
+    margin: 0 auto 0 24.4%;
+  }
+  .home .group-1 {
+    margin-top: -255px;
+  }
+
+  /*********************
+  HOME Projects Modules
+  **********************/
+  .projects-1 .mesh-bg {
+    width: 688px;
+    height: 510px;
+    left: 12.1%;
+  }
+  .projects-1 .carousel {
+    padding-top: 89px;
+  }
+
+  .projects-2 .carousel {
+    padding-top: 53px;
+  }
+
+  /*********************
+  Tiles
+  - Homepage
+  **********************/
+  .tile .tile-img {
+    margin-bottom: 1.75rem;
+  }
+  .tile .tile-desc {
+    display: inline-block;
+    color: #7D7D7D;
+  }
+
+  /*********************
+  Footer
+  **********************/
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .col {
+    width: calc(100%/3);
+  }
+  .footer .down-carrot {
+    width: 19px;
+    height: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+  .footer .col:first-child {
+    order: 2;
+  }
+  .footer .col:first-child a {
+    border: none;
+    font-size: 1.125rem;
+    padding: 17px 20px 11px;
+  }
+  .footer .col:nth-child(2) {
+    order: 1;
+    text-align: left;
+  }
+  .footer .col:nth-child(2) .assembly-logo-icon {
+    width: 29px;
+    margin: 0 0 17px 0;
+  }
+  .footer .col:nth-child(3) {
+    order: 3;
+    text-align: right;
+  }
+  .footer .copyright {
+    line-height: 13px;
+    font-size: 10px;
+  }
+  .footer .social {
+    padding-top: 23px;
   }
 }
 /*********************

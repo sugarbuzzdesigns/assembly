@@ -2,27 +2,29 @@
 <?php include 'includes/page-data/front-page-data.php'; ?>
 <div class="container">
 	<section class="landing">
-		<?php include 'includes/header-light-home.php'; ?>
-		<h2>
-			<div>
-				<span>here</span> <span>today. </span>
-			</div>
-			<div>
-				<span>remembered</span>
-			</div>
-			<div>
-				<span>tomorrow.</span>
-			</div>
-		</h2>
-		<div class="mesh-bg"></div>
+		<div class="landing-inner">
+			<?php include 'includes/header-light-home.php'; ?>
+			<h2>
+				<div>
+					<span>here</span> <span>today. </span>
+				</div>
+				<div>
+					<span>remembered</span>
+				</div>
+				<div>
+					<span>tomorrow.</span>
+				</div>
+			</h2>
+			<div class="mesh-bg"></div>
 
- 		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
+	 		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
+	 	</div>
 	</section>
 	<section class="main-content">
 		<div class="group group-0">
 			<div class="company-statement module">
 				<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
-				<p>insert company statement sit amet, consectetur lala adipiscing, sed do eiusmod tempor incididunt ut idunt ut labore et dolore magna labore et dolore magna</p>
+				<p>assembly creates temporary spaces that leave lasting impressions and inspire designers to rethink the possibilities of short-term space design.</p>
 			</div>
 		</div>
 
@@ -105,7 +107,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">Custom</span>
-										<span class="tile-desc">Lorem ipsume dolor sat</span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -126,7 +128,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">approach</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -137,7 +139,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">approach</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -183,7 +185,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">GORDON MACHIELSEN</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -194,7 +196,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">GORDON MACHIELSEN</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 									<!-- <button type="button">about</button> -->
 								</div>
@@ -219,7 +221,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">approach</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -240,7 +242,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">approach</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>
@@ -251,7 +253,7 @@
 									</div>
 									<div class="tile-info">
 										<span class="tile-title">approach</span>
-										<span class="tile-desc"></span>
+										<span class="tile-desc">Lorem ipsume</span>
 									</div>
 								</div>
 							</div>

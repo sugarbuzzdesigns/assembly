@@ -1,7 +1,4 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Desktop Stylsheet
 
 This is the desktop size. It's larger than an iPad so it will only
@@ -9,6 +6,175 @@ be seen on the Desktop.
 
 ******************************************************************/
 
-.wrap {
-  width: 1040px;
+/*********************
+MAIN LOGO
+**********************/
+.logo {
+    width: 179px;
+}
+
+/*********************
+Main Menu BTN
+**********************/
+.main-menu-btn {
+	top: 55px;
+    right: 55px;
+}
+
+/*********************
+Generic Section Styles
+**********************/
+.section-header {
+    padding: 78px 0 0 87px;
+}
+
+/*********************
+REUSEABLE BACKGROUNDS
+**********************/
+.mesh-bg.dark {
+	background-image: url(../../images/svg/mesh-dot-lrg.svg);
+}
+
+/*********************
+Global Icons
+**********************/
+.nav-arrow-right {
+	height: 15px;
+	width: 15px;
+    bottom: 5px;
+}
+
+/*********************
+Home Page
+**********************/
+.home {
+	.landing {
+		overflow: hidden;
+		background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
+
+		h2 {
+			font-size: rem(65);
+		}
+
+		.mesh-bg {
+			left: 8.9%;
+    		top: 19.3%;
+		}
+	}
+
+	.landing-inner {
+		height: 100vh;
+		width: 100vw;
+		position: relative;
+	}
+
+	.company-statement {
+		padding-top: 0;
+		margin-top: 181px;
+
+		.svg-shape-1 {
+			top: 0;
+			left: 52%;
+			width: 227px;
+		}
+
+		p {
+			width: 53%;
+    		padding-top: 73px;
+			letter-spacing: 0.85px;
+    		margin: 0 auto 0 24.4%;
+		}
+	}
+
+	.group-1 {
+		margin-top: -255px;
+	}
+}
+
+/*********************
+HOME Projects Modules
+**********************/
+.projects-1 {
+	.mesh-bg {
+	    width: 688px;
+	    height: 510px;
+	    left: 12.1%;
+	}
+
+	.carousel {
+    	padding-top: 89px;
+	}
+}
+
+.projects-2 {
+	.carousel {
+    	padding-top: 53px;
+	}
+}
+
+/*********************
+Tiles
+- Homepage
+**********************/
+.tile {
+	.tile-img {
+		margin-bottom: rem(28);
+	}
+
+	.tile-desc {
+		display: inline-block;
+		color: #7D7D7D;
+	}
+}
+/*********************
+Footer
+**********************/
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    .col {
+    	width: calc(100%/3);
+    }
+
+    .down-carrot {
+		width: 19px;
+		height: 15px;
+	    display: block;
+	    margin: 0 auto;
+    }
+
+	.col:first-child {
+		order: 2;
+
+		a {
+			border: none;
+			font-size: rem(18);
+			padding: 17px 20px 11px;
+		}
+	}
+
+	.col:nth-child(2) {
+		order: 1;
+		text-align: left;
+
+		.assembly-logo-icon {
+			width: 29px;
+			margin: 0 0 17px 0;
+		}
+	}
+
+	.col:nth-child(3) {
+		order: 3;
+		text-align: right;
+	}
+
+	.copyright {
+		line-height: 13px;
+		font-size: 10px;
+	}
+
+	.social {
+		padding-top: 23px;
+	}
 }
