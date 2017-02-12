@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-10 03:15 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 03:59 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9960,6 +9960,26 @@ you can add resource intensive styles.
   .home .group-1 {
     margin-top: -255px;
   }
+  .home .group-2 {
+    margin-top: -38px;
+  }
+  .home .group-3 {
+    padding-top: 0;
+    margin-top: -417px;
+  }
+  .home .group-3 .video {
+    margin-top: 470px;
+  }
+  .home .years-experience .years-experience-numbers {
+    pointer-events: none;
+    font-size: 24.625rem;
+    line-height: .84;
+    right: 160px;
+    top: -187px;
+  }
+  .home .years-experience .years-experience-text {
+    font-size: 1rem;
+  }
 
   /*********************
   HOME Projects Modules
@@ -9975,6 +9995,36 @@ you can add resource intensive styles.
 
   .projects-2 .carousel {
     padding-top: 53px;
+  }
+
+  .home .services .carousel {
+    padding-top: 0;
+  }
+
+  .home .approach {
+    padding-top: 60px;
+  }
+
+  .home .employees {
+    margin-top: 0;
+  }
+  .home .employees .nav-arrow-right {
+    margin-left: 52%;
+    right: auto;
+  }
+  .home .employees .carousel {
+    padding-top: 0;
+  }
+  .home .employees .carousel .slide img {
+    transform: translate3d(0, 0, 0);
+  }
+  .home .employees .stripes-bg {
+    width: 826px;
+    top: 0;
+    left: -265px;
+  }
+  .home .employees .employee-carousel-wrapper {
+    margin-top: 418px;
   }
 
   /*********************

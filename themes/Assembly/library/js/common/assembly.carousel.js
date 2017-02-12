@@ -10,7 +10,7 @@ var assembly = assembly || {};
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides, slickCarousel, employeeCarousel, hasVariableWidth = false, dots = false, slidesToShow = 1.2;
+			var $slides, start, position, $carousel, numSlides, slickCarousel, $employeeCarousel, hasVariableWidth = false, dots = false, slidesToShow = 1.2;
 
 			$('.carousel-module').not('.employee-carousel, .our-approach, .add-contact-photo').each(function(i, module){
 				if($(this).is('.our-approach')){
@@ -111,7 +111,18 @@ var assembly = assembly || {};
 				}
 			});
 
-			employeeCarousel = $('.employee-carousel').slick({
+			$employeeCarousel = $('.employee-carousel');
+
+			$employeeCarousel.on('init', function(slick){
+
+				$curCarousel = $(this);
+
+				$curCarousel.closest('.carousel-inner').find('.nav-arrow-right').on('click', function(){
+					$(this).siblings('.carousel').slick('slickNext');
+				});
+			});
+
+			$employeeCarousel.slick({
 				slidesToShow: 1,
 				initialSlide: 0,
 				infinite: false,
@@ -122,11 +133,11 @@ var assembly = assembly || {};
 				variableWidth: hasVariableWidth
 			});
 
-			employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			$employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
 				$('.years-experience-numbers').addClass('counting');
 			});
 
-			employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
+			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
 				var year1 = $('.years-experience-numbers .num').eq(0),
 					year2 = $('.years-experience-numbers .num').eq(1),
 					years = $('.years-experience-numbers .num').html(),

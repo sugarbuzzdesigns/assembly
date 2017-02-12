@@ -166,43 +166,43 @@
 				<div class="stripes-bg no-mobile">
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/backgrounds/diagonal-lines-bg-lrg.png" alt="">
 				</div>
-				<div class="years-experience">
-					<div class="years-experience-numbers">
-						<span class="num">2</span>
-						<span class="num">6</span>
-					</div>
-					<div class="years-experience-text">
-						<span>Years Experience</span>
-					</div>
-				</div>
-				<div class="tile carousel-wrapper">
-					<div class="carousel-inner">
-						<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
-							<div class="slide employee" data-years-experience="26">
-								<div class="tile-inner">
-									<div class="tile-img">
-										<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
-									</div>
-									<div class="tile-info">
-										<span class="tile-title">GORDON MACHIELSEN</span>
-										<span class="tile-desc">Lorem ipsume</span>
-									</div>
-								</div>
-							</div>
-							<div class="slide employee" data-years-experience="09">
-								<div class="tile-inner">
-									<div class="tile-img">
-										<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
-									</div>
-									<div class="tile-info">
-										<span class="tile-title">GORDON MACHIELSEN</span>
-										<span class="tile-desc">Lorem ipsume</span>
-									</div>
-									<!-- <button type="button">about</button> -->
-								</div>
-							</div>
+				<div class="employee-carousel-wrapper">
+					<div class="years-experience">
+						<div class="years-experience-numbers">
+							<span class="num">2</span>
+							<span class="num">6</span>
 						</div>
-						<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
+						<div class="years-experience-text">
+							<span>Years Experience</span>
+						</div>
+					</div>
+					<div class="tile carousel-wrapper">
+						<div class="carousel-inner">
+							<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
+								<div class="slide employee" data-years-experience="26">
+									<div class="tile-inner">
+										<div class="tile-img">
+											<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+										</div>
+										<div class="tile-info">
+											<span class="tile-title">GORDON MACHIELSEN</span>
+										</div>
+									</div>
+								</div>
+								<div class="slide employee" data-years-experience="09">
+									<div class="tile-inner">
+										<div class="tile-img">
+											<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+										</div>
+										<div class="tile-info">
+											<span class="tile-title">GORDON MACHIELSEN</span>
+										</div>
+										<!-- <button type="button">about</button> -->
+									</div>
+								</div>
+							</div>
+							<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
+						</div>
 					</div>
 				</div>
 			</div>

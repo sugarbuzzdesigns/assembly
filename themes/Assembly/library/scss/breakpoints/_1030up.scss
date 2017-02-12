@@ -89,6 +89,33 @@ Home Page
 	.group-1 {
 		margin-top: -255px;
 	}
+
+	.group-2 {
+    	margin-top: -38px;
+	}
+
+	.group-3 {
+	    padding-top: 0;
+	    margin-top: -417px;
+
+	    .video {
+	    	margin-top: 470px;
+	    }
+	}
+
+	.years-experience {
+		.years-experience-numbers {
+			pointer-events: none;
+			font-size: rem(394);
+			line-height: .84;
+			right: 160px;
+			top: -187px;
+		}
+
+		.years-experience-text {
+			font-size: rem(16);
+		}
+	}
 }
 
 /*********************
@@ -110,6 +137,43 @@ HOME Projects Modules
 	.carousel {
     	padding-top: 53px;
 	}
+}
+
+.home .services {
+	.carousel {
+		padding-top: 0;
+	}
+}
+
+.home .approach {
+	padding-top: 60px;
+}
+
+.home .employees {
+	margin-top: 0;
+
+	.nav-arrow-right {
+		margin-left: 52%;
+		right: auto;
+	}
+
+	.carousel {
+		padding-top: 0;
+
+		.slide img {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+    .stripes-bg {
+    	width: 826px;
+	    top: 0;
+	    left: -265px;
+    }
+
+    .employee-carousel-wrapper {
+    	margin-top: 418px;
+    }
 }
 
 /*********************
