@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 03:59 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 04:23 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -535,6 +535,13 @@ Global Icons
 }
 
 /*********************
+SOCIAL SPRITE
+*********************/
+.social li {
+  margin-right: 13px;
+}
+
+/*********************
 Home Page
 **********************/
 .home .landing {
@@ -580,6 +587,30 @@ Home Page
 }
 .home .group-3 .video {
   margin-top: 470px;
+}
+.home .group-3 .video .video_1-dimensions.vjs-fluid {
+  padding-top: 76.25%;
+}
+.home .group-4 {
+  margin-top: 112px;
+  padding-bottom: 168px;
+}
+.home .group-4 .projects-4 {
+  margin-left: 0;
+  width: 38%;
+}
+.home .group-4 .projects-4 .mesh-bg.dark {
+  width: 448px;
+  left: 8px;
+  right: auto;
+  height: 312px;
+}
+.home .group-4 .projects-4 .carousel-wrapper {
+  padding-left: 8.14%;
+}
+.home .group-4 .projects-5 {
+  padding: 0;
+  margin-top: -28px;
 }
 .home .years-experience .years-experience-numbers {
   pointer-events: none;
@@ -654,6 +685,7 @@ Tiles
 Footer
 **********************/
 .footer {
+  padding: 34px 3% 8px;
   display: flex;
   justify-content: space-between;
 }
