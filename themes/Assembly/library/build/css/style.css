@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-13 09:53 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-13 10:07 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7621,7 +7621,7 @@ VIDEO CONTENT
 **********************/
 .video.module {
   margin-top: 46px;
-  margin-bottom: 36px;
+  margin-bottom: 66px;
 }
 
 .video-wrapper {
@@ -8025,8 +8025,8 @@ Years Experience Module
 }
 .years-experience .years-experience-numbers {
   position: absolute;
-  top: 0;
-  margin-right: 16%;
+  top: -25px;
+  margin-right: 22.9%;
   font-family: 'pangrambold';
   font-size: 10.3125rem;
   line-height: 1;
@@ -8050,8 +8050,8 @@ Years Experience Module
   color: #d3d3d3;
   text-transform: uppercase;
   position: absolute;
-  top: 183px;
-  right: -19px;
+  top: 200px;
+  right: -13px;
   transform: rotate(-90deg);
   z-index: 1;
   transition: transform 0.5s;
@@ -8158,7 +8158,7 @@ PROJECTS SECTION
 }
 
 .projects-5 {
-  padding-bottom: 58px;
+  padding-bottom: 88px;
 }
 
 /*********************
@@ -8220,13 +8220,13 @@ EMPLOYEES
   background-image: url(../../images/backgrounds/diagonal-lines-bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 0 30px;
+  background-position: 0 13px;
   overflow: hidden;
   padding-bottom: 16%;
   position: relative;
 }
 .employees .carousel {
-  padding-top: 128px;
+  padding-top: 143px;
 }
 .employees .carousel .slick-slide {
   transform: translate3d(0, -60px, 0);
@@ -9415,7 +9415,7 @@ PLUS SIZE (MOBILE) Iphone #+
   **********************/
   .employees {
     overflow: auto;
-    padding-bottom: 14%;
+    padding-bottom: 29%;
   }
   .employees .diagonals {
     background: url(../../images/backgrounds/diagonal-lines-bg.png);
