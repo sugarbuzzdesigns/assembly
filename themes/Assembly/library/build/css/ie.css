@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 04:23 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-13 09:53 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -515,7 +515,7 @@ Main Menu BTN
 Generic Section Styles
 **********************/
 .section-header {
-  padding: 78px 0 0 87px;
+  padding: 78px 0 5px 87px;
 }
 
 /*********************
@@ -679,6 +679,72 @@ Tiles
 .tile .tile-desc {
   display: inline-block;
   color: #7D7D7D;
+}
+
+/*********************
+CASE STUDIES Page
+**********************/
+.page-case-studies .landing .case-study-category {
+  width: 50vw;
+  height: 100vh;
+  float: left;
+  position: relative;
+  font-family: 'pangrambold';
+  font-size: rem(47);
+}
+.page-case-studies .landing .landing-inner {
+  overflow: hidden;
+  transition: height 0.7s;
+  height: 100vh;
+}
+.page-case-studies .landing h3 {
+  overflow: visible;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  top: 43%;
+  left: 9.661%;
+  letter-spacing: -4px;
+  z-index: 3;
+  color: #000;
+  transition: color .7s;
+}
+.page-case-studies .landing h3 span {
+  display: block;
+  float: left;
+}
+.page-case-studies .landing .hover-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
+  background-size: cover;
+  transition: transform 0.7s;
+}
+.page-case-studies .landing .default-content {
+  width: 100%;
+  height: 100%;
+}
+.page-case-studies .landing .default-content .inner {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+}
+.page-case-studies .landing .modular .default-content .inner {
+  background-image: url(../../images/case-study-modular-bg.jpg);
+}
+.page-case-studies .landing .custom .default-content .inner {
+  background-image: url(../../images/case-study-custom-bg.jpg);
+}
+.page-case-studies .landing .square {
+  width: 55.56%;
+  height: 55.7%;
+  top: 25%;
+  left: 33.091%;
 }
 
 /*********************

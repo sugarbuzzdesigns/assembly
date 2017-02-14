@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 04:23 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-13 09:53 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7819,7 +7819,7 @@ HEADER STYLES
 }
 
 .section-header {
-  padding: 6% 5% 0;
+  padding: 6% 5% 5px;
   overflow: auto;
 }
 
@@ -7959,6 +7959,10 @@ HEADER STYLES
   width: 179px;
 }
 
+header.light #mask-2, header.light .menu-mask, header.light #menu-path-1 {
+  stroke: #fff;
+}
+
 header.dark .main-menu-btn span {
   background-color: #000;
   -webkit-transition: background-color .5s ease-in-out;
@@ -7966,7 +7970,8 @@ header.dark .main-menu-btn span {
   -o-transition: background-color .5s ease-in-out;
   transition: background-color .5s ease-in-out;
 }
-header.dark #mask-2 {
+header.dark #mask-2, header.dark .menu-mask,
+header.dark #menu-path-1 {
   fill: #000;
 }
 header.dark svg path,
@@ -8305,6 +8310,9 @@ FOOTER STYLES
   padding: 34px 3% 10%;
   text-align: center;
 }
+.footer .down-carrot {
+  display: none;
+}
 .footer a[href*="contact"] {
   color: #fff;
   border: solid #d7d8da 1px;
@@ -8625,47 +8633,58 @@ CASE STUDIES Page
   color: #fff;
 }
 .page-case-studies .landing [data-letter] {
-  transition: transform 0.7s;
   transform: translate3d(0, 0, 0);
 }
+@keyframes modularM {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  51% {
+    transform: translate3d(40px, -60px, 0);
+  }
+  100% {
+    transform: translate3d(40px, -60px, 0);
+  }
+}
 .page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
-  transform: translate3d(40px, -60px, 0);
+  animation-name: modularM;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular:hover [data-letter="o"] {
-  transform: translate3d(50px, -60px, 0);
+@keyframes customM {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50px, 106px, 0);
+  }
 }
-.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular:hover [data-letter="d"] {
-  transform: translate3d(60px, -60px, 0);
-}
-.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular:hover [data-letter="u"] {
-  transform: translate3d(-92px, 20px, 0);
-}
-.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular:hover [data-letter="l"] {
-  transform: translate3d(-72px, 20px, 0);
-}
-.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular:hover [data-letter="a"] {
-  transform: translate3d(-90px, 94px, 0);
-}
-.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular:hover [data-letter="r"] {
-  transform: translate3d(-70px, 94px, 0);
-}
-.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom:hover [data-letter="c"] {
-  transform: translate3d(0, -60px, 0);
+@keyframes customU {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  2% {
+    transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    transform: translate3d(0, -30px, 0);
+  }
 }
 .page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom:hover [data-letter="u"] {
-  transform: translate3d(20px, -60px, 0);
-}
-.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom:hover [data-letter="s"] {
-  transform: translate3d(-17px, 20px, 0);
-}
-.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom:hover [data-letter="t"] {
-  transform: translate3d(20px, 20px, 0);
-}
-.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom:hover [data-letter="o"] {
-  transform: translate3d(-122px, 110px, 0);
+  animation-name: customU;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
-  transform: translate3d(-50px, 106px, 0);
+  animation-name: customM;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .page-case-studies .landing .default-content {
   background-size: cover;
@@ -9905,7 +9924,7 @@ you can add resource intensive styles.
   Generic Section Styles
   **********************/
   .section-header {
-    padding: 78px 0 0 87px;
+    padding: 78px 0 5px 87px;
   }
 
   /*********************
@@ -10069,6 +10088,72 @@ you can add resource intensive styles.
   .tile .tile-desc {
     display: inline-block;
     color: #7D7D7D;
+  }
+
+  /*********************
+  CASE STUDIES Page
+  **********************/
+  .page-case-studies .landing .case-study-category {
+    width: 50vw;
+    height: 100vh;
+    float: left;
+    position: relative;
+    font-family: 'pangrambold';
+    font-size: 2.9375rem;
+  }
+  .page-case-studies .landing .landing-inner {
+    overflow: hidden;
+    transition: height 0.7s;
+    height: 100vh;
+  }
+  .page-case-studies .landing h3 {
+    overflow: visible;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    top: 43%;
+    left: 9.661%;
+    letter-spacing: -4px;
+    z-index: 3;
+    color: #000;
+    transition: color .7s;
+  }
+  .page-case-studies .landing h3 span {
+    display: block;
+    float: left;
+  }
+  .page-case-studies .landing .hover-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
+    background-size: cover;
+    transition: transform 0.7s;
+  }
+  .page-case-studies .landing .default-content {
+    width: 100%;
+    height: 100%;
+  }
+  .page-case-studies .landing .default-content .inner {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+  }
+  .page-case-studies .landing .modular .default-content .inner {
+    background-image: url(../../images/case-study-modular-bg.jpg);
+  }
+  .page-case-studies .landing .custom .default-content .inner {
+    background-image: url(../../images/case-study-custom-bg.jpg);
+  }
+  .page-case-studies .landing .square {
+    width: 55.56%;
+    height: 55.7%;
+    top: 25%;
+    left: 33.091%;
   }
 
   /*********************

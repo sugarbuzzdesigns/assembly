@@ -5,6 +5,14 @@
 	<div class="landing-inner">
 		<div class="modular case-study-category">
 			<div class="hover-content">
+				<header class="light section-header">
+				    <h2 class="logo">
+				        <a href="/">
+				            <!-- logo SVG file -->
+				            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+				        </a>
+				    </h2>
+				</header>
 				<h3>
 					<span data-letter="m">m</span>
 					<span data-letter="o">o</span>
@@ -33,6 +41,9 @@
 		</div>
 		<div class="custom case-study-category">
 			<div class="hover-content">
+				<header class="light section-header">
+				    <?php include __DIR__ . '/includes/menu-btn.php'; ?>
+				</header>
 				<h3>
 					<span data-letter="c">c</span>
 					<span data-letter="u">u</span>

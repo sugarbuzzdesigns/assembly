@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 03:57 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 05:25 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -151,6 +151,19 @@ var $ = jQuery;
 
 	$(function(){
 		assembly.util.init();
+
+		//create a TimelineLite instance
+		var tl = new TimelineLite({
+			paused: true
+		});
+
+		var $letterN = $('[data-letter="m"]');
+
+		//append a to() tween
+		tl.to($letterN, 1, {
+			width:"50%"
+		});
+
 	});
 })(jQuery);
 /*! Source: library/js/common/assembly.navigation.js*/
