@@ -14,7 +14,7 @@
 			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 			<input type="text" name="" value="" placeholder="type here">
 		</label>
-		<div class="error-message">Please Fill our the field.</div>
+		<div class="error-message">Please Fill out the field.</div>
 		<button class="dark" type="button">next</button>
 	</div>
 </form>
