@@ -18,7 +18,8 @@
 		</div>
 	</div>
 	<div class="video">
-		<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2.jpg" alt="">
+		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2.jpg" alt="">
+		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2-lrg.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 	</div>
 	<div class="projects module carousel-module">

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-12 05:25 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-16 07:46 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -16,6 +16,7 @@ var assembly = assembly || {};
 			this.$selectFilter = $('.select-filter');
 			this.$toggleFilter = $('.toggle-filter');
 			this.$toggleFilterBtns = $('.toggle-filter a');
+			this.$caseStudyContainers = $('.case-study-container');
 			this.$currentCaseStudyContainer = $('.case-study-container.show');
 			this.currentFilerStatus = {
 				type: 'custom',
@@ -25,6 +26,7 @@ var assembly = assembly || {};
 			this.bindEvents();
 
 			this.setContainerHeights();
+			this.addClassTileCount();
 		},
 
 		initSelect2: function(){
@@ -92,6 +94,14 @@ var assembly = assembly || {};
 			this.$mainContent.data('initialheight', this.mainContentHeight);
 			this.$mainContent.css({
 				height: 0
+			});
+		},
+
+		addClassTileCount: function(){
+			this.$caseStudyContainers.each(function(i, caseStudyContainers){
+				$(caseStudyContainers).find('.tile').each(function(tileIndex, tile){
+					$(tile).addClass('tile-' + (tileIndex+1));
+				})
 			});
 		},
 

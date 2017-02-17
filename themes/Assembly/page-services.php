@@ -1,6 +1,15 @@
 <?php get_header(); ?>
 <?php include 'includes/page-data/service-page-data.php'; ?>
 <?php include 'includes/header-dark-interior.php'; ?>
+	<nav class="filter-menu no-mobile">
+		<div class="active" value="all"><a href="#">All</a></div>
+		<div data-value="visualisation"><a href="#">Visualisation</a></div>
+		<div data-value="permitting"><a href="#">Permitting</a></div>
+		<div data-value="team-player"><a href="#">Team Player</a></div>
+		<div data-value="engineering"><a href="#">Engineering</a></div>
+		<div data-value="interior-buildouts"><a href="#">Interior Buildouts</a></div>
+		<div data-value="imagine-experience"><a href="#">Imagine Experience</a></div>
+	</nav>
 	<div class="mesh-bg dark wide"></div>
 	<h1>services</h1>
 	<section>
@@ -41,7 +50,7 @@
 				</div>
 				<div class="tile-info">
 					<span class="tile-title">Visualisation</span>
-					<span class="tile-desc">description</span>
+					<span class="tile-desc">See it to believe it.</span>
 				</div>
 			</div>
 		</div>
@@ -51,8 +60,8 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-mobile.jpg" alt="permitting">
 				</div>
 				<div class="tile-info">
-					<span class="tile-title">Visualisation</span>
-					<span class="tile-desc">description</span>
+					<span class="tile-title">Permitting</span>
+					<span class="tile-desc">A remedy to red tape.</span>
 				</div>
 			</div>
 		</div>
@@ -112,6 +121,22 @@
 		<?php include 'includes/content/services/imagine-experience.php'; ?>
 	</section>
  	<a href="/case-studies" title="">
-		<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
+ 		<?php if(is_desktop()) { ?>
+ 			<?php include 'library/images/svg/view-case-studies-button-desktop.svg'; ?>
+ 		<?php } else { ?>
+			<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
+		<?php } ?>
 	</a>
+	<div class="no-mobile to-top-wrap">
+		<div class="to-top">
+			<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
+				<g fill="none" fill-rule="evenodd">
+					<text font-family="Gridnik" font-size="12.9199" fill="#000" transform="translate(0 8)">
+						<tspan x=".8313" y=".9988">TOP</tspan>
+					</text>
+					<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>
+				</g>
+			</svg>
+		</div>
+	</div>
 <?php get_footer(); ?>

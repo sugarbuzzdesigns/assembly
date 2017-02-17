@@ -5,6 +5,13 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
+.mobile-only {
+	display: none;
+}
+
+.desktop {
+	display: block;
+}
 
 /*********************
 MAIN LOGO
@@ -25,7 +32,7 @@ Main Menu BTN
 Generic Section Styles
 **********************/
 .section-header {
-    padding: 78px 0 5px 87px;
+    padding: 78px 0 5px calc(calc(87%/1440)*100);
 }
 
 /*********************
@@ -51,6 +58,65 @@ SOCIAL SPRITE
     li {
     	margin-right: 13px;
     }
+}
+
+/*********************
+h1, h2, h3...
+**********************/
+h1 {
+	font-size: rem(72);
+	line-height: 1.44;
+}
+
+/*********************
+Select Box Overrides
+**********************/
+.select-filter,
+.select2 {
+	display: none;
+}
+
+.filter-wrap {
+	width: 273px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 17% 0 0 0;
+	z-index: 4;
+	// opacity: 0;
+
+	&.show {
+		opacity: 1;
+	}
+}
+
+.filter-menu {
+	display: block;
+	font-family: 'pangrambold';
+	font-size: rem(24);
+	color: #bebebe;
+	text-transform: lowercase;
+	letter-spacing: 0.7px;
+	margin-bottom: 32px;
+	background: rgba(255,255,255,0.8);
+
+	div {
+		margin-bottom: 5px;
+
+		a {
+			color: #bebebe;
+			display: inline-block;
+			line-height: 1.2;
+			text-decoration: none;
+		}
+
+		&.active {
+			a {
+				color: #000;
+				border-bottom: solid 2px #000;
+			}
+		}
+	}
 }
 
 /*********************
@@ -309,6 +375,297 @@ CASE STUDIES Page
 			left: 33.091%;
 		}
 	}
+
+	.content {
+		// position: absolute;
+
+		header {
+			padding-bottom: 20.77%;
+		}
+
+		h2 {
+			font-size: rem(72);
+			line-height: 1.043;
+		    margin: 0;
+		    padding-top: 185px;
+		    padding-left: 121px;
+		    width: 100%;
+		}
+
+		.case-study-desc {
+			width: 16.53%;
+			margin: 0 auto 102px 9.03%;
+		}
+
+		blockquote {
+		    width: 22.64%;
+		    float: right;
+		    clear: right;
+		    margin: 72px 26.74% 0 0;
+
+			strong {
+				font-family: 'gridnikregular';
+				font-size: rem(13);
+				line-height: 2.77;
+				text-transform: capitalize;
+				font-weight: normal;
+				color: #221F20;
+				letter-spacing: 1px;
+			}
+
+			p {
+				font-size: rem(11);
+				margin-top: 0;
+				line-height: 1.81;
+			}
+		}
+	}
+
+	.tile {
+		width: 34.58%;
+		margin-bottom: 18.81%;
+
+		.tile-img {
+			img {
+				width: 100%;
+			}
+		}
+
+		&.tile-2,
+		&.tile-3,
+		&.tile-6 {
+			width: 22.43%;
+		}
+
+		&.tile-4 {
+			width: 25.69%;
+		}
+
+		&.tile-5,
+		&.tile-7 {
+			width: 28.54%;
+		}
+
+		&.tile-2 {
+		    margin: 155px 15.07% 0 0;
+		    float: right;
+		}
+
+		&.tile-3 {
+			margin: -27px 0 0 9.03%;
+			clear: left;
+		}
+
+		&.tile-4 {
+			float: right;
+			margin: 2.57% 23.68% 0 0;
+		}
+
+		&.tile-5 {
+		    margin: 0 0 0 14.93%;
+    		padding-top: 27%;
+		    float: left;
+		}
+
+		&.tile-6 {
+		    float: right;
+		    clear: both;
+		    margin: -8.5% 9.028% 0 0;
+		}
+
+		&.tile-7 {
+		    margin: 14.4% 0 0 26.88%;
+		}
+	}
+}
+
+/*********************
+ABOUT US Page
+**********************/
+.page-about-us {
+	.landing {
+    	padding-top: 137px;
+
+		& + .mesh-bg {
+		    width: 44.72%;
+		    height: 578px;
+		    left: 0;
+			margin: 192px 0 0 13.75%;
+		}
+	}
+
+	h1 {
+		font-size: rem(72);
+		line-height: 1;
+    	margin: 0 0 6.7% 8.6%;
+	}
+
+	.callout {
+	    width: 23.03%;
+   		padding: 2.45% 5% 2.2% 0;
+    	margin: 0 0 4.2% 8.6%;
+	}
+
+	// about us years exp
+	.years-experience {
+	    top: 0;
+	    left: 0;
+	    float: left;
+	    display: block;
+	    width: auto;
+    	margin: -26px 0 0 4.7%;
+
+		.years-experience-numbers {
+			font-size: rem(394);
+			line-height: 0.854;
+		    position: static;
+
+		    .num {
+		    	width: auto;
+		    }
+		}
+
+		.years-experience-text {
+			font-size: rem(16);
+			color: #959595;
+		    top: 421px;
+		    left: 130px;
+		    width: 100%;
+		}
+	}
+
+	.video {
+		margin: 0 7.8% 0 auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.projects.carousel-module {
+	   	width: 23.75%;
+		margin: 87px 0 0 13.75%;
+		padding-top: 0;
+
+		.mesh-bg {
+			display: none;
+		}
+
+		.carousel {
+			padding: 0;
+		}
+
+		.tile-inner {
+			padding: 0;
+		}
+	}
+}
+
+/*********************
+SERVICES Page
+**********************/
+.page-services {
+
+	h1 {
+		font-size: rem(72);
+    	margin: 122px 0 0 8.43%;
+		width: auto;
+	}
+
+	.mesh-bg {
+		top: 0;
+		width: 53.96%;
+		height: 316px;
+		margin-top: 15%;
+		margin-left: 13.194%;
+	}
+
+	.filter-menu {
+		position: absolute;
+		right: 0;
+		top: 168px;
+		margin-right: 10.42%;
+
+		div {
+			a {
+				letter-spacing: 0.7px;
+			}
+		}
+	}
+
+	.tile {
+		width: 28.54%;
+
+		.tile-inner {
+			width: 100%;
+			margin: 0;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&.visualisation {
+			margin-left: 15.07%;
+    		margin-top: 94px;
+    		margin-bottom: 129px;
+    		float: left;
+		}
+
+		&.permitting {
+			width: 22.64%;
+			float: right;
+    		margin: 288px 14.86% 0 0;
+		}
+
+		&.engineering {
+    		width: 48.4%;
+		    clear: left;
+		    float: left;
+		    margin-bottom: 0;
+		}
+
+		&.interior-buildouts {
+			float: right;
+			width: 32.85%;
+			margin-right: 10.63%;
+			margin-top: 124px;
+			margin-bottom: 0;
+			clear: right;
+		}
+
+		&.team-player {
+			float: right;
+			clear: both;
+			margin-right: 9.38%;
+			margin-top: 165px;
+			margin-bottom: 0;
+		}
+
+		&.imagine-experience {
+			float: left;
+			margin-left: 15.07%;
+			margin-bottom: 148px;
+		}
+	}
+
+	a[href="/case-studies"] {
+		width: 263px;
+		margin: 0;
+		clear: both;
+		float: right;
+		margin-right: 5.97%;
+    	margin-bottom: 16px;
+	}
+}
+
+/*********************
+TO TOP
+**********************/
+.to-top-wrap {
+    display: block;
+    background: #fff;
+    clear: both;
 }
 
 /*********************
