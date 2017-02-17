@@ -664,20 +664,15 @@ SERVICES Page
 	}
 
 	.content.dynamic {
-		clear: both;
-
 		.tile {
 			.tile-info {
     			margin-top: 25px;
 			}
 
 			.tile-img {
-				margin-bottom: 0;
 			}
 
 			img {
-				width: 100%;
-				margin: 0;
 			}
 		}
 
@@ -731,6 +726,40 @@ SERVICES Page
 				    height: 355px;
 				    top: auto;
 				}
+			}
+		}
+
+		.permitting-wrapper {
+			.intro-tile {
+				width: 34.514%;
+				margin-left: 3.056%;
+
+				.tile-inner {
+					margin: 0;
+					width: 100%;
+				}
+			}
+
+			.service-desc {
+				margin-top: 171px;
+			}
+
+			.tile-2 {
+				width: 22.64%;
+				margin-right: 20.97%;
+
+				.mesh-bg {
+					width: 340px;
+					height: 320px;
+    				top: 113px;
+					margin-left: 35.194%;
+				}
+			}
+
+			.tile-3 {
+				width: 22.64%;
+				margin-left: 21.04%;
+				margin-top: 167px;
 			}
 		}
 	}

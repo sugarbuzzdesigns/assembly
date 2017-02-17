@@ -116,13 +116,11 @@
 
 			$(function(){
 				if(service){
-					console.log(service);
-					console.log($('[data-service="'+ service +'"]'));
 					$('.content.landing').hide();
 					$('[data-service="'+ service +'"]').show().siblings().hide();
 
 					$('.filter-menu .active').removeClass('active');
-					$('.filter-menu [data-value="visualisation"]').addClass('active');
+					$('.filter-menu [data-value="'+ service +'"]').addClass('active');
 				}
 			});
 		})(jQuery)

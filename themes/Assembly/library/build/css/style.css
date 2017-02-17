@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 03:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 05:26 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10001,6 +10001,129 @@ you can add resource intensive styles.
     width: 315px;
     top: 244px;
   }
+  .page-services .content.dynamic {
+    clear: both;
+  }
+  .page-services .content.dynamic .tile .tile-info {
+    margin-top: 25px;
+  }
+  .page-services .content.dynamic .tile .tile-img {
+    margin-bottom: 0;
+  }
+  .page-services .content.dynamic .tile img {
+    width: 100%;
+    margin: 0;
+  }
+  .page-services .content.dynamic .visualisation-wrapper {
+    width: 100%;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile {
+    width: 28.85%;
+    margin-left: 15.069%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .service-desc {
+    width: 22.92%;
+    float: left;
+    margin-left: 7.01%;
+    margin-top: 120px;
+    margin-bottom: 140px;
+    font-size: 0.6875rem;
+    line-height: 1.82;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile-2 {
+    float: right;
+    margin-right: 15.42%;
+    margin-left: 0;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile-3 {
+    width: 22.22%;
+    margin-left: 21.39%;
+    margin-top: 290px;
+    margin-bottom: 176px;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
+    top: 2px;
+    right: -88px;
+    width: 285px;
+    height: 205px;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+    width: 342px;
+    right: auto;
+    bottom: -95px;
+    height: 205px;
+    top: auto;
+  }
+  .page-services .content.dynamic {
+    clear: both;
+  }
+  .page-services .content.dynamic .tile .tile-info {
+    margin-top: 20px;
+  }
+  .page-services .content.dynamic .tile .tile-img {
+    margin-bottom: 0;
+  }
+  .page-services .content.dynamic .tile img {
+    width: 100%;
+    margin: 0;
+  }
+  .page-services .content.dynamic .individual-service .service-desc {
+    width: 22.92%;
+    float: left;
+    margin-left: 7.01%;
+    margin-top: 260px;
+    margin-bottom: 227px;
+    font-size: 0.6875rem;
+    line-height: 1.82;
+  }
+  .page-services .content.dynamic .individual-service .intro-tile {
+    float: left;
+  }
+  .page-services .content.dynamic .individual-service .tile-1 {
+    margin-bottom: 0;
+  }
+  .page-services .content.dynamic .individual-service .tile-2 {
+    float: right;
+    clear: left;
+  }
+  .page-services .content.dynamic .individual-service .tile-3 {
+    float: left;
+  }
+  .page-services .content.dynamic .visualisation-wrapper {
+    width: 100%;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile {
+    width: 28.85%;
+    margin-left: 15.069%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile-2 {
+    float: right;
+    margin-right: 15.42%;
+    margin-left: 0;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .tile-3 {
+    width: 22.22%;
+    margin-left: 21.39%;
+    margin-top: 290px;
+    margin-bottom: 176px;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
+    top: -78px;
+    right: -88px;
+    width: 355px;
+    height: 355px;
+  }
+  .page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: -175px;
+    height: 355px;
+    top: auto;
+  }
   .page-services a[href="/case-studies"] {
     width: 263px;
     margin: 0;
@@ -10568,18 +10691,8 @@ you can add resource intensive styles.
     width: 315px;
     top: 244px;
   }
-  .page-services .content.dynamic {
-    clear: both;
-  }
   .page-services .content.dynamic .tile .tile-info {
     margin-top: 25px;
-  }
-  .page-services .content.dynamic .tile .tile-img {
-    margin-bottom: 0;
-  }
-  .page-services .content.dynamic .tile img {
-    width: 100%;
-    margin: 0;
   }
   .page-services .content.dynamic .visualisation-wrapper {
     width: 100%;
@@ -10622,6 +10735,32 @@ you can add resource intensive styles.
     bottom: -175px;
     height: 355px;
     top: auto;
+  }
+  .page-services .content.dynamic .permitting-wrapper .intro-tile {
+    width: 34.514%;
+    margin-left: 3.056%;
+  }
+  .page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner {
+    margin: 0;
+    width: 100%;
+  }
+  .page-services .content.dynamic .permitting-wrapper .service-desc {
+    margin-top: 171px;
+  }
+  .page-services .content.dynamic .permitting-wrapper .tile-2 {
+    width: 22.64%;
+    margin-right: 20.97%;
+  }
+  .page-services .content.dynamic .permitting-wrapper .tile-2 .mesh-bg {
+    width: 340px;
+    height: 320px;
+    top: 113px;
+    margin-left: 35.194%;
+  }
+  .page-services .content.dynamic .permitting-wrapper .tile-3 {
+    width: 22.64%;
+    margin-left: 21.04%;
+    margin-top: 167px;
   }
   .page-services .individual-service {
     padding-top: 93px;

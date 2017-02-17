@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 02:15 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 05:16 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -29,11 +29,12 @@ var assembly = assembly || {};
 
 		countTilesAndAddClass: function(){
 			$('.content.landing').find('.tile').each(function(tileNum, tile){
-				console.log($(tile).addClass('tile-' + tileNum+1));
+				console.log($(tile).addClass('tile-' + (tileNum+1)));
 			});
 
 			$('.content.dynamic .individual-service').each(function(serviceNum, service){
 				$(service).find('.tile').each(function(serviceTileNum, tile){
+					console.log('tile-' + (serviceTileNum+1));
 					console.log($(tile).addClass('tile-' + (serviceTileNum+1)));
 				});
 			});
