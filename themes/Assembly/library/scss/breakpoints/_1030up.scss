@@ -632,6 +632,13 @@ SERVICES Page
 			margin-top: 124px;
 			margin-bottom: 0;
 			clear: right;
+
+			.mesh-bg {
+				top: -168px;
+    			right: -107px;
+    			width: 335px;
+    			height: 314px;
+			}
 		}
 
 		&.team-player {
@@ -646,6 +653,13 @@ SERVICES Page
 			float: left;
 			margin-left: 15.07%;
 			margin-bottom: 148px;
+
+			.mesh-bg {
+			    left: -96px;
+			    height: 534px;
+			    width: 315px;
+			    top: 244px;
+			}
 		}
 	}
 

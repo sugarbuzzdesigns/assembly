@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-16 11:31 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-16 11:47 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10449,6 +10449,12 @@ you can add resource intensive styles.
     margin-bottom: 0;
     clear: right;
   }
+  .page-services .tile.interior-buildouts .mesh-bg {
+    top: -168px;
+    right: -107px;
+    width: 335px;
+    height: 314px;
+  }
   .page-services .tile.team-player {
     float: right;
     clear: both;
@@ -10460,6 +10466,12 @@ you can add resource intensive styles.
     float: left;
     margin-left: 15.07%;
     margin-bottom: 148px;
+  }
+  .page-services .tile.imagine-experience .mesh-bg {
+    left: -96px;
+    height: 534px;
+    width: 315px;
+    top: 244px;
   }
   .page-services a[href="/case-studies"] {
     width: 263px;
