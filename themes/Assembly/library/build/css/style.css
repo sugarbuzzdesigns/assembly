@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-16 11:47 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 11:48 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -1063,18 +1063,10 @@ select,
 textarea,
 .field {
   display: block;
-  height: 40px;
   line-height: 1em;
-  padding: 0 12px;
-  margin-bottom: 14px;
-  font-size: 1em;
-  color: #7d7d7d;
-  border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 0;
-  width: 100%;
-  max-width: 400px;
+  border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #eaedf2;
   -webkit-transition: background-color 0.24s ease-in-out;
@@ -1113,7 +1105,6 @@ textarea:focus,
 textarea:active,
 .field:focus,
 .field:active {
-  background-color: #f7f8fa;
   outline: none;
 }
 input[type="text"].error, input[type="text"].is-invalid,
@@ -7962,6 +7953,9 @@ HEADER STYLES
 header.light #mask-2, header.light .menu-mask, header.light #menu-path-1 {
   stroke: #fff;
 }
+header.light .menu-letter {
+  fill: #fff;
+}
 
 header.dark .main-menu-btn span {
   background-color: #000;
@@ -8449,26 +8443,26 @@ CONTACT
 }
 .page-contact form ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #4e4e4e;
+  color: #282828;
 }
 .page-contact form ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #4e4e4e;
+  color: #282828;
 }
 .page-contact form :-ms-input-placeholder {
   /* IE 10+ */
-  color: #4e4e4e;
+  color: #282828;
 }
 .page-contact form :-moz-placeholder {
   /* Firefox 18- */
-  color: #4e4e4e;
+  color: #282828;
 }
 .page-contact form input {
   background-color: transparent;
   font-family: 'pangrambold';
   padding: 0;
   font-size: 1.3125rem;
-  color: #4e4e4e;
+  color: #282828;
   border-bottom: solid 1px #8f8f8f;
 }
 .page-contact form input:focus, .page-contact form input:active {
@@ -8520,6 +8514,15 @@ CONTACT
 .page-contact .add-photo .open-add-images {
   background-size: 100%;
   background-position: center center;
+}
+.page-contact .contact-info {
+  background: #fff;
+}
+.page-contact .contact-info a, .page-contact .contact-info span {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.92px;
 }
 .page-contact .footer {
   padding: 14px 3% 10%;
@@ -9711,7 +9714,7 @@ you can add resource intensive styles.
   .main-menu-btn svg {
     display: block;
   }
-  .main-menu-btn #menu-rectangle {
+  .main-menu-btn .menu-rectangle {
     opacity: 0;
     transition: opacity 0.5s 1s;
   }
@@ -9725,7 +9728,7 @@ you can add resource intensive styles.
   .main-menu-btn .letter-u {
     transform: translate3d(9px, -34px, 0);
   }
-  .main-menu-btn.animate #menu-rectangle {
+  .main-menu-btn.animate .menu-rectangle {
     opacity: 1;
   }
   .main-menu-btn.animate .menu-letter {
@@ -9913,6 +9916,98 @@ you can add resource intensive styles.
     float: left;
     width: 17.1%;
     margin-left: 9.03%;
+  }
+
+  /*********************
+  SERVICES Page
+  **********************/
+  .page-services h1 {
+    font-size: 4.5rem;
+    margin: 122px 0 0 8.43%;
+    width: auto;
+  }
+  .page-services .mesh-bg {
+    top: 0;
+    width: 53.96%;
+    height: 316px;
+    margin-top: 15%;
+    margin-left: 13.194%;
+  }
+  .page-services .filter-menu {
+    position: absolute;
+    right: 0;
+    top: 168px;
+    margin-right: 10.42%;
+  }
+  .page-services .filter-menu div a {
+    letter-spacing: 0.7px;
+  }
+  .page-services .tile {
+    width: 28.54%;
+  }
+  .page-services .tile .tile-inner {
+    width: 100%;
+    margin: 0;
+  }
+  .page-services .tile .tile-inner img {
+    width: 100%;
+  }
+  .page-services .tile.visualisation {
+    margin-left: 15.07%;
+    margin-top: 94px;
+    margin-bottom: 129px;
+    float: left;
+  }
+  .page-services .tile.permitting {
+    width: 22.64%;
+    float: right;
+    margin: 288px 14.86% 0 0;
+  }
+  .page-services .tile.engineering {
+    width: 48.4%;
+    clear: left;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .tile.interior-buildouts {
+    float: right;
+    width: 32.85%;
+    margin-right: 10.63%;
+    margin-top: 124px;
+    margin-bottom: 0;
+    clear: right;
+  }
+  .page-services .tile.interior-buildouts .mesh-bg {
+    top: -168px;
+    right: -107px;
+    width: 335px;
+    height: 314px;
+  }
+  .page-services .tile.team-player {
+    float: right;
+    clear: both;
+    margin-right: 9.38%;
+    margin-top: 165px;
+    margin-bottom: 0;
+  }
+  .page-services .tile.imagine-experience {
+    float: left;
+    margin-left: 15.07%;
+    margin-bottom: 148px;
+  }
+  .page-services .tile.imagine-experience .mesh-bg {
+    left: -96px;
+    height: 534px;
+    width: 315px;
+    top: 244px;
+  }
+  .page-services a[href="/case-studies"] {
+    width: 263px;
+    margin: 0;
+    clear: both;
+    float: right;
+    margin-right: 5.97%;
+    margin-bottom: 16px;
   }
 
   /*********************
@@ -10480,6 +10575,109 @@ you can add resource intensive styles.
     float: right;
     margin-right: 5.97%;
     margin-bottom: 16px;
+  }
+
+  /*********************
+  CONTACT
+  **********************/
+  .page-contact form {
+    padding-top: 79px;
+    width: 81.81%;
+    margin: 0 auto 30px calc(calc(130%/1440) *100);
+  }
+  .page-contact form .pager {
+    margin-top: 22px;
+    margin-bottom: 19px;
+  }
+  .page-contact form p {
+    width: 54.15%;
+    line-height: 1.13;
+  }
+  .page-contact form p:first-child {
+    padding-top: 0;
+  }
+  .page-contact form input {
+    font-size: 2.375rem;
+    line-height: 1.45;
+    letter-spacing: 0.37px;
+    padding: 14px 0 0 0;
+    width: 100%;
+    height: auto;
+  }
+  .page-contact form button {
+    margin-top: 38px;
+    padding: 13px 26px 11px;
+    font-family: 'gridnikregular';
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+  }
+  .page-contact .add-photo {
+    background: #000;
+  }
+  .page-contact .add-photo h3 {
+    color: #fff;
+    font-size: 0.8125rem;
+    letter-spacing: 1px;
+    margin-bottom: 38px;
+    margin-left: calc(calc(130%/1440) *100);
+    text-align: left;
+  }
+  .page-contact .add-photo .photos-wrap {
+    padding-bottom: 37px;
+    width: 238px;
+    margin-left: 5.5%;
+  }
+  .page-contact .contact-info {
+    padding-top: 100px;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+  }
+  .page-contact .contact-info.no-mobile {
+    display: block;
+  }
+  .page-contact .contact-info a, .page-contact .contact-info span {
+    color: #000000;
+  }
+  .page-contact .contact-info .col {
+    text-align: center;
+    display: block;
+    width: calc(100%/3);
+    float: left;
+  }
+  .page-contact .footer {
+    border-top: dashed 1px #9a9a9a;
+    padding: 54px 0 45px 0;
+  }
+  .page-contact .footer .contact-info {
+    display: none;
+  }
+  .page-contact .footer .assembly-logo-icon {
+    order: 2;
+    margin: 0;
+    height: 35px;
+    flex: 1;
+  }
+  .page-contact .footer .social {
+    order: 3;
+    padding: 0;
+    flex: 1;
+    text-align: right;
+    margin-right: 3.125%;
+  }
+  .page-contact .footer .copyright {
+    color: #737373;
+    order: 1;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    margin-left: 3.125%;
+  }
+  .page-contact .to-top-wrap {
+    padding-top: 93px;
+  }
+  .page-contact .to-top {
+    opacity: 1;
   }
 
   /*********************

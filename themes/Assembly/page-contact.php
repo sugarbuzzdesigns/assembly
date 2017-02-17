@@ -5,7 +5,7 @@
 <form action="" method="get" accept-charset="utf-8">
 	<div class="form-viewport">
 		<label class="active">
-			<p>what kind of structure are you looking for? </p>
+			<p>what impression should your space leave?</p>
 			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 			<input type="text" name="" value="" placeholder="type here">
 		</label>
@@ -58,6 +58,25 @@
 </section>
 
 <div id="contact-map"></div>
+
+<div class="contact-info no-mobile">
+	<a class="col" href="mailto:hello@byassembly.com">hello@byassembly.com</a>
+	<a class="col" href="tel:+01-678-287-7493" title="Phone Number">678.287.7493</a>
+	<span class="col">33.76622 - 84.57548</span>
+</div>
+
+<div class="no-mobile to-top-wrap">
+	<div class="to-top">
+		<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
+			<g fill="none" fill-rule="evenodd">
+				<text font-family="Gridnik" font-size="12.9199" fill="#000" transform="translate(0 8)">
+					<tspan x=".8313" y=".9988">TOP</tspan>
+				</text>
+				<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>
+			</g>
+		</svg>
+	</div>
+</div>
 
 <script>
 	var map;

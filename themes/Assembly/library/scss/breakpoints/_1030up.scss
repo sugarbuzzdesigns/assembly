@@ -674,6 +674,131 @@ SERVICES Page
 }
 
 /*********************
+CONTACT
+**********************/
+// light footer
+.page-contact {
+	form {
+		padding-top: 79px;
+		width: 81.81%;
+		margin: 0 auto 30px calc(calc(130%/1440) *100);
+
+		.pager {
+			margin-top: 22px;
+			margin-bottom: 19px;
+		}
+
+		p {
+			width: 54.15%;
+			line-height: 1.13;
+
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+
+		input {
+			font-size: rem(38);
+			line-height: 1.45;
+			letter-spacing: 0.37px;
+			padding: 14px 0 0 0;
+			width: 100%;
+			height: auto;
+		}
+
+		button {
+			margin-top: 38px;
+			padding: 13px 26px 11px;
+			font-family: 'gridnikregular';
+			font-size: rem(13);
+			letter-spacing: 1px;
+		}
+	}
+
+	.add-photo {
+		background: #000;
+
+		h3 {
+			color: #fff;
+			font-size: rem(13);
+			letter-spacing: 1px;
+			margin-bottom: 38px;
+			margin-left: calc(calc(130%/1440) *100);
+			text-align: left;
+		}
+
+		.photos-wrap {
+    		padding-bottom: 37px;
+		    width: 238px;
+		    margin-left: 5.5%;
+		}
+	}
+
+	.contact-info {
+		padding-top: 100px;
+		width: 100%;
+		overflow: hidden;
+		background: #fff;
+
+		&.no-mobile {
+			display: block;
+		}
+
+		a, span {
+			color: #000000;
+		}
+
+		.col {
+			text-align: center;
+			display: block;
+			width: calc(100%/3);
+			float: left;
+		}
+	}
+
+	.footer {
+		border-top: dashed 1px #9a9a9a;
+		padding: 54px 0 45px 0;
+
+		.contact-info {
+			display: none;
+		}
+
+		.assembly-logo-icon {
+			order: 2;
+			margin: 0;
+			height: 35px;
+			flex: 1;
+		}
+
+		.social {
+			order: 3;
+			padding: 0;
+			flex: 1;
+			text-align: right;
+			margin-right: 3.125%;
+		}
+
+		.copyright {
+			color: #737373;
+			order: 1;
+			margin: 0;
+			flex: 1;
+			text-align: left;
+			margin-left: 3.125%;
+		}
+	}
+
+	.to-top-wrap {
+		padding-top: 93px;
+	}
+
+	.to-top {
+		opacity: 1;
+	}
+}
+
+/*********************
 TO TOP
 **********************/
 .to-top-wrap {

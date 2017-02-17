@@ -49,7 +49,7 @@ MENU & NAVIGATION STYLES
 		display: block;
 	}
 
-	#menu-rectangle {
+	.menu-rectangle {
 		opacity: 0;
 		transition: opacity 0.5s 1s;
 	}
@@ -68,7 +68,7 @@ MENU & NAVIGATION STYLES
 	}
 
 	&.animate {
-		#menu-rectangle {
+		.menu-rectangle {
 			opacity: 1;
 		}
 
@@ -289,6 +289,118 @@ SERVICES SECTION
     float: left;
     width: 17.1%;
     margin-left: 9.03%;
+}
+
+/*********************
+SERVICES Page
+**********************/
+.page-services {
+
+	h1 {
+		font-size: rem(72);
+    	margin: 122px 0 0 8.43%;
+		width: auto;
+	}
+
+	.mesh-bg {
+		top: 0;
+		width: 53.96%;
+		height: 316px;
+		margin-top: 15%;
+		margin-left: 13.194%;
+	}
+
+	.filter-menu {
+		position: absolute;
+		right: 0;
+		top: 168px;
+		margin-right: 10.42%;
+
+		div {
+			a {
+				letter-spacing: 0.7px;
+			}
+		}
+	}
+
+	.tile {
+		width: 28.54%;
+
+		.tile-inner {
+			width: 100%;
+			margin: 0;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&.visualisation {
+			margin-left: 15.07%;
+    		margin-top: 94px;
+    		margin-bottom: 129px;
+    		float: left;
+		}
+
+		&.permitting {
+			width: 22.64%;
+			float: right;
+    		margin: 288px 14.86% 0 0;
+		}
+
+		&.engineering {
+    		width: 48.4%;
+		    clear: left;
+		    float: left;
+		    margin-bottom: 0;
+		}
+
+		&.interior-buildouts {
+			float: right;
+			width: 32.85%;
+			margin-right: 10.63%;
+			margin-top: 124px;
+			margin-bottom: 0;
+			clear: right;
+
+			.mesh-bg {
+				top: -168px;
+    			right: -107px;
+    			width: 335px;
+    			height: 314px;
+			}
+		}
+
+		&.team-player {
+			float: right;
+			clear: both;
+			margin-right: 9.38%;
+			margin-top: 165px;
+			margin-bottom: 0;
+		}
+
+		&.imagine-experience {
+			float: left;
+			margin-left: 15.07%;
+			margin-bottom: 148px;
+
+			.mesh-bg {
+			    left: -96px;
+			    height: 534px;
+			    width: 315px;
+			    top: 244px;
+			}
+		}
+	}
+
+	a[href="/case-studies"] {
+		width: 263px;
+		margin: 0;
+		clear: both;
+		float: right;
+		margin-right: 5.97%;
+    	margin-bottom: 16px;
+	}
 }
 
 /*********************
