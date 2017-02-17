@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 05:29 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 06:45 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1318,6 +1318,36 @@ SERVICES Page
   margin-left: 21.04%;
   margin-top: 167px;
   margin-bottom: 315px;
+}
+.page-services .content.dynamic .team-player-wrapper .intro-tile {
+  width: 28.472%;
+  margin-left: 9.028%;
+}
+.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner {
+  margin: 0;
+  width: 100%;
+}
+.page-services .content.dynamic .team-player-wrapper .service-desc {
+  margin-top: 171px;
+}
+.page-services .content.dynamic .team-player-wrapper .tile-2 {
+  width: 26.597%;
+  margin-right: 22.778%;
+  margin-top: -150px;
+  margin-bottom: 219px;
+}
+.page-services .content.dynamic .team-player-wrapper .tile-2 .mesh-bg {
+  width: 350px;
+  height: 330px;
+  top: 15px;
+  margin-left: 63.194%;
+}
+.page-services .content.dynamic .team-player-wrapper .tile-3 {
+  width: 34.375%;
+  float: right;
+  margin-right: 26.944%;
+  margin-top: 0;
+  margin-bottom: 148px;
 }
 .page-services .individual-service {
   padding-top: 93px;
