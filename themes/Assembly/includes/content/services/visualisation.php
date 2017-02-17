@@ -6,7 +6,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Visualisation</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">See it to believe it. </span>
 					</div>
 				</div>
 			</div>

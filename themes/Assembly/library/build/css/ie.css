@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 12:40 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 03:08 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1123,6 +1123,64 @@ SERVICES Page
   height: 534px;
   width: 315px;
   top: 244px;
+}
+.page-services .content.dynamic {
+  clear: both;
+}
+.page-services .content.dynamic .tile .tile-info {
+  margin-top: 25px;
+}
+.page-services .content.dynamic .tile .tile-img {
+  margin-bottom: 0;
+}
+.page-services .content.dynamic .tile img {
+  width: 100%;
+  margin: 0;
+}
+.page-services .content.dynamic .visualisation-wrapper {
+  width: 100%;
+}
+.page-services .content.dynamic .visualisation-wrapper .tile {
+  width: 28.85%;
+  margin-left: 15.069%;
+  float: left;
+  margin-bottom: 0;
+}
+.page-services .content.dynamic .visualisation-wrapper .service-desc {
+  width: 22.92%;
+  float: left;
+  margin-left: 7.01%;
+  margin-top: 260px;
+  margin-bottom: 250px;
+  font-size: rem(11);
+  line-height: 1.82;
+}
+.page-services .content.dynamic .visualisation-wrapper .tile-2 {
+  float: right;
+  margin-right: 15.42%;
+  margin-left: 0;
+}
+.page-services .content.dynamic .visualisation-wrapper .tile-3 {
+  width: 22.22%;
+  margin-left: 21.39%;
+  margin-top: 290px;
+  margin-bottom: 176px;
+}
+.page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
+  top: -78px;
+  right: -88px;
+  width: 355px;
+  height: 355px;
+}
+.page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+  width: 562px;
+  right: auto;
+  bottom: -175px;
+  height: 355px;
+  top: auto;
+}
+.page-services .individual-service {
+  padding-top: 93px;
 }
 .page-services a[href="/case-studies"] {
   width: 263px;

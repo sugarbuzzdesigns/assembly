@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-16 07:46 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 02:15 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -10,6 +10,7 @@ var assembly = assembly || {};
 			this.$selectFilter = $('.select-filter');
 			this.initSelect2();
 			this.bindEvents();
+			this.countTilesAndAddClass();
 		},
 
 		initSelect2: function(){
@@ -25,6 +26,19 @@ var assembly = assembly || {};
 				_this.filterProjectsByCategory(this.value);
 			});
 		},
+
+		countTilesAndAddClass: function(){
+			$('.content.landing').find('.tile').each(function(tileNum, tile){
+				console.log($(tile).addClass('tile-' + tileNum+1));
+			});
+
+			$('.content.dynamic .individual-service').each(function(serviceNum, service){
+				$(service).find('.tile').each(function(serviceTileNum, tile){
+					console.log($(tile).addClass('tile-' + (serviceTileNum+1)));
+				});
+			});
+		},
+
 		filterProjectsByCategory: function(option){
 			var $landingContent = $('.landing.content'),
 				$allTiles = $('.individual-service[data-service]'),

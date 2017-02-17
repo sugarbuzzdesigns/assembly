@@ -2,7 +2,7 @@
 <?php include 'includes/page-data/service-page-data.php'; ?>
 <?php include 'includes/header-dark-interior.php'; ?>
 	<nav class="filter-menu no-mobile">
-		<div class="active" value="all"><a href="#">All</a></div>
+		<div class="active" data-value="all"><a href="#">All</a></div>
 		<div data-value="visualisation"><a href="#">Visualisation</a></div>
 		<div data-value="permitting"><a href="#">Permitting</a></div>
 		<div data-value="team-player"><a href="#">Team Player</a></div>
@@ -30,19 +30,6 @@
 		</div>
 	</section>
 	<section class="content landing">
-		<?php //foreach ($projects as $project) : ?>
-<!-- 			<div class="tile <?php echo $project['img_type']; ?>">
-				<div class="tile-inner">
-					<div class="tile-img">
-						<img src="<?php echo $project['featured_image']['src'];?>" alt="<?php echo $project['featured_image']['alt']; ?>">
-					</div>
-					<div class="tile-info">
-						<span class="tile-title"><?php echo $project['title']; ?></span>
-						<span class="tile-desc"><?php echo $project['title']; ?></span>
-					</div>
-				</div>
-			</div> -->
-		<?php //endforeach; ?>
 		<div class="tile slideInUp visualisation">
 			<div class="tile-inner">
 				<div class="tile-img">
@@ -112,6 +99,34 @@
 			</div>
 		</div>
 	</section>
+	<script>
+		function getParameterByName(name, url) {
+		    if (!url) {
+		      url = window.location.href;
+		    }
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+		(function($){
+			var service = getParameterByName('service');
+
+			$(function(){
+				if(service){
+					console.log(service);
+					console.log($('[data-service="'+ service +'"]'));
+					$('.content.landing').hide();
+					$('[data-service="'+ service +'"]').show().siblings().hide();
+
+					$('.filter-menu .active').removeClass('active');
+					$('.filter-menu [data-value="visualisation"]').addClass('active');
+				}
+			});
+		})(jQuery)
+	</script>
 	<section class="content dynamic">
 		<?php include 'includes/content/services/visualisation.php'; ?>
 		<?php include 'includes/content/services/permitting.php'; ?>

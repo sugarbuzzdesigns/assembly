@@ -663,6 +663,82 @@ SERVICES Page
 		}
 	}
 
+	.content.dynamic {
+		clear: both;
+
+		.tile {
+			.tile-info {
+    			margin-top: 25px;
+			}
+
+			.tile-img {
+				margin-bottom: 0;
+			}
+
+			img {
+				width: 100%;
+				margin: 0;
+			}
+		}
+
+		.visualisation-wrapper {
+			width: 100%;
+
+			.tile {
+				width: 28.85%;
+				margin-left: 15.069%;
+				float: left;
+				margin-bottom: 0;
+			}
+
+			.service-desc {
+				width: 22.92%;
+				float: left;
+				margin-left: 7.01%;
+				margin-top: 260px;
+    			margin-bottom: 250px;
+			    font-size: rem(11);
+			    line-height: 1.82;
+			}
+
+			.tile-2 {
+				float: right;
+				margin-right: 15.42%;
+				margin-left: 0;
+			}
+
+			.tile-3 {
+				width: 22.22%;
+				margin-left: 21.39%;
+    			margin-top: 290px;
+    			margin-bottom: 176px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: -78px;
+				    right: -88px;
+				    width: 355px;
+				    height: 355px;
+				}
+			}
+
+			.content-2 {
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: -175px;
+				    height: 355px;
+				    top: auto;
+				}
+			}
+		}
+	}
+
+	.individual-service {
+		padding-top: 93px;
+	}
+
 	a[href="/case-studies"] {
 		width: 263px;
 		margin: 0;
