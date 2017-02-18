@@ -10,7 +10,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="service-desc">Our video walk-throughs, time- lapse videos and virtual reality experiences will give you a vivid tast</p>
+			<p class="service-desc">Our video walk-throughs, time-lapse videos and virtual reality experiences will give you a vivid taste of what we can achieve together.</p>
 			<div class="tile wide-1 content-tile left">
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">

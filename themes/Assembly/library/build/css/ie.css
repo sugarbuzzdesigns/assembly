@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 09:40 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 10:10 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -640,6 +640,7 @@ SERVICES Page
   margin-bottom: 227px;
   font-size: rem(11);
   line-height: 1.82;
+  letter-spacing: 0.97px;
 }
 .page-services .content.dynamic .individual-service .intro-tile {
   float: left;
@@ -1447,34 +1448,45 @@ SERVICES Page
   top: -316px;
 }
 .page-services .content.dynamic .imagine-experience-wrapper .intro-tile {
-  width: calc(330%/1440 * 100);
-  margin-left: 9.028%;
+  width: resp(330);
+  margin-left: resp(253);
 }
 .page-services .content.dynamic .imagine-experience-wrapper .intro-tile .tile-inner {
   margin: 0;
   width: 100%;
 }
 .page-services .content.dynamic .imagine-experience-wrapper .service-desc {
+  width: resp(317);
   margin-top: 171px;
 }
 .page-services .content.dynamic .imagine-experience-wrapper .tile-2 {
-  width: 26.597%;
-  margin-right: 22.778%;
-  margin-top: -150px;
+  width: resp(566);
+  margin-right: resp(144);
+  margin-top: 62px;
   margin-bottom: 219px;
 }
 .page-services .content.dynamic .imagine-experience-wrapper .tile-2 .mesh-bg {
   width: 350px;
   height: 330px;
-  top: 15px;
-  margin-left: 63.194%;
+  top: auto;
+  bottom: -145px;
+  right: -115px;
+  margin-left: 0;
 }
 .page-services .content.dynamic .imagine-experience-wrapper .tile-3 {
-  width: 34.375%;
-  float: right;
-  margin-right: 26.944%;
-  margin-top: 0;
-  margin-bottom: 148px;
+  width: resp(497);
+  float: left;
+  margin-left: resp(45);
+  margin-right: 0;
+  margin-top: 253px;
+  margin-bottom: 212px;
+}
+.page-services .content.dynamic .imagine-experience-wrapper .tile-3 .mesh-bg {
+  width: 335px;
+  height: 311px;
+  top: auto;
+  bottom: -150px;
+  left: -35px;
 }
 .page-services .individual-service {
   padding-top: 93px;
