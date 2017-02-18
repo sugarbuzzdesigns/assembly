@@ -10,6 +10,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="clear"></div>
 			<p class="service-desc">We’re equipped to provide interior design solutions, from basic interior work (fabric liners and floor-coverings) to full turn-key design. We work with trusted partners to ensure that the inside is as impressive as the outside.</p>
 			<div class="tile wide-1 content-tile left">
 				<div class="mesh-bg dark"></div>
@@ -34,6 +35,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="clear"></div>
 			<div class="tile tall-1 content-tile right">
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
