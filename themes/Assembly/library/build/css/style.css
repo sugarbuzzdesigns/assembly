@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 06:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 09:04 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10692,7 +10692,7 @@ you can add resource intensive styles.
     top: 244px;
   }
   .page-services .content.dynamic .tile .tile-info {
-    margin-top: 25px;
+    margin-top: 27px;
   }
   .page-services .content.dynamic .visualisation-wrapper {
     width: 100%;
@@ -10787,6 +10787,106 @@ you can add resource intensive styles.
     margin-left: 63.194%;
   }
   .page-services .content.dynamic .team-player-wrapper .tile-3 {
+    width: 34.375%;
+    float: right;
+    margin-right: 26.944%;
+    margin-top: 0;
+    margin-bottom: 148px;
+  }
+  .page-services .content.dynamic .engineering-wrapper .intro-tile {
+    width: calc(697%/1440*100);
+    margin-left: 0;
+  }
+  .page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner {
+    margin: 0;
+    width: 100%;
+  }
+  .page-services .content.dynamic .engineering-wrapper .intro-tile .tile-info {
+    margin-left: 6.599%;
+  }
+  .page-services .content.dynamic .engineering-wrapper .service-desc {
+    margin-bottom: 317px;
+  }
+  .page-services .content.dynamic .engineering-wrapper .tile-2 {
+    width: calc(495%/1440*100);
+    margin-right: calc(215%/1440*100);
+    margin-top: 0;
+    margin-bottom: 219px;
+  }
+  .page-services .content.dynamic .engineering-wrapper .tile-2 .mesh-bg {
+    width: 312px;
+    height: 335px;
+    top: -135px;
+    margin-left: 53.094%;
+  }
+  .page-services .content.dynamic .engineering-wrapper .tile-3 {
+    width: calc(323%/1440*100);
+    float: left;
+    margin-left: calc(216%/1440*100);
+    margin-right: 0;
+    margin-top: 162px;
+    margin-bottom: 298px;
+  }
+  .page-services .content.dynamic .engineering-wrapper .tile-3 .mesh-bg {
+    width: 534px;
+    height: 312px;
+    margin-top: 62%;
+    margin-left: 46.194%;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .intro-tile {
+    width: calc(495%/1440 * 100);
+    margin-left: 9.028%;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner {
+    margin: 0;
+    width: 100%;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .service-desc {
+    margin-top: 171px;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .tile-2 {
+    width: 26.597%;
+    margin-right: 22.778%;
+    margin-top: -150px;
+    margin-bottom: 219px;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .tile-2 .mesh-bg {
+    width: 350px;
+    height: 330px;
+    top: 15px;
+    margin-left: 63.194%;
+  }
+  .page-services .content.dynamic .interior-buildouts-wrapper .tile-3 {
+    width: 34.375%;
+    float: right;
+    margin-right: 26.944%;
+    margin-top: 0;
+    margin-bottom: 148px;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .intro-tile {
+    width: calc(330%/1440 * 100);
+    margin-left: 9.028%;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .intro-tile .tile-inner {
+    margin: 0;
+    width: 100%;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .service-desc {
+    margin-top: 171px;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .tile-2 {
+    width: 26.597%;
+    margin-right: 22.778%;
+    margin-top: -150px;
+    margin-bottom: 219px;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .tile-2 .mesh-bg {
+    width: 350px;
+    height: 330px;
+    top: 15px;
+    margin-left: 63.194%;
+  }
+  .page-services .content.dynamic .imagine-experience-wrapper .tile-3 {
     width: 34.375%;
     float: right;
     margin-right: 26.944%;
