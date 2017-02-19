@@ -12,6 +12,7 @@ and will be used across all viewports.
 ******************************************************************/
 // import mixins
 @import "../partials/test_styles";
+$screenWidth: 320;
 
 .no-mobile {
 	display: none;
@@ -456,6 +457,10 @@ VIDEO CONTENT
 .video.module {
     margin-top: 46px;
     margin-bottom: 66px;
+
+	img {
+		width: 100%;
+	}
 }
 // play btn svg width="58px" height="58px"
 .video-wrapper {
@@ -2121,9 +2126,9 @@ SERVICES Page
 
 	.mesh-bg {
 		right: auto;
-		left: -49px;
-		height: 449px;
-		width: 243px;
+		left: 11px;
+		height: resppx(430, 414, $screenWidth);
+		width: resppx(225, 414, $screenWidth);
 		margin: 0;
 		top: 147px;
 	}
@@ -2147,12 +2152,12 @@ ABOUT US Page
 		right: 2%;
 		left: auto;
 		width: 77.3%;
-		height: 425px;
+		height: resppx(428, 414, $screenWidth);
 	}
 
 	// about us years exp
 	.years-experience {
-	    top: 37px;
+	    top: 97px;
 	    left: -45px;
 
 		.years-experience-numbers {
@@ -2160,7 +2165,7 @@ ABOUT US Page
 		}
 
 		.years-experience-text {
-			top: 213px;
+			top: 183px;
 			left: 43px;
     		right: auto;
 		}
@@ -2185,7 +2190,7 @@ ABOUT US Page
 	    background: #fff;
 	    position: relative;
 	    z-index: 1;
-	    padding: 3px 0 18px;
+    	padding: 14px 0 18px;
 
 		h3 {
 			font-family: gridnikregular;
@@ -2218,7 +2223,7 @@ ABOUT US Page
     		height: 402px;
     		margin-top: 17.63%;
 			left: 2%;
-			width: 300px;
+			width: resppx(284, 414, $screenWidth);
 		}
 
 		.carousel-wrapper {
@@ -2235,10 +2240,22 @@ ABOUT US Page
 		background: transparent;
 		padding-bottom: 10%;
 
-		.years-experience .years-experience-text {
-			top: 183px;
-			left: auto;
-			right: -58px;
+		.years-experience {
+			top: -5px;
+			left: -45px;
+
+			.years-experience-numbers {
+				left: auto;
+				right: 0;
+				top: -7px;
+				margin-right: 6%;
+			}
+
+			.years-experience-text {
+			    top: 186px;
+			    left: auto;
+			    right: -19%;
+			}
 		}
 
 		.carousel {
@@ -2262,17 +2279,6 @@ ABOUT US Page
     		width: 70%;
     		height: 72.34%;
     		margin: 0;
-		}
-
-		.years-experience {
-			top: -5px;
-			left: -45px;
-
-			.years-experience-numbers {
-				left: auto;
-				right: 0;
-				margin-right: 3%;
-			}
 		}
 	}
 
@@ -2540,7 +2546,7 @@ ABOUT US Page
 
 a[href="/case-studies"] {
 	width: 58%;
-	margin: 51% auto 23.5%;
+	margin: 242px auto 23.5%;
 	display: block;
 
 	svg {

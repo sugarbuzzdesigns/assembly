@@ -17,9 +17,9 @@
 			<span>Years Experience</span>
 		</div>
 	</div>
-	<div class="video">
-		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2.jpg" alt="">
-		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/video-placeholder-2-lrg.jpg" alt="">
+	<div class="video module">
+		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail-mobile.jpg" alt="">
+		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 	</div>
 	<div class="projects module carousel-module">
@@ -30,10 +30,10 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-custom-case-studies-1.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-1.jpg" alt="">
 							</div>
 							<div class="tile-info">
-								<span class="tile-title">Custom Case Studies</span>
+								<span class="tile-title">Modular Spaces</span>
 								<span class="tile-desc"></span>
 							</div>
 						</div>
@@ -41,10 +41,21 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-custom-case-studies-2.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-2.jpg" alt="">
 							</div>
 							<div class="tile-info">
-								<span class="tile-title">Custom Case Studies</span>
+								<span class="tile-title">Modular Spaces</span>
+								<span class="tile-desc"></span>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="tile-inner">
+							<div class="tile-img">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-3.jpg" alt="">
+							</div>
+							<div class="tile-info">
+								<span class="tile-title">Modular Spaces</span>
 								<span class="tile-desc"></span>
 							</div>
 						</div>
@@ -63,7 +74,7 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-modular-case-studies-2.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-3.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Custom Case Studies</span>
@@ -74,7 +85,18 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/about-modular-case-studies-1.jpg" alt="">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-4.jpg" alt="">
+							</div>
+							<div class="tile-info">
+								<span class="tile-title">Modular Case Studies</span>
+								<span class="tile-desc"></span>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="tile-inner">
+							<div class="tile-img">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-5.jpg" alt="">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">Modular Case Studies</span>
@@ -95,16 +117,38 @@
 				<span class="num">6</span>
 			</div>
 			<div class="years-experience-text">
-				<span>Years Experience</span>
+				<span>Years of Experience</span>
 			</div>
 		</div>
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
 				<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
+					<div class="slide employee" data-years-experience="24">
+						<div class="tile-inner">
+							<div class="tile-img">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/1-Dominique.jpg" alt="Mark Whalburg">
+							</div>
+							<div class="tile-info">
+								<span class="tile-title">DOMINIC BENNETT</span>
+								<span class="tile-desc"></span>
+							</div>
+						</div>
+					</div>
+					<div class="slide employee" data-years-experience="12">
+						<div class="tile-inner">
+							<div class="tile-img">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/2-Emma.jpg" alt="Mark Whalburg">
+							</div>
+							<div class="tile-info">
+								<span class="tile-title">EMMA SLACK</span>
+								<span class="tile-desc"></span>
+							</div>
+						</div>
+					</div>
 					<div class="slide employee" data-years-experience="26">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/3-Gordon.jpg" alt="Mark Whalburg">
 							</div>
 							<div class="tile-info">
 								<span class="tile-title">GORDON MACHIELSEN</span>
@@ -112,13 +156,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="slide employee" data-years-experience="09">
+					<div class="slide employee" data-years-experience="20">
 						<div class="tile-inner">
 							<div class="tile-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/4-Mark.jpg" alt="Mark Whalburg">
 							</div>
 							<div class="tile-info">
-								<span class="tile-title">GORDON MACHIELSEN</span>
+								<span class="tile-title">MARK SLACK</span>
 								<span class="tile-desc"></span>
 							</div>
 						</div>

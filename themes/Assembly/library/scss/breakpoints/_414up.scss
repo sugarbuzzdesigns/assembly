@@ -3,6 +3,8 @@ Stylesheet: 376px and Up Stylesheet
 
 Phones larger than the iPhone 6 375px width
 ******************************************************************/
+$screenWidth: 414;
+
 body {
 	&::before {
 		content: 'iphone 6+ and up';
@@ -183,6 +185,13 @@ SERVICES Page
 
 }
 
+.tile.imagine-experience {
+	.mesh-bg {
+		height: resppx(430, 414, $screenWidth);
+		width: resppx(225, 414, $screenWidth);
+	}
+}
+
 /*********************
 CASE STUDIES Page
 **********************/
@@ -249,7 +258,11 @@ ABOUT US Page
 	}
 
 	.video {
-    	margin: 0 0 15.5% 28.74%;
+    	margin: 0 0 45.5% 28.74%;
+
+    	img {
+    		width: 100%;
+    	}
 	}
 
 	.years-experience {
@@ -257,8 +270,8 @@ ABOUT US Page
 		left: -60px;
 
 		.years-experience-text {
-			top: 284px;
-    		left: 69px;
+		    top: 258px;
+		    left: 69px;
 		}
 	}
 
@@ -276,9 +289,22 @@ ABOUT US Page
     		left: -21.53%;
 
     		.years-experience-text {
-				top: 284px;
-	    		left: 69px;
+				top: 231px;
+				right: -23.8%;
 			}
+		}
+	}
+
+	.our-approach {
+		.copy {
+			p {
+				font-size: rem(13);
+				line-height: calc(23/13);
+			}
+		}
+
+		.slide-number {
+			font-size: rem(136);
 		}
 	}
 

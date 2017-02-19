@@ -138,12 +138,20 @@ var assembly = assembly || {};
 			});
 
 			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
-				var year1 = $('.years-experience-numbers .num').eq(0),
-					year2 = $('.years-experience-numbers .num').eq(1),
-					years = $('.years-experience-numbers .num').html(),
-					yearsExp = $(this).find('.slide').eq(currentSlide).data('years-experience');
+				var year1 = $('.employees .years-experience-numbers .num').eq(0),
+					year2 = $('.employees .years-experience-numbers .num').eq(1),
+					yearsExp = $(this).find('.slide').eq(currentSlide).data('years-experience'),
+					numArr = yearsExp.toString().split('');
 
-				var numArr = yearsExp.toString().split('');
+					if(currentSlide === 1){
+						year1.css({
+ 							transform: 'translate(11%, 0)'
+						});
+					} else {
+						year1.css({
+ 							transform: 'translate(0, 0)'
+						});
+					}
 
 				year1.html(numArr[0]);
 				year2.html(numArr[1]);

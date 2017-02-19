@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 10:10 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-18 11:33 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7614,6 +7614,9 @@ VIDEO CONTENT
   margin-top: 46px;
   margin-bottom: 66px;
 }
+.video.module img {
+  width: 100%;
+}
 
 .video-wrapper {
   position: relative;
@@ -8971,9 +8974,9 @@ SERVICES Page
 }
 .tile.imagine-experience .mesh-bg {
   right: auto;
-  left: -49px;
-  height: 449px;
-  width: 243px;
+  left: 11px;
+  height: calc(430px/414*320);
+  width: calc(225px/414*320);
   margin: 0;
   top: 147px;
 }
@@ -8995,17 +8998,17 @@ ABOUT US Page
   right: 2%;
   left: auto;
   width: 77.3%;
-  height: 425px;
+  height: calc(428px/414*320);
 }
 .page-about-us .years-experience {
-  top: 37px;
+  top: 97px;
   left: -45px;
 }
 .page-about-us .years-experience .years-experience-numbers {
   left: 0;
 }
 .page-about-us .years-experience .years-experience-text {
-  top: 213px;
+  top: 183px;
   left: 43px;
   right: auto;
 }
@@ -9026,7 +9029,7 @@ ABOUT US Page
   background: #fff;
   position: relative;
   z-index: 1;
-  padding: 3px 0 18px;
+  padding: 14px 0 18px;
 }
 .page-about-us .callout h3 {
   font-family: gridnikregular;
@@ -9053,7 +9056,7 @@ ABOUT US Page
   height: 402px;
   margin-top: 17.63%;
   left: 2%;
-  width: 300px;
+  width: calc(284px/414*320);
 }
 .page-about-us .carousel-module.projects .carousel-wrapper {
   padding-bottom: 10%;
@@ -9066,10 +9069,20 @@ ABOUT US Page
   background: transparent;
   padding-bottom: 10%;
 }
-.page-about-us .employees .years-experience .years-experience-text {
-  top: 183px;
+.page-about-us .employees .years-experience {
+  top: -5px;
+  left: -45px;
+}
+.page-about-us .employees .years-experience .years-experience-numbers {
   left: auto;
-  right: -58px;
+  right: 0;
+  top: -7px;
+  margin-right: 6%;
+}
+.page-about-us .employees .years-experience .years-experience-text {
+  top: 186px;
+  left: auto;
+  right: -19%;
 }
 .page-about-us .employees .carousel {
   padding-top: 24%;
@@ -9088,15 +9101,6 @@ ABOUT US Page
   width: 70%;
   height: 72.34%;
   margin: 0;
-}
-.page-about-us .employees .years-experience {
-  top: -5px;
-  left: -45px;
-}
-.page-about-us .employees .years-experience .years-experience-numbers {
-  left: auto;
-  right: 0;
-  margin-right: 3%;
 }
 .page-about-us .our-approach {
   margin-top: 0;
@@ -9303,7 +9307,7 @@ ABOUT US Page
 
 a[href="/case-studies"] {
   width: 58%;
-  margin: 51% auto 23.5%;
+  margin: 242px auto 23.5%;
   display: block;
 }
 a[href="/case-studies"] svg {
@@ -9322,6 +9326,13 @@ a[href="/case-studies"] svg {
 
   .home .landing h2 {
     font-size: 2.25rem;
+  }
+
+  /*********************
+  ABOUT US Page
+  **********************/
+  .page-about-us .employees .years-experience .years-experience-text {
+    right: -14.8%;
   }
 }
 /*********************
@@ -9481,6 +9492,11 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   SERVICES Page
   **********************/
+  .tile.imagine-experience .mesh-bg {
+    height: calc(430px/414*414);
+    width: calc(225px/414*414);
+  }
+
   /*********************
   CASE STUDIES Page
   **********************/
@@ -9527,14 +9543,17 @@ PLUS SIZE (MOBILE) Iphone #+
     letter-spacing: 1px;
   }
   .page-about-us .video {
-    margin: 0 0 15.5% 28.74%;
+    margin: 0 0 45.5% 28.74%;
+  }
+  .page-about-us .video img {
+    width: 100%;
   }
   .page-about-us .years-experience {
     top: 45px;
     left: -60px;
   }
   .page-about-us .years-experience .years-experience-text {
-    top: 284px;
+    top: 258px;
     left: 69px;
   }
   .page-about-us .projects .carousel .tile-inner {
@@ -9545,8 +9564,15 @@ PLUS SIZE (MOBILE) Iphone #+
     left: -21.53%;
   }
   .page-about-us .employees .years-experience .years-experience-text {
-    top: 284px;
-    left: 69px;
+    top: 231px;
+    right: -23.8%;
+  }
+  .page-about-us .our-approach .copy p {
+    font-size: 0.8125rem;
+    line-height: calc(23/13);
+  }
+  .page-about-us .our-approach .slide-number {
+    font-size: 8.5rem;
   }
   .page-about-us .inner-callout {
     width: 64.5%;
@@ -10590,9 +10616,6 @@ you can add resource intensive styles.
   }
   .page-about-us .video {
     margin: 0 7.8% 0 auto;
-  }
-  .page-about-us .video img {
-    width: 100%;
   }
   .page-about-us .projects.carousel-module {
     width: 23.75%;

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-17 05:16 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-18 11:12 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -381,12 +381,20 @@ var assembly = assembly || {};
 			});
 
 			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
-				var year1 = $('.years-experience-numbers .num').eq(0),
-					year2 = $('.years-experience-numbers .num').eq(1),
-					years = $('.years-experience-numbers .num').html(),
-					yearsExp = $(this).find('.slide').eq(currentSlide).data('years-experience');
+				var year1 = $('.employees .years-experience-numbers .num').eq(0),
+					year2 = $('.employees .years-experience-numbers .num').eq(1),
+					yearsExp = $(this).find('.slide').eq(currentSlide).data('years-experience'),
+					numArr = yearsExp.toString().split('');
 
-				var numArr = yearsExp.toString().split('');
+					if(currentSlide === 1){
+						year1.css({
+ 							transform: 'translate(11%, 0)'
+						});
+					} else {
+						year1.css({
+ 							transform: 'translate(0, 0)'
+						});
+					}
 
 				year1.html(numArr[0]);
 				year2.html(numArr[1]);
