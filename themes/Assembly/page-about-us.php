@@ -22,7 +22,8 @@
 		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 	</div>
-	<div class="projects module carousel-module">
+	<div class="clear"></div>
+	<div class="projects module carousel-module projects-1">
 		<div class="tile carousel-wrapper">
 			<div class="mesh-bg dark wide"></div>
 			<div class="carousel-inner">
@@ -67,7 +68,8 @@
 	<div class="inner-callout">
 		<p>Lorem Ipsum Dolar Placeholder about Custom / Modular offering Our team boasts more than 80 years of experience creating kits of temporary and custom designed structures.</p>
 	</div>
-	<div class="projects module carousel-module" data-image-ratio="1to1">
+	<div class="clear"></div>
+	<div class="projects module carousel-module projects-2" data-image-ratio="1to1">
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
 				<div class="carousel" data-mobile-position="right" data-mobile-start="end">
@@ -77,7 +79,7 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-3.jpg" alt="">
 							</div>
 							<div class="tile-info">
-								<span class="tile-title">Custom Case Studies</span>
+								<span class="tile-title">Custom Spaces</span>
 								<span class="tile-desc"></span>
 							</div>
 						</div>
@@ -120,7 +122,29 @@
 				<span>Years of Experience</span>
 			</div>
 		</div>
-		<div class="tile carousel-wrapper">
+		<div class="employee-list no-mobile desktop">
+			<div class="employee">
+				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/1-Dominique.jpg" alt="">
+				<div class="employee-name">DOMINIC BENNETT</div>
+				<div class="employee-title">Senior Site Foreman</div>
+			</div>
+			<div class="employee">
+				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/2-Emma.jpg" alt="">
+				<div class="employee-name">DOMINIC BENNETT</div>
+				<div class="employee-title">Senior Site Foreman</div>
+			</div>
+			<div class="employee">
+				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/3-Gordon.jpg" alt="">
+				<div class="employee-name">DOMINIC BENNETT</div>
+				<div class="employee-title">Senior Site Foreman</div>
+			</div>
+			<div class="employee">
+				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/4-Mark.jpg" alt="">
+				<div class="employee-name">DOMINIC BENNETT</div>
+				<div class="employee-title">Senior Site Foreman</div>
+			</div>
+		</div>
+		<div class="tile carousel-wrapper no-desktop">
 			<div class="carousel-inner">
 				<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
 					<div class="slide employee" data-years-experience="24">

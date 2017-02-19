@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-18 11:33 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-19 04:10 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7313,6 +7313,7 @@ p {
   font-size: 0.6875rem;
   line-height: 1.1875rem;
   font-family: 'roboto_monoregular';
+  letter-spacing: 0.92px;
 }
 
 /*********************
@@ -10186,6 +10187,10 @@ you can add resource intensive styles.
     display: none;
   }
 
+  .no-desktop {
+    display: none;
+  }
+
   .desktop {
     display: block;
   }
@@ -10241,6 +10246,14 @@ you can add resource intensive styles.
   h1 {
     font-size: 4.5rem;
     line-height: 1.44;
+  }
+
+  /*********************
+  Utility Classes
+  **********************/
+  .clear {
+    width: 100%;
+    clear: both;
   }
 
   /*********************
@@ -10592,12 +10605,12 @@ you can add resource intensive styles.
     margin: 0 0 4.2% 8.6%;
   }
   .page-about-us .years-experience {
-    top: 0;
+    top: -26px;
     left: 0;
     float: left;
     display: block;
     width: auto;
-    margin: -26px 0 0 4.7%;
+    margin: 0 0 0 4.7%;
   }
   .page-about-us .years-experience .years-experience-numbers {
     font-size: 24.625rem;
@@ -10615,21 +10628,122 @@ you can add resource intensive styles.
     width: 100%;
   }
   .page-about-us .video {
-    margin: 0 7.8% 0 auto;
+    margin: 0 7.92% 87px auto;
+    clear: right;
+    float: right;
+    width: calc(837%/1440*100);
   }
-  .page-about-us .projects.carousel-module {
+  .page-about-us .video .video-play-btn {
+    width: 75px;
+    height: 75px;
+  }
+  .page-about-us .carousel-module.projects[data-image-ratio="1to1"] .carousel .tile-inner {
+    padding: 0;
+  }
+  .page-about-us .carousel-module.projects .carousel-wrapper {
+    padding-bottom: 0;
+  }
+  .page-about-us .projects {
     width: 23.75%;
-    margin: 87px 0 0 13.75%;
+    margin: 0 0 0 13.75%;
     padding-top: 0;
+    float: left;
   }
-  .page-about-us .projects.carousel-module .mesh-bg {
+  .page-about-us .projects .mesh-bg {
     display: none;
   }
-  .page-about-us .projects.carousel-module .carousel {
+  .page-about-us .projects .carousel {
     padding: 0;
   }
-  .page-about-us .projects.carousel-module .tile-inner {
+  .page-about-us .projects .carousel .tile-inner {
     padding: 0;
+  }
+  .page-about-us .projects .tile-desc {
+    display: none;
+  }
+  .page-about-us .projects-2 {
+    width: 28.89%;
+    float: right;
+    margin-right: calc(296%/1440*100);
+    margin-top: -223px;
+  }
+  .page-about-us .inner-callout {
+    width: calc(237%/1440*100);
+    float: left;
+    margin-left: calc(188%/1440*100);
+    margin-top: 51px;
+  }
+  .page-about-us .inner-callout p {
+    font-size: 0.6875rem;
+    line-height: calc(16/11);
+    letter-spacing: 0.92px;
+  }
+  .page-about-us .employees {
+    width: 100%;
+    clear: both;
+    margin: 150px 0 0 0;
+  }
+  .page-about-us .employees .mesh-bg {
+    width: 81.67%;
+    height: 490px;
+    top: -294px;
+  }
+  .page-about-us .employees .years-experience {
+    display: none;
+  }
+  .page-about-us .employee-list {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+  .page-about-us .employee-list .employee {
+    positon: relative;
+    float: left;
+    width: 16.67%;
+    margin-right: calc(102%/1440*100);
+    z-index: 1;
+  }
+  .page-about-us .employee-list .employee:first-child {
+    margin-left: calc(44%/1440*100);
+  }
+  .page-about-us .employee-list .employee:nth-child(even) {
+    margin-top: 45px;
+  }
+  .page-about-us .employee-list .employee img {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .page-about-us .employee-list .employee .employee-name {
+    font-family: 'gridnikregular';
+    font-size: 0.8125rem;
+    line-height: 1;
+    color: #221f20;
+    margin-bottom: 3px;
+  }
+  .page-about-us .employee-list .employee .employee-title {
+    color: #7d7d7d;
+    font-size: 0.6875rem;
+    font-family: 'roboto_monoregular';
+    line-height: calc(20/11);
+  }
+  .page-about-us .our-approach {
+    clear: both;
+  }
+  .page-about-us .our-approach h3 {
+    font-size: 3rem;
+    line-height: calc(41/48);
+    margin-bottom: 40px;
+  }
+  .page-about-us .our-approach .copy p {
+    width: 37.93%;
+    font-size: 0.6875rem;
+    line-height: calc(20/11);
+    margin-bottom: 33px;
+  }
+  .page-about-us .our-approach button {
+    padding: 14px 20px 11px;
+    letter-spacing: 0.03px;
+    font-family: 'gridnikregular';
   }
 
   /*********************
@@ -10856,10 +10970,6 @@ you can add resource intensive styles.
     height: 312px;
     margin-top: 62%;
     margin-left: 46.194%;
-  }
-  .page-services .content.dynamic .interior-buildouts-wrapper .clear {
-    width: 100%;
-    clear: both;
   }
   .page-services .content.dynamic .interior-buildouts-wrapper .intro-tile {
     width: calc(495%/1440*100);

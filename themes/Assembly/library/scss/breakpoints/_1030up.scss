@@ -9,6 +9,10 @@ be seen on the Desktop.
 	display: none;
 }
 
+.no-desktop {
+	display: none;
+}
+
 .desktop {
 	display: block;
 }
@@ -66,6 +70,14 @@ h1, h2, h3...
 h1 {
 	font-size: rem(72);
 	line-height: 1.44;
+}
+
+/*********************
+Utility Classes
+**********************/
+.clear {
+    width: 100%;
+    clear: both;
 }
 
 /*********************
@@ -508,12 +520,12 @@ ABOUT US Page
 
 	// about us years exp
 	.years-experience {
-	    top: 0;
+	    top: -26px;
 	    left: 0;
 	    float: left;
 	    display: block;
 	    width: auto;
-    	margin: -26px 0 0 4.7%;
+    	margin: 0 0 0 4.7%;
 
 		.years-experience-numbers {
 			font-size: rem(394);
@@ -535,13 +547,30 @@ ABOUT US Page
 	}
 
 	.video {
-		margin: 0 7.8% 0 auto;
+		margin: 0 7.92% 87px auto;
+		clear: right;
+		float: right;
+		width: resp(837);
+
+		.video-play-btn {
+			width: 75px;
+			height: 75px;
+		}
 	}
 
-	.projects.carousel-module {
+	.carousel-module.projects[data-image-ratio="1to1"] .carousel .tile-inner {
+		padding: 0;
+	}
+
+	.carousel-module.projects .carousel-wrapper {
+		padding-bottom: 0;
+	}
+
+	.projects {
 	   	width: 23.75%;
-		margin: 87px 0 0 13.75%;
+		margin: 0 0 0 13.75%;
 		padding-top: 0;
+		float: left;
 
 		.mesh-bg {
 			display: none;
@@ -549,10 +578,115 @@ ABOUT US Page
 
 		.carousel {
 			padding: 0;
+
+			.tile-inner {
+				padding: 0;
+			}
 		}
 
-		.tile-inner {
-			padding: 0;
+		.tile-desc {
+			display: none;
+		}
+	}
+
+	.projects-2 {
+		width: 28.89%;
+		float: right;
+		margin-right: resp(296);
+		margin-top: -223px;
+	}
+
+	.inner-callout {
+		width: resp(237);
+		float: left;
+		margin-left: resp(188);
+		margin-top: 51px;
+
+		p {
+			font-size: rem(11);
+			line-height: calc(16/11);
+			letter-spacing: 0.92px;
+		}
+	}
+
+	.employees {
+		width: 100%;
+		clear: both;
+		margin: 150px 0 0 0;
+
+		.mesh-bg {
+			width: 81.67%;
+			height: 490px;
+			top: -294px;
+		}
+
+		.years-experience {
+			display: none;
+		}
+	}
+
+	.employee-list {
+		overflow: hidden;
+	    z-index: 1;
+	    position: relative;
+
+		.employee {
+			positon: relative;
+			float: left;
+			width: 16.67%;
+			margin-right: resp(102);
+			z-index: 1;
+
+			&:first-child {
+				margin-left: resp(44);
+			}
+
+			&:nth-child(even){
+				margin-top: 45px;
+			}
+
+			img {
+				width: 100%;
+				margin-bottom: 35px;
+			}
+
+			.employee-name {
+				font-family: 'gridnikregular';
+				font-size: rem(13);
+				line-height: 1;
+				color: #221f20;
+				margin-bottom: 3px;
+			}
+
+			.employee-title {
+				color: #7d7d7d;
+				font-size: rem(11);
+				font-family: 'roboto_monoregular';
+				line-height: calc(20/11);
+			}
+		}
+	}
+
+	.our-approach {
+		clear: both;
+
+		h3 {
+			font-size: rem(48);
+			line-height: calc(41/48);
+    		margin-bottom: 40px;
+		}
+
+		.copy p {
+			width: 37.93%;
+			font-size: rem(11);
+			line-height: calc(20/11);
+			margin-bottom: 33px;
+		}
+
+		button {
+			padding: 14px 20px 11px;
+			letter-spacing: 0.03px;
+			font-family: 'gridnikregular';
 		}
 	}
 }
@@ -849,11 +983,6 @@ SERVICES Page
 		}
 
 		.interior-buildouts-wrapper {
-			.clear {
-			    width: 100%;
-			    clear: both;
-			}
-
 			.intro-tile {
 				width: resp(495);
 				margin-left: 9.028%;
