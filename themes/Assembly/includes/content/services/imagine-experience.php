@@ -2,7 +2,7 @@
 			<div class="tile intro-tile">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-intro-mobile.jpg" alt="imagine-experience">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Imagine.jpg" alt="imaging-experience">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Imagine Experience</span>
@@ -15,7 +15,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-content-1-mobile.jpg" alt="imagine-experience">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Imagine.jpg" alt="imagine-experience">
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-content-2-mobile.jpg" alt="imagine-experience">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Imagine.jpg" alt="imagine-experience">
 					</div>
 				</div>
 			</div>

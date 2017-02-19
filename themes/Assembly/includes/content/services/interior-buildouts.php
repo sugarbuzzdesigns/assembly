@@ -2,7 +2,7 @@
 			<div class="tile intro-tile">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-intro-mobile.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Interior.jpg" alt="interior-buildouts">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Interior Buildouts</span>
@@ -16,14 +16,14 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-content-1-mobile.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
 			<div class="tile tall-1 content-tile right">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-content-2-mobile.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-content-3-mobile.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/04-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-content-4-mobile.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/05-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>

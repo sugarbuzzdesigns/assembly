@@ -2,7 +2,7 @@
 			<div class="tile intro-tile">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-intro-mobile.jpg" alt="team-player">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Team.jpg" alt="team-player">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
@@ -15,14 +15,15 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-content-1-mobile.jpg" alt="team-player">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Team.jpg" alt="team-player">
+
 					</div>
 				</div>
 			</div>
 			<div class="tile tall-1 content-tile right">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-content-2-mobile.jpg" alt="team-player">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Team.jpg" alt="team-player">
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@
 			<div class="tile intro-tile">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-intro-mobile.jpg" alt="permitting">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Perm.jpg" alt="permitting">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Permitting</span>
@@ -15,14 +15,14 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-content-1-mobile.jpg" alt="permitting">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Perm.jpg" alt="permitting">
 					</div>
 				</div>
 			</div>
 			<div class="tile tall-1 content-tile right">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-content-2-mobile.jpg" alt="permitting">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Perm.jpg" alt="permitting">
 					</div>
 				</div>
 			</div>
