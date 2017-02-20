@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 01:08 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 02:15 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1313,19 +1313,19 @@ ABOUT US Page
   position: relative;
 }
 .page-about-us .our-approach .carousel [data-slick-index="0"] svg {
-  width: resp(1133) !important;
+  width: resp(1100) !important;
 }
 .page-about-us .our-approach .carousel [data-slick-index="1"] svg {
-  width: resp(1083) !important;
+  width: resp(1100) !important;
 }
 .page-about-us .our-approach .carousel [data-slick-index="2"] svg {
-  width: resp(1066) !important;
+  width: resp(1100) !important;
 }
 .page-about-us .our-approach .carousel [data-slick-index="3"] svg {
-  width: resp(1095) !important;
+  width: resp(1100) !important;
 }
 .page-about-us .our-approach .carousel [data-slick-index="4"] svg {
-  width: resp(1016) !important;
+  width: resp(1100) !important;
 }
 .page-about-us .our-approach .carousel-nav {
   width: auto;
@@ -1444,22 +1444,7 @@ ABOUT US Page
   stroke: #93d5da;
 }
 .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index] svg {
-  margin: 0;
-}
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="0"] svg {
-  margin: resp(92) 0 0 resp(156);
-}
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="1"] svg {
-  margin: resp(118) 0 0 resp(169);
-}
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="2"] svg {
-  margin: resp(92) 0 0 resp(156);
-}
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="3"] svg {
-  margin: resp(92) 0 0 resp(156);
-}
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="4"] svg {
-  margin: resp(92) 0 0 resp(163);
+  margin: 117px 0 0 212px;
 }
 .page-about-us a[href="/case-studies"] {
   width: 263px;

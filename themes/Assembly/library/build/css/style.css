@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 01:08 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 02:15 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10787,19 +10787,19 @@ you can add resource intensive styles.
     position: relative;
   }
   .page-about-us .our-approach .carousel [data-slick-index="0"] svg {
-    width: calc(1133%/1440*100) !important;
+    width: calc(1100%/1440*100) !important;
   }
   .page-about-us .our-approach .carousel [data-slick-index="1"] svg {
-    width: calc(1083%/1440*100) !important;
+    width: calc(1100%/1440*100) !important;
   }
   .page-about-us .our-approach .carousel [data-slick-index="2"] svg {
-    width: calc(1066%/1440*100) !important;
+    width: calc(1100%/1440*100) !important;
   }
   .page-about-us .our-approach .carousel [data-slick-index="3"] svg {
-    width: calc(1095%/1440*100) !important;
+    width: calc(1100%/1440*100) !important;
   }
   .page-about-us .our-approach .carousel [data-slick-index="4"] svg {
-    width: calc(1016%/1440*100) !important;
+    width: calc(1100%/1440*100) !important;
   }
   .page-about-us .our-approach .carousel-nav {
     width: auto;
@@ -10918,22 +10918,7 @@ you can add resource intensive styles.
     stroke: #93d5da;
   }
   .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index] svg {
-    margin: 0;
-  }
-  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="0"] svg {
-    margin: calc(92%/1440*100) 0 0 calc(156%/1440*100);
-  }
-  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="1"] svg {
-    margin: calc(118%/1440*100) 0 0 calc(169%/1440*100);
-  }
-  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="2"] svg {
-    margin: calc(92%/1440*100) 0 0 calc(156%/1440*100);
-  }
-  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="3"] svg {
-    margin: calc(92%/1440*100) 0 0 calc(156%/1440*100);
-  }
-  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="4"] svg {
-    margin: calc(92%/1440*100) 0 0 calc(163%/1440*100);
+    margin: 117px 0 0 212px;
   }
   .page-about-us a[href="/case-studies"] {
     width: 263px;
