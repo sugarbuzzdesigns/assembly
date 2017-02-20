@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-19 04:10 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 12:16 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9131,6 +9131,9 @@ ABOUT US Page
 .page-about-us .our-approach .carousel-wrapper {
   padding-top: 13%;
 }
+.page-about-us .our-approach .up-down-nav {
+  display: none;
+}
 .page-about-us .our-approach .carousel {
   background: url(../../images/svg/our-approach-dot-grid.svg) no-repeat;
 }
@@ -10734,6 +10737,9 @@ you can add resource intensive styles.
     line-height: calc(41/48);
     margin-bottom: 40px;
   }
+  .page-about-us .our-approach .copy {
+    margin-left: calc(44%/1440*100);
+  }
   .page-about-us .our-approach .copy p {
     width: 37.93%;
     font-size: 0.6875rem;
@@ -10744,6 +10750,165 @@ you can add resource intensive styles.
     padding: 14px 20px 11px;
     letter-spacing: 0.03px;
     font-family: 'gridnikregular';
+  }
+  .page-about-us .our-approach .slide-number {
+    position: relative;
+    top: 117px;
+    left: 105px;
+  }
+  .page-about-us .our-approach .carousel {
+    background: none;
+    padding-top: 0;
+    margin-top: 140px;
+  }
+  .page-about-us .our-approach .carousel.our-approach .slick-slide .tile-copy {
+    position: absolute;
+    width: 22.22%;
+    top: 200px;
+    left: 0;
+    padding: 0;
+    margin: 0 0 0 calc(250%/1440*100);
+  }
+  .page-about-us .our-approach .carousel [data-slick-index="0"] svg {
+    width: calc(1133%/1440*100) !important;
+  }
+  .page-about-us .our-approach .carousel [data-slick-index="1"] svg {
+    width: calc(1083%/1440*100) !important;
+  }
+  .page-about-us .our-approach .carousel [data-slick-index="2"] svg {
+    width: calc(1066%/1440*100) !important;
+  }
+  .page-about-us .our-approach .carousel [data-slick-index="3"] svg {
+    width: calc(1095%/1440*100) !important;
+  }
+  .page-about-us .our-approach .carousel [data-slick-index="4"] svg {
+    width: calc(1016%/1440*100) !important;
+  }
+  .page-about-us .our-approach .carousel-nav {
+    width: auto;
+    margin-left: 5.8%;
+  }
+  .page-about-us .our-approach .carousel-inner {
+    padding-top: 0;
+  }
+  .page-about-us .our-approach .carousel-wrapper {
+    padding-top: 0;
+  }
+  .page-about-us .our-approach .slick-dots {
+    width: 22px;
+    margin-left: 0;
+    margin-top: 9px;
+  }
+  .page-about-us .our-approach .slick-dots li:nth-child(5) {
+    margin-bottom: 0;
+  }
+  .page-about-us .our-approach .slick-dots li:first-child .up-down-nav .up {
+    opacity: 0;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav {
+    display: block;
+    left: -33px;
+    position: relative;
+    top: -42px;
+    text-align: center;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav .num {
+    margin-left: 1px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav .up, .page-about-us .our-approach .slick-dots .up-down-nav .down {
+    opacity: 0;
+    height: 9px;
+    width: 13px;
+    display: inline-block;
+    stroke: #7d7d7d;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav .up:hover path, .page-about-us .our-approach .slick-dots .up-down-nav .down:hover path {
+    stroke: #98d8dc;
+  }
+  .page-about-us .our-approach .slick-dots .up-down-nav .down {
+    transform: rotate(180deg);
+    position: relative;
+    left: -2px;
+  }
+  .page-about-us .our-approach .slick-dots:after, .page-about-us .our-approach .slick-dots .track {
+    content: '';
+    width: 2px;
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #d9d9d9;
+    opacity: 1;
+    margin: 0;
+    transition: height 0.5s;
+  }
+  .page-about-us .our-approach .slick-dots .track {
+    z-index: 2;
+    background: #7d7d7d;
+    height: 0;
+  }
+  .page-about-us .our-approach .slick-dots li {
+    display: block;
+    margin-bottom: 125px;
+    width: 22px;
+    height: 22px;
+    opacity: 1;
+    z-index: 3;
+  }
+  .page-about-us .our-approach .slick-dots li button {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .page-about-us .our-approach .slick-dots li button:before {
+    top: 50%;
+    left: 50%;
+    background: #d9d9d9;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 1;
+  }
+  .page-about-us .our-approach .slick-dots li.slick-active button {
+    height: 22px;
+    width: 22px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0;
+    border: solid 1px #93d5da;
+  }
+  .page-about-us .our-approach .slick-dots li.slick-active button:before {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .down, .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .up {
+    opacity: 1;
+  }
+  .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .down {
+    stroke: #93d5da;
+  }
+  .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="*"] svg {
+    margin: 0;
+  }
+  .page-about-us a[href="/case-studies"] {
+    width: 263px;
+    margin: 0;
+    clear: both;
+    float: right;
+    margin-right: 5.97%;
+    margin-bottom: 16px;
   }
 
   /*********************

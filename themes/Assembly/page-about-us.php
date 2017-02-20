@@ -196,6 +196,11 @@
 		</div>
 	</div>
 	<section class="our-approach carousel-module">
+		<div style="display: none;">
+			<svg class="nav-arrow-up" viewBox="0 0 19 12" xmlns="http://www.w3.org/2000/svg">
+			  <path d="M16.232 9.536L9.616 1 3 9.544" stroke-width="3" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel"/>
+			</svg>
+		</div>
 		<div class="copy">
 			<h3><span>Our</span><span>Approach</span></h3>
 			<p>Your dedicated assembly team will deliver a powerful combination of industry leadership and strategic thinking, as well as “close to the customer” managers to control day-to-day interaction and oversee tactical execution. We meet with preferred vendors in advance -- for all projects, no matter the size -- to review the planned installation, event and dismantle process.</p>
@@ -226,9 +231,12 @@
 				<div class="carousel our-approach" data-mobile-position="left" data-mobile-start="front">
 					<div class="slide">
 						<div class="tile-inner">
-							<div class="tile-img">
+							<div class="tile-img mobile-only">
 								<?php include 'library/images/svg/our-approach-01.svg'; ?>
 							</div>
+							<div class="tile-img no-mobile desktop">
+								<?php include 'library/images/svg/our-approach-desktop-01.svg'; ?>
+							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
 								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
@@ -237,9 +245,12 @@
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
-							<div class="tile-img">
+							<div class="tile-img mobile-only">
 								<?php include 'library/images/svg/our-approach-02.svg'; ?>
 							</div>
+							<div class="tile-img no-mobile desktop">
+								<?php include 'library/images/svg/our-approach-desktop-02.svg'; ?>
+							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
 								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
@@ -248,9 +259,12 @@
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
-							<div class="tile-img">
+							<div class="tile-img mobile-only">
 								<?php include 'library/images/svg/our-approach-03.svg'; ?>
 							</div>
+							<div class="tile-img no-mobile desktop">
+								<?php include 'library/images/svg/our-approach-desktop-03.svg'; ?>
+							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
 								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
@@ -259,9 +273,12 @@
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
-							<div class="tile-img">
+							<div class="tile-img mobile-only">
 								<?php include 'library/images/svg/our-approach-04.svg'; ?>
 							</div>
+							<div class="tile-img no-mobile desktop">
+								<?php include 'library/images/svg/our-approach-desktop-04.svg'; ?>
+							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
 								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
@@ -270,8 +287,11 @@
 					</div>
 					<div class="slide" >
 						<div class="tile-inner">
-							<div class="tile-img">
+							<div class="tile-img mobile-only">
 								<?php include 'library/images/svg/our-approach-05.svg'; ?>
+							</div>
+							<div class="tile-img no-mobile desktop">
+								<?php include 'library/images/svg/our-approach-desktop-05.svg'; ?>
 							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
@@ -286,7 +306,23 @@
 			</div>
 		</div>
 	</section>
-	<a href="/case-studies" title="">
-		<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
+ 	<a href="/case-studies" title="">
+ 		<?php if(is_desktop()) { ?>
+ 			<?php include 'library/images/svg/view-case-studies-button-desktop.svg'; ?>
+ 		<?php } else { ?>
+			<?php include 'library/images/svg/view-case-studies-button.svg'; ?>
+		<?php } ?>
 	</a>
+	<div class="no-mobile to-top-wrap">
+		<div class="to-top">
+			<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
+				<g fill="none" fill-rule="evenodd">
+					<text font-family="Gridnik" font-size="12.9199" fill="#000" transform="translate(0 8)">
+						<tspan x=".8313" y=".9988">TOP</tspan>
+					</text>
+					<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>
+				</g>
+			</svg>
+		</div>
+	</div>
 <?php get_footer(); ?>

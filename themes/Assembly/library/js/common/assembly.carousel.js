@@ -65,6 +65,19 @@ var assembly = assembly || {};
 			var $ourApproachCarousel = $('.carousel.our-approach');
 
 			$ourApproachCarousel.on('init', function(slick){
+				$('.our-approach.carousel-module .slick-dots li').each(function(i, dot){
+					var $nav = $('<nav class="up-down-nav"></nav>');
+					var $navArrowUp = $('.nav-arrow-up').clone().removeClass('nav-arrow-up').addClass('up');
+					var $navArrowDown = $('.nav-arrow-up').clone().removeClass('nav-arrow-up').addClass('down');
+					var $count = $('<span class="num">0'+ (i+1) +'</span>');
+
+					$nav.append($navArrowUp, $count, $navArrowDown);
+
+					$(dot).append($nav);
+				});
+
+				$('.our-approach.carousel-module .slick-dots').append('<li class="track"></li>');
+
 				$('.our-approach.carousel-module .carousel-next').appendTo($ourApproachCarousel);
 
 				$('.our-approach .carousel-next').on('click', function(evt){
@@ -92,6 +105,7 @@ var assembly = assembly || {};
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
+				fade: true,
 				speed: 500,
 				variableWidth: hasVariableWidth
 			});

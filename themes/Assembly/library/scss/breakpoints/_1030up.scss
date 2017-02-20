@@ -676,6 +676,10 @@ ABOUT US Page
     		margin-bottom: 40px;
 		}
 
+		.copy {
+			margin-left: resp(44);
+		}
+
 		.copy p {
 			width: 37.93%;
 			font-size: rem(11);
@@ -688,6 +692,204 @@ ABOUT US Page
 			letter-spacing: 0.03px;
 			font-family: 'gridnikregular';
 		}
+
+		.slide-number {
+		    position: relative;
+		    top: 117px;
+		    left: 105px;
+		}
+
+		.carousel {
+			background: none;
+			padding-top: 0;
+    		margin-top: 140px;
+
+			&.our-approach {
+				.slick-slide {
+					.tile-copy {
+					    position: absolute;
+					    width: 22.22%;
+						top: 200px;
+						left: 0;
+						padding: 0;
+						margin: 0 0 0 calc(250%/1440*100);
+					}
+				}
+			}
+
+			[data-slick-index="0"] {
+				svg { width: resp(1133) !important; }
+			}
+			[data-slick-index="1"] {
+				svg { width: resp(1083) !important; }
+			}
+			[data-slick-index="2"] {
+				svg { width: resp(1066) !important; }
+			}
+			[data-slick-index="3"] {
+				svg { width: resp(1095) !important; }
+			}
+			[data-slick-index="4"] {
+				svg { width: resp(1016) !important; }
+			}
+		}
+
+		.carousel-nav {
+			width: auto;
+			margin-left: 5.8%;
+		}
+
+		.carousel-inner {
+			padding-top: 0;
+		}
+
+		.carousel-wrapper {
+			padding-top: 0;
+		}
+
+		.slick-dots {
+			width: 22px;
+			margin-left: 0;
+    		margin-top: 9px;
+
+			li:nth-child(5){
+				margin-bottom: 0;
+			}
+
+			li:first-child {
+				.up-down-nav {
+					.up {
+						opacity: 0;
+					}
+				}
+			}
+
+			.up-down-nav {
+				display: block;
+				left: -33px;
+				position: relative;
+				top: -42px;
+				text-align: center;
+
+				.num {
+					margin-left: 1px;
+					margin-bottom: 5px;
+					margin-top: 2px;
+				}
+
+				span {
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
+
+				.up, .down {
+					opacity: 0;
+					height: 9px;
+					width: 13px;
+					display: inline-block;
+					stroke: #7d7d7d;
+
+					&:hover path {
+						stroke: #98d8dc;
+					}
+				}
+
+				.down {
+					transform: rotate(180deg);
+					position: relative;
+				    left: -2px;
+				}
+			}
+
+			&:after, .track {
+				content: '';
+				width: 2px;
+				height: calc(100% - 20px);
+				position: absolute;
+				top: 10px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background: #d9d9d9;
+				opacity: 1;
+				margin: 0;
+				transition: height 0.5s;
+			}
+
+			.track {
+				z-index: 2;
+				background: #7d7d7d;
+				height: 0;
+			}
+
+			li {
+				display: block;
+				margin-bottom: 125px;
+				width: 22px;
+				height: 22px;
+				opacity: 1;
+				z-index: 3;
+
+				button {
+					position: relative;
+					padding: 0;
+				    height: 100%;
+				    width: 100%;
+
+					&:before {
+					    top: 50%;
+					    left: 50%;
+					    background: #d9d9d9;
+					    transform: translate(-50%, -50%);
+					    z-index: 1;
+					    opacity: 1;
+					}
+				}
+
+				&.slick-active {
+					button {
+					    height: 22px;
+					    width: 22px;
+					    background: #fff;
+					    border-radius: 50%;
+					    padding: 0;
+					    border: solid 1px #93d5da;
+					}
+
+					button:before {
+					    height: 15px;
+					    width: 15px;
+					    position: absolute;
+					    top: 50%;
+					    left: 50%;
+					    transform: translate(-50%, -50%);
+					}
+
+					.up-down-nav {
+						.down, .up {
+							opacity: 1;
+						}
+
+						.down {
+							stroke: #93d5da;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.our-approach .carousel.our-approach .slick-slide[data-slick-index="*"] svg {
+		margin: 0;
+	}
+
+	a[href="/case-studies"] {
+	    width: 263px;
+	    margin: 0;
+	    clear: both;
+	    float: right;
+	    margin-right: 5.97%;
+	    margin-bottom: 16px;
 	}
 }
 
