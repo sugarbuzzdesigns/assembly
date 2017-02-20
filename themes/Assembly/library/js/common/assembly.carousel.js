@@ -76,6 +76,12 @@ var assembly = assembly || {};
 					$(dot).append($nav);
 				});
 
+				$('.our-approach.carousel-module .slick-slide').each(function(i, slide){
+					var $slideNumber = $('<div class="slide-number">0'+ (i+1) +'</div>');
+
+					$(slide).find('.tile-copy').prepend($slideNumber);
+				});
+
 				$('.our-approach.carousel-module .slick-dots').append('<li class="track"></li>');
 
 				$('.our-approach.carousel-module .carousel-next').appendTo($ourApproachCarousel);

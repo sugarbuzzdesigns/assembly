@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-19 11:09 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 12:49 am - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -317,6 +317,12 @@ var assembly = assembly || {};
 					$nav.append($navArrowUp, $count, $navArrowDown);
 
 					$(dot).append($nav);
+				});
+
+				$('.our-approach.carousel-module .slick-slide').each(function(i, slide){
+					var $slideNumber = $('<div class="slide-number">0'+ (i+1) +'</div>');
+
+					$(slide).find('.tile-copy').prepend($slideNumber);
 				});
 
 				$('.our-approach.carousel-module .slick-dots').append('<li class="track"></li>');

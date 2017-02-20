@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 12:16 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 01:08 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1257,6 +1257,7 @@ ABOUT US Page
 }
 .page-about-us .our-approach {
   clear: both;
+  margin-bottom: 25px;
 }
 .page-about-us .our-approach h3 {
   font-size: rem(48);
@@ -1281,19 +1282,35 @@ ABOUT US Page
   position: relative;
   top: 117px;
   left: 105px;
+  display: none;
 }
 .page-about-us .our-approach .carousel {
   background: none;
   padding-top: 0;
-  margin-top: 140px;
+  margin-top: 0;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide .slide-number {
+  position: absolute;
+  left: -64px;
+  top: -71px;
+  display: block;
+  margin: 0;
 }
 .page-about-us .our-approach .carousel.our-approach .slick-slide .tile-copy {
   position: absolute;
   width: 22.22%;
-  top: 200px;
+  top: 50px;
   left: 0;
   padding: 0;
   margin: 0 0 0 calc(250%/1440*100);
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide .tile-copy h4 {
+  font-size: rem(13);
+  line-height: 20px;
+  letter-spacing: 1.08px;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
 }
 .page-about-us .our-approach .carousel [data-slick-index="0"] svg {
   width: resp(1133) !important;
@@ -1318,7 +1335,8 @@ ABOUT US Page
   padding-top: 0;
 }
 .page-about-us .our-approach .carousel-wrapper {
-  padding-top: 0;
+  padding-top: 65px;
+  margin-top: 103px;
 }
 .page-about-us .our-approach .slick-dots {
   width: 22px;
@@ -1350,8 +1368,8 @@ ABOUT US Page
 }
 .page-about-us .our-approach .slick-dots .up-down-nav .up, .page-about-us .our-approach .slick-dots .up-down-nav .down {
   opacity: 0;
-  height: 9px;
-  width: 13px;
+  height: 15px;
+  width: 19px;
   display: inline-block;
   stroke: #7d7d7d;
 }
@@ -1425,8 +1443,23 @@ ABOUT US Page
 .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .down {
   stroke: #93d5da;
 }
-.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="*"] svg {
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index] svg {
   margin: 0;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="0"] svg {
+  margin: resp(92) 0 0 resp(156);
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="1"] svg {
+  margin: resp(118) 0 0 resp(169);
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="2"] svg {
+  margin: resp(92) 0 0 resp(156);
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="3"] svg {
+  margin: resp(92) 0 0 resp(156);
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index="4"] svg {
+  margin: resp(92) 0 0 resp(163);
 }
 .page-about-us a[href="/case-studies"] {
   width: 263px;
@@ -1435,6 +1468,9 @@ ABOUT US Page
   float: right;
   margin-right: 5.97%;
   margin-bottom: 16px;
+}
+.page-about-us .to-top {
+  opacity: 1;
 }
 
 /*********************
