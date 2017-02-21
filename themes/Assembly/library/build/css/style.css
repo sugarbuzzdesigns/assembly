@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 02:15 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 11:03 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7267,6 +7267,10 @@ body::before {
   visibility: hidden;
 }
 
+a, a:hover, a:active, a:focus {
+  outline: 0;
+}
+
 /*********************
 SOCIAL SPRITE
 *********************/
@@ -7586,7 +7590,7 @@ CAROUSEL MODULES
   overflow: visible;
 }
 .carousel .slick-slide {
-  opacity: 0.5;
+  opacity: 0.25;
   transform: translate3d(0, -20px, 0);
   transition: opacity 0.5s, transform 0.5s;
 }
@@ -7972,9 +7976,9 @@ header.dark #mask-2, header.dark .menu-mask,
 header.dark #menu-path-1 {
   fill: #000;
 }
-header.dark svg path,
-header.dark svg polygon,
-header.dark svg mask {
+header.dark .svg-logo path,
+header.dark .svg-logo polygon,
+header.dark .svg-logo mask {
   fill: #000;
   -webkit-transition: fill .5s ease-in-out 0.5s;
   -moz-transition: fill .5s ease-in-out 0.5s;
@@ -8547,7 +8551,7 @@ CONTACT
 }
 
 #contact-map {
-  height: 500px;
+  height: 700px;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);

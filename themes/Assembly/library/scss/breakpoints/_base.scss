@@ -42,6 +42,10 @@ body {
 	}
 }
 
+a, a:hover, a:active, a:focus {
+   outline: 0;
+}
+
 /*********************
 SOCIAL SPRITE
 *********************/
@@ -424,7 +428,7 @@ CAROUSEL MODULES
 	}
 
    .slick-slide {
-   		opacity: 0.5;
+   		opacity: 0.25;
    		transform: translate3d(0, -20px, 0);
    		transition: opacity 0.5s, transform 0.5s;
 
@@ -847,7 +851,7 @@ header.dark {
 		fill: #000;
 	}
 
-	svg {
+	.svg-logo {
 		path,
 		polygon,
 		mask {
@@ -1558,7 +1562,7 @@ CONTACT
 }
 
 #contact-map {
-	height: 500px;
+	height: 700px;
     -webkit-filter: grayscale(100%);
        -moz-filter: grayscale(100%);
         -ms-filter: grayscale(100%);

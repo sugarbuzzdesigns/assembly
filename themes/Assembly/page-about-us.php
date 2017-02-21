@@ -246,7 +246,7 @@
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img mobile-only">
-								<?php include 'library/images/svg/our-approach-02.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-02.svg'; ?>
 							</div>
 							<div class="tile-img no-mobile desktop">
 								<?php include 'library/images/svg/our-approach-desktop-02.svg'; ?>
@@ -260,10 +260,10 @@
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img mobile-only">
-								<?php include 'library/images/svg/our-approach-03.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-03.svg'; ?>
 							</div>
 							<div class="tile-img no-mobile desktop">
-								<?php include 'library/images/svg/our-approach-desktop-03.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-desktop-03.svg'; ?>
 							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
@@ -274,10 +274,10 @@
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img mobile-only">
-								<?php include 'library/images/svg/our-approach-04.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-04.svg'; ?>
 							</div>
 							<div class="tile-img no-mobile desktop">
-								<?php include 'library/images/svg/our-approach-desktop-04.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-desktop-04.svg'; ?>
 							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
@@ -288,10 +288,10 @@
 					<div class="slide" >
 						<div class="tile-inner">
 							<div class="tile-img mobile-only">
-								<?php include 'library/images/svg/our-approach-05.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-05.svg'; ?>
 							</div>
 							<div class="tile-img no-mobile desktop">
-								<?php include 'library/images/svg/our-approach-desktop-05.svg'; ?>
+								<?php //include 'library/images/svg/our-approach-desktop-05.svg'; ?>
 							</div>
 							<div class="tile-copy">
 								<h4>Subheadline Here</h4>
