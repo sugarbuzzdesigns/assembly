@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-21 10:48 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-21 10:55 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10173,6 +10173,13 @@ you can add resource intensive styles.
     float: right;
     margin-right: 5.97%;
     margin-bottom: 16px;
+  }
+
+  /*********************
+  Contact Page
+  **********************/
+  #contact-map {
+    height: 700px;
   }
 
   /*********************
