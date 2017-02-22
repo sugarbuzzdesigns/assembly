@@ -1,32 +1,70 @@
 <?php
-	$projectsArgs = array(
-		'post_type'  => 'project',
-		'posts_per_page'=> -1
-	);
-	// The Query
-	$the_query = new WP_Query( $projectsArgs );
 
-	$projects = array();
+$projects1 = array(
+	array(
+		'image' => '01-Modular-1.jpg'
+	),
+	array(
+		'image' => '01-Modular-2.jpg'
+	),
+	array(
+		'image' => '01-Modular-3.jpg'
+	),
+);
 
-	// The Loop
-	if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-		$img_type = wp_get_post_terms(get_the_ID(), 'project_img_type');
-		$service_type = wp_get_post_terms(get_the_ID(), 'project_service_cat');
+$projects2 = array(
+	array(
+		'image' => '02-Custom-1.jpg'
+	),
+	array(
+		'image' => '02-Custom-2.jpg'
+	),
+	array(
+		'image' => '02-Custom-3.jpg'
+	),
+);
 
-		if(isset($service_type[0])){
-			$service_type = $service_type[0]->slug;
-		} else {
-			$service_type = '';
-		}
+$projects3 = array(
+	array(
+		'image' => '01-Modular-4.jpg'
+	),
+	array(
+		'image' => '01-Modular-5.jpg'
+	),
+	array(
+		'image' => '01-Modular-6.jpg'
+	),
+);
 
-		$project = array(
-			'id' => $post->ID,
-			'featured_image' => get_featured_image_data($post),
-			'title' => get_the_title(),
-			'img_type' => $img_type[0]->slug,
-			'service_type' => $service_type
-		);
+$projects4 = array(
+	array(
+		'image' => '02-Custom-4.jpg'
+	),
+	array(
+		'image' => '02-Custom-5.jpg'
+	),
+);
 
-		$projects[] = $project;
+$services1 = array(
+	array(
+		'image' => '03-Services-1.jpg'
+	),
+	array(
+		'image' => '03-Services-2.jpg'
+	),
+	array(
+		'image' => '03-Services-3.jpg'
+	),
+);
 
-	endwhile; wp_reset_postdata(); endif;
+$approach1 = array(
+	array(
+		'image' => '04-Approach-1.jpg'
+	),
+	array(
+		'image' => '04-Approach-2.jpg'
+	),
+	array(
+		'image' => '04-Approach-3.jpg'
+	),
+);
