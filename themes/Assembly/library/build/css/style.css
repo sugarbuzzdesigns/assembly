@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-22 12:27 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-22 04:28 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11303,7 +11303,8 @@ you can add resource intensive styles.
   CONTACT
   **********************/
   .page-contact {
-    background: url(../../images/backgrounds/contact-bg-large.jpg);
+    background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
+    background-size: 54%;
   }
   .page-contact form {
     padding-top: 79px;
