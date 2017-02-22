@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 12:49 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-21 11:37 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -7,6 +7,7 @@
 Modernizr.addTest('mobilesafari', function() {
   return /iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(navigator.userAgent);
 });
+!function(factory){"function"==typeof define&&define.amd?define(["jquery"],factory):"object"==typeof exports?module.exports=factory(require("jquery")):factory(jQuery)}(function($){var dispatch=$.event.dispatch||$.event.handle,special=$.event.special,uid1="D"+ +new Date,uid2="D"+(+new Date+1);special.scrollstart={setup:function(data){var timer,_data=$.extend({latency:special.scrollstop.latency},data),handler=function(evt){var _self=this,_args=arguments;timer?clearTimeout(timer):(evt.type="scrollstart",dispatch.apply(_self,_args)),timer=setTimeout(function(){timer=null},_data.latency)};$(this).bind("scroll",handler).data(uid1,handler)},teardown:function(){$(this).unbind("scroll",$(this).data(uid1))}},special.scrollstop={latency:250,setup:function(data){var timer,_data=$.extend({latency:special.scrollstop.latency},data),handler=function(evt){var _self=this,_args=arguments;timer&&clearTimeout(timer),timer=setTimeout(function(){timer=null,evt.type="scrollstop",dispatch.apply(_self,_args)},_data.latency)};$(this).bind("scroll",handler).data(uid2,handler)},teardown:function(){$(this).unbind("scroll",$(this).data(uid2))}}});
 /*!
 Waypoints - 4.0.1
 Copyright © 2011-2016 Caleb Troughton
@@ -99,12 +100,24 @@ var $ = jQuery;
 
 		init: function(){
 			this.env.winHeight = this.env.$win.height()
+			this.scrollYPos = this.env.$win.scrollTop(),
 
 			this.bindEvents();
 		},
 
 		bindEvents: function(){
-			var _this = this;
+			var _this = this,
+				st;
+
+			_this.env.$win.scroll(function(event){
+			   st = $(window).scrollTop();
+			   if (st > _this.scrollYPos){
+			       _this.env.$win.trigger('scroll-down');
+			   } else {
+			      _this.env.$win.trigger('scroll-up');
+			   }
+			   _this.scrollYPos = st;
+			});
 
 			_this.env.$win.on('resize', _this.debounce(function() {
 				_this.env.$win.trigger('windowResize');
@@ -113,6 +126,14 @@ var $ = jQuery;
 
 				_this.updateViewportDimensions();
 			}, 250));
+
+			_this.env.$win.on('scrollstart', function(){
+				console.log('scroll start');
+			});
+
+			_this.env.$win.on('scrollstop', function(){
+				console.log('scroll stop');
+			});
 		},
 		// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 		timeToWaitForLast: 100,

@@ -7,6 +7,7 @@ var assembly = assembly || {};
 	assembly.services = {
 		init: function(){
 			this.$selectFilter = $('.select-filter');
+			this.$filterMenu = $('.filter-menu');
 			this.initSelect2();
 			this.bindEvents();
 			this.countTilesAndAddClass();
@@ -24,17 +25,30 @@ var assembly = assembly || {};
 			_this.$selectFilter.on('change', function selectFilterOnChange(evt){
 				_this.filterProjectsByCategory(this.value);
 			});
+
+			assembly.util.env.$win.on('scroll-down', function(){
+				console.log('scroll-down');
+				if(_this.$filterMenu.hasClass('show')){
+					_this.$filterMenu.removeClass('show');
+				}
+			});
+
+			assembly.util.env.$win.on('scroll-up', function(){
+				console.log('scroll-up');
+				if(!_this.$filterMenu.hasClass('show')){
+					_this.$filterMenu.addClass('show');
+				}
+			});
 		},
 
 		countTilesAndAddClass: function(){
 			$('.content.landing').find('.tile').each(function(tileNum, tile){
-				console.log($(tile).addClass('tile-' + (tileNum+1)));
+				$(tile).addClass('tile-' + (tileNum+1));
 			});
 
 			$('.content.dynamic .individual-service').each(function(serviceNum, service){
 				$(service).find('.tile').each(function(serviceTileNum, tile){
-					console.log('tile-' + (serviceTileNum+1));
-					console.log($(tile).addClass('tile-' + (serviceTileNum+1)));
+					$(tile).addClass('tile-' + (serviceTileNum+1));
 				});
 			});
 		},
@@ -44,8 +58,6 @@ var assembly = assembly || {};
 				$allTiles = $('.individual-service[data-service]'),
 				$servicesToHide = $('.individual-service[data-service!="'+ option + '"]'),
 				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
-
-				console.log($servicesToShow);
 
 			if(option === 'all'){
 				$landingContent.show();

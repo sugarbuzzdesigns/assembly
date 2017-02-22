@@ -967,10 +967,20 @@ SERVICES Page
 	}
 
 	.filter-menu {
-		position: absolute;
-		right: 0;
-		top: 168px;
-		margin-right: 10.42%;
+	    position: fixed;
+	    right: 0;
+	    top: 168px;
+	    margin-right: 7.82%;
+	    padding: 16px 33px 20px 17px;
+	    z-index: 10;
+	    opacity: 0;
+	    transition: opacity 0.5s;
+	    background: #fff;
+
+	    &.show,
+	    &:hover {
+	    	opacity: 1;
+	    }
 
 		div {
 			a {

@@ -144,6 +144,7 @@ module.exports = function(grunt) {
 				src: [
 					// '<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
 					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
+					'<%= jsSrcDir %>/libs/jquery.scrollstartstop.min.js',
 					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js',
 					'<%= jsSrcDir %>/libs/bxslider.min.js',
 					'<%= jsSrcDir %>/libs/slick.min.js',

@@ -25,12 +25,24 @@ var $ = jQuery;
 
 		init: function(){
 			this.env.winHeight = this.env.$win.height()
+			this.scrollYPos = this.env.$win.scrollTop(),
 
 			this.bindEvents();
 		},
 
 		bindEvents: function(){
-			var _this = this;
+			var _this = this,
+				st;
+
+			_this.env.$win.scroll(function(event){
+			   st = $(window).scrollTop();
+			   if (st > _this.scrollYPos){
+			       _this.env.$win.trigger('scroll-down');
+			   } else {
+			      _this.env.$win.trigger('scroll-up');
+			   }
+			   _this.scrollYPos = st;
+			});
 
 			_this.env.$win.on('resize', _this.debounce(function() {
 				_this.env.$win.trigger('windowResize');
@@ -39,6 +51,14 @@ var $ = jQuery;
 
 				_this.updateViewportDimensions();
 			}, 250));
+
+			_this.env.$win.on('scrollstart', function(){
+				console.log('scroll start');
+			});
+
+			_this.env.$win.on('scrollstop', function(){
+				console.log('scroll stop');
+			});
 		},
 		// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 		timeToWaitForLast: 100,
