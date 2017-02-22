@@ -95,7 +95,8 @@ Select Box Overrides
 	right: 0;
 	margin: 17% 0 0 0;
 	z-index: 4;
-	// opacity: 0;
+	pointer-events: none;
+	opacity: 0;
 
 	&.show {
 		opacity: 1;
@@ -329,16 +330,7 @@ CASE STUDIES Page
 		}
 
 		h3 {
-			overflow: visible;
-			position: absolute;
-			z-index: 1;
-		    margin: 0;
-		    top: 43%;
-		    left: 9.661%;
-		    letter-spacing: -4px;
-		    z-index: 3;
-		    color: #000;
-		    transition: color .7s;
+			font-size: rem(85);
 
 			span {
 				display: block;
@@ -373,26 +365,36 @@ CASE STUDIES Page
 		}
 
 		.modular .default-content .inner {
-			background-image: url(../../images/case-study-modular-bg.jpg);
+			background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
 		.custom .default-content .inner {
-			background-image: url(../../images/case-study-custom-bg.jpg);
+			background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
 		.square {
-			width: 55.56%;
-			height: 55.7%;
-			top: 25%;
-			left: 33.091%;
+			width: calc(calc(410%/720)*100);
+			height: calc(calc(294%/720)*100);
+			top: calc(calc(238%/720)*100);
+			left: calc(calc(264%/720)*100);
 		}
 	}
 
 	.content {
-		// position: absolute;
+		.content-header {
+			span:nth-child(3){
+			    font-size: rem(13);
+			    font-family: 'gridnikregular';
+			    margin-top: 10px;
+			}
+		}
 
-		header {
-			padding-bottom: 20.77%;
+		.case-study-details {
+ 			margin-top: -110px;
 		}
 
 		h2 {
@@ -402,6 +404,14 @@ CASE STUDIES Page
 		    padding-top: 185px;
 		    padding-left: 121px;
 		    width: 100%;
+		}
+
+		.svg-container {
+			svg {
+				width: resp(1160);
+				margin: 0 auto;
+				display: block;
+			}
 		}
 
 		.case-study-desc {
@@ -999,6 +1009,10 @@ SERVICES Page
 		    clear: left;
 		    float: left;
 		    margin-bottom: 0;
+
+		    .tile-info {
+		    	margin-left: 6.2%;
+		    }
 		}
 
 		&.interior-buildouts {

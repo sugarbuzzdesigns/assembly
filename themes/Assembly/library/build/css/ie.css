@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-20 11:03 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-21 10:48 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -800,6 +800,8 @@ Select Box Overrides
   right: 0;
   margin: 17% 0 0 0;
   z-index: 4;
+  pointer-events: none;
+  opacity: 0;
 }
 .filter-wrap.show {
   opacity: 1;
@@ -986,16 +988,7 @@ CASE STUDIES Page
   height: 100vh;
 }
 .page-case-studies .landing h3 {
-  overflow: visible;
-  position: absolute;
-  z-index: 1;
-  margin: 0;
-  top: 43%;
-  left: 9.661%;
-  letter-spacing: -4px;
-  z-index: 3;
-  color: #000;
-  transition: color .7s;
+  font-size: rem(85);
 }
 .page-case-studies .landing h3 span {
   display: block;
@@ -1023,19 +1016,28 @@ CASE STUDIES Page
   right: 0;
 }
 .page-case-studies .landing .modular .default-content .inner {
-  background-image: url(../../images/case-study-modular-bg.jpg);
+  background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .page-case-studies .landing .custom .default-content .inner {
-  background-image: url(../../images/case-study-custom-bg.jpg);
+  background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .page-case-studies .landing .square {
-  width: 55.56%;
-  height: 55.7%;
-  top: 25%;
-  left: 33.091%;
+  width: calc(calc(410%/720)*100);
+  height: calc(calc(294%/720)*100);
+  top: calc(calc(238%/720)*100);
+  left: calc(calc(264%/720)*100);
 }
-.page-case-studies .content header {
-  padding-bottom: 20.77%;
+.page-case-studies .content .content-header span:nth-child(3) {
+  font-size: rem(13);
+  font-family: 'gridnikregular';
+  margin-top: 10px;
+}
+.page-case-studies .content .case-study-details {
+  margin-top: -110px;
 }
 .page-case-studies .content h2 {
   font-size: rem(72);
@@ -1044,6 +1046,11 @@ CASE STUDIES Page
   padding-top: 185px;
   padding-left: 121px;
   width: 100%;
+}
+.page-case-studies .content .svg-container svg {
+  width: resp(1160);
+  margin: 0 auto;
+  display: block;
 }
 .page-case-studies .content .case-study-desc {
   width: 16.53%;
@@ -1508,6 +1515,9 @@ SERVICES Page
   clear: left;
   float: left;
   margin-bottom: 0;
+}
+.page-services .tile.engineering .tile-info {
+  margin-left: 6.2%;
 }
 .page-services .tile.interior-buildouts {
   float: right;

@@ -1616,7 +1616,7 @@ CASE STUDIES Page
 		z-index: 1000;
 
 		.header-icon-logo {
-			fill: #000;
+			// fill: #000;
 		}
 
 		.main-menu-btn span {
@@ -1632,8 +1632,7 @@ CASE STUDIES Page
 		}
 
 		.case-study-category {
-			&.hover,
-			&:hover {
+			&.hover {
 				.default-content {
 					width: 0;
 				}
@@ -1641,6 +1640,10 @@ CASE STUDIES Page
 				.hover-content {
 					transform: translate3d(0,0,0);
 				}
+			}
+
+			.section-header {
+				padding: 78px 0 40px calc(calc(87%/720) *100);
 			}
 		}
 
@@ -1668,7 +1671,7 @@ CASE STUDIES Page
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 3;
+			z-index: 1003;
 			background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
 			background-size: cover;
 			transition: transform 0.5s;
@@ -1835,11 +1838,11 @@ CASE STUDIES Page
 		}
 
 		.modular .default-content .inner {
-			background-image: url(../../images/case-study-modular-bg.jpg);
+			background-image: url(../../images/pages/case-studies/00-Modular-Landing-mobile.jpg);
 		}
 
 		.custom .default-content .inner {
-			background-image: url(../../images/case-study-custom-bg.jpg);
+			background-image: url(../../images/pages/case-studies/00-Custom-Landing-mobile.jpg);
 		}
 
 		.square {
@@ -1869,8 +1872,16 @@ CASE STUDIES Page
 		background: #fff;
 		overflow: hidden;
 
-		header {
+		.content-header {
 			padding-bottom: 20.77%;
+
+			span:nth-child(3){
+			    font-size: rem(11);
+			    font-family: 'gridnikregular';
+			    margin-top: 15px;
+			    text-transform: uppercase;
+			    margin-bottom: 80px;
+			}
 		}
 
 		h2 {

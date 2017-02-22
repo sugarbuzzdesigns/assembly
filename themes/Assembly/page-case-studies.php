@@ -1,9 +1,8 @@
 <?php get_header(); ?>
-<?php include 'includes/header-dark-interior.php'; ?>
 
 <section class="landing">
 	<div class="landing-inner">
-		<div class="modular case-study-category">
+		<div class="modular case-study-category hover">
 			<div class="hover-content">
 				<header class="light section-header">
 				    <h2 class="logo">
@@ -26,6 +25,14 @@
 			</div>
 			<div class="default-content">
 				<div class="inner">
+					<header class="dark section-header interior">
+					    <h2 class="logo">
+					        <a href="/">
+					            <!-- logo SVG file -->
+					            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+					        </a>
+					    </h2>
+					</header>
 					<h3>
 						<span data-letter="m">m</span>
 						<span data-letter="o">o</span>
@@ -39,7 +46,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="custom case-study-category">
+		<div class="custom case-study-category hover">
 			<div class="hover-content">
 				<header class="light section-header">
 				    <?php include __DIR__ . '/includes/menu-btn.php'; ?>
@@ -56,6 +63,9 @@
 			</div>
 			<div class="default-content">
 				<div class="inner">
+					<header class="dark section-header interior">
+						<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+					</header>
 					<h3>
 						<span data-letter="c">c</span>
 						<span data-letter="u">u</span>
@@ -72,8 +82,21 @@
 </section>
 
 <section class="content">
-	<header>
-		<h2><span>custom</span><span>kits</span></h2>
+	<header class="dark section-header interior">
+	    <h1 class="logo">
+	        <a href="/">
+	            <!-- logo SVG file -->
+	            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+	        </a>
+	    </h1>
+		<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+	</header>
+	<div class="content-header">
+		<h2>
+			<span>custom</span>
+			<span>kits</span>
+			<span>spaces you want to be in</span>
+		</h2>
 		<div class="filter-wrap">
 			<select class="select-filter" style="width: 100%">
 				<option value="all">All</option>
@@ -95,19 +118,23 @@
 			</div>
 		</div>
 	</header>
-	<?php include 'includes/content/case-studies/custom/default.php' ?>
-	<?php include 'includes/content/case-studies/modular/default.php' ?>
-	<!-- CUSTOM STUDIES -->
-	<?php include 'includes/content/case-studies/custom/super.php' ?>
-	<?php include 'includes/content/case-studies/custom/hospitality.php' ?>
-	<?php include 'includes/content/case-studies/custom/experiential.php' ?>
-	<?php include 'includes/content/case-studies/custom/sporting.php' ?>
-	<!-- MODULAR STUDIES -->
-	<?php include 'includes/content/case-studies/modular/super.php' ?>
-	<?php include 'includes/content/case-studies/modular/hospitality.php' ?>
-	<?php include 'includes/content/case-studies/modular/experiential.php' ?>
-	<?php include 'includes/content/case-studies/modular/sporting.php' ?>
-
+	<div class="svg-container no-mobile desktop">
+		<?php include __DIR__ . '/library/images/svg/case-studies-svg.svg'; ?>
+	</div>
+	<div class="case-study-details">
+		<?php include 'includes/content/case-studies/custom/default.php' ?>
+		<?php include 'includes/content/case-studies/modular/default.php' ?>
+		<!-- CUSTOM STUDIES -->
+		<?php include 'includes/content/case-studies/custom/super.php' ?>
+		<?php include 'includes/content/case-studies/custom/hospitality.php' ?>
+		<?php include 'includes/content/case-studies/custom/experiential.php' ?>
+		<?php include 'includes/content/case-studies/custom/sporting.php' ?>
+		<!-- MODULAR STUDIES -->
+		<?php include 'includes/content/case-studies/modular/super.php' ?>
+		<?php include 'includes/content/case-studies/modular/hospitality.php' ?>
+		<?php include 'includes/content/case-studies/modular/experiential.php' ?>
+		<?php include 'includes/content/case-studies/modular/sporting.php' ?>
+	</div>
 	<a href="#" title="">
 		<?php include 'library/images/svg/view-modular-case-study.svg'; ?>
 	</a>
