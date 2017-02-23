@@ -29,3 +29,27 @@ ABOUT US Page
 		}
 	}
 }
+
+/*********************
+CONTACT
+**********************/
+// light footer
+.page-contact {
+	.add-photo-overlay {
+		p {
+			font-size: calc(calc(38px/414)*375);
+		}
+
+		.mesh-bg {
+			margin-top: 45%;
+			width: respmW(262);
+			height: calc(calc(338px/414)*320);
+			margin: respmW(187) 0 0 respmW(55);
+		}
+
+		.add-photo-btn {
+			height: 54px;
+			width: 54px;
+		}
+	}
+}

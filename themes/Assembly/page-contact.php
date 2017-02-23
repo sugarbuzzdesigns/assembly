@@ -18,13 +18,12 @@
 		<button class="dark" type="button">next</button>
 	</div>
 </form>
-
-<section class="add-photo">
-	<div class="photo-overlay-wrap">
-		<div class="add-photo-overlay">
-			<div class="mesh-bg dark"></div>
-			<?php include 'includes/header-dark-contact-add-photo.php'; ?>
-			<p>What are you interested in?</p>
+<section class="photo-overlay-wrap">
+	<div class="add-photo-overlay">
+		<div class="mesh-bg dark"></div>
+		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
+		<p>What are you interested in?</p>
+			<div class="add-photos-carousel-wrap">
 				<div class="owl-carousel add-photos-carousel">
 					<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 					<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
@@ -32,13 +31,23 @@
 					</div>
 					<?php endforeach; ?>
 				</div>
+				<nav>
+					<svg class="nav-arrow arrow-left" width="43px" height="14px" viewBox="44 461 43 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <path d="M75.2506443,461 L74.0976609,461.715425 L74.0976609,466.536556 L45,466.536556 L45,468.133486 L74.0912731,468.133486 L74.1088394,473.286779 L75.2602259,474.000607 L86.9737072,468.21493 L86.9737072,466.78408 L75.2506443,461 Z M75.6882031,468.133486 L75.6945908,463.000953 L84.8146579,467.499505 L75.7009785,472.001251 L75.6882031,468.133486 Z" id="ARROW-LEFT" stroke="none" fill="#090909" fill-rule="evenodd" transform="translate(65.986854, 467.500303) scale(-1, 1) translate(-65.986854, -467.500303) "></path>
+					</svg>
+					<svg class="nav-arrow arrow-right" width="42px" height="14px" viewBox="1352 461 42 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <path d="M1382.25064,461 L1381.09766,461.715425 L1381.09766,466.536556 L1352,466.536556 L1352,468.133486 L1381.09127,468.133486 L1381.10884,473.286779 L1382.26023,474.000607 L1393.97371,468.21493 L1393.97371,466.78408 L1382.25064,461 Z M1382.6882,468.133486 L1382.69459,463.000953 L1391.81466,467.499505 L1382.70098,472.001251 L1382.6882,468.133486 Z" id="ARROW_RIGHT" stroke="none" fill="#090909" fill-rule="evenodd"></path>
+					</svg>
+				</nav>
+			</div>
 
-			<a href="#" class="add-photo-btn">
-				<span></span>
-				<span></span>
-			</a>
-		</div>
+		<a href="#" class="add-photo-btn">
+			<span></span>
+			<span></span>
+		</a>
 	</div>
+</section>
+<section class="add-photo">
 	<div class="addable-images">
 		<?php foreach ($contactPhotos as $photo) : ?>
 		<div class="photo">
@@ -48,8 +57,8 @@
 	</div>
 	<h3>add photo</h3>
 	<div class="photos-wrap">
+		<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
 		<div class="owl-carousel photo-list-carousel">
-			<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
 <!-- 			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_2.jpg);"></div>
 			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_1.jpg);"></div>
 			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_3.jpg);"></div> -->

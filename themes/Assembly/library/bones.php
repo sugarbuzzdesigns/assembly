@@ -25,15 +25,15 @@ require_once( 'custom-functions.php' );
 $detect = new Mobile_Detect;
 
 if($detect->isMobile()){
-	$deviceType = 'mobile';
+	$deviceType = "mobile";
 }
 
 if($detect->isTablet()){
-	$deviceType = 'tablet';
+	$deviceType = "tablet";
 }
 
 if(!$detect->isTablet() && !$detect->isMobile()){
-	$deviceType = 'desktop';
+	$deviceType = "desktop";
 }
 
 if( $detect->isiOS() == '1'){

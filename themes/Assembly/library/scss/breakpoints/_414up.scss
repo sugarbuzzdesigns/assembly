@@ -325,7 +325,16 @@ ABOUT US Page
 CONTACT
 **********************/
 .page-contact {
-	background: url(../../images/backgrounds/contact-bg.jpg);
+	.add-photo-overlay {
+		p {
+			font-size: rem(38);
+		}
+
+		.add-photo-btn {
+			height: 60px;
+			width: 60px;
+		}
+	}
 
 	form {
 

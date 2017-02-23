@@ -1427,22 +1427,84 @@ CONTACT
 		}
 	}
 
+	.add-photos-carousel-wrap {
+    	padding: 0 106px 0;
+    	width: 100%;
+    	position: relative;
+    	overflow: hidden;
+	}
+
+	.add-photos-carousel .image {
+		padding: 0 9px;
+	}
+
+	.add-photo-overlay {
+		p {
+			font-size: rem(38);
+			line-height: calc(43/38);
+			letter-spacing: .37px;
+			margin: resp(62) 0 resp(50) resp(129);
+		}
+
+		.mesh-bg {
+			width: resp(1000);
+			height: 314px;
+			margin: resp(185) 0 0 resp(264);
+		}
+
+		nav {
+			overflow: hidden;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+
+			.nav-arrow {
+				cursor: pointer;
+				float: left;
+				margin-left: resp(45);
+			}
+
+			.arrow-right {
+				float: right;
+				margin-right: resp(45);
+			}
+		}
+
+		.close-btn {
+			height: 31px;
+			width: 31px;
+			margin-right: resp(64);
+
+			svg {
+			}
+		}
+
+		.add-photo-btn {
+			display: none;
+		}
+	}
+
 	.add-photo {
 		background: #000;
+		padding-left: calc(calc(130%/1440) *100);
 
 		h3 {
 			color: #fff;
 			font-size: rem(13);
 			letter-spacing: 1px;
 			margin-bottom: 38px;
-			margin-left: calc(calc(130%/1440) *100);
 			text-align: left;
+		}
+
+		.open-add-images {
+			margin: 0;
 		}
 
 		.photos-wrap {
     		padding-bottom: 37px;
 		    width: 238px;
-		    margin-left: 5.5%;
 		}
 	}
 

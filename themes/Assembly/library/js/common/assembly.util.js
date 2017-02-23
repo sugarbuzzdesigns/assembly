@@ -5,6 +5,8 @@ jQuery.migrateMute = true;
 var assembly = assembly || {};
 var $ = jQuery;
 
+console.log(php_vars.deviceType);
+
 (function($){
 	assembly.util = {
 		baseUrl: php_vars.home,

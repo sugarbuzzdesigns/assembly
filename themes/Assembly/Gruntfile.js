@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist']);
+	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'watch']);
 
 	grunt.registerTask('dev', ['default', 'browserSync', 'watch']);
 
@@ -149,6 +149,7 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/libs/bxslider.min.js',
 					'<%= jsSrcDir %>/libs/slick.min.js',
 					'<%= jsSrcDir %>/libs/owl.min.js',
+					'<%= jsSrcDir %>/libs/jquery.scrollbar.min.js',
 					// '<%= jsSrcDir %>/libs/owl.carousel-debug.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
 					'<%= jsSrcDir %>/libs/select2.min.js'

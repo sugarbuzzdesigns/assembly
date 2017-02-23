@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-22 04:28 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-23 12:32 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1852,21 +1852,68 @@ CONTACT
   font-size: rem(13);
   letter-spacing: 1px;
 }
+.page-contact .add-photos-carousel-wrap {
+  padding: 0 106px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.page-contact .add-photos-carousel .image {
+  padding: 0 9px;
+}
+.page-contact .add-photo-overlay p {
+  font-size: rem(38);
+  line-height: calc(43/38);
+  letter-spacing: .37px;
+  margin: resp(62) 0 resp(50) resp(129);
+}
+.page-contact .add-photo-overlay .mesh-bg {
+  width: resp(1000);
+  height: 314px;
+  margin: resp(185) 0 0 resp(264);
+}
+.page-contact .add-photo-overlay nav {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.page-contact .add-photo-overlay nav .nav-arrow {
+  cursor: pointer;
+  float: left;
+  margin-left: resp(45);
+}
+.page-contact .add-photo-overlay nav .arrow-right {
+  float: right;
+  margin-right: resp(45);
+}
+.page-contact .add-photo-overlay .close-btn {
+  height: 31px;
+  width: 31px;
+  margin-right: resp(64);
+}
+.page-contact .add-photo-overlay .add-photo-btn {
+  display: none;
+}
 .page-contact .add-photo {
   background: #000;
+  padding-left: calc(calc(130%/1440) *100);
 }
 .page-contact .add-photo h3 {
   color: #fff;
   font-size: rem(13);
   letter-spacing: 1px;
   margin-bottom: 38px;
-  margin-left: calc(calc(130%/1440) *100);
   text-align: left;
+}
+.page-contact .add-photo .open-add-images {
+  margin: 0;
 }
 .page-contact .add-photo .photos-wrap {
   padding-bottom: 37px;
   width: 238px;
-  margin-left: 5.5%;
 }
 .page-contact .contact-info {
   padding-top: 100px;

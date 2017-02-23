@@ -44,7 +44,7 @@ var assembly = assembly || {};
 			}),
 
 			_this.$addPhotoIcon.on('click', function addPhotosClickHandler(){
-				_this.openAddContactPhotoWrap();
+				// _this.openAddContactPhotoWrap();
 			});
 
 			_this.$addphotoButton.on('click', function addPhotoClickHandler(evt){
@@ -64,9 +64,9 @@ var assembly = assembly || {};
 
 			this.$photoOverlayWrap.data('originalHeight', this.photoOverlayWrapHeight);
 
-			this.$photoOverlayWrap.css({
-				height: 0
-			});
+			// this.$photoOverlayWrap.css({
+			// 	height: 0
+			// });
 		},
 
 		initCarousels: function(){
@@ -74,12 +74,38 @@ var assembly = assembly || {};
 
 			_this.$addPhotosCarousel = $('.add-photos-carousel');
 			_this.$addPhotosCarousel.on('initialized.owl.carousel', function(){
+
 				_this.setCurrentCarouselSlide('addPhotosCarouselCurSlide', $(this).find('.owl-item').eq(0));
+
+				$('.add-photos-carousel-wrap').find('nav .arrow-right').on('click', function(){
+					_this.$addPhotosCarousel.data('owl.carousel').next();
+				});
+
+				$('.add-photos-carousel-wrap').find('nav .arrow-left').on('click', function(){
+					_this.$addPhotosCarousel.data('owl.carousel').prev();
+				});
+			});
+
+			_this.$addPhotosCarousel.on('changed.owl.carousel', function(evt){
+				var items_per_page = evt.relatedTarget.options.slideBy;
+				var item_index = evt.item.index;
+				var item_count = evt.item.count;
+				var last_vis_item_index = items_per_page + item_index;
+
+				console.log(last_vis_item_index);
+
+				if(evt.page.index === 0){
+					$('.add-photos-carousel-wrap').find('nav .arrow-left').addClass('disabled');
+				}
+
+				if(evt.page.index === 0){
+					$('.add-photos-carousel-wrap').find('nav .arrow-left').addClass('disabled');
+				}
 			});
 
 			_this.$addPhotosCarousel.owlCarousel({
-				items: 1,
-				stagePadding: 50
+				items: assembly.util.useragent.deviceType === 'desktop' ? 5 : 1,
+				stagePadding: assembly.util.useragent.deviceType === 'desktop' ? 0 : 50
 			});
 
 			_this.$photoListCarousel = $('.photo-list-carousel');

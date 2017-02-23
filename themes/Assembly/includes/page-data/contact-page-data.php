@@ -1,17 +1,23 @@
 <?php
 
-$img_dir = get_template_directory_uri() . '/library/images/placeholders/';
+$img_dir = get_template_directory_uri() . '/library/images/pages/';
 $contactPhotos = array(
 	array(
-		'src' => 'project_placeholder_1.jpg'
+		'src' => 'services/03-Interior.jpg'
 	),
 	array(
-		'src' => 'project_placeholder_2.jpg'
+		'src' => 'services/05-Interior.jpg'
 	),
 	array(
-		'src' => 'project_placeholder_3.jpg'
+		'src' => 'services/04-Interior.jpg'
 	),
 	array(
-		'src' => 'project_placeholder_4.jpg'
+		'src' => 'services/02-Interior.jpg'
+	),
+	array(
+		'src' => 'case-studies/c-hospitality-content-1.jpg'
+	),
+	array(
+		'src' => 'case-studies/c-hospitality-content-5.jpg'
 	)
 );
