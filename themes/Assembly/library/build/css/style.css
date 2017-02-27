@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:40 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 04:09 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9228,6 +9228,9 @@ ABOUT US Page
   background: transparent;
   padding-bottom: 10%;
 }
+.page-about-us .employees .employee-info {
+  display: none;
+}
 .page-about-us .employees .years-experience {
   top: -5px;
   left: -45px;
@@ -9381,6 +9384,9 @@ ABOUT US Page
 }
 .page-about-us .our-approach .carousel.our-approach .slick-slide .tile-copy p {
   color: #7d7d7d;
+}
+.page-about-us .our-approach .carousel.our-approach .slick-slide .slide-number {
+  display: none;
 }
 .page-about-us .our-approach .carousel.our-approach .slick-slide .tile-inner {
   padding: 0;
@@ -10879,6 +10885,9 @@ you can add resource intensive styles.
     clear: both;
     margin: 150px 0 0 0;
   }
+  .page-about-us .employees.info-open {
+    cursor: url(../../images/svg/close-x-dark.svg), auto;
+  }
   .page-about-us .employees .mesh-bg {
     width: 81.67%;
     height: 490px;
@@ -10887,17 +10896,61 @@ you can add resource intensive styles.
   .page-about-us .employees .years-experience {
     display: none;
   }
+  .page-about-us .employees .employee-info {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  .page-about-us .employees .employee-info.show {
+    display: block;
+  }
+  .page-about-us .employees .employee-info .col {
+    width: 25%;
+    float: left;
+    min-height: 1px;
+  }
+  .page-about-us .employees .employee-info .employee-about {
+    margin-top: 81px;
+    padding-left: 29px;
+  }
+  .page-about-us .employees .employee-info .employee-about .inner {
+    background: #fff;
+    padding: 15px 27px 0;
+    width: 244px;
+  }
+  .page-about-us .employees .employee-info .employee-fun-fact {
+    padding-left: 12px;
+  }
+  .page-about-us .employees .employee-info .employee-fun-fact .inner {
+    width: 244px;
+    padding: 80px 20px 130px 30px;
+    background: #fff;
+  }
+  .page-about-us .employees .employee-info .employee-years {
+    margin-top: 81px;
+  }
+  .page-about-us .employees .employee-info .employee-years .numbers {
+    background: #fff;
+  }
   .page-about-us .employee-list {
     overflow: hidden;
     z-index: 1;
     position: relative;
   }
   .page-about-us .employee-list .employee {
-    positon: relative;
+    position: relative;
+    cursor: pointer;
     float: left;
     width: 16.67%;
     margin-right: calc(102%/1440*100);
     z-index: 1;
+  }
+  .page-about-us .employee-list .employee.invisible {
+    opacity: 0;
+    pointer-events: none;
   }
   .page-about-us .employee-list .employee:first-child {
     margin-left: calc(44%/1440*100);

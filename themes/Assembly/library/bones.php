@@ -185,6 +185,10 @@ function bones_scripts_and_styles() {
 			wp_enqueue_script( 'casestudies', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.casestudies' . $suffix . '.js', array( 'jquery' ), true );
 		}
 
+		if(is_page('about-us')){
+			wp_enqueue_script( 'about', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.about' . $suffix . '.js', array( 'jquery' ), true );
+		}
+
 		// enqueue styles and scripts
 		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );

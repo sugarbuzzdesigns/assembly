@@ -1,3 +1,4 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 03:12 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */

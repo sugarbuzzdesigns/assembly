@@ -2436,6 +2436,10 @@ ABOUT US Page
 		background: transparent;
 		padding-bottom: 10%;
 
+		.employee-info {
+			display: none;
+		}
+
 		.years-experience {
 			top: -5px;
 			left: -45px;
@@ -2627,6 +2631,10 @@ ABOUT US Page
 					p {
 						color: #7d7d7d;
 					}
+				}
+
+				.slide-number {
+					display: none;
 				}
 
 				.tile-inner {

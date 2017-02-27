@@ -624,6 +624,10 @@ ABOUT US Page
 		clear: both;
 		margin: 150px 0 0 0;
 
+		&.info-open {
+			cursor: url(../../images/svg/close-x-dark.svg), auto;
+		}
+
 		.mesh-bg {
 			width: 81.67%;
 			height: 490px;
@@ -633,6 +637,64 @@ ABOUT US Page
 		.years-experience {
 			display: none;
 		}
+
+		.employee-info {
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			width: 100%;
+
+			&.show {
+				display: block;
+			}
+
+			.col {
+				width: 25%;
+				float: left;
+				min-height: 1px;
+			}
+
+			.employee-about {
+				margin-top: 81px;
+				padding-left: 29px;
+
+				.inner {
+					background: #fff;
+					padding: 15px 27px 0;
+					width: 244px;
+				}
+			}
+
+			.employee-fun-fact {
+				padding-left: 12px;
+
+				.inner {
+					width: 244px;
+					padding: 80px 20px 130px 30px;
+					background: #fff;
+				}
+			}
+
+			.employee-years {
+				margin-top: 81px;
+
+				.numbers {
+					background: #fff;
+				}
+			}
+		}
+
+		[data-employee="dominic-bennett"]{
+			.col:nth-child(2) {
+				// width: 14%;
+
+				p {
+
+				}
+			}
+		}
 	}
 
 	.employee-list {
@@ -641,11 +703,17 @@ ABOUT US Page
 	    position: relative;
 
 		.employee {
-			positon: relative;
+			position: relative;
+			cursor: pointer;
 			float: left;
 			width: 16.67%;
 			margin-right: resp(102);
 			z-index: 1;
+
+			&.invisible {
+				opacity: 0;
+				pointer-events: none;
+			}
 
 			&:first-child {
 				margin-left: resp(44);
