@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:02 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:16 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1844,6 +1844,8 @@ CONTACT
   padding: 14px 0 0 0;
   width: 100%;
   height: auto;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .page-contact form button {
   margin-top: 38px;
@@ -1922,6 +1924,7 @@ CONTACT
 }
 .page-contact .add-photo .photos-wrap .inner {
   margin: 0;
+  padding: 0;
 }
 .page-contact .contact-info {
   padding-top: 100px;

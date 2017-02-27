@@ -142,6 +142,7 @@ var assembly = assembly || {};
 			});
 
 			_this.$addPhotosCarousel.owlCarousel({
+				mouseDrag: false,
 				responsive : {
 				    // breakpoint from 0 up
 				    0 : {
@@ -235,10 +236,10 @@ var assembly = assembly || {};
 			var numSlides = $('.photos-wrap .photo').length,
 				photoId = photoId,
 				photoWidth = $('#' + photoId).outerWidth(true),
-				stageWidth = $('.add-photo .inner').outerWidth(true),
+				stageWidth = $('.add-photo .inner').width(),
 				newWidth;
 
-			newWidth = Math.ceil($('.add-photo .inner').outerWidth()) + Math.ceil($('#' + photoId).outerWidth(true));
+			newWidth = Math.ceil($('.add-photo .inner').width()) + Math.ceil($('#' + photoId).outerWidth(true));
 
 			if($.inArray(photoId, this.addedPhotosArray) !== -1){
 				alert('You\'ve already added this photo');

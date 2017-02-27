@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:02 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:16 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8588,6 +8588,8 @@ CONTACT
   font-size: 0;
   direction: rtl;
   margin: 0 auto;
+  box-sizing: content-box;
+  padding: 0 20px;
 }
 .page-contact .add-photo .photos-wrap .track {
   float: right;
@@ -11454,6 +11456,8 @@ you can add resource intensive styles.
     padding: 14px 0 0 0;
     width: 100%;
     height: auto;
+    -webkit-appearance: none;
+    border-radius: 0;
   }
   .page-contact form button {
     margin-top: 38px;
@@ -11532,6 +11536,7 @@ you can add resource intensive styles.
   }
   .page-contact .add-photo .photos-wrap .inner {
     margin: 0;
+    padding: 0;
   }
   .page-contact .contact-info {
     padding-top: 100px;
