@@ -1573,6 +1573,8 @@ CONTACT
 			color: #fff;
 			border-bottom: solid 1px #8f8f8f;
 			width: 100%;
+			-webkit-appearance: none;
+			border-radius: 0;
 
 			&:focus,
 			&:active {
@@ -1687,6 +1689,7 @@ CONTACT
 			background-size: 100%;
     		background-position: center center;
     		margin-right: 0;
+    		cursor: pointer;
 		}
 	}
 

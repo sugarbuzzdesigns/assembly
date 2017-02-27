@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:36 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:40 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8574,6 +8574,8 @@ CONTACT
   color: #fff;
   border-bottom: solid 1px #8f8f8f;
   width: 100%;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .page-contact form input:focus, .page-contact form input:active {
   background: transparent;
@@ -8666,6 +8668,7 @@ CONTACT
   background-size: 100%;
   background-position: center center;
   margin-right: 0;
+  cursor: pointer;
 }
 .page-contact .contact-info {
   background: #fff;
@@ -11494,8 +11497,6 @@ you can add resource intensive styles.
     padding: 14px 0 0 0;
     width: 100%;
     height: auto;
-    -webkit-appearance: none;
-    border-radius: 0;
   }
   .page-contact form button {
     margin-top: 38px;
