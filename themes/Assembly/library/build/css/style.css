@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-26 10:19 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 08:10 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8346,9 +8346,14 @@ CONTACT
   background: url(../../images/backgrounds/contact-bg.jpg);
   position: relative;
 }
+.page-contact .landing {
+  padding-bottom: 30px;
+  transition: margin 0.5s;
+}
 .page-contact .photo-overlay-wrap {
   overflow: hidden;
   position: relative;
+  transition: height 0.5s;
 }
 .page-contact .add-photo-overlay {
   left: 0;
@@ -8434,7 +8439,7 @@ CONTACT
 }
 .page-contact form {
   width: 80%;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 .page-contact form .error-message {
   display: none;
@@ -8489,7 +8494,7 @@ CONTACT
   font-family: 'pangrambold';
   padding: 0 0 6px;
   font-size: 1.3125rem;
-  color: #282828;
+  color: #fff;
   border-bottom: solid 1px #8f8f8f;
   width: 100%;
 }
@@ -8519,6 +8524,7 @@ CONTACT
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 .page-contact .add-photo .remove-photo span {
   position: absolute;

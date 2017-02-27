@@ -1294,9 +1294,15 @@ CONTACT
 	background: url(../../images/backgrounds/contact-bg.jpg);
 	position: relative;
 
+	.landing {
+		padding-bottom: 30px;
+		transition: margin 0.5s;
+	}
+
 	.photo-overlay-wrap {
 		overflow: hidden;
 		position: relative;
+		transition: height 0.5s;
 	}
 
 	.add-photo-overlay {
@@ -1407,7 +1413,7 @@ CONTACT
 
 	form {
 		width: 80%;
-		margin: 0 auto 30px;
+		margin: 0 auto;
 
 		.error-message {
 			display: none;
@@ -1467,7 +1473,7 @@ CONTACT
 			font-family: 'pangrambold';
 			padding: 0 0 6px;
 			font-size: rem(21);
-			color: #282828;
+			color: #fff;
 			border-bottom: solid 1px #8f8f8f;
 			width: 100%;
 
@@ -1503,6 +1509,7 @@ CONTACT
 			height: 30px;
 			width: 30px;
 			border-radius: 50%;
+    		box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 
 			span {
 				position: absolute;

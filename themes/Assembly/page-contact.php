@@ -1,23 +1,25 @@
 <?php get_header(); ?>
-<?php include 'includes/header-light.php'; ?>
 <?php include 'includes/page-data/contact-page-data.php'; ?>
 
-<form action="" method="get" accept-charset="utf-8">
-	<div class="form-viewport">
-		<label class="active">
-			<p>what impression should your space leave?</p>
-			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-			<input type="text" name="" value="" placeholder="type here">
-		</label>
-		<label>
-			<p>How about another question? </p>
-			<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-			<input type="text" name="" value="" placeholder="type here">
-		</label>
-		<div class="error-message">Please Fill out the field.</div>
-		<button class="dark" type="button">next</button>
-	</div>
-</form>
+<section class="landing">
+	<?php include 'includes/header-light.php'; ?>
+	<form action="" method="get" accept-charset="utf-8">
+		<div class="form-viewport">
+			<label class="active">
+				<p>what impression should your space leave?</p>
+				<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+				<input type="text" name="" value="" placeholder="type here">
+			</label>
+			<label>
+				<p>How about another question? </p>
+				<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+				<input type="text" name="" value="" placeholder="type here">
+			</label>
+			<div class="error-message">Please Fill out the field.</div>
+			<button class="dark" type="button">next</button>
+		</div>
+	</form>
+</section>
 <section class="photo-overlay-wrap">
 	<div class="add-photo-overlay">
 		<div class="mesh-bg dark"></div>

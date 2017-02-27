@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-26 10:24 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 08:15 am - User: Phoydar */
 /*!
  * Assembly Contact Page
  */
@@ -8,14 +8,22 @@ var assembly = assembly || {};
 	assembly.contact = {
 		init: function(){
 
+			this.$landingSection = $('.landing');
+			this.landingSectionHeight = this.$landingSection.outerHeight(true);
 			this.$addPhotoSection = $('.add-photo');
 			this.$pagerCurrent = $('.pager .current');
 			// button that adds an individual photo
 			this.$addphotoButton = $('.add-photo-overlay .add-photo-btn');
 			// button that opens the add photos section
 			this.$addPhotoIcon = $('.open-add-images');
+			// container for image carousel with images that can be clicked
+			// to be added to the user's contact form
+			this.$photoOverlayWrap = $('.photo-overlay-wrap');
+			// original height of .photo-overlay-wrap
+			this.photoOverlayWrapHeight = 0;
 			// list that contact photos get added to
 			this.$addedPhotosList = $('.photos-wrap .photos');
+			// keep a list of photos that have been added
 			this.addedPhotosArray = [];
 
 			this.photosListCarouselCurSlide = '';
@@ -41,12 +49,12 @@ var assembly = assembly || {};
 				}
 			});
 
-			_this.$addPhotoSection.find('.close-btn').on('click', function(){
+			_this.$photoOverlayWrap.find('.close-btn').on('click', function overlayPhotoCloseHandler(){
 				_this.closeAddContactPhotoWrap();
 			}),
 
 			_this.$addPhotoIcon.on('click', function addPhotosClickHandler(){
-				// _this.openAddContactPhotoWrap();
+				_this.openAddContactPhotoWrap();
 			});
 
 			_this.$addphotoButton.on('click', function addPhotoClickHandler(evt){
@@ -67,14 +75,11 @@ var assembly = assembly || {};
 		},
 
 		setInitialSectionHeights: function(){
-			this.$photoOverlayWrap = $('.photo-overlay-wrap');
-			this.photoOverlayWrapHeight = this.$photoOverlayWrap.height();
-
 			this.$photoOverlayWrap.data('originalHeight', this.photoOverlayWrapHeight);
 
-			// this.$photoOverlayWrap.css({
-			// 	height: 0
-			// });
+			this.$photoOverlayWrap.css({
+				height: 0
+			});
 		},
 
 		setInitialSectionWidths: function(){
@@ -99,6 +104,8 @@ var assembly = assembly || {};
 				$('.add-photos-carousel-wrap').find('nav .arrow-left').on('click', function(){
 					_this.$addPhotosCarousel.data('owl.carousel').prev();
 				});
+
+				_this.photoOverlayWrapHeight = _this.$photoOverlayWrap.outerHeight(true);
 			});
 
 			_this.$addPhotosCarousel.on('changed.owl.carousel', function(evt){
@@ -141,19 +148,23 @@ var assembly = assembly || {};
 		},
 
 		openAddContactPhotoWrap: function(){
-			this.$photoOverlayWrap.animate({
-				height: this.$photoOverlayWrap.data().originalHeight
-			}, 500);
+			this.$photoOverlayWrap.css({
+				height: this.photoOverlayWrapHeight
+			});
 
-			$('body, html').animate({
-				scrollTop: $('.add-photo').offset().top
+			this.$landingSection.css({
+				marginTop: -this.landingSectionHeight
 			});
 		},
 
 		closeAddContactPhotoWrap: function(){
-			this.$photoOverlayWrap.animate({
+			this.$photoOverlayWrap.css({
 				height: 0
-			}, 500);
+			});
+
+			this.$landingSection.css({
+				marginTop: 0
+			});
 		},
 
 		setCurrentCarouselSlide: function(sliderName, slide){
