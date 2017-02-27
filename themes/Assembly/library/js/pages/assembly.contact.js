@@ -25,6 +25,7 @@ var assembly = assembly || {};
 			this.bindEvents();
 
 			this.setInitialSectionHeights();
+			this.setInitialSectionWidths();
 		},
 
 		bindEvents: function(){
@@ -56,6 +57,12 @@ var assembly = assembly || {};
 			_this.$addPhotosCarousel.on('changed.owl.carousel', function(event){
 				_this.setCurrentCarouselSlide('addPhotosCarouselCurSlide', $(this).data('owl.carousel').items()[event.item.index]);
 			});
+
+			$('.remove-photo').on('click', function removePhotoClickHandler(evt){
+				evt.preventDefault();
+
+				_this.removePhotoFromPhotosList($(this).parent());
+			});
 		},
 
 		setInitialSectionHeights: function(){
@@ -67,6 +74,13 @@ var assembly = assembly || {};
 			// this.$photoOverlayWrap.css({
 			// 	height: 0
 			// });
+		},
+
+		setInitialSectionWidths: function(){
+			var $track = $('.add-photo .inner'),
+				addImagesWidth = $('.open-add-images').outerWidth(true);
+
+			$track.width(addImagesWidth);
 		},
 
 		initCarousels: function(){
@@ -120,8 +134,8 @@ var assembly = assembly || {};
 				stagePadding: 50
 			};
 
-			_this.$photoListCarousel.owlCarousel(_this.photoListCarouselSettings);
-			_this.photoListOwl = _this.$photoListCarousel.data('owl.carousel');
+			// _this.$photoListCarousel.owlCarousel(_this.photoListCarouselSettings);
+			// _this.photoListOwl = _this.$photoListCarousel.data('owl.carousel');
 
 		},
 
@@ -180,33 +194,32 @@ var assembly = assembly || {};
 		},
 
 		addPhotoToPhotosList: function(){
-			var numSlides = this.$photoListCarousel.data('owl.carousel').items().length,
-				$photoDiv = this.addPhotosCarouselCurSlide.find('.image'),
-				photoId = $photoDiv.data('photo-id'),
-				$photoToAdd =  $photoDiv.find('img'),
-				photoSrc = $photoToAdd.attr('src'),
-				$photo = $('<div id="'+ photoId +'" class="photo" style="background-image: url('+ photoSrc +');"></div>');
+			var numSlides = $('.photos-wrap .photo').length,
+				photoId = this.addPhotosCarouselCurSlide.find('.image').data('photo-id'),
+				photoWidth = $('#' + photoId).outerWidth(true),
+				stageWidth = $('.add-photo .inner').outerWidth(true),
+				newWidth;
+
+			newWidth = Math.ceil($('.add-photo .inner').outerWidth()) + Math.ceil($('#' + photoId).outerWidth(true));
 
 			if($.inArray(photoId, this.addedPhotosArray) !== -1){
 				return;
 			}
 
+			$('#' + photoId).addClass('show');
+
+			$('.add-photo .inner').width(newWidth);
+
 			this.addedPhotosArray.push(photoId);
+		},
 
-			if(numSlides <= 1){
-				this.$photoListCarousel.data('owl.carousel').destroy();
-				this.$addPhotoIcon.after($photo);
-			} else {
-				this.$photoListCarousel.data('owl.carousel').add($photo, 1);
-				this.$photoListCarousel.data('owl.carousel').destroy();
-			}
+		removePhotoFromPhotosList: function($photo){
+			$photo.removeClass('show');
 
-			this.$photoListCarousel.owlCarousel({
-				items: 2,
-				rtl: true,
-				margin: 20,
-				stagePadding: 50
-			});
+			var newWidth = Math.ceil($('.add-photo .inner').outerWidth()) - Math.ceil($photo.outerWidth(true));
+			$('.add-photo .inner').width(newWidth);
+
+			this.addedPhotosArray.splice($.inArray($photo.attr('id'), this.addedPhotosArray), 1);
 		}
 	};
 

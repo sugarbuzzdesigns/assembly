@@ -48,20 +48,18 @@
 	</div>
 </section>
 <section class="add-photo">
-	<div class="addable-images">
-		<?php foreach ($contactPhotos as $photo) : ?>
-		<div class="photo">
-			<img data-src="<?php echo $img_dir . $photo['src']; ?>">
-		</div>
-		<?php endforeach; ?>
-	</div>
 	<h3>add photo</h3>
 	<div class="photos-wrap">
-		<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
-		<div class="owl-carousel photo-list-carousel">
-<!-- 			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_2.jpg);"></div>
-			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_1.jpg);"></div>
-			<div class="slide photo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/placeholders/project_placeholder_3.jpg);"></div> -->
+		<div class="inner">
+			<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
+			<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
+			<div id="contact-photo-<?php echo $count; ?>" class="photo slide addable-image" style="background-image: url(<?php echo $img_dir . $photo['src']; ?>);">
+				<a href="#" class="remove-photo">
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>

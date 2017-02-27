@@ -1494,13 +1494,48 @@ CONTACT
 			text-align: center;
 		}
 
-		.addable-images {
-			display: none;
+		.remove-photo {
+			display: block;
+			position: absolute;
+			top: 4px;
+			right: 6px;
+			background: #fff;
+			height: 30px;
+			width: 30px;
+			border-radius: 50%;
+
+			span {
+				position: absolute;
+				display: block;
+				background: #000;
+				height: 1px;
+				width: 48%;
+				transform: translate(-50%,-50%) rotate(-45deg);
+				top: 50%;
+				left: 50%;
+
+				& + span {
+					transform: translate(-50%,-50%) rotate(45deg);
+				}
+			}
 		}
 
 		.photos-wrap {
-			overflow: auto;
+			overflow: scroll;
 			padding-bottom: 7.25%;
+			// padding-right: 10.63%;
+
+			.inner {
+				overflow: hidden;
+				padding-bottom: 10px;
+				font-size: 0;
+				direction: rtl;
+				margin: 0 auto;
+			}
+
+			.track {
+				float: right;
+			}
 		}
 
 		.photos {
@@ -1516,11 +1551,12 @@ CONTACT
 		}
 
 		.photo {
-			margin: 0 auto;
+			display: inline-block;
 			width: 138px;
 			background-size: cover;
 			background-repeat: no-repeat;
-			// padding-top: 73.54%;
+			margin-right: 20px;
+			position: relative;
 			padding-top: 108px;
 
 			img {
@@ -1533,9 +1569,18 @@ CONTACT
 			}
 		}
 
+		.addable-image {
+			display: none;
+
+			&.show {
+				display: inline-block;
+			}
+		}
+
 		.open-add-images {
 			background-size: 100%;
     		background-position: center center;
+    		margin-right: 0;
 		}
 	}
 

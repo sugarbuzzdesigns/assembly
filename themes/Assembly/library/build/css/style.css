@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-23 12:32 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-26 10:19 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8510,12 +8510,42 @@ CONTACT
   font-size: 0.75rem;
   text-align: center;
 }
-.page-contact .add-photo .addable-images {
-  display: none;
+.page-contact .add-photo .remove-photo {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.page-contact .add-photo .remove-photo span {
+  position: absolute;
+  display: block;
+  background: #000;
+  height: 1px;
+  width: 48%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+}
+.page-contact .add-photo .remove-photo span + span {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .page-contact .add-photo .photos-wrap {
-  overflow: auto;
+  overflow: scroll;
   padding-bottom: 7.25%;
+}
+.page-contact .add-photo .photos-wrap .inner {
+  overflow: hidden;
+  padding-bottom: 10px;
+  font-size: 0;
+  direction: rtl;
+  margin: 0 auto;
+}
+.page-contact .add-photo .photos-wrap .track {
+  float: right;
 }
 .page-contact .add-photo .photos {
   width: 100%;
@@ -8526,10 +8556,12 @@ CONTACT
   float: none;
 }
 .page-contact .add-photo .photo {
-  margin: 0 auto;
+  display: inline-block;
   width: 138px;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-right: 20px;
+  position: relative;
   padding-top: 108px;
 }
 .page-contact .add-photo .photo img {
@@ -8539,9 +8571,16 @@ CONTACT
 .page-contact .add-photo .photo.hidden {
   display: none;
 }
+.page-contact .add-photo .addable-image {
+  display: none;
+}
+.page-contact .add-photo .addable-image.show {
+  display: inline-block;
+}
 .page-contact .add-photo .open-add-images {
   background-size: 100%;
   background-position: center center;
+  margin-right: 0;
 }
 .page-contact .contact-info {
   background: #fff;
