@@ -113,8 +113,6 @@ var assembly = assembly || {};
 				var item_count = evt.item.count;
 				var last_vis_item_index = items_per_page + item_index;
 
-				console.log(last_vis_item_index);
-
 				if(evt.page.index === 0){
 					$('.add-photos-carousel-wrap').find('nav .arrow-left').addClass('disabled');
 				}
@@ -125,25 +123,29 @@ var assembly = assembly || {};
 			});
 
 			_this.$addPhotosCarousel.owlCarousel({
-				items: assembly.util.useragent.deviceType === 'desktop' ? 5 : 1,
-				stagePadding: assembly.util.useragent.deviceType === 'desktop' ? 0 : 50
+				responsive : {
+				    // breakpoint from 0 up
+				    0 : {
+				        items: 1,
+				        stagePadding: 50
+				    },
+				    // breakpoint from 600 up
+				    600 : {
+				        items: 2,
+				        stagePadding: 0
+				    },
+				    // breakpoint from 768 up
+				    768 : {
+				        items: 3,
+				        stagePadding: 0
+				    },
+				    // breakpoint from 1030 up
+				    1030 : {
+				        items: 5,
+				        stagePadding: 0
+				    }
+				}
 			});
-
-			_this.$photoListCarousel = $('.photo-list-carousel');
-			_this.$photoListCarousel.on('initialized.owl.carousel', function(){
-				_this.setCurrentCarouselSlide('photosListCarouselCurSlide', $(this).find('.owl-item').eq(0));
-			});
-
-			_this.photoListCarouselSettings = {
-				items: 1,
-				rtl: true,
-				margin: 20,
-				stagePadding: 50
-			};
-
-			// _this.$photoListCarousel.owlCarousel(_this.photoListCarouselSettings);
-			// _this.photoListOwl = _this.$photoListCarousel.data('owl.carousel');
-
 		},
 
 		openAddContactPhotoWrap: function(){
