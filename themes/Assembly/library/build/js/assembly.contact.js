@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:16 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:21 am - User: Phoydar */
 /*!
  * Assembly Contact Page
  */
@@ -144,6 +144,7 @@ var assembly = assembly || {};
 
 			_this.$addPhotosCarousel.owlCarousel({
 				mouseDrag: false,
+				pullDrag: false,
 				responsive : {
 				    // breakpoint from 0 up
 				    0 : {

@@ -143,6 +143,7 @@ var assembly = assembly || {};
 
 			_this.$addPhotosCarousel.owlCarousel({
 				mouseDrag: false,
+				pullDrag: false,
 				responsive : {
 				    // breakpoint from 0 up
 				    0 : {
