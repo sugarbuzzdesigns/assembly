@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 10:46 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:02 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -750,7 +750,7 @@ Main Menu BTN
 Generic Section Styles
 **********************/
 .section-header {
-  padding: 78px 0 5px calc(calc(87%/1440)*100);
+  padding: 78px 0 5px calc((87%/1440)*100);
 }
 
 /*********************
@@ -1033,10 +1033,10 @@ CASE STUDIES Page
   background-size: cover;
 }
 .page-case-studies .landing .square {
-  width: calc(calc(410%/720)*100);
-  height: calc(calc(294%/720)*100);
-  top: calc(calc(238%/720)*100);
-  left: calc(calc(264%/720)*100);
+  width: calc((410%/720)*100);
+  height: calc((294%/720)*100);
+  top: calc((238%/720)*100);
+  left: calc((264%/720)*100);
 }
 .page-case-studies .content .content-header span:nth-child(3) {
   font-size: rem(13);
@@ -1824,7 +1824,7 @@ CONTACT
 .page-contact form {
   padding-top: 79px;
   width: 81.81%;
-  margin: 0 auto 30px calc(calc(130%/1440) *100);
+  margin: 0 auto 30px calc((130%/1440) *100);
 }
 .page-contact form .pager {
   margin-top: 22px;
@@ -1903,8 +1903,8 @@ CONTACT
 }
 .page-contact .add-photo {
   background: transparent;
-  padding-left: calc(calc(130%/1440) *100);
-  padding-right: calc(calc(130%/1440) *100);
+  padding-left: calc((130%/1440) *100);
+  padding-right: calc((130%/1440) *100);
 }
 .page-contact .add-photo h3 {
   color: #fff;

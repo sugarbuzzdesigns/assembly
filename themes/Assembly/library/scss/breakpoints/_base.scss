@@ -1317,7 +1317,7 @@ CONTACT
 
 		.mesh-bg {
 			width: respmW(262);
-			height: calc(calc(338px/414)*320);
+			height: calc((338px/414)*320);
 			margin: respmW(187) 0 0 respmW(55);
 		}
 
@@ -1368,7 +1368,7 @@ CONTACT
 		}
 
 		p {
-			font-size: calc(calc(38px/414)*320);
+			font-size: calc((38px/414)*320);
 			line-height: 1.14;
 			font-family: 'pangrambold';
 			color: #000;
@@ -1769,7 +1769,7 @@ CASE STUDIES Page
 			}
 
 			.section-header {
-				padding: 78px 0 40px calc(calc(87%/720) *100);
+				padding: 78px 0 40px calc((87%/720) *100);
 			}
 		}
 

@@ -36,7 +36,7 @@ Main Menu BTN
 Generic Section Styles
 **********************/
 .section-header {
-    padding: 78px 0 5px calc(calc(87%/1440)*100);
+    padding: 78px 0 5px calc((87%/1440)*100);
 }
 
 /*********************
@@ -377,10 +377,10 @@ CASE STUDIES Page
 		}
 
 		.square {
-			width: calc(calc(410%/720)*100);
-			height: calc(calc(294%/720)*100);
-			top: calc(calc(238%/720)*100);
-			left: calc(calc(264%/720)*100);
+			width: calc((410%/720)*100);
+			height: calc((294%/720)*100);
+			top: calc((238%/720)*100);
+			left: calc((264%/720)*100);
 		}
 	}
 
@@ -1393,7 +1393,7 @@ CONTACT
 	form {
 		padding-top: 79px;
 		width: 81.81%;
-		margin: 0 auto 30px calc(calc(130%/1440) *100);
+		margin: 0 auto 30px calc((130%/1440) *100);
 
 		.pager {
 			margin-top: 22px;
@@ -1497,8 +1497,8 @@ CONTACT
 
 	.add-photo {
 		background: transparent;
-		padding-left: calc(calc(130%/1440) *100);
-		padding-right: calc(calc(130%/1440) *100);
+		padding-left: calc((130%/1440) *100);
+		padding-right: calc((130%/1440) *100);
 
 		h3 {
 			color: #fff;

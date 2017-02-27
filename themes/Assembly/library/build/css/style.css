@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 10:46 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:02 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8366,7 +8366,7 @@ CONTACT
 }
 .page-contact .add-photo-overlay .mesh-bg {
   width: calc(262%/414*100);
-  height: calc(calc(338px/414)*320);
+  height: calc((338px/414)*320);
   margin: calc(187%/414*100) 0 0 calc(55%/414*100);
 }
 .page-contact .add-photo-overlay .image {
@@ -8404,7 +8404,7 @@ CONTACT
   transform: translate3d(-50%, -50%, 0);
 }
 .page-contact .add-photo-overlay p {
-  font-size: calc(calc(38px/414)*320);
+  font-size: calc((38px/414)*320);
   line-height: 1.14;
   font-family: 'pangrambold';
   color: #000;
@@ -8715,7 +8715,7 @@ CASE STUDIES Page
   transform: translate3d(0, 0, 0);
 }
 .page-case-studies .landing .case-study-category .section-header {
-  padding: 78px 0 40px calc(calc(87%/720) *100);
+  padding: 78px 0 40px calc((87%/720) *100);
 }
 .page-case-studies .landing h3 {
   overflow: visible;
@@ -10360,7 +10360,7 @@ you can add resource intensive styles.
   Generic Section Styles
   **********************/
   .section-header {
-    padding: 78px 0 5px calc(calc(87%/1440)*100);
+    padding: 78px 0 5px calc((87%/1440)*100);
   }
 
   /*********************
@@ -10643,10 +10643,10 @@ you can add resource intensive styles.
     background-size: cover;
   }
   .page-case-studies .landing .square {
-    width: calc(calc(410%/720)*100);
-    height: calc(calc(294%/720)*100);
-    top: calc(calc(238%/720)*100);
-    left: calc(calc(264%/720)*100);
+    width: calc((410%/720)*100);
+    height: calc((294%/720)*100);
+    top: calc((238%/720)*100);
+    left: calc((264%/720)*100);
   }
   .page-case-studies .content .content-header span:nth-child(3) {
     font-size: 0.8125rem;
@@ -11434,7 +11434,7 @@ you can add resource intensive styles.
   .page-contact form {
     padding-top: 79px;
     width: 81.81%;
-    margin: 0 auto 30px calc(calc(130%/1440) *100);
+    margin: 0 auto 30px calc((130%/1440) *100);
   }
   .page-contact form .pager {
     margin-top: 22px;
@@ -11513,8 +11513,8 @@ you can add resource intensive styles.
   }
   .page-contact .add-photo {
     background: transparent;
-    padding-left: calc(calc(130%/1440) *100);
-    padding-right: calc(calc(130%/1440) *100);
+    padding-left: calc((130%/1440) *100);
+    padding-right: calc((130%/1440) *100);
   }
   .page-contact .add-photo h3 {
     color: #fff;
