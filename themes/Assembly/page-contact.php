@@ -3,7 +3,7 @@
 
 <section class="landing">
 	<?php include 'includes/header-light.php'; ?>
-	<form action="" method="get" accept-charset="utf-8">
+	<form action="" method="post" accept-charset="utf-8">
 		<div class="form-viewport">
 			<label class="active">
 				<p>what impression should your space leave?</p>
@@ -16,7 +16,12 @@
 				<input type="text" name="" value="" placeholder="type here">
 			</label>
 			<div class="error-message">Please Fill out the field.</div>
-			<button class="dark" type="button">next</button>
+			<button class="dark" type="button">
+				<div class="resting">next</div>
+				<div class="hover">
+					<span class="inner">next</span>
+				</div>
+			</button>
 		</div>
 	</form>
 </section>

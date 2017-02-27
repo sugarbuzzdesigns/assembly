@@ -1493,9 +1493,45 @@ CONTACT
 		}
 
 		button {
-			padding: 14px 28px 13px;
+			position: relative;
+			padding: 0;
 			border: solid .75px #a7a6a6;
 			margin-top: 6%;
+
+			.resting {
+				height: 100%;
+				width: 100%;
+				padding: 14px 28px 13px;
+				display: block;
+			}
+
+			.hover {
+				color: #000;
+				background: #fff;
+			    display: block;
+			    position: absolute;
+			    bottom: 0%;
+			    left: 0;
+			    height: 0px;
+			    width: 100%;
+				overflow: hidden;
+				transition: height 0.35s;
+
+			    .inner {
+			    	padding: 14px 28px 13px;
+			    	position: absolute;
+			    	bottom: 0;
+			    	left: 0;
+			    }
+			}
+
+			@at-root {
+				.no-touch form button:hover {
+					.hover {
+						height: 100%;
+					}
+				}
+			}
 
 			&.disabled {
 				opacity: 0.3;

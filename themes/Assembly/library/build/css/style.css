@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:16 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:13 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8504,9 +8504,37 @@ CONTACT
   font-size: 0.75rem;
 }
 .page-contact form button {
-  padding: 14px 28px 13px;
+  position: relative;
+  padding: 0;
   border: solid .75px #a7a6a6;
   margin-top: 6%;
+}
+.page-contact form button .resting {
+  height: 100%;
+  width: 100%;
+  padding: 14px 28px 13px;
+  display: block;
+}
+.page-contact form button .hover {
+  color: #000;
+  background: #fff;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.35s;
+}
+.page-contact form button .hover .inner {
+  padding: 14px 28px 13px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.no-touch form button:hover .hover {
+  height: 100%;
 }
 .page-contact form button.disabled {
   opacity: 0.3;
@@ -11461,7 +11489,6 @@ you can add resource intensive styles.
   }
   .page-contact form button {
     margin-top: 38px;
-    padding: 13px 26px 11px;
     font-family: 'gridnikregular';
     font-size: 0.8125rem;
     letter-spacing: 1px;

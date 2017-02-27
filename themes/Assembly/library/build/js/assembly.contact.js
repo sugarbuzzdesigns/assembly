@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:21 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:22 pm - User: Phoydar */
 /*!
  * Assembly Contact Page
  */
@@ -49,6 +49,12 @@ var assembly = assembly || {};
 				} else {
 					$('form .error-message').show();
 				}
+			});
+
+			$('form').on('submit', function formSubmitHandler(evt){
+				evt.preventDefault();
+
+				alert('form subitted!');
 			});
 
 			_this.$photoOverlayWrap.find('.close-btn').on('click', function overlayPhotoCloseHandler(){
@@ -212,6 +218,8 @@ var assembly = assembly || {};
 		},
 
 		validField: function(fieldValue){
+			return true;
+
 			if (fieldValue) {
 				return true;
 			} else {
@@ -223,14 +231,23 @@ var assembly = assembly || {};
 			var curIndex = $currentInput.index() + 1,
 				nextIndex = curIndex + 1;
 
+			if($('form button').is('.submit')){
+				$('form').submit();
+				return;
+			}
+
 			if(curIndex === $('form label').length){
-				$('html, body').animate({
-					scrollTop: $('.add-photo').offset().top
-				});
+
+				// $('html, body').animate({
+				// 	scrollTop: $('.add-photo').offset().top
+				// });
 			} else {
 				this.$pagerCurrent.html(curIndex + 1);
 				$currentInput.removeClass('active');
 				$currentInput.next().addClass('active');
+				$('form button .resting').text('submit');
+				$('form button .hover .inner').text('submit');
+				$('form button').addClass('submit');
 			}
 		},
 
