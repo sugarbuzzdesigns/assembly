@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:13 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 12:36 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8483,11 +8483,21 @@ CONTACT
 .page-contact form .error-message {
   display: none;
 }
+.page-contact form .inputs {
+  overflow: hidden;
+  position: relative;
+}
 .page-contact form label {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: opacity 0.5s;
+  opacity: 0;
 }
 .page-contact form label.active {
-  display: block;
+  opacity: 1;
+  position: relative;
 }
 .page-contact form p {
   color: #fff;

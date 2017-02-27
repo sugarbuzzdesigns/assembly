@@ -1467,11 +1467,24 @@ CONTACT
 			display: none;
 		}
 
+		.inputs {
+			overflow: hidden;
+			position: relative;
+		}
+
 		label {
-			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			transition: opacity 0.5s;
+			// display: none;
+			opacity: 0;
 
 			&.active {
-				display: block;
+				// display: block;
+				opacity: 1;
+				position: relative;
 			}
 		}
 
