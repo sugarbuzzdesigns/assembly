@@ -30,6 +30,21 @@
 					<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 					<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
 						<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+						<div class="hover-overlay">
+							<svg class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<defs>
+									<path id="a" d="M0 0h46v46H0z"/>
+									<mask id="b" x="0" y="0" width="46" height="46" fill="#fff">
+										<use xlink:href="#a"/>
+									</mask>
+								</defs>
+								<g fill="none" fill-rule="evenodd" transform="translate(71 106)">
+									<path d="M36.462 22.5H10.5M23 10.038V36" stroke="#000" stroke-linecap="square"/>
+									<use stroke="#313131" mask="url(#b)" stroke-width="2" xlink:href="#a"/>
+								</g>
+							</svg>
+							<a href="#" class="remove">REMOVE</a>
+						</div>
 					</div>
 					<?php endforeach; ?>
 				</div>

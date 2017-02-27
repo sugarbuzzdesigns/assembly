@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 08:23 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 10:05 am - User: Phoydar */
 /*!
  * Assembly Contact Page
  */
@@ -12,6 +12,8 @@ var assembly = assembly || {};
 			this.landingSectionHeight = this.$landingSection.outerHeight(true);
 			this.$addPhotoSection = $('.add-photo');
 			this.$pagerCurrent = $('.pager .current');
+			// clickable photos that can be added from the carousel
+			this.$photosToAdd = $('.add-photo-overlay .image');
 			// button that adds an individual photo
 			this.$addphotoButton = $('.add-photo-overlay .add-photo-btn');
 			// button that opens the add photos section
@@ -60,7 +62,13 @@ var assembly = assembly || {};
 			_this.$addphotoButton.on('click', function addPhotoClickHandler(evt){
 				evt.preventDefault();
 
-				_this.addPhotoToPhotosList();
+				_this.addPhotoToPhotosList(_this.addPhotosCarouselCurSlide.find('.image').data('photo-id'));
+			});
+
+			_this.$photosToAdd.on('click', function photoClickHandler(evt){
+				evt.preventDefault();
+
+				_this.addPhotoToPhotosList($(this).data('photo-id'));
 			});
 
 			_this.$addPhotosCarousel.on('changed.owl.carousel', function(event){
@@ -71,6 +79,13 @@ var assembly = assembly || {};
 				evt.preventDefault();
 
 				_this.removePhotoFromPhotosList($(this).parent());
+			});
+
+			$('.image .remove').on('click', function removePhotoClickHandler(evt){
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				_this.removePhotoFromPhotosList($('#' + $(this).closest('.image').data('photo-id')));
 			});
 		},
 
@@ -207,9 +222,9 @@ var assembly = assembly || {};
 			}
 		},
 
-		addPhotoToPhotosList: function(){
+		addPhotoToPhotosList: function(photoId){
 			var numSlides = $('.photos-wrap .photo').length,
-				photoId = this.addPhotosCarouselCurSlide.find('.image').data('photo-id'),
+				photoId = photoId,
 				photoWidth = $('#' + photoId).outerWidth(true),
 				stageWidth = $('.add-photo .inner').outerWidth(true),
 				newWidth;
@@ -220,6 +235,8 @@ var assembly = assembly || {};
 				return;
 			}
 
+			$('[data-photo-id="'+ photoId +'"]').addClass('added');
+
 			$('#' + photoId).addClass('show');
 
 			$('.add-photo .inner').width(newWidth);
@@ -229,6 +246,7 @@ var assembly = assembly || {};
 
 		removePhotoFromPhotosList: function($photo){
 			$photo.removeClass('show');
+			$('[data-photo-id="'+ $photo.attr('id') +'"]').removeClass('added');
 
 			var newWidth = Math.ceil($('.add-photo .inner').outerWidth()) - Math.ceil($photo.outerWidth(true));
 			$('.add-photo .inner').width(newWidth);

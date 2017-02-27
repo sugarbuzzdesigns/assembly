@@ -1321,8 +1321,55 @@ CONTACT
 			margin: respmW(187) 0 0 respmW(55);
 		}
 
-		img {
+		.image {
+			cursor: pointer;
+			position: relative;
 
+			&.added {
+				.remove {
+					font-family: 'gridnikregular';
+					font-size: 13px;
+					color: #000;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					text-align: center;
+					background: rgba(0,0,0,0.8);
+					color: #fff;
+    				padding: 10px 10px 7px 10px;
+					text-decoration: none;
+					transform: translate3d(-50%,-50%,0);
+				}
+
+				.hover-overlay {
+					opacity: 1;
+					svg {
+						display: none;
+					}
+				}
+			}
+
+			.hover-overlay {
+				transition: opacity 0.5s;
+				opacity: 0;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(255,255,255,.8);
+			}
+
+			.plus-box {
+			    height: 46px;
+			    width: 46px;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate3d(-50%, -50%, 0);
+			}
 		}
 
 		p {

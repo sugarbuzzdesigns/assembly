@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 08:10 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 09:58 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1873,6 +1873,7 @@ CONTACT
   margin: resp(185) 0 0 resp(264);
 }
 .page-contact .add-photo-overlay nav {
+  display: block;
   overflow: hidden;
   width: 100%;
   position: absolute;
@@ -1889,6 +1890,9 @@ CONTACT
   float: right;
   margin-right: resp(45);
 }
+.page-contact .add-photo-overlay .image:hover .hover-overlay {
+  opacity: 1;
+}
 .page-contact .add-photo-overlay .close-btn {
   height: 31px;
   width: 31px;
@@ -1898,7 +1902,7 @@ CONTACT
   display: none;
 }
 .page-contact .add-photo {
-  background: #000;
+  background: transparent;
   padding-left: calc(calc(130%/1440) *100);
 }
 .page-contact .add-photo h3 {
@@ -1914,6 +1918,9 @@ CONTACT
 .page-contact .add-photo .photos-wrap {
   padding-bottom: 37px;
   width: 238px;
+}
+.page-contact .add-photo .photos-wrap .inner {
+  margin: 0;
 }
 .page-contact .contact-info {
   padding-top: 100px;

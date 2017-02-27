@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 08:10 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 09:58 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8369,6 +8369,50 @@ CONTACT
   height: calc(calc(338px/414)*320);
   margin: calc(187%/414*100) 0 0 calc(55%/414*100);
 }
+.page-contact .add-photo-overlay .image {
+  cursor: pointer;
+  position: relative;
+}
+.page-contact .add-photo-overlay .image.added .remove {
+  font-family: 'gridnikregular';
+  font-size: 13px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 10px 7px 10px;
+  text-decoration: none;
+  transform: translate3d(-50%, -50%, 0);
+}
+.page-contact .add-photo-overlay .image.added .hover-overlay {
+  opacity: 1;
+}
+.page-contact .add-photo-overlay .image.added .hover-overlay svg {
+  display: none;
+}
+.page-contact .add-photo-overlay .image .hover-overlay {
+  transition: opacity 0.5s;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+.page-contact .add-photo-overlay .image .plus-box {
+  height: 46px;
+  width: 46px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
 .page-contact .add-photo-overlay p {
   font-size: calc(calc(38px/414)*320);
   line-height: 1.14;
@@ -11444,6 +11488,7 @@ you can add resource intensive styles.
     margin: calc(185%/1440*100) 0 0 calc(264%/1440*100);
   }
   .page-contact .add-photo-overlay nav {
+    display: block;
     overflow: hidden;
     width: 100%;
     position: absolute;
@@ -11460,6 +11505,9 @@ you can add resource intensive styles.
     float: right;
     margin-right: calc(45%/1440*100);
   }
+  .page-contact .add-photo-overlay .image:hover .hover-overlay {
+    opacity: 1;
+  }
   .page-contact .add-photo-overlay .close-btn {
     height: 31px;
     width: 31px;
@@ -11469,7 +11517,7 @@ you can add resource intensive styles.
     display: none;
   }
   .page-contact .add-photo {
-    background: #000;
+    background: transparent;
     padding-left: calc(calc(130%/1440) *100);
   }
   .page-contact .add-photo h3 {
@@ -11485,6 +11533,9 @@ you can add resource intensive styles.
   .page-contact .add-photo .photos-wrap {
     padding-bottom: 37px;
     width: 238px;
+  }
+  .page-contact .add-photo .photos-wrap .inner {
+    margin: 0;
   }
   .page-contact .contact-info {
     padding-top: 100px;
