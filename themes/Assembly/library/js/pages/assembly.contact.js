@@ -67,7 +67,11 @@ var assembly = assembly || {};
 			_this.$photosToAdd.on('click', function photoClickHandler(evt){
 				evt.preventDefault();
 
-				_this.addPhotoToPhotosList($(this).data('photo-id'));
+				if($(this).is('.added')){
+					_this.removePhotoFromPhotosList($('#' + $(this).data('photo-id')));
+				} else {
+					_this.addPhotoToPhotosList($(this).data('photo-id'));
+				}
 			});
 
 			_this.$addPhotosCarousel.on('changed.owl.carousel', function(event){
@@ -185,6 +189,12 @@ var assembly = assembly || {};
 
 		setCurrentCarouselSlide: function(sliderName, slide){
 			this[sliderName] = slide;
+
+			if(!slide.find('.image').is('.added')){
+				$('.add-photo-btn').removeClass('disabled');
+			} else {
+				$('.add-photo-btn').addClass('disabled');
+			}
 		},
 
 		initContactForm: function(){
@@ -231,6 +241,7 @@ var assembly = assembly || {};
 			newWidth = Math.ceil($('.add-photo .inner').outerWidth()) + Math.ceil($('#' + photoId).outerWidth(true));
 
 			if($.inArray(photoId, this.addedPhotosArray) !== -1){
+				alert('You\'ve already added this photo');
 				return;
 			}
 
@@ -241,6 +252,7 @@ var assembly = assembly || {};
 			$('.add-photo .inner').width(newWidth);
 
 			this.addedPhotosArray.push(photoId);
+			$('.add-photo-btn').addClass('disabled');
 		},
 
 		removePhotoFromPhotosList: function($photo){
@@ -249,6 +261,7 @@ var assembly = assembly || {};
 
 			var newWidth = Math.ceil($('.add-photo .inner').outerWidth()) - Math.ceil($photo.outerWidth(true));
 			$('.add-photo .inner').width(newWidth);
+			$('.add-photo-btn').removeClass('disabled');
 
 			this.addedPhotosArray.splice($.inArray($photo.attr('id'), this.addedPhotosArray), 1);
 		}

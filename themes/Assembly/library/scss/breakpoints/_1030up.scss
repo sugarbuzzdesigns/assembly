@@ -1498,6 +1498,7 @@ CONTACT
 	.add-photo {
 		background: transparent;
 		padding-left: calc(calc(130%/1440) *100);
+		padding-right: calc(calc(130%/1440) *100);
 
 		h3 {
 			color: #fff;
@@ -1513,7 +1514,7 @@ CONTACT
 
 		.photos-wrap {
     		padding-bottom: 37px;
-		    width: 238px;
+		    width: 100%;
 
 		    .inner {
 		    	margin: 0;

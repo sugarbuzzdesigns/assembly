@@ -39,11 +39,10 @@
 									</mask>
 								</defs>
 								<g fill="none" fill-rule="evenodd" transform="translate(71 106)">
-									<path d="M36.462 22.5H10.5M23 10.038V36" stroke="#000" stroke-linecap="square"/>
+									<path class="x-path" d="M36.462 22.5H10.5M23 10.038V36" stroke="#000" stroke-linecap="square"/>
 									<use stroke="#313131" mask="url(#b)" stroke-width="2" xlink:href="#a"/>
 								</g>
 							</svg>
-							<a href="#" class="remove">REMOVE</a>
 						</div>
 					</div>
 					<?php endforeach; ?>
