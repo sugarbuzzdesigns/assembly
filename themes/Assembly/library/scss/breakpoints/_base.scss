@@ -1516,11 +1516,13 @@ CONTACT
 			transition: opacity 0.5s;
 			// display: none;
 			opacity: 0;
+			pointer-events: none;
 
 			&.active {
 				// display: block;
 				opacity: 1;
 				position: relative;
+				pointer-events: all;
 			}
 		}
 
