@@ -130,7 +130,7 @@
 				<div class="video video-1 module">
 					<video id="video_1" class="video-js vjs-fluid vjs-big-play-centered" controls preload="auto"
 					poster="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/05-VideoThumbnail.jpg">
-						<source src="<?php echo get_template_directory_uri(); ?>/library/ignore/video-SD.mp4" type='video/mp4'>
+						<source src="<?php echo get_template_directory_uri(); ?>/library/video/Assembly_Edit-FIn.mp4" type='video/mp4'>
 						<p class="vjs-no-js">
 							To view this video please enable JavaScript, and consider upgrading to a web browser that
 							<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
