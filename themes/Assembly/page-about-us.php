@@ -379,22 +379,42 @@
 		</div>
 		<div class="employee-list no-mobile desktop">
 			<div class="employee" data-employee-name="dominic-bennett">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/1-Dominique.jpg" alt="">
+				<div class="image-wrap">
+					<div class="image-clip-bg">
+						<div class="inner"></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/1-Dominique.jpg" alt="">
+				</div>
 				<div class="employee-name">DOMINIC BENNETT</div>
 				<div class="employee-title">Senior Site Foreman</div>
 			</div>
 			<div class="employee" data-employee-name="emma-slack">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/2-Emma.jpg" alt="">
+				<div class="image-wrap">
+					<div class="image-clip-bg">
+						<div class="inner"></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/2-Emma.jpg" alt="">
+				</div>
 				<div class="employee-name">Emma Slack</div>
 				<div class="employee-title">Senior Project Manager</div>
 			</div>
 			<div class="employee" data-employee-name="gordon-machielsen">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/3-Gordon.jpg" alt="">
+				<div class="image-wrap">
+					<div class="image-clip-bg">
+						<div class="inner"></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/3-Gordon.jpg" alt="">
+				</div>
 				<div class="employee-name">Gordon Machielsen</div>
 				<div class="employee-title">Managing Director</div>
 			</div>
 			<div class="employee" data-employee-name="mark-slack">
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/4-Mark.jpg" alt="">
+				<div class="image-wrap">
+					<div class="image-clip-bg">
+						<div class="inner"></div>
+					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/4-Mark.jpg" alt="">
+				</div>
 				<div class="employee-name">Mark Slack</div>
 				<div class="employee-title">Operations Manager</div>
 			</div>

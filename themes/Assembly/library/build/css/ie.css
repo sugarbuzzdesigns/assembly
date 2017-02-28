@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 04:09 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:26 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1278,7 +1278,7 @@ ABOUT US Page
 }
 .page-about-us .employee-list {
   overflow: hidden;
-  z-index: 1;
+  z-index: 4;
   position: relative;
 }
 .page-about-us .employee-list .employee {
@@ -1287,7 +1287,41 @@ ABOUT US Page
   float: left;
   width: 16.67%;
   margin-right: resp(102);
-  z-index: 1;
+  z-index: 4;
+  transition: opacity 0.5s;
+}
+.page-about-us .employee-list .employee .image-wrap {
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.page-about-us .employee-list .employee .image-clip-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  transition: padding 0.3s;
+}
+.page-about-us .employee-list .employee .image-clip-bg .inner {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.page-about-us .employee-list .employee img {
+  transition: opacity 0.3s, clip-path 0.3s;
+  clip-path: inset(0px);
+}
+.page-about-us .employee-list .employee:hover img {
+  clip-path: inset(20px);
+  opacity: 0.4;
+}
+.page-about-us .employee-list .employee.clicked img {
+  clip-path: inset(0px);
+  opacity: 0.4;
+}
+.page-about-us .employee-list .employee.clicked .image-clip-bg {
+  padding: 0;
 }
 .page-about-us .employee-list .employee.invisible {
   opacity: 0;
