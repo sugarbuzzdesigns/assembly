@@ -8,6 +8,7 @@ var assembly = assembly || {};
 		init: function(){
 			this.$selectFilter = $('.select-filter');
 			this.$filterMenu = $('.filter-menu');
+			this.$filterMenuLinks = $('.filter-menu a');
 			this.initSelect2();
 			this.bindEvents();
 			this.countTilesAndAddClass();
@@ -24,6 +25,12 @@ var assembly = assembly || {};
 
 			_this.$selectFilter.on('change', function selectFilterOnChange(evt){
 				_this.filterProjectsByCategory(this.value);
+			});
+
+			_this.$filterMenuLinks.on('click', function filterMenuLinksClickHandler(evt){
+				evt.preventDefault();
+
+				_this.filterProjectsByCategory($(this).parent().data('value'));
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
@@ -60,12 +67,12 @@ var assembly = assembly || {};
 				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
 
 			if(option === 'all'){
-				$landingContent.show();
-				$allTiles.hide();
+				$landingContent.addClass('show');
+				$allTiles.removeClass('show');
 			} else {
-				$landingContent.hide();
-				$servicesToHide.hide();
-				$servicesToShow.show();
+				$landingContent.removeClass('show');
+				$servicesToHide.removeClass('show');
+				$servicesToShow.addClass('show');
 				// $.when($allTiles.fadeOut(500)).done(function(){
 				// 	$servicesToShow.fadeIn(500);
 				// });

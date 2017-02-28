@@ -1110,8 +1110,7 @@ SERVICES Page
 	    transition: opacity 0.5s;
 	    background: #fff;
 
-	    &.show,
-	    &:hover {
+	    &.show {
 	    	opacity: 1;
 	    }
 

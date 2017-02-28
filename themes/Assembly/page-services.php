@@ -29,7 +29,7 @@
 			</select>
 		</div>
 	</section>
-	<section class="content landing">
+	<section class="content landing show">
 		<div class="tile slideInUp visualisation">
 			<div class="tile-inner">
 				<div class="tile-img">

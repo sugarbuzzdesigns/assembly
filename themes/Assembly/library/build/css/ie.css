@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:54 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 12:17 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1594,7 +1594,7 @@ SERVICES Page
   transition: opacity 0.5s;
   background: #fff;
 }
-.page-services .filter-menu.show, .page-services .filter-menu:hover {
+.page-services .filter-menu.show {
   opacity: 1;
 }
 .page-services .filter-menu div a {
