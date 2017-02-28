@@ -1034,23 +1034,27 @@ HOME PAGE STYLES
 	    transform: translate(-50%,0);
 	}
 
+	.main-content {
+		padding-top: calc(120%/414*100);
+	}
+
 	.company-statement {
 		position: relative;
-		padding-top: 37%;
-		margin-bottom: 24%;
+		margin-bottom: calc(80%/414*100);
 
 		.svg-shape-1 {
-		    position: absolute;
-		    left: 45%;
-		    top: 43%;
-		    transform: translate(-50%, 0);
+			display: block;
+		    margin: 0 auto;
 		}
 
 		p {
-		    position: relative;
+		    position: absolute;
+		    margin: 0;
 		    z-index: 1;
 		    width: 78%;
-		    margin: 0 auto 0;
+		    left: 50%;
+		    top: 50%;
+		    transform: translate3d(-50%, -50%, 0);
 		    text-align: justify;
 		    -moz-text-align-last: left; /* Code for Firefox */
 		    text-align-last: left;

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 05:11 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 06:26 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8136,22 +8136,25 @@ HOME PAGE STYLES
   left: 50%;
   transform: translate(-50%, 0);
 }
+.home .main-content {
+  padding-top: calc(120%/414*100);
+}
 .home .company-statement {
   position: relative;
-  padding-top: 37%;
-  margin-bottom: 24%;
+  margin-bottom: calc(80%/414*100);
 }
 .home .company-statement .svg-shape-1 {
-  position: absolute;
-  left: 45%;
-  top: 43%;
-  transform: translate(-50%, 0);
+  display: block;
+  margin: 0 auto;
 }
 .home .company-statement p {
-  position: relative;
+  position: absolute;
+  margin: 0;
   z-index: 1;
   width: 78%;
-  margin: 0 auto 0;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
   text-align: justify;
   -moz-text-align-last: left;
   /* Code for Firefox */
@@ -9642,15 +9645,6 @@ PLUS SIZE (MOBILE) Iphone #+
   .home .down-arrow {
     bottom: 35px;
   }
-  .home .company-statement {
-    position: relative;
-    padding-top: 148px;
-    padding-bottom: 93px;
-    margin-bottom: 3%;
-  }
-  .home .company-statement .svg-shape-1 {
-    top: 36%;
-  }
   .home .company-statement p {
     font-size: 0.8125rem;
     line-height: 1.4375rem;
@@ -10076,12 +10070,8 @@ you can add resource intensive styles.
     margin: 0 0 0 20%;
   }
   .home .company-statement {
-    padding-top: 125px;
     width: 55%;
     float: right;
-  }
-  .home .company-statement .svg-shape-1 {
-    top: 28%;
   }
   .home .company-statement p {
     font-size: 0.6875rem;

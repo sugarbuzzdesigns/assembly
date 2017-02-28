@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 05:11 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 06:26 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -368,12 +368,8 @@ HOME PAGE STYLES
   margin: 0 0 0 20%;
 }
 .home .company-statement {
-  padding-top: 125px;
   width: 55%;
   float: right;
-}
-.home .company-statement .svg-shape-1 {
-  top: 28%;
 }
 .home .company-statement p {
   font-size: rem(11);
