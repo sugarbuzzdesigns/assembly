@@ -11,7 +11,9 @@ var assembly = assembly || {};
 			this.$filterMenuLinks = $('.filter-menu a');
 			this.initSelect2();
 			this.bindEvents();
+			this.waypoints();
 			this.countTilesAndAddClass();
+			this.setInitialTranslate();
 		},
 
 		initSelect2: function(){
@@ -34,17 +36,60 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				console.log('scroll-down');
 				if(_this.$filterMenu.hasClass('show')){
 					_this.$filterMenu.removeClass('show');
 				}
 			});
 
 			assembly.util.env.$win.on('scroll-up', function(){
-				console.log('scroll-up');
 				if(!_this.$filterMenu.hasClass('show')){
 					_this.$filterMenu.addClass('show');
 				}
+			});
+
+			assembly.util.env.$win.on('scroll', function(){
+				$('.tile').each(function(i, tile){
+					// _this.setTranslate(tile);
+				});
+			});
+		},
+
+		setInitialTranslate: function(elm){
+			var _this = this;
+
+			$('.tile').each(function(i, tile){
+				// _this.setTranslate(tile);
+			});
+		},
+
+		setTranslate: function(elm, onload){
+			var $elm = $(elm),
+				firstTop = $elm.offset().top - $elm.offsetParent().offset().top,
+				winScrollTop = $(window).scrollTop(),
+				shiftDistance = (firstTop - winScrollTop) * $elm.data('speed');
+
+			if($elm.is('.inview') || onload){
+				$elm.css({
+					transform: 'translate3d(0,'+ shiftDistance +'px,0)'
+				});
+			}
+		},
+
+		waypoints: function(){
+			var _this = this;
+
+			$('.tile').each(function(i, tile){
+				new Waypoint.Inview({
+					element: $(tile)[0],
+					enter: function(direction) {
+						$(tile).addClass('inview');
+					},
+					exited: function(direction) {
+						$(tile).removeClass('inview');
+					}
+				});
+
+				// _this.setTranslate(tile, 'true');
 			});
 		},
 
@@ -71,8 +116,11 @@ var assembly = assembly || {};
 				$allTiles.removeClass('show');
 			} else {
 				$landingContent.removeClass('show');
-				$servicesToHide.removeClass('show');
+				$servicesToHide.removeClass('show  animate');
 				$servicesToShow.addClass('show');
+				setTimeout(function(){
+					$servicesToShow.addClass('animate');
+				}, 100);
 				// $.when($allTiles.fadeOut(500)).done(function(){
 				// 	$servicesToShow.fadeIn(500);
 				// });

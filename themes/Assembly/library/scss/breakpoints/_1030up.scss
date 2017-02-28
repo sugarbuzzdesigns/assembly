@@ -95,11 +95,13 @@ Select Box Overrides
 	right: 0;
 	margin: 17% 0 0 0;
 	z-index: 4;
-	pointer-events: none;
 	opacity: 0;
+	transition: opacity 0.5s;
+	pointer-events: none;
 
 	&.show {
 		opacity: 1;
+		pointer-events: all;
 	}
 }
 
@@ -111,7 +113,12 @@ Select Box Overrides
 	text-transform: lowercase;
 	letter-spacing: 0.7px;
 	margin-bottom: 32px;
+	transition: opacity 0.5s;
 	background: rgba(255,255,255,0.8);
+
+    &.show {
+    	opacity: 1;
+    }
 
 	div {
 		margin-bottom: 5px;
@@ -320,6 +327,7 @@ CASE STUDIES Page
 		position: relative;
 		font-family: 'pangrambold';
 		font-size: rem(47);
+		transition: transform 0.8s;
 	}
 
 	.landing {
@@ -327,6 +335,12 @@ CASE STUDIES Page
 			overflow: hidden;
 			transition: height 0.7s;
 			height: 100vh;
+
+			&.hide {
+				.case-study-category {
+					transform: translate3d(0,-100%,0);
+				}
+			}
 		}
 
 		h3 {
@@ -382,6 +396,11 @@ CASE STUDIES Page
 			top: calc((238%/720)*100);
 			left: calc((264%/720)*100);
 		}
+	}
+
+	.filter-wrap {
+		padding: 16px 33px 20px 17px;
+		background: rgba(255,255,255,0.8);
 	}
 
 	.content {
@@ -1107,12 +1126,7 @@ SERVICES Page
 	    padding: 16px 33px 20px 17px;
 	    z-index: 10;
 	    opacity: 0;
-	    transition: opacity 0.5s;
 	    background: #fff;
-
-	    &.show {
-	    	opacity: 1;
-	    }
 
 		div {
 			a {

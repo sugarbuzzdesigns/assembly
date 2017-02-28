@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 12:17 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 05:07 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7447,21 +7447,44 @@ button.dark,
 MENU & NAVIGATION STYLES
 *********************/
 .main-menu {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 15;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
   pointer-events: none;
+  z-index: 10000;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+.main-menu .footer {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding-bottom: 50px;
+}
+.main-menu .footer .copyright {
+  margin-bottom: 35px;
+  font-size: 12px;
+  line-height: 21px;
+}
+.main-menu .footer .copyright a {
+  color: #C6C6C6;
+  text-decoration: none;
 }
 
-.menu-bg {
-  background: #000;
+.menu-inner {
+  background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
+  background-size: 110%;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  height: 30px;
-  width: 30px;
-  opacity: 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
 }
 
 /*********************
@@ -7477,38 +7500,50 @@ and more scalable.
 .nav {
   border-bottom: 0;
   margin: 0;
-  padding-top: 4em;
-  padding-left: 2.1em;
+  padding-top: calc(192%/414*100);
+  padding-left: 0;
   position: relative;
   pointer-events: none;
+  text-align: center;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
 .nav li {
-  margin-bottom: 0.6em;
+  margin-bottom: 0;
+  line-height: 1.3;
   transition: opacity 1s;
   opacity: 0;
   transform: translate3d(0, 10px, 0);
 }
 .nav li a {
-  font-size: 1.25rem;
+  font-size: calc((37px/414) * 320);
   text-transform: lowercase;
   font-family: 'pangrambold';
   display: block;
-  color: #fff;
+  color: #6d6d6d;
   text-decoration: none;
+}
+.nav li.current-menu-item a,
+.nav li.current_page_item a,
+.nav li.current_page_ancestor a {
+  color: #fff;
 }
 
 /* end .nav */
+.menu-open .main-menu {
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 1;
+}
 .menu-open .main-menu, .menu-open .nav {
   pointer-events: all;
+  z-index: 15;
 }
-.menu-open .menu-bg {
+.menu-open .menu-inner {
   opacity: 1;
-  animation: showMenuBg;
-  animation-duration: 0.75s;
-  animation-fill-mode: forwards;
 }
 .menu-open li.show-nav-item {
   animation: showmenuitems;
@@ -7523,11 +7558,6 @@ and more scalable.
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
 }
-.close-menu .menu-bg {
-  animation: hideMenuBg;
-  animation-duration: 0.75s;
-  animation-fill-mode: forwards;
-}
 
 @keyframes showMenuBg {
   0% {
@@ -7538,6 +7568,7 @@ and more scalable.
     top: 0;
     height: 100vh;
     width: 100%;
+    opacity: 1;
   }
 }
 @keyframes hideMenuBg {
@@ -7552,12 +7583,12 @@ and more scalable.
     opacity: 1;
   }
   75% {
-    opacity: 0.3;
+    opacity: 0;
   }
   100% {
     opacity: 0;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     height: 30px;
     width: 30px;
   }
@@ -8755,6 +8786,9 @@ CASE STUDIES Page
   transition: height 0.7s;
   height: 100vh;
 }
+.page-case-studies .landing .landing-inner.hide {
+  height: 0;
+}
 .page-case-studies .landing .case-study-category.hover .default-content {
   width: 0;
 }
@@ -8763,6 +8797,12 @@ CASE STUDIES Page
 }
 .page-case-studies .landing .case-study-category .section-header {
   padding: 78px 0 40px calc((87%/720) *100);
+}
+.no-touch .landing .case-study-category:hover .default-content {
+  width: 0;
+}
+.no-touch .landing .case-study-category:hover .hover-content {
+  transform: translate3d(0, 0, 0);
 }
 .page-case-studies .landing h3 {
   overflow: visible;
@@ -9049,6 +9089,16 @@ SERVICES Page
 }
 .page-services .individual-service.show {
   display: block;
+}
+.page-services .individual-service .tile, .page-services .individual-service .service-desc {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+}
+.page-services .individual-service.animate .tile,
+.page-services .individual-service.animate .service-desc {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 .page-services .content.dynamic .wide-1 img,
 .page-services .content.dynamic .tall-1 img {
@@ -9550,6 +9600,24 @@ PLUS SIZE (MOBILE) Iphone #+
     padding-bottom: 16%;
   }
 
+  /*********************
+  nav
+  *********************/
+  /*
+  all navs have a .nav class applied via
+  the wp_menu function; this is so we can
+  easily write one group of styles for
+  the navs on the site so our css is cleaner
+  and more scalable.
+  */
+  .nav {
+    /* end .menu li */
+  }
+  .nav li a {
+    font-size: 37px;
+  }
+
+  /* end .nav */
   /*********************
   Years Experience Module
   **********************/
@@ -10452,11 +10520,13 @@ you can add resource intensive styles.
     right: 0;
     margin: 17% 0 0 0;
     z-index: 4;
-    pointer-events: none;
     opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
   }
   .filter-wrap.show {
     opacity: 1;
+    pointer-events: all;
   }
 
   .filter-menu {
@@ -10467,7 +10537,11 @@ you can add resource intensive styles.
     text-transform: lowercase;
     letter-spacing: 0.7px;
     margin-bottom: 32px;
+    transition: opacity 0.5s;
     background: rgba(255, 255, 255, 0.8);
+  }
+  .filter-menu.show {
+    opacity: 1;
   }
   .filter-menu div {
     margin-bottom: 5px;
@@ -10633,11 +10707,15 @@ you can add resource intensive styles.
     position: relative;
     font-family: 'pangrambold';
     font-size: 2.9375rem;
+    transition: transform 0.8s;
   }
   .page-case-studies .landing .landing-inner {
     overflow: hidden;
     transition: height 0.7s;
     height: 100vh;
+  }
+  .page-case-studies .landing .landing-inner.hide .case-study-category {
+    transform: translate3d(0, -100%, 0);
   }
   .page-case-studies .landing h3 {
     font-size: 5.3125rem;
@@ -10682,6 +10760,10 @@ you can add resource intensive styles.
     height: calc((294%/720)*100);
     top: calc((238%/720)*100);
     left: calc((264%/720)*100);
+  }
+  .page-case-studies .filter-wrap {
+    padding: 16px 33px 20px 17px;
+    background: rgba(255, 255, 255, 0.8);
   }
   .page-case-studies .content .content-header span:nth-child(3) {
     font-size: 0.8125rem;
@@ -11236,11 +11318,7 @@ you can add resource intensive styles.
     padding: 16px 33px 20px 17px;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.5s;
     background: #fff;
-  }
-  .page-services .filter-menu.show {
-    opacity: 1;
   }
   .page-services .filter-menu div a {
     letter-spacing: 0.7px;

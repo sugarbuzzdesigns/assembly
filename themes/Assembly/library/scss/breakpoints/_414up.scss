@@ -43,6 +43,46 @@ VIDEO CONTENT
 }
 
 /*********************
+nav
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+
+	li {
+
+		a {
+			font-size: 37px;
+
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+	} /* end .menu li */
+
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+
+		a {}
+
+	}
+
+} /* end .nav */
+
+/*********************
 Years Experience Module
 **********************/
 .years-experience {

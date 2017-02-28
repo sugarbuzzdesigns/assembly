@@ -242,21 +242,47 @@ button,
 MENU & NAVIGATION STYLES
 *********************/
 .main-menu {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 15;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
     pointer-events: none;
+    z-index: 10000;
+    transition: all 0.6s;
+    overflow: hidden;
+
+    .footer {
+    	background: transparent;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		padding-bottom: 50px;
+
+		.copyright {
+			margin-bottom: 35px;
+			font-size: 12px;
+			line-height: 21px;
+
+			a {
+				color: #C6C6C6;
+				text-decoration: none;
+			}
+		}
+    }
 }
 
-.menu-bg {
-    background: #000;
+.menu-inner {
+   	background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
+	background-size: 110%;
     position: absolute;
-	top: 10px;
-    right: 10px;
-    height: 30px;
-    width: 30px;
-    opacity: 0;
+	top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
 }
 
 /*********************
@@ -274,23 +300,25 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	margin: 0;
-    padding-top: 4em;
-    padding-left: 2.1em;
+    padding-top: calc(192%/414*100);
+    padding-left: 0;
     position: relative;
     pointer-events: none;
+    text-align: center;
 
 	li {
-		margin-bottom: 0.6em;
+		margin-bottom: 0;
+		line-height: 1.3;
 		transition: opacity 1s;
 		opacity: 0;
 		transform: translate3d(0,10px,0);
 
 		a {
-			font-size: rem(20);
+			font-size: calc((37px/414) * 320);
 			text-transform: lowercase;
 			font-family: 'pangrambold';
 			display: block;
-			color: $white;
+			color: #6d6d6d;
 			text-decoration: none;
 
 			&:hover, &:focus {
@@ -309,22 +337,32 @@ and more scalable.
 	li.current_page_item,
 	li.current_page_ancestor {
 
-		a {}
+		a {
+			color: #fff;
+		}
 
 	}  /* end current highlighters */
 
 } /* end .nav */
 
 .menu-open {
-	.main-menu, .nav {
-		pointer-events: all;
+	.main-menu {
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		opacity: 1;
 	}
 
-	.menu-bg {
+	.main-menu, .nav {
+		pointer-events: all;
+		z-index: 15;
+	}
+
+	.menu-inner {
 		opacity: 1;
-	    animation: showMenuBg;
-	    animation-duration: 0.75s;
-	    animation-fill-mode: forwards;
+
+
 	}
 
 	li.show-nav-item {
@@ -339,12 +377,6 @@ and more scalable.
 	.main-menu {
 		pointer-events: none;
 	    animation: hideMainMenu;
-	    animation-duration: 0.75s;
-	    animation-fill-mode: forwards;
-	}
-
-	.menu-bg {
-	    animation: hideMenuBg;
 	    animation-duration: 0.75s;
 	    animation-fill-mode: forwards;
 	}
@@ -365,6 +397,7 @@ and more scalable.
 		top: 0;
 		height: 100vh;
 		width: 100%;
+		opacity: 1;
 	}
 }
 
@@ -380,13 +413,13 @@ and more scalable.
 		opacity: 1;
 	}
 	75% {
-		opacity: 0.3;
+		opacity: 0;
 	}
 
 	100% {
 		opacity: 0;
-		top: 10px;
-		right: 10px;
+		top: 0;
+		right: 0;
 		height: 30px;
 		width: 30px;
 	}
@@ -1812,6 +1845,10 @@ CASE STUDIES Page
 			overflow: hidden;
 			transition: height 0.7s;
 			height: 100vh;
+
+			&.hide {
+				height: 0;
+			}
 		}
 
 		.case-study-category {
@@ -1827,6 +1864,22 @@ CASE STUDIES Page
 
 			.section-header {
 				padding: 78px 0 40px calc((87%/720) *100);
+			}
+
+			@at-root .no-touch {
+				.landing {
+					.case-study-category {
+						&:hover {
+							.default-content {
+								width: 0;
+							}
+
+							.hover-content {
+								transform: translate3d(0,0,0);
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -2219,6 +2272,20 @@ SERVICES Page
 
 		&.show {
 			display: block;
+		}
+
+		.tile, .service-desc {
+			transform: translate3d(0, 40px, 0);
+			opacity: 0;
+			transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+		}
+
+		&.animate {
+			.tile,
+			.service-desc {
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
 		}
 	}
 

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 12:17 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 05:07 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -807,11 +807,13 @@ Select Box Overrides
   right: 0;
   margin: 17% 0 0 0;
   z-index: 4;
-  pointer-events: none;
   opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
 }
 .filter-wrap.show {
   opacity: 1;
+  pointer-events: all;
 }
 
 .filter-menu {
@@ -822,7 +824,11 @@ Select Box Overrides
   text-transform: lowercase;
   letter-spacing: 0.7px;
   margin-bottom: 32px;
+  transition: opacity 0.5s;
   background: rgba(255, 255, 255, 0.8);
+}
+.filter-menu.show {
+  opacity: 1;
 }
 .filter-menu div {
   margin-bottom: 5px;
@@ -988,11 +994,15 @@ CASE STUDIES Page
   position: relative;
   font-family: 'pangrambold';
   font-size: rem(47);
+  transition: transform 0.8s;
 }
 .page-case-studies .landing .landing-inner {
   overflow: hidden;
   transition: height 0.7s;
   height: 100vh;
+}
+.page-case-studies .landing .landing-inner.hide .case-study-category {
+  transform: translate3d(0, -100%, 0);
 }
 .page-case-studies .landing h3 {
   font-size: rem(85);
@@ -1037,6 +1047,10 @@ CASE STUDIES Page
   height: calc((294%/720)*100);
   top: calc((238%/720)*100);
   left: calc((264%/720)*100);
+}
+.page-case-studies .filter-wrap {
+  padding: 16px 33px 20px 17px;
+  background: rgba(255, 255, 255, 0.8);
 }
 .page-case-studies .content .content-header span:nth-child(3) {
   font-size: rem(13);
@@ -1591,11 +1605,7 @@ SERVICES Page
   padding: 16px 33px 20px 17px;
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.5s;
   background: #fff;
-}
-.page-services .filter-menu.show {
-  opacity: 1;
 }
 .page-services .filter-menu div a {
   letter-spacing: 0.7px;

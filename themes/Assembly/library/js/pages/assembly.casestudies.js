@@ -15,6 +15,9 @@ var assembly = assembly || {};
 			this.$selectFilter = $('.select-filter');
 			this.$toggleFilter = $('.toggle-filter');
 			this.$toggleFilterBtns = $('.toggle-filter a');
+			this.$filterMenuLinks = $('.filter-menu a');
+			this.$filterWrap = $('.filter-wrap');
+			this.$filterMenu = $('.filter-menu');
 			this.$caseStudyContainers = $('.case-study-container');
 			this.$currentCaseStudyContainer = $('.case-study-container.show');
 			this.currentFilerStatus = {
@@ -41,6 +44,12 @@ var assembly = assembly || {};
 				_this.filterProjectsByCategory(this.value);
 			});
 
+			_this.$filterMenuLinks.on('click', function selectFilterOnChange(evt){
+				evt.preventDefault();
+
+				_this.filterProjectsByCategory($(this).parent().data('value'));
+			});
+
 			_this.$toggleFilterBtns.on('click', function toggleFilterClickHandler(evt){
 				evt.preventDefault();
 
@@ -64,29 +73,34 @@ var assembly = assembly || {};
 					_this.showMainCaseStudies($square.closest('.case-study-category'));
 				}, 1000);
 			});
+
+			assembly.util.env.$win.on('scroll-down', function(){
+				if(_this.$filterWrap.hasClass('show') && $('.landing-inner').hasClass('hide')){
+					_this.$filterWrap.removeClass('show');
+				}
+			});
+
+			assembly.util.env.$win.on('scroll-up', function(){
+				if((!_this.$filterWrap.hasClass('show')) && $('.landing-inner').hasClass('hide')){
+					_this.$filterWrap.addClass('show');
+				}
+			});
 		},
 
 		showMainCaseStudies: function($landingTileClicked){
-			var newContentHeight;
-
 			if($landingTileClicked.is('.modular')){
-				console.log($('.case-study-landing[data-kit-type="modular"]').outerHeight());
-				newContentHeight = this.$modularLanding.height();
 				this.$modularLanding.addClass('show');
 				this.$customLanding.removeClass('show');
 			} else {
-				newContentHeight = this.$customLanding.height();
 				this.$customLanding.addClass('show');
 				this.$modularLanding.removeClass('show');
 			}
 
 			this.$mainContent.css({
-				height: newContentHeight + $('.content header').outerHeight()
+				height: $('.content-inner').outerHeight()
 			});
 
-			$('.landing-inner').css({
-				height: 0
-			});
+			$('.landing-inner').addClass('hide');
 		},
 
 		setContainerHeights: function(){
@@ -132,6 +146,10 @@ var assembly = assembly || {};
 			this.$currentCaseStudyContainer.removeClass('show');
 
 			$toShow.addClass('show');
+
+			$('.content').css({
+				height: $('.content-inner').outerHeight()
+			});
 
 			this.$currentCaseStudyContainer = $toShow;
 		}

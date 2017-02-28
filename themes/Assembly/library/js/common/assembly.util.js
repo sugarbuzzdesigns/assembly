@@ -93,18 +93,5 @@ var $ = jQuery;
 
 	$(function(){
 		assembly.util.init();
-
-		//create a TimelineLite instance
-		var tl = new TimelineLite({
-			paused: true
-		});
-
-		var $letterN = $('[data-letter="m"]');
-
-		//append a to() tween
-		tl.to($letterN, 1, {
-			width:"50%"
-		});
-
 	});
 })(jQuery);
