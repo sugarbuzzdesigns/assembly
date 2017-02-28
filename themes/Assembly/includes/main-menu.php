@@ -16,15 +16,14 @@
 					)); ?>
 					</nav>
 					<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-						<div class="col">
-							<?php include __DIR__ . '/library/images/svg/assembly-svg-logo-icon.svg'; ?>
+						<div>
 							<p class="source-org copyright">
 								<a href="mailto:hello@byassembly.com">hello@byassembly.com</a>
 								<a href="tel:+01-678-287-7493" title="Phone Number">678.287.7493</a>
 							</p>
 						</div>
 
-						<div class="col">
+						<div>
 							<ul class="social">
 								<li class="instagram"><a href="#"></a></li><!--
 								--><li class="twitter"><a href="#"></a></li><!--
