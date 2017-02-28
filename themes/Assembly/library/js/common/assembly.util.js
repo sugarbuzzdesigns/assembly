@@ -5,8 +5,6 @@ jQuery.migrateMute = true;
 var assembly = assembly || {};
 var $ = jQuery;
 
-console.log(php_vars.deviceType);
-
 (function($){
 	assembly.util = {
 		baseUrl: php_vars.home,
@@ -49,17 +47,13 @@ console.log(php_vars.deviceType);
 			_this.env.$win.on('resize', _this.debounce(function() {
 				_this.env.$win.trigger('windowResize');
 
-				console.log('resize');
-
 				_this.updateViewportDimensions();
 			}, 250));
 
 			_this.env.$win.on('scrollstart', function(){
-				console.log('scroll start');
 			});
 
 			_this.env.$win.on('scrollstop', function(){
-				console.log('scroll stop');
 			});
 		},
 		// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.

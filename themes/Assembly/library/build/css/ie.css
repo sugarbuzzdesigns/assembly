@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:26 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:39 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1229,6 +1229,12 @@ ABOUT US Page
 .page-about-us .employees.info-open {
   cursor: url(../../images/svg/close-x-dark.svg), auto;
 }
+.page-about-us .employees.info-open .employee-info .col {
+  transform: translate3d(0, 0, 0);
+}
+.page-about-us .employees.info-open .employee-list {
+  pointer-events: none;
+}
 .page-about-us .employees .mesh-bg {
   width: 81.67%;
   height: 490px;
@@ -1238,20 +1244,24 @@ ABOUT US Page
   display: none;
 }
 .page-about-us .employees .employee-info {
+  display: block;
   position: absolute;
   z-index: 3;
   top: 0;
   left: 0;
   overflow: hidden;
   width: 100%;
+  visibility: hidden;
 }
 .page-about-us .employees .employee-info.show {
-  display: block;
+  visibility: visible;
 }
 .page-about-us .employees .employee-info .col {
   width: 25%;
   float: left;
   min-height: 1px;
+  transform: translate3d(0, 10%, 0);
+  transition: transform 0.4s;
 }
 .page-about-us .employees .employee-info .employee-about {
   margin-top: 81px;
@@ -1275,6 +1285,9 @@ ABOUT US Page
 }
 .page-about-us .employees .employee-info .employee-years .numbers {
   background: #fff;
+}
+.page-about-us .employees.in-view .employee-list .employee:nth-child(even) {
+  transform: translate3d(0, 0, 0);
 }
 .page-about-us .employee-list {
   overflow: hidden;
@@ -1331,7 +1344,9 @@ ABOUT US Page
   margin-left: resp(44);
 }
 .page-about-us .employee-list .employee:nth-child(even) {
-  margin-top: 45px;
+  transition: transform 0.5s ease-in-out;
+  transform: translate3d(0, 95px, 0);
+  padding-bottom: 45px;
 }
 .page-about-us .employee-list .employee img {
   width: 100%;

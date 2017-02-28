@@ -626,6 +626,14 @@ ABOUT US Page
 
 		&.info-open {
 			cursor: url(../../images/svg/close-x-dark.svg), auto;
+
+			.employee-info .col {
+				transform: translate3d(0, 0, 0);
+			}
+
+			.employee-list {
+				pointer-events: none;
+			}
 		}
 
 		.mesh-bg {
@@ -639,21 +647,25 @@ ABOUT US Page
 		}
 
 		.employee-info {
+			display: block;
 			position: absolute;
 			z-index: 3;
 			top: 0;
 			left: 0;
 			overflow: hidden;
 			width: 100%;
+			visibility: hidden;
 
 			&.show {
-				display: block;
+				visibility: visible;
 			}
 
 			.col {
 				width: 25%;
 				float: left;
 				min-height: 1px;
+				transform: translate3d(0, 10%, 0);
+				transition: transform 0.4s;
 			}
 
 			.employee-about {
@@ -693,6 +705,12 @@ ABOUT US Page
 				p {
 
 				}
+			}
+		}
+
+		&.in-view {
+			.employee-list .employee:nth-child(even){
+				transform: translate3d(0,0,0);
 			}
 		}
 	}
@@ -765,7 +783,9 @@ ABOUT US Page
 			}
 
 			&:nth-child(even){
-				margin-top: 45px;
+				transition: transform 0.5s ease-in-out;
+				transform: translate3d(0, 95px, 0);
+				padding-bottom: 45px;
 			}
 
 			img {

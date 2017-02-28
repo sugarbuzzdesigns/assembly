@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-27 11:21 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 10:27 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -8,6 +8,7 @@ var assembly = assembly || {};
 	assembly.about = {
 		init: function(){
 			this.bindEvents();
+			this.waypoints();
 		},
 
 		bindEvents: function(){
@@ -34,6 +35,41 @@ var assembly = assembly || {};
 					$('.employees').css({
 						minHeight: 0
 					});
+				}
+			});
+		},
+		waypoints: function(){
+			this.waypointsInView = $('[data-waypoint]').waypoint({
+				handler: function(direction) {
+					$(this.element).addClass('in-view');
+				},
+				offset: '50%'
+			});
+
+			this.waypointsOutOfView = $('[data-waypoint]').waypoint({
+				handler: function(direction) {
+					if(direction === 'up'){
+						$(this.element).removeClass('in-view')
+					} else {
+						console.log('down');
+					}
+				},
+				offset: '100%'
+			});
+
+			var inview = new Waypoint.Inview({
+				element: $('[data-waypoint]')[0],
+				enter: function(direction) {
+					console.log('Enter triggered with direction ' + direction)
+				},
+				entered: function(direction) {
+					console.log('Entered triggered with direction ' + direction)
+				},
+				exit: function(direction) {
+					console.log('Exit triggered with direction ' + direction)
+				},
+				exited: function(direction) {
+					console.log('Exited triggered with direction ' + direction)
 				}
 			});
 		}
