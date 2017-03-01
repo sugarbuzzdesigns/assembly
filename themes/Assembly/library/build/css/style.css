@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:13 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:21 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9249,6 +9249,12 @@ CASE STUDIES Page
 .page-case-studies .content .content-header {
   padding-bottom: 20.77%;
 }
+.page-case-studies .content .content-header .mesh-bg {
+  margin-top: calc(95%/414*100);
+  margin-left: 10px;
+  height: calc(340px/414*320);
+  width: calc(360px/414*320);
+}
 .page-case-studies .content .content-header span:nth-child(3) {
   font-size: 0.6875rem;
   font-family: 'gridnikregular';
@@ -9263,6 +9269,7 @@ CASE STUDIES Page
   padding-top: 29.47%;
   width: 77%;
   display: none;
+  position: relative;
 }
 .page-case-studies .content h2 span {
   display: block;
@@ -11187,6 +11194,9 @@ you can add resource intensive styles.
     height: calc((294%/720)*100);
     top: calc((238%/720)*100);
     left: calc((264%/720)*100);
+  }
+  .page-case-studies .content-header .mesh-bg {
+    display: none;
   }
   .page-case-studies .content .case-study-details {
     margin-top: -110px;

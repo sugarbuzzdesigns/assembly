@@ -93,6 +93,7 @@
 			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 		</header>
 		<div class="content-header">
+			<div class="mesh-bg dark wide"></div>
 			<h2 data-h2-title="custom">
 				<span>custom</span>
 				<span>kits</span>

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:13 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:21 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1157,6 +1157,9 @@ CASE STUDIES Page
   height: calc((294%/720)*100);
   top: calc((238%/720)*100);
   left: calc((264%/720)*100);
+}
+.page-case-studies .content-header .mesh-bg {
+  display: none;
 }
 .page-case-studies .content .case-study-details {
   margin-top: -110px;
