@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:23 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:28 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -748,6 +748,13 @@ To Top BTN
 .to-top {
   display: block;
   padding-bottom: 15px;
+}
+
+/*********************
+Footer
+**********************/
+.footer a[href*="contact"] {
+  margin-top: 22px;
 }
 
 /******************************************************************

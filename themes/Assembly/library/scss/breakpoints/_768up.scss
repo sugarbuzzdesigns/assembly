@@ -641,3 +641,12 @@ To Top BTN
 	display: block;
 	padding-bottom: 15px;
 }
+
+/*********************
+Footer
+**********************/
+.footer {
+	a[href*="contact"]{
+		margin-top: 22px;
+	}
+}
