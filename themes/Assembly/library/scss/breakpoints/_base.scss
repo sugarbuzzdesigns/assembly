@@ -249,7 +249,7 @@ MENU & NAVIGATION STYLES
     height: 30px;
     opacity: 0;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 1016;
     transition: all 0.6s;
     overflow: hidden;
 
@@ -356,13 +356,10 @@ and more scalable.
 
 	.main-menu, .nav {
 		pointer-events: all;
-		z-index: 15;
 	}
 
 	.menu-inner {
 		opacity: 1;
-
-
 	}
 
 	li.show-nav-item {
@@ -752,6 +749,7 @@ select, .select2.select2-container--default {
 		}
 
 		&.active {
+			pointer-events: none;
 			background: transparent;
 			color: #221F20;
 		}
@@ -769,6 +767,10 @@ HEADER STYLES
 
 .header {
 	background-color: $black;
+}
+
+.menu-icon {
+	display: none;
 }
 
 .section-header {
@@ -811,7 +813,7 @@ HEADER STYLES
 	float: right;
 	width: 8%;
 	max-width: 28px;
-	height: 20px;
+	min-height: 20px;
 	position: relative;
 	margin: 0;
 	-webkit-transform: rotate(0deg);
@@ -928,10 +930,6 @@ header.light {
 header.dark {
 	.main-menu-btn  span {
 		background-color: #000;
-		-webkit-transition: background-color .5s ease-in-out;
-		-moz-transition: background-color .5s ease-in-out;
-		-o-transition: background-color .5s ease-in-out;
-		transition: background-color .5s ease-in-out;
 	}
 
 	#mask-2, .menu-mask,
@@ -1887,7 +1885,7 @@ CASE STUDIES Page
 		width: 100%;
 		top: 0;
 		left: 0;
-		z-index: 1000;
+		z-index: 1025;
 
 		.header-icon-logo {
 			// fill: #000;
@@ -2051,8 +2049,13 @@ CASE STUDIES Page
 		    margin: 0 auto 7%;
 		    padding-top: 29.47%;
 		    width: 77%;
+		    display: none;
 
 		    span {
+		    	display: block;
+		    }
+
+		    &.show {
 		    	display: block;
 		    }
 		}
@@ -2117,6 +2120,26 @@ CASE STUDIES Page
 		&.show {
 			animation: showAndUp 1s;
 			animation-fill-mode: forwards;
+		}
+	}
+
+	.view-case-study {
+		display: block;
+		width: 100%;
+		padding-bottom: 64px;
+
+		svg {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	a[data-title="custom"],
+	a[data-title="modular"]{
+		display: none;
+
+		&.show {
+			display: block;
 		}
 	}
 }

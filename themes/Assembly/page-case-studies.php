@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-
+<?php include 'includes/header-dark.php'; ?>
 <section class="landing">
 	<div class="landing-inner">
 		<div class="modular case-study-category">
 			<div class="hover-content">
-				<header class="light section-header">
+				<header class="light section-header no-mobile">
 				    <h2 class="logo">
 				        <a href="/">
 				            <!-- logo SVG file -->
@@ -25,7 +25,7 @@
 			</div>
 			<div class="default-content">
 				<div class="inner">
-					<header class="dark section-header interior">
+					<header class="dark section-header interior no-mobile">
 					    <h2 class="logo">
 					        <a href="/">
 					            <!-- logo SVG file -->
@@ -48,7 +48,7 @@
 		</div>
 		<div class="custom case-study-category">
 			<div class="hover-content">
-				<header class="light section-header">
+				<header class="light section-header no-mobile">
 				    <?php include __DIR__ . '/includes/menu-btn.php'; ?>
 				</header>
 				<h3>
@@ -63,7 +63,7 @@
 			</div>
 			<div class="default-content">
 				<div class="inner">
-					<header class="dark section-header interior">
+					<header class="dark section-header interior no-mobile">
 						<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 					</header>
 					<h3>
@@ -93,8 +93,13 @@
 			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 		</header>
 		<div class="content-header">
-			<h2>
+			<h2 data-h2-title="custom">
 				<span>custom</span>
+				<span>kits</span>
+				<span>spaces you want to be in</span>
+			</h2>
+			<h2 data-h2-title="modular">
+				<span>modular</span>
 				<span>kits</span>
 				<span>spaces you want to be in</span>
 			</h2>
@@ -136,12 +141,12 @@
 			<?php include 'includes/content/case-studies/modular/experiential.php' ?>
 			<?php include 'includes/content/case-studies/modular/sporting.php' ?>
 		</div>
-		<a href="#" title="">
+		<a class="view-case-study" href="#" data-title="modular">
 			<?php include 'library/images/svg/view-modular-case-study.svg'; ?>
 		</a>
-	<!-- 	<a href="#" title="">
+		<a class="view-case-study" href="#" data-title="custom">
 			<?php include 'library/images/svg/view-custom-case-study.svg'; ?>
-		</a> -->
+		</a>
 		<div class="no-mobile to-top-wrap">
 			<div class="to-top">
 				<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">

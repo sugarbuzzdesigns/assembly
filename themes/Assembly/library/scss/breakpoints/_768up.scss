@@ -16,6 +16,10 @@ come into play. Have fun!
 	display: none;
 }
 
+.tablet {
+	display: block;
+}
+
 /*********************
 Years Experience Module
 **********************/
@@ -33,79 +37,7 @@ Years Experience Module
 /*********************
 MENU & NAVIGATION STYLES
 *********************/
-.main-menu-btn {
-	position: absolute;
-    top: 35px;
-    right: 37px;
-	height: 61px;
-	width: 61px;
-	max-width: none;
 
-	&:after {
-		pointer-events: none;
-	}
-
-	svg {
-		display: block;
-	}
-
-	.menu-rectangle {
-		opacity: 0;
-		transition: opacity 0.5s 1s;
-	}
-
-	.menu-letter {
-		opacity: 0;
-		transition: opacity 1s;
-	}
-
-	.letter-n {
-		transform: translate3d(9px, -17px, 0);
-	}
-
-	.letter-u {
-		transform: translate3d(9px, -34px, 0);
-	}
-
-	&.animate {
-		.menu-rectangle {
-			opacity: 1;
-		}
-
-		.menu-letter {
-			opacity: 1;
-			animation-duration: 0.5s;
-			animation-fill-mode: forwards;
-			animation-delay: 0.7s;
-		}
-
-		.letter-n {
-			animation-name: moveMenuLetterN;
-		}
-
-		.letter-u  {
-			animation-name: moveMenuLetterU;
-		}
-	}
-}
-
-@keyframes moveMenuLetterN {
-	50% {
-		transform: translate3d(9px, 0, 0);
-	}
-	100% {
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes moveMenuLetterU {
-	50% {
-		transform: translate3d(9px, 0, 0);
-	}
-	100% {
-		transform: translate3d(0, 0, 0);
-	}
-}
 
 /*********************
 CAROUSEL MODULES
@@ -563,6 +495,130 @@ SERVICES Page
 		float: right;
 		margin-right: 5.97%;
     	margin-bottom: 16px;
+	}
+}
+
+/*********************
+CASE STUDIES Page
+**********************/
+.page-case-studies {
+	.filter-wrap {
+		padding: 16px 33px 20px 17px;
+		background: rgba(255,255,255,0.8);
+	}
+
+	.content {
+		.content-header {
+			padding-bottom: 0;
+
+			span:nth-child(3){
+			    font-size: rem(13);
+			    font-family: 'gridnikregular';
+			    margin-top: 10px;
+			}
+		}
+
+		h2 {
+			font-size: rem(72);
+			line-height: 1.043;
+		    margin: 0;
+		    padding-top: 185px;
+		    padding-left: 121px;
+		    width: 100%;
+		}
+
+		.svg-container {
+			svg {
+				width: resp(1160);
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		.case-study-desc {
+			width: 16.53%;
+			margin: 0 auto 102px 9.03%;
+		}
+
+		blockquote {
+		    width: 22.64%;
+		    float: right;
+		    clear: right;
+		    margin: 72px 26.74% 0 0;
+
+			strong {
+				font-family: 'gridnikregular';
+				font-size: rem(13);
+				line-height: 2.77;
+				text-transform: capitalize;
+				font-weight: normal;
+				color: #221F20;
+				letter-spacing: 1px;
+			}
+
+			p {
+				font-size: rem(11);
+				margin-top: 0;
+				line-height: 1.81;
+			}
+		}
+	}
+
+	.tile {
+		width: 34.58%;
+		margin-bottom: 18.81%;
+
+		.tile-img {
+			img {
+				width: 100%;
+			}
+		}
+
+		&.tile-2,
+		&.tile-3,
+		&.tile-6 {
+			width: 22.43%;
+		}
+
+		&.tile-4 {
+			width: 25.69%;
+		}
+
+		&.tile-5,
+		&.tile-7 {
+			width: 28.54%;
+		}
+
+		&.tile-2 {
+		    margin: 155px 15.07% 0 0;
+		    float: right;
+		}
+
+		&.tile-3 {
+			margin: -27px 0 0 9.03%;
+			clear: left;
+		}
+
+		&.tile-4 {
+			float: right;
+			margin: 2.57% 23.68% 0 0;
+		}
+
+		&.tile-5 {
+		    margin: 0 0 0 14.93%;
+    		padding-top: 27%;
+		    float: left;
+		}
+
+		&.tile-6 {
+		    float: right;
+		    clear: both;
+		    margin: -8.5% 9.028% 0 0;
+		}
+
+		&.tile-7 {
+		    margin: 14.4% 0 0 26.88%;
+		}
 	}
 }
 

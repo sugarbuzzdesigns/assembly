@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:42 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:20 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7444,7 +7444,7 @@ MENU & NAVIGATION STYLES
   height: 30px;
   opacity: 0;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 1016;
   transition: all 0.6s;
   overflow: hidden;
 }
@@ -7530,7 +7530,6 @@ and more scalable.
 }
 .menu-open .main-menu, .menu-open .nav {
   pointer-events: all;
-  z-index: 15;
 }
 .menu-open .menu-inner {
   opacity: 1;
@@ -7867,6 +7866,7 @@ select .select2-selection__arrow b, .select2.select2-container--default .select2
   border-left: none;
 }
 .toggle-filter a.active {
+  pointer-events: none;
   background: transparent;
   color: #221F20;
 }
@@ -7881,6 +7881,10 @@ HEADER STYLES
 *********************/
 .header {
   background-color: #000;
+}
+
+.menu-icon {
+  display: none;
 }
 
 .section-header {
@@ -7920,7 +7924,7 @@ HEADER STYLES
   float: right;
   width: 8%;
   max-width: 28px;
-  height: 20px;
+  min-height: 20px;
   position: relative;
   margin: 0;
   -webkit-transform: rotate(0deg);
@@ -8033,10 +8037,6 @@ header.light .menu-letter {
 
 header.dark .main-menu-btn span {
   background-color: #000;
-  -webkit-transition: background-color .5s ease-in-out;
-  -moz-transition: background-color .5s ease-in-out;
-  -o-transition: background-color .5s ease-in-out;
-  transition: background-color .5s ease-in-out;
 }
 header.dark #mask-2, header.dark .menu-mask,
 header.dark #menu-path-1 {
@@ -8812,7 +8812,7 @@ CASE STUDIES Page
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1025;
 }
 .page-case-studies .section-header .main-menu-btn span {
   background: #000;
@@ -9257,8 +9257,12 @@ CASE STUDIES Page
   margin: 0 auto 7%;
   padding-top: 29.47%;
   width: 77%;
+  display: none;
 }
 .page-case-studies .content h2 span {
+  display: block;
+}
+.page-case-studies .content h2.show {
   display: block;
 }
 .page-case-studies .content .select-filter,
@@ -9311,6 +9315,23 @@ CASE STUDIES Page
 .page-case-studies .case-study-container.show {
   animation: showAndUp 1s;
   animation-fill-mode: forwards;
+}
+.page-case-studies .view-case-study {
+  display: block;
+  width: 100%;
+  padding-bottom: 64px;
+}
+.page-case-studies .view-case-study svg {
+  display: block;
+  margin: 0 auto;
+}
+.page-case-studies a[data-title="custom"],
+.page-case-studies a[data-title="modular"] {
+  display: none;
+}
+.page-case-studies a[data-title="custom"].show,
+.page-case-studies a[data-title="modular"].show {
+  display: block;
 }
 
 @keyframes showAndUp {
@@ -10233,6 +10254,10 @@ you can add resource intensive styles.
     display: none;
   }
 
+  .tablet {
+    display: block;
+  }
+
   /*********************
   Years Experience Module
   **********************/
@@ -10247,66 +10272,6 @@ you can add resource intensive styles.
   /*********************
   MENU & NAVIGATION STYLES
   *********************/
-  .main-menu-btn {
-    position: absolute;
-    top: 35px;
-    right: 37px;
-    height: 61px;
-    width: 61px;
-    max-width: none;
-  }
-  .main-menu-btn:after {
-    pointer-events: none;
-  }
-  .main-menu-btn svg {
-    display: block;
-  }
-  .main-menu-btn .menu-rectangle {
-    opacity: 0;
-    transition: opacity 0.5s 1s;
-  }
-  .main-menu-btn .menu-letter {
-    opacity: 0;
-    transition: opacity 1s;
-  }
-  .main-menu-btn .letter-n {
-    transform: translate3d(9px, -17px, 0);
-  }
-  .main-menu-btn .letter-u {
-    transform: translate3d(9px, -34px, 0);
-  }
-  .main-menu-btn.animate .menu-rectangle {
-    opacity: 1;
-  }
-  .main-menu-btn.animate .menu-letter {
-    opacity: 1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.7s;
-  }
-  .main-menu-btn.animate .letter-n {
-    animation-name: moveMenuLetterN;
-  }
-  .main-menu-btn.animate .letter-u {
-    animation-name: moveMenuLetterU;
-  }
-
-  @keyframes moveMenuLetterN {
-    50% {
-      transform: translate3d(9px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  @keyframes moveMenuLetterU {
-    50% {
-      transform: translate3d(9px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-  }
   /*********************
   CAROUSEL MODULES
   **********************/
@@ -10678,6 +10643,100 @@ you can add resource intensive styles.
   }
 
   /*********************
+  CASE STUDIES Page
+  **********************/
+  .page-case-studies .filter-wrap {
+    padding: 16px 33px 20px 17px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .page-case-studies .content .content-header {
+    padding-bottom: 0;
+  }
+  .page-case-studies .content .content-header span:nth-child(3) {
+    font-size: 0.8125rem;
+    font-family: 'gridnikregular';
+    margin-top: 10px;
+  }
+  .page-case-studies .content h2 {
+    font-size: 4.5rem;
+    line-height: 1.043;
+    margin: 0;
+    padding-top: 185px;
+    padding-left: 121px;
+    width: 100%;
+  }
+  .page-case-studies .content .svg-container svg {
+    width: calc(1160%/1440*100);
+    margin: 0 auto;
+    display: block;
+  }
+  .page-case-studies .content .case-study-desc {
+    width: 16.53%;
+    margin: 0 auto 102px 9.03%;
+  }
+  .page-case-studies .content blockquote {
+    width: 22.64%;
+    float: right;
+    clear: right;
+    margin: 72px 26.74% 0 0;
+  }
+  .page-case-studies .content blockquote strong {
+    font-family: 'gridnikregular';
+    font-size: 0.8125rem;
+    line-height: 2.77;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #221F20;
+    letter-spacing: 1px;
+  }
+  .page-case-studies .content blockquote p {
+    font-size: 0.6875rem;
+    margin-top: 0;
+    line-height: 1.81;
+  }
+  .page-case-studies .tile {
+    width: 34.58%;
+    margin-bottom: 18.81%;
+  }
+  .page-case-studies .tile .tile-img img {
+    width: 100%;
+  }
+  .page-case-studies .tile.tile-2, .page-case-studies .tile.tile-3, .page-case-studies .tile.tile-6 {
+    width: 22.43%;
+  }
+  .page-case-studies .tile.tile-4 {
+    width: 25.69%;
+  }
+  .page-case-studies .tile.tile-5, .page-case-studies .tile.tile-7 {
+    width: 28.54%;
+  }
+  .page-case-studies .tile.tile-2 {
+    margin: 155px 15.07% 0 0;
+    float: right;
+  }
+  .page-case-studies .tile.tile-3 {
+    margin: -27px 0 0 9.03%;
+    clear: left;
+  }
+  .page-case-studies .tile.tile-4 {
+    float: right;
+    margin: 2.57% 23.68% 0 0;
+  }
+  .page-case-studies .tile.tile-5 {
+    margin: 0 0 0 14.93%;
+    padding-top: 27%;
+    float: left;
+  }
+  .page-case-studies .tile.tile-6 {
+    float: right;
+    clear: both;
+    margin: -8.5% 9.028% 0 0;
+  }
+  .page-case-studies .tile.tile-7 {
+    margin: 14.4% 0 0 26.88%;
+  }
+
+  /*********************
   Contact Page
   **********************/
   #contact-map {
@@ -10729,10 +10788,65 @@ you can add resource intensive styles.
   Main Menu BTN
   **********************/
   .main-menu-btn {
-    top: 55px;
-    right: 55px;
+    position: absolute;
+    top: 35px;
+    right: 37px;
+    height: 61px;
+    width: 61px;
+    max-width: none;
+  }
+  .main-menu-btn:after {
+    pointer-events: none;
+  }
+  .main-menu-btn svg {
+    display: block;
+  }
+  .main-menu-btn .menu-rectangle {
+    opacity: 0;
+    transition: opacity 0.5s 1s;
+  }
+  .main-menu-btn .menu-letter {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .main-menu-btn .letter-n {
+    transform: translate3d(9px, -17px, 0);
+  }
+  .main-menu-btn .letter-u {
+    transform: translate3d(9px, -34px, 0);
+  }
+  .main-menu-btn.animate .menu-rectangle {
+    opacity: 1;
+  }
+  .main-menu-btn.animate .menu-letter {
+    opacity: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+  }
+  .main-menu-btn.animate .letter-n {
+    animation-name: moveMenuLetterN;
+  }
+  .main-menu-btn.animate .letter-u {
+    animation-name: moveMenuLetterU;
   }
 
+  @keyframes moveMenuLetterN {
+    50% {
+      transform: translate3d(9px, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes moveMenuLetterU {
+    50% {
+      transform: translate3d(9px, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
   /*********************
   Generic Section Styles
   **********************/
@@ -10968,6 +11082,9 @@ you can add resource intensive styles.
   /*********************
   CASE STUDIES Page
   **********************/
+  .page-case-studies .section-header {
+    z-index: 10;
+  }
   .page-case-studies .landing .case-study-category {
     width: 50vw;
     height: 100vh;
@@ -11026,95 +11143,8 @@ you can add resource intensive styles.
     top: calc((238%/720)*100);
     left: calc((264%/720)*100);
   }
-  .page-case-studies .filter-wrap {
-    padding: 16px 33px 20px 17px;
-    background: rgba(255, 255, 255, 0.8);
-  }
-  .page-case-studies .content .content-header span:nth-child(3) {
-    font-size: 0.8125rem;
-    font-family: 'gridnikregular';
-    margin-top: 10px;
-  }
   .page-case-studies .content .case-study-details {
     margin-top: -110px;
-  }
-  .page-case-studies .content h2 {
-    font-size: 4.5rem;
-    line-height: 1.043;
-    margin: 0;
-    padding-top: 185px;
-    padding-left: 121px;
-    width: 100%;
-  }
-  .page-case-studies .content .svg-container svg {
-    width: calc(1160%/1440*100);
-    margin: 0 auto;
-    display: block;
-  }
-  .page-case-studies .content .case-study-desc {
-    width: 16.53%;
-    margin: 0 auto 102px 9.03%;
-  }
-  .page-case-studies .content blockquote {
-    width: 22.64%;
-    float: right;
-    clear: right;
-    margin: 72px 26.74% 0 0;
-  }
-  .page-case-studies .content blockquote strong {
-    font-family: 'gridnikregular';
-    font-size: 0.8125rem;
-    line-height: 2.77;
-    text-transform: capitalize;
-    font-weight: normal;
-    color: #221F20;
-    letter-spacing: 1px;
-  }
-  .page-case-studies .content blockquote p {
-    font-size: 0.6875rem;
-    margin-top: 0;
-    line-height: 1.81;
-  }
-  .page-case-studies .tile {
-    width: 34.58%;
-    margin-bottom: 18.81%;
-  }
-  .page-case-studies .tile .tile-img img {
-    width: 100%;
-  }
-  .page-case-studies .tile.tile-2, .page-case-studies .tile.tile-3, .page-case-studies .tile.tile-6 {
-    width: 22.43%;
-  }
-  .page-case-studies .tile.tile-4 {
-    width: 25.69%;
-  }
-  .page-case-studies .tile.tile-5, .page-case-studies .tile.tile-7 {
-    width: 28.54%;
-  }
-  .page-case-studies .tile.tile-2 {
-    margin: 155px 15.07% 0 0;
-    float: right;
-  }
-  .page-case-studies .tile.tile-3 {
-    margin: -27px 0 0 9.03%;
-    clear: left;
-  }
-  .page-case-studies .tile.tile-4 {
-    float: right;
-    margin: 2.57% 23.68% 0 0;
-  }
-  .page-case-studies .tile.tile-5 {
-    margin: 0 0 0 14.93%;
-    padding-top: 27%;
-    float: left;
-  }
-  .page-case-studies .tile.tile-6 {
-    float: right;
-    clear: both;
-    margin: -8.5% 9.028% 0 0;
-  }
-  .page-case-studies .tile.tile-7 {
-    margin: 14.4% 0 0 26.88%;
   }
 
   /*********************

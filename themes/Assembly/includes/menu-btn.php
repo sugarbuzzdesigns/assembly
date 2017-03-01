@@ -1,5 +1,5 @@
 	<div class="main-menu-btn">
-		<div class="m-only">
+		<div class="hamburger">
 			<span></span>
 			<span></span>
 			<span></span>

@@ -85,15 +85,33 @@ var assembly = assembly || {};
 					_this.$filterWrap.addClass('show');
 				}
 			});
+
+			$('.view-case-study').on('click', function(evt){
+				evt.preventDefault();
+				_this.showMainCaseStudies($('.case-study-category.'+ $(this).data('title')));
+			});
 		},
 
 		showMainCaseStudies: function($landingTileClicked){
+			console.log($landingTileClicked);
 			if($landingTileClicked.is('.modular')){
 				this.$modularLanding.addClass('show');
 				this.$customLanding.removeClass('show');
+				// Link at bottom of page
+				$('[data-title="modular"]').removeClass('show');
+				$('[data-title="custom"]').addClass('show');
+				// H2 tag at top of page
+				$('[data-h2-title="modular"]').addClass('show');
+				$('[data-h2-title="custom"]').removeClass('show');
 			} else {
 				this.$customLanding.addClass('show');
 				this.$modularLanding.removeClass('show');
+				// Link at bottom of page
+				$('[data-title="modular"]').addClass('show');
+				$('[data-title="custom"]').removeClass('show');
+				// H2 tag at top of page
+				$('[data-h2-title="modular"]').removeClass('show');
+				$('[data-h2-title="custom"]').addClass('show');
 			}
 
 			this.$mainContent.css({
@@ -142,6 +160,20 @@ var assembly = assembly || {};
 			var cat = this.currentFilerStatus.category,
 				type = this.currentFilerStatus.type,
 				$toShow = $('[data-kit-type="'+ type +'"][data-category="'+ cat +'"]');
+
+			if(type === 'modular'){
+				$('[data-title="modular"]').removeClass('show');
+				$('[data-title="custom"]').addClass('show');
+				// H2 tag at top of page
+				$('[data-h2-title="modular"]').addClass('show');
+				$('[data-h2-title="custom"]').removeClass('show');
+			} else {
+				$('[data-title="modular"]').addClass('show');
+				$('[data-title="custom"]').removeClass('show');
+				// H2 tag at top of page
+				$('[data-h2-title="modular"]').removeClass('show');
+				$('[data-h2-title="custom"]').addClass('show');
+			}
 
 			this.$currentCaseStudyContainer.removeClass('show');
 
