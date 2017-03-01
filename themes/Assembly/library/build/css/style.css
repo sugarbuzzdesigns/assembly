@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:28 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:57 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -519,7 +519,7 @@ FONT FACE (IN YOUR FACE)
  */
 @font-face {
   font-family: 'pangrambold';
-  src: url("../../fonts/pangram/pangram-bold-webfont.woff2") format("woff2"), url("../../fonts/pangram/pangram-bold-webfont.woff") format("woff"), url("../../fonts/pangram/pangram-bold-webfont.ttf") format("truetype");
+  src: url("../../fonts/pangram/pangram-bold-webfont.woff2") format("woff2"), url("../../fonts/pangram/pangram-bold-webfont.woff") format("woff"), url("../../fonts/pangram/pangram-bold-webfont.svg#Pangram-Bold") format("svg"), url("../../fonts/pangram/pangram-bold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -528,19 +528,19 @@ FONT FACE (IN YOUR FACE)
  */
 @font-face {
   font-family: 'robotoregular';
-  src: url("../../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../../fonts/roboto/roboto-regular-webfont.ttf") format("truetype");
+  src: url("../../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../../fonts/roboto/roboto-regular-webfont.svg") format("svg"), url("../../fonts/roboto/roboto-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'roboto_monolight';
-  src: url("../../fonts/roboto/robotomono-light-webfont.woff2") format("woff2"), url("../../fonts/roboto/robotomono-light-webfont.woff") format("woff"), url("../../fonts/roboto/robotomono-light-webfont.ttf") format("truetype");
+  src: url("../../fonts/roboto/robotomono-light-webfont.woff2") format("woff2"), url("../../fonts/roboto/robotomono-light-webfont.woff") format("woff"), url("../../fonts/roboto/robotomono-light-webfont.svg") format("svg"), url("../../fonts/roboto/robotomono-light-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'roboto_monoregular';
-  src: url("../../fonts/roboto/robotomono-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto/robotomono-regular-webfont.woff") format("woff"), url("../../fonts/roboto/robotomono-regular-webfont.ttf") format("truetype");
+  src: url("../../fonts/roboto/robotomono-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto/robotomono-regular-webfont.woff") format("woff"), url("../../fonts/roboto/robotomono-regular-webfont.svg") format("svg"), url("../../fonts/roboto/robotomono-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -549,7 +549,7 @@ FONT FACE (IN YOUR FACE)
  */
 @font-face {
   font-family: 'gridnikregular';
-  src: url("../../fonts/gridnik/gridnik-webfont.woff2") format("woff2"), url("../../fonts/gridnik/gridnik-webfont.woff") format("woff"), url("../../fonts/gridnik/gridnik-webfont.ttf") format("truetype");
+  src: url("../../fonts/gridnik/gridnik-webfont.woff2") format("woff2"), url("../../fonts/gridnik/gridnik-webfont.woff") format("woff"), url("../../fonts/gridnik/gridnik-webfont.svg#gridnikregular") format("svg") url("../../fonts/gridnik/gridnik-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

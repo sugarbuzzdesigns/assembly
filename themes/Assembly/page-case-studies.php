@@ -151,7 +151,7 @@
 			<div class="to-top">
 				<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
 					<g fill="none" fill-rule="evenodd">
-						<text font-family="Gridnik" font-size="12.9199" fill="#000" transform="translate(0 8)">
+						<text font-family="gridnikregular" font-size="12.9199" fill="#000" transform="translate(0 8)">
 							<tspan x=".8313" y=".9988">TOP</tspan>
 						</text>
 						<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>

@@ -9,14 +9,14 @@
         <g id="HOME" transform="translate(-1330.000000, -107.000000)">
             <g id="MENU" transform="translate(1330.000000, 107.000000)">
                 <use id="Rectangle-5" stroke="#979797" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
-                <text id="ME" font-family="Gridnik" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
+                <text id="ME" font-family="gridnikregular" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
                     <tspan x="11.6617647" y="5.38235294">ME</tspan>
                     <tspan x="11.6617647" y="25.3823529">     </tspan>
                 </text>
-                <text id="N" font-family="Gridnik" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
+                <text id="N" font-family="gridnikregular" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
                     <tspan x="27.0147059" y="23.1176471">N</tspan>
                 </text>
-                <text id="U" font-family="Gridnik" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
+                <text id="U" font-family="gridnikregular" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="1.07692313" fill="#555252">
                     <tspan x="38.6764706" y="40.0588235">U</tspan>
                 </text>
             </g>
