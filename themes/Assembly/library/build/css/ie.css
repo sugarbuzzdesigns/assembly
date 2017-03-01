@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:20 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 01:23 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -293,6 +293,9 @@ VIDEO CONTENT
 /*********************
 HOME PAGE STYLES
 **********************/
+.home .main-content {
+  padding: 0;
+}
 .home .nav-arrow-right {
   display: block;
 }
@@ -321,13 +324,14 @@ HOME PAGE STYLES
 .home .group {
   width: 100%;
   overflow: hidden;
+  padding-top: 80px;
 }
 .home .group-1 {
   position: relative;
   margin-top: -200px;
 }
 .home .group-2 {
-  margin-bottom: 55px;
+  margin-bottom: 115px;
 }
 .home .group-3 {
   overflow: hidden;

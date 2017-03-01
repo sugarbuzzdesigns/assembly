@@ -74,6 +74,10 @@ HOME PAGE STYLES
 **********************/
 
 .home {
+	.main-content {
+		padding: 0;
+	}
+
 	.nav-arrow-right {
 		display: block;
 	}
@@ -112,6 +116,7 @@ HOME PAGE STYLES
 	.group {
 		width: 100%;
 		overflow: hidden;
+		padding-top: 80px;
 	}
 
 	.group-1 {
@@ -120,7 +125,7 @@ HOME PAGE STYLES
 	}
 
 	.group-2 {
-		margin-bottom: 55px;
+		margin-bottom: 115px;
 	}
 
 	.group-3 {
