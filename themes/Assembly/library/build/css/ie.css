@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:20 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:42 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1012,6 +1012,9 @@ CASE STUDIES Page
   height: 100vh;
   position: absolute;
   right: 0;
+}
+.page-case-studies .landing .modular h3 {
+  left: 21.661%;
 }
 .page-case-studies .landing .modular .default-content .inner {
   background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);

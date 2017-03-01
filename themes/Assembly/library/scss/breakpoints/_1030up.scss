@@ -367,10 +367,16 @@ CASE STUDIES Page
 			}
 		}
 
-		.modular .default-content .inner {
-			background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
+		.modular {
+			h3 {
+				left: 21.661%;
+			}
+
+			.default-content .inner {
+				background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 		}
 
 		.custom {
