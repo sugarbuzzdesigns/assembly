@@ -163,14 +163,14 @@ Home Page
 		position: relative;
 	}
 
+	.main-content {
+		padding-top: calc(181%/1440*100);
+	}
+
 	.company-statement {
-		padding-top: 0;
-		margin-top: 181px;
 
 		.svg-shape-1 {
-			top: 0;
-			left: 52%;
-			width: 227px;
+
 		}
 
 		p {
