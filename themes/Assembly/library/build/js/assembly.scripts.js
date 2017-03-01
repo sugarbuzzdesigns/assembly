@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 03:31 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 08:38 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -483,15 +483,43 @@ var assembly = assembly || {};
 (function($){
 	assembly.video = {
 		init: function(){
+			this.bindEvents();
 			this.initializeVideos();
+		},
+
+		bindEvents: function(){
+			var _this = this;
+
+			$('.video-overlay').on('click', function(evt){
+				evt.stopPropagation();
+
+				$(this).removeClass('show');
+				_this.homeVideoReel.pause();
+			});
+
+			$('.video.module').on('click', function(){
+				var videoId = $(this).data('video-id');
+
+				$('#' + videoId).parent().addClass('show').removeClass('hidden');
+
+				_this.homeVideoReel.play();
+			});
 		},
 
 		initializeVideos: function(){
 			var _this = this;
-			$('.video-js').each(function(i, video){
-				var player = videojs($('video').attr('id'), {});
 
-				_this.attachPlayerEvents(player);
+			videojs('home-video-reel', {
+				'autoplay': false,
+				'controls': true
+			}, function(){
+				_this.homeVideoReel = this;
+
+				$('#home-video-reel').data('videojs', this);
+
+				this.on('ended', function(){
+					$('#home-video-reel').removeClass('show');
+				});
 			});
 		},
 

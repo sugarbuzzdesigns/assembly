@@ -14,11 +14,11 @@ and will be used across all viewports.
 @import "../partials/test_styles";
 $screenWidth: 320;
 
-.no-mobile {
+.hidden {
 	display: none;
 }
 
-.loader {
+.no-mobile {
 	display: none;
 }
 
@@ -495,6 +495,33 @@ CAROUSEL MODULES
 /*********************
 VIDEO CONTENT
 **********************/
+.video-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #292929;
+	transition: transform .5s ease-out;
+	transform: translate3d(-100%, 0, 0);
+	z-index: 1000;
+	cursor: url(../../images/svg/close-x-dark.svg), auto;
+
+	.video-js {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+	}
+
+	&.show {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
 .video.module {
     margin-top: 46px;
     margin-bottom: 66px;
@@ -525,15 +552,40 @@ VIDEO CONTENT
 .video-js {
 	width: 100%;
 
+	.video-js .vjs-big-play-button {
+		background: transparent;
+	}
+
+	.vjs-button {
+		display: none;
+	}
+
 	&.vjs-paused {
 		.vjs-poster,
 		.vjs-big-play-button {
 			display: block;
 		}
 
-		.vjs-control-bar {
-			display: none;
-		}
+		// .vjs-control-bar {
+		// 	display: none;
+		// }
+	}
+
+	.vjs-control-bar {
+		background: #2b2b2b;
+		padding-left: 5px;
+	}
+
+	.vjs-load-progress div {
+		background: #bbbbbb;
+	}
+
+	.vjs-slider {
+		background: #fff;
+	}
+
+	.vjs-play-progress {
+		background: #3e3e3e;
 	}
 
 	button.vjs-big-play-button {

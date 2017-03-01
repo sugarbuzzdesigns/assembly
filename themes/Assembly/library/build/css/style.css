@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 06:26 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 08:36 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -5686,7 +5686,6 @@ body.vjs-full-window {
 }
 
 .video-js .vjs-control-bar {
-  display: none;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -5708,15 +5707,6 @@ body.vjs-full-window {
   -moz-transition: visibility 0.1s, opacity 0.1s;
   -o-transition: visibility 0.1s, opacity 0.1s;
   transition: visibility 0.1s, opacity 0.1s;
-}
-
-.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
-  visibility: visible;
-  opacity: 0;
-  -webkit-transition: visibility 1s, opacity 1s;
-  -moz-transition: visibility 1s, opacity 1s;
-  -o-transition: visibility 1s, opacity 1s;
-  transition: visibility 1s, opacity 1s;
 }
 
 .vjs-controls-disabled .vjs-control-bar,
@@ -7242,11 +7232,11 @@ and will be used across all viewports.
   font-family: 'gridnikregular';
 }
 
-.no-mobile {
+.hidden {
   display: none;
 }
 
-.loader {
+.no-mobile {
   display: none;
 }
 
@@ -7650,6 +7640,31 @@ CAROUSEL MODULES
 /*********************
 VIDEO CONTENT
 **********************/
+.video-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #292929;
+  transition: transform .5s ease-out;
+  transform: translate3d(-100%, 0, 0);
+  z-index: 1000;
+  cursor: url(../../images/svg/close-x-dark.svg), auto;
+}
+.video-overlay .video-js {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.video-overlay.show {
+  transform: translate3d(0, 0, 0);
+}
+
 .video.module {
   margin-top: 46px;
   margin-bottom: 66px;
@@ -7678,12 +7693,28 @@ VIDEO CONTENT
 .video-js {
   width: 100%;
 }
+.video-js .video-js .vjs-big-play-button {
+  background: transparent;
+}
+.video-js .vjs-button {
+  display: none;
+}
 .video-js.vjs-paused .vjs-poster,
 .video-js.vjs-paused .vjs-big-play-button {
   display: block;
 }
-.video-js.vjs-paused .vjs-control-bar {
-  display: none;
+.video-js .vjs-control-bar {
+  background: #2b2b2b;
+  padding-left: 5px;
+}
+.video-js .vjs-load-progress div {
+  background: #bbbbbb;
+}
+.video-js .vjs-slider {
+  background: #fff;
+}
+.video-js .vjs-play-progress {
+  background: #3e3e3e;
 }
 .video-js button.vjs-big-play-button {
   background-image: url(../../images/icons/video-play-btn.png);
