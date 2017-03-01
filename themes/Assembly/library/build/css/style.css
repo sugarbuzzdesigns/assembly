@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:08 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:13 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7821,6 +7821,7 @@ select .select2-selection__arrow b, .select2.select2-container--default .select2
 .select2-container--classic .select2-results > .select2-results__options, .select2-container--default .select2-results > .select2-results__options {
   border: solid 1px #979797;
   max-height: none;
+  padding-bottom: 22px;
 }
 
 .select2-container--open .select2-dropdown--below {
