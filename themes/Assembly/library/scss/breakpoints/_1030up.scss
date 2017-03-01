@@ -25,6 +25,15 @@ MAIN LOGO
 }
 
 /*********************
+MENU & NAVIGATION STYLES
+*********************/
+.main-menu {
+    .footer {
+
+    }
+}
+
+/*********************
 Main Menu BTN
 **********************/
 .main-menu-btn {
@@ -37,6 +46,10 @@ Main Menu BTN
 
 	&:after {
 		pointer-events: none;
+	}
+
+	.hamburger {
+		display: none;
 	}
 
 	svg {
@@ -214,7 +227,6 @@ Home Page
 .home {
 	.landing {
 		overflow: hidden;
-		background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
 
 		h2 {
 			font-size: rem(65);

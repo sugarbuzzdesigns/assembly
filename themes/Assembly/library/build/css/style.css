@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 02:10 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:01 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7883,13 +7883,9 @@ HEADER STYLES
   background-color: #000;
 }
 
-.menu-icon {
-  display: none;
-}
-
 .section-header {
-  padding: 6% 5% 5px;
   overflow: auto;
+  position: relative;
 }
 
 .logo {
@@ -7898,8 +7894,9 @@ HEADER STYLES
   margin: 0;
   z-index: 1;
   position: relative;
-  width: 32%;
-  padding-top: 2px;
+  width: 27.54%;
+  margin-top: 26px;
+  margin-left: calc(21%/414*100);
 }
 .logo a {
   color: #fff;
@@ -7923,7 +7920,7 @@ HEADER STYLES
 .close-btn {
   float: right;
   width: 8%;
-  max-width: 28px;
+  max-width: 26px;
   min-height: 20px;
   position: relative;
   margin: 0;
@@ -7947,6 +7944,11 @@ HEADER STYLES
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.main-menu-btn {
+  margin-top: 24px;
+  margin-right: calc(20%/414*100);
 }
 
 .main-menu-btn svg {
@@ -8052,14 +8054,17 @@ header.dark .svg-logo mask {
   transition: fill .5s ease-in-out 0.5s;
 }
 
-.menu-open header.dark .main-menu-btn span {
+.menu-open header.light .hamburger span {
   background-color: #fff;
 }
-.menu-open header.dark #mask-2,
-.menu-open header.dark svg mask,
-.menu-open header.dark svg path,
-.menu-open header.dark svg polygon {
+.menu-open header.light #mask-2,
+.menu-open header.light svg mask,
+.menu-open header.light svg path,
+.menu-open header.light svg polygon {
   fill: #fff;
+}
+.menu-open header.light {
+  z-index: 10001;
 }
 
 /*********************
@@ -8851,7 +8856,6 @@ CASE STUDIES Page
 .page-case-studies .landing h3 {
   overflow: visible;
   position: absolute;
-  z-index: 1;
   margin: 0;
   top: 43%;
   left: 9.661%;
@@ -9710,6 +9714,7 @@ ABOUT US Page
   font-size: 6.57rem;
   line-height: 1;
   letter-spacing: -1.75px;
+  margin-left: -18px;
 }
 .page-about-us .our-approach .carousel-nav {
   position: absolute;
@@ -9899,6 +9904,18 @@ PLUS SIZE (MOBILE) Iphone #+
 
   .mesh-bg.wide {
     width: 341px;
+  }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  .logo {
+    margin-top: 29px;
+  }
+
+  .main-menu-btn {
+    margin-top: 27px;
+    margin-right: calc(20%/414*100);
   }
 
   /*********************
@@ -10270,8 +10287,19 @@ you can add resource intensive styles.
   }
 
   /*********************
-  MENU & NAVIGATION STYLES
+  nav
   *********************/
+  /*
+  all navs have a .nav class applied via
+  the wp_menu function; this is so we can
+  easily write one group of styles for
+  the navs on the site so our css is cleaner
+  and more scalable.
+  */
+  .nav {
+    padding-top: calc(195%/1440*100);
+  }
+
   /*********************
   CAROUSEL MODULES
   **********************/
@@ -10305,7 +10333,7 @@ you can add resource intensive styles.
     display: block;
   }
   .home .landing {
-    background-image: url(../../images/backgrounds/landing-bg.jpg);
+    background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
     background-size: 100%;
   }
   .home .landing .mesh-bg {
@@ -10796,6 +10824,9 @@ you can add resource intensive styles.
   }
 
   /*********************
+  MENU & NAVIGATION STYLES
+  *********************/
+  /*********************
   Main Menu BTN
   **********************/
   .main-menu-btn {
@@ -10808,6 +10839,9 @@ you can add resource intensive styles.
   }
   .main-menu-btn:after {
     pointer-events: none;
+  }
+  .main-menu-btn .hamburger {
+    display: none;
   }
   .main-menu-btn svg {
     display: block;
@@ -10961,7 +10995,6 @@ you can add resource intensive styles.
   **********************/
   .home .landing {
     overflow: hidden;
-    background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
   }
   .home .landing h2 {
     font-size: 4.0625rem;

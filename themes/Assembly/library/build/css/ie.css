@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 02:10 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:01 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -265,8 +265,19 @@ Years Experience Module
 }
 
 /*********************
-MENU & NAVIGATION STYLES
+nav
 *********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+.nav {
+  padding-top: calc(195%/1440*100);
+}
+
 /*********************
 CAROUSEL MODULES
 **********************/
@@ -300,7 +311,7 @@ HOME PAGE STYLES
   display: block;
 }
 .home .landing {
-  background-image: url(../../images/backgrounds/landing-bg.jpg);
+  background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
   background-size: 100%;
 }
 .home .landing .mesh-bg {
@@ -784,6 +795,9 @@ MAIN LOGO
 }
 
 /*********************
+MENU & NAVIGATION STYLES
+*********************/
+/*********************
 Main Menu BTN
 **********************/
 .main-menu-btn {
@@ -796,6 +810,9 @@ Main Menu BTN
 }
 .main-menu-btn:after {
   pointer-events: none;
+}
+.main-menu-btn .hamburger {
+  display: none;
 }
 .main-menu-btn svg {
   display: block;
@@ -949,7 +966,6 @@ Home Page
 **********************/
 .home .landing {
   overflow: hidden;
-  background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
 }
 .home .landing h2 {
   font-size: rem(65);

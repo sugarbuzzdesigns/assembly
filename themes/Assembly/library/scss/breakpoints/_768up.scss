@@ -35,9 +35,20 @@ Years Experience Module
 }
 
 /*********************
-MENU & NAVIGATION STYLES
+nav
 *********************/
 
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+    padding-top: calc(195%/1440*100);
+}
 
 /*********************
 CAROUSEL MODULES
@@ -83,7 +94,7 @@ HOME PAGE STYLES
 	}
 
 	.landing {
-		background-image: url(../../images/backgrounds/landing-bg.jpg);
+		background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
 		background-size: 100%;
 
 		.mesh-bg {

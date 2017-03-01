@@ -769,13 +769,9 @@ HEADER STYLES
 	background-color: $black;
 }
 
-.menu-icon {
-	display: none;
-}
-
 .section-header {
-	padding: 6% 5% 5px;
 	overflow: auto;
+	position: relative;
 }
 
 .logo {
@@ -784,8 +780,9 @@ HEADER STYLES
 	margin: 0;
     z-index: 1;
     position: relative;
-    width: 32%;
-    padding-top: 2px;
+    width: 27.54%;
+    margin-top: 26px;
+    margin-left: calc(21%/414*100);
 
 	a {
 		color: $white;
@@ -812,7 +809,7 @@ HEADER STYLES
 .close-btn {
 	float: right;
 	width: 8%;
-	max-width: 28px;
+	max-width: 26px;
 	min-height: 20px;
 	position: relative;
 	margin: 0;
@@ -836,6 +833,11 @@ HEADER STYLES
 		right: 0;
 		bottom: 0;
 	}
+}
+
+.main-menu-btn {
+	margin-top: 24px;
+	margin-right: calc(20%/414*100);
 }
 
 .main-menu-btn svg {
@@ -951,17 +953,21 @@ header.dark {
 }
 
 .menu-open {
-	header.dark {
-		.main-menu-btn  span {
+	header.light {
+		.hamburger span {
 			background-color: #fff;
 		}
 	}
 
-	header.dark #mask-2,
-	header.dark svg mask,
-	header.dark svg path,
-	header.dark svg polygon {
+	header.light #mask-2,
+	header.light svg mask,
+	header.light svg path,
+	header.light svg polygon {
 		fill: #fff;
+	}
+
+	header.light {
+		z-index: 10001;
 	}
 }
 
@@ -1942,7 +1948,6 @@ CASE STUDIES Page
 		h3 {
 			overflow: visible;
 			position: absolute;
-			z-index: 1;
 		    margin: 0;
 		    top: 43%;
 		    left: 9.661%;
@@ -2610,6 +2615,7 @@ ABOUT US Page
 			font-size: rem(105.12);
 			line-height: 1;
 			letter-spacing: -1.75px;
+			margin-left: -18px;
 		}
 
 		.carousel-nav {
