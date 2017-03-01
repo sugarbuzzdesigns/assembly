@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 09:35 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:20 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8817,6 +8817,14 @@ CASE STUDIES Page
 .page-case-studies .section-header .main-menu-btn span {
   background: #000;
 }
+.page-case-studies .landing {
+  /**
+   * Modular Animations
+   */
+  /**
+   * Custom Animations
+   */
+}
 .page-case-studies .landing .landing-inner {
   overflow: hidden;
   transition: height 0.7s;
@@ -8863,7 +8871,7 @@ CASE STUDIES Page
   top: 0;
   left: 0;
   z-index: 1003;
-  background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
+  background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
   background-size: cover;
   transition: transform 0.5s;
 }
@@ -8872,6 +8880,12 @@ CASE STUDIES Page
 }
 .page-case-studies .landing [data-letter] {
   transform: translate3d(0, 0, 0);
+}
+.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
+  animation-name: modularM;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
 }
 @keyframes modularM {
   1% {
@@ -8888,51 +8902,11 @@ CASE STUDIES Page
     transform: translate3d(40px, -60px, 0);
   }
 }
-.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
-  animation-name: modularM;
-  animation-duration: 1s;
+.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom:hover [data-letter="c"] {
+  animation-name: customC;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
-}
-@keyframes customM {
-  1% {
-    display: block;
-    transform: translate3d(0, 0, 0);
-  }
-  30% {
-    display: block;
-    transform: translate3d(0, 0, 0);
-  }
-  31% {
-    display: block;
-    transform: translate3d(0, 30px, 0);
-  }
-  80% {
-    display: block;
-    transform: translate3d(0, 30px, 0);
-  }
-  81% {
-    display: block;
-    transform: translate3d(-50px, 60px, 0);
-  }
-  82% {
-    transform: translate3d(-50px, 80px, 0);
-  }
-  100% {
-    transform: translate3d(-50px, 80px, 0);
-  }
-}
-@keyframes customU {
-  1% {
-    display: block;
-    transform: translate3d(0, 0, 0);
-  }
-  2% {
-    transform: translate3d(0, -30px, 0);
-  }
-  100% {
-    transform: translate3d(0, -30px, 0);
-  }
 }
 .page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom:hover [data-letter="u"] {
   animation-name: customU;
@@ -8940,11 +8914,145 @@ CASE STUDIES Page
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
-  animation-name: customM;
-  animation-duration: 0.3s;
+.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom:hover [data-letter="s"] {
+  animation-name: customS;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
+}
+.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom:hover [data-letter="t"] {
+  animation-name: customT;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom:hover [data-letter="o"] {
+  animation-name: customO;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
+  animation-name: customM;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+@keyframes customC {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  2% {
+    transform: translate3d(-20px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-20px, 0, 0);
+  }
+  99% {
+    transform: translate3d(-20px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-20px, -95px, 0);
+  }
+}
+@keyframes customU {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  39% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0, -95px, 0);
+  }
+  100% {
+    transform: translate3d(0, -95px, 0);
+  }
+}
+@keyframes customS {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  19% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(0, 23px, 0);
+  }
+  60% {
+    transform: translate3d(0, 23px, 0);
+  }
+  61% {
+    transform: translate3d(-54px, 23px, 0);
+  }
+  100% {
+    transform: translate3d(-54px, 23px, 0);
+  }
+}
+@keyframes customT {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  4% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  5% {
+    transform: translate3d(-10px, 27px, 0);
+  }
+  100% {
+    transform: translate3d(-10px, 27px, 0);
+  }
+}
+@keyframes customO {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  19% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    display: block;
+    transform: translate3d(0, 90px, 0);
+  }
+  90% {
+    display: block;
+    transform: translate3d(0, 90px, 0);
+  }
+  91% {
+    display: block;
+    transform: translate3d(-160px, 105px, 0);
+  }
+  100% {
+    transform: translate3d(-160px, 105px, 0);
+  }
+}
+@keyframes customM {
+  1% {
+    display: block;
+    transform: translate3d(0, 0, 0);
+  }
+  2% {
+    transform: translate3d(0, 85px, 0);
+  }
+  70% {
+    transform: translate3d(0, 85px, 0);
+  }
+  71% {
+    transform: translate3d(0, 105px, 0);
+  }
+  99% {
+    transform: translate3d(0, 105px, 0);
+  }
+  100% {
+    transform: translate3d(-100px, 105px, 0);
+  }
 }
 .page-case-studies .landing .default-content {
   background-size: cover;
@@ -8953,7 +9061,7 @@ CASE STUDIES Page
   position: relative;
   overflow: hidden;
   float: right;
-  z-index: 4;
+  z-index: 1004;
   transition: width 1s;
 }
 .page-case-studies .landing .default-content .inner {
@@ -10726,6 +10834,9 @@ you can add resource intensive styles.
     font-size: 2.9375rem;
     transition: transform 0.8s;
   }
+  .page-case-studies .landing h3 {
+    top: 37.6%;
+  }
   .page-case-studies .landing .landing-inner {
     overflow: hidden;
     transition: height 0.7s;
@@ -10737,19 +10848,7 @@ you can add resource intensive styles.
   .page-case-studies .landing h3 {
     font-size: 5.3125rem;
   }
-  .page-case-studies .landing h3 span {
-    display: block;
-    float: left;
-  }
   .page-case-studies .landing .hover-content {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
-    background-size: cover;
     transition: transform 0.7s;
   }
   .page-case-studies .landing .default-content {
@@ -10766,6 +10865,9 @@ you can add resource intensive styles.
     background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .page-case-studies .landing .custom h3 {
+    left: 23.4%;
   }
   .page-case-studies .landing .custom .default-content .inner {
     background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);

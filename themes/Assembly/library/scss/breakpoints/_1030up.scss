@@ -320,17 +320,21 @@ Tiles
 CASE STUDIES Page
 **********************/
 .page-case-studies {
-	.landing .case-study-category {
-		width: 50vw;
-		height: 100vh;
-		float: left;
-		position: relative;
-		font-family: 'pangrambold';
-		font-size: rem(47);
-		transition: transform 0.8s;
-	}
-
 	.landing {
+		.case-study-category {
+			width: 50vw;
+			height: 100vh;
+			float: left;
+			position: relative;
+			font-family: 'pangrambold';
+			font-size: rem(47);
+			transition: transform 0.8s;
+		}
+
+		h3 {
+			top: 37.6%;
+		}
+
 		.landing-inner {
 			overflow: hidden;
 			transition: height 0.7s;
@@ -345,27 +349,12 @@ CASE STUDIES Page
 
 		h3 {
 			font-size: rem(85);
-
-			span {
-				display: block;
-				float: left;
-			}
 		}
 
 		.hover-content {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 3;
-			background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
-			background-size: cover;
 			transition: transform 0.7s;
 		}
-	}
 
-	.landing {
 		.default-content {
 			width: 100%;
 			height: 100%;
@@ -384,10 +373,16 @@ CASE STUDIES Page
 			background-size: cover;
 		}
 
-		.custom .default-content .inner {
-			background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
+		.custom {
+			h3 {
+				left: 23.4%;
+			}
+
+			.default-content .inner {
+				background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 		}
 
 		.square {

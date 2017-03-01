@@ -4,10 +4,10 @@
 var assembly = assembly || {};
 
 (function($){
-	assembly.video = {
+	assembly.home = {
 		init: function(){
-			// this.bindEvents();
-			// this.initializeVideos();
+			this.bindEvents();
+			this.initializeVideos();
 		},
 
 		bindEvents: function(){
@@ -54,6 +54,6 @@ var assembly = assembly || {};
 	}
 
 	$(function(){
-		assembly.video.init();
+		assembly.home.init();
 	});
 })(jQuery);

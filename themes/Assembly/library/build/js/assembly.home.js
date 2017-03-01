@@ -1,13 +1,14 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 09:45 pm - User: Phoydar */
 /*!
  * Assembly Carousel Modules
  */
 var assembly = assembly || {};
 
 (function($){
-	assembly.video = {
+	assembly.home = {
 		init: function(){
-			// this.bindEvents();
-			// this.initializeVideos();
+			this.bindEvents();
+			this.initializeVideos();
 		},
 
 		bindEvents: function(){
@@ -54,6 +55,6 @@ var assembly = assembly || {};
 	}
 
 	$(function(){
-		assembly.video.init();
+		assembly.home.init();
 	});
 })(jQuery);

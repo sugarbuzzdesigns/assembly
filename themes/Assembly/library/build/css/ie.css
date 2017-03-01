@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 09:35 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-02-28 11:20 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -986,6 +986,9 @@ CASE STUDIES Page
   font-size: rem(47);
   transition: transform 0.8s;
 }
+.page-case-studies .landing h3 {
+  top: 37.6%;
+}
 .page-case-studies .landing .landing-inner {
   overflow: hidden;
   transition: height 0.7s;
@@ -997,19 +1000,7 @@ CASE STUDIES Page
 .page-case-studies .landing h3 {
   font-size: rem(85);
 }
-.page-case-studies .landing h3 span {
-  display: block;
-  float: left;
-}
 .page-case-studies .landing .hover-content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  background: url(../../images/backgrounds/case-study-hover-mobile-bg.jpg) no-repeat;
-  background-size: cover;
   transition: transform 0.7s;
 }
 .page-case-studies .landing .default-content {
@@ -1026,6 +1017,9 @@ CASE STUDIES Page
   background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.page-case-studies .landing .custom h3 {
+  left: 23.4%;
 }
 .page-case-studies .landing .custom .default-content .inner {
   background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
