@@ -556,7 +556,7 @@ body.vjs-full-window {
   overflow: hidden; }
 
 .video-js .vjs-control-bar {
-  display: none;
+  // display: none;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -579,12 +579,13 @@ body.vjs-full-window {
   transition: visibility 0.1s, opacity 0.1s; }
 
 .vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
-  visibility: visible;
-  opacity: 0;
-  -webkit-transition: visibility 1s, opacity 1s;
-  -moz-transition: visibility 1s, opacity 1s;
-  -o-transition: visibility 1s, opacity 1s;
-  transition: visibility 1s, opacity 1s; }
+  // visibility: visible;
+  // opacity: 0;
+  // -webkit-transition: visibility 1s, opacity 1s;
+  // -moz-transition: visibility 1s, opacity 1s;
+  // -o-transition: visibility 1s, opacity 1s;
+  // transition: visibility 1s, opacity 1s;
+}
 
 .vjs-controls-disabled .vjs-control-bar,
 .vjs-using-native-controls .vjs-control-bar,
