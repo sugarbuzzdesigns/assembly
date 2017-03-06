@@ -94,14 +94,9 @@ HOME PAGE STYLES
 	}
 
 	.landing {
-		background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
-		background-size: 100%;
-
-		.mesh-bg {
-			left: 11%;
-			top: 28.1%;
-		    height: 508px;
-		    width: 354px;
+		.landing-bg {
+			background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
+			background-size: 100%;
 		}
 
 		h2 {

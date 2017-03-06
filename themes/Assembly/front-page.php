@@ -2,24 +2,49 @@
 	<?php include 'includes/page-data/front-page-data.php'; ?>
 	<?php if(is_user_logged_in()) : ?>
 	<div class="container">
+		<div class="header-mask">
+			<header class="light">
+				<h1 class="logo">
+				    <a href="/">
+				        <!-- logo SVG file -->
+				        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+				    </a>
+				</h1>
+				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+			</header>
+		</div>
+		<header class="scroll-overlay">
+			<h1 class="logo">
+			    <a href="/">
+			        <!-- logo SVG file -->
+			        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+			    </a>
+			</h1>
+			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+		</header>
 		<section class="landing">
-			<div class="landing-inner">
-				<?php include 'includes/header-light-home.php'; ?>
-				<h2>
-					<div>
-						<span>here</span> <span>today. </span>
-					</div>
-					<div>
-						<span>remembered</span>
-					</div>
-					<div>
-						<span>tomorrow.</span>
-					</div>
-				</h2>
+			<div class="layer" data-depth="0.00"></div>
+			<div class="background layer" data-depth="0.10">
+				<div class="landing-bg"></div>
+			</div>
+			<div class="mesh layer" data-depth="0.25">
 				<div class="mesh-bg"></div>
-
-		 		<?php include __DIR__ . '/library/images/svg/down-arrow-mobile.svg'; ?>
-		 	</div>
+			</div>
+			<div class="heading layer" data-depth="0.35">
+				<div class="h2-scale-wrap">
+					<h2>
+						<div>
+							<span>here</span> <span>today. </span>
+						</div>
+						<div>
+							<span>remembered</span>
+						</div>
+						<div>
+							<span>tomorrow.</span>
+						</div>
+					</h2>
+				</div>
+			</div>
 		</section>
 		<section class="main-content">
 			<div class="group group-0">
@@ -29,7 +54,7 @@
 				</div>
 			</div>
 
-			<div class="group group-1">
+			<div class="group group-1"  data-ratio=".05">
 				<div class="projects projects-1 module carousel-module">
 					<div class="mesh-bg dark wide"></div>
 					<div class="tile carousel-wrapper">
@@ -54,7 +79,7 @@
 					</div>
 				</div>
 
-				<div class="projects projects-2 module carousel-module" data-image-ratio="1to1">
+				<div class="projects projects-2 module carousel-module" data-image-ratio="1to1" data-ratio=".12">
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
 							<div class="carousel" data-mobile-position="right" data-mobile-start="end">
@@ -79,7 +104,7 @@
 			</div>
 
 			<div class="group group-2">
-				<div class="services module carousel-module">
+				<div class="services module carousel-module" data-ratio="-.08">
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
 							<div class="carousel" data-mobile-position="left" data-mobile-start="front">
@@ -102,7 +127,7 @@
 					</div>
 				</div>
 
-				<div class="approach module carousel-module" data-image-ratio="1to1">
+				<div class="approach module carousel-module" data-image-ratio="1to1" data-ratio=".1">
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
 							<div class="carousel" data-mobile-position="right" data-mobile-start="end">
@@ -127,7 +152,7 @@
 			</div>
 
 			<div class="group group-3">
-				<div class="video video-1 module" data-video-id="home-video-reel">
+				<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".25">
 					<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 					<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/05-VideoThumbnail.jpg" alt="">
 				</div>
@@ -178,8 +203,8 @@
 				</div>
 			</div>
 
-			<div class="group group-4">
-				<div class="projects projects-4 module carousel-module" data-image-ratio="1to1">
+<!-- 			<div class="group group-4">
+				<div class="projects projects-4 module carousel-module" data-image-ratio="1to1" data-ratio=".08">
 					<div class="mesh-bg dark wide"></div>
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
@@ -203,7 +228,7 @@
 					</div>
 				</div>
 
-				<div class="projects projects-5 module carousel-module" data-image-ratio="1to1">
+				<div class="projects projects-5 module carousel-module" data-image-ratio="1to1" data-ratio="-.07">
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
 							<div class="carousel" data-mobile-position="left" data-mobile-start="front">
@@ -225,7 +250,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div>
 				<div class="to-top">
 					<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">

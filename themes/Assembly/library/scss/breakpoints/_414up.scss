@@ -4,6 +4,7 @@ Stylesheet: 376px and Up Stylesheet
 Phones larger than the iPhone 6 375px width
 ******************************************************************/
 $screenWidth: 414;
+$multiplier: 0.75;
 
 body {
 	&::before {
@@ -38,12 +39,11 @@ REUSEABLE BACKGROUNDS
 HEADER STYLES
 *********************/
 .logo {
-    margin-top: 29px;
+    // margin-top: 29px;
 }
 
 .main-menu-btn {
-	margin-top: 27px;
-	margin-right: calc(20%/414*100);
+
 }
 
 

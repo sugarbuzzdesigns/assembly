@@ -22,6 +22,8 @@ MAIN LOGO
 **********************/
 .logo {
     width: 179px;
+    margin-top: 80px;
+    margin-left: calc(87%/1440*100);
 }
 
 /*********************
@@ -37,12 +39,11 @@ MENU & NAVIGATION STYLES
 Main Menu BTN
 **********************/
 .main-menu-btn {
-	position: absolute;
-    top: 35px;
-    right: 37px;
 	height: 61px;
 	width: 61px;
 	max-width: none;
+	margin-top: 59px;
+	margin-right: calc(49%/1440*100);
 
 	&:after {
 		pointer-events: none;
@@ -118,7 +119,7 @@ Main Menu BTN
 Generic Section Styles
 **********************/
 .section-header {
-    padding: 78px 0 5px calc((87%/1440)*100);
+    // padding: 78px 0 5px calc((87%/1440)*100);
 }
 
 /*********************
@@ -256,14 +257,17 @@ Home Page
 
 		p {
 			width: 53%;
-    		padding-top: 73px;
 			letter-spacing: 0.85px;
-    		margin: 0 auto 0 24.4%;
 		}
+	}
+
+	.group-0 {
+		padding-top: 0;
 	}
 
 	.group-1 {
 		margin-top: -255px;
+		overflow: visible;
 	}
 
 	.group-2 {
@@ -482,6 +486,8 @@ CASE STUDIES Page
 			top: calc((238%/720)*100);
 			left: calc((264%/720)*100);
 		}
+
+		@import '../modules/case-study-landing-letters';
 	}
 
 	.content-header {

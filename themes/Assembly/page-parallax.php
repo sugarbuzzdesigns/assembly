@@ -1,82 +1,114 @@
 <?php get_header(); ?>
+	<style>
+		html {
+			height: 100%;
+			overflow: hidden;
+		}
 
-	<section class="one">
-		<div class="parallax" data-y-offset="100px"></div>
-	</section>
-	<section class="two">
+		body {
+			background: url(<?php echo get_template_directory_uri(); ?>/library/images/backgrounds/contact-bg-large-repeat.jpg);
+			transform-style: preserve-3d;
+			margin:0;
+			padding:0;
+			perspective: 1px;
+			height: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			font-family: Nunito;
+		}
 
-	</section>
+		.content {
+			background: url(<?php echo get_template_directory_uri(); ?>/library/images/backgrounds/contact-bg-large-repeat.jpg);
+			overflow: hidden;
+		}
 
-<style>
-	section {
-		height: 100vh;
-		background: #2e2e2e;
-		padding-top: 200px;
-	}
+		p {
+			display: none;
+		}
 
-	section + section {
-		background: #e2e2e2;
-	}
+		img {
+			width: 40%;
+			margin-bottom: 50px;
+			float: none;
+		}
 
-	.parallax {
-		position: relative;
-		background: blue;
-		height: 100px;
-		width: 200px;
-		float: left;
-		margin: 20px;
-	}
-</style>
+		img.one {
+			margin-bottom: 320px;
+		}
 
-<script>
-	(function IIFE($){
-		$(function docready(){
-			$('.parallax').each(function(){
-				var y = $(this).data('y-offset');
+		img:nth-child(even) {
+			/*transform: translate3d(0,0,0.1px) scale(calc(1 + (0.1*-1) / 1));*/
+		}
 
-				$(this).data('cur-y', y);
+		.tile img {
+			width: 100%;
+		}
 
-				$(this).css({
-					'background': 'red',
-					'-webkit-transform': 'translate3d(0, ' + y + ', 0)'
-				});
-			});
+		.tile:nth-child(even) {
+			/*float: right;*/
+  			/*transform: translateZ(.12px) scale(0.88);*/
+		}
 
-			var scrollPosition;
+		.absolute {
+			position: absolute;
+			top: 400px;
+			left: 0;
+		}
 
-			$(window).scroll(function(){
-				var scrolled = $(window).scrollTop();
-				var dir = 'down';
+		.firstabs {
+			transform: translate3d(0,0,0.1px) scale(calc(1 + (0.1*-1) / 1));
+		}
 
-				if(scrollPosition > scrolled){
-					console.log('back up');
-					dir = 'up';
-				} else {
-					console.log('going down');
-					dir = 'down';
-				}
-				scrollPosition = scrolled;
+	</style>
+		<div class="interior-buildouts-wrapper individual-service" data-service="interior-buildouts"">
+			<div class="tile intro-tile">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Interior.jpg" alt="interior-buildouts">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Interior Buildouts</span>
+						<span class="tile-desc">description</span>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<p class="service-desc">We’re equipped to provide interior design solutions, from basic interior work (fabric liners and floor-coverings) to full turn-key design. We work with trusted partners to ensure that the inside is as impressive as the outside.</p>
+			<div class="tile wide-1 content-tile left">
+				<div class="mesh-bg dark"></div>
+				<div class="tile-inner">
+					<div class="tile-img">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Interior.jpg" alt="interior-buildouts">
+					</div>
+				</div>
+			</div>
+			<div class="tile tall-1 content-tile right">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Interior.jpg" alt="interior-buildouts">
+					</div>
+				</div>
+			</div>
+			<div class="tile tall-1 content-tile right">
+				<div class="mesh-bg dark"></div>
+				<div class="tile-inner">
+					<div class="tile-img">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/04-Interior.jpg" alt="interior-buildouts">
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="tile tall-1 content-tile right">
+				<div class="mesh-bg dark"></div>
+				<div class="tile-inner">
+					<div class="tile-img">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/05-Interior.jpg" alt="interior-buildouts">
+					</div>
+				</div>
+			</div>
+		</div>
 
-				$('.parallax').each(function(){
-					var y = parseInt($(this).data('cur-y'), 10);
+	<script>
 
-					if(dir === 'down'){
-						y = y - scrolled + 'px';
-					} else {
-						y = y + scrolled + 'px';
-					}
-
-					if(parseInt(y, 10) >= 0){
-						$(this).data('cur-y', y);
-
-						$(this).css({
-							'-webkit-transform': 'translate3d(0,' + y + ', 0)'
-						});
-					}
-				});
-			});
-		});
-	})(jQuery);
-</script>
-
+	</script>
 <?php get_footer(); ?>

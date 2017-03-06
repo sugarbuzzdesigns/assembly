@@ -166,7 +166,8 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/libs/jquery.scrollbar.min.js',
 					// '<%= jsSrcDir %>/libs/owl.carousel-debug.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
-					'<%= jsSrcDir %>/libs/select2.min.js'
+					'<%= jsSrcDir %>/libs/select2.min.js',
+					'<%= jsSrcDir %>/libs/jquery.countto.min.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/libs.js'
 			},
@@ -180,7 +181,8 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/common/assembly.util.js',
 					'<%= jsSrcDir %>/common/assembly.navigation.js',
 					'<%= jsSrcDir %>/common/assembly.carousel.js',
-					'<%= jsSrcDir %>/common/assembly.video.js'
+					'<%= jsSrcDir %>/common/assembly.video.js',
+					'<%= jsSrcDir %>/common/assembly.parallax.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/assembly.common.js'
 		    },

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-01 03:21 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 02:45 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7343,6 +7343,13 @@ LAYOUT & GRID STYLES
   margin: 0 auto;
 }
 
+.layer {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -7444,7 +7451,6 @@ MENU & NAVIGATION STYLES
   height: 30px;
   opacity: 0;
   pointer-events: none;
-  z-index: 1016;
   transition: all 0.6s;
   overflow: hidden;
 }
@@ -7650,7 +7656,7 @@ VIDEO CONTENT
   background: #292929;
   transition: transform .5s ease-out;
   transform: translate3d(-100%, 0, 0);
-  z-index: 1000;
+  z-index: 1000000;
   cursor: url(../../images/svg/close-x-dark.svg), auto;
 }
 .video-overlay .video-js {
@@ -7880,6 +7886,13 @@ select .select2-selection__arrow b, .select2.select2-container--default .select2
 /*********************
 HEADER STYLES
 *********************/
+header {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
 .header {
   background-color: #000;
 }
@@ -7893,19 +7906,21 @@ HEADER STYLES
   font-size: 0px;
   float: left;
   margin: 0;
-  z-index: 1;
   position: relative;
-  width: 27.54%;
-  margin-top: 26px;
+  width: 114px;
+  margin-top: calc(28px/414*320);
   margin-left: calc(21%/414*100);
 }
 .logo a {
-  color: #fff;
+  display: block;
 }
 .logo .svg-logo {
   width: 100%;
   display: inline-block;
   vertical-align: middle;
+}
+.logo .svg-logo path, .logo .svg-logo polygon {
+  fill: #000;
 }
 .logo span {
   font-size: 33px;
@@ -7920,9 +7935,8 @@ HEADER STYLES
 .main-menu-btn,
 .close-btn {
   float: right;
-  width: 8%;
-  max-width: 26px;
-  min-height: 20px;
+  width: 26px;
+  height: 17px;
   position: relative;
   margin: 0;
   -webkit-transform: rotate(0deg);
@@ -7934,7 +7948,6 @@ HEADER STYLES
   -o-transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
   cursor: pointer;
-  z-index: 1000;
 }
 .main-menu-btn:after,
 .close-btn:after {
@@ -7948,7 +7961,7 @@ HEADER STYLES
 }
 
 .main-menu-btn {
-  margin-top: 24px;
+  margin-top: calc(26px/414*320);
   margin-right: calc(20%/414*100);
 }
 
@@ -7962,7 +7975,7 @@ HEADER STYLES
   position: absolute;
   height: 1px;
   width: 100%;
-  background: #fff;
+  background: #000;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -7973,6 +7986,11 @@ HEADER STYLES
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
+}
+
+header.light .main-menu-btn span,
+header.light .close-btn span {
+  background: #fff;
 }
 
 .close-btn span {
@@ -8034,8 +8052,20 @@ HEADER STYLES
 header.light #mask-2, header.light .menu-mask, header.light #menu-path-1 {
   stroke: #fff;
 }
-header.light .menu-letter {
+header.light .svg-logo .menu-letter, header.light .svg-logo path, header.light .svg-logo polygon {
   fill: #fff;
+}
+
+header.scroll-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  transition: transform 0.4s ease-in;
+}
+header.scroll-overlay.move-out {
+  transform: translate(0, -100%);
 }
 
 header.dark .main-menu-btn span {
@@ -8063,9 +8093,6 @@ header.dark .svg-logo mask {
 .menu-open header.light svg path,
 .menu-open header.light svg polygon {
   fill: #fff;
-}
-.menu-open header.light {
-  z-index: 10001;
 }
 
 /*********************
@@ -8136,21 +8163,64 @@ Years Experience Module
 /*********************
 HOME PAGE STYLES
 **********************/
+.home .container {
+  width: 100%;
+  margin: 0;
+  padding: 100vh 0 0 0;
+}
 .home section {
   background: #fff;
 }
-.home .landing {
+.home .header-mask {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14;
+}
+.home .landing {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: #000;
+  transition: background-position 0.1s linear;
+  overflow: hidden;
+}
+.home .landing .landing-inner {
+  height: 100%;
+  width: 100%;
+}
+.home .landing .landing-bg {
+  position: absolute;
   background-image: url(../../images/backgrounds/landing-bg-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #000;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
+  transform-origin: top left;
 }
 .home .landing .mesh-bg {
-  left: 2%;
+  position: absolute;
+  left: calc(9%/414*100);
   top: 24.1%;
   opacity: 0.5;
+  height: 372px;
+  width: 261px;
+  transform: translate(0, 0);
+}
+.home .landing .h2-scale-wrap {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0, -50%);
 }
 .home .landing h2 {
   color: #fff;
@@ -8158,9 +8228,7 @@ HOME PAGE STYLES
   line-height: 1.175em;
   letter-spacing: 1px;
   margin: 0 0 0 8%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  transform-origin: center;
 }
 .home .landing h2 p {
   margin: 0;
@@ -8175,6 +8243,8 @@ HOME PAGE STYLES
 }
 .home .main-content {
   padding-top: calc(120%/414*100);
+  position: relative;
+  z-index: 10;
 }
 .home .company-statement {
   position: relative;
@@ -8341,9 +8411,6 @@ EMPLOYEES
 /*********************
 SERVICES Tile(s)
 **********************/
-.page-services {
-  overflow: auto;
-}
 .page-services .tile {
   margin: 0;
   float: none;
@@ -8382,6 +8449,8 @@ To Top BTN
 FOOTER STYLES
 *********************/
 .footer {
+  position: relative;
+  z-index: 2;
   clear: both;
   background-color: #000;
   padding: 34px 3% 10%;
@@ -8818,7 +8887,6 @@ CASE STUDIES Page
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1025;
 }
 .page-case-studies .section-header .main-menu-btn span {
   background: #000;
@@ -8875,7 +8943,6 @@ CASE STUDIES Page
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1003;
   background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
   background-size: cover;
   transition: transform 0.5s;
@@ -9209,7 +9276,6 @@ CASE STUDIES Page
   position: relative;
   overflow: hidden;
   float: right;
-  z-index: 1004;
   transition: width 1s;
 }
 .page-case-studies .landing .default-content .inner {
@@ -9917,15 +9983,6 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   HEADER STYLES
   *********************/
-  .logo {
-    margin-top: 29px;
-  }
-
-  .main-menu-btn {
-    margin-top: 27px;
-    margin-right: calc(20%/414*100);
-  }
-
   /*********************
   VIDEO CONTENT
   **********************/
@@ -10340,15 +10397,9 @@ you can add resource intensive styles.
   .home .nav-arrow-right {
     display: block;
   }
-  .home .landing {
+  .home .landing .landing-bg {
     background-image: url(../../images/backgrounds/landing-bg-lrg.jpg);
     background-size: 100%;
-  }
-  .home .landing .mesh-bg {
-    left: 11%;
-    top: 28.1%;
-    height: 508px;
-    width: 354px;
   }
   .home .landing h2 {
     font-size: 3.75rem;
@@ -10829,6 +10880,8 @@ you can add resource intensive styles.
   **********************/
   .logo {
     width: 179px;
+    margin-top: 80px;
+    margin-left: calc(87%/1440*100);
   }
 
   /*********************
@@ -10838,12 +10891,11 @@ you can add resource intensive styles.
   Main Menu BTN
   **********************/
   .main-menu-btn {
-    position: absolute;
-    top: 35px;
-    right: 37px;
     height: 61px;
     width: 61px;
     max-width: none;
+    margin-top: 59px;
+    margin-right: calc(49%/1440*100);
   }
   .main-menu-btn:after {
     pointer-events: none;
@@ -10903,10 +10955,6 @@ you can add resource intensive styles.
   /*********************
   Generic Section Styles
   **********************/
-  .section-header {
-    padding: 78px 0 5px calc((87%/1440)*100);
-  }
-
   /*********************
   REUSEABLE BACKGROUNDS
   **********************/
@@ -11021,12 +11069,14 @@ you can add resource intensive styles.
   }
   .home .company-statement p {
     width: 53%;
-    padding-top: 73px;
     letter-spacing: 0.85px;
-    margin: 0 auto 0 24.4%;
+  }
+  .home .group-0 {
+    padding-top: 0;
   }
   .home .group-1 {
     margin-top: -255px;
+    overflow: visible;
   }
   .home .group-2 {
     margin-top: -38px;
@@ -11137,6 +11187,14 @@ you can add resource intensive styles.
   .page-case-studies .section-header {
     z-index: 10;
   }
+  .page-case-studies .landing {
+    /**
+     * Modular Animations
+     */
+    /**
+     * Custom Animations
+     */
+  }
   .page-case-studies .landing .case-study-category {
     width: 50vw;
     height: 100vh;
@@ -11194,6 +11252,325 @@ you can add resource intensive styles.
     height: calc((294%/720)*100);
     top: calc((238%/720)*100);
     left: calc((264%/720)*100);
+  }
+  .page-case-studies .landing [data-letter] {
+    transform: translate3d(0, 0, 0);
+  }
+  .page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
+    animation-name: modularM;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular:hover [data-letter="o"] {
+    animation-name: modularO;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular:hover [data-letter="d"] {
+    animation-name: modularD;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular:hover [data-letter="u"] {
+    animation-name: modularU;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular:hover [data-letter="l"] {
+    animation-name: modularL;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular:hover [data-letter="a"] {
+    animation-name: modularA;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular:hover [data-letter="r"] {
+    animation-name: modularR;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  @keyframes modularM {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    99% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, -95px, 0);
+    }
+  }
+  @keyframes modularO {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    39% {
+      transform: translate3d(0, 0, 0);
+    }
+    40% {
+      transform: translate3d(0, -95px, 0);
+    }
+    100% {
+      transform: translate3d(0, -95px, 0);
+    }
+  }
+  @keyframes modularD {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    2% {
+      transform: translate3d(0, -95px, 0);
+    }
+    100% {
+      transform: translate3d(0, -95px, 0);
+    }
+  }
+  @keyframes modularU {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    4% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    5% {
+      transform: translate3d(-50px, 27px, 0);
+    }
+    48% {
+      transform: translate3d(-50px, 27px, 0);
+    }
+    49% {
+      transform: translate3d(-187px, 27px, 0);
+    }
+    100% {
+      transform: translate3d(-187px, 27px, 0);
+    }
+  }
+  @keyframes modularL {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    19% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      display: block;
+      transform: translate3d(0, 27px, 0);
+    }
+    90% {
+      display: block;
+      transform: translate3d(0, 27px, 0);
+    }
+    91% {
+      display: block;
+      transform: translate3d(-180px, 27px, 0);
+    }
+    100% {
+      transform: translate3d(-180px, 27px, 0);
+    }
+  }
+  @keyframes modularA {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    2% {
+      transform: translate3d(0, 85px, 0);
+    }
+    30% {
+      transform: translate3d(0, 85px, 0);
+    }
+    31% {
+      transform: translate3d(0, 105px, 0);
+    }
+    99% {
+      transform: translate3d(0, 105px, 0);
+    }
+    100% {
+      transform: translate3d(-175px, 105px, 0);
+    }
+  }
+  @keyframes modularR {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    80% {
+      transform: translate3d(0, 0, 0);
+    }
+    81% {
+      transform: translate3d(-175px, 105px, 0);
+    }
+    100% {
+      transform: translate3d(-175px, 105px, 0);
+    }
+  }
+  .page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom:hover [data-letter="c"] {
+    animation-name: customC;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom:hover [data-letter="u"] {
+    animation-name: customU;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom:hover [data-letter="s"] {
+    animation-name: customS;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom:hover [data-letter="t"] {
+    animation-name: customT;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom:hover [data-letter="o"] {
+    animation-name: customO;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  .page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
+    animation-name: customM;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  @keyframes customC {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    2% {
+      transform: translate3d(-20px, 0, 0);
+    }
+    90% {
+      transform: translate3d(-20px, 0, 0);
+    }
+    99% {
+      transform: translate3d(-20px, 0, 0);
+    }
+    100% {
+      transform: translate3d(-20px, -95px, 0);
+    }
+  }
+  @keyframes customU {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    39% {
+      transform: translate3d(0, 0, 0);
+    }
+    40% {
+      transform: translate3d(0, -95px, 0);
+    }
+    100% {
+      transform: translate3d(0, -95px, 0);
+    }
+  }
+  @keyframes customS {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    19% {
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      transform: translate3d(0, 23px, 0);
+    }
+    60% {
+      transform: translate3d(0, 23px, 0);
+    }
+    61% {
+      transform: translate3d(-54px, 23px, 0);
+    }
+    100% {
+      transform: translate3d(-54px, 23px, 0);
+    }
+  }
+  @keyframes customT {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    4% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    5% {
+      transform: translate3d(-10px, 27px, 0);
+    }
+    100% {
+      transform: translate3d(-10px, 27px, 0);
+    }
+  }
+  @keyframes customO {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    19% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    20% {
+      display: block;
+      transform: translate3d(0, 90px, 0);
+    }
+    90% {
+      display: block;
+      transform: translate3d(0, 90px, 0);
+    }
+    91% {
+      display: block;
+      transform: translate3d(-160px, 105px, 0);
+    }
+    100% {
+      transform: translate3d(-160px, 105px, 0);
+    }
+  }
+  @keyframes customM {
+    1% {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    2% {
+      transform: translate3d(0, 85px, 0);
+    }
+    70% {
+      transform: translate3d(0, 85px, 0);
+    }
+    71% {
+      transform: translate3d(0, 105px, 0);
+    }
+    99% {
+      transform: translate3d(0, 105px, 0);
+    }
+    100% {
+      transform: translate3d(-100px, 105px, 0);
+    }
   }
   .page-case-studies .content-header .mesh-bg {
     display: none;
