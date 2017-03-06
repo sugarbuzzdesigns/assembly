@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 02:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:00 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11056,6 +11056,8 @@ you can add resource intensive styles.
     font-size: 4.0625rem;
   }
   .home .landing .mesh-bg {
+    height: 508px;
+    width: 354px;
     left: 8.9%;
     top: 19.3%;
   }

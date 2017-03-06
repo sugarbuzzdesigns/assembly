@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 02:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:00 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -962,6 +962,8 @@ Home Page
   font-size: rem(65);
 }
 .home .landing .mesh-bg {
+  height: 508px;
+  width: 354px;
   left: 8.9%;
   top: 19.3%;
 }
