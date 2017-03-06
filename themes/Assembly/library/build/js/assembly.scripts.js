@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 02:39 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:18 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -557,9 +557,9 @@ var assembly = assembly || {};
 			this.scrollChange = 0;
 			this.scrolledWhileInView = 0;
 			this.scrollDirection = 'down';
-			this.setUpParallax();
 
-			if (raf) {
+			if (raf && assembly.util.useragent.deviceType === 'desktop') {
+				this.setUpParallax();
 			    this.loop();
 			    this.$scrollElement.scrollTop(1,0);
 			}

@@ -122,6 +122,10 @@ Generic Section Styles
     // padding: 78px 0 5px calc((87%/1440)*100);
 }
 
+header.scroll-overlay {
+    position: fixed;
+}
+
 /*********************
 REUSEABLE BACKGROUNDS
 **********************/

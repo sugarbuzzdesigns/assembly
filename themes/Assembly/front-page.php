@@ -55,8 +55,8 @@
 				</div>
 			</div>
 
-			<div class="group group-1"  data-ratio=".05">
-				<div class="projects projects-1 module carousel-module">
+			<div class="group group-1">
+				<div class="projects projects-1 module carousel-module" data-ratio=".05">
 					<div class="mesh-bg dark wide"></div>
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">

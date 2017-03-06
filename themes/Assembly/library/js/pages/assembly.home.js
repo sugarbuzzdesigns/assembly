@@ -20,7 +20,7 @@ var assembly = assembly || {};
 			this.bindEvents();
 			this.initializeVideos();
 
-			if (raf) {
+			if (raf && assembly.util.useragent.deviceType === 'desktop') {
 			    this.loop();
 			}
 		},

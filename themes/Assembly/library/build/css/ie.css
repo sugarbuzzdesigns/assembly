@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:00 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:14 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -861,6 +861,10 @@ Main Menu BTN
 /*********************
 Generic Section Styles
 **********************/
+header.scroll-overlay {
+  position: fixed;
+}
+
 /*********************
 REUSEABLE BACKGROUNDS
 **********************/

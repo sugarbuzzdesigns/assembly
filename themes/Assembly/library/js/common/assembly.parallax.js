@@ -11,9 +11,9 @@
 			this.scrollChange = 0;
 			this.scrolledWhileInView = 0;
 			this.scrollDirection = 'down';
-			this.setUpParallax();
 
-			if (raf) {
+			if (raf && assembly.util.useragent.deviceType === 'desktop') {
+				this.setUpParallax();
 			    this.loop();
 			    this.$scrollElement.scrollTop(1,0);
 			}
