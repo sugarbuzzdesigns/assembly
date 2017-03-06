@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
-	<?php if(is_user_logged_in()) : ?>
+	<div><?php $domain = $_SERVER['SERVER_NAME']; ?></div>
+	<?php if(is_user_logged_in() || $domain = "byassembly.loc" || $domain = "staging.byassembly.com") : ?>
 	<div class="container">
 		<div class="header-mask">
 			<header class="light">
