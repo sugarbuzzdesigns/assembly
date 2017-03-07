@@ -151,6 +151,8 @@ var $ = jQuery;
 						animate();
 						if(currentFrame === 48 && $('html').is('.dom-ready')){
 							$('.loader-wrap').addClass('done');
+							$('html').trigger('loaded');
+							clearInterval(loaderInterval);
 						}
 					}, 1000/24);
 			}

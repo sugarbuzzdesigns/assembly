@@ -81,8 +81,6 @@
 						backgroundPosition: -shift +'px '+ -ypos +'px'
 					});
 
-					console.log('hey');
-
 				    shift += frameWidth;
 
 				    if(currentFrame%9 === 0 && currentFrame !== 0){
@@ -108,7 +106,11 @@
 				    }
 			};
 
-			initialLogoAnimation();
+			$('html').on('loaded', function(){
+				if(assembly.util.useragent.deviceType === 'desktop'){
+					initialLogoAnimation();
+				}
+			});
 		});
 	})(jQuery);
 </script>
