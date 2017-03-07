@@ -37,6 +37,9 @@ var $ = jQuery;
 
 			this.bindEvents();
 			this.setUpLoader();
+			if(assembly.util.useragent.deviceType === 'desktop'){
+				// this.initialLogoAnimation();
+			}
 		},
 
 		bindEvents: function(){
@@ -66,6 +69,64 @@ var $ = jQuery;
 			});
 		},
 
+		// initialLogoAnimation: function(){
+		// 	var shift = 0;
+		// 	var $logo = $('.logo');
+		// 	var frameWidth = $logo.width();
+		// 	var frameHeight = $logo.height();
+		// 	var totalFrames = 50;
+		// 	var ypos = 0;
+		// 	var currentFrame = 1;
+		// 	var myImage = new Image();
+		// 	myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-resized-init-white.png';
+		// 	myImage.addEventListener("load", loadImage, false);
+		// 	var loaderIntervalInitial;
+		// 	var imgWidth; var imgHeight;
+
+		// 	function loadImage(e) {
+		// 		$logo.append(myImage);
+		// 		$logo.addClass('ready');
+
+		// 		imgWidth = $(myImage).width();
+		// 		imgHeight = $(myImage).height();
+
+		// 		frameHeight = imgHeight/5;
+
+		// 		loaderIntervalInitial = setInterval(function(){
+		// 				// animate();
+		// 			}, 1000/24);
+		// 	}
+
+		// 	window.animate = function() {
+		// 		$('.logo').css({
+		// 			backgroundPosition: -shift +'px '+ -ypos +'px'
+		// 		});
+
+		// 	    shift += frameWidth;
+
+		// 	    if(currentFrame%9 === 0 && currentFrame !== 0){
+		// 	    	shift = 0;
+		// 	    	ypos += frameHeight;
+		// 	    }
+
+		// 	    if (currentFrame == 50) {
+		// 			clearInterval(loaderIntervalInitial);
+		// 	    }
+
+		// 	    /*
+		// 	        Start at the beginning once you've reached the
+		// 	        end of your sprite!
+		// 	        */
+		// 	        if (currentFrame == totalFrames) {
+		// 	        	shift = 0;
+		// 	        	ypos = 0;
+		// 	        	currentFrame = 0;
+		// 	        }
+
+		// 	        currentFrame++;
+		// 	    }
+		// },
+
 		setUpLoader: function(){
 			var shift = 0;
 			var frameWidth = $('.loader').height();
@@ -75,16 +136,12 @@ var $ = jQuery;
 			var currentFrame = 1;
 			var myImage = new Image();
 			var $loader = $('.loader');
-			myImage.src = php_vars.home + '/library/images/LogoLoading-white.png';
+			myImage.src = php_vars.home + '/library/images/sprites/LogoLoading-white.png';
 			myImage.addEventListener("load", loadImage, false);
 
-			// var $img = $('<img src="'+ src +'"/>');
-
-			// $img.load(function(){
-			// 	console.log('loaded');
-			// });
-
-			// $('.loader').append($img);
+			if(window.location.search.indexOf('loader=false') !== -1){
+				$('.loader-wrap').addClass('done');
+			}
 
 			function loadImage(e) {
 				$('.loader').append(myImage);

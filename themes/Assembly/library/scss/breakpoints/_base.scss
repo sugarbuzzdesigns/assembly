@@ -944,6 +944,10 @@ header {
     margin-top: calc(28px/414*320);
     margin-left: calc(21%/414*100);
 
+    img {
+    	display: none;
+    }
+
 	a {
 		display: block;
 	}
