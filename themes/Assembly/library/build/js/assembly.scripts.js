@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 03:18 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-06 10:53 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -136,6 +136,7 @@ var $ = jQuery;
 			this.scrollYPos = this.env.$win.scrollTop(),
 
 			this.bindEvents();
+			this.setUpLoader();
 		},
 
 		bindEvents: function(){
@@ -163,6 +164,64 @@ var $ = jQuery;
 
 			_this.env.$win.on('scrollstop', function(){
 			});
+		},
+
+		setUpLoader: function(){
+			var shift = 0;
+			var frameWidth = $('.loader').height();
+			var frameHeight = $('.loader').height();
+			var totalFrames = 8*8+4;
+			var ypos = 0;
+			var currentFrame = 1;
+			var myImage = new Image();
+			var $loader = $('.loader');
+			myImage.src = php_vars.home + '/library/images/LogoLoading-white.png';
+			myImage.addEventListener("load", loadImage, false);
+
+			// var $img = $('<img src="'+ src +'"/>');
+
+			// $img.load(function(){
+			// 	console.log('loaded');
+			// });
+
+			// $('.loader').append($img);
+
+			function loadImage(e) {
+				$('.loader').append(myImage);
+				$('.loader-wrap').addClass('ready');
+
+				var loaderInterval = setInterval(function(){
+						animate();
+						if(currentFrame === 48 && $('html').is('.dom-ready')){
+							$('.loader-wrap').addClass('done');
+						}
+					}, 1000/24);
+			}
+
+			function animate() {
+				$('.loader img').css({
+					transform: 'translate3d('+ -shift +'px,'+ -ypos +'px,0)'
+				});
+
+			    shift += frameWidth;
+
+			    if(currentFrame%8 === 0 && currentFrame !== 0){
+			    	shift = 0;
+			    	ypos += frameHeight;
+			    }
+
+			    /*
+			        Start at the beginning once you've reached the
+			        end of your sprite!
+			        */
+			        if (currentFrame == totalFrames) {
+			        	shift = 0;
+			        	ypos = 0;
+			        	currentFrame = 0;
+			        }
+
+			        currentFrame++;
+			    }
 		},
 		// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 		timeToWaitForLast: 100,
@@ -201,6 +260,7 @@ var $ = jQuery;
 
 	$(function(){
 		assembly.util.init();
+		$('html').addClass('dom-ready');
 	});
 })(jQuery);
 /*! Source: library/js/common/assembly.navigation.js*/

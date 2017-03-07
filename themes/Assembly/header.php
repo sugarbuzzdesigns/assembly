@@ -38,6 +38,7 @@
 		</head>
 
 		<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+		<?php get_template_part( 'includes/loader' ); ?>
 
 		<?php get_template_part( 'includes/main-menu' ); ?>
 

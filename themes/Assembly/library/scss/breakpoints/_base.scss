@@ -22,6 +22,153 @@ $screenWidth: 320;
 	display: none;
 }
 
+.loader-wrap {
+	opacity: 1;
+	position: fixed;
+	background: #000;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000000;
+	backface-visibility: hidden;
+	pointer-events: none;
+
+	&.done {
+		transition: opacity 0.5s;
+		opacity: 0;
+	}
+
+	.initial {
+		opacity: 1;
+		transition: opacity 0.5s ease, transform 0.5s ease;
+		transition-delay: 1s;
+	}
+
+	.loading {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 0;
+
+		span {
+			transition: opacity 0.5s ease, transform 0.5s ease;
+			display: inline-block;
+			transform: translate3d(0, 100%, 0);
+			opacity: 0;
+		}
+
+		span:nth-child(1){
+			transition-delay: 1s;
+		}
+		span:nth-child(2){
+			transition-delay: 1.1s;
+		}
+		span:nth-child(3){
+			transition-delay: 1.2s;
+		}
+		span:nth-child(4){
+			transition-delay: 1.3s;
+		}
+	}
+
+	.loader-inner {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		text-align: center;
+		transition: opacity 0.5s;
+		opacity: 0;
+	}
+
+	&.ready {
+		.loader-inner {
+			opacity: 1;
+		}
+
+		.initial {
+			opacity: 0;
+			transform: translate3d(0, -100%, 0);
+		}
+
+		.loading {
+			span {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+
+	.loading-copy {
+		text-align: center;
+		position: relative;
+		font-size: 22px;
+		line-height: calc(29/22);
+		color: #fff;
+	}
+
+	.loader {
+		height: 150px;
+		width: 150px;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		margin: 0 auto 30px;
+
+		img {
+			width: 800%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	p {
+		font-family: 'roboto_monoregular';
+		font-size: 22px;
+		letter-spacing: 2.5px;
+		line-height: calc(22/29);
+		color: #fff;
+	}
+
+	.mesh-bg {
+		background-image: url(../../images/svg/mesh-dot-landing.svg);
+		width: calc(553%/1440*100);
+		height: 78vh;
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		transition: opacity 0.5s;
+		transform: translate3d(-100%,-50%,0) scale(0.8);
+		transform-origin: right center;
+		animation-name: meshpulse;
+		animation-duration: 10s;
+		animation-fill-mode: forwards;
+	}
+}
+
+.dom-ready {
+	.mesh-bg {
+		opacity: 1;
+	}
+}
+
+@keyframes meshpulse {
+	0% {
+		transform: translate3d(-100%,-50%,0) scale(0.8);
+	}
+
+	50% {
+		transform: translate3d(-100%,-50%,0) scale(1);
+	}
+
+	100% {
+		transform: translate3d(-100%,-50%,0) scale(0.8);
+	}
+}
+
 /*********************
 GENERAL STYLES
 *********************/
