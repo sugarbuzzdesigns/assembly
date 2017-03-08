@@ -845,9 +845,8 @@ ABOUT US Page
     	margin-bottom: 25px;
 
 		h3 {
-			font-size: rem(48);
-			line-height: calc(41/48);
-    		margin-bottom: 40px;
+			line-height: calc(21/13);
+			margin-bottom: 0;
 		}
 
 		.copy {
@@ -856,8 +855,8 @@ ABOUT US Page
 
 		.copy p {
 			width: 37.93%;
-			font-size: rem(11);
-			line-height: calc(20/11);
+			font-size: rem(48);
+			line-height: calc(41/48);
 			margin-bottom: 33px;
 		}
 
@@ -937,7 +936,13 @@ ABOUT US Page
 
 		.carousel-wrapper {
 		    padding-top: 65px;
-		    margin-top: 103px;
+		    margin-top: 50px;
+
+			video {
+				min-width: 800px;
+				width: 63.89%;
+				margin: 0 auto;
+			}
 		}
 
 		.slick-dots {
@@ -1068,6 +1073,56 @@ ABOUT US Page
 						}
 					}
 				}
+			}
+		}
+
+		.approach-info {
+			width: 24%;
+			position: absolute;
+			top: -50px;
+			left: 19.03%;
+
+			.inner {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: opacity 0.4s;
+
+				&.show-me {
+					opacity: 1;
+				}
+			}
+
+			.info-num {
+			    font-family: pangrambold;
+			    font-size: 143px;
+			    letter-spacing: -1px;
+			    color: #F4F4F4;
+			    position: relative;
+			    left: -18%;
+			}
+
+			.info-copy {
+			    margin-top: -86px;
+			    z-index: 1;
+			    position: relative;
+			}
+
+			h5 {
+				font-size: 13px;
+				color: #000;
+				font-family: 'gridnikregular';
+				letter-spacing: 1.08px;
+				line-height: calc(20/13);
+				margin-top: 0;
+			}
+
+			p {
+				color: #7D7D7D;
+				font-size: 11px;
+				line-height: calc(20/11);
+				letter-spacing: 0.92px;
 			}
 		}
 	}

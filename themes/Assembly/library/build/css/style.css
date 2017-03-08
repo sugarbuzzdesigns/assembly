@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-07 03:55 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-08 04:19 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7334,12 +7334,14 @@ and will be used across all viewports.
   line-height: calc(22/29);
   color: #fff;
 }
-.loader-wrap .mesh-bg {
+.loader-wrap div.mesh-bg {
   background-image: url(../../images/svg/mesh-dot-landing.svg);
   width: calc(553%/1440*100);
   height: 78vh;
   top: 50%;
   left: 50%;
+  margin-top: auto;
+  right: auto;
   opacity: 0;
   transition: opacity 0.5s;
   transform: translate3d(-100%, -50%, 0) scale(0.8);
@@ -7349,7 +7351,7 @@ and will be used across all viewports.
   animation-fill-mode: forwards;
 }
 
-.dom-ready .mesh-bg {
+.dom-ready div.mesh-bg {
   opacity: 1;
 }
 
@@ -9845,22 +9847,33 @@ ABOUT US Page
 }
 .page-about-us .our-approach .copy {
   margin-left: 10%;
-  width: 78%;
+  width: 90%;
 }
-.page-about-us .our-approach p {
+.page-about-us .our-approach .copy p {
   margin-bottom: 11.4%;
+  margin-top: 0;
+  font-size: 2rem;
+  font-family: pangrambold;
+  line-height: calc(37/32);
+  color: #000;
 }
 .page-about-us .our-approach h3 {
   text-transform: lowercase;
-  font-family: 'pangrambold';
-  font-size: 2.4375rem;
-  line-height: 2.0625rem;
+  font-family: 'gridnikregular';
+  font-size: 0.625rem;
+  line-height: 1;
   text-align: left;
-  margin-bottom: 10.63%;
-  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 20px;
+  text-transform: uppercase;
+  margin-left: 5px;
 }
 .page-about-us .our-approach h3 span {
   display: block;
+}
+.page-about-us .our-approach p {
+  margin-bottom: 11.4%;
+  font-size: 0.8125rem;
 }
 .page-about-us .our-approach button {
   padding: 4.43% 4.94%;
@@ -10642,6 +10655,16 @@ you can add resource intensive styles.
     float: left;
     width: 17.1%;
     margin-left: 9.03%;
+  }
+
+  /*********************
+  About Us Page
+  **********************/
+  .page-about-us .video.module {
+    margin: 0 0 13.5% 28.74%;
+    clear: none;
+    float: none;
+    width: 64.98%;
   }
 
   /*********************
@@ -11976,17 +11999,16 @@ you can add resource intensive styles.
     margin-bottom: 25px;
   }
   .page-about-us .our-approach h3 {
-    font-size: 3rem;
-    line-height: calc(41/48);
-    margin-bottom: 40px;
+    line-height: calc(21/13);
+    margin-bottom: 0;
   }
   .page-about-us .our-approach .copy {
     margin-left: calc(44%/1440*100);
   }
   .page-about-us .our-approach .copy p {
     width: 37.93%;
-    font-size: 0.6875rem;
-    line-height: calc(20/11);
+    font-size: 3rem;
+    line-height: calc(41/48);
     margin-bottom: 33px;
   }
   .page-about-us .our-approach button {
@@ -12052,7 +12074,12 @@ you can add resource intensive styles.
   }
   .page-about-us .our-approach .carousel-wrapper {
     padding-top: 65px;
-    margin-top: 103px;
+    margin-top: 50px;
+  }
+  .page-about-us .our-approach .carousel-wrapper video {
+    min-width: 800px;
+    width: 63.89%;
+    margin: 0 auto;
   }
   .page-about-us .our-approach .slick-dots {
     width: 22px;
@@ -12158,6 +12185,49 @@ you can add resource intensive styles.
   }
   .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .down {
     stroke: #93d5da;
+  }
+  .page-about-us .our-approach .approach-info {
+    width: 24%;
+    position: absolute;
+    top: -50px;
+    left: 19.03%;
+  }
+  .page-about-us .our-approach .approach-info .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .page-about-us .our-approach .approach-info .inner.show-me {
+    opacity: 1;
+  }
+  .page-about-us .our-approach .approach-info .info-num {
+    font-family: pangrambold;
+    font-size: 143px;
+    letter-spacing: -1px;
+    color: #F4F4F4;
+    position: relative;
+    left: -18%;
+  }
+  .page-about-us .our-approach .approach-info .info-copy {
+    margin-top: -86px;
+    z-index: 1;
+    position: relative;
+  }
+  .page-about-us .our-approach .approach-info h5 {
+    font-size: 13px;
+    color: #000;
+    font-family: 'gridnikregular';
+    letter-spacing: 1.08px;
+    line-height: calc(20/13);
+    margin-top: 0;
+  }
+  .page-about-us .our-approach .approach-info p {
+    color: #7D7D7D;
+    font-size: 11px;
+    line-height: calc(20/11);
+    letter-spacing: 0.92px;
   }
   .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index] svg {
     margin: 117px 0 0 212px;

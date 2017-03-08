@@ -187,6 +187,7 @@ function bones_scripts_and_styles() {
 
 		if(is_page('about-us')){
 			wp_enqueue_script( 'about', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.about' . $suffix . '.js', array( 'jquery' ), true );
+			wp_enqueue_script( 'our-approach-carousel', get_template_directory_uri() . '/library/js/our-approach-carousel.js', array( 'jquery' ), true );
 		}
 
 		if(is_front_page()){

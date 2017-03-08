@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-07 03:55 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-08 04:19 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -428,6 +428,16 @@ SERVICES SECTION
   float: left;
   width: 17.1%;
   margin-left: 9.03%;
+}
+
+/*********************
+About Us Page
+**********************/
+.page-about-us .video.module {
+  margin: 0 0 13.5% 28.74%;
+  clear: none;
+  float: none;
+  width: 64.98%;
 }
 
 /*********************
@@ -1755,17 +1765,16 @@ ABOUT US Page
   margin-bottom: 25px;
 }
 .page-about-us .our-approach h3 {
-  font-size: rem(48);
-  line-height: calc(41/48);
-  margin-bottom: 40px;
+  line-height: calc(21/13);
+  margin-bottom: 0;
 }
 .page-about-us .our-approach .copy {
   margin-left: resp(44);
 }
 .page-about-us .our-approach .copy p {
   width: 37.93%;
-  font-size: rem(11);
-  line-height: calc(20/11);
+  font-size: rem(48);
+  line-height: calc(41/48);
   margin-bottom: 33px;
 }
 .page-about-us .our-approach button {
@@ -1831,7 +1840,12 @@ ABOUT US Page
 }
 .page-about-us .our-approach .carousel-wrapper {
   padding-top: 65px;
-  margin-top: 103px;
+  margin-top: 50px;
+}
+.page-about-us .our-approach .carousel-wrapper video {
+  min-width: 800px;
+  width: 63.89%;
+  margin: 0 auto;
 }
 .page-about-us .our-approach .slick-dots {
   width: 22px;
@@ -1937,6 +1951,49 @@ ABOUT US Page
 }
 .page-about-us .our-approach .slick-dots li.slick-active .up-down-nav .down {
   stroke: #93d5da;
+}
+.page-about-us .our-approach .approach-info {
+  width: 24%;
+  position: absolute;
+  top: -50px;
+  left: 19.03%;
+}
+.page-about-us .our-approach .approach-info .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.page-about-us .our-approach .approach-info .inner.show-me {
+  opacity: 1;
+}
+.page-about-us .our-approach .approach-info .info-num {
+  font-family: pangrambold;
+  font-size: 143px;
+  letter-spacing: -1px;
+  color: #F4F4F4;
+  position: relative;
+  left: -18%;
+}
+.page-about-us .our-approach .approach-info .info-copy {
+  margin-top: -86px;
+  z-index: 1;
+  position: relative;
+}
+.page-about-us .our-approach .approach-info h5 {
+  font-size: 13px;
+  color: #000;
+  font-family: 'gridnikregular';
+  letter-spacing: 1.08px;
+  line-height: calc(20/13);
+  margin-top: 0;
+}
+.page-about-us .our-approach .approach-info p {
+  color: #7D7D7D;
+  font-size: 11px;
+  line-height: calc(20/11);
+  letter-spacing: 0.92px;
 }
 .page-about-us .our-approach .carousel.our-approach .slick-slide[data-slick-index] svg {
   margin: 117px 0 0 212px;

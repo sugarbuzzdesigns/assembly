@@ -391,12 +391,385 @@
 			</svg>
 		</div>
 		<div class="copy">
-			<h3><span>Our</span><span>Approach</span></h3>
-			<p>Your dedicated assembly team will deliver a powerful combination of industry leadership and strategic thinking, as well as “close to the customer” managers to control day-to-day interaction and oversee tactical execution. We meet with preferred vendors in advance -- for all projects, no matter the size -- to review the planned installation, event and dismantle process.</p>
-			<button type="button">create a space together</button>
+			<h3>Our Approach</h3>
+			<p>from paper <br>to production</p>
 		</div>
 		<div class="tile carousel-wrapper">
-			<div class="carousel-inner">
+			<style>
+				.our-approach-nav {
+					width: 40px;
+					margin-left: 50px;
+				    position: absolute;
+				    top: 40px;
+				    left: 2.78%;
+				    height: 95%;
+				}
+
+				.marker {
+				    height: 8px;
+				    width: 8px;
+				    background: #82cbd0;
+				    border-radius: 50%;
+				    margin: 0 auto;
+				    position: relative;
+				    z-index: 2;
+				}
+
+				.marker span {
+				    display: block;
+				    top: 50%;
+				    left: 50%;
+				    width: 8px;
+				    height: 8px;
+				    border-radius: 50%;
+				    position: absolute;
+				    transform: translate(-50%, -50%);
+				    z-index: 1;
+				}
+
+				.marker span:nth-child(1) {
+					background: #93D5DA;
+				}
+
+				.marker span:nth-child(2) {
+					background: #fff;
+					/*display: none;*/
+				}
+
+				.marker span + span:after {
+				    content: '';
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(-50%, -50%);
+				    height: 8px;
+				    width: 8px;
+				    background: #d9d9d9;
+				    border-radius: 50%;
+				}
+
+				.marker.pulse-in span:nth-child(1) {
+					animation-name: pulse-in;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					animation-delay: 0.3s;
+				}
+
+				.marker.pulse-in span:nth-child(2) {
+					animation-name: pulse-in-two;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					animation-delay: 0.3s;
+				}
+
+				.marker.active span + span:after {
+					background: #838383;
+				}
+
+				.marker.pulse-in span + span:after {
+					animation-name: pulse-in-bg;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					animation-delay: 0.3s;
+				}
+
+				@keyframes pulse-in {
+					0% {
+					    height: 8px;
+					    width: 8px;
+					    background: #82cbd0;
+					}
+
+					50% {
+					    height: 22px;
+					    width: 22px;
+					    background: #93D5DA;
+					}
+
+					100% {
+					    height: 8px;
+					    width: 8px;
+					    background: #82cbd0;
+					}
+				}
+
+				@keyframes pulse-in-two {
+					0% {
+					    height: 8px;
+					    width: 8px;
+					}
+
+					50% {
+					    height: 18px;
+					    width: 18px;
+					}
+
+					100% {
+					    height: 8px;
+					    width: 8px;
+					}
+				}
+
+				@keyframes pulse-in-bg {
+					0% {
+						background: #838383;
+						height: 8px;
+						width: 8px;
+					}
+
+					50% {
+						background: #93D5DB;
+						height: 12px;
+						width: 12px;
+					}
+
+					100% {
+						background: #838383;
+						height: 8px;
+						width: 8px;
+					}
+				}
+
+
+
+				/*707373 to 82cace*/
+				.track {
+					height: 20%;
+					width: 2px;
+					background: #d9d9d9;
+					position: relative;
+					margin: 0 auto;
+					overflow: hidden
+				}
+
+				.progress {
+					position: absolute;
+					top: -100%;
+					left: 0;
+					height: 100%;
+					transition: top 0.3s;
+					width: 2px;
+					background: #838383;
+				}
+
+				.track.active .progress {
+					top: 0;
+				}
+
+				.segment {
+					position: relative;
+				}
+
+				.segment .seg-nav {
+					left: -22px;
+				}
+
+				.segment .seg-nav p {
+					margin: 10px 0 7px;
+					text-align: center;
+					font-family: 'gridnikregular';
+					font-size: 13px;
+					opacity: 0.2;
+					transition: opacity 0.4s;
+				}
+
+				.activate .seg-nav p,
+				.seen .seg-nav p {
+					opacity: 1;
+				}
+
+				.segment svg {
+					fill: #7D7D7D;
+					display: block;
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity 0.4s;
+				}
+
+				.segment svg.hide {
+					visibility: hidden;
+					pointer-events: none;
+				}
+
+				.segment svg.inactive {
+					fill: #7D7D7D;
+				}
+
+				.activate svg {
+					opacity: 1;
+					pointer-events: all;
+				}
+
+				.segment .up-arrow {
+					transform: translate(0, 7px);
+					transition: transform 0.3s;
+				}
+
+				.segment .down-arrow {
+					transform: translate(0, -7px);
+					fill: #93D5DA;
+					cursor: pointer;
+					transition: transform 0.3s;
+				}
+
+				.segment.activate svg {
+					transform: translate(0, 0);
+				}
+
+				.seg-nav {
+					position: absolute;
+					top: 4px;
+					left: 0;
+					transform: translate(0, -50%);
+				}
+
+				.approach-info {
+					width: 24%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				.slick-dots .track {
+					display: none;
+				}
+			</style>
+			<div class="approach-info no-mobile desktop">
+				<div class="inner show-me" data-approach-num="1">
+					<div class="info-num">01</div>
+					<div class="info-copy">
+						<h5>Subheadline here</h5>
+						<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+					</div>
+				</div>
+				<div class="inner" data-approach-num="2">
+					<div class="info-num">02</div>
+					<div class="info-copy">
+						<h5>Subheadline here</h5>
+						<p>We will utilize critical timelines to optimize your budget and leverage our vast network to ensure consistency and quality at any event in the world.</p>
+					</div>
+				</div>
+				<div class="inner" data-approach-num="3">
+					<div class="info-num">03</div>
+					<div class="info-copy">
+						<h5>Subheadline here</h5>
+						<p>Our team applies a comprehensive service approach: planning, creative development, engineering & permitting, on-site operations and logistics to streamline processes and drive quality control.</p>
+					</div>
+				</div>
+				<div class="inner" data-approach-num="4">
+					<div class="info-num">04</div>
+					<div class="info-copy">
+						<h5>Subheadline here</h5>
+						<p>We engineer and produce products with scalability in mind, always seeking efficient alternatives.</p>
+					</div>
+				</div>
+				<div class="inner" data-approach-num="5">
+					<div class="info-num">05</div>
+					<div class="info-copy">
+						<h5>Subheadline here</h5>
+						<p>We believe in collaboration. Our team approach to getting the job done leverages everyone’s expertise.</p>
+					</div>
+				</div>
+			</div>
+			<nav class="our-approach-nav no-mobile desktop">
+				<div data-seg-num="1" class="segment">
+					<div class="seg-nav">
+						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
+						</svg>
+						<p>01</p>
+						<svg class="down-arrow" data-time-start="4.3" data-time-end="7" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
+						</svg>
+					</div>
+					<div class="marker" data-marker-num="1">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="track" data-track-num="1">
+					<div class="progress"></div>
+				</div>
+
+				<div data-seg-num="2" class="segment">
+					<div class="seg-nav">
+						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
+						</svg>
+						<p>02</p>
+						<svg class="down-arrow" data-time-start="7" data-time-end="9" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
+						</svg>
+					</div>
+					<div class="marker" data-marker-num="2">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="track" data-track-num="2">
+					<div class="progress"></div>
+				</div>
+
+				<div data-seg-num="3" class="segment">
+					<div class="seg-nav">
+						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
+						</svg>
+						<p>03</p>
+						<svg class="down-arrow" data-time-start="9" data-time-end="13" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
+						</svg>
+					</div>
+					<div class="marker" data-marker-num="3">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="track" data-track-num="3">
+					<div class="progress"></div>
+				</div>
+
+				<div data-seg-num="4" class="segment">
+					<div class="seg-nav">
+						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
+						</svg>
+						<p>04</p>
+						<svg class="down-arrow" data-time-start="13" data-time-end="19" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
+						</svg>
+					</div>
+					<div class="marker" data-marker-num="4">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="track" data-track-num="4">
+					<div class="progress"></div>
+				</div>
+
+				<div data-seg-num="5" class="segment">
+					<div class="seg-nav">
+						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
+						</svg>
+						<p>05</p>
+						<svg class="down-arrow inactive" data-time-start="19" data-time-end="19" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
+						</svg>
+					</div>
+					<div class="marker" data-marker-num="5">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</nav>
+			<video class="our-approach no-mobile desktop" src="<?php echo get_template_directory_uri(); ?>/library/video/Approach_illos.mp4"></video>
+			<div class="carousel-inner mobile-only">
 				<div class="carousel-nav">
 					<div class="slide-number">01</div>
 					<ul class="slick-dots" style="display: block;" role="tablist">
