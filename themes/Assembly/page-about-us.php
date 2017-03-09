@@ -384,7 +384,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="our-approach carousel-module">
+	<section id="our-approach-carousel" class="our-approach carousel-module">
 		<div style="display: none;">
 			<svg class="nav-arrow-up" viewBox="0 0 19 12" xmlns="http://www.w3.org/2000/svg">
 			  <path d="M16.232 9.536L9.616 1 3 9.544" stroke-width="3" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel"/>
@@ -396,6 +396,10 @@
 		</div>
 		<div class="tile carousel-wrapper">
 			<style>
+				.our-approach.carousel-module {
+					cursor: pointer;
+				}
+
 				.our-approach-nav {
 					width: 40px;
 					margin-left: 50px;
@@ -445,6 +449,7 @@
 				    height: 8px;
 				    width: 8px;
 				    background: #d9d9d9;
+				    transition: background 0.4s;
 				    border-radius: 50%;
 				}
 
@@ -539,7 +544,7 @@
 					background: #d9d9d9;
 					position: relative;
 					margin: 0 auto;
-					overflow: hidden
+					overflow: hidden;
 				}
 
 				.progress {
@@ -584,6 +589,7 @@
 					opacity: 0;
 					pointer-events: none;
 					transition: opacity 0.4s;
+					cursor: pointer;
 				}
 
 				.segment svg.hide {
@@ -595,6 +601,12 @@
 					fill: #7D7D7D;
 				}
 
+				.segment.activate svg.disabled {
+					fill: #7D7D7D;
+					opacity: 0.5;
+					pointer-events: none;
+				}
+
 				.activate svg {
 					opacity: 1;
 					pointer-events: all;
@@ -602,7 +614,11 @@
 
 				.segment .up-arrow {
 					transform: translate(0, 7px);
-					transition: transform 0.3s;
+					transition: transform 0.3s, fill 0.3s;
+				}
+
+				.segment .up-arrow:hover {
+					fill: #93D5DA;
 				}
 
 				.segment .down-arrow {
@@ -674,7 +690,7 @@
 			<nav class="our-approach-nav no-mobile desktop">
 				<div data-seg-num="1" class="segment">
 					<div class="seg-nav">
-						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+						<svg class="up-arrow disabled" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
 							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
 						</svg>
 						<p>01</p>
@@ -694,7 +710,7 @@
 
 				<div data-seg-num="2" class="segment">
 					<div class="seg-nav">
-						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+						<svg class="up-arrow" data-time-start="26" data-time-end="30" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
 							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
 						</svg>
 						<p>02</p>
@@ -714,7 +730,7 @@
 
 				<div data-seg-num="3" class="segment">
 					<div class="seg-nav">
-						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+						<svg class="up-arrow" data-time-start="24" data-time-end="26" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
 							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
 						</svg>
 						<p>03</p>
@@ -734,7 +750,7 @@
 
 				<div data-seg-num="4" class="segment">
 					<div class="seg-nav">
-						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+						<svg class="up-arrow" data-time-start="21" data-time-end="24" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
 							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
 						</svg>
 						<p>04</p>
@@ -754,11 +770,11 @@
 
 				<div data-seg-num="5" class="segment">
 					<div class="seg-nav">
-						<svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
+						<svg class="up-arrow" data-time-start="19" data-time-end="21" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12">
 							<path fill-rule="nonzero" d="M15.965 11.64l2.37-1.837L10.803.08 8.43.083.896 9.812l2.372 1.836 6.35-8.2"/>
 						</svg>
 						<p>05</p>
-						<svg class="down-arrow inactive" data-time-start="19" data-time-end="19" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
+						<svg class="down-arrow inactive disabled" data-time-start="19" data-time-end="19" xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13">
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
