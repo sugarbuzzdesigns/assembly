@@ -42,7 +42,19 @@ var ourApproachCarousel = {};
 
 			switch(num){
 				case 1:
-					console.log('first one');
+					var queue = $({});
+
+					$('.our-approach-nav .marker:gt(0)').removeClass('active');
+					$('.our-approach-nav .segment:gt(0)').removeClass('activate');
+
+					$('.our-approach-nav .track').removeClass('active');
+
+					$('.segment.activate').removeClass('activate');
+					$('.segment').eq(0).addClass('activate');
+
+					_this.currentMarkerNum = 1;
+					_this.currentSegmentNum = 1;
+					_this.currentTrackNum = 0;
 					break;
 				case 2:
 					var queue = $({});
@@ -55,7 +67,7 @@ var ourApproachCarousel = {};
 					});
 
 					$('.our-approach-nav .track').eq(0).not('.active').each(function(i, track){
-				        queue.queue(createWorkQueueFunction($(this), i));
+				        queue.queue(createWorkQueueFunction($(this), i, 1));
 				        queue.delay(300);
 					});
 
@@ -77,7 +89,7 @@ var ourApproachCarousel = {};
 					});
 
 					$('.our-approach-nav .track:lt(2)').not('.active').each(function(i, track){
-				        queue.queue(createWorkQueueFunction($(this), i));
+				        queue.queue(createWorkQueueFunction($(this), i, 2));
 				        queue.delay(300);
 					});
 
@@ -98,8 +110,10 @@ var ourApproachCarousel = {};
 						$(track).removeClass('active');
 					});
 
+					var length = $('.our-approach-nav .track:lt(3)');
+
 					$('.our-approach-nav .track:lt(3)').not('.active').each(function(i, track){
-				        queue.queue(createWorkQueueFunction($(this), i));
+				        queue.queue(createWorkQueueFunction($(this), i, 3));
 				        queue.delay(300);
 					});
 
@@ -114,7 +128,7 @@ var ourApproachCarousel = {};
 					var queue = $({});
 
 					$('.our-approach-nav .track:lt(4)').not('.active').each(function(i, track){
-				        queue.queue(createWorkQueueFunction($(this), i));
+				        queue.queue(createWorkQueueFunction($(this), i, 4));
 				        queue.delay(300);
 					});
 
@@ -127,11 +141,14 @@ var ourApproachCarousel = {};
 					break;
 			}
 
-				function createWorkQueueFunction(elm, i, marker){
+				function createWorkQueueFunction(elm, i, length){
 				    return function(next) {
-				    	$('.marker').eq(i+1).addClass('active');
+				    	$('.marker').not('.active').eq(0).addClass('active');
 				        $(elm).addClass('active');
-				        console.log(i);
+
+				        if(i+1 === length){
+				        	console.log('about to be done');
+				        }
 
 						next();
 				    };
