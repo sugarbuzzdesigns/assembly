@@ -561,6 +561,11 @@
 					top: 0;
 				}
 
+				.track.on-off .progress {
+					transition: none;
+					top: 0;
+				}
+
 				.segment {
 					position: relative;
 				}
@@ -698,7 +703,7 @@
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
-					<div class="marker" data-marker-num="1">
+					<div class="marker" data-marker-num="1" data-time-start="0" data-time-end="4.3">
 						<span></span>
 						<span></span>
 					</div>
@@ -718,7 +723,7 @@
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
-					<div class="marker" data-marker-num="2">
+					<div class="marker" data-marker-num="2" data-time-start="5" data-time-end="7">
 						<span></span>
 						<span></span>
 					</div>
@@ -738,7 +743,7 @@
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
-					<div class="marker" data-marker-num="3">
+					<div class="marker" data-marker-num="3" data-time-start="8" data-time-end="9.5">
 						<span></span>
 						<span></span>
 					</div>
@@ -758,7 +763,7 @@
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
-					<div class="marker" data-marker-num="4">
+					<div class="marker" data-marker-num="4" data-time-start="10" data-time-end="13">
 						<span></span>
 						<span></span>
 					</div>
@@ -778,7 +783,7 @@
 							<path fill-rule="nonzero" d="M3.268.896L.896 2.732l7.534 9.73h2.372l7.534-9.72-2.37-1.838-6.35 8.19"/>
 						</svg>
 					</div>
-					<div class="marker" data-marker-num="5">
+					<div class="marker" data-marker-num="5" data-time-start="15" data-time-end="19">
 						<span></span>
 						<span></span>
 					</div>
