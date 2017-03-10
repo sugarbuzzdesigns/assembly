@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
-	<div><?php $domain = $_SERVER['SERVER_NAME']; ?></div>
 	<?php if(is_user_logged_in() || $domain = "byassembly.loc" || $domain = "staging.byassembly.com") : ?>
 	<div class="container">
 		<div class="header-mask">
@@ -14,15 +13,6 @@
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 			</header>
 		</div>
-		<header class="scroll-overlay">
-			<h1 class="logo">
-			    <a href="/">
-			        <!-- logo SVG file -->
-			        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
-			    </a>
-			</h1>
-			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
-		</header>
 		<section class="landing">
 			<div class="layer" data-depth="0.00"></div>
 			<div class="background layer" data-depth="0.10">
@@ -48,6 +38,16 @@
 			</div>
 		</section>
 		<section class="main-content">
+			<header class="scroll-overlay">
+				<div class="inner-bg"></div>
+				<h1 class="logo">
+				    <a href="/">
+				        <!-- logo SVG file -->
+				        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+				    </a>
+				</h1>
+				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+			</header>
 			<div class="group group-0">
 				<div class="company-statement module">
 					<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
@@ -128,7 +128,7 @@
 					</div>
 				</div>
 
-				<div class="approach module carousel-module" data-image-ratio="1to1" data-ratio=".1">
+				<div class="approach module carousel-module" data-image-ratio="1to1" data-ratio=".05">
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
 							<div class="carousel" data-mobile-position="right" data-mobile-start="end">

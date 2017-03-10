@@ -37,9 +37,6 @@ var $ = jQuery;
 
 			this.bindEvents();
 			this.setUpLoader();
-			if(assembly.util.useragent.deviceType === 'desktop'){
-				// this.initialLogoAnimation();
-			}
 		},
 
 		bindEvents: function(){
@@ -62,6 +59,14 @@ var $ = jQuery;
 				_this.updateViewportDimensions();
 			}, 250));
 
+			$('html').on('loaded', function(){
+				if(assembly.util.useragent.deviceType === 'desktop'){
+					_this.initialLogoAnimation('desktop');
+				} else {
+					_this.initialLogoAnimation('mobile');
+				}
+			});
+
 			_this.env.$win.on('scrollstart', function(){
 			});
 
@@ -69,63 +74,63 @@ var $ = jQuery;
 			});
 		},
 
-		// initialLogoAnimation: function(){
-		// 	var shift = 0;
-		// 	var $logo = $('.logo');
-		// 	var frameWidth = $logo.width();
-		// 	var frameHeight = $logo.height();
-		// 	var totalFrames = 50;
-		// 	var ypos = 0;
-		// 	var currentFrame = 1;
-		// 	var myImage = new Image();
-		// 	myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-resized-init-white.png';
-		// 	myImage.addEventListener("load", loadImage, false);
-		// 	var loaderIntervalInitial;
-		// 	var imgWidth; var imgHeight;
+		initialLogoAnimation: function(bgsize){
+			var shift = 0;
+			var $logo = $('.header-mask .logo');
+			var frameWidth = $logo.width();
+			var frameHeight = $logo.height();
+			var totalFrames = 50;
+			var ypos = 0;
+			var currentFrame = 1;
+			var myImage = new Image();
+			myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-'+ bgsize +'-init-white.png';
+			myImage.addEventListener("load", loadImage, false);
+			var loaderIntervalInitial;
+			var imgWidth; var imgHeight;
 
-		// 	function loadImage(e) {
-		// 		$logo.append(myImage);
-		// 		$logo.addClass('ready');
+			function loadImage(e) {
+				$logo.append(myImage);
+				$logo.addClass('ready');
 
-		// 		imgWidth = $(myImage).width();
-		// 		imgHeight = $(myImage).height();
+				imgWidth = $(myImage).width();
+				imgHeight = $(myImage).height();
 
-		// 		frameHeight = imgHeight/5;
+				frameHeight = imgHeight/5;
 
-		// 		loaderIntervalInitial = setInterval(function(){
-		// 				// animate();
-		// 			}, 1000/24);
-		// 	}
+				loaderIntervalInitial = setInterval(function(){
+						animate();
+					}, 1000/24);
+			}
 
-		// 	window.animate = function() {
-		// 		$('.logo').css({
-		// 			backgroundPosition: -shift +'px '+ -ypos +'px'
-		// 		});
+			animate = function() {
+				$logo.css({
+					backgroundPosition: -shift +'px '+ -ypos +'px'
+				});
 
-		// 	    shift += frameWidth;
+			    shift += frameWidth;
 
-		// 	    if(currentFrame%9 === 0 && currentFrame !== 0){
-		// 	    	shift = 0;
-		// 	    	ypos += frameHeight;
-		// 	    }
+			    if(currentFrame%9 === 0 && currentFrame !== 0){
+			    	shift = 0;
+			    	ypos += frameHeight;
+			    }
 
-		// 	    if (currentFrame == 50) {
-		// 			clearInterval(loaderIntervalInitial);
-		// 	    }
+			    if (currentFrame == 43) {
+					clearInterval(loaderIntervalInitial);
+			    }
 
-		// 	    /*
-		// 	        Start at the beginning once you've reached the
-		// 	        end of your sprite!
-		// 	        */
-		// 	        if (currentFrame == totalFrames) {
-		// 	        	shift = 0;
-		// 	        	ypos = 0;
-		// 	        	currentFrame = 0;
-		// 	        }
+			    /*
+			        Start at the beginning once you've reached the
+			        end of your sprite!
+			        */
+			        if (currentFrame == totalFrames) {
+			        	shift = 0;
+			        	ypos = 0;
+			        	currentFrame = 0;
+			        }
 
-		// 	        currentFrame++;
-		// 	    }
-		// },
+			        currentFrame++;
+			    }
+		},
 
 		setUpLoader: function(){
 			var shift = 0;

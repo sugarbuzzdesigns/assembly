@@ -293,6 +293,10 @@ LAYOUT & GRID STYLES
 	width: 100%;
 	padding: 0;
 	margin: 0;
+
+	&.background {
+		width: 120%;
+	}
 }
 
 /*********************
@@ -938,31 +942,35 @@ header {
 }
 
 .logo {
+	background: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png) no-repeat;
 	font-size: 0px;
 	float: left;
 	margin: 0;
     position: relative;
-    width: 114px;
-    margin-top: calc(28px/414*320);
-    margin-left: calc(21%/414*100);
+    width: 250px;
+    height: 50px;
+    background-size: 900%;
+    background-position: 0 0;
+    margin-top: calc(8px/414*320);
+    margin-left: calc(2px/414*100);
 
     img {
     	display: none;
+		width: 900%;
+		position: absolute;
+		top: 0;
+		left: 0;
     }
 
 	a {
 		display: block;
-	}
-
-	.svg-logo {
+		height: 100%;
 		width: 100%;
-		display: inline-block;
-		vertical-align: middle;
-
-		path, polygon {
-			fill: #000;
-		}
 	}
+
+   .svg-logo {
+    	display: none;
+    }
 
 	span {
 		font-size: 33px;
@@ -1005,8 +1013,8 @@ header {
 }
 
 .main-menu-btn {
-	margin-top: calc(26px/414*320);
-	margin-right: calc(20%/414*100);
+	margin-top: calc(26px);
+	margin-right: calc(20px);
 }
 
 .main-menu-btn svg {
@@ -1108,15 +1116,24 @@ header.light {
 }
 
 header.scroll-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 11;
     transition: transform 0.4s ease-in;
 
+    h1 {
+		background: url(../../images/icons/single-logo.png) no-repeat;
+		background-size: cover;
+    }
+
     &.move-out {
 		transform: translate(0, -100%);
+    }
+
+    &.abs {
+    	position: absolute;
     }
 }
 
@@ -1367,6 +1384,12 @@ HOME PAGE STYLES
 				opacity: 0.3;
 				pointer-events: none;
 			}
+		}
+	}
+
+	.projects-1	{
+		.mesh-bg {
+			    height: 250px;
 		}
 	}
 }

@@ -46,71 +46,73 @@
 
 
 <script>
-	(function($){
-		$(function(){
-			var initialLogoAnimation = function(){
-				var shift = 0;
-				var $logo = $('.logo');
-				var frameWidth = $logo.width();
-				var frameHeight = $logo.height();
-				var totalFrames = 50;
-				var ypos = 0;
-				var currentFrame = 1;
-				var myImage = new Image();
-				myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-resized-init-white.png';
-				myImage.addEventListener("load", loadImage, false);
-				var loaderIntervalInitial;
-				var imgWidth; var imgHeight;
+	// (function($){
+	// 	$(function(){
+	// 		var initialLogoAnimation = function(size){
+	// 			var shift = 0;
+	// 			var $logo = $('.logo');
+	// 			var frameWidth = $logo.width();
+	// 			var frameHeight = $logo.height();
+	// 			var totalFrames = 50;
+	// 			var ypos = 0;
+	// 			var currentFrame = 1;
+	// 			var myImage = new Image();
+	// 			myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png';
+	// 			myImage.addEventListener("load", loadImage, false);
+	// 			var loaderIntervalInitial;
+	// 			var imgWidth; var imgHeight;
 
-				function loadImage(e) {
-					$logo.append(myImage);
-					$logo.addClass('ready');
+	// 			function loadImage(e) {
+	// 				$logo.append(myImage);
+	// 				$logo.addClass('ready');
 
-					imgWidth = $(myImage).width();
-					imgHeight = $(myImage).height();
+	// 				imgWidth = $(myImage).width();
+	// 				imgHeight = $(myImage).height();
 
-					frameHeight = imgHeight/5;
+	// 				frameHeight = imgHeight/5;
 
-					loaderIntervalInitial = setInterval(function(){
-							window.animate();
-						}, 1000/24);
-				}
+	// 				loaderIntervalInitial = setInterval(function(){
+	// 						window.animate();
+	// 					}, 1000/24);
+	// 			}
 
-				window.animate = function() {
-					$('.logo').css({
-						backgroundPosition: -shift +'px '+ -ypos +'px'
-					});
+	// 			window.animate = function() {
+	// 				$('.logo').css({
+	// 					backgroundPosition: -shift +'px '+ -ypos +'px'
+	// 				});
 
-				    shift += frameWidth;
+	// 			    shift += frameWidth;
 
-				    if(currentFrame%9 === 0 && currentFrame !== 0){
-				    	shift = 0;
-				    	ypos += frameHeight;
-				    }
+	// 			    if(currentFrame%9 === 0 && currentFrame !== 0){
+	// 			    	shift = 0;
+	// 			    	ypos += frameHeight;
+	// 			    }
 
-				    if (currentFrame === 43) {
-						clearInterval(loaderIntervalInitial);
-				    }
+	// 			    if (currentFrame === 43) {
+	// 					clearInterval(loaderIntervalInitial);
+	// 			    }
 
-				    /*
-				        Start at the beginning once you've reached the
-				        end of your sprite!
-				        */
-				        if (currentFrame == totalFrames) {
-				        	shift = 0;
-				        	ypos = 0;
-				        	currentFrame = 0;
-				        }
+	// 			    /*
+	// 			        Start at the beginning once you've reached the
+	// 			        end of your sprite!
+	// 			        */
+	// 			        if (currentFrame == totalFrames) {
+	// 			        	shift = 0;
+	// 			        	ypos = 0;
+	// 			        	currentFrame = 0;
+	// 			        }
 
-				        currentFrame++;
-				    }
-			};
+	// 			        currentFrame++;
+	// 			    }
+	// 		};
 
-			$('html').on('loaded', function(){
-				if(assembly.util.useragent.deviceType === 'desktop'){
-					initialLogoAnimation();
-				}
-			});
-		});
-	})(jQuery);
+	// 		$('html').on('loaded', function(){
+	// 			if(assembly.util.useragent.deviceType === 'desktop'){
+	// 				initialLogoAnimation('desktop');
+	// 			} else {
+	// 				initialLogoAnimation('mobile');
+	// 			}
+	// 		});
+	// 	});
+	// })(jQuery);
 </script>

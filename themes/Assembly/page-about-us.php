@@ -423,8 +423,8 @@
 				    display: block;
 				    top: 50%;
 				    left: 50%;
-				    width: 8px;
-				    height: 8px;
+				    width: 6px;
+				    height: 6px;
 				    border-radius: 50%;
 				    position: absolute;
 				    transform: translate(-50%, -50%);
@@ -492,8 +492,8 @@
 					}
 
 					100% {
-					    height: 8px;
-					    width: 8px;
+					    height: 6px;
+					    width: 6px;
 					    background: #82cbd0;
 					}
 				}

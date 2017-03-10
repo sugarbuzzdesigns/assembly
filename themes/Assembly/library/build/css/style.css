@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-08 04:19 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-09 09:57 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7475,6 +7475,9 @@ LAYOUT & GRID STYLES
   padding: 0;
   margin: 0;
 }
+.layer.background {
+  width: 120%;
+}
 
 /*********************
 LINK STYLES
@@ -8029,27 +8032,32 @@ header {
 }
 
 .logo {
+  background: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png) no-repeat;
   font-size: 0px;
   float: left;
   margin: 0;
   position: relative;
-  width: 114px;
-  margin-top: calc(28px/414*320);
-  margin-left: calc(21%/414*100);
+  width: 250px;
+  height: 50px;
+  background-size: 900%;
+  background-position: 0 0;
+  margin-top: calc(8px/414*320);
+  margin-left: calc(2px/414*100);
 }
 .logo img {
   display: none;
+  width: 900%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .logo a {
   display: block;
+  height: 100%;
+  width: 100%;
 }
 .logo .svg-logo {
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-.logo .svg-logo path, .logo .svg-logo polygon {
-  fill: #000;
+  display: none;
 }
 .logo span {
   font-size: 33px;
@@ -8090,8 +8098,8 @@ header {
 }
 
 .main-menu-btn {
-  margin-top: calc(26px/414*320);
-  margin-right: calc(20%/414*100);
+  margin-top: calc(26px);
+  margin-right: calc(20px);
 }
 
 .main-menu-btn svg {
@@ -8186,15 +8194,22 @@ header.light .svg-logo .menu-letter, header.light .svg-logo path, header.light .
 }
 
 header.scroll-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 11;
   transition: transform 0.4s ease-in;
 }
+header.scroll-overlay h1 {
+  background: url(../../images/icons/single-logo.png) no-repeat;
+  background-size: cover;
+}
 header.scroll-overlay.move-out {
   transform: translate(0, -100%);
+}
+header.scroll-overlay.abs {
+  position: absolute;
 }
 
 header.dark .main-menu-btn span {
@@ -8402,6 +8417,9 @@ HOME PAGE STYLES
 .home .carousel-module.atEnd .nav-arrow-right {
   opacity: 0.3;
   pointer-events: none;
+}
+.home .projects-1 .mesh-bg {
+  height: 250px;
 }
 
 /*********************
@@ -10123,6 +10141,11 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   HEADER STYLES
   *********************/
+  .logo {
+    margin-top: calc(8px);
+    margin-left: calc(2px);
+  }
+
   /*********************
   VIDEO CONTENT
   **********************/
@@ -10174,6 +10197,13 @@ PLUS SIZE (MOBILE) Iphone #+
     font-size: 0.8125rem;
     line-height: 1.4375rem;
   }
+  .home .approach {
+    padding-top: 30px;
+  }
+  .home .video.module {
+    margin-top: 65px;
+    margin-bottom: 71px;
+  }
 
   /*********************
   PROJECTS SECTION
@@ -10181,7 +10211,7 @@ PLUS SIZE (MOBILE) Iphone #+
   **********************/
   .projects {
     overflow: auto;
-    padding-top: 2.75%;
+    padding-top: 30px;
   }
 
   .projects-1 {
@@ -10193,7 +10223,7 @@ PLUS SIZE (MOBILE) Iphone #+
   - Homepage
   **********************/
   .services {
-    padding-top: 5.75%;
+    padding-top: 7.15%;
   }
 
   /*********************
@@ -10563,7 +10593,8 @@ you can add resource intensive styles.
     margin-top: -200px;
   }
   .home .group-2 {
-    margin-bottom: 115px;
+    margin-bottom: 65px;
+    padding-bottom: 50px;
   }
   .home .group-3 {
     overflow: hidden;
@@ -11029,7 +11060,7 @@ you can add resource intensive styles.
   MAIN LOGO
   **********************/
   .logo {
-    background: url(../../images/sprites/Assembly_Logo_TempSpaces-resized-init-white.png) no-repeat;
+    background: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png) no-repeat;
     width: 373px;
     height: 77px;
     overflow: hidden;
@@ -11038,19 +11069,8 @@ you can add resource intensive styles.
     background-size: 900%;
     background-position: 0 0;
   }
-  .logo a {
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
   .logo .svg-logo {
     display: none;
-  }
-  .logo img {
-    width: 900%;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   /*********************

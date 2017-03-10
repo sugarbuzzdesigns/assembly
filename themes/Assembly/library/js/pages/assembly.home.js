@@ -20,9 +20,7 @@ var assembly = assembly || {};
 			this.bindEvents();
 			this.initializeVideos();
 
-			if (raf && assembly.util.useragent.deviceType === 'desktop') {
-			    this.loop();
-			}
+			this.loop();
 		},
 
 		loop: function(){
@@ -51,6 +49,8 @@ var assembly = assembly || {};
 		landingScrollHandler: function(){
 			var max = 0.6;
 
+			console.log('handler');
+
 			if($(window).height() - $(window).scrollTop() >= 0){
 				$('.landing .landing-bg').css({
 					'transform': 'scale('+ Math.abs(($(window).scrollTop()/$(window).height())*0.2 - 1) +')',
@@ -78,13 +78,12 @@ var assembly = assembly || {};
 				$('.header-mask').height((1 - $(window).scrollTop()/$(window).height()) * 100 + '%');
 			}
 
-							console.log(this.currentScroll >= $('.main-content').offset().top);
 
-				if(this.currentScroll >= ($('.main-content').offset().top + $('.scroll-overlay').height())){
-					$('.scroll-overlay').addClass('move-out');
-				} else {
-					$('.scroll-overlay').removeClass('move-out');
-				}
+			if(this.currentScroll >= ($('.main-content').offset().top)){
+				$('.scroll-overlay').addClass('abs');
+			} else {
+				$('.scroll-overlay').removeClass('abs');
+			}
 		},
 
 		bindEvents: function(){

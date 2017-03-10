@@ -21,7 +21,7 @@ be seen on the Desktop.
 MAIN LOGO
 **********************/
 .logo {
-	background: url(../../images/sprites/Assembly_Logo_TempSpaces-resized-init-white.png) no-repeat;
+	background: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png) no-repeat;
     width: 373px;
     height: 77px;
     overflow: hidden;
@@ -30,21 +30,8 @@ MAIN LOGO
     background-size: 900%;
     background-position: 0 0;
 
-    a {
-    	display: block;
-    	height: 100%;
-    	width: 100%;
-    }
-
     .svg-logo {
     	display: none;
-    }
-
-    img {
-    	width: 900%;
-		position: absolute;
-		top: 0;
-		left: 0;
     }
 }
 
