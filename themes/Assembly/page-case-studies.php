@@ -1,14 +1,13 @@
 <?php get_header(); ?>
-<?php include 'includes/header-dark.php'; ?>
 <section class="landing">
 	<div class="landing-inner">
 		<div class="modular case-study-category">
+			<div class="square hover-spot"></div>
 			<div class="hover-content">
-				<header class="light section-header no-mobile">
+				<header class="light section-header no-mobile desktop">
 				    <h2 class="logo">
 				        <a href="/">
-				            <!-- logo SVG file -->
-				            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+				        	<img src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/single-logo-white.png" alt="">
 				        </a>
 				    </h2>
 				</header>
@@ -21,16 +20,16 @@
 					<span data-letter="a">a</span>
 					<span data-letter="r">r</span>
 				</h3>
-				<div class="white border square"></div>
+				<div class="white border square">
+					<p>A LOOK AT<br>OUR MODULAR<br>WORK</p>
+				</div>
 			</div>
 			<div class="default-content">
+				<div class="bg layer" data-depth="0.10"></div>
 				<div class="inner">
-					<header class="dark section-header interior no-mobile">
+					<header class="dark section-header interior no-mobile desktop landing-logo">
 					    <h2 class="logo">
-					        <a href="/">
-					            <!-- logo SVG file -->
-					            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
-					        </a>
+					        <a href="/"></a>
 					    </h2>
 					</header>
 					<h3>
@@ -42,13 +41,14 @@
 						<span data-letter="a">a</span>
 						<span data-letter="r">r</span>
 					</h3>
-					<div class="white solid square"></div>
+					<div class="white solid square"><p>MODULAR<br>CASE STUDY</p></div>
 				</div>
 			</div>
 		</div>
 		<div class="custom case-study-category">
+			<div class="square hover-spot"></div>
 			<div class="hover-content">
-				<header class="light section-header no-mobile">
+				<header class="light section-header no-mobile desktop">
 				    <?php include __DIR__ . '/includes/menu-btn.php'; ?>
 				</header>
 				<h3>
@@ -59,11 +59,14 @@
 					<span data-letter="o">o</span>
 					<span data-letter="m">m</span>
 				</h3>
-				<div class="white border square"></div>
+				<div class="white border square">
+					<p>A LOOK AT<br>OUR CUSTOM<br>WORK</p>
+				</div>
 			</div>
 			<div class="default-content">
+				<div class="bg layer" data-depth="0.10"></div>
 				<div class="inner">
-					<header class="dark section-header interior no-mobile">
+					<header class="dark section-header interior no-mobile desktop">
 						<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 					</header>
 					<h3>
@@ -74,7 +77,7 @@
 						<span data-letter="o">o</span>
 						<span data-letter="m">m</span>
 					</h3>
-					<div class="white solid square"></div>
+					<div class="white solid square"><p>CUSTOM<br>CASE STUDY</p></div>
 				</div>
 			</div>
 		</div>
@@ -83,13 +86,11 @@
 
 <section class="content">
 	<div class="content-inner">
-		<header class="dark section-header interior">
-		    <h1 class="logo">
-		        <a href="/">
-		            <!-- logo SVG file -->
-		            <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
-		        </a>
-		    </h1>
+		<header class="scroll-overlay">
+			<div class="inner-bg"></div>
+			<h1 class="logo">
+			    <a href="/"></a>
+			</h1>
 			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 		</header>
 		<div class="content-header">
@@ -126,7 +127,12 @@
 			</div>
 		</div>
 		<div class="svg-container no-mobile desktop">
-			<?php include __DIR__ . '/library/images/svg/case-studies-svg.svg'; ?>
+			<div class="case-study-svg custom">
+				<?php include __DIR__ . '/library/images/svg/case-studies-svg-custom.svg'; ?>
+			</div>
+			<div class="case-study-svg modular">
+				<?php include __DIR__ . '/library/images/svg/case-studies-svg-modular.svg'; ?>
+			</div>
 		</div>
 		<div class="case-study-details">
 			<?php include 'includes/content/case-studies/custom/default.php' ?>

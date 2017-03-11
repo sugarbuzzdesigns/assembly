@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-09 09:33 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 12:14 am - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -114,6 +114,15 @@ var assembly = assembly || {};
 var $ = jQuery;
 
 (function($){
+var transEndEventNames = {
+	'WebkitTransition' : 'webkitTransitionEnd',
+	'MozTransition'    : 'transitionend',
+	'OTransition'      : 'oTransitionEnd',
+	'msTransition'     : 'MSTransitionEnd',
+	'transition'       : 'transitionend'
+},
+transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
+
 	assembly.util = {
 		baseUrl: php_vars.home,
 
@@ -160,6 +169,7 @@ var $ = jQuery;
 			}, 250));
 
 			$('html').on('loaded', function(){
+				$(this).addClass('loaded');
 				if(assembly.util.useragent.deviceType === 'desktop'){
 					_this.initialLogoAnimation('desktop');
 				} else {
@@ -176,7 +186,7 @@ var $ = jQuery;
 
 		initialLogoAnimation: function(bgsize){
 			var shift = 0;
-			var $logo = $('.header-mask .logo');
+			var $logo = $('.landing-logo .logo');
 			var frameWidth = $logo.width();
 			var frameHeight = $logo.height();
 			var totalFrames = 50;
@@ -245,7 +255,7 @@ var $ = jQuery;
 			myImage.addEventListener("load", loadImage, false);
 
 			if(window.location.search.indexOf('loader=false') !== -1){
-				$('.loader-wrap').addClass('done');
+				$('.loader-wrap').addClass('remove');
 			}
 
 			function loadImage(e) {
@@ -257,6 +267,10 @@ var $ = jQuery;
 						if(currentFrame === 48 && $('html').is('.dom-ready')){
 							$('.loader-wrap').addClass('done');
 							$('html').trigger('loaded');
+							setTimeout(function(){
+								$('html').trigger('loader-removed');
+								$('.loader-wrap').hide();
+							}, 500);
 							clearInterval(loaderInterval);
 						}
 					}, 1000/24);

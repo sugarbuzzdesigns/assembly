@@ -2,8 +2,7 @@
 		 * Custom Animations
 		 */
 		.custom {
-			&.hover,
-			&:hover {
+			&.hover {
 				[data-letter="c"] {
 					animation-name: customC;
 					animation-duration: 0.2s;

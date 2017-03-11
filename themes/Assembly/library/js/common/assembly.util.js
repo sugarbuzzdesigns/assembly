@@ -14,6 +14,15 @@ var assembly = assembly || {};
 var $ = jQuery;
 
 (function($){
+var transEndEventNames = {
+	'WebkitTransition' : 'webkitTransitionEnd',
+	'MozTransition'    : 'transitionend',
+	'OTransition'      : 'oTransitionEnd',
+	'msTransition'     : 'MSTransitionEnd',
+	'transition'       : 'transitionend'
+},
+transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
+
 	assembly.util = {
 		baseUrl: php_vars.home,
 
@@ -60,6 +69,7 @@ var $ = jQuery;
 			}, 250));
 
 			$('html').on('loaded', function(){
+				$(this).addClass('loaded');
 				if(assembly.util.useragent.deviceType === 'desktop'){
 					_this.initialLogoAnimation('desktop');
 				} else {
@@ -76,7 +86,7 @@ var $ = jQuery;
 
 		initialLogoAnimation: function(bgsize){
 			var shift = 0;
-			var $logo = $('.header-mask .logo');
+			var $logo = $('.landing-logo .logo');
 			var frameWidth = $logo.width();
 			var frameHeight = $logo.height();
 			var totalFrames = 50;
@@ -145,7 +155,7 @@ var $ = jQuery;
 			myImage.addEventListener("load", loadImage, false);
 
 			if(window.location.search.indexOf('loader=false') !== -1){
-				$('.loader-wrap').addClass('done');
+				$('.loader-wrap').addClass('remove');
 			}
 
 			function loadImage(e) {
@@ -157,6 +167,10 @@ var $ = jQuery;
 						if(currentFrame === 48 && $('html').is('.dom-ready')){
 							$('.loader-wrap').addClass('done');
 							$('html').trigger('loaded');
+							setTimeout(function(){
+								$('html').trigger('loader-removed');
+								$('.loader-wrap').hide();
+							}, 500);
 							clearInterval(loaderInterval);
 						}
 					}, 1000/24);

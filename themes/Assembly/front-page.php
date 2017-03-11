@@ -2,7 +2,7 @@
 	<?php include 'includes/page-data/front-page-data.php'; ?>
 	<?php if(is_user_logged_in() || $domain = "byassembly.loc" || $domain = "staging.byassembly.com") : ?>
 	<div class="container">
-		<div class="header-mask">
+		<div class="header-mask landing-logo">
 			<header class="light">
 				<h1 class="logo">
 				    <a href="/">
@@ -41,10 +41,7 @@
 			<header class="scroll-overlay">
 				<div class="inner-bg"></div>
 				<h1 class="logo">
-				    <a href="/">
-				        <!-- logo SVG file -->
-				        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
-				    </a>
+				    <a href="/"></a>
 				</h1>
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 			</header>

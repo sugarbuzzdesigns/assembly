@@ -526,9 +526,58 @@ SERVICES Page
 CASE STUDIES Page
 **********************/
 .page-case-studies {
+	.logo {
+		background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init.png);
+	}
+
+	header.scroll-overlay {
+		position: absolute;
+	}
+
+	header.scroll-overlay h1 {
+		background-image: url(../../images/icons/single-logo.png);
+		margin-left: calc(67%/1440*100);
+	}
+
 	.filter-wrap {
 		padding: 16px 33px 20px 17px;
 		background: rgba(255,255,255,0.8);
+	}
+
+	.landing {
+		.square {
+		    height: 100%;
+		    width: 100%;
+		    top: 0;
+		    left: 0;
+
+			@at-root {
+				.loaded .page-case-studies .square {
+					width: calc((410%/720) *100);
+					height: calc((294%/720) *100);
+					top: calc((238%/720) *100);
+					left: calc((264%/720) *100);
+				}
+			}
+
+			p {
+				font-size: 13px;
+				display: block;
+			    top: 76.5%;
+				bottom: auto;
+				right: auto;
+				left: 56%;
+
+			}
+		}
+
+		.hover-content {
+			.square {
+				p {
+					color: #fff;
+				}
+			}
+		}
 	}
 
 	.content {

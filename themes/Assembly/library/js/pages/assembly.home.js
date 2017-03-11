@@ -49,8 +49,6 @@ var assembly = assembly || {};
 		landingScrollHandler: function(){
 			var max = 0.6;
 
-			console.log('handler');
-
 			if($(window).height() - $(window).scrollTop() >= 0){
 				$('.landing .landing-bg').css({
 					'transform': 'scale('+ Math.abs(($(window).scrollTop()/$(window).height())*0.2 - 1) +')',

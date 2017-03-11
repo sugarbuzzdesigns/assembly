@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-09 09:57 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 12:26 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -660,9 +660,42 @@ SERVICES Page
 /*********************
 CASE STUDIES Page
 **********************/
+.page-case-studies .logo {
+  background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init.png);
+}
+.page-case-studies header.scroll-overlay {
+  position: absolute;
+}
+.page-case-studies header.scroll-overlay h1 {
+  background-image: url(../../images/icons/single-logo.png);
+  margin-left: calc(67%/1440*100);
+}
 .page-case-studies .filter-wrap {
   padding: 16px 33px 20px 17px;
   background: rgba(255, 255, 255, 0.8);
+}
+.page-case-studies .landing .square {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.loaded .page-case-studies .square {
+  width: calc((410%/720) *100);
+  height: calc((294%/720) *100);
+  top: calc((238%/720) *100);
+  left: calc((264%/720) *100);
+}
+.page-case-studies .landing .square p {
+  font-size: 13px;
+  display: block;
+  top: 76.5%;
+  bottom: auto;
+  right: auto;
+  left: 56%;
+}
+.page-case-studies .landing .hover-content .square p {
+  color: #fff;
 }
 .page-case-studies .content .content-header {
   padding-bottom: 0;
@@ -882,6 +915,9 @@ Generic Section Styles
 **********************/
 header.scroll-overlay {
   position: fixed;
+}
+header.scroll-overlay .logo h1 {
+  background-size: cover;
 }
 
 /*********************
@@ -1115,8 +1151,9 @@ Tiles
 /*********************
 CASE STUDIES Page
 **********************/
-.page-case-studies .section-header {
-  z-index: 10;
+.page-case-studies .logo {
+  margin-top: 50px;
+  margin-left: calc(67%/720*100);
 }
 .page-case-studies .landing {
   /**
@@ -1125,6 +1162,9 @@ CASE STUDIES Page
   /**
    * Custom Animations
    */
+}
+.page-case-studies .landing .section-header {
+  z-index: 0;
 }
 .page-case-studies .landing .case-study-category {
   width: 50vw;
@@ -1135,16 +1175,11 @@ CASE STUDIES Page
   font-size: rem(47);
   transition: transform 0.8s;
 }
+.page-case-studies .landing .case-study-category .section-header {
+  padding: 0;
+}
 .page-case-studies .landing h3 {
   top: 37.6%;
-}
-.page-case-studies .landing .landing-inner {
-  overflow: hidden;
-  transition: height 0.7s;
-  height: 100vh;
-}
-.page-case-studies .landing .landing-inner.hide .case-study-category {
-  transform: translate3d(0, -100%, 0);
 }
 .page-case-studies .landing h3 {
   font-size: rem(85);
@@ -1152,9 +1187,25 @@ CASE STUDIES Page
 .page-case-studies .landing .hover-content {
   transition: transform 0.7s;
 }
+.page-case-studies .landing .hover-content .logo {
+  margin-top: 50px;
+  margin-left: calc(67%/720*100);
+}
+.page-case-studies .landing .hover-content .logo img {
+  display: block;
+  width: 100%;
+}
 .page-case-studies .landing .default-content {
   width: 100%;
   height: 100%;
+}
+.page-case-studies .landing .default-content .bg {
+  background-size: 110%;
+  background-position: 50% 50%;
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
 }
 .page-case-studies .landing .default-content .inner {
   width: 50vw;
@@ -1165,7 +1216,7 @@ CASE STUDIES Page
 .page-case-studies .landing .modular h3 {
   left: 21.661%;
 }
-.page-case-studies .landing .modular .default-content .inner {
+.page-case-studies .landing .modular .default-content .bg {
   background-image: url(../../images/pages/case-studies/00-Modular-Landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1173,57 +1224,51 @@ CASE STUDIES Page
 .page-case-studies .landing .custom h3 {
   left: 23.4%;
 }
-.page-case-studies .landing .custom .default-content .inner {
+.page-case-studies .landing .custom .default-content .bg {
   background-image: url(../../images/pages/case-studies/00-Custom-Landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.page-case-studies .landing .square {
-  width: calc((410%/720)*100);
-  height: calc((294%/720)*100);
-  top: calc((238%/720)*100);
-  left: calc((264%/720)*100);
-}
 .page-case-studies .landing [data-letter] {
   transform: translate3d(0, 0, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular:hover [data-letter="m"] {
+.page-case-studies .landing .modular.hover [data-letter="m"] {
   animation-name: modularM;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular:hover [data-letter="o"] {
+.page-case-studies .landing .modular.hover [data-letter="o"] {
   animation-name: modularO;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular:hover [data-letter="d"] {
+.page-case-studies .landing .modular.hover [data-letter="d"] {
   animation-name: modularD;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular:hover [data-letter="u"] {
+.page-case-studies .landing .modular.hover [data-letter="u"] {
   animation-name: modularU;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular:hover [data-letter="l"] {
+.page-case-studies .landing .modular.hover [data-letter="l"] {
   animation-name: modularL;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular:hover [data-letter="a"] {
+.page-case-studies .landing .modular.hover [data-letter="a"] {
   animation-name: modularA;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular:hover [data-letter="r"] {
+.page-case-studies .landing .modular.hover [data-letter="r"] {
   animation-name: modularR;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -1351,37 +1396,37 @@ CASE STUDIES Page
     transform: translate3d(-175px, 105px, 0);
   }
 }
-.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom:hover [data-letter="c"] {
+.page-case-studies .landing .custom.hover [data-letter="c"] {
   animation-name: customC;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom:hover [data-letter="u"] {
+.page-case-studies .landing .custom.hover [data-letter="u"] {
   animation-name: customU;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom:hover [data-letter="s"] {
+.page-case-studies .landing .custom.hover [data-letter="s"] {
   animation-name: customS;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom:hover [data-letter="t"] {
+.page-case-studies .landing .custom.hover [data-letter="t"] {
   animation-name: customT;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom:hover [data-letter="o"] {
+.page-case-studies .landing .custom.hover [data-letter="o"] {
   animation-name: customO;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom:hover [data-letter="m"] {
+.page-case-studies .landing .custom.hover [data-letter="m"] {
   animation-name: customM;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -1508,6 +1553,9 @@ CASE STUDIES Page
 }
 .page-case-studies .content .case-study-details {
   margin-top: -110px;
+}
+.page-case-studies .filter-menu {
+  background: transparent;
 }
 
 /*********************

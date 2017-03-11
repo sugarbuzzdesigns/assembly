@@ -169,30 +169,41 @@ function bones_scripts_and_styles() {
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/dist/css/ie.min.css', array(), '' );
 
 		// wp_register_script( 'TweenMax', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array(), '', true );
-
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js', array( 'jquery' ), '', true );
 
+		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'bones-js' );
+
 		if(is_page('contact')){
-			wp_enqueue_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), true );
+			wp_register_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), '', true );
+			wp_enqueue_script( 'contact' );
 		}
 
 		if(is_page('services')){
-			wp_enqueue_script( 'services', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.services' . $suffix . '.js', array( 'jquery' ), true );
+			wp_register_script( 'services', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.services' . $suffix . '.js', array( 'jquery' ), '', true );
+			wp_enqueue_script( 'services' );
 		}
 
 		if(is_page('case-studies')){
-			wp_enqueue_script( 'casestudies', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.casestudies' . $suffix . '.js', array( 'jquery' ), true );
+			wp_register_script( 'casestudies', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.casestudies' . $suffix . '.js', array('jquery'), '', true );
+			wp_enqueue_script( 'casestudies' );
 		}
 
 		if(is_page('about-us')){
-			wp_enqueue_script( 'about', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.about' . $suffix . '.js', array( 'jquery' ), true );
-			wp_enqueue_script( 'our-approach-carousel', get_template_directory_uri() . '/library/js/our-approach-carousel.js', array( 'jquery' ), true );
+			wp_register_script( 'about', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.about' . $suffix . '.js', array( 'jquery' ), '', true );
+			wp_register_script( 'our-approach-carousel', get_template_directory_uri() . '/library/js/our-approach-carousel.js', array( 'jquery' ), '', true );
+
+			wp_enqueue_script( 'about' );
+			wp_enqueue_script( 'our-approach-carousel' );
 		}
 
 		if(is_front_page()){
-			wp_enqueue_script( 'home', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.home' . $suffix . '.js', array( 'jquery' ), true );
+			wp_register_script( 'home', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.home' . $suffix . '.js', array( 'jquery' ), '', true );
+			wp_enqueue_script( 'home' );
 		}
+
+
 
 		// enqueue styles and scripts
 		// wp_enqueue_script( 'bones-modernizr' );
@@ -200,15 +211,6 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'bones-ie-only' );
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
-
-		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
-		*/
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'TweenMax' );
-		wp_enqueue_script( 'bones-js' );
 
 		$dataToBePassed = array(
 		    'home'        => get_stylesheet_directory_uri(),

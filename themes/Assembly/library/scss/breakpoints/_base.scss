@@ -39,6 +39,10 @@ $screenWidth: 320;
 		opacity: 0;
 	}
 
+	&.remove {
+		display: none;
+	}
+
 	.initial {
 		opacity: 1;
 		transition: opacity 0.5s ease, transform 0.5s ease;
@@ -480,16 +484,7 @@ and more scalable.
 			display: block;
 			color: #6d6d6d;
 			text-decoration: none;
-
-			&:hover, &:focus {
-
-			}
 		}
-
-		&:first-child {}
-
-		&:last-child {}
-
 	} /* end .menu li */
 
 	/* highlight current page */
@@ -512,6 +507,7 @@ and more scalable.
 		height: 100vh;
 		width: 100%;
 		opacity: 1;
+		z-index: 10;
 	}
 
 	.main-menu, .nav {
@@ -2117,6 +2113,110 @@ CONTACT
 CASE STUDIES Page
 **********************/
 .page-case-studies {
+	header.scroll-overlay {
+	    position: absolute;
+	}
+
+	.case-study-svg {
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+	// SVG STYLES
+	.case-study-svg-cat {
+		pointer-events: bounding-box;
+		cursor: pointer;
+
+		.main {
+			display: block;
+			position: relative;
+			transition: transform 0.3s ease-out;
+			transform: translate3d(0, 30px, 0);
+		}
+
+		.vertical-line {
+		    stroke-dasharray: 150;
+		    stroke-dashoffset: -150;
+		}
+
+		.word-box {
+			opacity: 0;
+			transition: opacity 0.25s linear 0.25s;
+		}
+
+		.text {
+			opacity: 0;
+			transition: opacity 0.25s linear 0.4s;
+		}
+
+		circle {
+			transition: opacity 0.25s linear;
+			opacity: 0;
+		}
+
+		&:hover,
+		&.selected {
+			.main {
+				transform: translate3d(0, 0, 0);
+			}
+
+			.vertical-line {
+				animation: dash .25s linear forwards;
+			}
+
+			circle,
+			.word-box,
+			.text {
+				opacity: 1;
+			}
+		}
+	}
+
+	@keyframes dash {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	// MODULAR
+	.super-modular-hover .main {
+
+	}
+
+	.hospitality-modular-hover .main {
+
+	}
+
+	.sporting-modular-hover .main {
+	}
+
+	.experiential-modular-hover .main {
+
+	}
+
+	// CUSTOM
+	.super-custom-hover .main {
+
+	}
+
+	.hospitality-custom-hover .main {
+
+	}
+
+	.sporting-custom-hover .main {
+	}
+
+	.experiential-custom-hover .main {
+
+	}
+
 	.landing .case-study-category {
 		width: 100%;
 		height: 50vh;
@@ -2166,15 +2266,38 @@ CASE STUDIES Page
 	.landing {
 		.landing-inner {
 			overflow: hidden;
-			transition: height 0.7s;
+			transition: height 1.2s ease-in-out;
 			height: 100vh;
 
 			&.hide {
 				height: 0;
+
+				.bg {
+					transform: translate3d(0,-10%,0);
+				}
+
+				h3 {
+					transform: translate3d(0,100%,0);
+				}
+
+				.square {
+					transform: translate3d(0,20%,0);
+				}
+
+				.selected {
+					.square {
+						transform: translate3d(0,-20%,0);
+					}
+				}
 			}
 		}
 
 		.case-study-category {
+			.hover-spot {
+				z-index: 1;
+				cursor: pointer;
+			}
+
 			&.hover {
 				.default-content {
 					width: 0;
@@ -2189,21 +2312,21 @@ CASE STUDIES Page
 				padding: 78px 0 40px calc((87%/720) *100);
 			}
 
-			@at-root .no-touch {
-				.landing {
-					.case-study-category {
-						&:hover {
-							.default-content {
-								width: 0;
-							}
+			// @at-root .no-touch {
+			// 	.landing {
+			// 		.case-study-category {
+			// 			&:hover {
+			// 				.default-content {
+			// 					width: 0;
+			// 				}
 
-							.hover-content {
-								transform: translate3d(0,0,0);
-							}
-						}
-					}
-				}
-			}
+			// 				.hover-content {
+			// 					transform: translate3d(0,0,0);
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 
 		h3 {
@@ -2215,7 +2338,8 @@ CASE STUDIES Page
 		    letter-spacing: -4px;
 		    z-index: 3;
 		    color: #000;
-		    transition: color .7s;
+			transition: color .7s, transform 1s linear;
+			transform: translate3d(0,0,0);
 
 			span {
 				display: block;
@@ -2259,14 +2383,20 @@ CASE STUDIES Page
 			    position: absolute;
 			    height: 50vh;
 			    right: 0;
+			    top: 0;
 			}
 		}
 
-		.modular .default-content .inner {
+		.default-content .bg {
+			transition: transform 1s linear;
+			transform: translate3d(0,0,0);
+		}
+
+		.modular .default-content .bg {
 			background-image: url(../../images/pages/case-studies/00-Modular-Landing-mobile.jpg);
 		}
 
-		.custom .default-content .inner {
+		.custom .default-content .bg {
 			background-image: url(../../images/pages/case-studies/00-Custom-Landing-mobile.jpg);
 		}
 
@@ -2276,6 +2406,21 @@ CASE STUDIES Page
 			top: 25%;
 			left: 33.091%;
 			position: absolute;
+			transition: height 0.5s, width 0.5s, top 0.5s, left 0.5s, transform 1s linear;
+			transform: translate3d(0,0,0);
+
+			p {
+				font-family: gridnikregular;
+				font-size: 11px;
+				line-height: calc(18/13);
+				position: absolute;
+				bottom: 20px;
+				right: 22px;
+				margin: 0;
+				color: #000;
+
+				display: none;
+			}
 
 			&.white.solid {
 				background: #fff;
@@ -2296,6 +2441,7 @@ CASE STUDIES Page
 		z-index: 3;
 		background: #fff;
 		overflow: hidden;
+		min-height: 300vh;
 
 		.content-header {
 			padding-bottom: 20.77%;
@@ -2416,6 +2562,13 @@ CASE STUDIES Page
 			display: block;
 		}
 	}
+}
+
+.landing-closed body {
+    display: block;
+    height: auto;
+    width: auto;
+    overflow: auto;
 }
 
 @keyframes showAndUp {
