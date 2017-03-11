@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 12:14 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 03:43 pm - User: Phoydar */
 /*!
  * VERSION: 0.1.12
  * DATE: 2017-01-17
@@ -137,7 +137,11 @@ var assembly = assembly || {};
 		},
 
 		showMainCaseStudies: function($landingTileClicked){
+			var $toshow;
+
 			if($landingTileClicked.is('.modular')){
+				$toShow = this.$modularLanding;
+
 				this.$modularLanding.addClass('show');
 				this.$customLanding.removeClass('show');
 				// Link at bottom of page
@@ -150,6 +154,8 @@ var assembly = assembly || {};
 				$('.case-study-svg.modular').addClass('show');
 				$('.case-study-svg.custom').removeClass('show');
 			} else {
+				$toShow = this.$customLanding;
+
 				this.$customLanding.addClass('show');
 				this.$modularLanding.removeClass('show');
 				// Link at bottom of page
@@ -163,8 +169,8 @@ var assembly = assembly || {};
 				$('.case-study-svg.custom').addClass('show');
 			}
 
-			this.$mainContent.css({
-				height: $('.content-inner').outerHeight()
+			$('.case-study-details').css({
+				height: $toShow.outerHeight()
 			});
 
 			$('.landing-inner').addClass('hide');
@@ -172,10 +178,10 @@ var assembly = assembly || {};
 		},
 
 		setContainerHeights: function(){
-			this.$mainContent.data('initialheight', this.mainContentHeight);
-			this.$mainContent.css({
-				height: 0
-			});
+			// this.$mainContent.data('initialheight', this.mainContentHeight);
+			// this.$mainContent.css({
+			// 	height: 0
+			// });
 		},
 
 		addClassTileCount: function(){
@@ -216,9 +222,12 @@ var assembly = assembly || {};
 		},
 
 		showCaseStudyContent: function(){
-			var cat = this.currentFilerStatus.category,
+			var _this = this,
+				cat = this.currentFilerStatus.category,
 				type = this.currentFilerStatus.type,
 				$toShow = $('[data-kit-type="'+ type +'"][data-category="'+ cat +'"]');
+
+
 
 			if(type === 'modular'){
 				$('[data-title="modular"]').removeClass('show');
@@ -250,8 +259,8 @@ var assembly = assembly || {};
 
 			$toShow.addClass('show');
 
-			$('.content').css({
-				height: $('.content-inner').outerHeight()
+			$('.case-study-details').css({
+				height: $toShow.outerHeight()
 			});
 
 			console.log(type, cat);

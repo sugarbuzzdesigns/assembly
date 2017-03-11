@@ -608,9 +608,17 @@ CASE STUDIES Page
 			}
 		}
 
+		.case-study-details {
+			.group {
+				display: block;
+				float: left;
+				width: 100%;
+			}
+		}
+
 		.case-study-desc {
-			width: 16.53%;
-			margin: 0 auto 102px 9.03%;
+			width: 60%;
+			margin: 0 auto 50px 90px;
 		}
 
 		blockquote {

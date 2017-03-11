@@ -431,6 +431,69 @@ CASE STUDIES Page
 	    margin-left: calc(67%/720*100);
 	}
 
+	.case-study-svg {
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+	// SVG STYLES
+	.case-study-svg-cat {
+		pointer-events: bounding-box;
+		cursor: pointer;
+
+		.main {
+			display: block;
+			position: relative;
+			transition: transform 0.3s ease-out;
+			transform: translate3d(0, 30px, 0);
+		}
+
+		.vertical-line {
+		    stroke-dasharray: 150;
+		    stroke-dashoffset: -150;
+		}
+
+		.word-box {
+			opacity: 0;
+			transition: opacity 0.25s linear 0.25s;
+		}
+
+		.text {
+			opacity: 0;
+			transition: opacity 0.25s linear 0.4s;
+		}
+
+		circle {
+			transition: opacity 0.25s linear;
+			opacity: 0;
+		}
+
+		&:hover,
+		&.selected {
+			.main {
+				transform: translate3d(0, 0, 0);
+			}
+
+			.vertical-line {
+				animation: dash .25s linear forwards;
+			}
+
+			circle,
+			.word-box,
+			.text {
+				opacity: 1;
+			}
+		}
+	}
+
+	@keyframes dash {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
 	.landing {
 		.section-header {
 			z-index: 0;
@@ -456,8 +519,22 @@ CASE STUDIES Page
 
 		.landing-inner {
 			&.hide {
-				.case-study-category {
+				.bg {
+					transform: translate3d(0,-10%,0);
+				}
 
+				h3 {
+					transform: translate3d(0,100%,0);
+				}
+
+				.square {
+					transform: translate3d(0,20%,0);
+				}
+
+				.selected {
+					.square {
+						transform: translate3d(0,-20%,0);
+					}
 				}
 			}
 		}
@@ -535,6 +612,10 @@ CASE STUDIES Page
 	}
 
 	.content {
+		.case-study-desc {
+			width: 16.53%;
+		}
+
 		.case-study-details {
  			margin-top: -110px;
 		}

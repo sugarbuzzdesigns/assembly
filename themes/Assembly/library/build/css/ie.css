@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 12:26 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 03:51 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -718,9 +718,14 @@ CASE STUDIES Page
   margin: 0 auto;
   display: block;
 }
+.page-case-studies .content .case-study-details .group {
+  display: block;
+  float: left;
+  width: 100%;
+}
 .page-case-studies .content .case-study-desc {
-  width: 16.53%;
-  margin: 0 auto 102px 9.03%;
+  width: 60%;
+  margin: 0 auto 50px 90px;
 }
 .page-case-studies .content blockquote {
   width: 22.64%;
@@ -1155,6 +1160,56 @@ CASE STUDIES Page
   margin-top: 50px;
   margin-left: calc(67%/720*100);
 }
+.page-case-studies .case-study-svg {
+  display: none;
+}
+.page-case-studies .case-study-svg.show {
+  display: block;
+}
+.page-case-studies .case-study-svg-cat {
+  pointer-events: bounding-box;
+  cursor: pointer;
+}
+.page-case-studies .case-study-svg-cat .main {
+  display: block;
+  position: relative;
+  transition: transform 0.3s ease-out;
+  transform: translate3d(0, 30px, 0);
+}
+.page-case-studies .case-study-svg-cat .vertical-line {
+  stroke-dasharray: 150;
+  stroke-dashoffset: -150;
+}
+.page-case-studies .case-study-svg-cat .word-box {
+  opacity: 0;
+  transition: opacity 0.25s linear 0.25s;
+}
+.page-case-studies .case-study-svg-cat .text {
+  opacity: 0;
+  transition: opacity 0.25s linear 0.4s;
+}
+.page-case-studies .case-study-svg-cat circle {
+  transition: opacity 0.25s linear;
+  opacity: 0;
+}
+.page-case-studies .case-study-svg-cat:hover .main, .page-case-studies .case-study-svg-cat.selected .main {
+  transform: translate3d(0, 0, 0);
+}
+.page-case-studies .case-study-svg-cat:hover .vertical-line, .page-case-studies .case-study-svg-cat.selected .vertical-line {
+  animation: dash .25s linear forwards;
+}
+.page-case-studies .case-study-svg-cat:hover circle,
+.page-case-studies .case-study-svg-cat:hover .word-box,
+.page-case-studies .case-study-svg-cat:hover .text, .page-case-studies .case-study-svg-cat.selected circle,
+.page-case-studies .case-study-svg-cat.selected .word-box,
+.page-case-studies .case-study-svg-cat.selected .text {
+  opacity: 1;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .page-case-studies .landing {
   /**
    * Modular Animations
@@ -1180,6 +1235,18 @@ CASE STUDIES Page
 }
 .page-case-studies .landing h3 {
   top: 37.6%;
+}
+.page-case-studies .landing .landing-inner.hide .bg {
+  transform: translate3d(0, -10%, 0);
+}
+.page-case-studies .landing .landing-inner.hide h3 {
+  transform: translate3d(0, 100%, 0);
+}
+.page-case-studies .landing .landing-inner.hide .square {
+  transform: translate3d(0, 20%, 0);
+}
+.page-case-studies .landing .landing-inner.hide .selected .square {
+  transform: translate3d(0, -20%, 0);
 }
 .page-case-studies .landing h3 {
   font-size: rem(85);
@@ -1232,43 +1299,43 @@ CASE STUDIES Page
 .page-case-studies .landing [data-letter] {
   transform: translate3d(0, 0, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="m"] {
+.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular.selected [data-letter="m"] {
   animation-name: modularM;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="o"] {
+.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular.selected [data-letter="o"] {
   animation-name: modularO;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="d"] {
+.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular.selected [data-letter="d"] {
   animation-name: modularD;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="u"] {
+.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular.selected [data-letter="u"] {
   animation-name: modularU;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="l"] {
+.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular.selected [data-letter="l"] {
   animation-name: modularL;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="a"] {
+.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular.selected [data-letter="a"] {
   animation-name: modularA;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="r"] {
+.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular.selected [data-letter="r"] {
   animation-name: modularR;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -1396,37 +1463,37 @@ CASE STUDIES Page
     transform: translate3d(-175px, 105px, 0);
   }
 }
-.page-case-studies .landing .custom.hover [data-letter="c"] {
+.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom.selected [data-letter="c"] {
   animation-name: customC;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="u"] {
+.page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom.selected [data-letter="u"] {
   animation-name: customU;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="s"] {
+.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom.selected [data-letter="s"] {
   animation-name: customS;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="t"] {
+.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom.selected [data-letter="t"] {
   animation-name: customT;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="o"] {
+.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom.selected [data-letter="o"] {
   animation-name: customO;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="m"] {
+.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom.selected [data-letter="m"] {
   animation-name: customM;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -1550,6 +1617,9 @@ CASE STUDIES Page
 }
 .page-case-studies .content-header .mesh-bg {
   display: none;
+}
+.page-case-studies .content .case-study-desc {
+  width: 16.53%;
 }
 .page-case-studies .content .case-study-details {
   margin-top: -110px;

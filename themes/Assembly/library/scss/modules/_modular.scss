@@ -2,7 +2,8 @@
 		 * Modular Animations
 		 */
 		.modular {
-			&.hover {
+			&.hover,
+			&.selected {
 				[data-letter="m"] {
 					animation-name: modularM;
 					animation-duration: 0.2s;
