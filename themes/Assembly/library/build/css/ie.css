@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 03:51 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 05:50 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -985,7 +985,7 @@ Select Box Overrides
 }
 .filter-wrap.show {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 
 .filter-menu {
@@ -2143,6 +2143,9 @@ SERVICES Page
   opacity: 0;
   background: #fff;
 }
+.page-services .filter-menu.show {
+  opacity: 1;
+}
 .page-services .filter-menu div a {
   letter-spacing: 0.7px;
 }
@@ -2446,6 +2449,9 @@ SERVICES Page
 }
 .page-services .individual-service {
   padding-top: 93px;
+  float: left;
+  width: 100%;
+  clear: both;
 }
 .page-services a[href="/case-studies"] {
   width: 263px;

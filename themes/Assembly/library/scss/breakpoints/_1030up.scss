@@ -203,7 +203,7 @@ Select Box Overrides
 
 	&.show {
 		opacity: 1;
-		pointer-events: all;
+		pointer-events: auto;
 	}
 }
 
@@ -1289,6 +1289,10 @@ SERVICES Page
 	    opacity: 0;
 	    background: #fff;
 
+	    &.show {
+	    	opacity: 1;
+	    }
+
 		div {
 			a {
 				letter-spacing: 0.7px;
@@ -1677,6 +1681,9 @@ SERVICES Page
 
 	.individual-service {
 		padding-top: 93px;
+		float: left;
+		width: 100%;
+		clear: both;
 	}
 
 	a[href="/case-studies"] {

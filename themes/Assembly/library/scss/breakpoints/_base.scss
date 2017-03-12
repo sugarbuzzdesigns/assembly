@@ -511,7 +511,7 @@ and more scalable.
 	}
 
 	.main-menu, .nav {
-		pointer-events: all;
+		pointer-events: auto;
 	}
 
 	.menu-inner {
@@ -1839,7 +1839,7 @@ CONTACT
 				// display: block;
 				opacity: 1;
 				position: relative;
-				pointer-events: all;
+				pointer-events: auto;
 			}
 		}
 
@@ -2427,9 +2427,14 @@ CASE STUDIES Page
 		background: #fff;
 	}
 
+	.case-study-landing {
+		cursor: pointer;
+	}
+
 	.content [data-kit-type],
 	.case-study-landing {
 		opacity: 0;
+		pointer-events: none;
 	}
 
 	.case-study-landing.show,
@@ -2449,6 +2454,7 @@ CASE STUDIES Page
 		&.show {
 			opacity: 1;
 			transform: translate3d(0,0,0);
+			pointer-events: auto;
 		}
 	}
 
@@ -2469,6 +2475,7 @@ CASE STUDIES Page
 
 		&.show {
 			display: block;
+			pointer-events: auto;
 		}
 	}
 }
@@ -2523,6 +2530,9 @@ SERVICES Page
 	background-color: #fff;
 
 	.landing {
+		float: left;
+		width: 100%;
+		clear: both;
 		display: none;
 
 		&.show {
@@ -2574,7 +2584,7 @@ SERVICES Page
 	}
 
 	.individual-service {
-		display: none;
+                                                                                                                                                       ga
 
 		&.show {
 			display: block;
@@ -2596,6 +2606,10 @@ SERVICES Page
 	}
 
 	.content.dynamic {
+		float: left;
+		width: 100%;
+		clear: both;
+
 		.wide-1 img,
 		.tall-1 img  {
 			width: 78%;

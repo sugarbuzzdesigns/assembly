@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-11 03:51 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 05:50 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7668,7 +7668,7 @@ and more scalable.
   z-index: 10;
 }
 .menu-open .main-menu, .menu-open .nav {
-  pointer-events: all;
+  pointer-events: auto;
 }
 .menu-open .menu-inner {
   opacity: 1;
@@ -8794,7 +8794,7 @@ CONTACT
 .page-contact form label.active {
   opacity: 1;
   position: relative;
-  pointer-events: all;
+  pointer-events: auto;
 }
 .page-contact form p {
   color: #fff;
@@ -9569,9 +9569,13 @@ CASE STUDIES Page
 .page-case-studies section {
   background: #fff;
 }
+.page-case-studies .case-study-landing {
+  cursor: pointer;
+}
 .page-case-studies .content [data-kit-type],
 .page-case-studies .case-study-landing {
   opacity: 0;
+  pointer-events: none;
 }
 .page-case-studies .case-study-container {
   overflow: hidden;
@@ -9585,6 +9589,7 @@ CASE STUDIES Page
 .page-case-studies .case-study-container.show {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+  pointer-events: auto;
 }
 .page-case-studies .view-case-study {
   display: block;
@@ -9602,6 +9607,7 @@ CASE STUDIES Page
 .page-case-studies a[data-title="custom"].show,
 .page-case-studies a[data-title="modular"].show {
   display: block;
+  pointer-events: auto;
 }
 
 .landing-closed body {
@@ -9649,6 +9655,9 @@ SERVICES Page
   background-color: #fff;
 }
 .page-services .landing {
+  float: left;
+  width: 100%;
+  clear: both;
   display: none;
 }
 .page-services .landing.show {
@@ -9687,9 +9696,7 @@ SERVICES Page
   font-size: 0.8125rem;
   line-height: 1.76;
 }
-.page-services .individual-service {
-  display: none;
-}
+ga
 .page-services .individual-service.show {
   display: block;
 }
@@ -9702,6 +9709,11 @@ SERVICES Page
 .page-services .individual-service.animate .service-desc {
   transform: translate3d(0, 0, 0);
   opacity: 1;
+}
+.page-services .content.dynamic {
+  float: left;
+  width: 100%;
+  clear: both;
 }
 .page-services .content.dynamic .wide-1 img,
 .page-services .content.dynamic .tall-1 img {
@@ -11319,7 +11331,7 @@ you can add resource intensive styles.
   }
   .filter-wrap.show {
     opacity: 1;
-    pointer-events: all;
+    pointer-events: auto;
   }
 
   .filter-menu {
@@ -12477,6 +12489,9 @@ you can add resource intensive styles.
     opacity: 0;
     background: #fff;
   }
+  .page-services .filter-menu.show {
+    opacity: 1;
+  }
   .page-services .filter-menu div a {
     letter-spacing: 0.7px;
   }
@@ -12780,6 +12795,9 @@ you can add resource intensive styles.
   }
   .page-services .individual-service {
     padding-top: 93px;
+    float: left;
+    width: 100%;
+    clear: both;
   }
   .page-services a[href="/case-studies"] {
     width: 263px;

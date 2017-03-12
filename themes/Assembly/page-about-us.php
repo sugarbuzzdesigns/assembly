@@ -614,7 +614,7 @@
 
 				.activate svg {
 					opacity: 1;
-					pointer-events: all;
+					pointer-events: auto;
 				}
 
 				.segment .up-arrow {
