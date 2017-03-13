@@ -7,10 +7,11 @@ var assembly = assembly || {};
 	assembly.carousel = {
 		init: function(){
 			this.initializeCarousels();
+			this.currentEmployeeSlide = 0;
 		},
 
 		initializeCarousels: function(){
-			var $slides, start, position, $carousel, numSlides, slickCarousel, $employeeCarousel, hasVariableWidth = false, dots = false, slidesToShow = 1.2;
+			var _this = this, $slides, start, position, $carousel, numSlides, slickCarousel, $employeeCarousel, hasVariableWidth = false, dots = false, slidesToShow = 1.2;
 
 			$('.carousel-module').not('.employee-carousel, .our-approach, .add-contact-photo').each(function(i, module){
 				if($(this).is('.our-approach')){
@@ -154,29 +155,42 @@ var assembly = assembly || {};
 			});
 
 			$employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-				$('.years-experience-numbers').addClass('counting');
+				// $('.years-experience-numbers').addClass('counting');
 			});
 
 			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
-				var year1 = $('.employees .years-experience-numbers .num').eq(0),
-					year2 = $('.employees .years-experience-numbers .num').eq(1),
-					yearsExp = $(this).find('.slide').eq(currentSlide).data('years-experience'),
-					numArr = yearsExp.toString().split('');
+				$('.tens').html(0);
+				$('.singles').html(0);
 
-					if(currentSlide === 1){
-						year1.css({
- 							transform: 'translate(11%, 0)'
-						});
-					} else {
-						year1.css({
- 							transform: 'translate(0, 0)'
-						});
-					}
+				if(_this.currentEmployeeSlide === currentSlide){
+					return;
+				} else {
+					_this.currentEmployeeSlide = currentSlide;
+				}
 
-				year1.html(numArr[0]);
-				year2.html(numArr[1]);
+					var tensCount = 0;
+					var onesCount = 0;
+					var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
+					var tens = Math.floor(num/10);
+					var ones = num - tens*10;
+					var counter;
 
-				$('.years-experience-numbers').removeClass('counting');
+					counter = setInterval(function(){
+						onesCount++;
+
+						if(onesCount === 10){
+							tensCount++;
+							onesCount = 0;
+
+							$('.tens').html(tensCount);
+						}
+
+						if(tensCount === tens && onesCount === ones){
+							clearInterval(counter);
+						}
+
+						$('.singles').html(onesCount);
+					}, 10);
 			});
 
 			function updateCountText(nextSlide, $num){

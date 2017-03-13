@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 10:40 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 11:44 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8285,9 +8285,6 @@ Years Experience Module
   color: #f0f0f0;
   opacity: 1;
   transition: opacity 0.5s;
-}
-.years-experience .years-experience-numbers.counting {
-  opacity: 0;
 }
 .years-experience .years-experience-numbers span {
   display: block;
