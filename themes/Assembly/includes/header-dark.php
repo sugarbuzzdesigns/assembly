@@ -1,4 +1,4 @@
-<header class="dark section-header">
+<header class="dark section-header landing-logo">
     <h2 class="logo">
         <a href="/">
             <!-- logo SVG file -->

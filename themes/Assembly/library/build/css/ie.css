@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 10:28 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 10:40 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1902,7 +1902,7 @@ ABOUT US Page
 .page-about-us .our-approach .copy p {
   width: 37.93%;
   font-size: rem(48);
-  line-height: calc(41/48);
+  line-height: 1.1;
   margin-bottom: 33px;
 }
 .page-about-us .our-approach button {
