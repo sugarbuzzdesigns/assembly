@@ -17,13 +17,13 @@
 			<span>Years Experience</span>
 		</div>
 	</div>
-	<div class="video module">
+	<div data-ratio=".08" class="video module">
 		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail-mobile.jpg" alt="">
 		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 	</div>
 	<div class="clear"></div>
-	<div class="projects module carousel-module projects-1">
+	<div data-ratio=".02" class="projects module carousel-module projects-1">
 		<div class="tile carousel-wrapper">
 			<div class="mesh-bg dark wide"></div>
 			<div class="carousel-inner">
@@ -69,7 +69,7 @@
 		<p>Lorem Ipsum Dolar Placeholder about Custom / Modular offering Our team boasts more than 80 years of experience creating kits of temporary and custom designed structures.</p>
 	</div>
 	<div class="clear"></div>
-	<div class="projects module carousel-module projects-2" data-image-ratio="1to1">
+	<div data-ratio=".08" class="projects module carousel-module projects-2" data-image-ratio="1to1">
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
 				<div class="carousel" data-mobile-position="right" data-mobile-start="end">
