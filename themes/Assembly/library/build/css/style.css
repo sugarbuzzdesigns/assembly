@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 05:50 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 10:28 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7804,11 +7804,13 @@ VIDEO CONTENT
 }
 
 .video.module {
+  cursor: pointer;
   margin-top: 46px;
   margin-bottom: 66px;
 }
 .video.module img {
   width: 100%;
+  transition: opacity 0.5s;
 }
 
 .video-wrapper {
@@ -7826,6 +7828,7 @@ VIDEO CONTENT
   transform: translate(-50%, -50%);
   width: 58px;
   height: 58px;
+  z-index: 2;
 }
 
 .video-js {
@@ -8425,6 +8428,38 @@ HOME PAGE STYLES
 .home .projects-1 .mesh-bg {
   height: 250px;
 }
+.home .tile,
+.home .video {
+  z-index: 2;
+}
+.home .tile .image-clip-bg,
+.home .video .image-clip-bg {
+  border: solid 20px #d0d0d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.no-touch .home .tile,
+.no-touch .home .video {
+  cursor: pointer;
+}
+.no-touch .home .tile .image-clip-bg,
+.no-touch .home .video .image-clip-bg {
+  opacity: 0;
+}
+.no-touch .home .tile:hover img,
+.no-touch .home .video:hover img {
+  opacity: 0.4;
+}
+.no-touch .home .tile:hover .image-clip-bg,
+.no-touch .home .video:hover .image-clip-bg {
+  opacity: 0.4;
+}
 
 /*********************
 PROJECTS SECTION
@@ -8476,9 +8511,11 @@ Tiles
 }
 .tile .tile-img {
   margin-bottom: 0.9375rem;
+  position: relative;
 }
 .tile .tile-img img {
   max-width: 100%;
+  transition: opacity 0.5s;
 }
 .tile .tile-info {
   position: relative;
@@ -8529,6 +8566,9 @@ EMPLOYEES
 .employees .carousel .slick-slide {
   transform: translate3d(0, -60px, 0);
 }
+.employees .carousel .slick-slide img {
+  transition: opacity 0.5s;
+}
 .employees .carousel .slick-slide.slick-current {
   transform: translate3d(0, 0, 0);
 }
@@ -8546,7 +8586,7 @@ EMPLOYEES
   font-size: 0.6875rem;
 }
 .employees .carousel .slide img {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s;
   transform: translate3d(-40%, 0, 0);
 }
 .employees .carousel .slide.slick-current img {
@@ -9654,14 +9694,18 @@ SERVICES Page
 .page-services {
   background-color: #fff;
 }
-.page-services .landing {
-  float: left;
+.page-services [data-service] {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  clear: both;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
 }
-.page-services .landing.show {
-  display: block;
+.page-services [data-service].show {
+  opacity: 1;
+  pointer-events: auto;
 }
 .page-services h1 {
   font-family: 'pangrambold';
@@ -9696,9 +9740,17 @@ SERVICES Page
   font-size: 0.8125rem;
   line-height: 1.76;
 }
+.page-services .individual-service {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
 ga
 .page-services .individual-service.show {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 .page-services .individual-service .tile, .page-services .individual-service .service-desc {
   transform: translate3d(0, 40px, 0);
@@ -9710,57 +9762,59 @@ ga
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
-.page-services .content.dynamic {
+.page-services .content {
   float: left;
   width: 100%;
   clear: both;
+  position: relative;
+  overflow: hidden;
 }
-.page-services .content.dynamic .wide-1 img,
-.page-services .content.dynamic .tall-1 img {
+.page-services .content .wide-1 img,
+.page-services .content .tall-1 img {
   width: 78%;
 }
-.page-services .content.dynamic .left img {
+.page-services .content .left img {
   margin-left: 9%;
 }
-.page-services .content.dynamic .right img {
+.page-services .content .right img {
   margin-left: 13.7%;
 }
-.page-services .content.dynamic .content-tile {
+.page-services .content .content-tile {
   margin-bottom: 30%;
 }
-.page-services .content.dynamic .permitting-wrapper .intro-tile,
-.page-services .content.dynamic .team-player-wrapper .intro-tile,
-.page-services .content.dynamic .engineering-wrapper .intro-tile,
-.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile {
+.page-services .content .permitting-wrapper .intro-tile,
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .engineering-wrapper .intro-tile,
+.page-services .content .interior-buildouts-wrapper .intro-tile {
   margin-left: 0;
 }
-.page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner,
-.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner,
-.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner,
-.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner {
+.page-services .content .permitting-wrapper .intro-tile .tile-inner,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner {
   margin-left: 11.3%;
   width: 78%;
 }
-.page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner img,
-.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner img,
-.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner img,
-.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner img {
+.page-services .content .permitting-wrapper .intro-tile .tile-inner img,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner img,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner img,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner img {
   width: 100%;
 }
-.page-services .content.dynamic .team-player-wrapper .intro-tile,
-.page-services .content.dynamic .imagine-experience-wrapper .intro-tile {
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .imagine-experience-wrapper .intro-tile {
   margin-left: 0;
 }
-.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner,
-.page-services .content.dynamic .imagine-experience-wrapper .intro-tile .tile-inner {
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .imagine-experience-wrapper .intro-tile .tile-inner {
   margin-left: 14.25%;
   width: 68%;
 }
 
-.tile.visualisation .tile-inner,
-.visualisation-wrapper .intro-tile .tile-inner {
-  margin-left: 17%;
-  width: 61%;
+.tile.visualisation,
+.visualisation-wrapper .intro-tile {
+  margin-left: calc(71%/414*100);
+  width: 60.39%;
 }
 
 .visualisation-wrapper .content-1 .mesh-bg {
@@ -9778,18 +9832,18 @@ ga
   top: -110px;
 }
 
-.tile.permitting .tile-inner {
-  margin-left: 13.5%;
+.tile.permitting {
+  margin-left: calc(56%/414*100);
   width: 77%;
 }
 
-.tile.engineering .tile-inner {
-  margin-left: 9%;
+.tile.engineering {
+  margin-left: calc(38%/414*100);
   width: 77%;
 }
 
-.tile.interior-buildouts .tile-inner {
-  margin-left: 18%;
+.tile.interior-buildouts {
+  margin-left: calc(76%/414*100);
   width: 66%;
 }
 .tile.interior-buildouts .mesh-bg {
@@ -9800,14 +9854,14 @@ ga
   width: 283px;
 }
 
-.tile.team-player .tile-inner {
-  margin-left: 7.7%;
+.tile.team-player {
+  margin-left: calc(32%/414*100);
   width: 77%;
 }
 
-.tile.imagine-experience .tile-inner {
-  margin-left: 15.4%;
-  width: 70%;
+.tile.imagine-experience {
+  margin-left: calc(64%/414*100);
+  width: 70.29%;
 }
 .tile.imagine-experience .mesh-bg {
   right: auto;
@@ -9929,6 +9983,9 @@ ABOUT US Page
 }
 .page-about-us .employees .carousel .slick-slide {
   transform: translate3d(0, -26px, 0);
+}
+.page-about-us .employees .carousel .slick-slide img {
+  transition: opacity 0.5s;
 }
 .page-about-us .employees .carousel .slick-slide.slick-current {
   transform: translate3d(0, 0, 0);
@@ -10863,29 +10920,29 @@ you can add resource intensive styles.
     width: 315px;
     top: 244px;
   }
-  .page-services .content.dynamic {
+  .page-services .content {
     clear: both;
   }
-  .page-services .content.dynamic .tile .tile-info {
+  .page-services .content .tile .tile-info {
     margin-top: 25px;
   }
-  .page-services .content.dynamic .tile .tile-img {
+  .page-services .content .tile .tile-img {
     margin-bottom: 0;
   }
-  .page-services .content.dynamic .tile img {
+  .page-services .content .tile img {
     width: 100%;
     margin: 0;
   }
-  .page-services .content.dynamic .visualisation-wrapper {
+  .page-services .content .visualisation-wrapper {
     width: 100%;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile {
+  .page-services .content .visualisation-wrapper .tile {
     width: 28.85%;
     margin-left: 15.069%;
     float: left;
     margin-bottom: 0;
   }
-  .page-services .content.dynamic .visualisation-wrapper .service-desc {
+  .page-services .content .visualisation-wrapper .service-desc {
     width: 22.92%;
     float: left;
     margin-left: 7.01%;
@@ -10894,44 +10951,44 @@ you can add resource intensive styles.
     font-size: 0.6875rem;
     line-height: 1.82;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile-2 {
+  .page-services .content .visualisation-wrapper .tile-2 {
     float: right;
     margin-right: 15.42%;
     margin-left: 0;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile-3 {
+  .page-services .content .visualisation-wrapper .tile-3 {
     width: 22.22%;
     margin-left: 21.39%;
     margin-top: 290px;
     margin-bottom: 176px;
   }
-  .page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
+  .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
     top: 2px;
     right: -88px;
     width: 285px;
     height: 205px;
   }
-  .page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+  .page-services .content .visualisation-wrapper .content-2 .mesh-bg {
     width: 342px;
     right: auto;
     bottom: -95px;
     height: 205px;
     top: auto;
   }
-  .page-services .content.dynamic {
+  .page-services .content {
     clear: both;
   }
-  .page-services .content.dynamic .tile .tile-info {
+  .page-services .content .tile .tile-info {
     margin-top: 20px;
   }
-  .page-services .content.dynamic .tile .tile-img {
+  .page-services .content .tile .tile-img {
     margin-bottom: 0;
   }
-  .page-services .content.dynamic .tile img {
+  .page-services .content .tile img {
     width: 100%;
     margin: 0;
   }
-  .page-services .content.dynamic .individual-service .service-desc {
+  .page-services .content .individual-service .service-desc {
     width: 22.92%;
     float: left;
     margin-left: 7.01%;
@@ -10941,46 +10998,46 @@ you can add resource intensive styles.
     line-height: 1.82;
     letter-spacing: 0.97px;
   }
-  .page-services .content.dynamic .individual-service .intro-tile {
+  .page-services .content .individual-service .intro-tile {
     float: left;
   }
-  .page-services .content.dynamic .individual-service .tile-1 {
+  .page-services .content .individual-service .tile-1 {
     margin-bottom: 0;
   }
-  .page-services .content.dynamic .individual-service .tile-2 {
+  .page-services .content .individual-service .tile-2 {
     float: right;
     clear: left;
   }
-  .page-services .content.dynamic .individual-service .tile-3 {
+  .page-services .content .individual-service .tile-3 {
     float: left;
   }
-  .page-services .content.dynamic .visualisation-wrapper {
+  .page-services .content .visualisation-wrapper {
     width: 100%;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile {
+  .page-services .content .visualisation-wrapper .tile {
     width: 28.85%;
     margin-left: 15.069%;
     float: left;
     margin-bottom: 0;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile-2 {
+  .page-services .content .visualisation-wrapper .tile-2 {
     float: right;
     margin-right: 15.42%;
     margin-left: 0;
   }
-  .page-services .content.dynamic .visualisation-wrapper .tile-3 {
+  .page-services .content .visualisation-wrapper .tile-3 {
     width: 22.22%;
     margin-left: 21.39%;
     margin-top: 290px;
     margin-bottom: 176px;
   }
-  .page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
+  .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
     top: -78px;
     right: -88px;
     width: 355px;
     height: 355px;
   }
-  .page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+  .page-services .content .visualisation-wrapper .content-2 .mesh-bg {
     width: 562px;
     right: auto;
     bottom: -175px;
@@ -11472,8 +11529,28 @@ you can add resource intensive styles.
     margin-left: 52%;
     right: auto;
   }
+  .home .employees .carousel-inner {
+    width: 44%;
+    position: relative;
+    overflow: hidden;
+  }
+  .home .employees .carousel-inner .tile-info {
+    margin: 28px 0 0 0;
+  }
+  .home .employees .nav-arrow-right {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+  }
   .home .employees .carousel {
     padding-top: 0;
+  }
+  .home .employees .carousel .slick-slide {
+    transform: translate3d(0, 0, 0);
+  }
+  .home .employees .carousel .tile-img {
+    width: 100%;
+    margin: 0;
   }
   .home .employees .carousel .slide img {
     transform: translate3d(0, 0, 0);

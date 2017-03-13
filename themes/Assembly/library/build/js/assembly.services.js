@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 05:52 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 09:17 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -10,16 +10,26 @@ var assembly = assembly || {};
 			this.$selectFilter = $('.select-filter');
 			this.$filterMenu = $('.filter-menu');
 			this.$filterMenuLinks = $('.filter-menu a');
+			this.$servicesContainer = $('.content');
 			this.initSelect2();
 			this.bindEvents();
 			this.waypoints();
 			this.countTilesAndAddClass();
 			this.setInitialTranslate();
+			this.$currentServiceContainer = $('.all-services');
+
+			this.setContainerHeights();
 		},
 
 		initSelect2: function(){
 			this.select2Filter = this.$selectFilter.select2({
 				minimumResultsForSearch: -1
+			});
+		},
+
+		setContainerHeights: function(){
+			this.$servicesContainer.css({
+				height: this.$currentServiceContainer.height()
 			});
 		},
 
@@ -32,6 +42,9 @@ var assembly = assembly || {};
 
 			_this.$filterMenuLinks.on('click', function filterMenuLinksClickHandler(evt){
 				evt.preventDefault();
+
+				$(this).parent().siblings().removeClass('active');
+				$(this).parent().addClass('active');
 
 				_this.filterProjectsByCategory($(this).parent().data('value'));
 			});
@@ -51,6 +64,12 @@ var assembly = assembly || {};
 			assembly.util.env.$win.on('scroll', function(){
 				$('.tile').each(function(i, tile){
 					// _this.setTranslate(tile);
+				});
+			});
+
+			assembly.util.env.$win.on('windowResize', function(){
+				_this.$servicesContainer.css({
+					height: _this.$currentServiceContainer.outerHeight()
 				});
 			});
 		},
@@ -107,18 +126,19 @@ var assembly = assembly || {};
 		},
 
 		filterProjectsByCategory: function(option){
-			var $landingContent = $('.landing.content'),
+			var $toShow,
+				$landingContent = $('[data-service="all"]'),
 				$allTiles = $('.individual-service[data-service]'),
 				$servicesToHide = $('.individual-service[data-service!="'+ option + '"]'),
 				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
 
 			if(option === 'all'){
-				$landingContent.addClass('show');
+				$toShow = $landingContent.addClass('show');
 				$allTiles.removeClass('show');
 			} else {
 				$landingContent.removeClass('show');
 				$servicesToHide.removeClass('show  animate');
-				$servicesToShow.addClass('show');
+				$toShow = $servicesToShow.addClass('show');
 				setTimeout(function(){
 					$servicesToShow.addClass('animate');
 				}, 100);
@@ -126,6 +146,10 @@ var assembly = assembly || {};
 				// 	$servicesToShow.fadeIn(500);
 				// });
 			}
+
+			this.$servicesContainer.css({
+				height: $toShow.height()
+			});
 		}
 	};
 

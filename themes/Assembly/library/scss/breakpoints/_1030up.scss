@@ -388,8 +388,33 @@ HOME Projects Modules
 		right: auto;
 	}
 
+	.carousel-inner {
+		width: 44%;
+		position: relative;
+		overflow: hidden;
+
+		.tile-info {
+			margin: 28px 0 0 0;
+		}
+	}
+
+	.nav-arrow-right {
+		position: absolute;
+		right: 0;
+		bottom: 3px;
+	}
+
 	.carousel {
 		padding-top: 0;
+
+		.slick-slide {
+			transform: translate3d(0,0,0);
+		}
+
+		.tile-img {
+			width: 100%;
+			margin: 0;
+		}
 
 		.slide img {
 			transform: translate3d(0,0,0);

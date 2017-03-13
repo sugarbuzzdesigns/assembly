@@ -62,6 +62,7 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
+											<div class="image-clip-bg"></div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -85,6 +86,7 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
+											<div class="image-clip-bg"></div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -110,11 +112,12 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
+											<div class="image-clip-bg"></div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $service['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
 											<span class="tile-title">Services</span>
-											<span class="tile-desc">Lorem ipsume dolor sat</span>
+											<span class="tile-desc">Lorem ipsume</span>
 										</div>
 									</div>
 								</div>
@@ -133,6 +136,7 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
+											<div class="image-clip-bg"></div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $approach['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -152,6 +156,7 @@
 			<div class="group group-3">
 				<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".25">
 					<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
+					<div class="image-clip-bg"></div>
 					<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/05-VideoThumbnail.jpg" alt="">
 				</div>
 
@@ -175,6 +180,7 @@
 									<div class="slide employee" data-years-experience="26">
 										<div class="tile-inner">
 											<div class="tile-img">
+												<div class="image-clip-bg"></div>
 												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
 											</div>
 											<div class="tile-info">
@@ -185,6 +191,7 @@
 									<div class="slide employee" data-years-experience="09">
 										<div class="tile-inner">
 											<div class="tile-img">
+												<div class="image-clip-bg"></div>
 												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
 											</div>
 											<div class="tile-info">

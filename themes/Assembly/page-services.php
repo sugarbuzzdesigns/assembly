@@ -29,81 +29,89 @@
 			</select>
 		</div>
 	</section>
-	<section class="content landing show">
-		<div data-ratio=".05" class="tile slideInUp visualisation">
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-mobile.jpg" alt="visualisation"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Visualization.jpg" alt="visualisation">
+	<section class="content show">
+		<div class="all-services show" data-service="all">
+			<div data-ratio=".05" class="tile slideInUp visualisation">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-mobile.jpg" alt="visualisation"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Visualization.jpg" alt="visualisation">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Visualisation</span>
+						<span class="tile-desc">See it to believe it.</span>
+					</div>
 				</div>
-				<div class="tile-info">
-					<span class="tile-title">Visualisation</span>
-					<span class="tile-desc">See it to believe it.</span>
+			</div>
+			<div data-ratio="-.04" class="tile slideInUp permitting">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-mobile.jpg" alt="permitting"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Permitting.jpg" alt="permitting">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Permitting</span>
+						<span class="tile-desc">A remedy to red tape.</span>
+					</div>
+				</div>
+			</div>
+			<div class="tile slideInUp engineering">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/engineering-mobile.jpg" alt="engineering"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Engineering.jpg" alt="engineering">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Engineering</span>
+						<span class="tile-desc">description</span>
+					</div>
+				</div>
+			</div>
+			<div data-ratio=".03" class="tile slideInUp interior-buildouts">
+				<div class="mesh-bg dark wide"></div>
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-mobile.jpg" alt="interior-buildouts"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Interior-Buildouts.jpg" alt="interior-buildouts">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Interior Buildouts</span>
+						<span class="tile-desc">description</span>
+					</div>
+				</div>
+			</div>
+			<div data-ratio=".04" class="tile slideInUp team-player">
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-mobile.jpg" alt="team-player"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Team-Player.jpg" alt="team-player">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Team Player</span>
+						<span class="tile-desc">description</span>
+					</div>
+				</div>
+			</div>
+			<div data-ratio=".02" class="tile slideInUp imagine-experience">
+				<div class="mesh-bg dark wide"></div>
+				<div class="tile-inner">
+					<div class="tile-img">
+						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-mobile.jpg" alt="imagine-experience"> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Imagine-Experience.jpg" alt="imagine-experience">
+					</div>
+					<div class="tile-info">
+						<span class="tile-title">Imagine Experience</span>
+						<span class="tile-desc">description</span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div data-ratio="-.04" class="tile slideInUp permitting">
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-mobile.jpg" alt="permitting"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Permitting.jpg" alt="permitting">
-				</div>
-				<div class="tile-info">
-					<span class="tile-title">Permitting</span>
-					<span class="tile-desc">A remedy to red tape.</span>
-				</div>
-			</div>
-		</div>
-		<div class="tile slideInUp engineering">
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/engineering-mobile.jpg" alt="engineering"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Engineering.jpg" alt="engineering">
-				</div>
-				<div class="tile-info">
-					<span class="tile-title">Engineering</span>
-					<span class="tile-desc">description</span>
-				</div>
-			</div>
-		</div>
-		<div data-ratio=".03" class="tile slideInUp interior-buildouts">
-			<div class="mesh-bg dark wide"></div>
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-mobile.jpg" alt="interior-buildouts"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Interior-Buildouts.jpg" alt="interior-buildouts">
-				</div>
-				<div class="tile-info">
-					<span class="tile-title">Interior Buildouts</span>
-					<span class="tile-desc">description</span>
-				</div>
-			</div>
-		</div>
-		<div data-ratio=".04" class="tile slideInUp team-player">
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-mobile.jpg" alt="team-player"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Team-Player.jpg" alt="team-player">
-				</div>
-				<div class="tile-info">
-					<span class="tile-title">Team Player</span>
-					<span class="tile-desc">description</span>
-				</div>
-			</div>
-		</div>
-		<div data-ratio=".02" class="tile slideInUp imagine-experience">
-			<div class="mesh-bg dark wide"></div>
-			<div class="tile-inner">
-				<div class="tile-img">
-					<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-mobile.jpg" alt="imagine-experience"> -->
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Imagine-Experience.jpg" alt="imagine-experience">
-				</div>
-				<div class="tile-info">
-					<span class="tile-title">Imagine Experience</span>
-					<span class="tile-desc">description</span>
-				</div>
-			</div>
-		</div>
+		<?php include 'includes/content/services/visualisation.php'; ?>
+		<?php include 'includes/content/services/permitting.php'; ?>
+		<?php include 'includes/content/services/team-player.php'; ?>
+		<?php include 'includes/content/services/engineering.php'; ?>
+		<?php include 'includes/content/services/interior-buildouts.php'; ?>
+		<?php include 'includes/content/services/imagine-experience.php'; ?>
 	</section>
 	<script>
 		function getParameterByName(name, url) {
@@ -131,14 +139,6 @@
 			});
 		})(jQuery)
 	</script>
-	<section class="content dynamic">
-		<?php include 'includes/content/services/visualisation.php'; ?>
-		<?php include 'includes/content/services/permitting.php'; ?>
-		<?php include 'includes/content/services/team-player.php'; ?>
-		<?php include 'includes/content/services/engineering.php'; ?>
-		<?php include 'includes/content/services/interior-buildouts.php'; ?>
-		<?php include 'includes/content/services/imagine-experience.php'; ?>
-	</section>
  	<a href="/case-studies" title="">
  		<?php if(is_desktop()) { ?>
  			<?php include 'library/images/svg/view-case-studies-button-desktop.svg'; ?>

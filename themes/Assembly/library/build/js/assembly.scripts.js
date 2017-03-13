@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 05:52 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 09:17 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -751,6 +751,12 @@ var assembly = assembly || {};
 				$lax, laxRatio, curY, meshCurY, $mesh;
 
 			_this.$elm.each(function(i, lax){
+				// if($('body').is('.page-case-studies')){
+				// 	if(!$(lax).closest('.case-study-container').hasClass('show')){
+				// 		return;
+				// 	}
+				// }
+
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio')*1;
 				curY = $lax.data('curY');

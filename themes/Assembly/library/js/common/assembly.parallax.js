@@ -67,6 +67,12 @@
 				$lax, laxRatio, curY, meshCurY, $mesh;
 
 			_this.$elm.each(function(i, lax){
+				// if($('body').is('.page-case-studies')){
+				// 	if(!$(lax).closest('.case-study-container').hasClass('show')){
+				// 		return;
+				// 	}
+				// }
+
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio')*1;
 				curY = $lax.data('curY');

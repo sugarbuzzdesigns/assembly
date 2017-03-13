@@ -676,11 +676,13 @@ VIDEO CONTENT
 }
 
 .video.module {
+	cursor: pointer;
     margin-top: 46px;
     margin-bottom: 66px;
 
 	img {
 		width: 100%;
+		transition: opacity 0.5s;
 	}
 }
 // play btn svg width="58px" height="58px"
@@ -700,6 +702,7 @@ VIDEO CONTENT
 	transform: translate(-50%, -50%);
 	width: 58px;
 	height: 58px;
+	z-index: 2;
 }
 
 .video-js {
@@ -1388,6 +1391,45 @@ HOME PAGE STYLES
 			    height: 250px;
 		}
 	}
+
+	.tile,
+	.video {
+		z-index: 2;
+
+		.image-clip-bg {
+			border: solid 20px #d0d0d0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			transition: opacity 0.4s;
+			opacity: 0;
+		}
+	}
+}
+
+.no-touch {
+	.home {
+		.tile,
+		.video {
+			cursor: pointer;
+
+			.image-clip-bg {
+				opacity: 0;
+			}
+
+			&:hover {
+				img {
+					opacity: 0.4;
+				}
+
+				.image-clip-bg {
+					opacity: 0.4;
+				}
+			}
+		}
+	}
 }
 
 /*********************
@@ -1451,9 +1493,11 @@ Tiles
 
 	.tile-img {
 		margin-bottom: rem(15);
+		position: relative;
 
 		img {
 			max-width: 100%;
+			transition: opacity 0.5s;
 		}
 	}
 
@@ -1513,6 +1557,10 @@ EMPLOYEES
 		.slick-slide {
 			transform: translate3d(0,-60px,0);
 
+			img {
+				transition: opacity 0.5s;
+			}
+
 			&.slick-current {
 				transform: translate3d(0,0,0);
 			}
@@ -1536,7 +1584,7 @@ EMPLOYEES
 		}
 
 		.slide img {
-			transition: transform 0.5s ease-in-out;
+			transition: transform 0.5s ease-in-out, opacity 0.5s;
 			transform: translate3d(-40%,0,0);
 		}
 
@@ -2529,14 +2577,29 @@ SERVICES Page
 .page-services {
 	background-color: #fff;
 
-	.landing {
-		float: left;
+	// .content-wrap {
+	// 	position: relative;
+	// 	overflow: hidden;
+
+	// 	.content {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 	}
+	// }
+
+	[data-service] {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		clear: both;
-		display: none;
+		opacity: 0;
+		transition: opacity 0.5s;
+		pointer-events: none;
 
 		&.show {
-			display: block
+			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 
@@ -2584,10 +2647,15 @@ SERVICES Page
 	}
 
 	.individual-service {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    opacity: 0;
+	    pointer-events: none;
                                                                                                                                                        ga
-
 		&.show {
-			display: block;
+			opacity: 1;
+			pointer-events: auto;
 		}
 
 		.tile, .service-desc {
@@ -2605,10 +2673,12 @@ SERVICES Page
 		}
 	}
 
-	.content.dynamic {
+	.content {
 		float: left;
 		width: 100%;
 		clear: both;
+		position: relative;
+		overflow: hidden;
 
 		.wide-1 img,
 		.tall-1 img  {
@@ -2659,10 +2729,10 @@ SERVICES Page
 }
 
 // NON DYNAMIC. NEEDS TO BE UPDATED
-.tile.visualisation .tile-inner,
-.visualisation-wrapper .intro-tile .tile-inner  {
-	margin-left: 17%;
-	width: 61%;
+.tile.visualisation,
+.visualisation-wrapper .intro-tile  {
+	margin-left: calc(71%/414*100);
+	width: 60.39%;
 }
 
 .visualisation-wrapper .content-1 .mesh-bg {
@@ -2681,24 +2751,18 @@ SERVICES Page
 }
 
 .tile.permitting {
-	.tile-inner {
-		margin-left: 13.5%;
-		width: 77%;
-	}
+	margin-left: calc(56%/414*100);
+	width: 77%;
 }
 
 .tile.engineering {
-	.tile-inner {
-		margin-left: 9%;
-		width: 77%;
-	}
+	margin-left: calc(38%/414*100);
+	width: 77%;
 }
 
 .tile.interior-buildouts {
-	.tile-inner {
-		margin-left: 18%;
-		width: 66%;
-	}
+	margin-left: calc(76%/414*100);
+	width: 66%;
 
 	.mesh-bg {
 		top: -186px;
@@ -2710,17 +2774,13 @@ SERVICES Page
 }
 
 .tile.team-player {
-	.tile-inner {
-		margin-left: 7.7%;
-		width: 77%;
-	}
+	margin-left: calc(32%/414*100);
+	width: 77%;
 }
 
 .tile.imagine-experience {
-	.tile-inner {
-		margin-left: 15.4%;
-		width: 70%;
-	}
+	margin-left: calc(64%/414*100);
+	width: 70.29%;
 
 	.mesh-bg {
 		right: auto;
@@ -2865,6 +2925,10 @@ ABOUT US Page
 
 			.slick-slide {
 				transform: translate3d(0,-26px,0);
+
+				img {
+					transition: opacity 0.5s;
+				}
 
 				&.slick-current {
 					transform: translate3d(0,0,0);

@@ -107,6 +107,18 @@ var assembly = assembly || {};
 				'calibrate-y': true
 			});
 
+			$(document).keyup(function(e) {
+				if (e.keyCode === 27) {
+					console.log('escape');
+					$(this).trigger('escape');
+				}
+			});
+
+			$(document).on('escape', function(){
+				$('#home-video-overlay').removeClass('show');
+				_this.homeVideoReel.pause();
+			});
+
 		 //   	$('h2').css({
 		 //   		transform: 'translate3d(0,0,0)'
 		 //   	});
@@ -157,9 +169,10 @@ var assembly = assembly || {};
 				_this.homeVideoReel = this;
 
 				$('#home-video-reel').data('videojs', this);
+				$('#home-video-overlay').data('videojs', this);
 
 				this.on('ended', function(){
-					$('#home-video-reel').removeClass('show');
+					$('#home-video-overlay').removeClass('show');
 				});
 			});
 		},
