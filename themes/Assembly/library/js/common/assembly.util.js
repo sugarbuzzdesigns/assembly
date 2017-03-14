@@ -46,6 +46,8 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 			this.bindEvents();
 			this.setUpLoader();
+
+			this.intervals = {};
 		},
 
 		bindEvents: function(){
@@ -70,11 +72,9 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 			$('html').on('loaded', function(){
 				$(this).addClass('loaded');
-				if(assembly.util.useragent.deviceType === 'desktop'){
-					_this.initialLogoAnimation('desktop');
-				} else {
-					_this.initialLogoAnimation('mobile');
-				}
+
+				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 			});
 
 			_this.env.$win.on('scrollstart', function(){
@@ -82,64 +82,107 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 			_this.env.$win.on('scrollstop', function(){
 			});
+
+			$('.landing-logo .logo').hover(
+				function(evt){
+					_this.animateSpriteBG(4, 4, $('#landing-logo'), 27, 9, 11);
+				},
+				function(evt){
+					_this.animateSpriteBG(6, 6, $('#landing-logo'), 36, 9, 11, function(){
+					});
+				}
+			);
+
+			$('.scroll-overlay .logo').hover(
+				function(evt){
+					_this.animateSpriteBG(4, 4, $('#interior-logo'), 27, 9, 11);
+				},
+				function(evt){
+					_this.animateSpriteBG(6, 6, $('#interior-logo'), 36, 9, 11, function(){
+					});
+				}
+			);
 		},
 
-		initialLogoAnimation: function(bgsize){
-			var shift = 0;
-			var $logo = $('.landing-logo .logo');
-			var frameWidth = $logo.width();
-			var frameHeight = $logo.height();
-			var totalFrames = 50;
-			var ypos = 0;
-			var currentFrame = 1;
-			var myImage = new Image();
-			myImage.src = php_vars.home + '/library/images/sprites/Assembly_Logo_TempSpaces-'+ bgsize +'-init-white.png';
-			myImage.addEventListener("load", loadImage, false);
-			var loaderIntervalInitial;
-			var imgWidth; var imgHeight;
+		animateSpriteBG: function(startX, startY, $img, totalFrames, framesX, framesY, cb){
+			var _this = this;
+			var id = $img.attr('id');
+			var framesX = framesX;
+			var framesY = framesY;
+			var currentFrame = startX;
+			var totalFrames = totalFrames || 50;
+			var imgSrc = $img.attr('src');
+			var frameWidth = $img.width()/framesX;
+			var frameHeight = $img.height()/framesY;
+			var startX = startX;
+			var startY = startY;
+			var shiftX = startX * frameWidth;
+			var shiftY = startY * frameHeight;
+			var animateInterval;
 
-			function loadImage(e) {
-				$logo.append(myImage);
-				$logo.addClass('ready');
-
-				imgWidth = $(myImage).width();
-				imgHeight = $(myImage).height();
-
-				frameHeight = imgHeight/5;
-
-				loaderIntervalInitial = setInterval(function(){
-						animate();
-					}, 1000/24);
+			if($img.data('running') === 'true'){
+				clearInterval($img.data('currentInterval'));
 			}
 
-			animate = function() {
-				$logo.css({
-					backgroundPosition: -shift +'px '+ -ypos +'px'
+			$img.on('load', function(){
+				loadImage(_this, $img);
+			});
+
+			if ($img[0].complete) {
+				loadImage(_this, $img);
+			}
+
+			var counter = 0;
+
+			function loadImage(_this, $img) {
+				$img.data('running', 'true');
+
+				var currentInterval = setInterval(function(){
+					animate($img);
+					counter++;
+				}, 1000/24);
+
+				$img.data('currentInterval', currentInterval);
+				console.log(currentInterval);
+				console.log($img.data('currentInterval'));
+			}
+
+
+			function animate($img) {
+				currentFrame++;
+
+				$img.css({
+					'transform': 'translate3d('+ -shiftX +'px,'+ -shiftY +'px,0)'
 				});
 
-			    shift += frameWidth;
+			    shiftX += frameWidth;
 
-			    if(currentFrame%9 === 0 && currentFrame !== 0){
-			    	shift = 0;
-			    	ypos += frameHeight;
+			    if(currentFrame%framesX === 0 && currentFrame !== 0){
+			    	shiftX = 0;
+			    	shiftY += frameHeight;
 			    }
 
-			    if (currentFrame == 43) {
-					clearInterval(loaderIntervalInitial);
+			    if (currentFrame == totalFrames) {
+			    	$img.data('running', 'false');
+					clearInterval($img.data('currentInterval'));
 			    }
 
 			    /*
-			        Start at the beginning once you've reached the
-			        end of your sprite!
-			        */
-			        if (currentFrame == totalFrames) {
-			        	shift = 0;
-			        	ypos = 0;
-			        	currentFrame = 0;
-			        }
+		        Start at the beginning once you've reached the
+		        end of your sprite!
+		        */
+		        if (currentFrame == totalFrames) {
+		        	shiftX = 0;
+		        	shiftY = 0;
+		        	currentFrame = 0;
 
-			        currentFrame++;
-			    }
+			        if(typeof cb === 'function'){
+			        	cb();
+			        }
+		        }
+
+		        console.log($img.data('running'));
+		    }
 		},
 
 		setUpLoader: function(){

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 11:44 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-13 10:42 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -834,14 +834,25 @@ be seen on the Desktop.
 MAIN LOGO
 **********************/
 .logo {
-  background: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png) no-repeat;
   width: 373px;
   height: 77px;
   overflow: hidden;
   margin-top: 50px;
   margin-left: calc(67%/1440*100);
-  background-size: 900%;
-  background-position: 0 0;
+}
+.logo a {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.logo a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
 }
 .logo .svg-logo {
   display: none;
@@ -921,8 +932,8 @@ Generic Section Styles
 header.scroll-overlay {
   position: fixed;
 }
-header.scroll-overlay .logo h1 {
-  background-size: cover;
+header.scroll-overlay .logo {
+  background: transparent;
 }
 
 /*********************
@@ -1893,6 +1904,7 @@ ABOUT US Page
   margin-bottom: 25px;
 }
 .page-about-us .our-approach h3 {
+  font-size: 13px;
   line-height: calc(21/13);
   margin-bottom: 0;
 }

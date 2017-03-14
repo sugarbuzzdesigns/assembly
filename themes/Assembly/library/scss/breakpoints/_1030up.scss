@@ -21,14 +21,36 @@ be seen on the Desktop.
 MAIN LOGO
 **********************/
 .logo {
-	background: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png) no-repeat;
+	// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
     width: 373px;
     height: 77px;
     overflow: hidden;
     margin-top: 50px;
     margin-left: calc(67%/1440*100);
-    background-size: 900%;
-    background-position: 0 0;
+
+    a {
+    	height: 100%;
+    	width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate3d(0,0,0);
+		}
+
+		&.init {
+			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
+		}
+
+		&.hover {
+			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-hover-white.png);
+		}
+    }
 
     .svg-logo {
     	display: none;
@@ -135,9 +157,7 @@ header.scroll-overlay {
     position: fixed;
 
     .logo {
-    	h1 {
-    		background-size: cover;
-    	}
+		background: transparent;
     }
 }
 
@@ -965,6 +985,7 @@ ABOUT US Page
     	margin-bottom: 25px;
 
 		h3 {
+			font-size: 13px;
 			line-height: calc(21/13);
 			margin-bottom: 0;
 		}

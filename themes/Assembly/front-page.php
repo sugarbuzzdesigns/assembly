@@ -5,9 +5,8 @@
 		<div class="header-mask landing-logo">
 			<header class="light">
 				<h1 class="logo">
-				    <a href="/">
-				        <!-- logo SVG file -->
-				        <?php include __DIR__ . '/library/images/svg/full-logo.svg'; ?>
+				    <a class="init" href="/">
+				    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover-white.png" alt="">
 				    </a>
 				</h1>
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
@@ -41,7 +40,9 @@
 			<header class="scroll-overlay">
 				<div class="inner-bg"></div>
 				<h1 class="logo">
-				    <a href="/"></a>
+				    <a class="init" href="/">
+				    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover.png" alt="">
+				    </a>
 				</h1>
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 			</header>

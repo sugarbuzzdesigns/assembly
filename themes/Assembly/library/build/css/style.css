@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-12 11:44 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-13 10:42 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8039,17 +8039,31 @@ header {
 }
 
 .logo {
-  background: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png) no-repeat;
   font-size: 0px;
   float: left;
   margin: 0;
   position: relative;
   width: 250px;
   height: 50px;
-  background-size: 900%;
-  background-position: 0 0;
   margin-top: calc(8px/414*320);
   margin-left: calc(2px/414*100);
+}
+.logo a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo a img {
+  width: 900%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.logo a.hover {
+  display: none;
 }
 .logo img {
   display: none;
@@ -8441,19 +8455,27 @@ HOME PAGE STYLES
   opacity: 0;
 }
 
-.no-touch .home .tile,
+.no-touch .home .tile {
+  cursor: pointer;
+}
+.no-touch .home .tile .image-clip-bg {
+  opacity: 0;
+}
+.no-touch .home .tile:hover img {
+  opacity: 0.4;
+}
+.no-touch .home .tile:hover .image-clip-bg {
+  opacity: 0.4;
+}
 .no-touch .home .video {
   cursor: pointer;
 }
-.no-touch .home .tile .image-clip-bg,
 .no-touch .home .video .image-clip-bg {
   opacity: 0;
 }
-.no-touch .home .tile:hover img,
 .no-touch .home .video:hover img {
   opacity: 0.4;
 }
-.no-touch .home .tile:hover .image-clip-bg,
 .no-touch .home .video:hover .image-clip-bg {
   opacity: 0.4;
 }
@@ -11237,14 +11259,25 @@ you can add resource intensive styles.
   MAIN LOGO
   **********************/
   .logo {
-    background: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png) no-repeat;
     width: 373px;
     height: 77px;
     overflow: hidden;
     margin-top: 50px;
     margin-left: calc(67%/1440*100);
-    background-size: 900%;
-    background-position: 0 0;
+  }
+  .logo a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .logo a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   .logo .svg-logo {
     display: none;
@@ -11324,8 +11357,8 @@ you can add resource intensive styles.
   header.scroll-overlay {
     position: fixed;
   }
-  header.scroll-overlay .logo h1 {
-    background-size: cover;
+  header.scroll-overlay .logo {
+    background: transparent;
   }
 
   /*********************
@@ -12296,6 +12329,7 @@ you can add resource intensive styles.
     margin-bottom: 25px;
   }
   .page-about-us .our-approach h3 {
+    font-size: 13px;
     line-height: calc(21/13);
     margin-bottom: 0;
   }

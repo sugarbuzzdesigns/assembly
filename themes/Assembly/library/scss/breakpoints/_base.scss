@@ -941,17 +941,39 @@ header {
 }
 
 .logo {
-	background: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png) no-repeat;
 	font-size: 0px;
 	float: left;
 	margin: 0;
     position: relative;
     width: 250px;
     height: 50px;
-    background-size: 900%;
-    background-position: 0 0;
     margin-top: calc(8px/414*320);
     margin-left: calc(2px/414*100);
+
+    a {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img {
+			width: 900%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate3d(0,0,0);
+		}
+
+		&.init {
+			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png);
+		}
+
+		&.hover {
+			display: none;
+			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-hover-white.png);
+		}
+    }
 
     img {
     	display: none;
@@ -1407,7 +1429,24 @@ HOME PAGE STYLES
 
 .no-touch {
 	.home {
-		.tile,
+		.tile {
+			cursor: pointer;
+
+			.image-clip-bg {
+				opacity: 0;
+			}
+
+			&:hover {
+				img {
+					opacity: 0.4;
+				}
+
+				.image-clip-bg {
+					opacity: 0.4;
+				}
+			}
+		}
+
 		.video {
 			cursor: pointer;
 

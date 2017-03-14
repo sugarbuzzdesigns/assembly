@@ -1,3 +1,4 @@
+<?php global $detect, $deviceType; ?>
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -41,6 +42,12 @@
 		<?php get_template_part( 'includes/loader' ); ?>
 
 		<?php get_template_part( 'includes/main-menu' ); ?>
+
+<!-- 		<img id="logo-init-white" data-sprite-name="<?php echo $deviceType; ?>-init-white" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-init-white.png" alt="">
+		<img id="logo-init-black" data-sprite-name="<?php echo $deviceType; ?>-init-black" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-init.png" alt="">
+
+		<img id="logo-hover-white" data-sprite-name="<?php echo $deviceType; ?>-hover-white" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover-white.png" alt="">
+		<img id="logo-hover-black" data-sprite-name="<?php echo $deviceType; ?>-hover-black" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover.png" alt=""> -->
 
 
 
