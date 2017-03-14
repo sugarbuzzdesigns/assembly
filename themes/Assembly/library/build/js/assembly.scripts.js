@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 05:00 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 05:07 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -778,7 +778,7 @@ var assembly = assembly || {};
 			this.winHeight = this.$win.height();
 			this.$body = $('body');
 			this.$html = $('html');
-			this.$scrollElement = this.$html;
+			this.$scrollElement = this.$win;
 			this.$elm = $('[data-ratio]');
 			this.currentScroll = this.$scrollElement.scrollTop();
 			this.scrollChange = 0;

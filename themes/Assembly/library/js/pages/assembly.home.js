@@ -13,7 +13,7 @@ var assembly = assembly || {};
 			this.$body = $('body');
 			this.$html = $('html');
 			this.$doc = $(document);
-			this.$scrollElement = this.$doc;
+			this.$scrollElement = this.$win;
 			this.currentScroll = this.$scrollElement.scrollTop();
 
 			$('.landing .mesh-bg').data('meshTop', 0);
@@ -50,19 +50,19 @@ var assembly = assembly || {};
 		landingScrollHandler: function(){
 			var max = 0.6;
 
-			if($(window).height() - $(document).scrollTop() >= 0){
+			if(this.$win.height() - this.$win.scrollTop() >= 0){
 				$('.landing .landing-bg').css({
-					'transform': 'scale('+ Math.abs(($(document).scrollTop()/$(window).height())*0.2 - 1) +')',
-					opacity: Math.abs(this.currentScroll/$(window).height() * max - 1)
+					'transform': 'scale('+ Math.abs((this.$win.scrollTop()/this.$win.height())*0.2 - 1) +')',
+					opacity: Math.abs(this.currentScroll/this.$win.height() * max - 1)
 				});
 
 				$('.landing').find('h2').css({
-					'transform': 'scale('+ Math.abs(($(document).scrollTop()/$(window).height())*0.2 - 1) +')',
-					opacity: Math.abs(this.currentScroll/$(window).height() * max - 1)
+					'transform': 'scale('+ Math.abs((this.$win.scrollTop()/this.$win.height())*0.2 - 1) +')',
+					opacity: Math.abs(this.currentScroll/this.$win.height() * max - 1)
 				});
 
 				var meshTop = $('.landing .mesh-bg').data('meshTop');
-				var change = Math.abs(($(document).scrollTop()/$(window).height())*0.2 * 100);
+				var change = Math.abs((this.$win.scrollTop()/this.$win.height())*0.2 * 100);
 
 				if(this.scrollDirection === 'down'){
 					meshTop -= change;
@@ -71,10 +71,10 @@ var assembly = assembly || {};
 				}
 
 				$('.landing .mesh-bg').css({
-					'transform': 'translate('+$(document).scrollTop()/$(window).height() * 40+'px,'+$(document).scrollTop()/$(window).height() * 40 * -1+'px)'
+					'transform': 'translate('+this.$win.scrollTop()/this.$win.height() * 40+'px,'+this.$win.scrollTop()/this.$win.height() * 40 * -1+'px)'
 				});
 
-				$('.header-mask').height((1 - $(document).scrollTop()/$(window).height()) * 100 + '%');
+				$('.header-mask').height((1 - this.$win.scrollTop()/this.$win.height()) * 100 + '%');
 			}
 
 

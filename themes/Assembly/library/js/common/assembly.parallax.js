@@ -5,7 +5,7 @@
 			this.winHeight = this.$win.height();
 			this.$body = $('body');
 			this.$html = $('html');
-			this.$scrollElement = this.$html;
+			this.$scrollElement = this.$win;
 			this.$elm = $('[data-ratio]');
 			this.currentScroll = this.$scrollElement.scrollTop();
 			this.scrollChange = 0;
