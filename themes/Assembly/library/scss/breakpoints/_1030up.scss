@@ -24,31 +24,12 @@ MAIN LOGO
 	// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
     width: 373px;
     height: 77px;
-    overflow: hidden;
     margin-top: 50px;
     margin-left: calc(67%/1440*100);
 
     a {
-    	height: 100%;
-    	width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: hidden;
-
 		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			transform: translate3d(0,0,0);
-		}
 
-		&.init {
-			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
-		}
-
-		&.hover {
-			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-hover-white.png);
 		}
     }
 
@@ -60,9 +41,34 @@ MAIN LOGO
 /*********************
 MENU & NAVIGATION STYLES
 *********************/
-.main-menu {
-    .footer {
+#menu-main-menu {
+	text-align: left;
+}
 
+.main-menu {
+	.menu-inner {
+    	padding-left: calc(128%/1440*100);
+	}
+	.nav li a {
+		font-size: 37px;
+    	letter-spacing: 0.88px;
+	}
+
+    .footer {
+    	display: block;
+		width: 100%;
+		left: auto;
+		transform: translate(0,0);
+		padding: 0;
+		text-align: left;
+
+		.copyright {
+			margin: 0;
+
+			a {
+				display: block;
+			}
+		}
     }
 }
 
@@ -93,56 +99,25 @@ Main Menu BTN
 		transition: opacity 0.5s 1s;
 	}
 
-	.menu-letter {
-		opacity: 0;
-		transition: opacity 1s;
-	}
-
-	.letter-n {
-		transform: translate3d(9px, -17px, 0);
-	}
-
-	.letter-u {
-		transform: translate3d(9px, -34px, 0);
-	}
-
 	&.animate {
-		.menu-rectangle {
+		.border {
 			opacity: 1;
 		}
 
-		.menu-letter {
-			opacity: 1;
-			animation-duration: 0.5s;
-			animation-fill-mode: forwards;
-			animation-delay: 0.7s;
-		}
+		// .menu-letter {
+		// 	opacity: 1;
+		// 	animation-duration: 0.5s;
+		// 	animation-fill-mode: forwards;
+		// 	animation-delay: 0.7s;
+		// }
 
-		.letter-n {
-			animation-name: moveMenuLetterN;
-		}
+		// .letter-n {
+		// 	animation-name: moveMenuLetterN;
+		// }
 
-		.letter-u  {
-			animation-name: moveMenuLetterU;
-		}
-	}
-}
-
-@keyframes moveMenuLetterN {
-	50% {
-		transform: translate3d(9px, 0, 0);
-	}
-	100% {
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes moveMenuLetterU {
-	50% {
-		transform: translate3d(9px, 0, 0);
-	}
-	100% {
-		transform: translate3d(0, 0, 0);
+		// .letter-u  {
+		// 	animation-name: moveMenuLetterU;
+		// }
 	}
 }
 
@@ -530,12 +505,6 @@ CASE STUDIES Page
 			.text {
 				opacity: 1;
 			}
-		}
-	}
-
-	@keyframes dash {
-		to {
-			stroke-dashoffset: 0;
 		}
 	}
 

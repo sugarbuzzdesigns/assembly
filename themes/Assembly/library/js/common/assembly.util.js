@@ -102,6 +102,17 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 					});
 				}
 			);
+
+			$('.main-menu-btn').hover(
+				function(evt){
+					$('.main-menu-btn').addClass('mouseover');
+					$('.main-menu-btn').removeClass('mouseout');
+				},
+				function(evt){
+					$('.main-menu-btn').addClass('mouseout');
+					$('.main-menu-btn').removeClass('mouseover');
+				}
+			);
 		},
 
 		animateSpriteBG: function(startX, startY, $img, totalFrames, framesX, framesY, cb){
@@ -143,8 +154,6 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				}, 1000/24);
 
 				$img.data('currentInterval', currentInterval);
-				console.log(currentInterval);
-				console.log($img.data('currentInterval'));
 			}
 
 

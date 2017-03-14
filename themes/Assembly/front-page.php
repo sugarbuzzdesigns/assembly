@@ -37,7 +37,7 @@
 			</div>
 		</section>
 		<section class="main-content">
-			<header class="scroll-overlay">
+			<header class="scroll-overlay dark">
 				<div class="inner-bg"></div>
 				<h1 class="logo">
 				    <a class="init" href="/">

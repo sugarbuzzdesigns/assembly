@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-13 10:42 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 04:14 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7208,30 +7208,189 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-.font-test {
-  margin-bottom: 10px;
+@keyframes meshpulse {
+  0% {
+    transform: translate3d(-100%, -50%, 0) scale(0.8);
+  }
+  50% {
+    transform: translate3d(-100%, -50%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-100%, -50%, 0) scale(0.8);
+  }
 }
-
-.pangrambold {
-  font-family: 'pangrambold';
+/*********************
+Menu Animations
+**********************/
+@keyframes showMainMenu {
+  0% {
+    z-index: 11;
+  }
+  100% {
+    opacity: 1;
+    z-index: 11;
+  }
 }
-
-.roboto {
-  font-family: 'robotoregular';
+@keyframes hideMainMenu {
+  0% {
+    z-index: 11;
+    opacity: 1;
+  }
+  99% {
+    z-index: 11;
+  }
+  100% {
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 0;
+  }
 }
-
-.roboto-mono {
-  font-family: 'roboto_monoregular';
+@keyframes showMenuBg {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+  }
 }
-
-.roboto-mono-light {
-  font-family: 'roboto_monolight';
+@keyframes hideMenuBg {
+  0% {
+    opacity: 1;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+  }
 }
-
-.gridnik {
-  font-family: 'gridnikregular';
+@keyframes showmenuitems {
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
-
+/*********************
+Menu Button Animations
+**********************/
+@keyframes moveMenuLetterN {
+  0% {
+    transform: translate3d(-5px, 19px, 0);
+  }
+  50% {
+    transform: translate3d(0, 19px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes moveMenuLetterU {
+  0% {
+    transform: translate3d(-5px, 34px, 0);
+  }
+  50% {
+    transform: translate3d(0, 34px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes resetMenuLetterN {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 19px, 0);
+  }
+  100% {
+    transform: translate3d(-5px, 19px, 0);
+  }
+}
+@keyframes resetMenuLetterU {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 34px, 0);
+  }
+  100% {
+    transform: translate3d(-5px, 34px, 0);
+  }
+}
+@keyframes morphXTop {
+  50% {
+    top: 50%;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+}
+@keyframes morphXBottom {
+  50% {
+    bottom: 50%;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+    bottom: 50%;
+  }
+}
+/*********************
+Case Study Animations
+**********************/
+@keyframes showCaseStudySVG {
+  0% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showAndUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 150px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes hideAndDown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 150px, 0);
+  }
+}
+/*********************
+SVG Animations
+**********************/
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .hidden {
   display: none;
 }
@@ -7358,17 +7517,6 @@ and will be used across all viewports.
   opacity: 1;
 }
 
-@keyframes meshpulse {
-  0% {
-    transform: translate3d(-100%, -50%, 0) scale(0.8);
-  }
-  50% {
-    transform: translate3d(-100%, -50%, 0) scale(1);
-  }
-  100% {
-    transform: translate3d(-100%, -50%, 0) scale(0.8);
-  }
-}
 /*********************
 GENERAL STYLES
 *********************/
@@ -7579,11 +7727,14 @@ MENU & NAVIGATION STYLES
   position: fixed;
   top: 0;
   right: 0;
+  margin-top: 59px;
+  margin-right: calc(49%/1440*100);
   width: 30px;
   height: 30px;
+  z-index: 12;
   opacity: 0;
+  transition: all .5s;
   pointer-events: none;
-  transition: all 0.6s;
   overflow: hidden;
 }
 .main-menu .footer {
@@ -7612,7 +7763,6 @@ MENU & NAVIGATION STYLES
   right: 0;
   height: 100vh;
   width: 100vw;
-  opacity: 1;
 }
 
 /*********************
@@ -7640,7 +7790,7 @@ and more scalable.
 .nav li {
   margin-bottom: 0;
   line-height: 1.3;
-  transition: opacity 1s;
+  transition: opacity 0.3s 1s, transform 0.3s 1s;
   opacity: 0;
   transform: translate3d(0, 10px, 0);
 }
@@ -7648,7 +7798,7 @@ and more scalable.
   font-size: calc((37px/414) * 320);
   text-transform: lowercase;
   font-family: 'pangrambold';
-  display: block;
+  display: inline-block;
   color: #6d6d6d;
   text-decoration: none;
 }
@@ -7659,74 +7809,14 @@ and more scalable.
 }
 
 /* end .nav */
-.menu-open .main-menu {
-  right: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  opacity: 1;
-  z-index: 11;
-}
 .menu-open .main-menu, .menu-open .nav {
   pointer-events: auto;
 }
-.menu-open .menu-inner {
-  opacity: 1;
-}
 .menu-open li.show-nav-item {
-  animation: showmenuitems;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-.close-menu .main-menu {
-  pointer-events: none;
-  animation: hideMainMenu;
-  animation-duration: 0.75s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes showMenuBg {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    opacity: 1;
-  }
-}
-@keyframes hideMenuBg {
-  0% {
-    opacity: 1;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    top: 0;
-    right: 0;
-    height: 30px;
-    width: 30px;
-  }
-}
-@keyframes showmenuitems {
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 /*********************
 CAROUSEL MODULES
 **********************/
@@ -8045,12 +8135,16 @@ header {
   position: relative;
   width: 250px;
   height: 50px;
+  overflow: hidden;
   margin-top: calc(8px/414*320);
   margin-left: calc(2px/414*100);
 }
 .logo a {
+  height: 100%;
+  width: 100%;
   display: block;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
 }
@@ -8061,9 +8155,6 @@ header {
   top: 0;
   left: 0;
   transform: translate3d(0, 0, 0);
-}
-.logo a.hover {
-  display: none;
 }
 .logo img {
   display: none;
@@ -8119,8 +8210,134 @@ header {
 }
 
 .main-menu-btn {
+  height: 61px;
+  width: 61px;
+  overflow: hidden;
+  position: relative;
   margin-top: calc(26px);
   margin-right: calc(20px);
+}
+.main-menu-btn .border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 61px;
+  width: 61px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border: solid 1px #fff;
+  z-index: 2;
+}
+.main-menu-btn .border.fadeOut {
+  opacity: 0;
+}
+.main-menu-btn .square-btn {
+  height: 100%;
+  width: 100%;
+}
+.main-menu-btn .square-btn hr {
+  display: block;
+  margin: 0;
+  height: 1px;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.3s, top 0.5s, bottom 0.5s, transform 0.5s;
+  z-index: 10;
+}
+.main-menu-btn .square-btn hr.bottom {
+  top: auto;
+  bottom: 0;
+}
+.main-menu-btn .square-btn .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.main-menu-btn .square-btn .layer .inner {
+  padding-left: 12px;
+  padding-top: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 61px;
+  width: 61px;
+  transition: padding 0.5s 0.3s;
+}
+.main-menu-btn .square-btn .letter {
+  font-style: normal;
+  font-size: 14px;
+  font-family: 'gridnikregular';
+  line-height: calc(20/14);
+  letter-spacing: 0;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  margin-right: 1px;
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+.main-menu-btn .square-btn .letter.fadeOut {
+  opacity: 0;
+}
+.main-menu-btn .square-btn .top-layer {
+  top: 0;
+  height: 100%;
+  background: transparent;
+}
+.main-menu-btn .square-btn .bottom-layer {
+  background-color: #000;
+  transition: height 0.5s;
+  height: 0;
+  top: auto;
+  bottom: 0;
+}
+.main-menu-btn .letter-n {
+  transform: translate3d(-5px, 19px, 0);
+}
+.main-menu-btn .letter-u {
+  transform: translate3d(-5px, 34px, 0);
+}
+
+.dark .main-menu-btn .border {
+  border: solid 1px #000;
+}
+.dark .main-menu-btn .letter {
+  color: #000;
+}
+
+.no-touch .main-menu-btn.mouseover .inner {
+  padding-left: 6px;
+}
+.no-touch .main-menu-btn.mouseover .bottom-layer {
+  height: 100%;
+}
+.no-touch .main-menu-btn.mouseover .letter-n {
+  animation-name: moveMenuLetterN;
+}
+.no-touch .main-menu-btn.mouseover .letter-u {
+  animation-name: moveMenuLetterU;
+}
+.no-touch .main-menu-btn.mouseout .inner {
+  padding-left: 12px;
+}
+.no-touch .main-menu-btn.mouseout .bottom-layer {
+  height: 0;
+}
+.no-touch .main-menu-btn.mouseout .letter-n {
+  animation-name: resetMenuLetterN;
+}
+.no-touch .main-menu-btn.mouseout .letter-u {
+  animation-name: resetMenuLetterU;
 }
 
 .main-menu-btn svg {
@@ -8253,11 +8470,20 @@ header.dark .svg-logo mask {
 .menu-open header.light .hamburger span {
   background-color: #fff;
 }
-.menu-open header.light #mask-2,
-.menu-open header.light svg mask,
-.menu-open header.light svg path,
-.menu-open header.light svg polygon {
-  fill: #fff;
+.menu-open .main-menu-btn.animate .border {
+  opacity: 0;
+}
+.menu-open .main-menu-btn.animate hr {
+  opacity: 1;
+  transform-origin: center center;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+.menu-open .main-menu-btn.animate hr.top {
+  animation-name: morphXTop;
+}
+.menu-open .main-menu-btn.animate hr.bottom {
+  animation-name: morphXBottom;
 }
 
 /*********************
@@ -9676,33 +9902,6 @@ CASE STUDIES Page
   overflow: auto;
 }
 
-@keyframes showCaseStudySVG {
-  0% {
-    display: block;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes showAndUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 150px, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes hideAndDown {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(0, 150px, 0);
-  }
-}
 /*********************
 SERVICES Page
 **********************/
@@ -11261,23 +11460,8 @@ you can add resource intensive styles.
   .logo {
     width: 373px;
     height: 77px;
-    overflow: hidden;
     margin-top: 50px;
     margin-left: calc(67%/1440*100);
-  }
-  .logo a {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
-  .logo a img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate3d(0, 0, 0);
   }
   .logo .svg-logo {
     display: none;
@@ -11286,6 +11470,32 @@ you can add resource intensive styles.
   /*********************
   MENU & NAVIGATION STYLES
   *********************/
+  #menu-main-menu {
+    text-align: left;
+  }
+
+  .main-menu .menu-inner {
+    padding-left: calc(128%/1440*100);
+  }
+  .main-menu .nav li a {
+    font-size: 37px;
+    letter-spacing: 0.88px;
+  }
+  .main-menu .footer {
+    display: block;
+    width: 100%;
+    left: auto;
+    transform: translate(0, 0);
+    padding: 0;
+    text-align: left;
+  }
+  .main-menu .footer .copyright {
+    margin: 0;
+  }
+  .main-menu .footer .copyright a {
+    display: block;
+  }
+
   /*********************
   Main Menu BTN
   **********************/
@@ -11309,48 +11519,10 @@ you can add resource intensive styles.
     opacity: 0;
     transition: opacity 0.5s 1s;
   }
-  .main-menu-btn .menu-letter {
-    opacity: 0;
-    transition: opacity 1s;
-  }
-  .main-menu-btn .letter-n {
-    transform: translate3d(9px, -17px, 0);
-  }
-  .main-menu-btn .letter-u {
-    transform: translate3d(9px, -34px, 0);
-  }
-  .main-menu-btn.animate .menu-rectangle {
+  .main-menu-btn.animate .border {
     opacity: 1;
-  }
-  .main-menu-btn.animate .menu-letter {
-    opacity: 1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.7s;
-  }
-  .main-menu-btn.animate .letter-n {
-    animation-name: moveMenuLetterN;
-  }
-  .main-menu-btn.animate .letter-u {
-    animation-name: moveMenuLetterU;
   }
 
-  @keyframes moveMenuLetterN {
-    50% {
-      transform: translate3d(9px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  @keyframes moveMenuLetterU {
-    50% {
-      transform: translate3d(9px, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-  }
   /*********************
   Generic Section Styles
   **********************/
@@ -11660,11 +11832,6 @@ you can add resource intensive styles.
   .page-case-studies .case-study-svg-cat.selected .word-box,
   .page-case-studies .case-study-svg-cat.selected .text {
     opacity: 1;
-  }
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
   }
   .page-case-studies .landing {
     /**

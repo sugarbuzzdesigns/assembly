@@ -1,0 +1,214 @@
+@keyframes meshpulse {
+	0% {
+		transform: translate3d(-100%,-50%,0) scale(0.8);
+	}
+
+	50% {
+		transform: translate3d(-100%,-50%,0) scale(1);
+	}
+
+	100% {
+		transform: translate3d(-100%,-50%,0) scale(0.8);
+	}
+}
+
+/*********************
+Menu Animations
+**********************/
+@keyframes showMainMenu {
+	0% {
+		z-index: 11;
+	}
+
+	100% {// right: 0;
+	// top: 0;
+	// height: 100vh;
+	// width: 100%;
+	opacity: 1;
+	z-index: 11;
+	}
+}
+
+@keyframes hideMainMenu {
+	0% {
+		z-index: 11;
+		opacity: 1;
+	}
+
+	99% {
+		z-index: 11;
+	}
+
+	100% {
+		right: 0;
+		top: 0;
+		opacity: 0;
+		z-index: 0;
+	}
+}
+
+@keyframes showMenuBg {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+@keyframes hideMenuBg {
+	0% {
+		opacity: 1;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+		top: 0;
+		right: 0;
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@keyframes showmenuitems {
+  100% {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+  }
+}
+
+
+/*********************
+Menu Button Animations
+**********************/
+@keyframes moveMenuLetterN {
+	0% {
+		transform: translate3d(-5px, 19px, 0);
+	}
+	50% {
+		transform: translate3d(0, 19px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes moveMenuLetterU {
+	0% {
+		transform: translate3d(-5px, 34px, 0);
+	}
+	50% {
+		transform: translate3d(0, 34px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes resetMenuLetterN {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, 19px, 0);
+	}
+	100% {
+		transform: translate3d(-5px, 19px, 0);
+	}
+}
+
+@keyframes resetMenuLetterU {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, 34px, 0);
+	}
+	100% {
+		transform: translate3d(-5px, 34px, 0);
+	}
+}
+
+
+@keyframes morphXTop {
+	50% {
+		top: 50%;
+		transform: rotate(0);
+	}
+
+	100% {
+	    transform: rotate(45deg);
+	    top: 50%;
+	}
+}
+
+@keyframes morphXBottom {
+	50% {
+		bottom: 50%;
+		transform: rotate(0);
+	}
+
+	100% {
+	    transform: rotate(-45deg);
+	    bottom: 50%;
+	}
+}
+
+/*********************
+Case Study Animations
+**********************/
+@keyframes showCaseStudySVG {
+	0% {
+		display: block;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes showAndUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0,150px,0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes hideAndDown {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate3d(0,150px,0);
+	}
+}
+
+/*********************
+SVG Animations
+**********************/
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

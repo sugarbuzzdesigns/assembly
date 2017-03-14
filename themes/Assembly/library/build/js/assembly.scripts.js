@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 12:42 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 04:10 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -202,6 +202,17 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 					});
 				}
 			);
+
+			$('.main-menu-btn').hover(
+				function(evt){
+					$('.main-menu-btn').addClass('mouseover');
+					$('.main-menu-btn').removeClass('mouseout');
+				},
+				function(evt){
+					$('.main-menu-btn').addClass('mouseout');
+					$('.main-menu-btn').removeClass('mouseover');
+				}
+			);
 		},
 
 		animateSpriteBG: function(startX, startY, $img, totalFrames, framesX, framesY, cb){
@@ -243,8 +254,6 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				}, 1000/24);
 
 				$img.data('currentInterval', currentInterval);
-				console.log(currentInterval);
-				console.log($img.data('currentInterval'));
 			}
 
 
@@ -429,7 +438,19 @@ var assembly = assembly || {};
 
 			function showMenu(){
 				$('html').addClass('menu-open');
-				$('html').removeClass('close-menu');
+
+				$('.main-menu').css({
+					opacity: 1,
+					height: '100vh',
+					width: '100vw',
+				    'margin-top': '0',
+				    'margin-right': '0'
+				});
+
+				$('.main-menu-btn .letter').addClass('fadeOut');
+				$('.main-menu-btn .border').addClass('fadeOut');
+
+				$('.header-mask.landing-logo').height('auto');
 
 				var queue = $({}); //use the default animation queue
 			    $('nav li').each(function(i, elm) {
@@ -446,9 +467,20 @@ var assembly = assembly || {};
 			};
 
 			function hideMenu(){
-				$('html').removeClass('menu-open');
-				$('html').addClass('close-menu');
 				$('nav li').removeClass('show-nav-item');
+
+				$('.main-menu').css({
+					opacity: 0,
+					height: '30px',
+					width: '30px',
+				    'margin-top':' 59px',
+				    'margin-right': 'calc(49%/1440*100)'
+				});
+
+				$('.main-menu-btn .letter').removeClass('fadeOut');
+				$('.main-menu-btn .border').removeClass('fadeOut');
+
+				$('html').removeClass('menu-open');
 			};
 		}
 	};

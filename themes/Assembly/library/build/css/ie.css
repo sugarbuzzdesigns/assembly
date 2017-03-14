@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-13 10:42 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 04:14 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -836,23 +836,8 @@ MAIN LOGO
 .logo {
   width: 373px;
   height: 77px;
-  overflow: hidden;
   margin-top: 50px;
   margin-left: calc(67%/1440*100);
-}
-.logo a {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-.logo a img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate3d(0, 0, 0);
 }
 .logo .svg-logo {
   display: none;
@@ -861,6 +846,32 @@ MAIN LOGO
 /*********************
 MENU & NAVIGATION STYLES
 *********************/
+#menu-main-menu {
+  text-align: left;
+}
+
+.main-menu .menu-inner {
+  padding-left: calc(128%/1440*100);
+}
+.main-menu .nav li a {
+  font-size: 37px;
+  letter-spacing: 0.88px;
+}
+.main-menu .footer {
+  display: block;
+  width: 100%;
+  left: auto;
+  transform: translate(0, 0);
+  padding: 0;
+  text-align: left;
+}
+.main-menu .footer .copyright {
+  margin: 0;
+}
+.main-menu .footer .copyright a {
+  display: block;
+}
+
 /*********************
 Main Menu BTN
 **********************/
@@ -884,48 +895,10 @@ Main Menu BTN
   opacity: 0;
   transition: opacity 0.5s 1s;
 }
-.main-menu-btn .menu-letter {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.main-menu-btn .letter-n {
-  transform: translate3d(9px, -17px, 0);
-}
-.main-menu-btn .letter-u {
-  transform: translate3d(9px, -34px, 0);
-}
-.main-menu-btn.animate .menu-rectangle {
+.main-menu-btn.animate .border {
   opacity: 1;
-}
-.main-menu-btn.animate .menu-letter {
-  opacity: 1;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.7s;
-}
-.main-menu-btn.animate .letter-n {
-  animation-name: moveMenuLetterN;
-}
-.main-menu-btn.animate .letter-u {
-  animation-name: moveMenuLetterU;
 }
 
-@keyframes moveMenuLetterN {
-  50% {
-    transform: translate3d(9px, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes moveMenuLetterU {
-  50% {
-    transform: translate3d(9px, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
 /*********************
 Generic Section Styles
 **********************/
@@ -1235,11 +1208,6 @@ CASE STUDIES Page
 .page-case-studies .case-study-svg-cat.selected .word-box,
 .page-case-studies .case-study-svg-cat.selected .text {
   opacity: 1;
-}
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 .page-case-studies .landing {
   /**

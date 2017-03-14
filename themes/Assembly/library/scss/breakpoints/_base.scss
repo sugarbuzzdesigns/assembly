@@ -11,7 +11,7 @@ and will be used across all viewports.
 
 ******************************************************************/
 // import mixins
-@import "../partials/test_styles";
+@import "../partials/keyframe_animations";
 $screenWidth: 320;
 
 .hidden {
@@ -158,20 +158,6 @@ $screenWidth: 320;
 .dom-ready {
 	div.mesh-bg {
 		opacity: 1;
-	}
-}
-
-@keyframes meshpulse {
-	0% {
-		transform: translate3d(-100%,-50%,0) scale(0.8);
-	}
-
-	50% {
-		transform: translate3d(-100%,-50%,0) scale(1);
-	}
-
-	100% {
-		transform: translate3d(-100%,-50%,0) scale(0.8);
 	}
 }
 
@@ -409,12 +395,14 @@ MENU & NAVIGATION STYLES
     position: fixed;
     top: 0;
     right: 0;
+    margin-top: 59px;
+    margin-right: calc(49%/1440*100);
     width: 30px;
     height: 30px;
+    z-index: 12;
     opacity: 0;
+    transition: all .5s;
     pointer-events: none;
-    // z-index: 1016;
-    transition: all 0.6s;
     overflow: hidden;
 
     .footer {
@@ -446,7 +434,6 @@ MENU & NAVIGATION STYLES
     right: 0;
     height: 100vh;
     width: 100vw;
-    opacity: 1;
 }
 
 /*********************
@@ -473,7 +460,9 @@ and more scalable.
 	li {
 		margin-bottom: 0;
 		line-height: 1.3;
-		transition: opacity 1s;
+		transition:
+			opacity 0.3s 1s,
+			transform 0.3s 1s;
 		opacity: 0;
 		transform: translate3d(0,10px,0);
 
@@ -481,7 +470,7 @@ and more scalable.
 			font-size: calc((37px/414) * 320);
 			text-transform: lowercase;
 			font-family: 'pangrambold';
-			display: block;
+			display: inline-block;
 			color: #6d6d6d;
 			text-decoration: none;
 		}
@@ -501,88 +490,14 @@ and more scalable.
 } /* end .nav */
 
 .menu-open {
-	.main-menu {
-		right: 0;
-		top: 0;
-		height: 100vh;
-		width: 100%;
-		opacity: 1;
-		z-index: 11;
-	}
-
 	.main-menu, .nav {
 		pointer-events: auto;
 	}
 
-	.menu-inner {
-		opacity: 1;
-	}
-
 	li.show-nav-item {
-		animation: showmenuitems;
-		animation-duration: 1s;
-		animation-fill-mode: forwards;
-		animation-delay: 1s;
-	}
-}
-
-.close-menu {
-	.main-menu {
-		pointer-events: none;
-	    animation: hideMainMenu;
-	    animation-duration: 0.75s;
-	    animation-fill-mode: forwards;
-	}
-}
-
-@keyframes hideMainMenu {
-	100% {
-
-	}
-}
-
-@keyframes showMenuBg {
-	0% {
 		opacity: 1;
+		transform: translate3d(0,0,0);
 	}
-	100% {
-		right: 0;
-		top: 0;
-		height: 100vh;
-		width: 100%;
-		opacity: 1;
-	}
-}
-
-@keyframes hideMenuBg {
-	0% {
-		opacity: 1;
-		right: 0;
-		top: 0;
-		height: 100vh;
-		width: 100%;
-	}
-	50% {
-		opacity: 1;
-	}
-	75% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0;
-		top: 0;
-		right: 0;
-		height: 30px;
-		width: 30px;
-	}
-}
-
-@keyframes showmenuitems {
-  100% {
-	opacity: 1;
-	transform: translate3d(0,0,0);
-  }
 }
 
 /*********************
@@ -947,12 +862,16 @@ header {
     position: relative;
     width: 250px;
     height: 50px;
+    overflow: hidden;
     margin-top: calc(8px/414*320);
     margin-left: calc(2px/414*100);
 
     a {
+    	height: 100%;
+    	width: 100%;
 		display: block;
 		position: absolute;
+		overflow: hidden;
 		top: 0;
 		left: 0;
 
@@ -963,15 +882,6 @@ header {
 			top: 0;
 			left: 0;
 			transform: translate3d(0,0,0);
-		}
-
-		&.init {
-			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init-white.png);
-		}
-
-		&.hover {
-			display: none;
-			// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-hover-white.png);
 		}
     }
 
@@ -1034,15 +944,172 @@ header {
 }
 
 .main-menu-btn {
+	height: 61px;
+	width: 61px;
+	overflow: hidden;
+	position: relative;
 	margin-top: calc(26px);
 	margin-right: calc(20px);
+
+	.border {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 61px;
+		width: 61px;
+		opacity: 0;
+		transition: opacity 0.5s;
+		border: solid 1px #fff;
+		z-index: 2;
+
+		&.fadeOut {
+			opacity: 0;
+		}
+	}
+
+	.square-btn {
+		height: 100%;
+		width: 100%;
+
+		hr {
+			display: block;
+			margin: 0;
+			height: 1px;
+			width: 80%;
+			position: absolute;
+			top: 0;
+			background-color: #fff;
+			border: none;
+			opacity: 0;
+			transition: opacity 0.3s, top 0.5s, bottom 0.5s, transform 0.5s;
+			z-index: 10;
+
+			&.bottom {
+				top: auto;
+				bottom: 0;
+			}
+		}
+
+		.layer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+
+			.inner {
+				padding-left: 12px;
+				padding-top: 5px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			    width: 100%;
+			    text-align: center;
+				height: 61px;
+				width: 61px;
+				transition: padding 0.5s 0.3s;
+			}
+		}
+
+		.letter {
+			font-style: normal;
+			font-size: 14px;
+			font-family: 'gridnikregular';
+			line-height: calc(20/14);
+			letter-spacing: 0;
+			color: #fff;
+			text-transform: uppercase;
+			display: block;
+			float: left;
+			margin-right: 1px;
+			opacity: 1;
+			transition: opacity 2.5s;
+
+			&.fadeOut {
+				opacity: 0;
+			}
+		}
+
+		.top-layer {
+			top: 0;
+			height: 100%;
+			background: transparent;
+		}
+
+		.bottom-layer {
+			background-color: #000;
+			transition: height 0.5s;
+			height: 0;
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	.letter-n {
+		transform: translate3d(-5px, 19px, 0);
+	}
+
+	.letter-u {
+		transform: translate3d(-5px, 34px, 0);
+	}
+}
+
+.dark {
+	.main-menu-btn {
+		.border {
+			border: solid 1px #000;
+		}
+
+		.letter {
+			color: #000;
+		}
+	}
+}
+
+.no-touch {
+	.main-menu-btn.mouseover {
+		.inner {
+			padding-left: 6px;
+		}
+
+		.bottom-layer {
+			height: 100%;
+		}
+
+		.letter-n {
+			animation-name: moveMenuLetterN;
+		}
+
+		.letter-u  {
+			animation-name: moveMenuLetterU;
+		}
+	}
+
+	.main-menu-btn.mouseout {
+		.inner {
+			padding-left: 12px;
+		}
+
+		.bottom-layer {
+			height: 0;
+		}
+
+		.letter-n {
+			animation-name: resetMenuLetterN;
+		}
+
+		.letter-u  {
+			animation-name: resetMenuLetterU;
+		}
+	}
 }
 
 .main-menu-btn svg {
 	display: none;
 }
 
-.main-menu-btn  span,
+.main-menu-btn span,
 .close-btn span {
 	display: block;
 	position: absolute;
@@ -1188,11 +1255,30 @@ header.dark {
 		}
 	}
 
-	header.light #mask-2,
-	header.light svg mask,
-	header.light svg path,
-	header.light svg polygon {
-		fill: #fff;
+	.main-menu-btn.animate {
+		.border {
+			opacity: 0;
+		}
+
+		// .letter {
+		// 	animation-duration: 0.5s;
+		// 	animation-fill-mode: forwards;
+		// }
+
+		hr {
+			opacity: 1;
+			transform-origin: center center;
+			animation-duration: 0.7s;
+			animation-fill-mode: forwards;
+
+			&.top {
+				animation-name: morphXTop;
+			}
+
+			&.bottom {
+				animation-name: morphXBottom;
+			}
+		}
 	}
 
 	header.light {
@@ -2568,39 +2654,6 @@ CASE STUDIES Page
     height: auto;
     width: auto;
     overflow: auto;
-}
-
-@keyframes showCaseStudySVG {
-	0% {
-		display: block;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes showAndUp {
-	0% {
-		opacity: 0;
-		transform: translate3d(0,150px,0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate3d(0,0,0);
-	}
-}
-
-@keyframes hideAndDown {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-		transform: translate3d(0,150px,0);
-	}
 }
 
 /*********************

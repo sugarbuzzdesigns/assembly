@@ -54,8 +54,8 @@ if(defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG) {
 	$suffix = '';
 	$dir = 'build';
 } else {
-	$suffix = '.min';
-	$dir = 'dist';
+	$suffix = '';
+	$dir = 'build';
 }
 
 function bones_head_cleanup() {
