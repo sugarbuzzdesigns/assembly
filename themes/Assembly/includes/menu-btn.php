@@ -7,8 +7,6 @@
 			<span></span>
 		</div>
 		<div class="square-btn">
-			<hr class="top">
-			<hr class="bottom">
 			<div class="layer top-layer">
 				<div class="inner">
 					<i class="letter letter-m">m</i>

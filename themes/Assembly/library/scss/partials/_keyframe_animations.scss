@@ -163,11 +163,49 @@ Menu Button Animations
 	}
 
 	100% {
-	    transform: rotate(-45deg);
+	    transform: rotate(135deg);
 	    bottom: 50%;
 	}
 }
 
+@keyframes resetMorphXTop {
+	0% {
+	    top: 50%;
+	    transform: rotate(45deg);
+	}
+
+	50% {
+		top: 50%;
+		transform: rotate(0);
+	}
+
+	99% {
+	    top: 50%;
+	    transform: rotate(0);
+	}
+
+	100% {
+	    top: 0;
+	    transform: rotate(0);
+	}
+}
+
+@keyframes resetMorphXBottom {
+	0% {
+	    bottom: 50%;
+	    transform: rotate(135deg);
+	}
+
+	99% {
+	    bottom: 50%;
+	    transform: rotate(0);
+	}
+
+	100% {
+	    bottom: 0;
+	    transform: rotate(0);
+	}
+}
 /*********************
 Case Study Animations
 **********************/

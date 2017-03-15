@@ -68,6 +68,9 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				_this.env.$win.trigger('windowResize');
 
 				_this.updateViewportDimensions();
+				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			}, 250));
 
 			$('html').on('loaded', function(){
@@ -75,6 +78,7 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			});
 
 			_this.env.$win.on('scrollstart', function(){

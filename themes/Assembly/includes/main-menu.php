@@ -1,5 +1,32 @@
+<?php global $detect, $deviceType; ?>
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
 			<div class="main-menu">
 				<div class="menu-inner">
+					<header class="menu-header">
+						<h1 class="logo">
+						    <a class="init" href="/">
+						    	<img id="menu-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
+						    </a>
+						</h1>
+
+						<div class="main-menu-btn">
+							<div class="hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="square-btn">
+								<hr class="top">
+								<hr class="bottom">
+							</div>
+						</div>
+					</header>
+
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu(array(
 						'container' => false,                           // remove nav container

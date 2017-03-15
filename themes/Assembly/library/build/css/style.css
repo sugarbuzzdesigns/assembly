@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 04:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 09:32 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7349,8 +7349,40 @@ Menu Button Animations
     transform: rotate(0);
   }
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
     bottom: 50%;
+  }
+}
+@keyframes resetMorphXTop {
+  0% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotate(0);
+  }
+  99% {
+    top: 50%;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+@keyframes resetMorphXBottom {
+  0% {
+    bottom: 50%;
+    transform: rotate(135deg);
+  }
+  99% {
+    bottom: 50%;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
   }
 }
 /*********************
@@ -7727,11 +7759,9 @@ MENU & NAVIGATION STYLES
   position: fixed;
   top: 0;
   right: 0;
-  margin-top: 59px;
-  margin-right: calc(49%/1440*100);
-  width: 30px;
-  height: 30px;
-  z-index: 12;
+  width: 0;
+  height: 0;
+  z-index: 20;
   opacity: 0;
   transition: all .5s;
   pointer-events: none;
@@ -7742,7 +7772,9 @@ MENU & NAVIGATION STYLES
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
   padding-bottom: 50px;
 }
 .main-menu .footer .copyright {
@@ -7763,6 +7795,16 @@ MENU & NAVIGATION STYLES
   right: 0;
   height: 100vh;
   width: 100vw;
+}
+.menu-inner .menu-header {
+  float: left;
+  width: 100%;
+}
+.menu-inner .menu-logo {
+  float: left;
+  width: 373px;
+  margin-top: 50px;
+  margin-left: calc(67%/1440*100);
 }
 
 /*********************
@@ -7790,7 +7832,7 @@ and more scalable.
 .nav li {
   margin-bottom: 0;
   line-height: 1.3;
-  transition: opacity 0.3s 1s, transform 0.3s 1s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
   opacity: 0;
   transform: translate3d(0, 10px, 0);
 }
@@ -7809,6 +7851,9 @@ and more scalable.
 }
 
 /* end .nav */
+.menu-open body {
+  overflow-y: hidden;
+}
 .menu-open .main-menu, .menu-open .nav {
   pointer-events: auto;
 }
@@ -8128,7 +8173,8 @@ header {
   position: relative;
 }
 
-.logo {
+.logo,
+.menu-logo {
   font-size: 0px;
   float: left;
   margin: 0;
@@ -8136,10 +8182,11 @@ header {
   width: 250px;
   height: 50px;
   overflow: hidden;
-  margin-top: calc(8px/414*320);
-  margin-left: calc(2px/414*100);
+  margin-top: calc(4px/414*320);
+  margin-left: calc(8px/414*100);
 }
-.logo a {
+.logo a,
+.menu-logo a {
   height: 100%;
   width: 100%;
   display: block;
@@ -8148,6 +8195,7 @@ header {
   top: 0;
   left: 0;
 }
+
 .logo a img {
   width: 900%;
   display: block;
@@ -8210,12 +8258,15 @@ header {
 }
 
 .main-menu-btn {
-  height: 61px;
-  width: 61px;
+  height: 18px;
+  width: 26px;
   overflow: hidden;
   position: relative;
   margin-top: calc(26px);
   margin-right: calc(20px);
+}
+.main-menu-btn .square-btn {
+  display: none;
 }
 .main-menu-btn .border {
   position: absolute;
@@ -8224,7 +8275,7 @@ header {
   height: 61px;
   width: 61px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s 0.3s;
   border: solid 1px #fff;
   z-index: 2;
 }
@@ -8242,10 +8293,11 @@ header {
   width: 80%;
   position: absolute;
   top: 0;
+  left: 10%;
   background-color: #fff;
   border: none;
   opacity: 0;
-  transition: opacity 0.3s, top 0.5s, bottom 0.5s, transform 0.5s;
+  transition: opacity 0.9s, top 0.5s, bottom 0.5s, transform 0.5s;
   z-index: 10;
 }
 .main-menu-btn .square-btn hr.bottom {
@@ -8261,7 +8313,7 @@ header {
   overflow: hidden;
 }
 .main-menu-btn .square-btn .layer .inner {
-  padding-left: 12px;
+  padding-left: 10px;
   padding-top: 5px;
   position: absolute;
   bottom: 0;
@@ -8296,7 +8348,7 @@ header {
 }
 .main-menu-btn .square-btn .bottom-layer {
   background-color: #000;
-  transition: height 0.5s;
+  transition: height 0.3s;
   height: 0;
   top: auto;
   bottom: 0;
@@ -8323,9 +8375,13 @@ header {
 }
 .no-touch .main-menu-btn.mouseover .letter-n {
   animation-name: moveMenuLetterN;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .no-touch .main-menu-btn.mouseover .letter-u {
   animation-name: moveMenuLetterU;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .no-touch .main-menu-btn.mouseout .inner {
   padding-left: 12px;
@@ -8335,9 +8391,13 @@ header {
 }
 .no-touch .main-menu-btn.mouseout .letter-n {
   animation-name: resetMenuLetterN;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .no-touch .main-menu-btn.mouseout .letter-u {
   animation-name: resetMenuLetterU;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .main-menu-btn svg {
@@ -8350,7 +8410,7 @@ header {
   position: absolute;
   height: 1px;
   width: 100%;
-  background: #000;
+  background: #fff;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -8438,16 +8498,16 @@ header.scroll-overlay {
   width: 100%;
   z-index: 11;
   transition: transform 0.4s ease-in;
+  transform: translate3d(0, 0, 0);
 }
-header.scroll-overlay h1 {
-  background: url(../../images/icons/single-logo.png) no-repeat;
-  background-size: cover;
+header.scroll-overlay .main-menu-btn .bottom-layer .letter {
+  color: #fff;
 }
 header.scroll-overlay.move-out {
   transform: translate(0, -100%);
 }
 header.scroll-overlay.abs {
-  position: absolute;
+  transform: translate3d(0, -100%, 0);
 }
 
 header.dark .main-menu-btn span {
@@ -8476,14 +8536,36 @@ header.dark .svg-logo mask {
 .menu-open .main-menu-btn.animate hr {
   opacity: 1;
   transform-origin: center center;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
 }
 .menu-open .main-menu-btn.animate hr.top {
   animation-name: morphXTop;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 .menu-open .main-menu-btn.animate hr.bottom {
   animation-name: morphXBottom;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+.menu-open .footer {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.menu-close .main-menu-btn.animate hr {
+  opacity: 0;
+}
+.menu-close .main-menu-btn.animate hr.top {
+  animation-name: resetMorphXTop;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+.menu-close .main-menu-btn.animate hr.bottom {
+  animation-name: resetMorphXBottom;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
 }
 
 /*********************
@@ -10502,8 +10584,13 @@ PLUS SIZE (MOBILE) Iphone #+
   HEADER STYLES
   *********************/
   .logo {
-    margin-top: calc(8px);
-    margin-left: calc(2px);
+    margin-top: calc(7px);
+    margin-left: calc(7px);
+  }
+
+  .main-menu-btn {
+    margin-top: 25px;
+    margin-right: 20px;
   }
 
   /*********************
@@ -10893,6 +10980,10 @@ you can add resource intensive styles.
   */
   .nav {
     padding-top: calc(195%/1440*100);
+  }
+
+  .menu-inner {
+    background-size: 52%;
   }
 
   /*********************
@@ -11457,13 +11548,15 @@ you can add resource intensive styles.
   /*********************
   MAIN LOGO
   **********************/
-  .logo {
+  .logo,
+  .menu-logo {
     width: 373px;
     height: 77px;
     margin-top: 50px;
     margin-left: calc(67%/1440*100);
   }
-  .logo .svg-logo {
+  .logo .svg-logo,
+  .menu-logo .svg-logo {
     display: none;
   }
 
@@ -11474,7 +11567,7 @@ you can add resource intensive styles.
     text-align: left;
   }
 
-  .main-menu .menu-inner {
+  .main-menu .nav {
     padding-left: calc(128%/1440*100);
   }
   .main-menu .nav li a {
@@ -11485,15 +11578,21 @@ you can add resource intensive styles.
     display: block;
     width: 100%;
     left: auto;
-    transform: translate(0, 0);
+    transform: translate3d(0, 20px, 0);
     padding: 0;
+    padding-left: calc(130%/1440*100);
     text-align: left;
+    padding-bottom: 70px;
   }
   .main-menu .footer .copyright {
-    margin: 0;
+    margin: 0 0 10px 0;
   }
   .main-menu .footer .copyright a {
     display: block;
+  }
+
+  .menu-open .main-menu .footer {
+    transform: translate3d(0, 0, 0);
   }
 
   /*********************
@@ -11505,6 +11604,9 @@ you can add resource intensive styles.
     max-width: none;
     margin-top: 59px;
     margin-right: calc(49%/1440*100);
+  }
+  .main-menu-btn .square-btn {
+    display: block;
   }
   .main-menu-btn:after {
     pointer-events: none;
@@ -11521,6 +11623,22 @@ you can add resource intensive styles.
   }
   .main-menu-btn.animate .border {
     opacity: 1;
+  }
+  .main-menu-btn.animate .menu-letter {
+    opacity: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+  }
+  .main-menu-btn.animate .letter-n {
+    animation-name: resetMenuLetterN;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .main-menu-btn.animate .letter-u {
+    animation-name: resetMenuLetterU;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
   }
 
   /*********************

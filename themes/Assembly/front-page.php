@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
 	<?php if(is_user_logged_in() || $domain = "byassembly.loc" || $domain = "staging.byassembly.com") : ?>
 	<div class="container">
@@ -6,7 +11,7 @@
 			<header class="light">
 				<h1 class="logo">
 				    <a class="init" href="/">
-				    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover-white.png" alt="">
+				    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
 				    </a>
 				</h1>
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
@@ -41,7 +46,7 @@
 				<div class="inner-bg"></div>
 				<h1 class="logo">
 				    <a class="init" href="/">
-				    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $deviceType; ?>-hover.png" alt="">
+				    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
 				    </a>
 				</h1>
 				<?php include __DIR__ . '/includes/menu-btn.php'; ?>

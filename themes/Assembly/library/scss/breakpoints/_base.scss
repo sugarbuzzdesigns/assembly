@@ -395,11 +395,9 @@ MENU & NAVIGATION STYLES
     position: fixed;
     top: 0;
     right: 0;
-    margin-top: 59px;
-    margin-right: calc(49%/1440*100);
-    width: 30px;
-    height: 30px;
-    z-index: 12;
+    width: 0;
+    height: 0;
+    z-index: 20;
     opacity: 0;
     transition: all .5s;
     pointer-events: none;
@@ -410,7 +408,9 @@ MENU & NAVIGATION STYLES
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		transform: translate(-50%, 0);
+		opacity: 0;
+		transform: translate(-50%, 20px);
+		transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
 		padding-bottom: 50px;
 
 		.copyright {
@@ -434,6 +434,18 @@ MENU & NAVIGATION STYLES
     right: 0;
     height: 100vh;
     width: 100vw;
+
+    .menu-header {
+		float: left;
+		width: 100%;
+    }
+
+    .menu-logo {
+    	float: left;
+    	width: 373px;
+	    margin-top: 50px;
+	    margin-left: calc(67%/1440*100);
+    }
 }
 
 /*********************
@@ -461,8 +473,8 @@ and more scalable.
 		margin-bottom: 0;
 		line-height: 1.3;
 		transition:
-			opacity 0.3s 1s,
-			transform 0.3s 1s;
+			opacity 0.3s 0.3s,
+			transform 0.3s 0.3s;
 		opacity: 0;
 		transform: translate3d(0,10px,0);
 
@@ -490,6 +502,10 @@ and more scalable.
 } /* end .nav */
 
 .menu-open {
+	body {
+		overflow-y: hidden;
+	}
+
 	.main-menu, .nav {
 		pointer-events: auto;
 	}
@@ -855,7 +871,8 @@ header {
 	position: relative;
 }
 
-.logo {
+.logo,
+.menu-logo {
 	font-size: 0px;
 	float: left;
 	margin: 0;
@@ -863,8 +880,8 @@ header {
     width: 250px;
     height: 50px;
     overflow: hidden;
-    margin-top: calc(8px/414*320);
-    margin-left: calc(2px/414*100);
+    margin-top: calc(4px/414*320);
+    margin-left: calc(8px/414*100);
 
     a {
     	height: 100%;
@@ -874,7 +891,11 @@ header {
 		overflow: hidden;
 		top: 0;
 		left: 0;
+	}
+}
 
+.logo {
+	a {
 		img {
 			width: 900%;
 			display: block;
@@ -944,12 +965,16 @@ header {
 }
 
 .main-menu-btn {
-	height: 61px;
-	width: 61px;
+	height: 18px;
+	width: 26px;
 	overflow: hidden;
 	position: relative;
 	margin-top: calc(26px);
 	margin-right: calc(20px);
+
+	.square-btn {
+		display: none;
+	}
 
 	.border {
 		position: absolute;
@@ -958,7 +983,7 @@ header {
 		height: 61px;
 		width: 61px;
 		opacity: 0;
-		transition: opacity 0.5s;
+		transition: opacity 0.5s 0.3s;
 		border: solid 1px #fff;
 		z-index: 2;
 
@@ -978,10 +1003,11 @@ header {
 			width: 80%;
 			position: absolute;
 			top: 0;
+			left: 10%;
 			background-color: #fff;
 			border: none;
 			opacity: 0;
-			transition: opacity 0.3s, top 0.5s, bottom 0.5s, transform 0.5s;
+			transition: opacity 0.9s, top 0.5s, bottom 0.5s, transform 0.5s;
 			z-index: 10;
 
 			&.bottom {
@@ -999,7 +1025,7 @@ header {
 			overflow: hidden;
 
 			.inner {
-				padding-left: 12px;
+				padding-left: 10px;
 				padding-top: 5px;
 				position: absolute;
 				bottom: 0;
@@ -1039,7 +1065,7 @@ header {
 
 		.bottom-layer {
 			background-color: #000;
-			transition: height 0.5s;
+			transition: height 0.3s;
 			height: 0;
 			top: auto;
 			bottom: 0;
@@ -1079,10 +1105,14 @@ header {
 
 		.letter-n {
 			animation-name: moveMenuLetterN;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
 		}
 
 		.letter-u  {
 			animation-name: moveMenuLetterU;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
 		}
 	}
 
@@ -1097,10 +1127,14 @@ header {
 
 		.letter-n {
 			animation-name: resetMenuLetterN;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
 		}
 
 		.letter-u  {
 			animation-name: resetMenuLetterU;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
 		}
 	}
 }
@@ -1115,7 +1149,7 @@ header {
 	position: absolute;
 	height: 1px;
 	width: 100%;
-	background: #000;
+	background: #fff;
 	opacity: 1;
 	left: 0;
 	-webkit-transform: rotate(0deg);
@@ -1210,10 +1244,10 @@ header.scroll-overlay {
     width: 100%;
     z-index: 11;
     transition: transform 0.4s ease-in;
+    transform: translate3d(0,0,0);
 
-    h1 {
-		background: url(../../images/icons/single-logo.png) no-repeat;
-		background-size: cover;
+    .main-menu-btn .bottom-layer .letter {
+    	color: #fff;
     }
 
     &.move-out {
@@ -1221,7 +1255,7 @@ header.scroll-overlay {
     }
 
     &.abs {
-    	position: absolute;
+    	transform: translate3d(0,-100%,0);
     }
 }
 
@@ -1260,29 +1294,57 @@ header.dark {
 			opacity: 0;
 		}
 
-		// .letter {
-		// 	animation-duration: 0.5s;
-		// 	animation-fill-mode: forwards;
-		// }
+		.letter {
+
+		}
 
 		hr {
 			opacity: 1;
 			transform-origin: center center;
-			animation-duration: 0.7s;
-			animation-fill-mode: forwards;
 
 			&.top {
 				animation-name: morphXTop;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.2s;
 			}
 
 			&.bottom {
 				animation-name: morphXBottom;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.2s;
 			}
 		}
 	}
 
+	.footer {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+
 	header.light {
 		// z-index: 10001;
+	}
+}
+
+.menu-close {
+	.main-menu-btn.animate {
+		hr {
+			opacity: 0;
+
+			&.top {
+				animation-name: resetMorphXTop;
+				animation-duration: .5s;
+				animation-fill-mode: forwards;
+			}
+
+			&.bottom {
+				animation-name: resetMorphXBottom;
+				animation-duration: .5s;
+				animation-fill-mode: forwards;
+			}
+		}
 	}
 }
 

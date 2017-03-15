@@ -20,7 +20,8 @@ be seen on the Desktop.
 /*********************
 MAIN LOGO
 **********************/
-.logo {
+.logo,
+.menu-logo {
 	// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
     width: 373px;
     height: 77px;
@@ -47,23 +48,29 @@ MENU & NAVIGATION STYLES
 
 .main-menu {
 	.menu-inner {
-    	padding-left: calc(128%/1440*100);
+
 	}
-	.nav li a {
-		font-size: 37px;
-    	letter-spacing: 0.88px;
+	.nav {
+		padding-left: calc(128%/1440*100);
+
+			li a {
+			font-size: 37px;
+	    	letter-spacing: 0.88px;
+	    }
 	}
 
     .footer {
     	display: block;
 		width: 100%;
 		left: auto;
-		transform: translate(0,0);
+		transform: translate3d(0,20px,0);
 		padding: 0;
+		padding-left: calc(130%/1440*100);
 		text-align: left;
+		padding-bottom: 70px;
 
 		.copyright {
-			margin: 0;
+			margin: 0 0 10px 0;
 
 			a {
 				display: block;
@@ -72,6 +79,13 @@ MENU & NAVIGATION STYLES
     }
 }
 
+.menu-open {
+	.main-menu {
+		.footer {
+			transform: translate3d(0,0,0);
+		}
+	}
+}
 /*********************
 Main Menu BTN
 **********************/
@@ -81,6 +95,10 @@ Main Menu BTN
 	max-width: none;
 	margin-top: 59px;
 	margin-right: calc(49%/1440*100);
+
+	.square-btn {
+		display: block;
+	}
 
 	&:after {
 		pointer-events: none;
@@ -104,20 +122,24 @@ Main Menu BTN
 			opacity: 1;
 		}
 
-		// .menu-letter {
-		// 	opacity: 1;
-		// 	animation-duration: 0.5s;
-		// 	animation-fill-mode: forwards;
-		// 	animation-delay: 0.7s;
-		// }
+		.menu-letter {
+			opacity: 1;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+			animation-delay: 0.7s;
+		}
 
-		// .letter-n {
-		// 	animation-name: moveMenuLetterN;
-		// }
+		.letter-n {
+			animation-name: resetMenuLetterN;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
 
-		// .letter-u  {
-		// 	animation-name: moveMenuLetterU;
-		// }
+		.letter-u  {
+			animation-name: resetMenuLetterU;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
 	}
 }
 

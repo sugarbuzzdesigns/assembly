@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 05:07 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 09:41 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -168,6 +168,9 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				_this.env.$win.trigger('windowResize');
 
 				_this.updateViewportDimensions();
+				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			}, 250));
 
 			$('html').on('loaded', function(){
@@ -175,6 +178,7 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			});
 
 			_this.env.$win.on('scrollstart', function(){
@@ -438,19 +442,19 @@ var assembly = assembly || {};
 
 			function showMenu(){
 				$('html').addClass('menu-open');
+				$('html').removeClass('menu-close');
 
 				$('.main-menu').css({
 					opacity: 1,
 					height: '100vh',
-					width: '100vw',
-				    'margin-top': '0',
-				    'margin-right': '0'
+					width: '100vw'
 				});
 
 				$('.main-menu-btn .letter').addClass('fadeOut');
 				$('.main-menu-btn .border').addClass('fadeOut');
 
-				$('.header-mask.landing-logo').height('auto');
+				$('.header-mask.landing-logo').data('curHeight', $('.header-mask.landing-logo').height());
+				// $('.header-mask.landing-logo').height('auto');
 
 				var queue = $({}); //use the default animation queue
 			    $('nav li').each(function(i, elm) {
@@ -467,14 +471,14 @@ var assembly = assembly || {};
 			};
 
 			function hideMenu(){
+				$('html').addClass('menu-close');
+				$('.header-mask.landing-logo').height($('.header-mask.landing-logo').data('curHeight'));
 				$('nav li').removeClass('show-nav-item');
 
 				$('.main-menu').css({
 					opacity: 0,
 					height: '30px',
-					width: '30px',
-				    'margin-top':' 59px',
-				    'margin-right': 'calc(49%/1440*100)'
+					width: '30px'
 				});
 
 				$('.main-menu-btn .letter').removeClass('fadeOut');
