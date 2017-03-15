@@ -108,8 +108,10 @@ $screenWidth: 320;
 	.loading-copy {
 		text-align: center;
 		position: relative;
+		font-family: 'roboto_monoregular';
 		font-size: 22px;
-		line-height: calc(29/22);
+		letter-spacing: 2.5px;
+		line-height: calc(22/29);
 		color: #fff;
 	}
 
@@ -127,14 +129,6 @@ $screenWidth: 320;
 			top: 0;
 			left: 0;
 		}
-	}
-
-	p {
-		font-family: 'roboto_monoregular';
-		font-size: 22px;
-		letter-spacing: 2.5px;
-		line-height: calc(22/29);
-		color: #fff;
 	}
 
 	div.mesh-bg {

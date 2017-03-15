@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 11:37 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 11:53 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7503,8 +7503,10 @@ SVG Animations
 .loader-wrap .loading-copy {
   text-align: center;
   position: relative;
+  font-family: 'roboto_monoregular';
   font-size: 22px;
-  line-height: calc(29/22);
+  letter-spacing: 2.5px;
+  line-height: calc(22/29);
   color: #fff;
 }
 .loader-wrap .loader {
@@ -7520,13 +7522,6 @@ SVG Animations
   position: absolute;
   top: 0;
   left: 0;
-}
-.loader-wrap p {
-  font-family: 'roboto_monoregular';
-  font-size: 22px;
-  letter-spacing: 2.5px;
-  line-height: calc(22/29);
-  color: #fff;
 }
 .loader-wrap div.mesh-bg {
   background-image: url(../../images/svg/mesh-dot-landing.svg);
