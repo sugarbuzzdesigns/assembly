@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 09:32 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 11:37 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -664,14 +664,10 @@ SERVICES Page
 /*********************
 CASE STUDIES Page
 **********************/
-.page-case-studies .logo {
-  background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init.png);
-}
 .page-case-studies header.scroll-overlay {
   position: absolute;
 }
 .page-case-studies header.scroll-overlay h1 {
-  background-image: url(../../images/icons/single-logo.png);
   margin-left: calc(67%/1440*100);
 }
 .page-case-studies .filter-wrap {
@@ -841,8 +837,8 @@ MAIN LOGO
 .menu-logo {
   width: 373px;
   height: 77px;
-  margin-top: 50px;
-  margin-left: calc(67%/1440*100);
+  margin-top: 48px;
+  margin-left: calc(66%/1440*100);
 }
 .logo .svg-logo,
 .menu-logo .svg-logo {
@@ -863,7 +859,7 @@ MENU & NAVIGATION STYLES
   font-size: 37px;
   letter-spacing: 0.88px;
 }
-.main-menu .footer {
+.main-menu .menu-inner .footer {
   display: block;
   width: 100%;
   left: auto;
@@ -873,10 +869,10 @@ MENU & NAVIGATION STYLES
   text-align: left;
   padding-bottom: 70px;
 }
-.main-menu .footer .copyright {
+.main-menu .menu-inner .footer .copyright {
   margin: 0 0 10px 0;
 }
-.main-menu .footer .copyright a {
+.main-menu .menu-inner .footer .copyright a {
   display: block;
 }
 
@@ -891,7 +887,7 @@ Main Menu BTN
   height: 61px;
   width: 61px;
   max-width: none;
-  margin-top: 59px;
+  margin-top: 51px;
   margin-right: calc(49%/1440*100);
 }
 .main-menu-btn .square-btn {
@@ -1290,7 +1286,6 @@ CASE STUDIES Page
 }
 .page-case-studies .landing .hover-content .logo img {
   display: block;
-  width: 100%;
 }
 .page-case-studies .landing .default-content {
   width: 100%;
@@ -1662,7 +1657,7 @@ CASE STUDIES Page
 ABOUT US Page
 **********************/
 .page-about-us .landing {
-  padding-top: 137px;
+  padding-top: 127px;
 }
 .page-about-us .landing + .mesh-bg {
   width: 44.72%;
@@ -1670,7 +1665,7 @@ ABOUT US Page
   left: 0;
   margin: 192px 0 0 13.75%;
 }
-.page-about-us h1 {
+.page-about-us .section-header {
   font-size: rem(72);
   line-height: 1;
   margin: 0 0 6.7% 8.6%;
@@ -1679,6 +1674,9 @@ ABOUT US Page
   width: 23.03%;
   padding: 2.45% 5% 2.2% 0;
   margin: 0 0 4.2% 8.6%;
+}
+.page-about-us header.scroll-overlay {
+  position: static;
 }
 .page-about-us .years-experience {
   top: -26px;
@@ -2620,27 +2618,27 @@ CONTACT
   width: calc(100%/3);
   float: left;
 }
-.page-contact .footer {
+.page-contact .contact-footer {
   border-top: dashed 1px #9a9a9a;
   padding: 54px 0 45px 0;
 }
-.page-contact .footer .contact-info {
+.page-contact .contact-footer .contact-info {
   display: none;
 }
-.page-contact .footer .assembly-logo-icon {
+.page-contact .contact-footer .assembly-logo-icon {
   order: 2;
   margin: 0;
   height: 35px;
   flex: 1;
 }
-.page-contact .footer .social {
+.page-contact .contact-footer .social {
   order: 3;
   padding: 0;
   flex: 1;
   text-align: right;
   margin-right: 3.125%;
 }
-.page-contact .footer .copyright {
+.page-contact .contact-footer .copyright {
   color: #737373;
   order: 1;
   margin: 0;

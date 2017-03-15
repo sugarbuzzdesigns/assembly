@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="main-content">
+		<section class="main-content" data-to-top-anchor>
 			<header class="scroll-overlay dark">
 				<div class="inner-bg"></div>
 				<h1 class="logo">

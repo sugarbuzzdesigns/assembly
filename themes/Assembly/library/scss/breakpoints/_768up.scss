@@ -530,16 +530,11 @@ SERVICES Page
 CASE STUDIES Page
 **********************/
 .page-case-studies {
-	.logo {
-		background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init.png);
-	}
-
 	header.scroll-overlay {
 		position: absolute;
 	}
 
 	header.scroll-overlay h1 {
-		background-image: url(../../images/icons/single-logo.png);
 		margin-left: calc(67%/1440*100);
 	}
 

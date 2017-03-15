@@ -1,15 +1,20 @@
 <?php get_header(); ?>
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
 <section class="landing">
 	<div class="landing-inner">
 		<div class="modular case-study-category">
 			<div class="square hover-spot"></div>
 			<div class="hover-content">
-				<header class="light section-header no-mobile desktop">
-				    <h2 class="logo">
-				        <a href="/">
-				        	<img src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/single-logo-white.png" alt="">
-				        </a>
-				    </h2>
+				<header class="dark">
+					<h1 class="logo">
+					    <a class="init" href="/">
+					    	<img id="landing-logo-hover-content" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
+					    </a>
+					</h1>
 				</header>
 				<h3>
 					<span data-letter="m">m</span>
@@ -27,10 +32,12 @@
 			<div class="default-content">
 				<div class="bg layer" data-depth="0.10"></div>
 				<div class="inner">
-					<header class="dark section-header interior no-mobile desktop landing-logo">
-					    <h2 class="logo">
-					        <a href="/"></a>
-					    </h2>
+					<header class="dark">
+						<h1 class="logo">
+						    <a class="init" href="/">
+						    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+						    </a>
+						</h1>
 					</header>
 					<h3>
 						<span data-letter="m">m</span>
@@ -84,12 +91,14 @@
 	</div>
 </section>
 
-<section class="content">
+<section class="content" data-to-top-anchor>
 	<div class="content-inner">
-		<header class="scroll-overlay">
+		<header class="scroll-overlay dark">
 			<div class="inner-bg"></div>
 			<h1 class="logo">
-			    <a href="/"></a>
+			    <a class="init" href="/">
+			    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+			    </a>
 			</h1>
 			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 		</header>

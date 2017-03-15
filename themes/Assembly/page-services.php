@@ -1,6 +1,19 @@
 <?php get_header(); ?>
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
 <?php include 'includes/page-data/service-page-data.php'; ?>
-<?php include 'includes/header-dark-interior.php'; ?>
+	<header class="scroll-overlay dark">
+		<div class="inner-bg"></div>
+		<h1 class="logo">
+		    <a class="init" href="/">
+		    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+		    </a>
+		</h1>
+		<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+	</header>
 	<nav class="filter-menu no-mobile">
 		<div class="active" data-value="all"><a href="#">All</a></div>
 		<div data-value="visualisation"><a href="#">Visualisation</a></div>
@@ -11,7 +24,7 @@
 		<div data-value="imagine-experience"><a href="#">Imagine Experience</a></div>
 	</nav>
 	<div class="mesh-bg dark wide"></div>
-	<h1>services</h1>
+	<h1 class="section-header">services</h1>
 	<section>
 		<div class="filter-wrap">
 			<select class="select-filter">

@@ -14,7 +14,10 @@ var assembly = assembly || {};
 		bindEvents: function(){
 			var _this = this;
 
-			_this.$mainMenuBtn.on('click', function(){
+			_this.$mainMenuBtn.on('click', function(evt){
+				evt.preventDefault();
+				evt.stopPropagation();
+
 				_this.toggleMainMenu(this);
 			});
 
@@ -24,9 +27,10 @@ var assembly = assembly || {};
 				}
 			});
 
-			$('.home .to-top').on('click', function(){
+			$('.to-top').on('click', function(){
+				var anchor = $('[data-to-top-anchor]').length ? $('[data-to-top-anchor]').offset().top : 0
 				$('html, body').animate({
-					scrollTop: $('.main-content').offset().top
+					scrollTop: anchor
 				})
 			});
 		},

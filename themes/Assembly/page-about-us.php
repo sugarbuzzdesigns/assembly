@@ -1,7 +1,20 @@
 <?php get_header(); ?>
-	<?php include 'includes/header-dark.php'; ?>
-	<section class="landing">
-		<h1>about us</h1>
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
+	<header class="scroll-overlay dark">
+		<div class="inner-bg"></div>
+		<h1 class="logo">
+		    <a class="init" href="/">
+		    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+		    </a>
+		</h1>
+		<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+	</header>
+	<section class="landing" data-to-top-anchor>
+		<h1 class="section-header">about us</h1>
 		<div class="callout">
 			<h3>Experience To Build On</h3>
 			<p>Our team boasts more than 80 years of experience creating kits of temporary and custom designed structures for experiential activations, festivals, and sporting events.</p>

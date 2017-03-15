@@ -1,8 +1,21 @@
 <?php get_header(); ?>
 <?php include 'includes/page-data/contact-page-data.php'; ?>
-
+<?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
+	$devicePrefix = 'mobile';
+} else {
+	$devicePrefix = 'desktop';
+} ?>
 <section class="landing">
-	<?php include 'includes/header-light.php'; ?>
+	<div class="header-mask landing-logo">
+		<header class="light">
+			<h1 class="logo">
+			    <a class="init" href="/">
+			    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
+			    </a>
+			</h1>
+			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+		</header>
+	</div>
 	<form action="" method="post" accept-charset="utf-8">
 		<div class="form-viewport">
 			<div class="inputs">

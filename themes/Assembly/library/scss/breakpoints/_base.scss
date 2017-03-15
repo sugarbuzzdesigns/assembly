@@ -295,7 +295,7 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
-	transition: color 1.5s;
+	transition: color .5s;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -403,27 +403,30 @@ MENU & NAVIGATION STYLES
     pointer-events: none;
     overflow: hidden;
 
-    .footer {
-    	background: transparent;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		opacity: 0;
-		transform: translate(-50%, 20px);
-		transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
-		padding-bottom: 50px;
 
-		.copyright {
-			margin-bottom: 35px;
-			font-size: 12px;
-			line-height: 21px;
+	.menu-inner {
+	    .footer {
+	    	background: transparent;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			opacity: 0;
+			transform: translate(-50%, 20px);
+			transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+			padding-bottom: 50px;
 
-			a {
-				color: #C6C6C6;
-				text-decoration: none;
+			.copyright {
+				margin-bottom: 35px;
+				font-size: 12px;
+				line-height: 21px;
+
+				a {
+					color: #C6C6C6;
+					text-decoration: none;
+				}
 			}
-		}
-    }
+	    }
+	}
 }
 
 .menu-inner {
@@ -485,6 +488,11 @@ and more scalable.
 			display: inline-block;
 			color: #6d6d6d;
 			text-decoration: none;
+
+			&:hover {
+				color: #fff;
+				transition: color 0.3s;
+			}
 		}
 	} /* end .menu li */
 
@@ -1264,6 +1272,10 @@ header.dark {
 		background-color: #000;
 	}
 
+	.main-menu-btn .bottom-layer .letter {
+		color: #fff;
+	}
+
 	#mask-2, .menu-mask,
 	#menu-path-1 {
 		fill: #000;
@@ -1318,9 +1330,11 @@ header.dark {
 		}
 	}
 
-	.footer {
-		opacity: 1;
-		transform: translate(-50%, 0);
+	.menu-inner {
+		.footer {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
 	}
 
 	header.light {
@@ -2300,7 +2314,7 @@ CONTACT
 		}
 	}
 
-	.footer {
+	.contact-footer {
 		padding: 14px 3% 10%;
 		background-color: $white;
 
@@ -2459,6 +2473,7 @@ CASE STUDIES Page
 		    color: #000;
 			transition: color .7s, transform 1s linear;
 			transform: translate3d(0,0,0);
+			pointer-events: none;
 
 			span {
 				display: block;
@@ -2949,7 +2964,7 @@ ABOUT US Page
 	background: #fff;
 
 	.logo {
-		background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init.png);
+
 	}
 
 	.landing {
@@ -2989,11 +3004,12 @@ ABOUT US Page
 		margin: 0 0 13.5% 28.74%;
 	}
 
-	h1 {
+	.section-header {
 		position: relative;
 		z-index: 1;
 		font-size: rem(35);
 		margin: 0 0 11.5% 10%;
+		overflow: hidden;
 	}
 
 	.callout {

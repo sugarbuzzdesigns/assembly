@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 09:32 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 11:37 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7667,7 +7667,7 @@ LINK STYLES
 *********************/
 a, a:visited {
   color: #000;
-  transition: color 1.5s;
+  transition: color .5s;
   /* on hover */
   /* on click */
   /* mobile tap color */
@@ -7767,7 +7767,7 @@ MENU & NAVIGATION STYLES
   pointer-events: none;
   overflow: hidden;
 }
-.main-menu .footer {
+.main-menu .menu-inner .footer {
   background: transparent;
   position: absolute;
   bottom: 0;
@@ -7777,12 +7777,12 @@ MENU & NAVIGATION STYLES
   transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
   padding-bottom: 50px;
 }
-.main-menu .footer .copyright {
+.main-menu .menu-inner .footer .copyright {
   margin-bottom: 35px;
   font-size: 12px;
   line-height: 21px;
 }
-.main-menu .footer .copyright a {
+.main-menu .menu-inner .footer .copyright a {
   color: #C6C6C6;
   text-decoration: none;
 }
@@ -7843,6 +7843,10 @@ and more scalable.
   display: inline-block;
   color: #6d6d6d;
   text-decoration: none;
+}
+.nav li a:hover {
+  color: #fff;
+  transition: color 0.3s;
 }
 .nav li.current-menu-item a,
 .nav li.current_page_item a,
@@ -8513,6 +8517,9 @@ header.scroll-overlay.abs {
 header.dark .main-menu-btn span {
   background-color: #000;
 }
+header.dark .main-menu-btn .bottom-layer .letter {
+  color: #fff;
+}
 header.dark #mask-2, header.dark .menu-mask,
 header.dark #menu-path-1 {
   fill: #000;
@@ -8549,7 +8556,7 @@ header.dark .svg-logo mask {
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
 }
-.menu-open .footer {
+.menu-open .menu-inner .footer {
   opacity: 1;
   transform: translate(-50%, 0);
 }
@@ -9343,21 +9350,21 @@ CONTACT
   color: #000000;
   letter-spacing: 0.92px;
 }
-.page-contact .footer {
+.page-contact .contact-footer {
   padding: 14px 3% 10%;
   background-color: #fff;
 }
-.page-contact .footer .assembly-logo-icon .main-path {
+.page-contact .contact-footer .assembly-logo-icon .main-path {
   fill: #000;
 }
-.page-contact .footer .contact-info a {
+.page-contact .contact-footer .contact-info a {
   display: block;
   text-decoration: none;
   font-family: 'roboto_monoregular';
   font-size: 0.6875rem;
   margin-bottom: 20px;
 }
-.page-contact .footer .contact-info a[href^="tel:"] {
+.page-contact .contact-footer .contact-info a[href^="tel:"] {
   margin-bottom: 50px;
 }
 
@@ -9458,6 +9465,7 @@ CASE STUDIES Page
   color: #000;
   transition: color .7s, transform 1s linear;
   transform: translate3d(0, 0, 0);
+  pointer-events: none;
 }
 .page-case-studies .landing h3 span {
   display: block;
@@ -10178,9 +10186,6 @@ ABOUT US Page
 .page-about-us {
   background: #fff;
 }
-.page-about-us .logo {
-  background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-mobile-init.png);
-}
 .page-about-us .landing {
   position: relative;
   padding-top: 16.4%;
@@ -10211,11 +10216,12 @@ ABOUT US Page
   width: 64.98%;
   margin: 0 0 13.5% 28.74%;
 }
-.page-about-us h1 {
+.page-about-us .section-header {
   position: relative;
   z-index: 1;
   font-size: 2.1875rem;
   margin: 0 0 11.5% 10%;
+  overflow: hidden;
 }
 .page-about-us .callout {
   width: 67.63%;
@@ -10763,7 +10769,7 @@ PLUS SIZE (MOBILE) Iphone #+
     margin-top: 27%;
     height: 435px;
   }
-  .page-about-us h1 {
+  .page-about-us .section-header {
     font-size: 2.625rem;
     line-height: 1.74;
   }
@@ -11368,14 +11374,10 @@ you can add resource intensive styles.
   /*********************
   CASE STUDIES Page
   **********************/
-  .page-case-studies .logo {
-    background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init.png);
-  }
   .page-case-studies header.scroll-overlay {
     position: absolute;
   }
   .page-case-studies header.scroll-overlay h1 {
-    background-image: url(../../images/icons/single-logo.png);
     margin-left: calc(67%/1440*100);
   }
   .page-case-studies .filter-wrap {
@@ -11552,8 +11554,8 @@ you can add resource intensive styles.
   .menu-logo {
     width: 373px;
     height: 77px;
-    margin-top: 50px;
-    margin-left: calc(67%/1440*100);
+    margin-top: 48px;
+    margin-left: calc(66%/1440*100);
   }
   .logo .svg-logo,
   .menu-logo .svg-logo {
@@ -11574,7 +11576,7 @@ you can add resource intensive styles.
     font-size: 37px;
     letter-spacing: 0.88px;
   }
-  .main-menu .footer {
+  .main-menu .menu-inner .footer {
     display: block;
     width: 100%;
     left: auto;
@@ -11584,10 +11586,10 @@ you can add resource intensive styles.
     text-align: left;
     padding-bottom: 70px;
   }
-  .main-menu .footer .copyright {
+  .main-menu .menu-inner .footer .copyright {
     margin: 0 0 10px 0;
   }
-  .main-menu .footer .copyright a {
+  .main-menu .menu-inner .footer .copyright a {
     display: block;
   }
 
@@ -11602,7 +11604,7 @@ you can add resource intensive styles.
     height: 61px;
     width: 61px;
     max-width: none;
-    margin-top: 59px;
+    margin-top: 51px;
     margin-right: calc(49%/1440*100);
   }
   .main-menu-btn .square-btn {
@@ -12001,7 +12003,6 @@ you can add resource intensive styles.
   }
   .page-case-studies .landing .hover-content .logo img {
     display: block;
-    width: 100%;
   }
   .page-case-studies .landing .default-content {
     width: 100%;
@@ -12373,7 +12374,7 @@ you can add resource intensive styles.
   ABOUT US Page
   **********************/
   .page-about-us .landing {
-    padding-top: 137px;
+    padding-top: 127px;
   }
   .page-about-us .landing + .mesh-bg {
     width: 44.72%;
@@ -12381,7 +12382,7 @@ you can add resource intensive styles.
     left: 0;
     margin: 192px 0 0 13.75%;
   }
-  .page-about-us h1 {
+  .page-about-us .section-header {
     font-size: 4.5rem;
     line-height: 1;
     margin: 0 0 6.7% 8.6%;
@@ -12390,6 +12391,9 @@ you can add resource intensive styles.
     width: 23.03%;
     padding: 2.45% 5% 2.2% 0;
     margin: 0 0 4.2% 8.6%;
+  }
+  .page-about-us header.scroll-overlay {
+    position: static;
   }
   .page-about-us .years-experience {
     top: -26px;
@@ -13331,27 +13335,27 @@ you can add resource intensive styles.
     width: calc(100%/3);
     float: left;
   }
-  .page-contact .footer {
+  .page-contact .contact-footer {
     border-top: dashed 1px #9a9a9a;
     padding: 54px 0 45px 0;
   }
-  .page-contact .footer .contact-info {
+  .page-contact .contact-footer .contact-info {
     display: none;
   }
-  .page-contact .footer .assembly-logo-icon {
+  .page-contact .contact-footer .assembly-logo-icon {
     order: 2;
     margin: 0;
     height: 35px;
     flex: 1;
   }
-  .page-contact .footer .social {
+  .page-contact .contact-footer .social {
     order: 3;
     padding: 0;
     flex: 1;
     text-align: right;
     margin-right: 3.125%;
   }
-  .page-contact .footer .copyright {
+  .page-contact .contact-footer .copyright {
     color: #737373;
     order: 1;
     margin: 0;

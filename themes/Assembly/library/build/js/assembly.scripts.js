@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 09:41 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 10:20 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -169,6 +169,7 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 				_this.updateViewportDimensions();
 				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			}, 250));
@@ -177,6 +178,7 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				$(this).addClass('loaded');
 
 				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 			});
@@ -243,7 +245,7 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				loadImage(_this, $img);
 			});
 
-			if ($img[0].complete) {
+			if (typeof $img[0] != 'undefined' && $img[0].complete) {
 				loadImage(_this, $img);
 			}
 
@@ -414,7 +416,10 @@ var assembly = assembly || {};
 		bindEvents: function(){
 			var _this = this;
 
-			_this.$mainMenuBtn.on('click', function(){
+			_this.$mainMenuBtn.on('click', function(evt){
+				evt.preventDefault();
+				evt.stopPropagation();
+
 				_this.toggleMainMenu(this);
 			});
 
@@ -424,9 +429,10 @@ var assembly = assembly || {};
 				}
 			});
 
-			$('.home .to-top').on('click', function(){
+			$('.to-top').on('click', function(){
+				var anchor = $('[data-to-top-anchor]').length ? $('[data-to-top-anchor]').offset().top : 0
 				$('html, body').animate({
-					scrollTop: $('.main-content').offset().top
+					scrollTop: anchor
 				})
 			});
 		},

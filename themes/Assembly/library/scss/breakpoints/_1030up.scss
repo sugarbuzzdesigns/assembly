@@ -22,11 +22,10 @@ MAIN LOGO
 **********************/
 .logo,
 .menu-logo {
-	// background-image: url(../../images/sprites/Assembly_Logo_TempSpaces-desktop-init-white.png);
     width: 373px;
     height: 77px;
-    margin-top: 50px;
-    margin-left: calc(67%/1440*100);
+    margin-top: 48px;
+    margin-left: calc(66%/1440*100);
 
     a {
 		img {
@@ -47,9 +46,6 @@ MENU & NAVIGATION STYLES
 }
 
 .main-menu {
-	.menu-inner {
-
-	}
 	.nav {
 		padding-left: calc(128%/1440*100);
 
@@ -59,24 +55,26 @@ MENU & NAVIGATION STYLES
 	    }
 	}
 
-    .footer {
-    	display: block;
-		width: 100%;
-		left: auto;
-		transform: translate3d(0,20px,0);
-		padding: 0;
-		padding-left: calc(130%/1440*100);
-		text-align: left;
-		padding-bottom: 70px;
+	.menu-inner {
+	    .footer {
+	    	display: block;
+			width: 100%;
+			left: auto;
+			transform: translate3d(0,20px,0);
+			padding: 0;
+			padding-left: calc(130%/1440*100);
+			text-align: left;
+			padding-bottom: 70px;
 
-		.copyright {
-			margin: 0 0 10px 0;
+			.copyright {
+				margin: 0 0 10px 0;
 
-			a {
-				display: block;
+				a {
+					display: block;
+				}
 			}
-		}
-    }
+	    }
+	}
 }
 
 .menu-open {
@@ -93,7 +91,7 @@ Main Menu BTN
 	height: 61px;
 	width: 61px;
 	max-width: none;
-	margin-top: 59px;
+	margin-top: 51px;
 	margin-right: calc(49%/1440*100);
 
 	.square-btn {
@@ -588,7 +586,6 @@ CASE STUDIES Page
 
 				img {
 					display: block;
-					width: 100%;
 				}
 			}
 		}
@@ -667,7 +664,7 @@ ABOUT US Page
 **********************/
 .page-about-us {
 	.landing {
-    	padding-top: 137px;
+    	padding-top: 127px;
 
 		& + .mesh-bg {
 		    width: 44.72%;
@@ -677,7 +674,7 @@ ABOUT US Page
 		}
 	}
 
-	h1 {
+	.section-header {
 		font-size: rem(72);
 		line-height: 1;
     	margin: 0 0 6.7% 8.6%;
@@ -687,6 +684,10 @@ ABOUT US Page
 	    width: 23.03%;
    		padding: 2.45% 5% 2.2% 0;
     	margin: 0 0 4.2% 8.6%;
+	}
+
+	header.scroll-overlay {
+		position: static;
 	}
 
 	// about us years exp
@@ -1895,7 +1896,7 @@ CONTACT
 		}
 	}
 
-	.footer {
+	.contact-footer {
 		border-top: dashed 1px #9a9a9a;
 		padding: 54px 0 45px 0;
 
