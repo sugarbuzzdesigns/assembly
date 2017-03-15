@@ -102,7 +102,7 @@
 
 <div id="contact-map"></div>
 
-<div class="contact-info no-mobile">
+<div class="contact-us no-mobile">
 	<a class="col" href="mailto:hello@byassembly.com">hello@byassembly.com</a>
 	<a class="col" href="tel:+01-678-287-7493" title="Phone Number">678.287.7493</a>
 	<span class="col">33.76622 - 84.57548</span>

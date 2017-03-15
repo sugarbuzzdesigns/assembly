@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 11:53 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-15 10:50 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9336,10 +9336,10 @@ CONTACT
   margin-right: 0;
   cursor: pointer;
 }
-.page-contact .contact-info {
+.page-contact .contact-us {
   background: #fff;
 }
-.page-contact .contact-info a, .page-contact .contact-info span {
+.page-contact .contact-us a, .page-contact .contact-us span {
   font-size: 0.75rem;
   text-decoration: none;
   color: #000000;
@@ -13312,19 +13312,19 @@ you can add resource intensive styles.
     margin: 0;
     padding: 0;
   }
-  .page-contact .contact-info {
+  .page-contact .contact-us {
     padding-top: 100px;
     width: 100%;
     overflow: hidden;
     background: #fff;
   }
-  .page-contact .contact-info.no-mobile {
+  .page-contact .contact-us.no-mobile {
     display: block;
   }
-  .page-contact .contact-info a, .page-contact .contact-info span {
+  .page-contact .contact-us a, .page-contact .contact-us span {
     color: #000000;
   }
-  .page-contact .contact-info .col {
+  .page-contact .contact-us .col {
     text-align: center;
     display: block;
     width: calc(100%/3);

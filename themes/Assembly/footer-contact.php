@@ -1,4 +1,4 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer class="footer contact-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<?php include __DIR__ . '/library/images/svg/assembly-svg-logo-icon.svg'; ?>
 
 				<div class="contact-info">
