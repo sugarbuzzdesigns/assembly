@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 11:58 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 12:49 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11027,7 +11027,6 @@ ABOUT US Page
 }
 .page-about-us .scroll-overlay {
   background: rgba(255, 255, 255, 0.8);
-  padding-bottom: 20px;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s;
@@ -11055,7 +11054,7 @@ ABOUT US Page
   height: calc(428px/414*320);
 }
 .page-about-us .years-experience {
-  top: 97px;
+  top: 57px;
   left: -45px;
 }
 .page-about-us .years-experience .years-experience-numbers {
@@ -11385,6 +11384,16 @@ a[href="/case-studies"] svg {
   /*********************
   ABOUT US Page
   **********************/
+  .page-about-us .intro-years-experience .years-experience-numbers {
+    font-size: 190px;
+    line-height: 0.98;
+  }
+  .page-about-us .intro-years-experience .years-experience-text {
+    top: 218px;
+    left: 58px;
+    right: auto;
+    font-size: 12px;
+  }
   .page-about-us .employees .years-experience .years-experience-text {
     right: -14.8%;
   }
@@ -11650,13 +11659,19 @@ PLUS SIZE (MOBILE) Iphone #+
   .page-about-us .video img {
     width: 100%;
   }
-  .page-about-us .years-experience {
-    top: 45px;
+  .page-about-us .intro-years-experience {
+    top: 78px;
     left: -60px;
   }
-  .page-about-us .years-experience .years-experience-text {
-    top: 258px;
-    left: 69px;
+  .page-about-us .intro-years-experience .years-experience-numbers {
+    font-size: 230px;
+    line-height: 0.95;
+  }
+  .page-about-us .intro-years-experience .years-experience-text {
+    top: 266px;
+    left: 78px;
+    right: auto;
+    font-size: 12px;
   }
   .page-about-us .projects .carousel .tile-inner {
     padding: 0 18% 0 11%;
@@ -12013,6 +12028,9 @@ you can add resource intensive styles.
     clear: none;
     float: none;
     width: 64.98%;
+  }
+  .page-about-us .scroll-overlay {
+    padding-bottom: 20px;
   }
 
   /*********************
@@ -13933,6 +13951,7 @@ you can add resource intensive styles.
     line-height: 1;
     color: #221f20;
     margin-bottom: 3px;
+    text-transform: uppercase;
   }
   .page-about-us .employee-list .employee .employee-title {
     color: #7d7d7d;

@@ -325,13 +325,20 @@ ABOUT US Page
     	}
 	}
 
-	.years-experience {
-		top: 45px;
+	.intro-years-experience {
+		top: 78px;
 		left: -60px;
 
+		.years-experience-numbers {
+			font-size: 230px;
+			line-height: 0.95;
+		}
+
 		.years-experience-text {
-		    top: 258px;
-		    left: 69px;
+		    top: 266px;
+		    left: 78px;
+		    right: auto;
+		    font-size: 12px;
 		}
 	}
 

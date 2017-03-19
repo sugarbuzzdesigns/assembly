@@ -21,7 +21,7 @@
 		</div>
 	</section>
 	<div class="mesh-bg dark wide"></div>
-	<div class="years-experience">
+	<div class="years-experience intro-years-experience">
 		<div class="years-experience-numbers">
 			<span class="num">8</span>
 			<span class="num">0</span>
