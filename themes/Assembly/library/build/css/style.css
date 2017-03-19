@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-18 05:04 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 08:17 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8687,7 +8687,7 @@ HOME PAGE STYLES
 }
 .home .landing .landing-arrow .arrow {
   transform: translate3d(0, -10px, 0);
-  animation: bounceArrow 2s linear infinite;
+  animation: bounceArrow 3s linear infinite;
 }
 .home .landing .landing-arrow .arrow svg {
   display: block;
@@ -8702,16 +8702,22 @@ HOME PAGE STYLES
 }
 @keyframes bounceArrow {
   0% {
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -7px, 0);
   }
-  10% {
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+  55% {
     transform: translate3d(0, 0, 0);
   }
-  90% {
+  70% {
     transform: translate3d(0, 0, 0);
+  }
+  80% {
+    transform: translate3d(0, -7px, 0);
   }
   100% {
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -7px, 0);
   }
 }
 .home .landing .landing-inner {

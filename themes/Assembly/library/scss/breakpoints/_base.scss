@@ -1484,7 +1484,7 @@ HOME PAGE STYLES
 
 			.arrow {
 				transform: translate3d(0,-10px,0);
-				animation: bounceArrow 2s linear infinite;
+				animation: bounceArrow 3s linear infinite;
 
 			    svg {
 			    	display: block;
@@ -1503,19 +1503,27 @@ HOME PAGE STYLES
 
 		@keyframes bounceArrow {
 			0% {
-				transform: translate3d(0,-10px,0);
+				transform: translate3d(0,-7px,0);
 			}
 
-			10% {
+			50% {
+				transform: translate3d(0,-7px,0);
+			}
+
+			55% {
 				transform: translate3d(0,0,0);
 			}
 
-			90% {
+			70% {
 				transform: translate3d(0,0,0);
+			}
+
+			80% {
+				transform: translate3d(0,-7px,0);
 			}
 
 			100% {
-				transform: translate3d(0,-10px,0);
+				transform: translate3d(0,-7px,0);
 			}
 		}
 

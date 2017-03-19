@@ -78,7 +78,7 @@ var assembly = assembly || {};
 			}
 
 
-			if(this.currentScroll >= ($('.main-content').offset().top)){
+			if(this.currentScroll >= ($('.main-content').offset().top + 10)){
 				$('.scroll-overlay').addClass('abs');
 			} else {
 				$('.scroll-overlay').removeClass('abs');
@@ -150,6 +150,11 @@ var assembly = assembly || {};
 				$('.scroll-overlay').removeClass('going-down');
 			});
 
+			$('.landing-arrow').on('click', function(){
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 700, 'easeInQuad');
+			});
 		 //   	$('h2').css({
 		 //   		transform: 'translate3d(0,0,0)'
 		 //   	});
