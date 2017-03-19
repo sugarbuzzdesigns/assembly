@@ -669,6 +669,8 @@ CASE STUDIES Page
 ABOUT US Page
 **********************/
 .page-about-us {
+	padding-top: 145px;
+
 	.landing {
     	padding-top: 127px;
 
@@ -690,10 +692,6 @@ ABOUT US Page
 	    width: 23.03%;
    		padding: 2.45% 5% 2.2% 0;
     	margin: 0 0 4.2% 8.6%;
-	}
-
-	header.scroll-overlay {
-		position: static;
 	}
 
 	// about us years exp
@@ -1310,18 +1308,12 @@ SERVICES Page
 **********************/
 .page-services {
 
-	h1 {
-		font-size: rem(72);
-    	margin: 122px 0 0 8.43%;
-		width: auto;
+	.section-header {
+
 	}
 
 	.mesh-bg {
-		top: 0;
-		width: 53.96%;
-		height: 316px;
-		margin-top: 15%;
-		margin-left: 13.194%;
+
 	}
 
 	.filter-menu {
@@ -1333,9 +1325,11 @@ SERVICES Page
 	    z-index: 10;
 	    opacity: 0;
 	    background: #fff;
+	    pointer-events: none;
 
 	    &.show {
 	    	opacity: 1;
+	    	pointer-events: all;
 	    }
 
 		div {

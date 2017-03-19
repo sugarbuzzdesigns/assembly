@@ -331,8 +331,6 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 			        	cb();
 			        }
 		        }
-
-		        console.log($img.data('running'));
 		    }
 		},
 

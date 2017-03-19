@@ -905,6 +905,7 @@ header {
 			top: 0;
 			left: 0;
 			transform: translate3d(0,0,0);
+			pointer-events: none;
 		}
     }
 
@@ -2866,7 +2867,21 @@ SERVICES Page
 		}
 	}
 
-	h1 {
+	.scroll-overlay {
+		background: rgba(255,255,255,0.8);
+		transform: translate3d(0,0,0);
+		transition: transform 0.5s;
+
+		&.going-down {
+			transform: translate3d(0,-100%,0);
+		}
+
+		&.going-up {
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	.section-header {
 		font-family: 'pangrambold';
 		font-size: rem(32);
 		margin: 24% auto 11%;

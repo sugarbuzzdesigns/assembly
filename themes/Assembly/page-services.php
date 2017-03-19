@@ -1,10 +1,10 @@
 <?php get_header(); ?>
+<?php include 'includes/page-data/service-page-data.php'; ?>
 <?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
 	$devicePrefix = 'mobile';
 } else {
 	$devicePrefix = 'desktop';
 } ?>
-<?php include 'includes/page-data/service-page-data.php'; ?>
 	<header class="scroll-overlay dark">
 		<div class="inner-bg"></div>
 		<h1 class="logo">

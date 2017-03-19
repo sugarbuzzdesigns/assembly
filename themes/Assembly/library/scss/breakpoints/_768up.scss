@@ -242,6 +242,8 @@ SERVICES SECTION
 About Us Page
 **********************/
 .page-about-us {
+    padding-top: 125px;
+
 	.video.module {
 		margin: 0 0 13.5% 28.74%;
 		clear: none;
@@ -259,17 +261,18 @@ SERVICES Page
 **********************/
 .page-services {
 
-	h1 {
+	.section-header {
 		font-size: rem(72);
-    	margin: 122px 0 0 8.43%;
+    	margin: 242px 0 0 8.43%;
 		width: auto;
+		letter-spacing: 1.7px;
 	}
 
 	.mesh-bg {
 		top: 0;
 		width: 53.96%;
 		height: 316px;
-		margin-top: 15%;
+		margin-top: 216px;
 		margin-left: 13.194%;
 	}
 
@@ -316,6 +319,7 @@ SERVICES Page
 		    clear: left;
 		    float: left;
 		    margin-bottom: 0;
+		    margin-left: 0;
 		}
 
 		&.interior-buildouts {
@@ -324,6 +328,7 @@ SERVICES Page
 			margin-right: 10.63%;
 			margin-top: 124px;
 			margin-bottom: 0;
+			margin-left: 0;
 			clear: right;
 
 			.mesh-bg {
@@ -452,10 +457,18 @@ SERVICES Page
 				float: left;
 				margin-left: 7.01%;
 				margin-top: 260px;
-    			margin-bottom: 227px;
+    			margin-bottom: 0;
 			    font-size: rem(11);
 			    line-height: 1.82;
 				letter-spacing: 0.97px;
+			}
+
+
+			.tile {
+				.tile-inner {
+					margin: 0;
+					width: 100%;
+				}
 			}
 
 			.intro-tile {
@@ -484,6 +497,12 @@ SERVICES Page
 				margin-left: 15.069%;
 				float: left;
 				margin-bottom: 0;
+
+				&.right {
+					float: right;
+					margin-right: 15.42%;
+					margin-top: 8px;
+				}
 			}
 
 			.tile-2 {
@@ -501,10 +520,71 @@ SERVICES Page
 
 			.content-1 {
 				.mesh-bg {
-				    top: -78px;
+				    top: 45px;
 				    right: -88px;
-				    width: 355px;
-				    height: 355px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				width: 22.22%;
+				clear: right;
+				margin-top: 19px;
+				padding-bottom: 170px;
+
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+		}
+
+		.permitting-wrapper {
+			width: 100%;
+
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
 				}
 			}
 
@@ -512,8 +592,236 @@ SERVICES Page
 				.mesh-bg {
 				    width: 562px;
 				    right: auto;
-				    bottom: -175px;
-				    height: 355px;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+		}
+
+		.team-player-wrapper {
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+		}
+
+		.engineering-wrapper {
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+		}
+
+		.interior-buildouts-wrapper {
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+
+				&.middle {
+					float: none;
+				    margin: 0 auto;
+				    clear: both;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+
+			.content-3 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+    		}
+
+			.content-4 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+    		}
+		}
+
+		.imagine-experience-wrapper {
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
 				    top: auto;
 				}
 			}

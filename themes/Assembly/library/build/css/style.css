@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 12:49 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 06:59 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8422,6 +8422,7 @@ header {
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  pointer-events: none;
 }
 .logo img {
   display: none;
@@ -10851,7 +10852,22 @@ SERVICES Page
   opacity: 1;
   pointer-events: auto;
 }
-.page-services h1 {
+.page-services .scroll-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.page-services .scroll-overlay.going-down {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+.page-services .scroll-overlay.going-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.page-services .section-header {
   font-family: 'pangrambold';
   font-size: 2rem;
   margin: 24% auto 11%;
@@ -12023,6 +12039,9 @@ you can add resource intensive styles.
   /*********************
   About Us Page
   **********************/
+  .page-about-us {
+    padding-top: 125px;
+  }
   .page-about-us .video.module {
     margin: 0 0 13.5% 28.74%;
     clear: none;
@@ -12036,16 +12055,17 @@ you can add resource intensive styles.
   /*********************
   SERVICES Page
   **********************/
-  .page-services h1 {
+  .page-services .section-header {
     font-size: 4.5rem;
-    margin: 122px 0 0 8.43%;
+    margin: 242px 0 0 8.43%;
     width: auto;
+    letter-spacing: 1.7px;
   }
   .page-services .mesh-bg {
     top: 0;
     width: 53.96%;
     height: 316px;
-    margin-top: 15%;
+    margin-top: 216px;
     margin-left: 13.194%;
   }
   .page-services .filter-menu {
@@ -12083,6 +12103,7 @@ you can add resource intensive styles.
     clear: left;
     float: left;
     margin-bottom: 0;
+    margin-left: 0;
   }
   .page-services .tile.interior-buildouts {
     float: right;
@@ -12090,6 +12111,7 @@ you can add resource intensive styles.
     margin-right: 10.63%;
     margin-top: 124px;
     margin-bottom: 0;
+    margin-left: 0;
     clear: right;
   }
   .page-services .tile.interior-buildouts .mesh-bg {
@@ -12189,10 +12211,14 @@ you can add resource intensive styles.
     float: left;
     margin-left: 7.01%;
     margin-top: 260px;
-    margin-bottom: 227px;
+    margin-bottom: 0;
     font-size: 0.6875rem;
     line-height: 1.82;
     letter-spacing: 0.97px;
+  }
+  .page-services .content .individual-service .tile .tile-inner {
+    margin: 0;
+    width: 100%;
   }
   .page-services .content .individual-service .intro-tile {
     float: left;
@@ -12216,6 +12242,11 @@ you can add resource intensive styles.
     float: left;
     margin-bottom: 0;
   }
+  .page-services .content .visualisation-wrapper .tile.right {
+    float: right;
+    margin-right: 15.42%;
+    margin-top: 8px;
+  }
   .page-services .content .visualisation-wrapper .tile-2 {
     float: right;
     margin-right: 15.42%;
@@ -12228,16 +12259,243 @@ you can add resource intensive styles.
     margin-bottom: 176px;
   }
   .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
-    top: -78px;
+    top: 45px;
     right: -88px;
-    width: 355px;
-    height: 355px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .visualisation-wrapper .content-2 {
+    width: 22.22%;
+    clear: right;
+    margin-top: 19px;
+    padding-bottom: 170px;
   }
   .page-services .content .visualisation-wrapper .content-2 .mesh-bg {
     width: 562px;
     right: auto;
-    bottom: -175px;
-    height: 355px;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .permitting-wrapper {
+    width: 100%;
+  }
+  .page-services .content .permitting-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .permitting-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .permitting-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .permitting-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .permitting-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .permitting-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .permitting-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .team-player-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .team-player-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .team-player-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .team-player-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .team-player-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .team-player-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .team-player-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .engineering-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .engineering-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .engineering-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .engineering-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .engineering-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .engineering-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .engineering-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .interior-buildouts-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .interior-buildouts-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .interior-buildouts-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .interior-buildouts-wrapper .tile.middle {
+    float: none;
+    margin: 0 auto;
+    clear: both;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-3 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-4 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .imagine-experience-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .imagine-experience-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .imagine-experience-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .imagine-experience-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .imagine-experience-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .imagine-experience-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .imagine-experience-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
     top: auto;
   }
   .page-services a[href="/case-studies"] {
@@ -13708,6 +13966,9 @@ you can add resource intensive styles.
   /*********************
   ABOUT US Page
   **********************/
+  .page-about-us {
+    padding-top: 145px;
+  }
   .page-about-us .landing {
     padding-top: 127px;
   }
@@ -13726,9 +13987,6 @@ you can add resource intensive styles.
     width: 23.03%;
     padding: 2.45% 5% 2.2% 0;
     margin: 0 0 4.2% 8.6%;
-  }
-  .page-about-us header.scroll-overlay {
-    position: static;
   }
   .page-about-us .years-experience {
     top: -26px;
@@ -14221,18 +14479,6 @@ you can add resource intensive styles.
   /*********************
   SERVICES Page
   **********************/
-  .page-services h1 {
-    font-size: 4.5rem;
-    margin: 122px 0 0 8.43%;
-    width: auto;
-  }
-  .page-services .mesh-bg {
-    top: 0;
-    width: 53.96%;
-    height: 316px;
-    margin-top: 15%;
-    margin-left: 13.194%;
-  }
   .page-services .filter-menu {
     position: fixed;
     right: 0;
@@ -14242,9 +14488,11 @@ you can add resource intensive styles.
     z-index: 10;
     opacity: 0;
     background: #fff;
+    pointer-events: none;
   }
   .page-services .filter-menu.show {
     opacity: 1;
+    pointer-events: all;
   }
   .page-services .filter-menu div a {
     letter-spacing: 0.7px;

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 11:59 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 06:01 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -431,8 +431,6 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 			        	cb();
 			        }
 		        }
-
-		        console.log($img.data('running'));
 		    }
 		},
 
@@ -954,7 +952,7 @@ var assembly = assembly || {};
 			_this.$elm.each(function(i, lax){
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio');
-				startY = (-$(window).height() * laxRatio)/2 - ($lax.innerHeight() * laxRatio);
+				startY = ($(window).height() * laxRatio)/2 - ($lax.innerHeight() * laxRatio);
 
 				if($lax.find('.mesh-bg').length){
 					$lax.find('.mesh-bg').css({
@@ -963,7 +961,7 @@ var assembly = assembly || {};
 				}
 
 				$lax.css({
-					transform: 'translate3d(0,'+ startY +'px,0)'
+					transform: 'translate3d(0,'+ -startY +'px,0)'
 				}).data('curY', startY);
 			});
 		},

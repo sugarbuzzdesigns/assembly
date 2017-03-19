@@ -25,7 +25,7 @@
 			_this.$elm.each(function(i, lax){
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio');
-				startY = (-$(window).height() * laxRatio)/2 - ($lax.innerHeight() * laxRatio);
+				startY = ($(window).height() * laxRatio)/2 - ($lax.innerHeight() * laxRatio);
 
 				if($lax.find('.mesh-bg').length){
 					$lax.find('.mesh-bg').css({
@@ -34,7 +34,7 @@
 				}
 
 				$lax.css({
-					transform: 'translate3d(0,'+ startY +'px,0)'
+					transform: 'translate3d(0,'+ -startY +'px,0)'
 				}).data('curY', startY);
 			});
 		},
