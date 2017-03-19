@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-15 10:50 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-18 05:04 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7944,7 +7944,7 @@ VIDEO CONTENT
 }
 .video.module img {
   width: 100%;
-  transition: opacity 0.5s;
+  transition: opacity .3s, clip-path .3s;
 }
 
 .video-wrapper {
@@ -8499,6 +8499,15 @@ header.scroll-overlay {
   transition: transform 0.4s ease-in;
   transform: translate3d(0, 0, 0);
 }
+header.scroll-overlay .inner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translate3d(0, 100%, 0);
+  background: rgba(255, 255, 255, 0.8);
+}
 header.scroll-overlay .main-menu-btn .bottom-layer .letter {
   color: #fff;
 }
@@ -8507,6 +8516,9 @@ header.scroll-overlay.move-out {
 }
 header.scroll-overlay.abs {
   transform: translate3d(0, -100%, 0);
+}
+header.scroll-overlay.abs.going-up {
+  transform: translate3d(0, 0, 0);
 }
 
 header.dark .main-menu-btn span {
@@ -8652,6 +8664,7 @@ HOME PAGE STYLES
   top: 0;
   left: 0;
   z-index: 14;
+  pointer-events: none;
 }
 .home .landing {
   position: fixed;
@@ -8663,6 +8676,43 @@ HOME PAGE STYLES
   background-color: #000;
   transition: background-position 0.1s linear;
   overflow: hidden;
+}
+.home .landing .landing-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 37.1%;
+  cursor: pointer;
+  height: 44px;
+  overflow: hidden;
+}
+.home .landing .landing-arrow .arrow {
+  transform: translate3d(0, -10px, 0);
+  animation: bounceArrow 2s linear infinite;
+}
+.home .landing .landing-arrow .arrow svg {
+  display: block;
+  margin-top: -1px;
+}
+.home .landing .landing-arrow .arrow span {
+  display: block;
+  width: 2px;
+  height: 20px;
+  background: #fff;
+  margin: 0 auto;
+}
+@keyframes bounceArrow {
+  0% {
+    transform: translate3d(0, -10px, 0);
+  }
+  10% {
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -10px, 0);
+  }
 }
 .home .landing .landing-inner {
   height: 100%;
@@ -8753,41 +8803,46 @@ HOME PAGE STYLES
 .home .video {
   z-index: 2;
 }
+.home .tile .tile-img,
+.home .video .tile-img {
+  background: rgba(0, 0, 0, 0.15);
+}
+.home .tile .tile-img img,
+.home .video .tile-img img {
+  transition: opacity .3s,clip-path .3s;
+  clip-path: inset(0);
+  width: 100%;
+}
 .home .tile .image-clip-bg,
 .home .video .image-clip-bg {
-  border: solid 20px #d0d0d0;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  transition: opacity 0.4s;
-  opacity: 0;
+  padding: 20px;
+  transition: padding .3s;
 }
 
 .no-touch .home .tile {
   cursor: pointer;
 }
-.no-touch .home .tile .image-clip-bg {
-  opacity: 0;
-}
-.no-touch .home .tile:hover img {
-  opacity: 0.4;
-}
-.no-touch .home .tile:hover .image-clip-bg {
-  opacity: 0.4;
-}
 .no-touch .home .video {
+  background: rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-.no-touch .home .video .image-clip-bg {
-  opacity: 0;
+.no-touch .home .video .image-clip-bg .inner {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.no-touch .home .video img {
+  transition: opacity .3s,clip-path .3s;
+  clip-path: inset(0);
 }
 .no-touch .home .video:hover img {
-  opacity: 0.4;
-}
-.no-touch .home .video:hover .image-clip-bg {
-  opacity: 0.4;
+  clip-path: inset(20px);
+  opacity: .4;
 }
 
 /*********************
@@ -8915,7 +8970,7 @@ EMPLOYEES
   font-size: 0.6875rem;
 }
 .employees .carousel .slide img {
-  transition: transform 0.5s ease-in-out, opacity 0.5s;
+  transition: transform .5s ease-in-out, opacity .5s, clip-path .3s;
   transform: translate3d(-40%, 0, 0);
 }
 .employees .carousel .slide.slick-current img {
@@ -10181,6 +10236,18 @@ ABOUT US Page
 .page-about-us {
   background: #fff;
 }
+.page-about-us .scroll-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 20px;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s;
+}
+.page-about-us .scroll-overlay.going-down {
+  transform: translate3d(0, -100%, 0);
+}
+.page-about-us .scroll-overlay.going-up {
+  transform: translate3d(0, 0, 0);
+}
 .page-about-us .landing {
   position: relative;
   padding-top: 16.4%;
@@ -11371,6 +11438,15 @@ you can add resource intensive styles.
   **********************/
   .page-case-studies header.scroll-overlay {
     position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s linear;
+  }
+  .page-case-studies header.scroll-overlay.fixme {
+    position: fixed;
+  }
+  .page-case-studies header.scroll-overlay.fixme.going-down {
+    transform: translate3d(0, -100%, 0);
   }
   .page-case-studies header.scroll-overlay h1 {
     margin-left: calc(67%/1440*100);
@@ -11643,6 +11719,7 @@ you can add resource intensive styles.
   **********************/
   header.scroll-overlay {
     position: fixed;
+    padding-bottom: 20px;
   }
   header.scroll-overlay .logo {
     background: transparent;

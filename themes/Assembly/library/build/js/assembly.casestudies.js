@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 10:20 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-18 05:17 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -84,12 +84,18 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
+				$('.scroll-overlay').addClass('going-down');
+				$('.scroll-overlay').removeClass('going-up');
+
 				if(_this.$filterWrap.hasClass('show') && $('.landing-inner').hasClass('hide')){
 					_this.$filterWrap.removeClass('show');
 				}
 			});
 
 			assembly.util.env.$win.on('scroll-up', function(){
+				$('.scroll-overlay').addClass('going-up');
+				$('.scroll-overlay').removeClass('going-down');
+
 				if((!_this.$filterWrap.hasClass('show')) && $('.landing-inner').hasClass('hide')){
 					_this.$filterWrap.addClass('show');
 				}
@@ -165,6 +171,10 @@ var assembly = assembly || {};
 			});
 
 			$('.landing-inner').addClass('hide');
+			setTimeout(function(){
+				$('.scroll-overlay').addClass('fixme');
+			}, 1500);
+
 			$('html').addClass('landing-closed');
 		},
 

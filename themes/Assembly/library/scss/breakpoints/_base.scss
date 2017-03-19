@@ -615,7 +615,7 @@ VIDEO CONTENT
 
 	img {
 		width: 100%;
-		transition: opacity 0.5s;
+		transition: opacity .3s, clip-path .3s;
 	}
 }
 // play btn svg width="58px" height="58px"
@@ -1248,6 +1248,16 @@ header.scroll-overlay {
     transition: transform 0.4s ease-in;
     transform: translate3d(0,0,0);
 
+    .inner-bg {
+    	position: absolute;
+    	top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+    	transform: translate3d(0,100%,0);
+    	background: rgba(255,255,255,0.8);
+    }
+
     .main-menu-btn .bottom-layer .letter {
     	color: #fff;
     }
@@ -1258,6 +1268,10 @@ header.scroll-overlay {
 
     &.abs {
     	transform: translate3d(0,-100%,0);
+
+    	&.going-up {
+    		transform: translate3d(0,0,0);
+    	}
     }
 }
 
@@ -1446,6 +1460,7 @@ HOME PAGE STYLES
     	top: 0;
     	left: 0;
     	z-index: 14;
+    	pointer-events: none;
 	}
 	// Landing Section
 	.landing {
@@ -1458,6 +1473,51 @@ HOME PAGE STYLES
 		background-color: $black;
 		transition: background-position 0.1s linear;
 		overflow: hidden;
+
+		.landing-arrow {
+		    position: absolute;
+		    bottom: 30px;
+		    left: 37.1%;
+		    cursor: pointer;
+		    height: 44px;
+		    overflow: hidden;
+
+			.arrow {
+				transform: translate3d(0,-10px,0);
+				animation: bounceArrow 2s linear infinite;
+
+			    svg {
+			    	display: block;
+			    	margin-top: -1px;
+			    }
+
+			    span {
+			    	display: block;
+				    width: 2px;
+				    height: 20px;
+				    background: #fff;
+				    margin: 0 auto;
+				}
+			}
+		}
+
+		@keyframes bounceArrow {
+			0% {
+				transform: translate3d(0,-10px,0);
+			}
+
+			10% {
+				transform: translate3d(0,0,0);
+			}
+
+			90% {
+				transform: translate3d(0,0,0);
+			}
+
+			100% {
+				transform: translate3d(0,-10px,0);
+			}
+		}
 
 		.landing-inner {
 			height: 100%;
@@ -1570,15 +1630,24 @@ HOME PAGE STYLES
 	.video {
 		z-index: 2;
 
+		.tile-img {
+			background: rgba(0,0,0,.15);
+		}
+
+		.tile-img img {
+			transition: opacity .3s,clip-path .3s;
+			clip-path: inset(0);
+			width: 100%;
+		}
+
 		.image-clip-bg {
-			border: solid 20px #d0d0d0;
 			position: absolute;
 			top: 0;
 			left: 0;
 			height: 100%;
 			width: 100%;
-			transition: opacity 0.4s;
-			opacity: 0;
+			padding: 20px;
+			transition: padding .3s;
 		}
 	}
 }
@@ -1588,35 +1657,46 @@ HOME PAGE STYLES
 		.tile {
 			cursor: pointer;
 
-			.image-clip-bg {
-				opacity: 0;
-			}
+			// .image-clip-bg {
+			// 	opacity: 0;
+			// }
 
-			&:hover {
-				img {
-					opacity: 0.4;
-				}
+			// &:hover {
+			// 	img {
+			// 		opacity: 0.4;
+			// 	}
 
-				.image-clip-bg {
-					opacity: 0.4;
-				}
-			}
+			// 	.image-clip-bg {
+			// 		opacity: 0.4;
+			// 	}
+			// }
 		}
 
 		.video {
+			background: rgba(0,0,0,.15);
 			cursor: pointer;
 
 			.image-clip-bg {
-				opacity: 0;
+				.inner {
+					height: 100%;
+					width: 100%;
+					background: #fff;
+				}
+			}
+
+			img {
+				transition: opacity .3s,clip-path .3s;
+				clip-path: inset(0);
 			}
 
 			&:hover {
 				img {
-					opacity: 0.4;
+					clip-path: inset(20px);
+					opacity: .4;
 				}
 
 				.image-clip-bg {
-					opacity: 0.4;
+
 				}
 			}
 		}
@@ -1775,7 +1855,7 @@ EMPLOYEES
 		}
 
 		.slide img {
-			transition: transform 0.5s ease-in-out, opacity 0.5s;
+			transition: transform .5s ease-in-out, opacity .5s, clip-path .3s;
 			transform: translate3d(-40%,0,0);
 		}
 
@@ -2956,6 +3036,21 @@ ABOUT US Page
 **********************/
 .page-about-us {
 	background: #fff;
+
+	.scroll-overlay {
+		background: rgba(255,255,255,0.8);
+		padding-bottom: 20px;
+		transform: translate3d(0,0,0);
+		transition: transform 0.5s;
+
+		&.going-down {
+			transform: translate3d(0,-100%,0);
+		}
+
+		&.going-up {
+			transform: translate3d(0,0,0);
+		}
+	}
 
 	.logo {
 

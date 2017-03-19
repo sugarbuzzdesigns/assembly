@@ -40,6 +40,15 @@
 					</h2>
 				</div>
 			</div>
+
+			<div class="landing-arrow">
+				<div class="arrow">
+					<span></span>
+					<svg width="14px" height="14px" viewBox="200 688 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <path d="M201.705008,688.545637 L200.552024,689.261061 L200.563203,695.679123 L200.563203,700.832416 L201.714589,701.546243 L213.428071,695.760566 L213.428071,694.329717 L201.705008,688.545637 Z M202.142567,695.679123 L202.148954,690.54659 L211.269021,695.045142 L202.155342,699.546887 L202.142567,695.679123 Z" id="Page-1" stroke="none" fill="#FFFFFF" fill-rule="evenodd" transform="translate(206.986854, 695.045940) rotate(-270.000000) translate(-206.986854, -695.045940) "></path>
+					</svg>
+				</div>
+			</div>
 		</section>
 		<section class="main-content" data-to-top-anchor>
 			<header class="scroll-overlay dark">
@@ -63,12 +72,46 @@
 					<div class="mesh-bg dark wide"></div>
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
+						<style>
+						.tile .image-clip-bg {
+						    height: 100%;
+						    width: 100%;
+						    position: absolute;
+						    top: 0;
+						    left: 0;
+						    padding: 20px;
+						    transition: padding .3s;
+						}
+
+						.tile .image-clip-bg .inner {
+							height: 100%;
+							width: 100%;
+							background: #fff;
+						}
+
+						.tile .tile-image {
+							position: relative;
+						}
+
+						.tile .tile-image img {
+							transition: opacity .3s, clip-path .3s;
+							clip-path: inset(0);
+							width: 100%;
+						}
+
+						.tile .tile-img:hover img {
+						    clip-path: inset(20px);
+						    opacity: .4;
+						}
+						</style>
 							<div class="carousel" data-mobile-position="left" data-mobile-start="front">
 								<?php foreach ($projects1 as $project) : ?>
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
-											<div class="image-clip-bg"></div>
+											<div class="image-clip-bg">
+												<div class="inner"></div>
+											</div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -92,7 +135,9 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
-											<div class="image-clip-bg"></div>
+											<div class="image-clip-bg">
+												<div class="inner"></div>
+											</div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -118,7 +163,9 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
-											<div class="image-clip-bg"></div>
+											<div class="image-clip-bg">
+												<div class="inner"></div>
+											</div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $service['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -142,7 +189,9 @@
 								<div class="slide">
 									<div class="tile-inner">
 										<div class="tile-img 1to1">
-											<div class="image-clip-bg"></div>
+											<div class="image-clip-bg">
+												<div class="inner"></div>
+											</div>
 											<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $approach['image']; ?>" alt="">
 										</div>
 										<div class="tile-info">
@@ -162,7 +211,9 @@
 			<div class="group group-3">
 				<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".25">
 					<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
-					<div class="image-clip-bg"></div>
+					<div class="image-clip-bg">
+						<div class="inner"></div>
+					</div>
 					<img class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/05-VideoThumbnail.jpg" alt="">
 				</div>
 
@@ -170,11 +221,14 @@
 					<div class="stripes-bg no-mobile">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/backgrounds/diagonal-lines-bg-lrg.png" alt="">
 					</div>
+					<script>
+
+					</script>
 					<div class="employee-carousel-wrapper">
 						<div class="years-experience">
 							<div class="years-experience-numbers">
 								<span class="tens">2</span>
-								<span class="singles">6</span>
+								<span class="ones">6</span>
 							</div>
 							<div class="years-experience-text">
 								<span>Years Experience</span>
@@ -186,7 +240,9 @@
 									<div class="slide employee" data-years-experience="26">
 										<div class="tile-inner">
 											<div class="tile-img">
-												<div class="image-clip-bg"></div>
+												<div class="image-clip-bg">
+													<div class="inner"></div>
+												</div>
 												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
 											</div>
 											<div class="tile-info">
@@ -197,7 +253,9 @@
 									<div class="slide employee" data-years-experience="09">
 										<div class="tile-inner">
 											<div class="tile-img">
-												<div class="image-clip-bg"></div>
+												<div class="image-clip-bg">
+													<div class="inner"></div>
+												</div>
 												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
 											</div>
 											<div class="tile-info">

@@ -36,6 +36,16 @@ var assembly = assembly || {};
 					});
 				}
 			});
+
+			assembly.util.env.$win.on('scroll-down', function(){
+				$('.scroll-overlay').addClass('going-down');
+				$('.scroll-overlay').removeClass('going-up');
+			});
+
+			assembly.util.env.$win.on('scroll-up', function(){
+				$('.scroll-overlay').addClass('going-up');
+				$('.scroll-overlay').removeClass('going-down');
+			});
 		},
 		waypoints: function(){
 			this.waypointsInView = $('[data-waypoint]').waypoint({

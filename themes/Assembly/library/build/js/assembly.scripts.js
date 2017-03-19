@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-14 10:20 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-18 05:17 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -662,39 +662,49 @@ var assembly = assembly || {};
 			});
 
 			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
-				$('.tens').html(0);
-				$('.singles').html(0);
-
 				if(_this.currentEmployeeSlide === currentSlide){
 					return;
 				} else {
 					_this.currentEmployeeSlide = currentSlide;
 				}
 
-					var tensCount = 0;
-					var onesCount = 0;
-					var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
-					var tens = Math.floor(num/10);
-					var ones = num - tens*10;
-					var counter;
-
-					counter = setInterval(function(){
-						onesCount++;
-
-						if(onesCount === 10){
-							tensCount++;
-							onesCount = 0;
-
-							$('.tens').html(tensCount);
-						}
-
-						if(tensCount === tens && onesCount === ones){
-							clearInterval(counter);
-						}
-
-						$('.singles').html(onesCount);
-					}, 10);
+				var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
+				count(num, $('.employee-carousel-wrapper .tens'), $('.employee-carousel-wrapper .ones'));
 			});
+
+			function count(num, $tens, $ones){
+				var $num1 = $tens;
+				var $num2 = $ones;
+
+				var num1Start = $num1.html();
+				var num2Start = $num2.html();
+				var fullNum = (num1Start+num2Start)*1;
+				var newNum = num;
+
+				var tens = Math.floor(newNum/10);
+				var ones = newNum - Math.floor(newNum/10) * 10;
+				var total = fullNum;
+
+				var countUp = setInterval(function(){
+					console.log(total);
+
+					if(fullNum > newNum){
+						total-=1;
+					} else {
+						total+=1;
+					}
+
+					if((""+total).length === 1){
+						$num2.html(total);
+					} else {
+						$num1.html((""+total).split("")[0]);
+						$num2.html((""+total).split("")[1]);
+					}
+
+					if(total === newNum){																				clearInterval(countUp);
+					}
+				}, 50);
+			}
 
 			function updateCountText(nextSlide, $num){
 				var num = nextSlide += 1,
