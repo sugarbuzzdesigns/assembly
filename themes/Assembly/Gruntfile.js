@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
 
-	grunt.registerTask('sassBuildDist', ['sass', 'cssmin', 'usebanner:css', 'growl:cssBuild']);
+	grunt.registerTask('sassBuildDist', ['sass', 'autoprefixer', 'cssmin', 'usebanner:css', 'growl:cssBuild']);
 
 	require('load-grunt-tasks')(grunt);
 
@@ -40,6 +40,16 @@ module.exports = function(grunt) {
 			tmp: [
 				'<%= jsBuildTmpDir %>'
 			]
+		},
+
+		// Build Tasks
+		autoprefixer: {
+			dist: {
+				options: {
+					browsers: ['last 2 versions', 'ie 8', 'ie 9', 'iOS 7']
+				},
+				src: '<%= buildDir %>/css/**/*.css'
+			}
 		},
 
 		usebanner: {

@@ -152,7 +152,7 @@ var assembly = assembly || {};
 
 			$('.landing-arrow').on('click', function(){
 				$('html, body').animate({
-					scrollTop: $(window).height()
+					scrollTop: $('.main-content').offset().top
 				}, 700, 'easeInQuad');
 			});
 		 //   	$('h2').css({
