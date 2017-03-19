@@ -1476,11 +1476,17 @@ HOME PAGE STYLES
 
 		.landing-arrow {
 		    position: absolute;
-		    bottom: 30px;
-		    left: 37.1%;
+		    bottom: 65px;
+		    left: 50%;
+		    transform: translate3d(-50%,0,0);
 		    cursor: pointer;
 		    height: 44px;
 		    overflow: hidden;
+
+		    &.clicked {
+		    	animation: bounceArrowOut 0.5s ease-in;
+				animation-fill-mode: forwards;
+		    }
 
 			.arrow {
 				transform: translate3d(0,-10px,0);
@@ -1498,6 +1504,16 @@ HOME PAGE STYLES
 				    background: #fff;
 				    margin: 0 auto;
 				}
+			}
+		}
+
+		@keyframes bounceArrowOut {
+			0% {
+				transform: translate3d(-50%,0,0);
+			}
+
+			100% {
+				transform: translate3d(-50%,100px,0);
 			}
 		}
 
@@ -1547,7 +1563,7 @@ HOME PAGE STYLES
 		.mesh-bg {
 			position: absolute;
 			left: calc(9%/414*100);
-			top: 24.1%;
+			top: 20%;
 			opacity: 0.5;
 			height: 372px;
     		width: 261px;

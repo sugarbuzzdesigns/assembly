@@ -151,7 +151,9 @@ var assembly = assembly || {};
 			});
 
 			$('.landing-arrow').on('click', function(){
-				$('html, body').animate({
+				$(this).addClass('clicked');
+
+				$('html, body').delay(200).animate({
 					scrollTop: $('.main-content').offset().top
 				}, 700, 'easeInQuad');
 			});

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 11:36 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 11:58 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8932,11 +8932,19 @@ HOME PAGE STYLES
 }
 .home .landing .landing-arrow {
   position: absolute;
-  bottom: 30px;
-  left: 37.1%;
+  bottom: 65px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
   cursor: pointer;
   height: 44px;
   overflow: hidden;
+}
+.home .landing .landing-arrow.clicked {
+  -webkit-animation: bounceArrowOut 0.5s ease-in;
+          animation: bounceArrowOut 0.5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .home .landing .landing-arrow .arrow {
   -webkit-transform: translate3d(0, -10px, 0);
@@ -8954,6 +8962,26 @@ HOME PAGE STYLES
   height: 20px;
   background: #fff;
   margin: 0 auto;
+}
+@-webkit-keyframes bounceArrowOut {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+            transform: translate3d(-50%, 100px, 0);
+  }
+}
+@keyframes bounceArrowOut {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+            transform: translate3d(-50%, 100px, 0);
+  }
 }
 @-webkit-keyframes bounceArrow {
   0% {
@@ -9027,7 +9055,7 @@ HOME PAGE STYLES
 .home .landing .mesh-bg {
   position: absolute;
   left: calc(9%/414*100);
-  top: 24.1%;
+  top: 20%;
   opacity: 0.5;
   height: 372px;
   width: 261px;
@@ -12614,6 +12642,10 @@ you can add resource intensive styles.
     width: 354px;
     left: 8.9%;
     top: 19.3%;
+  }
+  .home .landing .landing-arrow {
+    bottom: 30px;
+    left: 37.1%;
   }
   .home .landing-inner {
     height: 100vh;
