@@ -85,6 +85,15 @@ var assembly = assembly || {};
 				}
 			});
 
+			$('.all-services .tile').on('click', function(e){
+				e.preventDefault();
+
+				_this.filterProjectsByCategory($(this).data('service-id'));
+
+				$('.filter-menu [data-value].active').removeClass('active');
+				$('.filter-menu [data-value="'+ $(this).data('service-id') +'"]').addClass('active');
+			});
+
 			$('.all-services.show').imagesLoaded( function() {
 			  	console.log('loaded');
 			});

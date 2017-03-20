@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:19 pm - User: Phoydar */
 /*!
  * imagesLoaded PACKAGED v4.1.1
  * JavaScript is all like "You images are done yet or what?"
@@ -84,6 +84,15 @@ var assembly = assembly || {};
 						height: _this.$currentServiceContainer.outerHeight()
 					});
 				}
+			});
+
+			$('.all-services .tile').on('click', function(e){
+				e.preventDefault();
+
+				_this.filterProjectsByCategory($(this).data('service-id'));
+
+				$('.filter-menu [data-value].active').removeClass('active');
+				$('.filter-menu [data-value="'+ $(this).data('service-id') +'"]').addClass('active');
 			});
 
 			$('.all-services.show').imagesLoaded( function() {

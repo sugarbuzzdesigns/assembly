@@ -2884,6 +2884,10 @@ SERVICES Page
 		transition: opacity 0.5s;
 		pointer-events: none;
 
+		.tile[data-service-id] {
+			cursor: pointer;
+		}
+
 		&.show {
 			opacity: 1;
 			pointer-events: auto;
