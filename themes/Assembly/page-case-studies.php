@@ -15,7 +15,7 @@
 					    	<img id="landing-logo-hover-content" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
 					    </a>
 					</h1>
-					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+					<span class="mobile-only"><?php include __DIR__ . '/includes/menu-btn.php'; ?></span>
 				</header>
 				<h3>
 					<span data-letter="m">m</span>
