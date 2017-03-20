@@ -13,6 +13,20 @@ Phones larger than the iPhone 5 321px width
 			font-size: rem(36);
 		}
 	}
+
+	.years-experience {
+		.years-experience-numbers {
+			position: absolute;
+		    top: 5px;
+		    right: -14px;
+		    margin-right: 22.9%;
+		}
+
+		.years-experience-text {
+		    top: 188px;
+		    right: -1px;
+		}
+	}
 }
 
 /*********************

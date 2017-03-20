@@ -209,7 +209,7 @@
 			</div>
 
 			<div class="group group-3">
-				<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".25">
+				<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".15">
 					<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 					<div class="image-clip-bg">
 						<div class="inner"></div>

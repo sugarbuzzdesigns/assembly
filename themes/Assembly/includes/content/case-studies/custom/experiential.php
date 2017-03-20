@@ -7,6 +7,7 @@
 		<div class="group">
 			<div class="tile left-margin-med">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -17,6 +18,7 @@
 			</div>
 			<div data-ratio=".08" class="tile left-margin-lrg">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-4.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -29,6 +31,7 @@
 		<div class="group">
 			<div data-ratio=".02" class="tile left-margin-sm">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-2.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -45,6 +48,7 @@
 		<div class="group">
 			<div data-ratio=".08" class="tile left-margin-med">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-9.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -55,6 +59,7 @@
 			</div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-3.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -67,6 +72,7 @@
 		<div class="group">
 			<div data-ratio=".03" class="tile left-margin-sm">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-5.jpg" alt="">
 				</div>
 				<div class="tile-info">
@@ -77,6 +83,7 @@
 			</div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img">
+					<div class="image-clip-bg"><div class="inner"></div></div>
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-8.jpg" alt="">
 				</div>
 				<div class="tile-info">

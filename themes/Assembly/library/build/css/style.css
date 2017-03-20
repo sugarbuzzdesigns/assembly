@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:28 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:59 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8863,8 +8863,8 @@ Years Experience Module
 }
 .years-experience .years-experience-numbers {
   position: absolute;
-  top: -25px;
-  margin-right: 22.9%;
+  top: -9px;
+  margin-right: 15.9%;
   font-family: 'pangrambold';
   font-size: 10.3125rem;
   line-height: 1;
@@ -8885,8 +8885,8 @@ Years Experience Module
   color: #d3d3d3;
   text-transform: uppercase;
   position: absolute;
-  top: 200px;
-  right: -13px;
+  top: 190px;
+  right: -20px;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -10778,6 +10778,34 @@ CASE STUDIES Page
 .page-case-studies section {
   background: #fff;
 }
+.no-touch .case-study-container .tile-img {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.no-touch .case-study-container .tile-img img {
+  transition: opacity .3s,-webkit-clip-path .3s;
+  transition: opacity .3s,clip-path .3s;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+.no-touch .case-study-container .tile-img .image-clip-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  transition: padding .3s;
+}
+.no-touch .case-study-container .tile-img .image-clip-bg .inner {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.no-touch .case-study-container .tile-img:hover img {
+  -webkit-clip-path: inset(20px);
+          clip-path: inset(20px);
+}
 .page-case-studies .content [data-kit-type],
 .page-case-studies .case-study-landing {
   opacity: 0;
@@ -11401,6 +11429,16 @@ a[href="/case-studies"] svg {
   .home .landing h2 {
     font-size: 2.25rem;
   }
+  .home .years-experience .years-experience-numbers {
+    position: absolute;
+    top: 5px;
+    right: -14px;
+    margin-right: 22.9%;
+  }
+  .home .years-experience .years-experience-text {
+    top: 188px;
+    right: -1px;
+  }
 
   /*********************
   ABOUT US Page
@@ -11529,6 +11567,15 @@ PLUS SIZE (MOBILE) Iphone #+
     line-height: 2.775rem;
     top: 49.5%;
     margin: 0 0 0 6.8%;
+  }
+  .home .years-experience .years-experience-numbers {
+    line-height: 0.96;
+    top: -25px;
+    right: -3px;
+  }
+  .home .years-experience .years-experience-text {
+    top: 197px;
+    right: -14px;
   }
   .home .down-arrow {
     bottom: 35px;
@@ -12799,11 +12846,13 @@ you can add resource intensive styles.
     pointer-events: none;
     font-size: 24.625rem;
     line-height: .84;
-    right: 122px;
-    top: -182px;
+    right: 182px;
+    top: -172px;
   }
   .home .years-experience .years-experience-text {
     font-size: 1rem;
+    top: 337px;
+    right: 66px;
   }
 
   /*********************

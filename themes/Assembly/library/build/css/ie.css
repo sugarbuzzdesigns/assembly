@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:28 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:59 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1172,11 +1172,13 @@ Home Page
   pointer-events: none;
   font-size: rem(394);
   line-height: .84;
-  right: 122px;
-  top: -182px;
+  right: 182px;
+  top: -172px;
 }
 .home .years-experience .years-experience-text {
   font-size: rem(16);
+  top: 337px;
+  right: 66px;
 }
 
 /*********************
