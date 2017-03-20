@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 06:59 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 09:48 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -12206,6 +12206,9 @@ you can add resource intensive styles.
     width: 100%;
     margin: 0;
   }
+  .page-services .content .tile.right {
+    float: right;
+  }
   .page-services .content .individual-service .service-desc {
     width: 22.92%;
     float: left;
@@ -12326,80 +12329,85 @@ you can add resource intensive styles.
     margin-top: 167px;
   }
   .page-services .content .team-player-wrapper .tile {
-    width: 34.514%;
-    margin-left: calc(44%/1440*100);
+    margin: 0;
     float: left;
     margin-bottom: 0;
   }
   .page-services .content .team-player-wrapper .tile.right {
     float: right;
   }
+  .page-services .content .team-player-wrapper .intro-tile {
+    width: cacl(28.47222%);
+    margin-left: 9.02%;
+  }
   .page-services .content .team-player-wrapper .content-1 {
-    width: 22.64%;
-    margin-right: calc(302%/1440*100);
+    width: calc(383%/1440*100);
+    margin-right: calc(328%/1440*100);
     clear: left;
     margin-left: 0;
-    margin-top: 79px;
-  }
-  .page-services .content .team-player-wrapper .content-2 {
-    width: 22.5%;
-    margin-left: calc(302%/1440*100);
-    margin-top: 249px;
-    margin-bottom: 126px;
+    margin-top: -148px;
   }
   .page-services .content .team-player-wrapper .content-1 .mesh-bg {
     top: 155px;
     right: -168px;
-    width: 332px;
+    width: 337px;
     height: 313px;
     margin-top: 0;
   }
-  .page-services .content .team-player-wrapper .content-2 .mesh-bg {
-    width: 562px;
-    right: auto;
-    bottom: 0;
-    height: 306px;
-    top: auto;
+  .page-services .content .team-player-wrapper .content-2 {
+    clear: both;
+    margin-right: calc(388%/1440*100);
+    width: calc(495%/1440*100);
+    margin-top: 146px;
+    margin-bottom: 200px;
+    float: right;
   }
   .page-services .content .engineering-wrapper .service-desc {
     margin-left: calc(102%/1440*100);
-    margin-top: 167px;
+    margin-top: 210px;
   }
-  .page-services .content .engineering-wrapper .tile {
-    width: 34.514%;
-    margin-left: calc(44%/1440*100);
+  .page-services .content .engineering-wrapper .intro-tile {
+    width: calc(695%/1440*100);
+    margin-left: 0;
     float: left;
     margin-bottom: 0;
   }
-  .page-services .content .engineering-wrapper .tile.right {
+  .page-services .content .engineering-wrapper .intro-tile .tile-info {
+    margin-left: 47px;
+  }
+  .page-services .content .engineering-wrapper .intro-tile.right {
     float: right;
   }
   .page-services .content .engineering-wrapper .content-1 {
-    width: 22.64%;
-    margin-right: calc(302%/1440*100);
+    width: calc(506%/1440*100);
+    margin-right: calc(214%/1440*100);
     clear: left;
     margin-left: 0;
-    margin-top: 79px;
-  }
-  .page-services .content .engineering-wrapper .content-2 {
-    width: 22.5%;
-    margin-left: calc(302%/1440*100);
-    margin-top: 249px;
-    margin-bottom: 126px;
+    margin-top: 98px;
   }
   .page-services .content .engineering-wrapper .content-1 .mesh-bg {
-    top: 155px;
-    right: -168px;
+    top: -63px;
+    right: -78px;
     width: 332px;
     height: 313px;
     margin-top: 0;
+    float: right;
+  }
+  .page-services .content .engineering-wrapper .content-2 {
+    width: calc(323%/1440*100);
+    margin-left: calc(219%/1440*100);
+    margin-top: 274px;
+    margin-bottom: 126px;
+    float: left;
   }
   .page-services .content .engineering-wrapper .content-2 .mesh-bg {
     width: 562px;
     right: auto;
     bottom: 0;
     height: 306px;
-    top: auto;
+    top: 0;
+    margin-top: 202px;
+    margin-left: 47.194%;
   }
   .page-services .content .interior-buildouts-wrapper .service-desc {
     margin-left: calc(102%/1440*100);

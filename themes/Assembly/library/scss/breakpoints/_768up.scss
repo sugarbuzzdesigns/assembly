@@ -449,6 +449,10 @@ SERVICES Page
 				width: 100%;
 				margin: 0;
 			}
+
+			&.right {
+				float: right;
+			}
 		}
 
 		.individual-service {
@@ -606,8 +610,7 @@ SERVICES Page
 			}
 
 			.tile {
-				width: 34.514%;
-				margin-left: calc(44%/1440*100);
+				margin: 0;
 				float: left;
 				margin-bottom: 0;
 
@@ -616,53 +619,52 @@ SERVICES Page
 				}
 			}
 
-			.content-1 {
-				width: 22.64%;
-				margin-right: calc(302%/1440*100);
-				clear: left;
-				margin-left: 0;
-				margin-top: 79px;
-			}
-
-			.content-2 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
+			.intro-tile {
+				width: cacl(410%/1440*100);
+				margin-left: 9.02%;
 			}
 
 			.content-1 {
+			    width: calc(383%/1440*100);
+			    margin-right: calc(328%/1440*100);
+			    clear: left;
+			    margin-left: 0;
+			    margin-top: -148px;
+
 				.mesh-bg {
 				    top: 155px;
 				    right: -168px;
-				    width: 332px;
+				    width: 337px;
 				    height: 313px;
 				    margin-top: 0;
 				}
 			}
 
 			.content-2 {
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: auto;
-				}
+			    clear: both;
+			    margin-right: calc(388%/1440*100);
+			    width: calc(495%/1440*100);
+    			margin-top: 146px;
+    			margin-bottom: 200px;
+    			float: right;
 			}
 		}
 
 		.engineering-wrapper {
 			.service-desc {
 				margin-left: calc(102%/1440*100);
-				margin-top: 167px;
+				margin-top: 210px;
 			}
 
-			.tile {
-				width: 34.514%;
-				margin-left: calc(44%/1440*100);
+			.intro-tile {
+				width: calc(695%/1440*100);
+				margin-left: 0;
 				float: left;
 				margin-bottom: 0;
+
+				.tile-info {
+					margin-left: 47px;
+				}
 
 				&.right {
 					float: right;
@@ -670,37 +672,37 @@ SERVICES Page
 			}
 
 			.content-1 {
-				width: 22.64%;
-				margin-right: calc(302%/1440*100);
+				width: calc(506%/1440*100);
+				margin-right: calc(214%/1440*100);
 				clear: left;
 				margin-left: 0;
-				margin-top: 79px;
-			}
+				margin-top: 98px;
 
-			.content-2 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-			}
-
-			.content-1 {
 				.mesh-bg {
-				    top: 155px;
-				    right: -168px;
+				    top: -63px;
+				    right: -78px;
 				    width: 332px;
 				    height: 313px;
 				    margin-top: 0;
+				    float: right;
 				}
 			}
 
 			.content-2 {
+				width: calc(323%/1440*100);
+				margin-left: calc(219%/1440*100);
+    			margin-top: 274px;
+    			margin-bottom: 126px;
+    			float: left;
+
 				.mesh-bg {
 				    width: 562px;
 				    right: auto;
 				    bottom: 0;
 				    height: 306px;
-				    top: auto;
+				    top: 0;
+				    margin-top: 202px;
+				    margin-left: 47.194%;
 				}
 			}
 		}
