@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:59 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 03:03 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9232,6 +9232,7 @@ Tiles
   color: #221f20;
 }
 .tile .tile-img {
+  display: block;
   margin-bottom: 0.9375rem;
   position: relative;
 }

@@ -72,39 +72,39 @@
 					<div class="mesh-bg dark wide"></div>
 					<div class="tile carousel-wrapper">
 						<div class="carousel-inner">
-						<style>
-						.tile .image-clip-bg {
-						    height: 100%;
-						    width: 100%;
-						    position: absolute;
-						    top: 0;
-						    left: 0;
-						    padding: 20px;
-						    transition: padding .3s;
-						}
+							<style>
+								.tile .image-clip-bg {
+								    height: 100%;
+								    width: 100%;
+								    position: absolute;
+								    top: 0;
+								    left: 0;
+								    padding: 20px;
+								    transition: padding .3s;
+								}
 
-						.tile .image-clip-bg .inner {
-							height: 100%;
-							width: 100%;
-							background: #fff;
-						}
+								.tile .image-clip-bg .inner {
+									height: 100%;
+									width: 100%;
+									background: #fff;
+								}
 
-						.tile .tile-image {
-							position: relative;
-						}
+								.tile .tile-image {
+									position: relative;
+								}
 
-						.tile .tile-image img {
-							transition: opacity .3s, clip-path .3s;
-							clip-path: inset(0);
-							width: 100%;
-						}
+								.tile .tile-image img {
+									transition: opacity .3s, clip-path .3s;
+									clip-path: inset(0);
+									width: 100%;
+								}
 
-						.tile .tile-img:hover img {
-						    clip-path: inset(20px);
-						    opacity: .4;
-						}
-						</style>
-							<div class="carousel" data-mobile-position="left" data-mobile-start="front">
+								.tile .tile-img:hover img {
+								    clip-path: inset(20px);
+								    opacity: .4;
+								}
+							</style>
+							<a href="<?php echo site_url() . '/case-studies' ?>" class="carousel" data-mobile-position="left" data-mobile-start="front">
 								<?php foreach ($projects1 as $project) : ?>
 								<div class="slide">
 									<div class="tile-inner">
@@ -121,7 +121,7 @@
 									</div>
 								</div>
 								<?php endforeach; ?>
-							</div>
+							</a>
 							<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
 						</div>
 					</div>
@@ -237,29 +237,57 @@
 						<div class="tile carousel-wrapper">
 							<div class="carousel-inner">
 								<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
+									<div class="slide employee" data-years-experience="24">
+										<div class="tile-inner">
+											<div class="tile-img">
+												<div class="image-clip-bg">
+													<div class="inner"></div>
+												</div>
+												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/1-Dominique.jpg" alt="DOMINIC BENNETT">
+											</div>
+											<div class="tile-info">
+												<span class="tile-title">DOMINIC BENNETT</span>
+											</div>
+										</div>
+									</div>
+									<div class="slide employee" data-years-experience="12">
+										<div class="tile-inner">
+											<div class="tile-img">
+												<div class="image-clip-bg">
+													<div class="inner"></div>
+												</div>
+												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/2-Emma.jpg" alt="EMMA SLACK">
+											</div>
+											<div class="tile-info">
+												<span class="tile-title">EMMA SLACK</span>
+											</div>
+											<!-- <button type="button">about</button> -->
+										</div>
+									</div>
 									<div class="slide employee" data-years-experience="26">
 										<div class="tile-inner">
 											<div class="tile-img">
 												<div class="image-clip-bg">
 													<div class="inner"></div>
 												</div>
-												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/3-Gordon.jpg" alt="GORDON MACHIELSEN">
 											</div>
 											<div class="tile-info">
 												<span class="tile-title">GORDON MACHIELSEN</span>
 											</div>
+											<!-- <button type="button">about</button> -->
 										</div>
 									</div>
-									<div class="slide employee" data-years-experience="09">
+									<div class="slide employee" data-years-experience="20">
 										<div class="tile-inner">
 											<div class="tile-img">
 												<div class="image-clip-bg">
 													<div class="inner"></div>
 												</div>
-												<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholders/employee_placeholder_1.jpg" alt="Mark Whalburg">
+												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/employees/4-Mark.jpg" alt="MARK SLACK">
 											</div>
 											<div class="tile-info">
-												<span class="tile-title">GORDON MACHIELSEN</span>
+												<span class="tile-title">MARK SLACK</span>
 											</div>
 											<!-- <button type="button">about</button> -->
 										</div>
