@@ -2460,9 +2460,12 @@ CASE STUDIES Page
 **********************/
 .page-case-studies {
     display: block;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+
+    .container {
+    	height: 100vh;
+    	width: 100vw;
+    	overflow: hidden;
+    }
 
 	header.scroll-overlay {
 	    position: absolute;
@@ -2859,7 +2862,7 @@ CASE STUDIES Page
 	}
 }
 
-.landing-closed body {
+.landing-closed .container {
     display: block;
     height: auto;
     width: auto;
