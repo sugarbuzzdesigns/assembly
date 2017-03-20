@@ -7,7 +7,7 @@
 		<div class="group">
 			<div class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-super-content-1.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -17,7 +17,7 @@
 			</div>
 			<div data-ratio=".08" class="tile left-margin-lrg">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-super-content-2.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-2.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -29,7 +29,7 @@
 		<div class="group">
 			<div data-ratio=".02" class="tile left-margin-sm">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-super-content-3.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-3.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -45,7 +45,7 @@
 		<div class="group">
 			<div data-ratio=".07" class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-super-content-4.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-5.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -55,7 +55,7 @@
 			</div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-super-content-5.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-6.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">

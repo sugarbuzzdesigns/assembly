@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 12:01 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 01:34 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10695,7 +10695,6 @@ CASE STUDIES Page
   z-index: 3;
   background: #fff;
   overflow: hidden;
-  min-height: 300vh;
 }
 .page-case-studies .content .case-study-svg {
   opacity: 0;
@@ -12248,6 +12247,7 @@ you can add resource intensive styles.
     float: right;
     margin-right: 5.97%;
     margin-bottom: 16px;
+    margin-top: 50px;
   }
 
   /*********************
@@ -12355,7 +12355,13 @@ you can add resource intensive styles.
   .page-case-studies .tile .tile-img img {
     width: 100%;
   }
-  .page-case-studies .tile.tile-2, .page-case-studies .tile.tile-3, .page-case-studies .tile.tile-6 {
+  .page-case-studies .tile.tile-2 {
+    width: calc(410%/1440*100);
+  }
+  .page-case-studies .tile.tile-3 {
+    width: calc(370%/1440*100);
+  }
+  .page-case-studies .tile.tile-6 {
     width: 22.43%;
   }
   .page-case-studies .tile.tile-4 {
@@ -12387,7 +12393,20 @@ you can add resource intensive styles.
     margin: -8.5% 9.028% 0 0;
   }
   .page-case-studies .tile.tile-7 {
-    margin: 14.4% 0 0 26.88%;
+    margin: 14.4% 0 0 calc(302%/1440*100);
+  }
+  .page-case-studies .tile.tile-8 {
+    float: right;
+    margin-right: calc(130%/1440*100);
+    width: calc(410%/1440*100);
+    clear: left;
+    margin-bottom: 0;
+  }
+  .page-case-studies a.view-case-study {
+    float: right;
+    width: auto;
+    margin-right: calc(84%/1440*100);
+    margin-top: 110px;
   }
 
   /*********************

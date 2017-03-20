@@ -15,6 +15,7 @@
 					    	<img id="landing-logo-hover-content" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
 					    </a>
 					</h1>
+					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 				</header>
 				<h3>
 					<span data-letter="m">m</span>
@@ -107,12 +108,12 @@
 			<h2 data-h2-title="custom">
 				<span>custom</span>
 				<span>kits</span>
-				<span>spaces you want to be in</span>
+				<span>SPACES YOU WANT TO BE IN</span>
 			</h2>
 			<h2 data-h2-title="modular">
 				<span>modular</span>
 				<span>kits</span>
-				<span>spaces you want to be in</span>
+				<span>SPACES THAT CLICK</span>
 			</h2>
 			<div class="filter-wrap">
 				<select class="select-filter" style="width: 100%">

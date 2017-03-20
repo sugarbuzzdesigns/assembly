@@ -7,7 +7,7 @@
 		<div class="group">
 			<div class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-1.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -43,7 +43,7 @@
 			</blockquote>
 		</div>
 		<div class="group">
-			<div data-ratio=".08" class="tile left-margin-med">
+			<div data-ratio=".04" class="tile left-margin-med">
 				<div class="tile-img">
 					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-4.jpg" alt="">
 				</div>

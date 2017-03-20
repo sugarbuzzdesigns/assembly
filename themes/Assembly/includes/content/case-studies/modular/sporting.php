@@ -7,7 +7,7 @@
 			<div class="group">
 				<div class="tile left-margin-med">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-1.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-2.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">
@@ -17,7 +17,7 @@
 				</div>
 				<div data-ratio=".08" class="tile left-margin-lrg">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-2.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">
@@ -29,7 +29,7 @@
 			<div class="group">
 				<div data-ratio=".02" class="tile left-margin-sm">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-3.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-3.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">
@@ -45,7 +45,7 @@
 			<div class="group">
 				<div data-ratio=".08" class="tile left-margin-med">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-4.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-6.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">
@@ -55,7 +55,7 @@
 				</div>
 				<div class="tile left-margin-sm">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-5.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-4.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">
@@ -67,17 +67,7 @@
 			<div class="group">
 				<div data-ratio=".07" class="tile left-margin-sm">
 					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-6.jpg" alt="">
-					</div>
-					<div class="tile-info">
-						<span class="tile-cat">
-							Sporting
-						</span>
-					</div>
-				</div>
-				<div class="tile left-margin-sm">
-					<div class="tile-img">
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/c-sporting-content-7.jpg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-5.jpg" alt="">
 					</div>
 					<div class="tile-info">
 						<span class="tile-cat">

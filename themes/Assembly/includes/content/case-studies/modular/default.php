@@ -7,7 +7,7 @@
 		<div class="group">
 			<div class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-experiential-content-5.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Modular-Experiential-2.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -17,7 +17,7 @@
 			</div>
 			<div data-ratio=".08" class="tile left-margin-lrg">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-experiential-extra-content-1.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Modular-Experiential-3.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -29,7 +29,7 @@
 		<div class="group">
 			<div data-ratio=".02" class="tile left-margin-sm">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-experiential-extra-content-2.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Modular-Experiential.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -45,7 +45,7 @@
 		<div class="group">
 			<div data-ratio=".08" class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-sporting-extra-content-1.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -55,7 +55,7 @@
 			</div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-super-content-1.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Modular-Super.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -67,7 +67,7 @@
 		<div class="group">
 			<div data-ratio=".07" class="tile left-margin-lrg">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-hospitality-content-3.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Custom-Hospitality.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -77,7 +77,7 @@
 			</div>
 			<div class="tile left-margin-med">
 				<div class="tile-img">
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/m-super-content-5.jpg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Modular-Super-5.jpg" alt="">
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
