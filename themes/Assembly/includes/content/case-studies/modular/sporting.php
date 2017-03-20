@@ -41,8 +41,6 @@
 					<strong>Lorem Ipsum</strong>
 					<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada ferme ntum nisi vel lobortis heks.</p>
 				</blockquote data-ratio="-.03">
-			</div>
-			<div class="group">
 				<div data-ratio=".08" class="tile left-margin-med">
 					<div class="tile-img">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-6.jpg" alt="">
@@ -53,6 +51,8 @@
 						</span>
 					</div>
 				</div>
+			</div>
+			<div class="group">
 				<div class="tile left-margin-sm">
 					<div class="tile-img">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Modular-Sporting-4.jpg" alt="">

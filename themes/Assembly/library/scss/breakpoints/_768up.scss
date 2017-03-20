@@ -602,7 +602,7 @@ CASE STUDIES Page
 		}
 	}
 
-	.tile {
+	[data-kit-type="custom"] .tile {
 		width: 34.58%;
 		margin-bottom: 18.81%;
 
@@ -662,6 +662,88 @@ CASE STUDIES Page
 
 		&.tile-7 {
 		    margin: 14.4% 0 0 calc(302%/1440*100);
+		}
+
+		&.tile-8 {
+		    float: right;
+		    margin-right: calc(130%/1440*100);
+		    width: calc(410%/1440*100);
+		    clear: left;
+    		margin-bottom: 0;
+		}
+	}
+
+
+	[data-kit-type="modular"] blockquote {
+		width: calc(325%/1440*100);
+		clear: none;
+		float: left;
+		margin: 0 0 0 calc(99%/1440*100);
+	}
+
+	[data-kit-type="modular"] .tile {
+		width: 34.58%;
+		margin-bottom: 18.81%;
+
+		.case-study-desc {
+
+		}
+
+		.tile-img {
+			img {
+				width: 100%;
+			}
+		}
+
+		&.tile-1 {
+			margin-top: 170px;
+			margin-left: calc(215%/1440*100);
+			margin-bottom: 140px;
+		}
+
+		&.tile-2 {
+			width: calc(410%/1440*100);
+		}
+
+		&.tile-3 {
+			margin: 0 0 0 calc(48%/1440*100);
+			clear: left;
+			width: calc(325%/1440*100);
+		}
+
+		&.tile-4 {
+			float: left;
+			width: 25.69%;
+    		margin: -210px 0 0 calc(100%/1440*100);
+		}
+
+		&.tile-6 {
+			width: calc(445%/1440*100);
+		    float: right;
+		    clear: both;
+		    margin: -8.5% 9.028% 0 0;
+		}
+
+		&.tile-5 {
+		    margin: 0 0 0 14.93%;
+		    padding-top: 120px;
+		    float: left;
+		}
+
+		&.tile-5,
+		&.tile-7 {
+			width: 28.54%;
+		}
+
+		&.tile-2 {
+		    margin: 0 15.07% 0 0;
+		    float: right;
+		}
+
+
+		&.tile-7 {
+		    margin: 20px 0 0 calc(302%/1440*100);
+		    clear: both;
 		}
 
 		&.tile-8 {
