@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 10:50 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 01:15 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7705,7 +7705,7 @@ SVG Animations
   text-align: center;
   position: relative;
   font-family: 'roboto_monoregular';
-  font-size: 19px;
+  font-size: 14px;
   letter-spacing: 2.5px;
   line-height: calc(19/29);
   color: #fff;
@@ -11493,6 +11493,10 @@ PLUS SIZE (MOBILE) Iphone #+
     visibility: hidden;
   }
 
+  .loader-wrap .loading-copy {
+    font-size: 16px;
+  }
+
   /*********************
   GENERIC SVG SHAPES
   **********************/
@@ -11919,6 +11923,10 @@ you can add resource intensive styles.
 
   .tablet {
     display: block;
+  }
+
+  .loader-wrap .loading-copy {
+    font-size: 19px;
   }
 
   /*********************
