@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:23 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:08 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -304,10 +304,13 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				_this.env.$win.trigger('windowResize');
 
 				_this.updateViewportDimensions();
-				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+
+				if(assembly.util.useragent === 'desktop'){
+					_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+				}
 			}, 250));
 
 			$('html').on('loaded', function(){

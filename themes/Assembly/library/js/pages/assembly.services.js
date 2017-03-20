@@ -78,9 +78,11 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('windowResize', function(){
-				_this.$servicesContainer.css({
-					height: _this.$currentServiceContainer.outerHeight()
-				});
+				if(assembly.util.useragent === 'desktop'){
+					_this.$servicesContainer.css({
+						height: _this.$currentServiceContainer.outerHeight()
+					});
+				}
 			});
 
 			$('.all-services.show').imagesLoaded( function() {
@@ -147,12 +149,25 @@ var assembly = assembly || {};
 				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
 
 			if(option === 'all'){
-				$toShow = $landingContent.addClass('show');
+				$toShow = $landingContent.addClass('show').removeClass('invisible');
 				$allTiles.removeClass('show');
+
+				setTimeout(function(){
+					$allTiles.addClass('invisible');
+				}, 700);
 			} else {
+				$toShow = $servicesToShow;
 				$landingContent.removeClass('show');
-				$servicesToHide.removeClass('show  animate');
-				$toShow = $servicesToShow.addClass('show');
+				$servicesToHide.removeClass('show animate');
+				$servicesToShow.removeClass('invisible');
+
+				$toShow.addClass('show');
+
+				setTimeout(function(){
+					$landingContent.addClass('invisible');
+					$servicesToHide.addClass('invisible');
+				}, 700);
+
 				setTimeout(function(){
 					$servicesToShow.addClass('animate');
 				}, 100);

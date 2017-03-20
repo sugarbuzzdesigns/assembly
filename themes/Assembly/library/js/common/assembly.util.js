@@ -204,10 +204,13 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				_this.env.$win.trigger('windowResize');
 
 				_this.updateViewportDimensions();
-				_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
-				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+
+				if(assembly.util.useragent === 'desktop'){
+					_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+					_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+				}
 			}, 250));
 
 			$('html').on('loaded', function(){

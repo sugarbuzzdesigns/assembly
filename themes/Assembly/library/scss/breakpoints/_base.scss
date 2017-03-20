@@ -2955,13 +2955,15 @@ SERVICES Page
 	    left: 0;
 	    opacity: 0;
 	    pointer-events: none;
-                                                                                                                                                       ga
+	    visibility: hidden;
+
 		.tile {
 			pointer-events: none;
 		}
 
 		&.show {
 			opacity: 1;
+			visibility: visible;
 			pointer-events: auto;
 
 			.tile {
@@ -2969,6 +2971,9 @@ SERVICES Page
 			}
 		}
 
+		&.invisible {
+			visibility: hidden;
+		}
 
 		.tile, .service-desc {
 			transform: translate3d(0, 40px, 0);

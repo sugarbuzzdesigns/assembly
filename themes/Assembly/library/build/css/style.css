@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 01:15 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:06 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10933,17 +10933,21 @@ SERVICES Page
   left: 0;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
-.page-services .individual-service ga
-.tile {
+.page-services .individual-service .tile {
   pointer-events: none;
 }
 .page-services .individual-service.show {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 .page-services .individual-service.show .tile {
   pointer-events: auto;
+}
+.page-services .individual-service.invisible {
+  visibility: hidden;
 }
 .page-services .individual-service .tile, .page-services .individual-service .service-desc {
   -webkit-transform: translate3d(0, 40px, 0);
