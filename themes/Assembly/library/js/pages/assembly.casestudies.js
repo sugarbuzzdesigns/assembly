@@ -108,7 +108,11 @@ var assembly = assembly || {};
 
 			$('.view-case-study').on('click', function(evt){
 				evt.preventDefault();
-				_this.showMainCaseStudies($('.case-study-category.'+ $(this).data('title')));
+				_this.$currentCaseStudyContainer.removeClass('show');
+
+				_this.currentFilerStatus.type = $(this).data('title');
+
+				_this.showCaseStudyContent();
 			});
 
 			$('.hover-spot').hover(function(){

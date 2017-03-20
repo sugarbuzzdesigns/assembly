@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 02:19 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 03:45 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -109,7 +109,11 @@ var assembly = assembly || {};
 
 			$('.view-case-study').on('click', function(evt){
 				evt.preventDefault();
-				_this.showMainCaseStudies($('.case-study-category.'+ $(this).data('title')));
+				_this.$currentCaseStudyContainer.removeClass('show');
+
+				_this.currentFilerStatus.type = $(this).data('title');
+
+				_this.showCaseStudyContent();
 			});
 
 			$('.hover-spot').hover(function(){
