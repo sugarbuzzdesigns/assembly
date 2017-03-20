@@ -242,13 +242,26 @@ EMPLOYEES
 SERVICES Page
 **********************/
 .page-services {
+	.section-header {
+		line-height: 1;
+		letter-spacing: -0.08px;
+		font-size: rem(42);
+		margin: 129px auto 10%;
+		width: 77%;
+	}
 
+	.filter-wrap {
+		margin-bottom: 9.5%;
+	}
 }
 
 .tile.imagine-experience {
+	margin-bottom: 190px;
+
 	.mesh-bg {
-		height: resppx(430, 414, $screenWidth);
-		width: resppx(225, 414, $screenWidth);
+		height: 466px;
+		width: resppx(260, 414, $screenWidth);
+		top: 97px;
 	}
 }
 

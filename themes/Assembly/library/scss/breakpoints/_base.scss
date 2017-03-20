@@ -738,6 +738,7 @@ SELECT ELEMENT STYLES
 }
 
 select, .select2.select2-container--default {
+	width: 100%;
 	border: 0;
 	background-color: #fff;
 	border: solid 1px #979797;
@@ -2841,17 +2842,6 @@ SERVICES Page
 .page-services {
 	background-color: #fff;
 
-	// .content-wrap {
-	// 	position: relative;
-	// 	overflow: hidden;
-
-	// 	.content {
-	// 		position: absolute;
-	// 		top: 0;
-	// 		left: 0;
-	// 	}
-	// }
-
 	[data-service] {
 		position: absolute;
 		top: 0;
@@ -2887,6 +2877,7 @@ SERVICES Page
 		margin: 24% auto 11%;
 		width: 77%;
 	}
+
 	.filter-wrap {
 		margin-bottom: 11.5%;
 	}
@@ -2922,6 +2913,7 @@ SERVICES Page
 		margin: 0 auto 24%;
 		font-size: rem(13);
 		line-height: 1.76;
+		color: #7D7D7D;
 	}
 
 	.individual-service {
@@ -2931,10 +2923,19 @@ SERVICES Page
 	    opacity: 0;
 	    pointer-events: none;
                                                                                                                                                        ga
+		.tile {
+			pointer-events: none;
+		}
+
 		&.show {
 			opacity: 1;
 			pointer-events: auto;
+
+			.tile {
+				pointer-events: auto;
+			}
 		}
+
 
 		.tile, .service-desc {
 			transform: translate3d(0, 40px, 0);
@@ -3035,7 +3036,7 @@ SERVICES Page
 
 .tile.engineering {
 	margin-left: calc(38%/414*100);
-	width: 77%;
+	width: calc(322%/414*100);
 }
 
 .tile.interior-buildouts {
@@ -3043,11 +3044,11 @@ SERVICES Page
 	width: 66%;
 
 	.mesh-bg {
-		top: -186px;
-		right: 4px;
-		left: auto;
-		height: 429px;
-		width: 283px;
+	    top: -186px;
+	    right: -66px;
+	    left: auto;
+	    height: 429px;
+	    width: 283px;
 	}
 }
 
@@ -3058,15 +3059,16 @@ SERVICES Page
 
 .tile.imagine-experience {
 	margin-left: calc(64%/414*100);
+    margin-bottom: 45.89%;
 	width: 70.29%;
 
 	.mesh-bg {
 		right: auto;
-		left: 11px;
-		height: resppx(430, 414, $screenWidth);
-		width: resppx(225, 414, $screenWidth);
+		left: -55px;
+		height: resppx(466, 414, $screenWidth);
+		width: resppx(260, 414, $screenWidth);
 		margin: 0;
-		top: 147px;
+		top: 97px;
 	}
 }
 

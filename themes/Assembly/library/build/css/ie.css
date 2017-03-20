@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-19 09:48 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 12:01 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -456,8 +456,9 @@ About Us Page
 SERVICES Page
 **********************/
 .page-services .section-header {
+  overflow: hidden;
   font-size: rem(72);
-  margin: 242px 0 0 8.43%;
+  margin: 152px 0 5% 8.43%;
   width: auto;
   letter-spacing: 1.7px;
 }
@@ -465,8 +466,11 @@ SERVICES Page
   top: 0;
   width: 53.96%;
   height: 316px;
-  margin-top: 216px;
+  margin-top: 137px;
   margin-left: 13.194%;
+}
+.page-services .filter-wrap {
+  width: 82%;
 }
 .page-services .filter-menu {
   position: absolute;
@@ -488,7 +492,8 @@ SERVICES Page
   width: 100%;
 }
 .page-services .tile.visualisation {
-  margin-left: 15.07%;
+  width: calc(410%/1440*100);
+  margin-left: calc(217%/1440*100);
   margin-top: 94px;
   margin-bottom: 129px;
   float: left;
@@ -555,13 +560,21 @@ SERVICES Page
   width: 100%;
 }
 .page-services .content .visualisation-wrapper .tile {
-  width: 28.85%;
-  margin-left: 15.069%;
+  margin-bottom: 0;
+}
+.page-services .content .visualisation-wrapper .tile.right {
+  float: right;
+  margin-right: 15.42%;
+  margin-top: 8px;
+}
+.page-services .content .visualisation-wrapper .intro-tile {
+  width: calc(410%/1440*100);
+  margin-left: calc(217%/1440*100);
   float: left;
   margin-bottom: 0;
 }
 .page-services .content .visualisation-wrapper .service-desc {
-  width: 22.92%;
+  width: 42.92%;
   float: left;
   margin-left: 7.01%;
   margin-top: 120px;
@@ -582,9 +595,17 @@ SERVICES Page
 }
 .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
   top: 2px;
-  right: -88px;
-  width: 285px;
-  height: 205px;
+  right: -58px;
+  width: 205px;
+  height: 165px;
+  margin-top: 40px;
+}
+.page-services .content .visualisation-wrapper .content-2 {
+  width: 22.22%;
+  clear: right;
+  margin-top: 19px;
+  padding-bottom: 40px;
+  margin-left: 15.069%;
 }
 .page-services .content .visualisation-wrapper .content-2 .mesh-bg {
   width: 342px;
@@ -593,318 +614,8 @@ SERVICES Page
   height: 205px;
   top: auto;
 }
-.page-services .content {
-  clear: both;
-}
-.page-services .content .tile .tile-info {
-  margin-top: 20px;
-}
-.page-services .content .tile .tile-img {
-  margin-bottom: 0;
-}
-.page-services .content .tile img {
-  width: 100%;
-  margin: 0;
-}
-.page-services .content .tile.right {
-  float: right;
-}
-.page-services .content .individual-service .service-desc {
-  width: 22.92%;
-  float: left;
-  margin-left: 7.01%;
-  margin-top: 260px;
-  margin-bottom: 0;
-  font-size: rem(11);
-  line-height: 1.82;
-  letter-spacing: 0.97px;
-}
-.page-services .content .individual-service .tile .tile-inner {
-  margin: 0;
-  width: 100%;
-}
-.page-services .content .individual-service .intro-tile {
-  float: left;
-}
-.page-services .content .individual-service .tile-1 {
-  margin-bottom: 0;
-}
-.page-services .content .individual-service .tile-2 {
-  float: right;
-  clear: left;
-}
-.page-services .content .individual-service .tile-3 {
-  float: left;
-}
-.page-services .content .visualisation-wrapper {
-  width: 100%;
-}
-.page-services .content .visualisation-wrapper .tile {
-  width: 28.85%;
-  margin-left: 15.069%;
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .visualisation-wrapper .tile.right {
-  float: right;
-  margin-right: 15.42%;
-  margin-top: 8px;
-}
-.page-services .content .visualisation-wrapper .tile-2 {
-  float: right;
-  margin-right: 15.42%;
-  margin-left: 0;
-}
-.page-services .content .visualisation-wrapper .tile-3 {
-  width: 22.22%;
-  margin-left: 21.39%;
-  margin-top: 290px;
-  margin-bottom: 176px;
-}
-.page-services .content .visualisation-wrapper .content-1 .mesh-bg {
-  top: 45px;
-  right: -88px;
-  width: 332px;
-  height: 313px;
-  margin-top: 0;
-}
-.page-services .content .visualisation-wrapper .content-2 {
-  width: 22.22%;
-  clear: right;
-  margin-top: 19px;
-  padding-bottom: 170px;
-}
-.page-services .content .visualisation-wrapper .content-2 .mesh-bg {
-  width: 562px;
-  right: auto;
-  bottom: 0;
-  height: 306px;
-  top: auto;
-}
-.page-services .content .permitting-wrapper {
-  width: 100%;
-}
-.page-services .content .permitting-wrapper .service-desc {
-  margin-left: calc(102%/1440*100);
-  margin-top: 167px;
-}
-.page-services .content .permitting-wrapper .tile {
-  width: 34.514%;
-  margin-left: calc(44%/1440*100);
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .permitting-wrapper .tile.right {
-  float: right;
-}
-.page-services .content .permitting-wrapper .content-1 {
-  width: 22.64%;
-  margin-right: calc(302%/1440*100);
-  clear: left;
-  margin-left: 0;
-  margin-top: 79px;
-}
-.page-services .content .permitting-wrapper .content-2 {
-  width: 22.5%;
-  margin-left: calc(302%/1440*100);
-  margin-top: 249px;
-  margin-bottom: 126px;
-}
-.page-services .content .permitting-wrapper .content-1 .mesh-bg {
-  top: 155px;
-  right: -168px;
-  width: 332px;
-  height: 313px;
-  margin-top: 0;
-}
-.page-services .content .permitting-wrapper .content-2 .mesh-bg {
-  width: 562px;
-  right: auto;
-  bottom: 0;
-  height: 306px;
-  top: auto;
-}
-.page-services .content .team-player-wrapper .service-desc {
-  margin-left: calc(102%/1440*100);
-  margin-top: 167px;
-}
-.page-services .content .team-player-wrapper .tile {
-  margin: 0;
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .team-player-wrapper .tile.right {
-  float: right;
-}
-.page-services .content .team-player-wrapper .intro-tile {
-  width: cacl(28.47222%);
-  margin-left: 9.02%;
-}
-.page-services .content .team-player-wrapper .content-1 {
-  width: calc(383%/1440*100);
-  margin-right: calc(328%/1440*100);
-  clear: left;
-  margin-left: 0;
-  margin-top: -148px;
-}
-.page-services .content .team-player-wrapper .content-1 .mesh-bg {
-  top: 155px;
-  right: -168px;
-  width: 337px;
-  height: 313px;
-  margin-top: 0;
-}
-.page-services .content .team-player-wrapper .content-2 {
-  clear: both;
-  margin-right: calc(388%/1440*100);
-  width: calc(495%/1440*100);
-  margin-top: 146px;
-  margin-bottom: 200px;
-  float: right;
-}
-.page-services .content .engineering-wrapper .service-desc {
-  margin-left: calc(102%/1440*100);
-  margin-top: 210px;
-}
-.page-services .content .engineering-wrapper .intro-tile {
-  width: calc(695%/1440*100);
-  margin-left: 0;
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .engineering-wrapper .intro-tile .tile-info {
-  margin-left: 47px;
-}
-.page-services .content .engineering-wrapper .intro-tile.right {
-  float: right;
-}
-.page-services .content .engineering-wrapper .content-1 {
-  width: calc(506%/1440*100);
-  margin-right: calc(214%/1440*100);
-  clear: left;
-  margin-left: 0;
-  margin-top: 98px;
-}
-.page-services .content .engineering-wrapper .content-1 .mesh-bg {
-  top: -63px;
-  right: -78px;
-  width: 332px;
-  height: 313px;
-  margin-top: 0;
-  float: right;
-}
-.page-services .content .engineering-wrapper .content-2 {
-  width: calc(323%/1440*100);
-  margin-left: calc(219%/1440*100);
-  margin-top: 274px;
-  margin-bottom: 126px;
-  float: left;
-}
-.page-services .content .engineering-wrapper .content-2 .mesh-bg {
-  width: 562px;
-  right: auto;
-  bottom: 0;
-  height: 306px;
-  top: 0;
-  margin-top: 202px;
-  margin-left: 47.194%;
-}
-.page-services .content .interior-buildouts-wrapper .service-desc {
-  margin-left: calc(102%/1440*100);
-  margin-top: 167px;
-}
-.page-services .content .interior-buildouts-wrapper .tile {
-  width: 34.514%;
-  margin-left: calc(44%/1440*100);
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .interior-buildouts-wrapper .tile.right {
-  float: right;
-}
-.page-services .content .interior-buildouts-wrapper .tile.middle {
-  float: none;
-  margin: 0 auto;
-  clear: both;
-}
-.page-services .content .interior-buildouts-wrapper .content-1 {
-  width: 22.64%;
-  margin-right: calc(302%/1440*100);
-  clear: left;
-  margin-left: 0;
-  margin-top: 79px;
-}
-.page-services .content .interior-buildouts-wrapper .content-1 .mesh-bg {
-  top: 155px;
-  right: -168px;
-  width: 332px;
-  height: 313px;
-  margin-top: 0;
-}
-.page-services .content .interior-buildouts-wrapper .content-2 {
-  width: 22.5%;
-  margin-left: calc(302%/1440*100);
-  margin-top: 249px;
-  margin-bottom: 126px;
-}
-.page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
-  width: 562px;
-  right: auto;
-  bottom: 0;
-  height: 306px;
-  top: auto;
-}
-.page-services .content .interior-buildouts-wrapper .content-3 {
-  width: 22.5%;
-  margin-left: calc(302%/1440*100);
-  margin-top: 249px;
-  margin-bottom: 126px;
-}
-.page-services .content .interior-buildouts-wrapper .content-4 {
-  width: 22.5%;
-  margin-left: calc(302%/1440*100);
-  margin-top: 249px;
-  margin-bottom: 126px;
-}
-.page-services .content .imagine-experience-wrapper .service-desc {
-  margin-left: calc(102%/1440*100);
-  margin-top: 167px;
-}
-.page-services .content .imagine-experience-wrapper .tile {
-  width: 34.514%;
-  margin-left: calc(44%/1440*100);
-  float: left;
-  margin-bottom: 0;
-}
-.page-services .content .imagine-experience-wrapper .tile.right {
-  float: right;
-}
-.page-services .content .imagine-experience-wrapper .content-1 {
-  width: 22.64%;
-  margin-right: calc(302%/1440*100);
-  clear: left;
-  margin-left: 0;
-  margin-top: 79px;
-}
-.page-services .content .imagine-experience-wrapper .content-2 {
-  width: 22.5%;
-  margin-left: calc(302%/1440*100);
-  margin-top: 249px;
-  margin-bottom: 126px;
-}
-.page-services .content .imagine-experience-wrapper .content-1 .mesh-bg {
-  top: 155px;
-  right: -168px;
-  width: 332px;
-  height: 313px;
-  margin-top: 0;
-}
-.page-services .content .imagine-experience-wrapper .content-2 .mesh-bg {
-  width: 562px;
-  right: auto;
-  bottom: 0;
-  height: 306px;
-  top: auto;
+.page-services .tile.engineering .tile-info {
+  margin-left: 20px;
 }
 .page-services a[href="/case-studies"] {
   width: 263px;
@@ -2880,6 +2591,12 @@ ABOUT US Page
 /*********************
 SERVICES Page
 **********************/
+.page-services .section-header {
+  margin: 242px 0 0 8.43%;
+}
+.page-services .mesh-bg {
+  margin-top: 216px;
+}
 .page-services .filter-menu {
   position: fixed;
   right: 0;
@@ -2893,7 +2610,7 @@ SERVICES Page
 }
 .page-services .filter-menu.show {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 .page-services .filter-menu div a {
   letter-spacing: 0.7px;
@@ -2960,241 +2677,333 @@ SERVICES Page
   width: 315px;
   top: 233px;
 }
-.page-services .content.dynamic .tile .tile-info {
-  margin-top: 27px;
+.page-services .content {
+  clear: both;
 }
-.page-services .content.dynamic .visualisation-wrapper {
+.page-services .content .tile .tile-info {
+  margin-top: 20px;
+}
+.page-services .content .tile .tile-img {
+  margin-bottom: 0;
+}
+.page-services .content .tile img {
+  width: 100%;
+  margin: 0;
+}
+.page-services .content .tile.right {
+  float: right;
+}
+.page-services .content .individual-service .service-desc {
+  width: 22.92%;
+  float: left;
+  margin-left: 7.01%;
+  margin-top: 260px;
+  margin-bottom: 0;
+  font-size: rem(11);
+  line-height: 1.82;
+  letter-spacing: 0.97px;
+}
+.page-services .content .individual-service .tile .tile-inner {
+  margin: 0;
   width: 100%;
 }
-.page-services .content.dynamic .visualisation-wrapper .tile {
+.page-services .content .individual-service .intro-tile {
+  float: left;
+}
+.page-services .content .individual-service .tile-1 {
+  margin-bottom: 0;
+}
+.page-services .content .individual-service .tile-2 {
+  float: right;
+  clear: left;
+}
+.page-services .content .individual-service .tile-3 {
+  float: left;
+}
+.page-services .content .visualisation-wrapper {
+  width: 100%;
+}
+.page-services .content .visualisation-wrapper .tile {
   width: 28.85%;
   margin-left: 15.069%;
   float: left;
   margin-bottom: 0;
 }
-.page-services .content.dynamic .visualisation-wrapper .service-desc {
-  width: 22.92%;
+.page-services .content .visualisation-wrapper .intro-tile {
+  width: calc(410%/1440*100);
+  margin-left: calc(217%/1440*100);
   float: left;
-  margin-left: 7.01%;
-  margin-top: 260px;
-  margin-bottom: 250px;
-  font-size: rem(11);
-  line-height: 1.82;
+  margin-bottom: 0;
 }
-.page-services .content.dynamic .visualisation-wrapper .tile-2 {
+.page-services .content .visualisation-wrapper .service-desc {
+  width: 22.92%;
+}
+.page-services .content .visualisation-wrapper .tile-2 {
   float: right;
   margin-right: 15.42%;
   margin-left: 0;
 }
-.page-services .content.dynamic .visualisation-wrapper .tile-3 {
+.page-services .content .visualisation-wrapper .tile-3 {
   width: 22.22%;
   margin-left: 21.39%;
   margin-top: 290px;
   margin-bottom: 176px;
 }
-.page-services .content.dynamic .visualisation-wrapper .content-1 .mesh-bg {
-  top: -78px;
+.page-services .content .visualisation-wrapper .content-1 .mesh-bg {
+  top: 45px;
   right: -88px;
-  width: 355px;
-  height: 355px;
+  width: 332px;
+  height: 313px;
+  margin-top: 0;
 }
-.page-services .content.dynamic .visualisation-wrapper .content-2 .mesh-bg {
+.page-services .content .visualisation-wrapper .content-2 {
+  padding-bottom: 170px;
+}
+.page-services .content .visualisation-wrapper .content-2 .mesh-bg {
   width: 562px;
   right: auto;
-  bottom: -175px;
-  height: 355px;
+  bottom: 0;
+  height: 306px;
   top: auto;
 }
-.page-services .content.dynamic .permitting-wrapper .intro-tile {
-  width: 34.514%;
-  margin-left: 3.056%;
-}
-.page-services .content.dynamic .permitting-wrapper .intro-tile .tile-inner {
-  margin: 0;
+.page-services .content .permitting-wrapper {
   width: 100%;
 }
-.page-services .content.dynamic .permitting-wrapper .service-desc {
-  margin-top: 171px;
-}
-.page-services .content.dynamic .permitting-wrapper .tile-2 {
-  width: 22.64%;
-  margin-right: 20.97%;
-}
-.page-services .content.dynamic .permitting-wrapper .tile-2 .mesh-bg {
-  width: 340px;
-  height: 320px;
-  top: 113px;
-  margin-left: 35.194%;
-}
-.page-services .content.dynamic .permitting-wrapper .tile-3 {
-  width: 22.64%;
-  margin-left: 21.04%;
+.page-services .content .permitting-wrapper .service-desc {
+  margin-left: calc(102%/1440*100);
   margin-top: 167px;
-  margin-bottom: 315px;
 }
-.page-services .content.dynamic .team-player-wrapper .intro-tile {
-  width: 28.472%;
-  margin-left: 9.028%;
-}
-.page-services .content.dynamic .team-player-wrapper .intro-tile .tile-inner {
-  margin: 0;
-  width: 100%;
-}
-.page-services .content.dynamic .team-player-wrapper .service-desc {
-  margin-top: 171px;
-}
-.page-services .content.dynamic .team-player-wrapper .tile-2 {
-  width: 26.597%;
-  margin-right: 22.778%;
-  margin-top: -150px;
-  margin-bottom: 219px;
-}
-.page-services .content.dynamic .team-player-wrapper .tile-2 .mesh-bg {
-  width: 350px;
-  height: 330px;
-  top: 15px;
-  margin-left: 63.194%;
-}
-.page-services .content.dynamic .team-player-wrapper .tile-3 {
-  width: 34.375%;
-  float: right;
-  margin-right: 26.944%;
-  margin-top: 0;
-  margin-bottom: 148px;
-}
-.page-services .content.dynamic .engineering-wrapper .intro-tile {
-  width: resp(697);
-  margin-left: 0;
-}
-.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-inner {
-  margin: 0;
-  width: 100%;
-}
-.page-services .content.dynamic .engineering-wrapper .intro-tile .tile-info {
-  margin-left: 6.599%;
-}
-.page-services .content.dynamic .engineering-wrapper .service-desc {
-  margin-bottom: 317px;
-}
-.page-services .content.dynamic .engineering-wrapper .tile-2 {
-  width: resp(495);
-  margin-right: resp(215);
-  margin-top: 0;
-  margin-bottom: 219px;
-}
-.page-services .content.dynamic .engineering-wrapper .tile-2 .mesh-bg {
-  width: 312px;
-  height: 335px;
-  top: -135px;
-  margin-left: 53.094%;
-}
-.page-services .content.dynamic .engineering-wrapper .tile-3 {
-  width: resp(323);
+.page-services .content .permitting-wrapper .tile {
+  width: 34.514%;
+  margin-left: calc(44%/1440*100);
   float: left;
-  margin-left: resp(216);
-  margin-right: 0;
-  margin-top: 162px;
-  margin-bottom: 298px;
-}
-.page-services .content.dynamic .engineering-wrapper .tile-3 .mesh-bg {
-  width: 534px;
-  height: 312px;
-  margin-top: 62%;
-  margin-left: 46.194%;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile {
-  width: resp(495);
-  margin-left: 9.028%;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .intro-tile .tile-inner {
-  margin: 0;
-  width: 100%;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .service-desc {
-  margin: resp(130) 0 resp(175) resp(217);
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-2 {
-  width: resp(410);
-  margin-right: resp(216);
-  margin-top: -220px;
-  margin-bottom: 219px;
-  clear: none;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-2 .mesh-bg {
-  width: 350px;
-  height: 330px;
-  top: 15px;
-  margin-left: 63.194%;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-3 {
-  width: resp(409);
-  float: left;
-  margin-top: 0;
-  margin-left: resp(214);
   margin-bottom: 0;
 }
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-4 {
-  width: resp(411);
+.page-services .content .permitting-wrapper .tile.right {
   float: right;
-  margin-right: resp(129);
-  margin-top: 14px;
-  margin-bottom: 329px;
 }
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-4 .mesh-bg {
-  width: 355px;
-  height: 320px;
-  margin-top: -245px;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-5 {
-  width: resp(495);
-  margin: 0 auto 170px;
-}
-.page-services .content.dynamic .interior-buildouts-wrapper .tile-5 .mesh-bg {
-  width: 536px;
-  height: 310px;
-  left: -77px;
-  top: -316px;
-}
-.page-services .content.dynamic .imagine-experience-wrapper .intro-tile {
-  width: resp(330);
-  margin-left: resp(253);
-}
-.page-services .content.dynamic .imagine-experience-wrapper .intro-tile .tile-inner {
-  margin: 0;
-  width: 100%;
-}
-.page-services .content.dynamic .imagine-experience-wrapper .service-desc {
-  width: resp(317);
-  margin-top: 171px;
-}
-.page-services .content.dynamic .imagine-experience-wrapper .tile-2 {
-  width: resp(566);
-  margin-right: resp(144);
-  margin-top: 62px;
-  margin-bottom: 219px;
-}
-.page-services .content.dynamic .imagine-experience-wrapper .tile-2 .mesh-bg {
-  width: 350px;
-  height: 330px;
-  top: auto;
-  bottom: -145px;
-  right: -115px;
+.page-services .content .permitting-wrapper .content-1 {
+  width: 22.64%;
+  margin-right: calc(302%/1440*100);
+  clear: left;
   margin-left: 0;
+  margin-top: 79px;
 }
-.page-services .content.dynamic .imagine-experience-wrapper .tile-3 {
-  width: resp(497);
-  float: left;
-  margin-left: resp(45);
-  margin-right: 0;
-  margin-top: 253px;
-  margin-bottom: 212px;
+.page-services .content .permitting-wrapper .content-2 {
+  width: 22.5%;
+  margin-left: calc(302%/1440*100);
+  margin-top: 249px;
+  margin-bottom: 126px;
 }
-.page-services .content.dynamic .imagine-experience-wrapper .tile-3 .mesh-bg {
-  width: 335px;
-  height: 311px;
+.page-services .content .permitting-wrapper .content-1 .mesh-bg {
+  top: 155px;
+  right: -168px;
+  width: 332px;
+  height: 313px;
+  margin-top: 0;
+}
+.page-services .content .permitting-wrapper .content-2 .mesh-bg {
+  width: 562px;
+  right: auto;
+  bottom: 0;
+  height: 306px;
   top: auto;
-  bottom: -150px;
-  left: -35px;
+}
+.page-services .content .team-player-wrapper .service-desc {
+  margin-left: calc(102%/1440*100);
+  margin-top: 167px;
+}
+.page-services .content .team-player-wrapper .tile {
+  margin: 0;
+  float: left;
+  margin-bottom: 0;
+}
+.page-services .content .team-player-wrapper .tile.right {
+  float: right;
+}
+.page-services .content .team-player-wrapper .intro-tile {
+  width: cacl(28.47222%);
+  margin-left: 9.02%;
+}
+.page-services .content .team-player-wrapper .content-1 {
+  width: calc(383%/1440*100);
+  margin-right: calc(328%/1440*100);
+  clear: left;
+  margin-left: 0;
+  margin-top: -148px;
+}
+.page-services .content .team-player-wrapper .content-1 .mesh-bg {
+  top: 155px;
+  right: -168px;
+  width: 337px;
+  height: 313px;
+  margin-top: 0;
+}
+.page-services .content .team-player-wrapper .content-2 {
+  clear: both;
+  margin-right: calc(388%/1440*100);
+  width: calc(495%/1440*100);
+  margin-top: 146px;
+  margin-bottom: 200px;
+  float: right;
+}
+.page-services .content .engineering-wrapper .service-desc {
+  margin-left: calc(102%/1440*100);
+  margin-top: 210px;
+}
+.page-services .content .engineering-wrapper .intro-tile {
+  width: calc(695%/1440*100);
+  margin-left: 0;
+  float: left;
+  margin-bottom: 0;
+}
+.page-services .content .engineering-wrapper .intro-tile .tile-info {
+  margin-left: 47px;
+}
+.page-services .content .engineering-wrapper .intro-tile.right {
+  float: right;
+}
+.page-services .content .engineering-wrapper .content-1 {
+  width: calc(506%/1440*100);
+  margin-right: calc(214%/1440*100);
+  clear: left;
+  margin-left: 0;
+  margin-top: 98px;
+}
+.page-services .content .engineering-wrapper .content-1 .mesh-bg {
+  top: -63px;
+  right: -78px;
+  width: 332px;
+  height: 313px;
+  margin-top: 0;
+  float: right;
+}
+.page-services .content .engineering-wrapper .content-2 {
+  width: calc(323%/1440*100);
+  margin-left: calc(219%/1440*100);
+  margin-top: 274px;
+  margin-bottom: 126px;
+  float: left;
+}
+.page-services .content .engineering-wrapper .content-2 .mesh-bg {
+  width: 562px;
+  right: auto;
+  bottom: 0;
+  height: 306px;
+  top: 0;
+  margin-top: 202px;
+  margin-left: 47.194%;
+}
+.page-services .content .interior-buildouts-wrapper .service-desc {
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 130px auto 0;
+  width: 62.04%;
+  float: none;
+}
+.page-services .content .interior-buildouts-wrapper .tile.right {
+  float: right;
+}
+.page-services .content .interior-buildouts-wrapper .tile.middle {
+  float: none;
+  margin: 0 auto;
+  clear: both;
+}
+.page-services .content .interior-buildouts-wrapper .intro-tile {
+  width: calc(495%/1440*100);
+  margin-left: calc(131%/1440*100);
+  margin-bottom: 244px;
+}
+.page-services .content .interior-buildouts-wrapper .content-1 {
+  width: calc(410%/1440*100);
+  margin-right: calc(216%/1440*100);
+  margin-left: 0;
+  margin-top: 186px;
+  margin-bottom: 283px;
+}
+.page-services .content .interior-buildouts-wrapper .content-1 .mesh-bg {
+  top: 535px;
+  right: -80px;
+  width: 332px;
+  height: 313px;
+  margin-top: 0;
+}
+.page-services .content .interior-buildouts-wrapper .content-2 {
+  width: calc(410%/1440*100);
+  margin-left: calc(214%/1440*100);
+  margin-top: 0;
+  margin-bottom: 222px;
+  float: left;
+}
+.page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
+  width: 540px;
+  right: auto;
+  bottom: -170px;
+  height: 313px;
+  top: auto;
+  margin-left: 45.194%;
+}
+.page-services .content .interior-buildouts-wrapper .content-3 {
+  width: calc(410%/1440*100);
+  margin-left: auto;
+  margin-right: calc(129%/1440*100);
+  margin-bottom: 126px;
+}
+.page-services .content .interior-buildouts-wrapper .content-3 .mesh-bg {
+  display: none;
+}
+.page-services .content .interior-buildouts-wrapper .content-4 {
+  width: calc(495%/1440*100);
+  margin: 0 auto;
+}
+.page-services .content .interior-buildouts-wrapper .content-4.middle {
+  margin-bottom: 118px;
+}
+.page-services .content .interior-buildouts-wrapper .content-4 .mesh-bg {
+  display: none;
+}
+.page-services .content .imagine-experience-wrapper .service-desc {
+  margin-left: calc(232%/1440*100);
+  margin-top: 197px;
+}
+.page-services .content .imagine-experience-wrapper .intro-tile {
+  width: calc(330%/1440*100);
+  margin-left: calc(253%/1440*100);
+  float: left;
+  margin-bottom: 0;
+}
+.page-services .content .imagine-experience-wrapper .intro-tile.right {
+  float: right;
+}
+.page-services .content .imagine-experience-wrapper .content-1 {
+  width: calc(566%/1440*100);
+  margin-right: calc(144%/1440*100);
+  clear: left;
+  margin-left: 0;
+  margin-top: 79px;
+}
+.page-services .content .imagine-experience-wrapper .content-1 .mesh-bg {
+  top: 228px;
+  right: -94px;
+  width: 332px;
+  height: 313px;
+  margin-top: 0;
+}
+.page-services .content .imagine-experience-wrapper .content-2 {
+  width: calc(497%/1440*100);
+  margin-left: calc(45%/1440*100);
+  margin-top: 249px;
+  margin-bottom: 216px;
+  float: left;
+}
+.page-services .content .imagine-experience-wrapper .content-2 .mesh-bg {
+  width: 336px;
+  height: 318px;
+  right: auto;
+  bottom: -160px;
+  top: auto;
+  margin-left: -40px;
 }
 .page-services .individual-service {
   padding-top: 93px;
@@ -3209,6 +3018,7 @@ SERVICES Page
   float: right;
   margin-right: 5.97%;
   margin-bottom: 16px;
+  margin-top: 0;
 }
 
 /*********************

@@ -262,8 +262,9 @@ SERVICES Page
 .page-services {
 
 	.section-header {
+		overflow: hidden;
 		font-size: rem(72);
-    	margin: 242px 0 0 8.43%;
+    	margin: 152px 0 5% 8.43%;
 		width: auto;
 		letter-spacing: 1.7px;
 	}
@@ -272,8 +273,12 @@ SERVICES Page
 		top: 0;
 		width: 53.96%;
 		height: 316px;
-		margin-top: 216px;
+		margin-top: 137px;
 		margin-left: 13.194%;
+	}
+
+	.filter-wrap {
+		width: 82%;
 	}
 
 	.filter-menu {
@@ -302,7 +307,8 @@ SERVICES Page
 		}
 
 		&.visualisation {
-			margin-left: 15.07%;
+			width: calc(410%/1440*100);
+			margin-left: calc(217%/1440*100);
     		margin-top: 94px;
     		margin-bottom: 129px;
     		float: left;
@@ -383,14 +389,24 @@ SERVICES Page
 			width: 100%;
 
 			.tile {
-				width: 28.85%;
-				margin-left: 15.069%;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+					margin-right: 15.42%;
+					margin-top: 8px;
+				}
+			}
+
+			.intro-tile {
+				width: calc(410%/1440*100);
+				margin-left: calc(217%/1440*100);
 				float: left;
 				margin-bottom: 0;
 			}
 
 			.service-desc {
-				width: 22.92%;
+				width: 42.92%;
 				float: left;
 				margin-left: 7.01%;
 				margin-top: 120px;
@@ -414,14 +430,21 @@ SERVICES Page
 
 			.content-1 {
 				.mesh-bg {
-				    top: 2px;
-				    right: -88px;
-				    width: 285px;
-				    height: 205px;
+					top: 2px;
+				    right: -58px;
+				    width: 205px;
+				    height: 165px;
+				    margin-top: 40px;
 				}
 			}
 
 			.content-2 {
+				width: 22.22%;
+				clear: right;
+				margin-top: 19px;
+    			padding-bottom: 40px;
+				margin-left: 15.069%;
+
 				.mesh-bg {
 				    width: 342px;
 				    right: auto;
@@ -433,400 +456,9 @@ SERVICES Page
 		}
 	}
 
-	.content {
-		clear: both;
-
-		.tile {
-			.tile-info {
-    			margin-top: 20px;
-			}
-
-			.tile-img {
-				margin-bottom: 0;
-			}
-
-			img {
-				width: 100%;
-				margin: 0;
-			}
-
-			&.right {
-				float: right;
-			}
-		}
-
-		.individual-service {
-			.service-desc {
-				width: 22.92%;
-				float: left;
-				margin-left: 7.01%;
-				margin-top: 260px;
-    			margin-bottom: 0;
-			    font-size: rem(11);
-			    line-height: 1.82;
-				letter-spacing: 0.97px;
-			}
-
-
-			.tile {
-				.tile-inner {
-					margin: 0;
-					width: 100%;
-				}
-			}
-
-			.intro-tile {
-				float: left;
-			}
-
-			.tile-1 {
-				margin-bottom: 0;
-			}
-
-			.tile-2 {
-				float: right;
-				clear: left;
-			}
-
-			.tile-3 {
-				float: left;
-			}
-		}
-
-		.visualisation-wrapper {
-			width: 100%;
-
-			.tile {
-				width: 28.85%;
-				margin-left: 15.069%;
-				float: left;
-				margin-bottom: 0;
-
-				&.right {
-					float: right;
-					margin-right: 15.42%;
-					margin-top: 8px;
-				}
-			}
-
-			.tile-2 {
-				float: right;
-				margin-right: 15.42%;
-				margin-left: 0;
-			}
-
-			.tile-3 {
-				width: 22.22%;
-				margin-left: 21.39%;
-    			margin-top: 290px;
-    			margin-bottom: 176px;
-			}
-
-			.content-1 {
-				.mesh-bg {
-				    top: 45px;
-				    right: -88px;
-				    width: 332px;
-				    height: 313px;
-				    margin-top: 0;
-				}
-			}
-
-			.content-2 {
-				width: 22.22%;
-				clear: right;
-				margin-top: 19px;
-				padding-bottom: 170px;
-
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: auto;
-				}
-			}
-		}
-
-		.permitting-wrapper {
-			width: 100%;
-
-			.service-desc {
-				margin-left: calc(102%/1440*100);
-				margin-top: 167px;
-			}
-
-			.tile {
-				width: 34.514%;
-				margin-left: calc(44%/1440*100);
-				float: left;
-				margin-bottom: 0;
-
-				&.right {
-					float: right;
-				}
-			}
-
-			.content-1 {
-				width: 22.64%;
-				margin-right: calc(302%/1440*100);
-				clear: left;
-				margin-left: 0;
-				margin-top: 79px;
-			}
-
-			.content-2 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-			}
-
-			.content-1 {
-				.mesh-bg {
-				    top: 155px;
-				    right: -168px;
-				    width: 332px;
-				    height: 313px;
-				    margin-top: 0;
-				}
-			}
-
-			.content-2 {
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: auto;
-				}
-			}
-		}
-
-		.team-player-wrapper {
-			.service-desc {
-				margin-left: calc(102%/1440*100);
-				margin-top: 167px;
-			}
-
-			.tile {
-				margin: 0;
-				float: left;
-				margin-bottom: 0;
-
-				&.right {
-					float: right;
-				}
-			}
-
-			.intro-tile {
-				width: cacl(410%/1440*100);
-				margin-left: 9.02%;
-			}
-
-			.content-1 {
-			    width: calc(383%/1440*100);
-			    margin-right: calc(328%/1440*100);
-			    clear: left;
-			    margin-left: 0;
-			    margin-top: -148px;
-
-				.mesh-bg {
-				    top: 155px;
-				    right: -168px;
-				    width: 337px;
-				    height: 313px;
-				    margin-top: 0;
-				}
-			}
-
-			.content-2 {
-			    clear: both;
-			    margin-right: calc(388%/1440*100);
-			    width: calc(495%/1440*100);
-    			margin-top: 146px;
-    			margin-bottom: 200px;
-    			float: right;
-			}
-		}
-
-		.engineering-wrapper {
-			.service-desc {
-				margin-left: calc(102%/1440*100);
-				margin-top: 210px;
-			}
-
-			.intro-tile {
-				width: calc(695%/1440*100);
-				margin-left: 0;
-				float: left;
-				margin-bottom: 0;
-
-				.tile-info {
-					margin-left: 47px;
-				}
-
-				&.right {
-					float: right;
-				}
-			}
-
-			.content-1 {
-				width: calc(506%/1440*100);
-				margin-right: calc(214%/1440*100);
-				clear: left;
-				margin-left: 0;
-				margin-top: 98px;
-
-				.mesh-bg {
-				    top: -63px;
-				    right: -78px;
-				    width: 332px;
-				    height: 313px;
-				    margin-top: 0;
-				    float: right;
-				}
-			}
-
-			.content-2 {
-				width: calc(323%/1440*100);
-				margin-left: calc(219%/1440*100);
-    			margin-top: 274px;
-    			margin-bottom: 126px;
-    			float: left;
-
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: 0;
-				    margin-top: 202px;
-				    margin-left: 47.194%;
-				}
-			}
-		}
-
-		.interior-buildouts-wrapper {
-			.service-desc {
-				margin-left: calc(102%/1440*100);
-				margin-top: 167px;
-			}
-
-			.tile {
-				width: 34.514%;
-				margin-left: calc(44%/1440*100);
-				float: left;
-				margin-bottom: 0;
-
-				&.right {
-					float: right;
-				}
-
-				&.middle {
-					float: none;
-				    margin: 0 auto;
-				    clear: both;
-				}
-			}
-
-			.content-1 {
-				width: 22.64%;
-				margin-right: calc(302%/1440*100);
-				clear: left;
-				margin-left: 0;
-				margin-top: 79px;
-
-				.mesh-bg {
-				    top: 155px;
-				    right: -168px;
-				    width: 332px;
-				    height: 313px;
-				    margin-top: 0;
-				}
-			}
-
-			.content-2 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: auto;
-				}
-			}
-
-			.content-3 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-    		}
-
-			.content-4 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-    		}
-		}
-
-		.imagine-experience-wrapper {
-			.service-desc {
-				margin-left: calc(102%/1440*100);
-				margin-top: 167px;
-			}
-
-			.tile {
-				width: 34.514%;
-				margin-left: calc(44%/1440*100);
-				float: left;
-				margin-bottom: 0;
-
-				&.right {
-					float: right;
-				}
-			}
-
-			.content-1 {
-				width: 22.64%;
-				margin-right: calc(302%/1440*100);
-				clear: left;
-				margin-left: 0;
-				margin-top: 79px;
-			}
-
-			.content-2 {
-				width: 22.5%;
-				margin-left: calc(302%/1440*100);
-    			margin-top: 249px;
-    			margin-bottom: 126px;
-			}
-
-			.content-1 {
-				.mesh-bg {
-				    top: 155px;
-				    right: -168px;
-				    width: 332px;
-				    height: 313px;
-				    margin-top: 0;
-				}
-			}
-
-			.content-2 {
-				.mesh-bg {
-				    width: 562px;
-				    right: auto;
-				    bottom: 0;
-				    height: 306px;
-				    top: auto;
-				}
-			}
+	.tile.engineering {
+		.tile-info {
+			margin-left: 20px;
 		}
 	}
 
@@ -837,6 +469,7 @@ SERVICES Page
 		float: right;
 		margin-right: 5.97%;
     	margin-bottom: 16px;
+    	margin-top: 50px;
 	}
 }
 

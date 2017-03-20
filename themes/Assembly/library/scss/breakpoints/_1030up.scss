@@ -1309,11 +1309,11 @@ SERVICES Page
 .page-services {
 
 	.section-header {
-
+    	margin: 242px 0 0 8.43%;
 	}
 
 	.mesh-bg {
-
+		margin-top: 216px;
 	}
 
 	.filter-menu {
@@ -1329,7 +1329,7 @@ SERVICES Page
 
 	    &.show {
 	    	opacity: 1;
-	    	pointer-events: all;
+	    	pointer-events: auto;
 	    }
 
 		div {
@@ -1413,16 +1413,63 @@ SERVICES Page
 		}
 	}
 
-	.content.dynamic {
+	.content {
+		clear: both;
+
 		.tile {
 			.tile-info {
-    			margin-top: 27px;
+    			margin-top: 20px;
 			}
 
 			.tile-img {
+				margin-bottom: 0;
 			}
 
 			img {
+				width: 100%;
+				margin: 0;
+			}
+
+			&.right {
+				float: right;
+			}
+		}
+
+		.individual-service {
+			.service-desc {
+				width: 22.92%;
+				float: left;
+				margin-left: 7.01%;
+				margin-top: 260px;
+    			margin-bottom: 0;
+			    font-size: rem(11);
+			    line-height: 1.82;
+				letter-spacing: 0.97px;
+			}
+
+
+			.tile {
+				.tile-inner {
+					margin: 0;
+					width: 100%;
+				}
+			}
+
+			.intro-tile {
+				float: left;
+			}
+
+			.tile-1 {
+				margin-bottom: 0;
+			}
+
+			.tile-2 {
+				float: right;
+				clear: left;
+			}
+
+			.tile-3 {
+				float: left;
 			}
 		}
 
@@ -1434,16 +1481,23 @@ SERVICES Page
 				margin-left: 15.069%;
 				float: left;
 				margin-bottom: 0;
+
+				// &.right {
+				// 	float: right;
+				// 	margin-right: 15.42%;
+				// 	margin-top: 8px;
+				// }
+			}
+
+			.intro-tile {
+				width: calc(410%/1440*100);
+				margin-left: calc(217%/1440*100);
+				float: left;
+				margin-bottom: 0;
 			}
 
 			.service-desc {
 				width: 22.92%;
-				float: left;
-				margin-left: 7.01%;
-				margin-top: 260px;
-    			margin-bottom: 250px;
-			    font-size: rem(11);
-			    line-height: 1.82;
 			}
 
 			.tile-2 {
@@ -1461,10 +1515,68 @@ SERVICES Page
 
 			.content-1 {
 				.mesh-bg {
-				    top: -78px;
+				    top: 45px;
 				    right: -88px;
-				    width: 355px;
-				    height: 355px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				}
+			}
+
+			.content-2 {
+				padding-bottom: 170px;
+
+				.mesh-bg {
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: auto;
+				}
+			}
+		}
+
+		.permitting-wrapper {
+			width: 100%;
+
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
+
+			.tile {
+				width: 34.514%;
+				margin-left: calc(44%/1440*100);
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+				width: 22.64%;
+				margin-right: calc(302%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
+			}
+
+			.content-2 {
+				width: 22.5%;
+				margin-left: calc(302%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 126px;
+			}
+
+			.content-1 {
+				.mesh-bg {
+				    top: 155px;
+				    right: -168px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
 				}
 			}
 
@@ -1472,248 +1584,258 @@ SERVICES Page
 				.mesh-bg {
 				    width: 562px;
 				    right: auto;
-				    bottom: -175px;
-				    height: 355px;
+				    bottom: 0;
+				    height: 306px;
 				    top: auto;
 				}
 			}
 		}
 
-		.permitting-wrapper {
-			.intro-tile {
-				width: 34.514%;
-				margin-left: 3.056%;
-
-				.tile-inner {
-					margin: 0;
-					width: 100%;
-				}
-			}
-
-			.service-desc {
-				margin-top: 171px;
-			}
-
-			.tile-2 {
-				width: 22.64%;
-				margin-right: 20.97%;
-
-				.mesh-bg {
-					width: 340px;
-					height: 320px;
-    				top: 113px;
-					margin-left: 35.194%;
-				}
-			}
-
-			.tile-3 {
-				width: 22.64%;
-				margin-left: 21.04%;
-				margin-top: 167px;
-				margin-bottom: 315px;
-			}
-		}
-
 		.team-player-wrapper {
-			.intro-tile {
-				width: 28.472%;
-				margin-left: 9.028%;
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 167px;
+			}
 
-				.tile-inner {
-					margin: 0;
-					width: 100%;
+			.tile {
+				margin: 0;
+				float: left;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
 				}
 			}
 
-			.service-desc {
-				margin-top: 171px;
+			.intro-tile {
+				width: cacl(410%/1440*100);
+				margin-left: 9.02%;
 			}
 
-			.tile-2 {
-				width: 26.597%;
-				margin-right: 22.778%;
-				margin-top: -150px;
-				margin-bottom: 219px;
+			.content-1 {
+			    width: calc(383%/1440*100);
+			    margin-right: calc(328%/1440*100);
+			    clear: left;
+			    margin-left: 0;
+			    margin-top: -148px;
 
 				.mesh-bg {
-				    width: 350px;
-				    height: 330px;
-				    top: 15px;
-				    margin-left: 63.194%;
+				    top: 155px;
+				    right: -168px;
+				    width: 337px;
+				    height: 313px;
+				    margin-top: 0;
 				}
 			}
 
-			.tile-3 {
-				width: 34.375%;
-				float: right;
-				margin-right: 26.944%;
-				margin-top: 0;
-				margin-bottom: 148px;
+			.content-2 {
+			    clear: both;
+			    margin-right: calc(388%/1440*100);
+			    width: calc(495%/1440*100);
+    			margin-top: 146px;
+    			margin-bottom: 200px;
+    			float: right;
 			}
 		}
 
 		.engineering-wrapper {
-			.intro-tile {
-				width: resp(697);
-				margin-left: 0;
+			.service-desc {
+				margin-left: calc(102%/1440*100);
+				margin-top: 210px;
+			}
 
-				.tile-inner {
-					margin: 0;
-					width: 100%;
-				}
+			.intro-tile {
+				width: calc(695%/1440*100);
+				margin-left: 0;
+				float: left;
+				margin-bottom: 0;
 
 				.tile-info {
-					margin-left: 6.599%;
+					margin-left: 47px;
+				}
+
+				&.right {
+					float: right;
 				}
 			}
 
-			.service-desc {
-				margin-bottom: 317px;
-			}
-
-			.tile-2 {
-				width: resp(495);
-				margin-right: resp(215);
-				margin-top: 0;
-				margin-bottom: 219px;
+			.content-1 {
+				width: calc(506%/1440*100);
+				margin-right: calc(214%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 98px;
 
 				.mesh-bg {
-				    width: 312px;
-				    height: 335px;
-				    top: -135px;
-				    margin-left: 53.094%;
+				    top: -63px;
+				    right: -78px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
+				    float: right;
 				}
 			}
 
-			.tile-3 {
-				width: resp(323);
-				float: left;
-				margin-left: resp(216);
-				margin-right: 0;
-				margin-top: 162px;
-				margin-bottom: 298px;
+			.content-2 {
+				width: calc(323%/1440*100);
+				margin-left: calc(219%/1440*100);
+    			margin-top: 274px;
+    			margin-bottom: 126px;
+    			float: left;
 
 				.mesh-bg {
-				    width: 534px;
-				    height: 312px;
-				    margin-top: 62%;
-				    margin-left: 46.194%;
+				    width: 562px;
+				    right: auto;
+				    bottom: 0;
+				    height: 306px;
+				    top: 0;
+				    margin-top: 202px;
+				    margin-left: 47.194%;
 				}
 			}
 		}
 
 		.interior-buildouts-wrapper {
-			.intro-tile {
-				width: resp(495);
-				margin-left: 9.028%;
+			.service-desc {
+				margin-bottom: auto;
+				margin-left: auto;
+				margin-right: auto;
+				margin: 130px auto 0;
+				width: 62.04%;
+				float: none;
+			}
 
-				.tile-inner {
-					margin: 0;
-					width: 100%;
+			.tile {
+				&.right {
+					float: right;
+				}
+
+				&.middle {
+					float: none;
+				    margin: 0 auto;
+				    clear: both;
 				}
 			}
 
-			.service-desc {
-				margin: resp(130) 0 resp(175) resp(217);
+			.intro-tile {
+				width: calc(495%/1440*100);
+				margin-left: calc(131%/1440*100);
+				margin-bottom: 244px;
 			}
 
-			.tile-2 {
-				width: resp(410);
-				margin-right: resp(216);
-				margin-top: -220px;
-				margin-bottom: 219px;
-				clear: none;
+			.content-1 {
+				width: calc(410%/1440*100);
+				margin-right: calc(216%/1440*100);
+				margin-left: 0;
+				margin-top: 186px;
+				margin-bottom: 283px;
 
 				.mesh-bg {
-				    width: 350px;
-				    height: 330px;
-				    top: 15px;
-				    margin-left: 63.194%;
+				    top: 535px;
+				    right: -80px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
 				}
 			}
 
-			.tile-3 {
-				width: resp(409);
-				float: left;
-				margin-top: 0;
-				margin-left: resp(214);
-				margin-bottom: 0;
+			.content-2 {
+				width: calc(410%/1440*100);
+				margin-left: calc(214%/1440*100);
+    			margin-top: 0;
+    			margin-bottom: 222px;
+    			float: left;
+
+				.mesh-bg {
+				    width: 540px;
+				    right: auto;
+				    bottom: -170px;
+				    height: 313px;
+				    top: auto;
+				    margin-left: 45.194%;
+				}
 			}
 
-			.tile-4 {
-				width: resp(411);
-				float: right;
-				margin-right: resp(129);
-    			margin-top: 14px;
-    			margin-bottom: 329px;
+			.content-3 {
+				width: calc(410%/1440*100);
+				margin-left: auto;
+				margin-right: calc(129%/1440*100);
+    			margin-bottom: 126px;
 
     			.mesh-bg {
-				    width: 355px;
-				    height: 320px;
-				    margin-top: -245px;
+    				display: none;
     			}
-			}
+    		}
 
-			.tile-5 {
-				width: resp(495);
-				margin: 0 auto 170px;
+			.content-4 {
+				width: calc(495%/1440*100);
+				margin: 0 auto;
 
-				.mesh-bg {
-					width: 536px;
-					height: 310px;
-    				left: -77px;
-    				top: -316px;
-				}
-			}
+    			&.middle {
+    				margin-bottom: 118px;
+    			}
+
+    			.mesh-bg {
+    				display: none;
+    			}
+    		}
 		}
 
 		.imagine-experience-wrapper {
-			.intro-tile {
-				width: resp(330);
-				margin-left: resp(253);
-
-				.tile-inner {
-					margin: 0;
-					width: 100%;
-				}
-			}
-
 			.service-desc {
-				width: resp(317);
-				margin-top: 171px;
+				margin-left: calc(232%/1440*100);
+				margin-top: 197px;
 			}
 
-			.tile-2 {
-				width: resp(566);
-				margin-right: resp(144);
-				margin-top: 62px;
-				margin-bottom: 219px;
-
-				.mesh-bg {
-				    width: 350px;
-				    height: 330px;
-				    top: auto;
-				    bottom: -145px;
-				    right: -115px;
-				    margin-left: 0;
-				}
-			}
-
-			.tile-3 {
-				width: resp(497);
+			.intro-tile {
+				width: calc(330%/1440*100);
+				margin-left: calc(253%/1440*100);
 				float: left;
-				margin-left: resp(45);
-				margin-right: 0;
-				margin-top: 253px;
-				margin-bottom: 212px;
+				margin-bottom: 0;
+
+				&.right {
+					float: right;
+				}
+			}
+
+			.content-1 {
+			    width: calc(566%/1440*100);
+			    margin-right: calc(144%/1440*100);
+				clear: left;
+				margin-left: 0;
+				margin-top: 79px;
 
 				.mesh-bg {
-				    width: 335px;
-				    height: 311px;
-				    top: auto;
-				    bottom: -150px;
-				    left: -35px;
+				    top: 228px;
+				    right: -94px;
+				    width: 332px;
+				    height: 313px;
+				    margin-top: 0;
 				}
+			}
+
+			.content-2 {
+			    width: calc(497%/1440*100);
+			    margin-left: calc(45%/1440*100);
+    			margin-top: 249px;
+    			margin-bottom: 216px;
+    			float: left;
+
+				.mesh-bg {
+				    width: 336px;
+				    height: 318px;
+				    right: auto;
+				    bottom: -160px;
+				    top: auto;
+				    margin-left: -40px;
+				}
+			}
+
+			.content-1 {
+
+			}
+
+			.content-2 {
 			}
 		}
 	}
@@ -1732,6 +1854,7 @@ SERVICES Page
 		float: right;
 		margin-right: 5.97%;
     	margin-bottom: 16px;
+    	margin-top: 0;
 	}
 }
 

@@ -2,8 +2,10 @@
 <?php include 'includes/page-data/service-page-data.php'; ?>
 <?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
 	$devicePrefix = 'mobile';
+	$imageDir = 'small';
 } else {
 	$devicePrefix = 'desktop';
+	$imageDir = 'large';
 } ?>
 	<header class="scroll-overlay dark">
 		<div class="inner-bg"></div>
@@ -48,7 +50,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-mobile.jpg" alt="visualisation"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Visualization.jpg" alt="visualisation">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Visualization-<?php echo $devicePrefix; ?>.jpg" alt="visualisation">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Visualisation</span>
@@ -60,7 +62,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-mobile.jpg" alt="permitting"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Permitting.jpg" alt="permitting">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Permitting-<?php echo $devicePrefix; ?>.jpg" alt="permitting">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Permitting</span>
@@ -72,7 +74,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/engineering-mobile.jpg" alt="engineering"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Engineering.jpg" alt="engineering">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Engineering-<?php echo $devicePrefix; ?>.jpg" alt="engineering">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Engineering</span>
@@ -85,7 +87,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-mobile.jpg" alt="interior-buildouts"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Interior-Buildouts.jpg" alt="interior-buildouts">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Interior-Buildouts-<?php echo $devicePrefix; ?>.jpg" alt="interior-buildouts">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Interior Buildouts</span>
@@ -97,7 +99,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-mobile.jpg" alt="team-player"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Team-Player.jpg" alt="team-player">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Team-Player-<?php echo $devicePrefix; ?>.jpg" alt="team-player">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
@@ -110,7 +112,7 @@
 				<div class="tile-inner">
 					<div class="tile-img">
 						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-mobile.jpg" alt="imagine-experience"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Imagine-Experience.jpg" alt="imagine-experience">
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Imagine-Experience-<?php echo $devicePrefix; ?>.jpg" alt="imagine-experience">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Imagine Experience</span>
