@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-20 03:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 12:37 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -102,9 +102,11 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('windowResize', function(){
-				$('.case-study-details').css({
-					height: _this.$currentCaseStudyContainer.outerHeight()
-				});
+				if(typeof _this.$currentCaseStudyContainer.outerHeight !== 'undefined'){
+					$('.case-study-details').css({
+						height: _this.$currentCaseStudyContainer.outerHeight()
+					});
+				}
 			});
 
 			$('.view-case-study').on('click', function(evt){
@@ -120,6 +122,27 @@ var assembly = assembly || {};
 				$(this).parent().addClass('hover');
 			}, function(){
 				$(this).parent().removeClass('hover');
+			});
+
+			$('.case-study-svg-cat .main').hover(function(){
+				if($(this).closest('.case-study-svg-cat').is('.activated')){
+					return;
+				}
+
+				$(this).closest('.case-study-svg-cat').addClass('hover');
+			}, function(){
+				$(this).closest('.case-study-svg-cat').removeClass('hover');
+			});
+
+			$('.case-study-svg-cat').on('click', function(evt){
+				evt.preventDefault();
+
+				var cat = $(this).data('svg-case-study-cat');
+
+				$(this).removeClass('hover');
+
+				_this.setFilterLinksClass($('.filter-menu [data-value='+ cat +']'));
+				_this.filterProjectsByCategory($(this).data('svg-case-study-cat'));
 			});
 
 			_this.$landing.mousemove(function(){
@@ -175,6 +198,7 @@ var assembly = assembly || {};
 			});
 
 			$('.landing-inner').addClass('hide');
+
 			setTimeout(function(){
 				$('.scroll-overlay').addClass('fixme');
 			}, 1500);
@@ -230,7 +254,16 @@ var assembly = assembly || {};
 			var _this = this,
 				cat = this.currentFilerStatus.category,
 				type = this.currentFilerStatus.type,
-				$toShow = $('[data-kit-type="'+ type +'"][data-category="'+ cat +'"]');
+				$toShow = $('[data-kit-type="'+ type +'"][data-category="'+ cat +'"]'),
+				$svgToShow = $('.case-study-svg [data-svg-case-study-cat="'+ cat +'"]'),
+				$svgsToHide = $('.case-study-svg-cat:not([data-svg-case-study-cat="'+ cat +'"])');
+
+			if(this.currentFilerStatus.category === 'all'){
+				$svgsToHide.removeClass('activate').removeClass('hide');
+			} else {
+				$svgToShow.addClass('activate').removeClass('hide'),
+				$svgsToHide.removeClass('activate').addClass('hide');
+			}
 
 			if(type === 'modular'){
 				$('[data-title="modular"]').removeClass('show');
@@ -243,7 +276,7 @@ var assembly = assembly || {};
 				$('.case-study-svg.custom').removeClass('show');
 
 				$('.case-study-svg.modular').find('.case-study-svg-cat').removeClass('selected');
-				$('.case-study-svg.modular').find('.'+cat+'-hover').addClass('selected');
+				$('.case-study-svg.modular').find('.'+ cat +'-hover').addClass('selected');
 			} else {
 				$('[data-title="modular"]').addClass('show');
 				$('[data-title="custom"]').removeClass('show');
@@ -255,7 +288,7 @@ var assembly = assembly || {};
 				$('.case-study-svg.modular').removeClass('show');
 
 				$('.case-study-svg.custom').find('.case-study-svg-cat').removeClass('selected');
-				$('.case-study-svg.custom').find('.'+cat+'-hover').addClass('selected');
+				$('.case-study-svg.custom').find('.'+ cat +'-hover').addClass('selected');
 			}
 
 			this.$currentCaseStudyContainer.removeClass('show');
