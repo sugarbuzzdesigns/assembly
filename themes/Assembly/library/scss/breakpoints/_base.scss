@@ -2879,25 +2879,6 @@ SERVICES Page
 .page-services {
 	background-color: #fff;
 
-	[data-service] {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		opacity: 0;
-		transition: opacity 0.5s;
-		pointer-events: none;
-
-		.tile[data-service-id] {
-			cursor: pointer;
-		}
-
-		&.show {
-			opacity: 1;
-			pointer-events: auto;
-		}
-	}
-
 	.scroll-overlay {
 		background: rgba(255,255,255,0.8);
 		transform: translate3d(0,0,0);
@@ -2925,10 +2906,6 @@ SERVICES Page
 
 	select {
 		margin-bottom: 0;
-
-	}
-
-	section {
 	}
 
 	.mesh-bg {
@@ -2957,44 +2934,66 @@ SERVICES Page
 		color: #7D7D7D;
 	}
 
-	.individual-service {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    opacity: 0;
-	    pointer-events: none;
-	    visibility: hidden;
+	[data-service] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		pointer-events: none;
+		opacity: 0;
+		transform: translate3d(0,50px,0);
 
-		.tile {
-			pointer-events: none;
+		.tile[data-service-id] {
+			cursor: pointer;
 		}
 
 		&.show {
-			opacity: 1;
-			visibility: visible;
 			pointer-events: auto;
-
-			.tile {
-				pointer-events: auto;
-			}
+			animation-name: serviceShow;
+			animation-duration: .4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+			animation-delay: .2s;
 		}
 
-		&.invisible {
-			visibility: hidden;
+		&.hide {
+			animation-name: serviceHide;
+			animation-duration: .4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+	}
+
+	@keyframes serviceShow {
+		0% {
+			display: block;
 		}
 
-		.tile, .service-desc {
-			transform: translate3d(0, 40px, 0);
+		1% {
 			opacity: 0;
-			transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+			transform: translate3d(0,50px,0);
 		}
 
-		&.animate {
-			.tile,
-			.service-desc {
-				transform: translate3d(0, 0, 0);
-				opacity: 1;
-			}
+		100% {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	@keyframes serviceHide {
+		0% {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+		}
+
+		99% {
+			opacity: 0;
+			transform: translate3d(0,-50px,0);
+		}
+
+		100% {
+			pointer-events: none;
+			display: none;
 		}
 	}
 

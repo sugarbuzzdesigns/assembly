@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 12:37 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:52 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -143,6 +143,12 @@ var assembly = assembly || {};
 
 				_this.setFilterLinksClass($('.filter-menu [data-value='+ cat +']'));
 				_this.filterProjectsByCategory($(this).data('svg-case-study-cat'));
+			});
+
+			$('.landing .default-content').on('transitionend', function(evt){
+				// evt.preventDefault();
+				evt.stopPropagation();
+				console.log(evt, $(this).width());
 			});
 
 			_this.$landing.mousemove(function(){

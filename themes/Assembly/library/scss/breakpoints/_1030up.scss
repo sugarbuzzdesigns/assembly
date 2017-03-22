@@ -582,6 +582,17 @@ CASE STUDIES Page
 			transform: translate3d(0,0,0);
 		}
 
+		&.resetSVG {
+			// animation-name: hideApproachSVG;
+			// animation-duration: 1.5s;
+			// animation-delay: 0.5s;
+			// animation-fill-mode: forwards;
+			// transform: translate3d(0,0,0);
+		}
+		// super 			transform: translate3d(-40%,30%,0) scale(0.6);
+		// hospitality 		transform: translate3d(103%,30%,0) scale(1);
+		// experiential     transform: translate3d(59%,-38%,0) scale(1);
+		// sporting  		transform: translate3d(-75%,-30%,0) scale(1);
 		@keyframes showApproachSVG {
 			0% {
 				opacity: 1;

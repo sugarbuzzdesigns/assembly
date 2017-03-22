@@ -159,6 +159,8 @@ var transEndEventNames = {
 },
 transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
+	assembly.scrollAnimating = false;
+
 	assembly.util = {
 		baseUrl: php_vars.home,
 

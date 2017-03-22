@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 09:30 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:28 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10864,22 +10864,6 @@ SERVICES Page
 .page-services {
   background-color: #fff;
 }
-.page-services [data-service] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s;
-  pointer-events: none;
-}
-.page-services [data-service] .tile[data-service-id] {
-  cursor: pointer;
-}
-.page-services [data-service].show {
-  opacity: 1;
-  pointer-events: auto;
-}
 .page-services .scroll-overlay {
   background: rgba(255, 255, 255, 0.8);
   -webkit-transform: translate3d(0, 0, 0);
@@ -10929,40 +10913,103 @@ SERVICES Page
   line-height: 1.76;
   color: #7D7D7D;
 }
-.page-services .individual-service {
+.page-services [data-service] {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  width: 100%;
   pointer-events: none;
-  visibility: hidden;
-}
-.page-services .individual-service .tile {
-  pointer-events: none;
-}
-.page-services .individual-service.show {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.page-services .individual-service.show .tile {
-  pointer-events: auto;
-}
-.page-services .individual-service.invisible {
-  visibility: hidden;
-}
-.page-services .individual-service .tile, .page-services .individual-service .service-desc {
-  -webkit-transform: translate3d(0, 40px, 0);
-          transform: translate3d(0, 40px, 0);
   opacity: 0;
-  transition: opacity 0.4s ease-out, -webkit-transform 0.5s ease-out;
-  transition: opacity 0.4s ease-out, transform 0.5s ease-out;
+  -webkit-transform: translate3d(0, 50px, 0);
+          transform: translate3d(0, 50px, 0);
 }
-.page-services .individual-service.animate .tile,
-.page-services .individual-service.animate .service-desc {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  opacity: 1;
+.page-services [data-service] .tile[data-service-id] {
+  cursor: pointer;
+}
+.page-services [data-service].show {
+  pointer-events: auto;
+  -webkit-animation-name: serviceShow;
+          animation-name: serviceShow;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+.page-services [data-service].hide {
+  -webkit-animation-name: serviceHide;
+          animation-name: serviceHide;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+@-webkit-keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
+}
+@keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
 }
 .page-services .content {
   float: left;

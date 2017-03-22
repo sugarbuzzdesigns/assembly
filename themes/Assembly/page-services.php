@@ -27,7 +27,7 @@
 	</nav>
 	<div class="mesh-bg dark wide"></div>
 	<h1 class="section-header">services</h1>
-	<section>
+	<section class="mobile-filter">
 		<div class="filter-wrap">
 			<select class="select-filter">
 				<option value="all">All</option>

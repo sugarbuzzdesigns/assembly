@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 12:37 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:52 pm - User: Phoydar */
 /*!
  * imagesLoaded PACKAGED v4.1.1
  * JavaScript is all like "You images are done yet or what?"
@@ -65,8 +65,10 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-up', function(){
-				$('.scroll-overlay').addClass('going-up');
-				$('.scroll-overlay').removeClass('going-down');
+				if(typeof assembly.scrollAnimating !== 'undefined' && assembly.scrollAnimating === false){
+					$('.scroll-overlay').addClass('going-up');
+					$('.scroll-overlay').removeClass('going-down');
+				}
 				if(!_this.$filterMenu.hasClass('show')){
 					_this.$filterMenu.addClass('show');
 				}
@@ -89,10 +91,12 @@ var assembly = assembly || {};
 			$('.all-services .tile').on('click', function(e){
 				e.preventDefault();
 
-				_this.filterProjectsByCategory($(this).data('service-id'));
+				_this.filterProjectsByCategory($(this).data('service-id'), true);
 
 				$('.filter-menu [data-value].active').removeClass('active');
 				$('.filter-menu [data-value="'+ $(this).data('service-id') +'"]').addClass('active');
+
+				_this.$selectFilter.val($(this).data('service-id')).trigger('change');
 			});
 
 			$('.all-services.show').imagesLoaded( function() {
@@ -151,44 +155,34 @@ var assembly = assembly || {};
 			});
 		},
 
-		filterProjectsByCategory: function(option){
-			var $toShow,
+		filterProjectsByCategory: function(option, tileClick){
+			var _this = this,
 				$landingContent = $('[data-service="all"]'),
-				$allTiles = $('.individual-service[data-service]'),
-				$servicesToHide = $('.individual-service[data-service!="'+ option + '"]'),
-				$servicesToShow = $('.individual-service[data-service="'+ option + '"]');
+				$allTiles = $('[data-service]'),
+				$serviceToHide = $('[data-service].show'),
+				$serviceToShow = $('[data-service="'+ option + '"]');
 
-			if(option === 'all'){
-				$toShow = $landingContent.addClass('show').removeClass('invisible');
-				$allTiles.removeClass('show');
+			$serviceToHide.removeClass('show').addClass('hide');
+			$serviceToShow.removeClass('hide').addClass('show');
 
+			if(assembly.util.useragent.deviceType !== 'desktop'){
 				setTimeout(function(){
-					$allTiles.addClass('invisible');
-				}, 700);
+					_this.$servicesContainer.css({
+						height: $serviceToShow.outerHeight()
+					});
+				}, 400);
 			} else {
-				$toShow = $servicesToShow;
-				$landingContent.removeClass('show');
-				$servicesToHide.removeClass('show animate');
-				$servicesToShow.removeClass('invisible');
-
-				$toShow.addClass('show');
-
-				setTimeout(function(){
-					$landingContent.addClass('invisible');
-					$servicesToHide.addClass('invisible');
-				}, 700);
-
-				setTimeout(function(){
-					$servicesToShow.addClass('animate');
-				}, 100);
-				// $.when($allTiles.fadeOut(500)).done(function(){
-				// 	$servicesToShow.fadeIn(500);
-				// });
+				_this.$servicesContainer.css({
+					height: $serviceToShow.outerHeight()
+				});
 			}
 
-			this.$servicesContainer.css({
-				height: $toShow.outerHeight()
-			});
+			if(assembly.util.useragent.deviceType !== 'desktop' && tileClick){
+				assembly.scrollAnimating = true;
+				$('html, body').delay(500).animate({ scrollTop: $('.mobile-filter').offset().top - 20 }, 1000, 'easeOutCubic', function(){
+					assembly.scrollAnimating = false;
+				});
+			}
 		}
 	};
 

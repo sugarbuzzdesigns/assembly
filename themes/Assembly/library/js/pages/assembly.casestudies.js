@@ -144,6 +144,12 @@ var assembly = assembly || {};
 				_this.filterProjectsByCategory($(this).data('svg-case-study-cat'));
 			});
 
+			$('.landing .default-content').on('transitionend', function(evt){
+				// evt.preventDefault();
+				evt.stopPropagation();
+				console.log(evt, $(this).width());
+			});
+
 			_this.$landing.mousemove(function(){
 				_this.parallaxBg();
 			});
