@@ -58,7 +58,7 @@ var assembly = assembly || {};
 			assembly.util.env.$win.on('scroll-down', function(){
 				$('.scroll-overlay').addClass('going-down');
 				$('.scroll-overlay').removeClass('going-up');
-				if(_this.$filterMenu.hasClass('show')){
+				if(_this.$filterMenu.hasClass('show') && $(window).scrollTop() >50){
 					_this.$filterMenu.removeClass('show');
 				}
 			});

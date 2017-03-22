@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:52 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:58 pm - User: Phoydar */
 /*!
  * imagesLoaded PACKAGED v4.1.1
  * JavaScript is all like "You images are done yet or what?"
@@ -59,7 +59,7 @@ var assembly = assembly || {};
 			assembly.util.env.$win.on('scroll-down', function(){
 				$('.scroll-overlay').addClass('going-down');
 				$('.scroll-overlay').removeClass('going-up');
-				if(_this.$filterMenu.hasClass('show')){
+				if(_this.$filterMenu.hasClass('show') && $(window).scrollTop() >50){
 					_this.$filterMenu.removeClass('show');
 				}
 			});
