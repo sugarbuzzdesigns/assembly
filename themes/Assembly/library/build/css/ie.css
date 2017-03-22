@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:08 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:18 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -430,7 +430,7 @@ PROJECTS SECTION
   left: -255px;
   width: 570px;
 }
-.employees .stripes-bg img {
+.employees .stripes-bg img, .employees .stripes-bg svg {
   width: 100%;
 }
 
