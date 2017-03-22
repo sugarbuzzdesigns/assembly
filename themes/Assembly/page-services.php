@@ -16,7 +16,7 @@
 		</h1>
 		<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 	</header>
-	<nav class="filter-menu no-mobile">
+	<nav class="filter-menu no-mobile show">
 		<div class="active" data-value="all"><a href="#">All</a></div>
 		<div data-value="visualisation"><a href="#">Visualisation</a></div>
 		<div data-value="permitting"><a href="#">Permitting</a></div>
