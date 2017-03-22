@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-21 11:28 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:06 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11129,7 +11129,6 @@ ABOUT US Page
   background: #fff;
 }
 .page-about-us .scroll-overlay {
-  background: rgba(255, 255, 255, 0.8);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s;
@@ -12361,7 +12360,6 @@ you can add resource intensive styles.
   **********************/
   .page-case-studies header.scroll-overlay {
     position: absolute;
-    background: rgba(255, 255, 255, 0.8);
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     transition: -webkit-transform 0.5s linear;
