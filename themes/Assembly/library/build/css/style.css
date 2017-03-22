@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:06 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:08 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10865,7 +10865,6 @@ SERVICES Page
   background-color: #fff;
 }
 .page-services .scroll-overlay {
-  background: rgba(255, 255, 255, 0.8);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s;
@@ -14014,6 +14013,9 @@ you can add resource intensive styles.
   .page-about-us {
     padding-top: 145px;
   }
+  .page-about-us .scroll-overlay {
+    background: transparent;
+  }
   .page-about-us .landing {
     padding-top: 127px;
   }
@@ -14524,6 +14526,9 @@ you can add resource intensive styles.
   /*********************
   SERVICES Page
   **********************/
+  .page-services .scroll-overlay {
+    background: transparent;
+  }
   .page-services .section-header {
     margin: 242px 0 0 8.43%;
   }

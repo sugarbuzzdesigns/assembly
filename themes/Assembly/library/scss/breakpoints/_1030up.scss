@@ -753,6 +753,10 @@ ABOUT US Page
 .page-about-us {
 	padding-top: 145px;
 
+	.scroll-overlay {
+		background: transparent;
+	}
+
 	.landing {
     	padding-top: 127px;
 
@@ -1389,6 +1393,10 @@ ABOUT US Page
 SERVICES Page
 **********************/
 .page-services {
+
+	.scroll-overlay {
+		background: transparent;
+	}
 
 	.section-header {
     	margin: 242px 0 0 8.43%;
