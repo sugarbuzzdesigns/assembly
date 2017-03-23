@@ -1,3 +1,4 @@
+			<?php global $detect, $deviceType; ?>
 			<footer class="footer contact-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<div class="footer-inner">
 					<?php include __DIR__ . '/library/images/svg/assembly-svg-logo-icon.svg'; ?>
