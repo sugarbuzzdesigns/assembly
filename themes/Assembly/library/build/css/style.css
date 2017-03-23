@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 01:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 02:31 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7682,7 +7682,6 @@ SVG Animations
           transform: translate3d(-50%, -50%, 0);
   text-align: center;
   transition: opacity 0.5s;
-  opacity: 0;
 }
 .loader-wrap.ready .loader-inner {
   opacity: 1;
@@ -7715,10 +7714,15 @@ SVG Animations
   margin: 0 auto 30px;
 }
 .loader-wrap .loader img {
-  width: 800%;
   position: absolute;
   top: 0;
   left: 0;
+}
+.loader-wrap .loader .loader-img-placeholder {
+  width: 100%;
+}
+.loader-wrap .loader .loader-img {
+  width: 800%;
 }
 .loader-wrap div.mesh-bg {
   background-image: url(../../images/svg/mesh-dot-landing.svg);

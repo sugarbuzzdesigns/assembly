@@ -84,7 +84,6 @@ $screenWidth: 320;
 		transform: translate3d(-50%, -50%, 0);
 		text-align: center;
 		transition: opacity 0.5s;
-		opacity: 0;
 	}
 
 	&.ready {
@@ -124,10 +123,17 @@ $screenWidth: 320;
 		margin: 0 auto 30px;
 
 		img {
-			width: 800%;
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+
+		.loader-img-placeholder {
+			width: 100%;
+		}
+
+		.loader-img {
+			width: 800%;
 		}
 	}
 

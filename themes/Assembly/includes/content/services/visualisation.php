@@ -2,8 +2,7 @@
 			<div class="tile intro-tile" data-ratio=".05">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-mobile.jpg" alt="visualisation"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Visualization.jpg" alt="visualisation">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Landing-Visualization.jpg" alt="visualisation">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Visualisation</span>
@@ -16,8 +15,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-content-1-mobile.jpg" alt="visualisation"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Vis.jpg" alt="visualisation">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Vis.jpg" alt="visualisation">
 					</div>
 				</div>
 			</div>
@@ -25,8 +23,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-content-2-mobile.jpg" alt="visualisation"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Vis.jpg" alt="visualisation">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Vis.jpg" alt="visualisation">
 					</div>
 				</div>
 			</div>
