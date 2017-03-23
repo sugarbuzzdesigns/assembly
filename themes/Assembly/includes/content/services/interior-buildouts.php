@@ -2,7 +2,7 @@
 			<div class="tile intro-tile" data-ratio=".05">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Interior.jpg" alt="interior-buildouts">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/03-Interior.jpg" alt="interior-buildouts">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Interior Buildouts</span>
@@ -15,7 +15,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Interior.jpg" alt="interior-buildouts">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/02-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Interior.jpg" alt="interior-buildouts">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/04-Interior.jpg" alt="interior-buildouts">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/04-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>
@@ -39,7 +39,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/05-Interior.jpg" alt="interior-buildouts">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/05-Interior.jpg" alt="interior-buildouts">
 					</div>
 				</div>
 			</div>

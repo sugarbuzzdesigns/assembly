@@ -2,7 +2,7 @@
 			<div class="tile intro-tile" data-ratio=".05">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Team.jpg" alt="team-player">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/02-Team.jpg" alt="team-player">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
@@ -15,7 +15,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Team.jpg" alt="team-player">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/03-Team.jpg" alt="team-player">
 
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 			<div class="tile tall-1 content-tile content-2 left" data-ratio=".06">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Team.jpg" alt="team-player">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Team.jpg" alt="team-player">
 					</div>
 				</div>
 			</div>

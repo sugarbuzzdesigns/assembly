@@ -370,7 +370,6 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
 				var loaderInterval = setInterval(function(){
 						animate();
-						console.log(currentFrame);
 						if(currentFrame === 48 && $('html').is('.dom-ready')){
 							$('.loader-wrap').addClass('done');
 							$('html').trigger('loaded');

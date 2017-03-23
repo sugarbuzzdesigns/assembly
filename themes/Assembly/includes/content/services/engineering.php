@@ -2,7 +2,7 @@
 			<div class="tile intro-tile" data-ratio=".05">
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/01-Engineering.jpg" alt="engineering">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Engineering.jpg" alt="engineering">
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Engineering</span>
@@ -15,7 +15,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/02-Engineering.jpg" alt="engineering">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/02-Engineering.jpg" alt="engineering">
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">
 					<div class="tile-img">
-						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/03-Engineering.jpg" alt="engineering">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/03-Engineering.jpg" alt="engineering">
 					</div>
 				</div>
 			</div>
