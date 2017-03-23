@@ -122,12 +122,12 @@
 				</div>
 			</div>
 		</div>
-		<?php //include 'includes/content/services/visualisation.php'; ?>
-		<?php //include 'includes/content/services/permitting.php'; ?>
-		<?php //include 'includes/content/services/team-player.php'; ?>
-		<?php //include 'includes/content/services/engineering.php'; ?>
-		<?php //include 'includes/content/services/interior-buildouts.php'; ?>
-		<?php //include 'includes/content/services/imagine-experience.php'; ?>
+		<?php include 'includes/content/services/visualisation.php'; ?>
+		<?php include 'includes/content/services/permitting.php'; ?>
+		<?php include 'includes/content/services/team-player.php'; ?>
+		<?php include 'includes/content/services/engineering.php'; ?>
+		<?php include 'includes/content/services/interior-buildouts.php'; ?>
+		<?php include 'includes/content/services/imagine-experience.php'; ?>
 	</section>
 	<script>
 		function getParameterByName(name, url) {

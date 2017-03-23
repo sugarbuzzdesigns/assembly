@@ -23,8 +23,6 @@ var assembly = assembly || {};
 			this.countTilesAndAddClass();
 			// this.setInitialTranslate();
 			this.$currentServiceContainer = $('.all-services');
-
-			this.setContainerHeights();
 		},
 
 		initSelect2: function(){
@@ -33,7 +31,8 @@ var assembly = assembly || {};
 			});
 		},
 
-		setContainerHeights: function(){
+		setInitialContainerHeights: function(){
+			console.log('set setInitialContainerHeights');
 			this.$servicesContainer.css({
 				height: this.$currentServiceContainer.height()
 			});
@@ -100,6 +99,7 @@ var assembly = assembly || {};
 
 			$('.all-services.show').imagesLoaded( function() {
 			  	console.log('loaded');
+			  	_this.setInitialContainerHeights();
 			});
 		},
 
