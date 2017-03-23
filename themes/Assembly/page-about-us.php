@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $detect, $deviceType; ?>
 <?php if($deviceType === 'tablet' || $deviceType === 'mobile'){
 	$devicePrefix = 'mobile';
 } else {
