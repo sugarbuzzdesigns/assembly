@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:18 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 01:26 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -449,7 +449,7 @@ SERVICES SECTION
 /*********************
 About Us Page
 **********************/
-.page-about-us {
+.page-about-us .wrap {
   padding-top: 125px;
 }
 .page-about-us .video.module {
@@ -1009,6 +1009,9 @@ Generic Section Styles
 header.scroll-overlay {
   position: fixed;
   padding-bottom: 20px;
+}
+header.scroll-overlay .inner-bg {
+  background: transparent;
 }
 header.scroll-overlay .logo {
   background: transparent;
@@ -2286,7 +2289,7 @@ CASE STUDIES Page
 /*********************
 ABOUT US Page
 **********************/
-.page-about-us {
+.page-about-us .wrap {
   padding-top: 145px;
 }
 .page-about-us .scroll-overlay {
@@ -2458,9 +2461,11 @@ ABOUT US Page
           transform: translate3d(0, 0, 0);
 }
 .page-about-us .employee-list {
-  overflow: hidden;
   z-index: 4;
   position: relative;
+  float: left;
+  clear: both;
+  padding-bottom: 40px;
 }
 .page-about-us .employee-list .employee {
   position: relative;
@@ -2514,13 +2519,6 @@ ABOUT US Page
 }
 .page-about-us .employee-list .employee:first-child {
   margin-left: resp(44);
-}
-.page-about-us .employee-list .employee:nth-child(even) {
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  -webkit-transform: translate3d(0, 95px, 0);
-          transform: translate3d(0, 95px, 0);
-  padding-bottom: 45px;
 }
 .page-about-us .employee-list .employee img {
   width: 100%;
@@ -3238,27 +3236,33 @@ SERVICES Page
 /*********************
 CONTACT
 **********************/
-.page-contact {
+.page-contact,
+.contact-content {
   background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
   background-size: 54%;
 }
-.page-contact form {
+.page-contact form,
+.contact-content form {
   padding-top: 79px;
   width: 81.81%;
   margin: 0 auto 30px calc((130%/1440) *100);
 }
-.page-contact form .pager {
+.page-contact form .pager,
+.contact-content form .pager {
   margin-top: 22px;
   margin-bottom: 19px;
 }
-.page-contact form p {
+.page-contact form p,
+.contact-content form p {
   width: 54.15%;
   line-height: 1.13;
 }
-.page-contact form p:first-child {
+.page-contact form p:first-child,
+.contact-content form p:first-child {
   padding-top: 0;
 }
-.page-contact form input {
+.page-contact form input,
+.contact-content form input {
   font-size: rem(38);
   line-height: 1.45;
   letter-spacing: 0.37px;
@@ -3266,33 +3270,39 @@ CONTACT
   width: 100%;
   height: auto;
 }
-.page-contact form button {
+.page-contact form button,
+.contact-content form button {
   margin-top: 38px;
   font-family: 'gridnikregular';
   font-size: rem(13);
   letter-spacing: 1px;
 }
-.page-contact .add-photos-carousel-wrap {
+.page-contact .add-photos-carousel-wrap,
+.contact-content .add-photos-carousel-wrap {
   padding: 0 106px 0;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.page-contact .add-photos-carousel .image {
+.page-contact .add-photos-carousel .image,
+.contact-content .add-photos-carousel .image {
   padding: 0 9px;
 }
-.page-contact .add-photo-overlay p {
+.page-contact .add-photo-overlay p,
+.contact-content .add-photo-overlay p {
   font-size: rem(38);
   line-height: calc(43/38);
   letter-spacing: .37px;
   margin: resp(62) 0 resp(50) resp(129);
 }
-.page-contact .add-photo-overlay .mesh-bg {
+.page-contact .add-photo-overlay .mesh-bg,
+.contact-content .add-photo-overlay .mesh-bg {
   width: resp(1000);
   height: 314px;
   margin: resp(185) 0 0 resp(264);
 }
-.page-contact .add-photo-overlay nav {
+.page-contact .add-photo-overlay nav,
+.contact-content .add-photo-overlay nav {
   display: block;
   overflow: hidden;
   width: 100%;
@@ -3303,76 +3313,94 @@ CONTACT
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
-.page-contact .add-photo-overlay nav .nav-arrow {
+.page-contact .add-photo-overlay nav .nav-arrow,
+.contact-content .add-photo-overlay nav .nav-arrow {
   cursor: pointer;
   float: left;
   margin-left: resp(45);
 }
-.page-contact .add-photo-overlay nav .arrow-right {
+.page-contact .add-photo-overlay nav .arrow-right,
+.contact-content .add-photo-overlay nav .arrow-right {
   float: right;
   margin-right: resp(45);
 }
-.page-contact .add-photo-overlay .image:hover .hover-overlay {
+.page-contact .add-photo-overlay .image:hover .hover-overlay,
+.contact-content .add-photo-overlay .image:hover .hover-overlay {
   opacity: 1;
 }
-.page-contact .add-photo-overlay .close-btn {
+.page-contact .add-photo-overlay .close-btn,
+.contact-content .add-photo-overlay .close-btn {
   height: 31px;
   width: 31px;
   margin-right: calc(64%/1440*100);
   margin-top: calc(82%/1440*100);
 }
-.page-contact .add-photo-overlay .add-photo-btn {
+.page-contact .add-photo-overlay .add-photo-btn,
+.contact-content .add-photo-overlay .add-photo-btn {
   display: none;
 }
-.page-contact .add-photo {
+.page-contact .add-photo,
+.contact-content .add-photo {
   background: transparent;
   padding-left: calc((130%/1440) *100);
   padding-right: calc((130%/1440) *100);
 }
-.page-contact .add-photo h3 {
+.page-contact .add-photo h3,
+.contact-content .add-photo h3 {
   color: #fff;
   font-size: rem(13);
   letter-spacing: 1px;
   margin-bottom: 38px;
   text-align: left;
 }
-.page-contact .add-photo .open-add-images {
+.page-contact .add-photo .open-add-images,
+.contact-content .add-photo .open-add-images {
   margin: 0;
 }
-.page-contact .add-photo .photos-wrap {
+.page-contact .add-photo .photos-wrap,
+.contact-content .add-photo .photos-wrap {
   padding-bottom: 37px;
   width: 100%;
 }
-.page-contact .add-photo .photos-wrap .inner {
+.page-contact .add-photo .photos-wrap .inner,
+.contact-content .add-photo .photos-wrap .inner {
   margin: 0;
   padding: 0;
 }
-.page-contact .contact-us {
+.page-contact .contact-us,
+.contact-content .contact-us {
   padding-top: 100px;
   width: 100%;
   overflow: hidden;
   background: #fff;
 }
-.page-contact .contact-us.no-mobile {
+.page-contact .contact-us.no-mobile,
+.contact-content .contact-us.no-mobile {
   display: block;
 }
-.page-contact .contact-us a, .page-contact .contact-us span {
+.page-contact .contact-us a, .page-contact .contact-us span,
+.contact-content .contact-us a,
+.contact-content .contact-us span {
   color: #000000;
 }
-.page-contact .contact-us .col {
+.page-contact .contact-us .col,
+.contact-content .contact-us .col {
   text-align: center;
   display: block;
   width: calc(100%/3);
   float: left;
 }
-.page-contact .contact-footer {
+.page-contact .contact-footer,
+.contact-content .contact-footer {
   border-top: dashed 1px #9a9a9a;
   padding: 54px 0 45px 0;
 }
-.page-contact .contact-footer .contact-info {
+.page-contact .contact-footer .contact-info,
+.contact-content .contact-footer .contact-info {
   display: none;
 }
-.page-contact .contact-footer .assembly-logo-icon {
+.page-contact .contact-footer .assembly-logo-icon,
+.contact-content .contact-footer .assembly-logo-icon {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -3382,7 +3410,8 @@ CONTACT
       -ms-flex: 1;
           flex: 1;
 }
-.page-contact .contact-footer .social {
+.page-contact .contact-footer .social,
+.contact-content .contact-footer .social {
   -webkit-order: 3;
       -ms-flex-order: 3;
           order: 3;
@@ -3393,7 +3422,8 @@ CONTACT
   text-align: right;
   margin-right: 3.125%;
 }
-.page-contact .contact-footer .copyright {
+.page-contact .contact-footer .copyright,
+.contact-content .contact-footer .copyright {
   color: #737373;
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -3405,10 +3435,12 @@ CONTACT
   text-align: left;
   margin-left: 3.125%;
 }
-.page-contact .to-top-wrap {
+.page-contact .to-top-wrap,
+.contact-content .to-top-wrap {
   padding-top: 93px;
 }
-.page-contact .to-top {
+.page-contact .to-top,
+.contact-content .to-top {
   opacity: 1;
 }
 
@@ -3424,7 +3456,7 @@ TO TOP
 /*********************
 Footer
 **********************/
-.footer {
+.footer .footer-inner {
   padding: 34px 3% 8px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3435,6 +3467,8 @@ Footer
 }
 .footer .col {
   width: calc(100%/3);
+  position: relative;
+  z-index: 3;
 }
 .footer .down-carrot {
   width: 19px;

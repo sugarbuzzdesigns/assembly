@@ -11,11 +11,20 @@
 			this.scrollChange = 0;
 			this.scrolledWhileInView = 0;
 			this.scrollDirection = 'down';
+			this.employeeDiff = 0;
 
 			if (raf && assembly.util.useragent.deviceType === 'desktop') {
 				this.setUpParallax();
 			    this.loop();
 			    this.$scrollElement.scrollTop(1,0);
+
+			    $('[data-employee-name]').each(function(i, emp){
+			    	$(emp).css({
+			    		transform: 'translate3d(0,'+ $(emp).data('start') +'px,0)'
+			    	});
+
+			    	$(emp).data('ypos', $(emp).data('start'));
+			    });
 			}
 		},
 
@@ -49,9 +58,9 @@
 				return;
 			} else {
 				if(Math.sign(scrollDiff) === 1){
-					this.scrollDirection = 'down';
-				} else {
 					this.scrollDirection = 'up';
+				} else {
+					this.scrollDirection = 'down';
 				}
 
 				_this.scrollChange = Math.abs(scrollDiff);
@@ -65,6 +74,27 @@
 		scrollHandler: function(){
 			var _this = this,
 				$lax, laxRatio, curY, meshCurY, $mesh;
+
+			if($('.employee-list').is('.in-view')){
+				$('[data-employee-name]').each(function(i, emp){
+					var $emp = $(emp);
+			    	var percentage = (($emp.offset().top - $(window).scrollTop() + $emp.height()) / ($(window).height() + $emp.height()));
+
+			   //  	if(_this.scrollDirection === 'up'){
+			   //  		_this.employeeDiff += _this.scrollChange;
+			   //  	} else {
+						// _this.employeeDiff -= _this.scrollChange;
+			   //  	}
+			   	scrollPerc = ($('.employee-list').offset().top - $(window).scrollTop())/$(window).height();
+		   			console.log();
+
+			    	var ypos = $emp.data('start') - (percentage * $emp.data('start'));
+
+			    	$emp.css({
+			    		transform: 'translate3d(0,'+ ($emp.data('start') - ((1 - scrollPerc)*$emp.data('start')*2)) +'px,0)'
+			    	});
+				});
+			}
 
 			_this.$elm.each(function(i, lax){
 				// if($('body').is('.page-case-studies')){
@@ -83,7 +113,7 @@
 				}
 
 				if(_this.$scrollElement.scrollTop() >= $lax.offset().top - _this.winHeight){
-					if(_this.scrollDirection === 'down'){
+					if(_this.scrollDirection === 'up'){
 						if(typeof meshCurY !== 'undefined'){
 							meshCurY -= (_this.scrollChange * (laxRatio + .02));
 						}

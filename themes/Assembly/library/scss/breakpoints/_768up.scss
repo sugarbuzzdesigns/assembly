@@ -246,7 +246,9 @@ SERVICES SECTION
 About Us Page
 **********************/
 .page-about-us {
-    padding-top: 125px;
+    .wrap {
+    	padding-top: 125px;
+    }
 
 	.video.module {
 		margin: 0 0 13.5% 28.74%;

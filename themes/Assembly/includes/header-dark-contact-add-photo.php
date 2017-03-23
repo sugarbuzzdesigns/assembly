@@ -1,9 +1,8 @@
 <header class="dark section-header contact-add-photo-header">
     <h2 class="logo">
-        <a href="/">
-            <!-- logo SVG file -->
-            <?php include __DIR__ . '/../library/images/svg/full-logo.svg'; ?>
-        </a>
+	    <a class="init" href="/">
+	    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+	    </a>
     </h2>
 	<div class="close-btn">
 		<svg class="close" viewBox="1345 136 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -14,3 +13,11 @@
 		</svg>
 	</div>
 </header>
+
+	<header class="scroll-overlay dark">
+		<h1 class="logo">
+		    <a class="init" href="/">
+		    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+		    </a>
+		</h1>
+	</header>

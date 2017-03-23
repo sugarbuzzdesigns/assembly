@@ -7,6 +7,7 @@
 	$devicePrefix = 'desktop';
 	$imageDir = 'large';
 } ?>
+<div class="wrap">
 	<header class="scroll-overlay dark">
 		<div class="inner-bg"></div>
 		<h1 class="logo">

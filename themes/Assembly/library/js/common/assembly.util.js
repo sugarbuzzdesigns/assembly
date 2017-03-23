@@ -222,6 +222,8 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 				_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 				_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#contact-drawer-logo'), 37, 9, 11);
+				_this.animateSpriteBG(0, 0, $('#add-photo-overlay-logo'), 37, 9, 11);
 			});
 
 			_this.env.$win.on('scrollstart', function(){
@@ -433,8 +435,32 @@ transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 		}
 	}
 
+	assembly.contactDrawer = {
+		init: function(){
+			this.bindEvents();
+		},
+
+		bindEvents: function(){
+			$('.open-contact-drawer').on('click', function(evt){
+				evt.preventDefault();
+
+				$('html').addClass('open-contact');
+
+				$('#contact-drawer').on(transEndEventName, function(evt){
+					if($(evt.target).is('#contact-drawer') && evt.originalEvent.propertyName === 'transform'){
+						console.log('do stuff here', evt.originalEvent.propertyName);
+						$('html,body').scrollTop(0,0);
+						$('html').addClass('contact-opened');
+					}
+				});
+
+			});
+		}
+	}
+
 	$(function(){
 		assembly.util.init();
+		assembly.contactDrawer.init();
 		$('html').addClass('dom-ready');
 	});
 })(jQuery);

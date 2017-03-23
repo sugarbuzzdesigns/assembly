@@ -152,6 +152,10 @@ header.scroll-overlay {
     position: fixed;
     padding-bottom: 20px;
 
+    .inner-bg {
+    	background: transparent;
+    }
+
     .logo {
 		background: transparent;
     }
@@ -751,7 +755,9 @@ CASE STUDIES Page
 ABOUT US Page
 **********************/
 .page-about-us {
-	padding-top: 145px;
+	.wrap {
+		padding-top: 145px;
+	}
 
 	.scroll-overlay {
 		background: transparent;
@@ -968,9 +974,11 @@ ABOUT US Page
 	}
 
 	.employee-list {
-		overflow: hidden;
 	    z-index: 4;
 	    position: relative;
+	    float: left;
+	    clear: both;
+	    padding-bottom: 40px;
 
 		.employee {
 			position: relative;
@@ -1035,9 +1043,9 @@ ABOUT US Page
 			}
 
 			&:nth-child(even){
-				transition: transform 0.5s ease-in-out;
-				transform: translate3d(0, 95px, 0);
-				padding-bottom: 45px;
+				// transition: transform 0.5s ease-in-out;
+				// transform: translate3d(0, 95px, 0);
+				// padding-bottom: 45px;
 			}
 
 			img {
@@ -1952,7 +1960,8 @@ SERVICES Page
 CONTACT
 **********************/
 // light footer
-.page-contact {
+.page-contact,
+.contact-content {
 	background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
 	background-size: 54%;
 
@@ -2166,12 +2175,16 @@ TO TOP
 Footer
 **********************/
 .footer {
-	padding: 34px 3% 8px;
-    display: flex;
-    justify-content: space-between;
+    .footer-inner {
+		padding: 34px 3% 8px;
+	    display: flex;
+	    justify-content: space-between;
+    }
 
     .col {
     	width: calc(100%/3);
+		position: relative;
+		z-index: 3;
     }
 
     .down-carrot {

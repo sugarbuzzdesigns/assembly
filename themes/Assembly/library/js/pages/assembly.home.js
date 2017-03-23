@@ -75,6 +75,8 @@ var assembly = assembly || {};
 				});
 
 				$('.header-mask').height((1 - this.$win.scrollTop()/this.$win.height()) * 100 + '%');
+			} else {
+				$('.header-mask').height('0%');
 			}
 
 

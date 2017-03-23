@@ -7,7 +7,7 @@ var assembly = assembly || {};
 	assembly.contact = {
 		init: function(){
 
-			this.$landingSection = $('.landing');
+			this.$landingSection = $('.contact-landing');
 			this.landingSectionHeight = this.$landingSection.outerHeight(true);
 			this.$addPhotoSection = $('.add-photo');
 			this.$pagerCurrent = $('.pager .current');
@@ -15,6 +15,8 @@ var assembly = assembly || {};
 			this.$photosToAdd = $('.add-photo-overlay .image');
 			// button that adds an individual photo
 			this.$addphotoButton = $('.add-photo-overlay .add-photo-btn');
+
+			this.$photoOverlayInner = $('.add-photo-overlay');
 			// button that opens the add photos section
 			this.$addPhotoIcon = $('.open-add-images');
 			// container for image carousel with images that can be clicked
@@ -129,7 +131,7 @@ var assembly = assembly || {};
 					_this.$addPhotosCarousel.data('owl.carousel').prev();
 				});
 
-				_this.photoOverlayWrapHeight = _this.$photoOverlayWrap.outerHeight(true);
+				_this.photoOverlayWrapHeight = _this.$photoOverlayInner.outerHeight(true);
 			});
 
 			_this.$addPhotosCarousel.on('changed.owl.carousel', function(evt){
@@ -177,11 +179,15 @@ var assembly = assembly || {};
 
 		openAddContactPhotoWrap: function(){
 			this.$photoOverlayWrap.css({
-				height: this.photoOverlayWrapHeight
+				height: this.$photoOverlayInner.outerHeight()
 			});
 
 			this.$landingSection.css({
-				marginTop: -this.landingSectionHeight
+				marginTop: - $('.contact-landing').outerHeight()
+			});
+
+			$('html, body').animate({ scrollTop: 0 }, 1000, 'easeOutCubic', function(){
+				console.log('to contact top');
 			});
 		},
 

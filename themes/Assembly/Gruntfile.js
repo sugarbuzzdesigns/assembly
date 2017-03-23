@@ -102,12 +102,6 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: false,
-						src: ['<%= jsSrcDir %>/pages/assembly.contact.js'],
-						dest: '<%= jsBuildDir %>/assembly.contact.js',
-						filter: 'isFile'
-					},
-					{
-						expand: false,
 						src: ['<%= jsSrcDir %>/pages/assembly.services.js'],
 						dest: '<%= jsBuildDir %>/assembly.services.js',
 						filter: 'isFile'
@@ -148,7 +142,6 @@ module.exports = function(grunt) {
 			},
 			pages: {
 				files: {
-					'<%= jsDistDir %>/assembly.contact.min.js': ['<%= jsSrcDir %>/pages/assembly.contact.js'],
 					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js'],
 					'<%= jsDistDir %>/assembly.casestudies.min.js': ['<%= jsSrcDir %>/pages/assembly.casestudies.js'],
 					'<%= jsDistDir %>/assembly.about.min.js': ['<%= jsSrcDir %>/pages/assembly.about.js'],
@@ -192,7 +185,8 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/common/assembly.navigation.js',
 					'<%= jsSrcDir %>/common/assembly.carousel.js',
 					'<%= jsSrcDir %>/common/assembly.video.js',
-					'<%= jsSrcDir %>/common/assembly.parallax.js'
+					'<%= jsSrcDir %>/common/assembly.parallax.js',
+					'<%= jsSrcDir %>/pages/assembly.contact.js'
 				],
 				dest: '<%= jsBuildTmpDir %>/assembly.common.js'
 		    },

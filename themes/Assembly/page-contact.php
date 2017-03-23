@@ -5,45 +5,62 @@
 } else {
 	$devicePrefix = 'desktop';
 } ?>
-<section class="landing">
-	<div class="header-mask landing-logo">
-		<header class="light">
-			<h1 class="logo">
-			    <a class="init" href="/">
-			    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
-			    </a>
-			</h1>
-			<?php include __DIR__ . '/includes/menu-btn.php'; ?>
-		</header>
-	</div>
-	<form action="" method="post" accept-charset="utf-8">
-		<div class="form-viewport">
-			<div class="inputs">
-				<label class="active">
-					<p>what impression should your space leave?</p>
-					<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-					<input type="text" name="" value="" placeholder="type here">
-				</label>
-				<label>
-					<p>what are you interested in? </p>
-					<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-					<input type="text" name="" value="" placeholder="type here">
-				</label>
-			</div>
-			<div class="error-message">Please Fill out the field.</div>
-			<button class="dark" type="button">
-				<div class="resting">next</div>
-				<div class="hover">
-					<span class="inner">next</span>
-				</div>
-			</button>
+<section class="contact-landing">
+	<div class="inner">
+		<div class="header-mask landing-logo">
+			<header class="light">
+				<h1 class="logo">
+				    <a class="init" href="/">
+				    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
+				    </a>
+				</h1>
+				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+			</header>
 		</div>
-	</form>
+		<form action="" method="post" accept-charset="utf-8">
+			<div class="form-viewport">
+				<div class="inputs">
+					<label class="active">
+						<p>what impression should your space leave?</p>
+						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+						<input type="text" name="" value="" placeholder="type here">
+					</label>
+					<label>
+						<p>what are you interested in? </p>
+						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+						<input type="text" name="" value="" placeholder="type here">
+					</label>
+				</div>
+				<div class="error-message">Please Fill out the field.</div>
+				<button class="dark" type="button">
+					<div class="resting">next</div>
+					<div class="hover">
+						<span class="inner">next</span>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
 </section>
 <section class="photo-overlay-wrap">
 	<div class="add-photo-overlay">
 		<div class="mesh-bg dark"></div>
-		<?php include 'includes/header-dark-contact-add-photo.php'; ?>
+		<header class="dark">
+			<div class="inner-bg"></div>
+			<h1 class="logo">
+			    <a class="init" href="/">
+			    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+			    </a>
+			</h1>
+			<div class="close-btn">
+				<svg class="close" viewBox="1345 136 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1345.000000, 137.000000)">
+				        <rect fill="#000000" transform="translate(15.379572, 15.379572) rotate(-495.000000) translate(-15.379572, -15.379572) " x="-5.62042751" y="14.6295725" width="42" height="1.5"></rect>
+				        <rect fill="#000000" transform="translate(15.379572, 15.379572) rotate(-225.000000) translate(-15.379572, -15.379572) " x="-5.62042751" y="14.6295725" width="42" height="1.5"></rect>
+				    </g>
+				</svg>
+			</div>
+		</header>
 		<p>What are you interested in?</p>
 			<div class="add-photos-carousel-wrap">
 				<div class="owl-carousel add-photos-carousel">

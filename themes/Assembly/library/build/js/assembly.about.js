@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:03 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 01:26 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -49,38 +49,26 @@ var assembly = assembly || {};
 			});
 		},
 		waypoints: function(){
-			this.waypointsInView = $('[data-waypoint]').waypoint({
+			$('.employee-list').waypoint({
 				handler: function(direction) {
-					$(this.element).addClass('in-view');
-				},
-				offset: '50%'
-			});
-
-			this.waypointsOutOfView = $('[data-waypoint]').waypoint({
-				handler: function(direction) {
-					if(direction === 'up'){
-						$(this.element).removeClass('in-view')
+					if(direction === 'down'){
+						$('.employee-list').addClass('in-view');
 					} else {
-
+						$('.employee-list').removeClass('in-view');
 					}
 				},
 				offset: '100%'
 			});
 
-			var inview = new Waypoint.Inview({
-				element: $('[data-waypoint]')[0],
-				enter: function(direction) {
-					// console.log('Enter triggered with direction ' + direction)
+			$('.employee-list').waypoint({
+				handler: function(direction) {
+					if(direction === 'down'){
+						$('.employee-list').removeClass('in-view');
+					} else {
+						$('.employee-list').addClass('in-view');
+					}
 				},
-				entered: function(direction) {
-					// console.log('Entered triggered with direction ' + direction)
-				},
-				exit: function(direction) {
-					// console.log('Exit triggered with direction ' + direction)
-				},
-				exited: function(direction) {
-					// console.log('Exited triggered with direction ' + direction)
-				}
+				offset: 0 - $('.employee-list').outerHeight()
 			});
 		}
 	};

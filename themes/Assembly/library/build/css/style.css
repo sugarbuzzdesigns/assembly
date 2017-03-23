@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-22 12:18 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 01:26 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7846,8 +7846,8 @@ LAYOUT & GRID STYLES
 }
 
 .wrap {
-  width: 96%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .layer {
@@ -9365,11 +9365,13 @@ FOOTER STYLES
 *********************/
 .footer {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   clear: both;
   background-color: #000;
-  padding: 34px 3% 10%;
   text-align: center;
+}
+.footer .footer-inner {
+  padding: 34px 3% 10%;
 }
 .footer .down-carrot {
   display: none;
@@ -9401,20 +9403,26 @@ FOOTER STYLES
 /*********************
 CONTACT
 **********************/
-.page-contact {
+.page-contact,
+.contact-content {
   background: url(../../images/backgrounds/contact-bg.jpg);
   position: relative;
 }
-.page-contact .landing {
+.page-contact .landing,
+.page-contact .contact-landing,
+.contact-content .landing,
+.contact-content .contact-landing {
   padding-bottom: 30px;
   transition: margin 0.5s;
 }
-.page-contact .photo-overlay-wrap {
+.page-contact .photo-overlay-wrap,
+.contact-content .photo-overlay-wrap {
   overflow: hidden;
   position: relative;
   transition: height 0.5s;
 }
-.page-contact .add-photo-overlay {
+.page-contact .add-photo-overlay,
+.contact-content .add-photo-overlay {
   left: 0;
   z-index: 1;
   width: 100%;
@@ -9423,31 +9431,19 @@ CONTACT
   padding-bottom: 7%;
   overflow: hidden;
 }
-.page-contact .add-photo-overlay .mesh-bg {
+.page-contact .add-photo-overlay .mesh-bg,
+.contact-content .add-photo-overlay .mesh-bg {
   width: calc(262%/414*100);
   height: calc((338px/414)*320);
   margin: calc(187%/414*100) 0 0 calc(55%/414*100);
 }
-.page-contact .add-photo-overlay .image {
+.page-contact .add-photo-overlay .image,
+.contact-content .add-photo-overlay .image {
   cursor: pointer;
   position: relative;
 }
-.page-contact .add-photo-overlay .image .plus-box .x-path {
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-}
-.page-contact .add-photo-overlay .image.added .hover-overlay {
-  opacity: 1;
-}
-.page-contact .add-photo-overlay .image.added .hover-overlay .plus-box .x-path {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.page-contact .add-photo-overlay .image .hover-overlay {
+.page-contact .add-photo-overlay .image .hover-overlay,
+.contact-content .add-photo-overlay .image .hover-overlay {
   transition: opacity 0.5s;
   opacity: 0;
   height: 100%;
@@ -9459,7 +9455,8 @@ CONTACT
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
 }
-.page-contact .add-photo-overlay .image .plus-box {
+.page-contact .add-photo-overlay .image .plus-box,
+.contact-content .add-photo-overlay .image .plus-box {
   height: 46px;
   width: 46px;
   position: absolute;
@@ -9467,20 +9464,66 @@ CONTACT
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+  border: solid 1px #000;
 }
-.page-contact .add-photo-overlay p {
+.page-contact .add-photo-overlay .image .plus-box .close-x,
+.contact-content .add-photo-overlay .image .plus-box .close-x {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.page-contact .add-photo-overlay .image .plus-box span,
+.contact-content .add-photo-overlay .image .plus-box span {
+  display: block;
+  height: 20px;
+  width: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+.page-contact .add-photo-overlay .image .plus-box span:nth-child(2),
+.contact-content .add-photo-overlay .image .plus-box span:nth-child(2) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(90deg);
+          transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+.page-contact .add-photo-overlay .image.added .hover-overlay,
+.contact-content .add-photo-overlay .image.added .hover-overlay {
+  opacity: 1;
+}
+.page-contact .add-photo-overlay .image.added .hover-overlay .plus-box .close-x,
+.contact-content .add-photo-overlay .image.added .hover-overlay .plus-box .close-x {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.page-contact .add-photo-overlay p,
+.contact-content .add-photo-overlay p {
   font-size: calc((38px/414)*320);
   line-height: 1.14;
   font-family: 'pangrambold';
   color: #000;
   width: 80%;
-  margin: 15% auto 12%;
+  margin: 15% auto 0;
   letter-spacing: .37px;
   text-transform: lowercase;
   position: relative;
   z-index: 1;
 }
-.page-contact .add-photo-overlay .add-photo-btn {
+.page-contact .add-photo-overlay .add-photo-btn,
+.contact-content .add-photo-overlay .add-photo-btn {
   background-color: #8ed6db;
   height: 46px;
   width: 46px;
@@ -9490,11 +9533,13 @@ CONTACT
   margin: 0 auto 0;
   transition: color 0.5s;
 }
-.page-contact .add-photo-overlay .add-photo-btn.disabled {
+.page-contact .add-photo-overlay .add-photo-btn.disabled,
+.contact-content .add-photo-overlay .add-photo-btn.disabled {
   background: #cecece;
   pointer-events: none;
 }
-.page-contact .add-photo-overlay .add-photo-btn span {
+.page-contact .add-photo-overlay .add-photo-btn span,
+.contact-content .add-photo-overlay .add-photo-btn span {
   position: absolute;
   display: block;
   background: #fff;
@@ -9506,58 +9551,72 @@ CONTACT
   top: 50%;
   left: 50%;
 }
-.page-contact .add-photo-overlay .add-photo-btn span:nth-child(2) {
+.page-contact .add-photo-overlay .add-photo-btn span:nth-child(2),
+.contact-content .add-photo-overlay .add-photo-btn span:nth-child(2) {
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
       -ms-transform: translate(-50%, -50%) rotate(90deg);
           transform: translate(-50%, -50%) rotate(90deg);
 }
-.page-contact .add-photo-overlay .close-btn {
+.page-contact .add-photo-overlay .close-btn,
+.contact-content .add-photo-overlay .close-btn {
   height: 19px;
   width: 19px;
   margin: 20px 20px 0 0;
 }
-.page-contact .add-photo-overlay .close-btn svg {
+.page-contact .add-photo-overlay .close-btn svg,
+.contact-content .add-photo-overlay .close-btn svg {
   height: 100%;
   width: 100%;
 }
-.page-contact .add-photo-overlay .close-btn:after {
+.page-contact .add-photo-overlay .close-btn:after,
+.contact-content .add-photo-overlay .close-btn:after {
   display: inline;
   position: static;
 }
-.page-contact .add-photos-carousel-wrap nav {
+.page-contact .add-photos-carousel-wrap nav,
+.contact-content .add-photos-carousel-wrap nav {
   display: none;
 }
-.page-contact .add-photos-carousel .image {
+.page-contact .add-photos-carousel .image,
+.contact-content .add-photos-carousel .image {
   padding: 25px;
 }
-.page-contact .add-photos-carousel .owl-wrapper {
+.page-contact .add-photos-carousel .owl-wrapper,
+.contact-content .add-photos-carousel .owl-wrapper {
   display: table !important;
 }
-.page-contact .add-photos-carousel .owl-item {
+.page-contact .add-photos-carousel .owl-item,
+.contact-content .add-photos-carousel .owl-item {
   display: table-cell;
   float: none;
   vertical-align: middle;
   transition: opacity 0.5s;
   opacity: 0.5;
 }
-.page-contact .add-photos-carousel .owl-item.active {
+.page-contact .add-photos-carousel .owl-item.active,
+.contact-content .add-photos-carousel .owl-item.active {
   opacity: 1;
 }
-.page-contact .add-photos-carousel .owl-item > div {
+.page-contact .add-photos-carousel .owl-item > div,
+.contact-content .add-photos-carousel .owl-item > div {
   text-align: center;
 }
-.page-contact form {
+.page-contact form,
+.contact-content form {
   width: 80%;
   margin: 0 auto;
 }
-.page-contact form .error-message {
+.page-contact form .error-message,
+.contact-content form .error-message {
   display: none;
 }
-.page-contact form .inputs {
+.page-contact form .inputs,
+.contact-content form .inputs {
   overflow: hidden;
   position: relative;
 }
-.page-contact form label {
+.page-contact form label,
+.contact-content form label {
   position: absolute;
   top: 0;
   left: 0;
@@ -9566,38 +9625,45 @@ CONTACT
   opacity: 0;
   pointer-events: none;
 }
-.page-contact form label.active {
+.page-contact form label.active,
+.contact-content form label.active {
   opacity: 1;
   position: relative;
   pointer-events: auto;
 }
-.page-contact form p {
+.page-contact form p,
+.contact-content form p {
   color: #fff;
   line-height: 2.125rem;
   font-family: 'pangrambold';
   font-size: 1.875rem;
   margin: 0;
 }
-.page-contact form p:first-child {
+.page-contact form p:first-child,
+.contact-content form p:first-child {
   padding-top: 16%;
 }
-.page-contact form .pager {
+.page-contact form .pager,
+.contact-content form .pager {
   font-family: 'gridnikregular';
   font-size: 0.75rem;
 }
-.page-contact form button {
+.page-contact form button,
+.contact-content form button {
   position: relative;
   padding: 0;
   border: solid .75px #a7a6a6;
   margin-top: 6%;
 }
-.page-contact form button .resting {
+.page-contact form button .resting,
+.contact-content form button .resting {
   height: 100%;
   width: 100%;
   padding: 14px 28px 13px;
   display: block;
 }
-.page-contact form button .hover {
+.page-contact form button .hover,
+.contact-content form button .hover {
   color: #000;
   background: #fff;
   display: block;
@@ -9609,7 +9675,8 @@ CONTACT
   overflow: hidden;
   transition: height 0.35s;
 }
-.page-contact form button .hover .inner {
+.page-contact form button .hover .inner,
+.contact-content form button .hover .inner {
   padding: 14px 28px 13px;
   position: absolute;
   bottom: 0;
@@ -9618,27 +9685,33 @@ CONTACT
 .no-touch form button:hover .hover {
   height: 100%;
 }
-.page-contact form button.disabled {
+.page-contact form button.disabled,
+.contact-content form button.disabled {
   opacity: 0.3;
   pointer-events: none;
 }
-.page-contact form ::-webkit-input-placeholder {
+.page-contact form ::-webkit-input-placeholder,
+.contact-content form ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #282828;
 }
-.page-contact form ::-moz-placeholder {
+.page-contact form ::-moz-placeholder,
+.contact-content form ::-moz-placeholder {
   /* Firefox 19+ */
   color: #282828;
 }
-.page-contact form :-ms-input-placeholder {
+.page-contact form :-ms-input-placeholder,
+.contact-content form :-ms-input-placeholder {
   /* IE 10+ */
   color: #282828;
 }
-.page-contact form :-moz-placeholder {
+.page-contact form :-moz-placeholder,
+.contact-content form :-moz-placeholder {
   /* Firefox 18- */
   color: #282828;
 }
-.page-contact form input {
+.page-contact form input,
+.contact-content form input {
   background-color: transparent;
   font-family: 'pangrambold';
   padding: 0 0 6px;
@@ -9649,24 +9722,30 @@ CONTACT
   -webkit-appearance: none;
   border-radius: 0;
 }
-.page-contact form input:focus, .page-contact form input:active {
+.page-contact form input:focus, .page-contact form input:active,
+.contact-content form input:focus,
+.contact-content form input:active {
   background: transparent;
 }
-.page-contact .add-photo-icon {
+.page-contact .add-photo-icon,
+.contact-content .add-photo-icon {
   width: 154px;
   float: left;
 }
-.page-contact .add-photo {
+.page-contact .add-photo,
+.contact-content .add-photo {
   overflow: auto;
   background-color: #f4f4f4;
 }
-.page-contact .add-photo h3 {
+.page-contact .add-photo h3,
+.contact-content .add-photo h3 {
   font-family: 'gridnikregular';
   text-transform: uppercase;
   font-size: 0.75rem;
   text-align: center;
 }
-.page-contact .add-photo .remove-photo {
+.page-contact .add-photo .remove-photo,
+.contact-content .add-photo .remove-photo {
   display: block;
   position: absolute;
   top: 4px;
@@ -9677,7 +9756,8 @@ CONTACT
   border-radius: 50%;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
-.page-contact .add-photo .remove-photo span {
+.page-contact .add-photo .remove-photo span,
+.contact-content .add-photo .remove-photo span {
   position: absolute;
   display: block;
   background: #000;
@@ -9689,16 +9769,19 @@ CONTACT
   top: 50%;
   left: 50%;
 }
-.page-contact .add-photo .remove-photo span + span {
+.page-contact .add-photo .remove-photo span + span,
+.contact-content .add-photo .remove-photo span + span {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
       -ms-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
-.page-contact .add-photo .photos-wrap {
+.page-contact .add-photo .photos-wrap,
+.contact-content .add-photo .photos-wrap {
   overflow: scroll;
   padding-bottom: 7.25%;
 }
-.page-contact .add-photo .photos-wrap .inner {
+.page-contact .add-photo .photos-wrap .inner,
+.contact-content .add-photo .photos-wrap .inner {
   overflow: hidden;
   padding-bottom: 10px;
   font-size: 0;
@@ -9707,18 +9790,22 @@ CONTACT
   box-sizing: content-box;
   padding: 0 20px;
 }
-.page-contact .add-photo .photos-wrap .track {
+.page-contact .add-photo .photos-wrap .track,
+.contact-content .add-photo .photos-wrap .track {
   float: right;
 }
-.page-contact .add-photo .photos {
+.page-contact .add-photo .photos,
+.contact-content .add-photo .photos {
   width: 100%;
   overflow: auto;
 }
-.page-contact .add-photo .empty .photo {
+.page-contact .add-photo .empty .photo,
+.contact-content .add-photo .empty .photo {
   margin: 0 auto;
   float: none;
 }
-.page-contact .add-photo .photo {
+.page-contact .add-photo .photo,
+.contact-content .add-photo .photo {
   display: inline-block;
   width: 138px;
   background-size: cover;
@@ -9727,49 +9814,61 @@ CONTACT
   position: relative;
   padding-top: 108px;
 }
-.page-contact .add-photo .photo img {
+.page-contact .add-photo .photo img,
+.contact-content .add-photo .photo img {
   width: 100%;
   display: block;
 }
-.page-contact .add-photo .photo.hidden {
+.page-contact .add-photo .photo.hidden,
+.contact-content .add-photo .photo.hidden {
   display: none;
 }
-.page-contact .add-photo .addable-image {
+.page-contact .add-photo .addable-image,
+.contact-content .add-photo .addable-image {
   display: none;
 }
-.page-contact .add-photo .addable-image.show {
+.page-contact .add-photo .addable-image.show,
+.contact-content .add-photo .addable-image.show {
   display: inline-block;
 }
-.page-contact .add-photo .open-add-images {
+.page-contact .add-photo .open-add-images,
+.contact-content .add-photo .open-add-images {
   background-size: 100%;
   background-position: center center;
   margin-right: 0;
   cursor: pointer;
 }
-.page-contact .contact-us {
+.page-contact .contact-us,
+.contact-content .contact-us {
   background: #fff;
 }
-.page-contact .contact-us a, .page-contact .contact-us span {
+.page-contact .contact-us a, .page-contact .contact-us span,
+.contact-content .contact-us a,
+.contact-content .contact-us span {
   font-size: 0.75rem;
   text-decoration: none;
   color: #000000;
   letter-spacing: 0.92px;
 }
-.page-contact .contact-footer {
+.page-contact .contact-footer,
+.contact-content .contact-footer {
   padding: 14px 3% 10%;
   background-color: #fff;
 }
-.page-contact .contact-footer .assembly-logo-icon .main-path {
+.page-contact .contact-footer .assembly-logo-icon .main-path,
+.contact-content .contact-footer .assembly-logo-icon .main-path {
   fill: #000;
 }
-.page-contact .contact-footer .contact-info a {
+.page-contact .contact-footer .contact-info a,
+.contact-content .contact-footer .contact-info a {
   display: block;
   text-decoration: none;
   font-family: 'roboto_monoregular';
   font-size: 0.6875rem;
   margin-bottom: 20px;
 }
-.page-contact .contact-footer .contact-info a[href^="tel:"] {
+.page-contact .contact-footer .contact-info a[href^="tel:"],
+.contact-content .contact-footer .contact-info a[href^="tel:"] {
   margin-bottom: 50px;
 }
 
@@ -9783,6 +9882,74 @@ CONTACT
 }
 #contact-map .gm-svpc {
   display: none;
+}
+
+#contact-drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 11;
+  background-color: #000;
+  transition: -webkit-transform 1s .4s;
+  transition: transform 1s .4s;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+#contact-drawer .contact-content {
+  opacity: 0;
+  transition: opacity 0.6s 0.4s;
+}
+
+#page-footer .col {
+  transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+#page-footer .inner-bg {
+  transition: height 1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #000;
+}
+
+.open-contact body {
+  overflow: hidden;
+}
+
+.contact-opened body {
+  overflow: scroll;
+}
+.contact-opened .wrap {
+  display: none;
+}
+.contact-opened #contact-drawer {
+  height: auto;
+  position: relative;
+}
+
+.open-contact #page-footer .col {
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+  opacity: 0;
+}
+.open-contact #page-footer .inner-bg {
+  height: 100vh;
+}
+
+.open-contact #contact-drawer {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.open-contact #contact-drawer .contact-content {
+  opacity: 1;
 }
 
 /*********************
@@ -11514,16 +11681,19 @@ a[href="/case-studies"] svg {
   /*********************
   CONTACT
   **********************/
-  .page-contact .add-photo-overlay p {
+  .page-contact .add-photo-overlay p,
+  .contact-content .add-photo-overlay p {
     font-size: calc(calc(38px/414)*375);
   }
-  .page-contact .add-photo-overlay .mesh-bg {
+  .page-contact .add-photo-overlay .mesh-bg,
+  .contact-content .add-photo-overlay .mesh-bg {
     margin-top: 45%;
     width: calc(262%/414*100);
     height: calc(calc(338px/414)*320);
     margin: calc(187%/414*100) 0 0 calc(55%/414*100);
   }
-  .page-contact .add-photo-overlay .add-photo-btn {
+  .page-contact .add-photo-overlay .add-photo-btn,
+  .contact-content .add-photo-overlay .add-photo-btn {
     height: 54px;
     width: 54px;
   }
@@ -11846,19 +12016,23 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   CONTACT
   **********************/
-  .page-contact .add-photo-overlay p {
+  .page-contact .add-photo-overlay p,
+  .contact-content .add-photo-overlay p {
     font-size: 2.375rem;
   }
-  .page-contact .add-photo-overlay .add-photo-btn {
+  .page-contact .add-photo-overlay .add-photo-btn,
+  .contact-content .add-photo-overlay .add-photo-btn {
     height: 60px;
     width: 60px;
   }
-  .page-contact form p {
+  .page-contact form p,
+  .contact-content form p {
     font-size: 2.375rem;
     line-height: 2.6875rem;
     width: 90%;
   }
-  .page-contact form .pager {
+  .page-contact form .pager,
+  .contact-content form .pager {
     margin-top: 20px;
   }
 }
@@ -12168,7 +12342,7 @@ you can add resource intensive styles.
   /*********************
   About Us Page
   **********************/
-  .page-about-us {
+  .page-about-us .wrap {
     padding-top: 125px;
   }
   .page-about-us .video.module {
@@ -12735,6 +12909,9 @@ you can add resource intensive styles.
   header.scroll-overlay {
     position: fixed;
     padding-bottom: 20px;
+  }
+  header.scroll-overlay .inner-bg {
+    background: transparent;
   }
   header.scroll-overlay .logo {
     background: transparent;
@@ -14012,7 +14189,7 @@ you can add resource intensive styles.
   /*********************
   ABOUT US Page
   **********************/
-  .page-about-us {
+  .page-about-us .wrap {
     padding-top: 145px;
   }
   .page-about-us .scroll-overlay {
@@ -14184,9 +14361,11 @@ you can add resource intensive styles.
             transform: translate3d(0, 0, 0);
   }
   .page-about-us .employee-list {
-    overflow: hidden;
     z-index: 4;
     position: relative;
+    float: left;
+    clear: both;
+    padding-bottom: 40px;
   }
   .page-about-us .employee-list .employee {
     position: relative;
@@ -14240,13 +14419,6 @@ you can add resource intensive styles.
   }
   .page-about-us .employee-list .employee:first-child {
     margin-left: calc(44%/1440*100);
-  }
-  .page-about-us .employee-list .employee:nth-child(even) {
-    transition: -webkit-transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    -webkit-transform: translate3d(0, 95px, 0);
-            transform: translate3d(0, 95px, 0);
-    padding-bottom: 45px;
   }
   .page-about-us .employee-list .employee img {
     width: 100%;
@@ -14964,27 +15136,33 @@ you can add resource intensive styles.
   /*********************
   CONTACT
   **********************/
-  .page-contact {
+  .page-contact,
+  .contact-content {
     background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
     background-size: 54%;
   }
-  .page-contact form {
+  .page-contact form,
+  .contact-content form {
     padding-top: 79px;
     width: 81.81%;
     margin: 0 auto 30px calc((130%/1440) *100);
   }
-  .page-contact form .pager {
+  .page-contact form .pager,
+  .contact-content form .pager {
     margin-top: 22px;
     margin-bottom: 19px;
   }
-  .page-contact form p {
+  .page-contact form p,
+  .contact-content form p {
     width: 54.15%;
     line-height: 1.13;
   }
-  .page-contact form p:first-child {
+  .page-contact form p:first-child,
+  .contact-content form p:first-child {
     padding-top: 0;
   }
-  .page-contact form input {
+  .page-contact form input,
+  .contact-content form input {
     font-size: 2.375rem;
     line-height: 1.45;
     letter-spacing: 0.37px;
@@ -14992,33 +15170,39 @@ you can add resource intensive styles.
     width: 100%;
     height: auto;
   }
-  .page-contact form button {
+  .page-contact form button,
+  .contact-content form button {
     margin-top: 38px;
     font-family: 'gridnikregular';
     font-size: 0.8125rem;
     letter-spacing: 1px;
   }
-  .page-contact .add-photos-carousel-wrap {
+  .page-contact .add-photos-carousel-wrap,
+  .contact-content .add-photos-carousel-wrap {
     padding: 0 106px 0;
     width: 100%;
     position: relative;
     overflow: hidden;
   }
-  .page-contact .add-photos-carousel .image {
+  .page-contact .add-photos-carousel .image,
+  .contact-content .add-photos-carousel .image {
     padding: 0 9px;
   }
-  .page-contact .add-photo-overlay p {
+  .page-contact .add-photo-overlay p,
+  .contact-content .add-photo-overlay p {
     font-size: 2.375rem;
     line-height: calc(43/38);
     letter-spacing: .37px;
     margin: calc(62%/1440*100) 0 calc(50%/1440*100) calc(129%/1440*100);
   }
-  .page-contact .add-photo-overlay .mesh-bg {
+  .page-contact .add-photo-overlay .mesh-bg,
+  .contact-content .add-photo-overlay .mesh-bg {
     width: calc(1000%/1440*100);
     height: 314px;
     margin: calc(185%/1440*100) 0 0 calc(264%/1440*100);
   }
-  .page-contact .add-photo-overlay nav {
+  .page-contact .add-photo-overlay nav,
+  .contact-content .add-photo-overlay nav {
     display: block;
     overflow: hidden;
     width: 100%;
@@ -15029,76 +15213,94 @@ you can add resource intensive styles.
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
-  .page-contact .add-photo-overlay nav .nav-arrow {
+  .page-contact .add-photo-overlay nav .nav-arrow,
+  .contact-content .add-photo-overlay nav .nav-arrow {
     cursor: pointer;
     float: left;
     margin-left: calc(45%/1440*100);
   }
-  .page-contact .add-photo-overlay nav .arrow-right {
+  .page-contact .add-photo-overlay nav .arrow-right,
+  .contact-content .add-photo-overlay nav .arrow-right {
     float: right;
     margin-right: calc(45%/1440*100);
   }
-  .page-contact .add-photo-overlay .image:hover .hover-overlay {
+  .page-contact .add-photo-overlay .image:hover .hover-overlay,
+  .contact-content .add-photo-overlay .image:hover .hover-overlay {
     opacity: 1;
   }
-  .page-contact .add-photo-overlay .close-btn {
+  .page-contact .add-photo-overlay .close-btn,
+  .contact-content .add-photo-overlay .close-btn {
     height: 31px;
     width: 31px;
     margin-right: calc(64%/1440*100);
     margin-top: calc(82%/1440*100);
   }
-  .page-contact .add-photo-overlay .add-photo-btn {
+  .page-contact .add-photo-overlay .add-photo-btn,
+  .contact-content .add-photo-overlay .add-photo-btn {
     display: none;
   }
-  .page-contact .add-photo {
+  .page-contact .add-photo,
+  .contact-content .add-photo {
     background: transparent;
     padding-left: calc((130%/1440) *100);
     padding-right: calc((130%/1440) *100);
   }
-  .page-contact .add-photo h3 {
+  .page-contact .add-photo h3,
+  .contact-content .add-photo h3 {
     color: #fff;
     font-size: 0.8125rem;
     letter-spacing: 1px;
     margin-bottom: 38px;
     text-align: left;
   }
-  .page-contact .add-photo .open-add-images {
+  .page-contact .add-photo .open-add-images,
+  .contact-content .add-photo .open-add-images {
     margin: 0;
   }
-  .page-contact .add-photo .photos-wrap {
+  .page-contact .add-photo .photos-wrap,
+  .contact-content .add-photo .photos-wrap {
     padding-bottom: 37px;
     width: 100%;
   }
-  .page-contact .add-photo .photos-wrap .inner {
+  .page-contact .add-photo .photos-wrap .inner,
+  .contact-content .add-photo .photos-wrap .inner {
     margin: 0;
     padding: 0;
   }
-  .page-contact .contact-us {
+  .page-contact .contact-us,
+  .contact-content .contact-us {
     padding-top: 100px;
     width: 100%;
     overflow: hidden;
     background: #fff;
   }
-  .page-contact .contact-us.no-mobile {
+  .page-contact .contact-us.no-mobile,
+  .contact-content .contact-us.no-mobile {
     display: block;
   }
-  .page-contact .contact-us a, .page-contact .contact-us span {
+  .page-contact .contact-us a, .page-contact .contact-us span,
+  .contact-content .contact-us a,
+  .contact-content .contact-us span {
     color: #000000;
   }
-  .page-contact .contact-us .col {
+  .page-contact .contact-us .col,
+  .contact-content .contact-us .col {
     text-align: center;
     display: block;
     width: calc(100%/3);
     float: left;
   }
-  .page-contact .contact-footer {
+  .page-contact .contact-footer,
+  .contact-content .contact-footer {
     border-top: dashed 1px #9a9a9a;
     padding: 54px 0 45px 0;
   }
-  .page-contact .contact-footer .contact-info {
+  .page-contact .contact-footer .contact-info,
+  .contact-content .contact-footer .contact-info {
     display: none;
   }
-  .page-contact .contact-footer .assembly-logo-icon {
+  .page-contact .contact-footer .assembly-logo-icon,
+  .contact-content .contact-footer .assembly-logo-icon {
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
@@ -15108,7 +15310,8 @@ you can add resource intensive styles.
         -ms-flex: 1;
             flex: 1;
   }
-  .page-contact .contact-footer .social {
+  .page-contact .contact-footer .social,
+  .contact-content .contact-footer .social {
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
@@ -15119,7 +15322,8 @@ you can add resource intensive styles.
     text-align: right;
     margin-right: 3.125%;
   }
-  .page-contact .contact-footer .copyright {
+  .page-contact .contact-footer .copyright,
+  .contact-content .contact-footer .copyright {
     color: #737373;
     -webkit-order: 1;
         -ms-flex-order: 1;
@@ -15131,10 +15335,12 @@ you can add resource intensive styles.
     text-align: left;
     margin-left: 3.125%;
   }
-  .page-contact .to-top-wrap {
+  .page-contact .to-top-wrap,
+  .contact-content .to-top-wrap {
     padding-top: 93px;
   }
-  .page-contact .to-top {
+  .page-contact .to-top,
+  .contact-content .to-top {
     opacity: 1;
   }
 
@@ -15150,7 +15356,7 @@ you can add resource intensive styles.
   /*********************
   Footer
   **********************/
-  .footer {
+  .footer .footer-inner {
     padding: 34px 3% 8px;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -15161,6 +15367,8 @@ you can add resource intensive styles.
   }
   .footer .col {
     width: calc(100%/3);
+    position: relative;
+    z-index: 3;
   }
   .footer .down-carrot {
     width: 19px;

@@ -175,10 +175,10 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
-		if(is_page('contact')){
-			wp_register_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), '', true );
-			wp_enqueue_script( 'contact' );
-		}
+		// if(is_page('contact')){
+		// 	wp_register_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), '', true );
+		// 	wp_enqueue_script( 'contact' );
+		// }
 
 		if(is_page('services')){
 			wp_register_script( 'services', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.services' . $suffix . '.js', array( 'jquery' ), '', true );

@@ -29,6 +29,11 @@ var assembly = assembly || {};
 
 			$('.to-top').on('click', function(){
 				var anchor = $('[data-to-top-anchor]').length ? $('[data-to-top-anchor]').offset().top : 0
+
+				if($(this).is('.contact-drawer-to-top')){
+					anchor = $('[data-to-top-anchor="contact-drawer"]').offset().top
+				}
+
 				$('html, body').animate({
 					scrollTop: anchor
 				})
