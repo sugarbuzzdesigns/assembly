@@ -564,10 +564,15 @@ CASE STUDIES Page
 		}
 
 		.svg-container {
-			svg {
+			.case-study-svg {
 				width: resp(1160);
 				margin: 0 auto;
 				display: block;
+				position: relative;
+			}
+
+			.svg {
+				width: 100%;
 			}
 		}
 

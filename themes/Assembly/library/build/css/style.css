@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:21 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 11:42 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -12597,10 +12597,14 @@ you can add resource intensive styles.
     padding-left: 121px;
     width: 100%;
   }
-  .page-case-studies .content .svg-container svg {
+  .page-case-studies .content .svg-container .case-study-svg {
     width: calc(1160%/1440*100);
     margin: 0 auto;
     display: block;
+    position: relative;
+  }
+  .page-case-studies .content .svg-container .svg {
+    width: 100%;
   }
   .page-case-studies .content .case-study-details .group {
     display: block;

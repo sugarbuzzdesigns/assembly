@@ -140,9 +140,33 @@
 				</div>
 				<div class="svg-container no-mobile desktop">
 					<div class="case-study-svg custom">
+						<svg class="box back-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.06 52.83">
+							<defs>
+								<style>
+									.box-cls-1{fill:#fff;stroke-width:2px;}.box-cls-1,.box-cls-2{stroke:#90d4d9;stroke-linecap:round;stroke-linejoin:round;}.box-cls-2{fill:none;}
+								</style>
+							</defs>
+							<title>
+								Asset 3
+							</title>
+							<path class="box-cls-1" d="M22.53 51.83L1 39.39V13.43L22.53 1l21.53 12.43v25.96L22.53 51.83z"/>
+							<path class="box-cls-2" d="M1 13.43l21.53 12.43v25.97M22.53 25.86l21.53-12.43"/>
+						</svg>
 						<?php include __DIR__ . '/library/images/svg/case-studies-svg-custom.svg'; ?>
 					</div>
 					<div class="case-study-svg modular">
+						<svg class="box back-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.06 52.83">
+							<defs>
+								<style>
+									.box-cls-1{fill:#fff;stroke-width:2px;}.box-cls-1,.box-cls-2{stroke:#90d4d9;stroke-linecap:round;stroke-linejoin:round;}.box-cls-2{fill:none;}
+								</style>
+							</defs>
+							<title>
+								Asset 3
+							</title>
+							<path class="box-cls-1" d="M22.53 51.83L1 39.39V13.43L22.53 1l21.53 12.43v25.96L22.53 51.83z"/>
+							<path class="box-cls-2" d="M1 13.43l21.53 12.43v25.97M22.53 25.86l21.53-12.43"/>
+						</svg>
 						<?php include __DIR__ . '/library/images/svg/case-studies-svg-modular.svg'; ?>
 					</div>
 				</div>

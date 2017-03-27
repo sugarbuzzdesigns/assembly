@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:21 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 11:42 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -41,6 +41,21 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+.page-case-studies .case-study-svg .back-box {
+  width: 3.63%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transition: opacity .5s;
+  opacity: 0;
+  -webkit-transform: translate(-161%, -7%);
+      -ms-transform: translate(-161%, -7%);
+          transform: translate(-161%, -7%);
+  cursor: pointer;
+}
+.page-case-studies .case-study-svg .back-box .box-cls-1 {
+  fill: #fff;
+}
 .page-case-studies .case-study-svg .case-study-svg-cat {
   pointer-events: none;
   cursor: pointer;
@@ -901,6 +916,9 @@ probably best not to use it. I mean, were you going to anyway? */
     -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
             transform: translate3d(-96%, -33%, 0) scale(1);
   }
+}
+.page-case-studies .case-study-svg.active .back-box {
+  opacity: 1;
 }
 .page-case-studies .case-study-svg.active .inactive.super-hover {
   -webkit-animation-name: none;

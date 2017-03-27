@@ -1,4 +1,18 @@
 	.case-study-svg {
+		.back-box {
+			width: 3.63%;
+			position: absolute;
+		    top: 50%;
+		    right: 0;
+		    transition: opacity .5s;
+		    opacity: 0;
+		    transform: translate(-161%,-7%);
+		    cursor: pointer;
+
+    		.box-cls-1 {
+    			fill: #fff;
+    		}
+		}
 		// SVG STYLES
 		.case-study-svg-cat {
 			pointer-events: none;
@@ -149,6 +163,9 @@
 		@include caseStudySVGKeyframeAnimation('showInactiveApproachSVGSporting', -96%, -33%, -96%, -33%, 1);
 
 		&.active {
+			.back-box {
+	    		opacity: 1;
+			}
 			.inactive {
 				&.super-hover {
 					animation-name: none;

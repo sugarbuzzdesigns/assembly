@@ -56,6 +56,12 @@ var assembly = assembly || {};
 				_this.filterProjectsByCategory($(this).parent().data('value'));
 			});
 
+			$('.back-box').on('click', function(evt){
+				evt.stopPropagation();
+
+				$('[data-value="all"] a').trigger('click');
+			});
+
 			_this.$toggleFilterBtns.on('click', function toggleFilterClickHandler(evt){
 				evt.preventDefault();
 
