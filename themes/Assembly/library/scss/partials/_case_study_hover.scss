@@ -1,0 +1,199 @@
+	.case-study-svg {
+		// SVG STYLES
+		.case-study-svg-cat {
+			pointer-events: none;
+			cursor: pointer;
+			transform: scale(1);
+			transform-origin: 50% 50%;
+			opacity: 1;
+			// transform: translate3d(0,0,0) scale(1);
+			transition: opacity 0.5s, transform 0.5s;
+
+			.main {
+				display: block;
+				position: relative;
+				transition: transform 0.3s ease-out 0.45s;
+				transform: translate3d(0, 30px, 0);
+				pointer-events: bounding-box;
+			}
+
+			.vertical-line {
+				transition: stroke-dashoffset .25s linear .22s;
+			    stroke-dasharray: 150;
+			    stroke-dashoffset: -150;
+			}
+
+			.word-box {
+				opacity: 0;
+				transition: opacity 0.25s linear 0s;
+			}
+
+			.text {
+				opacity: 0;
+				transition: opacity 0.25s linear 0s;
+			}
+
+			circle {
+				transition: opacity 0.25s linear;
+				opacity: 0;
+			}
+
+			&.hover {
+				.main {
+					transition: transform 0.3s ease-out 0s;
+					transform: translate3d(0, 0, 0);
+				}
+
+				circle {
+					transition: opacity 0.3s ease-out 0.2s;
+					opacity: 1;
+				}
+
+				.vertical-line {
+					stroke-dashoffset: 0;
+					transition: stroke-dashoffset .25s linear 0.5s;
+				}
+
+				.word-box,
+				.text {
+					transition: opacity 0.3s ease-out 0.55s;
+					opacity: 1;
+				}
+			}
+
+			&.inactive {
+				opacity: 0;
+			}
+
+			// // super 			transform: translate3d(-40%,30%,0) scale(0.6);
+			// // hospitality 		transform: translate3d(103%,30%,0) scale(1);
+			// // experiential     transform: translate3d(59%,-38%,0) scale(1);
+			// // sporting  		transform: translate3d(-75%,-30%,0) scale(1);
+			&.activate {
+				&.super-hover {
+					@include caseStudySVGAnimationSetup('showApproachSVGSuper', 0.5s);
+				}
+
+				&.hospitality-hover {
+					@include caseStudySVGAnimationSetup('showApproachSVGHospitality', 0.5s);
+				}
+
+				&.experiential-hover {
+					@include caseStudySVGAnimationSetup('showApproachSVGExperiential', 0.5s);
+				}
+
+				&.sporting-hover {
+					@include caseStudySVGAnimationSetup('showApproachSVGSporting', 0.5s);
+				}
+			}
+
+			&.hide {
+				&.super-hover {
+					@include caseStudySVGAnimationSetup('hideApproachSVGSuper', 0);
+				}
+
+				&.hospitality-hover {
+					@include caseStudySVGAnimationSetup('hideApproachSVGHospitality', 0);
+				}
+
+				&.experiential-hover {
+					@include caseStudySVGAnimationSetup('hideApproachSVGExperiential', 0);
+				}
+
+				&.sporting-hover {
+					@include caseStudySVGAnimationSetup('hideApproachSVGSporting', 0);
+				}
+			}
+
+			&.active {
+				&.super-hover {
+					transform: translate3d(-40%,30%,0) scale(1);
+				}
+
+				&.hospitality-hover {
+					transform: translate3d(103%,30%,0) scale(1);
+				}
+
+				&.experiential-hover {
+					transform: translate3d(59%,-38%,0) scale(1);
+				}
+
+				&.sporting-hover {
+					transform: translate3d(-96%,-33%,0) scale(1);
+				}
+			}
+
+			// // super 			transform: translate3d(-40%,30%,0) scale(1);
+			// // hospitality 		transform: translate3d(103%,30%,0) scale(1);
+			// // experiential     transform: translate3d(59%,-38%,0) scale(1);
+			// // sporting  		transform: translate3d(-96%,-33%,0) scale(1);
+			@include caseStudySVGKeyframeAnimation('showApproachSVGSuper', 0, 0, -40%, 30%, 1);
+			@include caseStudySVGKeyframeAnimation('showApproachSVGHospitality', 0, 0, 103%, 30%, 1);
+			@include caseStudySVGKeyframeAnimation('showApproachSVGExperiential', 0, 0, 59%, -38%, 1);
+			@include caseStudySVGKeyframeAnimation('showApproachSVGSporting', 0, 0, -96%, -33%, 1);
+
+			@include caseStudySVGKeyframeAnimation('hideApproachSVGSuper', -40%, 30%, 0, 0, 0);
+			@include caseStudySVGKeyframeAnimation('hideApproachSVGHospitality', 103%, 30%, 0, 0, 0);
+			@include caseStudySVGKeyframeAnimation('hideApproachSVGExperiential', 59%, -38%, 0, 0, 0);
+			@include caseStudySVGKeyframeAnimation('hideApproachSVGSporting', -96%, -33%, 0, 0, 0);
+		}
+
+		@include caseStudySVGKeyframeAnimation('hideInactiveApproachSVGSuper', -40%, 30%, 0, 0, 0);
+		@include caseStudySVGKeyframeAnimation('hideInactiveApproachSVGHospitality', 103%, 30%, 0, 0, 0);
+		@include caseStudySVGKeyframeAnimation('hideInactiveApproachSVGExperiential', 59%, -38%, 0, 0, 0);
+		@include caseStudySVGKeyframeAnimation('hideInactiveApproachSVGSporting', -96%, -33%, 0, 0, 0);
+
+		@include caseStudySVGKeyframeAnimation('showInactiveApproachSVGSuper', -40%, 30%, -40%, 30%, 1);
+		@include caseStudySVGKeyframeAnimation('showInactiveApproachSVGHospitality', 103%, 30%, 103%, 30%, 1);
+		@include caseStudySVGKeyframeAnimation('showInactiveApproachSVGExperiential', 59%, -38%, 59%, -38%, 1);
+		@include caseStudySVGKeyframeAnimation('showInactiveApproachSVGSporting', -96%, -33%, -96%, -33%, 1);
+
+		&.active {
+			.inactive {
+				&.super-hover {
+					animation-name: none;
+					transform: translate3d(-40%,30%,0) scale(1);
+				}
+
+				&.hospitality-hover {
+					animation-name: none;
+					transform: translate3d(103%,30%,0) scale(1);
+				}
+
+				&.experiential-hover {
+					animation-name: none;
+					transform: translate3d(59%,-38%,0) scale(1);
+				}
+
+				&.sporting-hover {
+					animation-name: none;
+					transform: translate3d(-96%,-33%,0) scale(1);
+				}
+			}
+			.activate {
+				&.super-hover {
+					animation-name: none;
+					opacity: 1;
+					transform: translate3d(-40%,30%,0) scale(1);
+				}
+
+				&.hospitality-hover {
+					animation-name: none;
+					opacity: 1;
+					transform: translate3d(103%,30%,0) scale(1);
+				}
+
+				&.experiential-hover {
+					animation-name: none;
+					opacity: 1;
+					transform: translate3d(59%,-38%,0) scale(1);
+				}
+
+				&.sporting-hover {
+					animation-name: none;
+					opacity: 1;
+					transform: translate3d(-96%,-33%,0) scale(1);
+				}
+			}
+		}
+	}

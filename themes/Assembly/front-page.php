@@ -105,7 +105,7 @@
 									    opacity: .4;
 									}
 								</style>
-								<a href="<?php echo site_url() . '/case-studies' ?>" class="carousel" data-mobile-position="left" data-mobile-start="front">
+								<a href="/case-studies#modular" class="carousel" data-mobile-position="left" data-mobile-start="front">
 									<?php foreach ($projects1 as $project) : ?>
 									<div class="slide">
 										<div class="tile-inner">
@@ -133,20 +133,22 @@
 							<div class="carousel-inner">
 								<div class="carousel" data-mobile-position="right" data-mobile-start="end">
 									<?php foreach ($projects2 as $project) : ?>
-									<div class="slide">
-										<div class="tile-inner">
-											<div class="tile-img 1to1">
-												<div class="image-clip-bg">
-													<div class="inner"></div>
+									<a href="/case-studies#custom">
+										<div class="slide">
+											<div class="tile-inner">
+												<div class="tile-img 1to1">
+													<div class="image-clip-bg">
+														<div class="inner"></div>
+													</div>
+													<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
 												</div>
-												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $project['image']; ?>" alt="">
-											</div>
-											<div class="tile-info">
-												<span class="tile-title">Custom</span>
-												<span class="tile-desc">Lorem ipsume dolor sat</span>
+												<div class="tile-info">
+													<span class="tile-title">Custom</span>
+													<span class="tile-desc">Lorem ipsume dolor sat</span>
+												</div>
 											</div>
 										</div>
-									</div>
+									</a>
 									<?php endforeach; ?>
 								</div>
 								<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
@@ -161,20 +163,22 @@
 							<div class="carousel-inner">
 								<div class="carousel" data-mobile-position="left" data-mobile-start="front">
 									<?php foreach ($services1 as $service) : ?>
-									<div class="slide">
-										<div class="tile-inner">
-											<div class="tile-img 1to1">
-												<div class="image-clip-bg">
-													<div class="inner"></div>
+									<a href="/services">
+										<div class="slide">
+											<div class="tile-inner">
+												<div class="tile-img 1to1">
+													<div class="image-clip-bg">
+														<div class="inner"></div>
+													</div>
+													<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $service['image']; ?>" alt="">
 												</div>
-												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $service['image']; ?>" alt="">
-											</div>
-											<div class="tile-info">
-												<span class="tile-title">Services</span>
-												<span class="tile-desc">Lorem ipsume</span>
+												<div class="tile-info">
+													<span class="tile-title">Services</span>
+													<span class="tile-desc">Lorem ipsume</span>
+												</div>
 											</div>
 										</div>
-									</div>
+									</a>
 									<?php endforeach; ?>
 								</div>
 								<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
@@ -187,20 +191,22 @@
 							<div class="carousel-inner">
 								<div class="carousel" data-mobile-position="right" data-mobile-start="end">
 									<?php foreach ($approach1 as $approach) : ?>
-									<div class="slide">
-										<div class="tile-inner">
-											<div class="tile-img 1to1">
-												<div class="image-clip-bg">
-													<div class="inner"></div>
+									<a href="/about-us#our-approach">
+										<div class="slide">
+											<div class="tile-inner">
+												<div class="tile-img 1to1">
+													<div class="image-clip-bg">
+														<div class="inner"></div>
+													</div>
+													<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $approach['image']; ?>" alt="">
 												</div>
-												<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/home/<?php echo $approach['image']; ?>" alt="">
-											</div>
-											<div class="tile-info">
-												<span class="tile-title">Approach</span>
-												<span class="tile-desc">Lorem ipsume dolor sat</span>
+												<div class="tile-info">
+													<span class="tile-title">Approach</span>
+													<span class="tile-desc">Lorem ipsume dolor sat</span>
+												</div>
 											</div>
 										</div>
-									</div>
+									</a>
 									<?php endforeach; ?>
 								</div>
 								<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
@@ -250,7 +256,7 @@
 							</div>
 							<div class="tile carousel-wrapper">
 								<div class="carousel-inner">
-									<div class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
+									<a href="about-us#employees" class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
 										<div class="slide employee" data-years-experience="24">
 											<div class="tile-inner">
 												<div class="tile-img">
@@ -306,7 +312,7 @@
 												<!-- <button type="button">about</button> -->
 											</div>
 										</div>
-									</div>
+									</a>
 									<?php include __DIR__ . '/library/images/svg/nav-arrow-right.svg'; ?>
 								</div>
 							</div>

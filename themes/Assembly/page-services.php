@@ -155,7 +155,7 @@
 			});
 		})(jQuery)
 	</script>
- 	<a href="/case-studies" title="">
+ 	<a class="case-study-link" href="/case-studies" title="">
  		<?php if(is_desktop()) { ?>
  			<?php include 'library/images/svg/view-case-studies-button-desktop.svg'; ?>
  		<?php } else { ?>

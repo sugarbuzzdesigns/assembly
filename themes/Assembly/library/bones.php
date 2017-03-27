@@ -188,11 +188,17 @@ function bones_scripts_and_styles() {
 		if(is_page('case-studies')){
 			wp_register_script( 'casestudies', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.casestudies' . $suffix . '.js', array('jquery'), '', true );
 			wp_enqueue_script( 'casestudies' );
+
+			wp_register_style( 'case-studies-page', get_stylesheet_directory_uri() . '/library/dist/css/pages/case_studies.min.css', array(), '', 'all' );
+			wp_enqueue_style( 'case-studies-page' );
 		}
 
 		if(is_page('about-us')){
 			wp_register_script( 'about', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.about' . $suffix . '.js', array( 'jquery' ), '', true );
 			wp_register_script( 'our-approach-carousel', get_template_directory_uri() . '/library/js/our-approach-carousel.js', array( 'jquery' ), '', true );
+
+			wp_register_style( 'about-page', get_stylesheet_directory_uri() . '/library/dist/css/pages/about_us.min.css', array(), '', 'all' );
+			wp_enqueue_style( 'about-page' );
 
 			wp_enqueue_script( 'about' );
 			wp_enqueue_script( 'our-approach-carousel' );

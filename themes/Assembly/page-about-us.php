@@ -126,7 +126,7 @@
 		</div>
 	</div>
 
-	<div class="employees employees-1 module">
+	<div class="employees employees-1 module" data-url-anchor="#employees">
 		<div class="mesh-bg dark wide"></div>
 		<div class="years-experience">
 			<div class="years-experience-numbers">
@@ -399,7 +399,7 @@
 			</div>
 		</div>
 	</div>
-	<section id="our-approach-carousel" class="our-approach carousel-module">
+	<section id="our-approach-carousel" class="our-approach carousel-module" data-url-anchor="#our-approach">
 		<div style="display: none;">
 			<svg class="nav-arrow-up" viewBox="0 0 19 12" xmlns="http://www.w3.org/2000/svg">
 			  <path d="M16.232 9.536L9.616 1 3 9.544" stroke-width="3" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel"/>
@@ -889,7 +889,7 @@
 			</div>
 		</div>
 	</section>
- 	<a href="/case-studies" title="">
+ 	<a class="case-study-link" href="/case-studies" title="">
  		<?php if(is_desktop()) { ?>
  			<?php include 'library/images/svg/view-case-studies-button-desktop.svg'; ?>
  		<?php } else { ?>

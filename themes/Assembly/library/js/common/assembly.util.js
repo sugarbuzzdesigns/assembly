@@ -156,8 +156,6 @@ $.extend($.easing,
     }
 });
 
-
-(function($){
 var transEndEventNames = {
 	'WebkitTransition' : 'webkitTransitionEnd',
 	'MozTransition'    : 'transitionend',
@@ -167,6 +165,18 @@ var transEndEventNames = {
 },
 transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
 
+var animationEndEventNames = {
+    'WebkitAnimation' : 'webkitAnimationEnd',
+    'MozAnimation'	  : 'animationend',
+    'OAnimation'	  : 'oAnimationEnd oanimationend',
+    'msAnimation'	  : 'MSAnimationEnd',
+    'animation'		  : 'animationend'
+},
+animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') ];
+
+console.log(animationEndEventName);
+
+(function($){
 	assembly.scrollAnimating = false;
 
 	assembly.util = {

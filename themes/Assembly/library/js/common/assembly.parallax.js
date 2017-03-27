@@ -86,12 +86,13 @@
 						// _this.employeeDiff -= _this.scrollChange;
 			   //  	}
 			   	scrollPerc = ($('.employee-list').offset().top - $(window).scrollTop())/$(window).height();
-		   			console.log();
-
-			    	var ypos = $emp.data('start') - (percentage * $emp.data('start'));
+		   		scrollPerc = 1 - scrollPerc;
+			    		// 60
+			    console.log();
+			    	($emp.data('start') - (scrollPerc*$emp.data('start')*2))
 
 			    	$emp.css({
-			    		transform: 'translate3d(0,'+ ($emp.data('start') - ((1 - scrollPerc)*$emp.data('start')*2)) +'px,0)'
+			    		transform: 'translate3d(0,'+ ($emp.data('start') - ((scrollPerc)*($emp.data('start')*1))) +'px,0)'
 			    	});
 				});
 			}

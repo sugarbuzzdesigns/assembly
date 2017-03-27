@@ -1,0 +1,6 @@
+// import mixins
+@import "../partials/mixins";
+
+.page-case-studies {
+	@import "../partials/case_study_hover";
+}

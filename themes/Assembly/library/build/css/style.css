@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 02:31 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:21 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10013,7 +10013,7 @@ CASE STUDIES Page
 }
 .page-case-studies .landing .landing-inner {
   overflow: hidden;
-  transition: height 1.2s ease-in-out;
+  transition: height .5s ease-in-out;
   height: 100vh;
 }
 .page-case-studies .landing .landing-inner.hide {
@@ -11632,12 +11632,12 @@ ABOUT US Page
   margin: 18% auto 16.5%;
 }
 
-a[href="/case-studies"] {
+a.case-study-link {
   width: 58%;
   margin: 242px auto 23.5%;
   display: block;
 }
-a[href="/case-studies"] svg {
+a.case-study-link svg {
   width: 100%;
 }
 
@@ -13189,166 +13189,6 @@ you can add resource intensive styles.
   }
   .page-case-studies .case-study-svg.show {
     display: block;
-  }
-  .page-case-studies .case-study-svg-cat {
-    pointer-events: none;
-    cursor: pointer;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-            transform: translate3d(0, 0, 0) scale(1);
-    transition: opacity 0.5s, -webkit-transform 0.5s;
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  .page-case-studies .case-study-svg-cat .main {
-    display: block;
-    position: relative;
-    transition: -webkit-transform 0.3s ease-out 0.45s;
-    transition: transform 0.3s ease-out 0.45s;
-    -webkit-transform: translate3d(0, 30px, 0);
-            transform: translate3d(0, 30px, 0);
-    pointer-events: bounding-box;
-  }
-  .page-case-studies .case-study-svg-cat .vertical-line {
-    transition: stroke-dashoffset .25s linear .22s;
-    stroke-dasharray: 150;
-    stroke-dashoffset: -150;
-  }
-  .page-case-studies .case-study-svg-cat .word-box {
-    opacity: 0;
-    transition: opacity 0.25s linear 0s;
-  }
-  .page-case-studies .case-study-svg-cat .text {
-    opacity: 0;
-    transition: opacity 0.25s linear 0s;
-  }
-  .page-case-studies .case-study-svg-cat circle {
-    transition: opacity 0.25s linear;
-    opacity: 0;
-  }
-  .page-case-studies .case-study-svg-cat.hover .main {
-    transition: -webkit-transform 0.3s ease-out 0s;
-    transition: transform 0.3s ease-out 0s;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .page-case-studies .case-study-svg-cat.hover circle {
-    transition: opacity 0.3s ease-out 0.2s;
-    opacity: 1;
-  }
-  .page-case-studies .case-study-svg-cat.hover .vertical-line {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset .25s linear 0.5s;
-  }
-  .page-case-studies .case-study-svg-cat.hover .word-box,
-  .page-case-studies .case-study-svg-cat.hover .text {
-    transition: opacity 0.3s ease-out 0.55s;
-    opacity: 1;
-  }
-  .page-case-studies .case-study-svg-cat.hide {
-    -webkit-animation-name: hideApproachSVG;
-            animation-name: hideApproachSVG;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes hideApproachSVG {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-      opacity: 0;
-    }
-  }
-  @keyframes hideApproachSVG {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-      opacity: 0;
-    }
-  }
-  .page-case-studies .case-study-svg-cat.activate {
-    -webkit-animation-name: showApproachSVG;
-            animation-name: showApproachSVG;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .page-case-studies .case-study-svg-cat.deactivate {
-    -webkit-animation-name: hideApproachSVG;
-            animation-name: hideApproachSVG;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  @-webkit-keyframes showApproachSVG {
-    0% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0) scale(1);
-              transform: translate3d(0, 0, 0) scale(1);
-    }
-    25% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
-              transform: translate3d(0, 0, 0) scale(0.6);
-    }
-    50% {
-      opacity: 0;
-      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
-              transform: translate3d(-40%, 30%, 0) scale(0.6);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
-              transform: translate3d(-40%, 30%, 0) scale(1);
-    }
-  }
-  @keyframes showApproachSVG {
-    0% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0) scale(1);
-              transform: translate3d(0, 0, 0) scale(1);
-    }
-    25% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
-              transform: translate3d(0, 0, 0) scale(0.6);
-    }
-    50% {
-      opacity: 0;
-      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
-              transform: translate3d(-40%, 30%, 0) scale(0.6);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
-              transform: translate3d(-40%, 30%, 0) scale(1);
-    }
   }
   .page-case-studies .landing {
     /**

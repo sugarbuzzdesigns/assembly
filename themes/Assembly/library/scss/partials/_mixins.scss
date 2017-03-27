@@ -71,3 +71,34 @@ probably best not to use it. I mean, were you going to anyway? */
 }
 
 
+@mixin caseStudySVGAnimationSetup ($animation, $delay) {
+	animation-name: $animation;
+	animation-duration: 1.5s;
+	animation-delay: $delay;
+	animation-fill-mode: forwards;
+}
+
+@mixin caseStudySVGKeyframeAnimation ($name, $fromX, $fromY, $toX, $toY, $finalOpacity) {
+	@keyframes #{$name} {
+		0% {
+			opacity: 1;
+			transform: translate3d($fromX,$fromY,0) scale(1);
+		}
+
+		25% {
+			opacity: 0;
+			transform: translate3d($fromX,$fromY,0) scale(0.6);
+		}
+
+		50% {
+			opacity: 0;
+			transform: translate3d($toX,$toY,0) scale(0.6);
+		}
+
+		100% {
+			opacity: $finalOpacity;
+			transform: translate3d($toX,$toY,0) scale(1);
+		}
+	}
+}
+

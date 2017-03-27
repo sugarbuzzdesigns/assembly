@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 02:55 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:20 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -26,6 +26,24 @@ var assembly = assembly || {};
 
 				$('.employees').addClass('info-open').css({minHeight: $('.employee-info[data-employee="'+ employeeName +'"]').height() + 100});
 			});
+
+			if(window.location.hash && $('[data-url-anchor="'+ window.location.hash +'"]').length){
+				$('html').on('loaded', function(){
+					var scrollAnchorNum = $('[data-url-anchor="'+ window.location.hash +'"]').offset().top;
+
+					var scrollAdjustment = 0;
+
+					if(window.location.hash === '#employees'){
+						scrollAdjustment = -125;
+					}
+
+					$('html, body').animate({
+						scrollTop: scrollAnchorNum + scrollAdjustment
+					}, 750);
+				});
+			} else {
+				console.log('no hash');
+			}
 
 			$('.employees').on('click', function openInfoPanelClickHandler(evt){
 				if($(this).is('.info-open')){

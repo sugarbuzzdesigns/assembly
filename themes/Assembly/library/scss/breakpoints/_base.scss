@@ -130,6 +130,7 @@ $screenWidth: 320;
 
 		.loader-img-placeholder {
 			width: 100%;
+			// animation: ;
 		}
 
 		.loader-img {
@@ -2626,7 +2627,7 @@ CASE STUDIES Page
 	.landing {
 		.landing-inner {
 			overflow: hidden;
-			transition: height 1.2s ease-in-out;
+			transition: height .5s ease-in-out;
 			height: 100vh;
 
 			&.hide {
@@ -3681,7 +3682,7 @@ ABOUT US Page
 	}
 }
 
-a[href="/case-studies"] {
+a.case-study-link {
 	width: 58%;
 	margin: 242px auto 23.5%;
 	display: block;

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-23 02:55 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:20 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -49,6 +49,10 @@ var assembly = assembly || {};
 			_this.$filterMenuLinks.on('click', function selectFilterOnChange(evt){
 				evt.preventDefault();
 
+				if($(this).parent().is('.active')){
+					return;
+				}
+
 				_this.setFilterLinksClass($(this).parent());
 				_this.filterProjectsByCategory($(this).parent().data('value'));
 			});
@@ -81,6 +85,11 @@ var assembly = assembly || {};
 
 				$('.toggle-filter a').removeClass('active');
 				$('.toggle-filter [title=' + $type + ']').addClass('active');
+				// $('.case-study-category .default-content').off('hoverEventDone');
+
+				// $('.case-study-category .default-content').one('hoverEventDone', function(){
+				// 	console.log('clicked and hover done');
+				// });
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
@@ -145,14 +154,14 @@ var assembly = assembly || {};
 				_this.filterProjectsByCategory($(this).data('svg-case-study-cat'));
 			});
 
-			$('.landing .default-content').on('transitionend', function(evt){
-				// evt.preventDefault();
-				evt.stopPropagation();
-				console.log(evt, $(this).width());
-			});
-
 			_this.$landing.mousemove(function(){
 				_this.parallaxBg();
+			});
+
+			$('.case-study-category .default-content').on(transEndEventName, function(evt){
+				if($(evt.srcElement).is('.default-content') && $(evt.srcElement.offsetParent).is('.hover')){
+					$(this).trigger('hoverEventDone');
+				}
 			});
 		},
 
@@ -243,6 +252,7 @@ var assembly = assembly || {};
 		},
 
 		filterProjectsByCategory: function(option){
+			console.log(option);
 			this.currentFilerStatus.category = option;
 			this.showCaseStudyContent();
 		},
@@ -261,14 +271,29 @@ var assembly = assembly || {};
 				cat = this.currentFilerStatus.category,
 				type = this.currentFilerStatus.type,
 				$toShow = $('[data-kit-type="'+ type +'"][data-category="'+ cat +'"]'),
-				$svgToShow = $('.case-study-svg [data-svg-case-study-cat="'+ cat +'"]'),
-				$svgsToHide = $('.case-study-svg-cat:not([data-svg-case-study-cat="'+ cat +'"])');
+				$svgStage = $('.case-study-svg.'+ type),
+				$svgStageSibling = $svgStage.siblings().removeClass('active'),
+				$svgToShow = $('.case-study-svg.'+ type +' [data-svg-case-study-cat="'+ cat +'"]'),
+				$activeSvg = $('.case-study-svg.'+ type + ' .case-study-svg-cat.active');
 
 			if(this.currentFilerStatus.category === 'all'){
-				$svgsToHide.removeClass('activate').removeClass('hide');
+				$('.case-study-svg.'+ type + ' .case-study-svg-cat').removeClass('inactive hide activate');
+				$activeSvg.removeClass('active');
+				$svgStage.removeClass('active');
 			} else {
-				$svgToShow.addClass('activate').removeClass('hide'),
-				$svgsToHide.removeClass('activate').addClass('hide');
+				$activeSvg.removeClass('active').addClass('hide');
+				$svgToShow.siblings('.case-study-svg-cat').removeClass('active').addClass('inactive');
+				$svgToShow.removeClass('hide inactive').addClass('activate');
+
+				if($svgStage.is('.active')){
+					$svgToShow.removeClass('activate').addClass('active');
+				}
+
+				$svgToShow.one(animationEndEventName, function(evt){
+					console.log('addClass active');
+					$svgStage.addClass('active');
+					$svgToShow.removeClass('activate').addClass('active');
+				});
 			}
 
 			if(type === 'modular'){
@@ -280,9 +305,6 @@ var assembly = assembly || {};
 
 				$('.case-study-svg.modular').addClass('show');
 				$('.case-study-svg.custom').removeClass('show');
-
-				$('.case-study-svg.modular').find('.case-study-svg-cat').removeClass('selected');
-				$('.case-study-svg.modular').find('.'+ cat +'-hover').addClass('selected');
 			} else {
 				$('[data-title="modular"]').addClass('show');
 				$('[data-title="custom"]').removeClass('show');
@@ -292,9 +314,6 @@ var assembly = assembly || {};
 
 				$('.case-study-svg.custom').addClass('show');
 				$('.case-study-svg.modular').removeClass('show');
-
-				$('.case-study-svg.custom').find('.case-study-svg-cat').removeClass('selected');
-				$('.case-study-svg.custom').find('.'+ cat +'-hover').addClass('selected');
 			}
 
 			this.$currentCaseStudyContainer.removeClass('show');

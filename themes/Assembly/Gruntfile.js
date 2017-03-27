@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
 
-	grunt.registerTask('sassBuildDist', ['sass', 'autoprefixer', 'cssmin', 'usebanner:css', 'growl:cssBuild']);
+	grunt.registerTask('sassBuildDist', ['sass:main', 'autoprefixer:main', 'cssmin:main', 'usebanner:css_main', 'growl:cssBuild']);
+	grunt.registerTask('sassPagesBuildDist', ['sass:pages', 'autoprefixer:pages', 'cssmin:pages', 'usebanner:css_pages', 'growl:cssBuild']);
 
 	require('load-grunt-tasks')(grunt);
 
@@ -44,7 +45,13 @@ module.exports = function(grunt) {
 
 		// Build Tasks
 		autoprefixer: {
-			dist: {
+			main: {
+				options: {
+					browsers: ['last 2 versions', 'ie 8', 'ie 9', 'iOS 7']
+				},
+				src: '<%= buildDir %>/css/**/*.css'
+			},
+			pages: {
 				options: {
 					browsers: ['last 2 versions', 'ie 8', 'ie 9', 'iOS 7']
 				},
@@ -60,20 +67,34 @@ module.exports = function(grunt) {
 				},
 				files: {
 					src: [
-						'library/build/**/*.js',
-						'library/dist/**/*.js'
+						'library/build/js/*.js',
+						'library/dist/js/*.js'
 					]
 				}
 			},
-			css: {
+			css_main: {
 				options: {
 					banner: '<%= banner %>',
 					linebreak: false
 				},
 				files: {
 					src: [
-						'library/build/**/*.css',
-						'library/dist/**/*.css'
+						'library/build/css/*.css',
+						'library/dist/css/*.css',
+						'!library/build/css/pages/*.css',
+						'!library/dist/css/pages/*.css'
+					]
+				}
+			},
+			css_pages: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/css/pages/**/*.css',
+						'library/dist/css/pages/**/*.css'
 					]
 				}
 			}
@@ -204,7 +225,7 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
-			all: {
+			main: {
 				options: {
 					sourcemap: 'none',
 					style: 'expanded'
@@ -216,6 +237,19 @@ module.exports = function(grunt) {
 					'<%= buildDir %>/css/ie.css': '<%= sassDir %>/ie.scss',
 					'<%= buildDir %>/css/login.css': '<%= sassDir %>/login.scss'
 				}
+			},
+			pages: {
+				options: {
+					sourcemap: 'none',
+					style: 'expanded'
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= sassDir %>/pages',
+					src: ['*.scss'],
+					dest: '<%= buildDir %>/css/pages',
+					ext: '.css'
+				}]
 			}
 		},
 
@@ -235,13 +269,19 @@ module.exports = function(grunt) {
 				shorthandCompacting: false,
 				roundingPrecision: -1
 			},
-			all: {
+			main: {
 				files: {
 					'<%= cssDistDir %>/style.min.css': '<%= cssBuildDir %>/style.css',
 					'<%= cssDistDir %>/admin.min.css': '<%= cssBuildDir %>/admin.css',
 					'<%= cssDistDir %>/editor-style.min.css': '<%= cssBuildDir %>/editor-style.css',
 					'<%= cssDistDir %>/ie.min.css': '<%= cssBuildDir %>/ie.css',
 					'<%= cssDistDir %>/login.min.css': '<%= cssBuildDir %>/login.css'
+				}
+			},
+			pages: {
+				files: {
+					'<%= cssDistDir %>/pages/about_us.min.css': '<%= cssBuildDir %>/pages/about_us.css',
+					'<%= cssDistDir %>/pages/case_studies.min.css': '<%= cssBuildDir %>/pages/case_studies.css'
 				}
 			}
 		},
@@ -268,9 +308,21 @@ module.exports = function(grunt) {
 					spawn: false
 				},
 				files: [
-					'<%= sassDir %>/**/*.scss'
+					'<%= sassDir %>/**/*.scss',
+					'!<%= sassDir %>/pages/*.scss'
 				],
 				tasks: ['sassBuildDist']
+			},
+			css_pages: {
+				options: {
+					spawn: false
+				},
+				files: [
+					'<%= sassDir %>/pages/*.scss',
+					'<%= sassDir %>/modules/*.scss',
+					'<%= sassDir %>/partials/*.scss'
+				],
+				tasks: ['sassPagesBuildDist']
 			},
 			js: {
 				options: {
