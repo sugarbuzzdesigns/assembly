@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:12 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:21 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9275,9 +9275,16 @@ Tiles
 EMPLOYEES
 **********************/
 .employees {
+  background-image: url(../../images/backgrounds/diagonal-lines-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 13px;
   overflow: hidden;
   padding-bottom: 16%;
   position: relative;
+}
+.employees .stripes-bg {
+  display: none;
 }
 .employees .carousel {
   padding-top: 143px;
@@ -9315,16 +9322,6 @@ EMPLOYEES
 .employees .carousel .slide.slick-current img {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-}
-.employees .stripes-bg {
-  display: block;
-  position: absolute;
-  top: -170px;
-  left: -255px;
-  width: 570px;
-}
-.employees .stripes-bg img, .employees .stripes-bg svg {
-  width: 100%;
 }
 .employees button {
   float: right;
@@ -12335,6 +12332,7 @@ you can add resource intensive styles.
     top: -170px;
     left: -255px;
     width: 570px;
+    right: auto;
   }
   .employees .stripes-bg img, .employees .stripes-bg svg {
     width: 100%;
