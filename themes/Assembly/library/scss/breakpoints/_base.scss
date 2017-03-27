@@ -1848,10 +1848,6 @@ Tiles
 EMPLOYEES
 **********************/
 .employees {
-	background-image: url(../../images/backgrounds/diagonal-lines-bg.png);
-	background-repeat: no-repeat;
-	background-size: 100%;
-    background-position: 0 13px;
 	overflow: hidden;
 	padding-bottom: 16%;
 	position: relative;
@@ -1896,6 +1892,18 @@ EMPLOYEES
 		.slide.slick-current img {
 			transform: translate3d(0,0,0);
 		}
+	}
+
+	.stripes-bg {
+		display: block;
+	    position: absolute;
+	    top: -170px;
+	    left: -255px;
+	    width: 570px;
+
+	    img, svg {
+	    	width: 100%;
+	    }
 	}
 
 	button {
