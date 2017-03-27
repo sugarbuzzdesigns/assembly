@@ -174,8 +174,6 @@ var animationEndEventNames = {
 },
 animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') ];
 
-console.log(animationEndEventName);
-
 (function($){
 	assembly.scrollAnimating = false;
 

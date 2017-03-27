@@ -16,7 +16,7 @@
 			if (raf && assembly.util.useragent.deviceType === 'desktop') {
 				this.setUpParallax();
 			    this.loop();
-			    this.$scrollElement.scrollTop(1,0);
+			    // this.$scrollElement.scrollTop(1,0);
 
 			    $('[data-employee-name]').each(function(i, emp){
 			    	$(emp).css({
@@ -80,15 +80,9 @@
 					var $emp = $(emp);
 			    	var percentage = (($emp.offset().top - $(window).scrollTop() + $emp.height()) / ($(window).height() + $emp.height()));
 
-			   //  	if(_this.scrollDirection === 'up'){
-			   //  		_this.employeeDiff += _this.scrollChange;
-			   //  	} else {
-						// _this.employeeDiff -= _this.scrollChange;
-			   //  	}
 			   	scrollPerc = ($('.employee-list').offset().top - $(window).scrollTop())/$(window).height();
 		   		scrollPerc = 1 - scrollPerc;
 			    		// 60
-			    console.log();
 			    	($emp.data('start') - (scrollPerc*$emp.data('start')*2))
 
 			    	$emp.css({
@@ -98,12 +92,6 @@
 			}
 
 			_this.$elm.each(function(i, lax){
-				// if($('body').is('.page-case-studies')){
-				// 	if(!$(lax).closest('.case-study-container').hasClass('show')){
-				// 		return;
-				// 	}
-				// }
-
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio')*1;
 				curY = $lax.data('curY');
@@ -146,7 +134,7 @@
 		parallax.init();
 	});
 
-	window.onbeforeunload = function () {
-	  window.scrollTo(0, 0);
-	}
+	// window.onbeforeunload = function () {
+	//   window.scrollTo(0, 0);
+	// }
 })(jQuery);

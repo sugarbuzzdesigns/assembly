@@ -84,18 +84,39 @@ var assembly = assembly || {};
 				var $square = $(this),
 					$type = $(this).is('.modular') ? 'modular' : 'custom';
 
-				$(this).addClass('selected');
+				$(this).removeClass('hover').addClass('selected');
+				$('.hover-spot').off('hover');
 
-				_this.showMainCaseStudies($square);
+				_this.$selectedLandingTile = $square;
+				_this.$selectedLandingType = $type;
 
-				$('.toggle-filter a').removeClass('active');
-				$('.toggle-filter [title=' + $type + ']').addClass('active');
+				if(!$(this).is('.transitioning')){
+					setLandingSelection();
+				}
 				// $('.case-study-category .default-content').off('hoverEventDone');
 
 				// $('.case-study-category .default-content').one('hoverEventDone', function(){
 				// 	console.log('clicked and hover done');
 				// });
 			});
+
+			$('.case-study-category .default-content').on(transEndEventName, function(evt){
+				$(this).parent().removeClass('transitioning');
+
+				if($(evt.target).parent().is('.selected')){
+					setLandingSelection();
+				}
+
+			}).children().on(transEndEventName, function(evt){
+				evt.stopPropagation();
+			});
+
+			function setLandingSelection(){
+				_this.showMainCaseStudies(_this.$selectedLandingTile);
+
+				$('.toggle-filter a').removeClass('active');
+				$('.toggle-filter [title=' + _this.$selectedLandingType + ']').addClass('active');
+			};
 
 			assembly.util.env.$win.on('scroll-down', function(){
 				$('.scroll-overlay').addClass('going-down');
@@ -133,9 +154,9 @@ var assembly = assembly || {};
 			});
 
 			$('.hover-spot').hover(function(){
-				$(this).parent().addClass('hover');
+				$(this).parent().addClass('hover transitioning');
 			}, function(){
-				$(this).parent().removeClass('hover');
+				$(this).parent().removeClass('hover transitioning');
 			});
 
 			$('.case-study-svg-cat .main').hover(function(){
@@ -161,12 +182,6 @@ var assembly = assembly || {};
 
 			_this.$landing.mousemove(function(){
 				_this.parallaxBg();
-			});
-
-			$('.case-study-category .default-content').on(transEndEventName, function(evt){
-				if($(evt.srcElement).is('.default-content') && $(evt.srcElement.offsetParent).is('.hover')){
-					$(this).trigger('hoverEventDone');
-				}
 			});
 		},
 

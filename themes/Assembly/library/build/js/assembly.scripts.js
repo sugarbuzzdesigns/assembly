@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 12:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 06:52 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -273,8 +273,6 @@ var animationEndEventNames = {
     'animation'		  : 'animationend'
 },
 animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') ];
-
-console.log(animationEndEventName);
 
 (function($){
 	assembly.scrollAnimating = false;
@@ -996,7 +994,7 @@ var assembly = assembly || {};
 			if (raf && assembly.util.useragent.deviceType === 'desktop') {
 				this.setUpParallax();
 			    this.loop();
-			    this.$scrollElement.scrollTop(1,0);
+			    // this.$scrollElement.scrollTop(1,0);
 
 			    $('[data-employee-name]').each(function(i, emp){
 			    	$(emp).css({
@@ -1060,15 +1058,9 @@ var assembly = assembly || {};
 					var $emp = $(emp);
 			    	var percentage = (($emp.offset().top - $(window).scrollTop() + $emp.height()) / ($(window).height() + $emp.height()));
 
-			   //  	if(_this.scrollDirection === 'up'){
-			   //  		_this.employeeDiff += _this.scrollChange;
-			   //  	} else {
-						// _this.employeeDiff -= _this.scrollChange;
-			   //  	}
 			   	scrollPerc = ($('.employee-list').offset().top - $(window).scrollTop())/$(window).height();
 		   		scrollPerc = 1 - scrollPerc;
 			    		// 60
-			    console.log();
 			    	($emp.data('start') - (scrollPerc*$emp.data('start')*2))
 
 			    	$emp.css({
@@ -1078,12 +1070,6 @@ var assembly = assembly || {};
 			}
 
 			_this.$elm.each(function(i, lax){
-				// if($('body').is('.page-case-studies')){
-				// 	if(!$(lax).closest('.case-study-container').hasClass('show')){
-				// 		return;
-				// 	}
-				// }
-
 				$lax = $(lax);
 				laxRatio = $lax.data('ratio')*1;
 				curY = $lax.data('curY');
@@ -1126,9 +1112,9 @@ var assembly = assembly || {};
 		parallax.init();
 	});
 
-	window.onbeforeunload = function () {
-	  window.scrollTo(0, 0);
-	}
+	// window.onbeforeunload = function () {
+	//   window.scrollTo(0, 0);
+	// }
 })(jQuery);
 /*! Source: library/js/pages/assembly.contact.js*/
 /*!
