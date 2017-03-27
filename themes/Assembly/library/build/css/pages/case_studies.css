@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 11:42 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-27 11:54 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -42,6 +42,7 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 .page-case-studies .case-study-svg .back-box {
+  display: block;
   width: 3.63%;
   position: absolute;
   top: 50%;
