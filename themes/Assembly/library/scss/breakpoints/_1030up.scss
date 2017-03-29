@@ -800,102 +800,10 @@ ABOUT US Page
 				}
 			}
 		}
-	}
 
-	.employee-list {
-	    z-index: 4;
-	    position: relative;
-	    float: left;
-	    clear: both;
-	    padding-bottom: 40px;
-
-		.employee {
-			position: relative;
-			cursor: pointer;
-			float: left;
-			width: 16.67%;
-			margin-right: resp(102);
-			z-index: 4;
-			transition: opacity 0.5s;
-
-			.image-wrap {
-				background: rgba(0,0,0,0.15);
-				position: relative;
-			}
-
-			.image-clip-bg {
-			    height: 100%;
-			    width: 100%;
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    padding: 20px;
-			    transition: padding 0.3s;
-
-			    .inner {
-			    	height: 100%;
-			    	width: 100%;
-			    	background: #fff;
-			    }
-			}
-
-			img {
-				transition: opacity 0.3s, clip-path 0.3s;
-				clip-path: inset(0px);
-			}
-
-			&:hover {
-				img {
-					clip-path: inset(20px);
-					opacity: 0.4;
-				}
-			}
-
-			&.clicked {
-				img {
-					clip-path: inset(0px);
-					opacity: 0.4;
-				}
-
-				.image-clip-bg {
-					padding: 0;
-				}
-			}
-
-			&.invisible {
-				opacity: 0;
-				pointer-events: none;
-			}
-
-			&:first-child {
-				margin-left: resp(44);
-			}
-
-			&:nth-child(even){
-				// transition: transform 0.5s ease-in-out;
-				// transform: translate3d(0, 95px, 0);
-				// padding-bottom: 45px;
-			}
-
-			img {
-				width: 100%;
-				margin-bottom: 35px;
-			}
-
-			.employee-name {
-				font-family: 'gridnikregular';
-				font-size: rem(13);
-				line-height: 1;
-				color: #221f20;
-				margin-bottom: 3px;
-				text-transform: uppercase;
-			}
-
-			.employee-title {
-				color: #7d7d7d;
-				font-size: rem(11);
-				font-family: 'roboto_monoregular';
-				line-height: calc(20/11);
+		.employee-info {
+			.close {
+				display: none;
 			}
 		}
 	}

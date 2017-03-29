@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-28 10:17 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 01:36 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11424,8 +11424,32 @@ ABOUT US Page
   visibility: hidden;
   background: #fff;
 }
+.page-about-us .employees .employee-info .wrapper {
+  width: 73%;
+  margin: 0 auto;
+}
+.page-about-us .employees .employee-info .close {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin: 0 auto;
+}
+.page-about-us .employees .employee-info .close span {
+  height: 40px;
+  width: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+.page-about-us .employees .employee-info .close span:nth-child(2) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(135deg);
+          transform: translate3d(-50%, -50%, 0) rotate(135deg);
+}
 .page-about-us .employees .employee-info .info-inner {
-  width: 300%;
+  width: 400%;
   overflow: hidden;
   background: #fff;
   transition: -webkit-transform 0.4s;
@@ -11438,33 +11462,31 @@ ABOUT US Page
   width: 25%;
   float: left;
   min-height: 1px;
-  -webkit-transform: translate3d(0, 10%, 0);
-          transform: translate3d(0, 10%, 0);
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
 }
 .page-about-us .employees .employee-info .employee-img {
-  width: 73%;
+  width: 76%;
+  margin: 25px auto;
 }
 .page-about-us .employees .employee-info .employee-about {
-  margin-top: 81px;
-  padding-left: 29px;
+  margin-top: 67px;
 }
 .page-about-us .employees .employee-info .employee-about .inner {
-  background: #fff;
-  padding: 15px 27px 0;
-  width: 244px;
+  padding: 0 10%;
 }
 .page-about-us .employees .employee-info .employee-fun-fact {
-  padding-left: 12px;
+  margin-top: 100px;
+}
+.page-about-us .employees .employee-info .employee-fun-fact .astrisk {
+  height: 25px;
+  width: 25px;
 }
 .page-about-us .employees .employee-info .employee-fun-fact .inner {
-  width: 244px;
-  padding: 80px 20px 130px 30px;
-  background: #fff;
+  padding: 0 10%;
 }
 .page-about-us .employees .employee-info .employee-years {
-  margin-top: 81px;
+  margin-top: 30px;
 }
 .page-about-us .employees .employee-info .employee-years .numbers {
   background: #fff;
@@ -12221,6 +12243,10 @@ you can add resource intensive styles.
     display: none;
   }
 
+  .no-tablet {
+    display: none;
+  }
+
   .tablet {
     display: block;
   }
@@ -12396,8 +12422,8 @@ you can add resource intensive styles.
   }
 
   .employees {
-    width: 40%;
-    float: right;
+    width: 100%;
+    float: left;
     background: transparent;
     overflow: visible;
     margin-top: -150px;
@@ -12412,6 +12438,68 @@ you can add resource intensive styles.
   }
   .employees .stripes-bg img, .employees .stripes-bg svg {
     width: 100%;
+  }
+  .employees .employee-info {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow-x: scroll;
+    width: 100%;
+    visibility: hidden;
+    background: #fff;
+  }
+  .employees .employee-info .close {
+    display: none;
+  }
+  .employees .employee-info .close {
+    display: none;
+  }
+  .employees .employee-info .info-inner {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+  }
+  .employees .employee-info.show {
+    visibility: visible;
+  }
+  .employees .employee-info .col {
+    width: 25%;
+    float: left;
+    min-height: 1px;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+  }
+  .employees .employee-info .employee-img {
+    width: 73%;
+  }
+  .employees .employee-info .employee-about {
+    margin-top: 81px;
+    padding-left: 29px;
+  }
+  .employees .employee-info .employee-about .inner {
+    background: #fff;
+    padding: 15px 27px 0;
+    width: 244px;
+  }
+  .employees .employee-info .employee-fun-fact {
+    padding-left: 12px;
+  }
+  .employees .employee-info .employee-fun-fact .inner {
+    width: 244px;
+    padding: 80px 20px 130px 30px;
+    background: #fff;
+  }
+  .employees .employee-info .employee-years {
+    margin-top: 81px;
+  }
+  .employees .employee-info .employee-years .numbers {
+    background: #fff;
   }
 
   /*********************
@@ -12443,11 +12531,92 @@ you can add resource intensive styles.
   }
   .page-about-us .employees .employee-info {
     width: 100%;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     overflow: hidden;
   }
   .page-about-us .employees .employee-info .info-inner {
     width: 100%;
     float: left;
+  }
+  .page-about-us .employee-list {
+    z-index: 4;
+    position: relative;
+    float: left;
+    clear: both;
+    padding-bottom: 40px;
+  }
+  .page-about-us .employee-list .employee {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    width: 16.67%;
+    margin-right: calc(102%/1440*100);
+    z-index: 4;
+    transition: opacity 0.5s;
+  }
+  .page-about-us .employee-list .employee .image-wrap {
+    background: rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  .page-about-us .employee-list .employee .image-clip-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: padding 0.3s;
+  }
+  .page-about-us .employee-list .employee .image-clip-bg .inner {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+  }
+  .page-about-us .employee-list .employee img {
+    transition: opacity 0.3s, -webkit-clip-path 0.3s;
+    transition: opacity 0.3s, clip-path 0.3s;
+    -webkit-clip-path: inset(0px);
+            clip-path: inset(0px);
+  }
+  .page-about-us .employee-list .employee:hover img {
+    -webkit-clip-path: inset(20px);
+            clip-path: inset(20px);
+    opacity: 0.4;
+  }
+  .page-about-us .employee-list .employee.clicked img {
+    -webkit-clip-path: inset(0px);
+            clip-path: inset(0px);
+    opacity: 0.4;
+  }
+  .page-about-us .employee-list .employee.clicked .image-clip-bg {
+    padding: 0;
+  }
+  .page-about-us .employee-list .employee.invisible {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .page-about-us .employee-list .employee:first-child {
+    margin-left: calc(44%/1440*100);
+  }
+  .page-about-us .employee-list .employee img {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .page-about-us .employee-list .employee .employee-name {
+    font-family: 'gridnikregular';
+    font-size: 0.8125rem;
+    line-height: 1;
+    color: #221f20;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+  .page-about-us .employee-list .employee .employee-title {
+    color: #7d7d7d;
+    font-size: 0.6875rem;
+    font-family: 'roboto_monoregular';
+    line-height: calc(20/11);
   }
 
   /*********************
@@ -14268,83 +14437,8 @@ you can add resource intensive styles.
   .page-about-us .employees .years-experience {
     display: none;
   }
-  .page-about-us .employee-list {
-    z-index: 4;
-    position: relative;
-    float: left;
-    clear: both;
-    padding-bottom: 40px;
-  }
-  .page-about-us .employee-list .employee {
-    position: relative;
-    cursor: pointer;
-    float: left;
-    width: 16.67%;
-    margin-right: calc(102%/1440*100);
-    z-index: 4;
-    transition: opacity 0.5s;
-  }
-  .page-about-us .employee-list .employee .image-wrap {
-    background: rgba(0, 0, 0, 0.15);
-    position: relative;
-  }
-  .page-about-us .employee-list .employee .image-clip-bg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    transition: padding 0.3s;
-  }
-  .page-about-us .employee-list .employee .image-clip-bg .inner {
-    height: 100%;
-    width: 100%;
-    background: #fff;
-  }
-  .page-about-us .employee-list .employee img {
-    transition: opacity 0.3s, -webkit-clip-path 0.3s;
-    transition: opacity 0.3s, clip-path 0.3s;
-    -webkit-clip-path: inset(0px);
-            clip-path: inset(0px);
-  }
-  .page-about-us .employee-list .employee:hover img {
-    -webkit-clip-path: inset(20px);
-            clip-path: inset(20px);
-    opacity: 0.4;
-  }
-  .page-about-us .employee-list .employee.clicked img {
-    -webkit-clip-path: inset(0px);
-            clip-path: inset(0px);
-    opacity: 0.4;
-  }
-  .page-about-us .employee-list .employee.clicked .image-clip-bg {
-    padding: 0;
-  }
-  .page-about-us .employee-list .employee.invisible {
-    opacity: 0;
-    pointer-events: none;
-  }
-  .page-about-us .employee-list .employee:first-child {
-    margin-left: calc(44%/1440*100);
-  }
-  .page-about-us .employee-list .employee img {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-  .page-about-us .employee-list .employee .employee-name {
-    font-family: 'gridnikregular';
-    font-size: 0.8125rem;
-    line-height: 1;
-    color: #221f20;
-    margin-bottom: 3px;
-    text-transform: uppercase;
-  }
-  .page-about-us .employee-list .employee .employee-title {
-    color: #7d7d7d;
-    font-size: 0.6875rem;
-    font-family: 'roboto_monoregular';
-    line-height: calc(20/11);
+  .page-about-us .employees .employee-info .close {
+    display: none;
   }
   .page-about-us .our-approach {
     clear: both;

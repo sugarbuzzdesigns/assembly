@@ -3379,8 +3379,34 @@ ABOUT US Page
 			visibility: hidden;
 			background: #fff;
 
+			.wrapper {
+				width: 73%;
+				margin: 0 auto;
+			}
+
+			.close {
+				height: 30px;
+				width: 30px;
+				position: relative;
+				margin: 0 auto;
+
+				span {
+					height: 40px;
+					width: 1px;
+					background: #000;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate3d(-50%, -50%, 0) rotate(45deg);
+				}
+
+				span:nth-child(2) {
+					transform: translate3d(-50%, -50%, 0) rotate(135deg);
+				}
+			}
+
 			.info-inner {
-				width: 300%;
+				width: 400%;
 				overflow: hidden;
 				background: #fff;
 				transition: transform 0.4s;
@@ -3394,37 +3420,37 @@ ABOUT US Page
 				width: 25%;
 				float: left;
 				min-height: 1px;
-				transform: translate3d(0, 10%, 0);
 				transition: transform 0.4s;
 			}
 
 			.employee-img {
-				width: 73%;
+				width: 76%;
+				margin: 25px auto 0;
 			}
 
 			.employee-about {
-				margin-top: 81px;
-				padding-left: 29px;
+    			margin-top: 67px;
 
 				.inner {
-					background: #fff;
-					padding: 15px 27px 0;
-					width: 244px;
+					padding: 0 10%;
 				}
 			}
 
 			.employee-fun-fact {
-				padding-left: 12px;
+				margin-top: 100px;
+
+				.astrisk {
+					height: 25px;
+					width: 25px;
+				}
 
 				.inner {
-					width: 244px;
-					padding: 80px 20px 130px 30px;
-					background: #fff;
+					padding: 0 10%;
 				}
 			}
 
 			.employee-years {
-				margin-top: 81px;
+				margin-top: 30px;
 
 				.numbers {
 					background: #fff;
