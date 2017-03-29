@@ -3267,7 +3267,7 @@ ABOUT US Page
 		right: 2%;
 		left: auto;
 		width: 77.3%;
-		height: resppx(428, 414, $screenWidth);
+		height: resppx(428, 414, 320);
 	}
 
 	// about us years exp
@@ -3339,7 +3339,7 @@ ABOUT US Page
     		height: 402px;
     		margin-top: 17.63%;
 			left: 2%;
-			width: resppx(284, 414, $screenWidth);
+			width: resppx(284, 414, 320);
 		}
 
 		.carousel-wrapper {
@@ -3356,8 +3356,80 @@ ABOUT US Page
 		background: transparent;
 		padding-bottom: 10%;
 
+		&.info-open {
+			cursor: url(../../images/svg/close-x-dark.svg), auto;
+
+			.employee-info .col {
+				transform: translate3d(0, 0, 0);
+			}
+
+			.employee-list {
+				pointer-events: none;
+			}
+		}
+
 		.employee-info {
-			display: none;
+			display: block;
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			overflow-x: scroll;
+			width: 100%;
+			visibility: hidden;
+			background: #fff;
+
+			.info-inner {
+				width: 300%;
+				overflow: hidden;
+				background: #fff;
+				transition: transform 0.4s;
+			}
+
+			&.show {
+				visibility: visible;
+			}
+
+			.col {
+				width: 25%;
+				float: left;
+				min-height: 1px;
+				transform: translate3d(0, 10%, 0);
+				transition: transform 0.4s;
+			}
+
+			.employee-img {
+				width: 73%;
+			}
+
+			.employee-about {
+				margin-top: 81px;
+				padding-left: 29px;
+
+				.inner {
+					background: #fff;
+					padding: 15px 27px 0;
+					width: 244px;
+				}
+			}
+
+			.employee-fun-fact {
+				padding-left: 12px;
+
+				.inner {
+					width: 244px;
+					padding: 80px 20px 130px 30px;
+					background: #fff;
+				}
+			}
+
+			.employee-years {
+				margin-top: 81px;
+
+				.numbers {
+					background: #fff;
+				}
+			}
 		}
 
 		.years-experience {

@@ -52,10 +52,22 @@ and more scalable.
 
 .nav {
     padding-top: calc(195%/1440*100);
+
+    li {
+		line-height: 1.24;
+    }
 }
 
 .menu-inner {
 	background-size: 52%;
+}
+
+#menu-main-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
 }
 
 /*********************
@@ -260,6 +272,18 @@ About Us Page
 
 	.scroll-overlay {
 		padding-bottom: 20px;
+	}
+
+	.employees {
+		.employee-info {
+			width: 100%;
+			overflow: hidden;
+
+			.info-inner {
+				width: 100%;
+				float: left;
+			}
+		}
 	}
 }
 

@@ -42,12 +42,21 @@ MAIN LOGO
 MENU & NAVIGATION STYLES
 *********************/
 #menu-main-menu {
-	text-align: left;
+    position: static;
+    text-align: left;
+    padding-top: 200px;
+    padding-left: calc(66%/1440*100);
+    transform: translate(0,0);
 }
 
 .main-menu {
+	overflow: auto;
+
 	.nav {
 		padding-left: calc(128%/1440*100);
+			li {
+    			padding-left: 58px;
+			}
 
 			li a {
 			font-size: 37px;
@@ -56,15 +65,33 @@ MENU & NAVIGATION STYLES
 	}
 
 	.menu-inner {
+		min-height: 605px;
+
+		.menu-header {
+			padding-left: calc(66%/1440*100);
+		}
+
+		.logo {
+		    margin-top: 48px;
+		    margin-left: 0;
+		}
 	    .footer {
 	    	display: block;
 			width: 100%;
 			left: auto;
 			transform: translate3d(0,20px,0);
 			padding: 0;
-			padding-left: calc(130%/1440*100);
+			padding-left: calc(66%/1440*100);
 			text-align: left;
 			padding-bottom: 70px;
+
+			div {
+    			margin-left: 62px;
+			}
+
+			div:nth-child(2){
+				margin-left: 63px;
+			}
 
 			.copyright {
 				margin: 0 0 10px 0;
@@ -653,6 +680,7 @@ ABOUT US Page
 
 	.callout {
 	    width: 23.03%;
+	    min-width: 275px;
    		padding: 2.45% 5% 2.2% 0;
     	margin: 0 0 4.2% 8.6%;
 	}
@@ -753,18 +781,6 @@ ABOUT US Page
 		clear: both;
 		margin: 150px 0 0 0;
 
-		&.info-open {
-			cursor: url(../../images/svg/close-x-dark.svg), auto;
-
-			.employee-info .col {
-				transform: translate3d(0, 0, 0);
-			}
-
-			.employee-list {
-				pointer-events: none;
-			}
-		}
-
 		.mesh-bg {
 			width: 81.67%;
 			height: 490px;
@@ -775,58 +791,6 @@ ABOUT US Page
 			display: none;
 		}
 
-		.employee-info {
-			display: block;
-			position: absolute;
-			z-index: 3;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			width: 100%;
-			visibility: hidden;
-
-			&.show {
-				visibility: visible;
-			}
-
-			.col {
-				width: 25%;
-				float: left;
-				min-height: 1px;
-				transform: translate3d(0, 10%, 0);
-				transition: transform 0.4s;
-			}
-
-			.employee-about {
-				margin-top: 81px;
-				padding-left: 29px;
-
-				.inner {
-					background: #fff;
-					padding: 15px 27px 0;
-					width: 244px;
-				}
-			}
-
-			.employee-fun-fact {
-				padding-left: 12px;
-
-				.inner {
-					width: 244px;
-					padding: 80px 20px 130px 30px;
-					background: #fff;
-				}
-			}
-
-			.employee-years {
-				margin-top: 81px;
-
-				.numbers {
-					background: #fff;
-				}
-			}
-		}
-
 		[data-employee="dominic-bennett"]{
 			.col:nth-child(2) {
 				// width: 14%;
@@ -834,12 +798,6 @@ ABOUT US Page
 				p {
 
 				}
-			}
-		}
-
-		&.in-view {
-			.employee-list .employee:nth-child(even){
-				transform: translate3d(0,0,0);
 			}
 		}
 	}

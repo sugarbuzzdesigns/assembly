@@ -166,7 +166,7 @@ var assembly = assembly || {};
 				}
 
 				var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
-				count(num, $('.employee-carousel-wrapper .tens'), $('.employee-carousel-wrapper .ones'));
+				count(num, $('.years-experience.interactive .tens'), $('.years-experience.interactive .ones'));
 			});
 
 			function count(num, $tens, $ones){
@@ -183,7 +183,6 @@ var assembly = assembly || {};
 				var total = fullNum;
 
 				var countUp = setInterval(function(){
-					console.log(total);
 
 					if(fullNum > newNum){
 						total-=1;
