@@ -11,7 +11,7 @@
 				<div class="modular case-study-category">
 					<div class="square hover-spot"></div>
 					<div class="hover-content">
-						<header class="dark">
+						<header>
 							<h1 class="logo">
 							    <a class="init" href="/">
 							    	<img id="landing-logo-hover-content" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
@@ -41,6 +41,7 @@
 								    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
 								    </a>
 								</h1>
+								<span class="mobile-only"><?php include __DIR__ . '/includes/menu-btn.php'; ?></span>
 							</header>
 							<h3>
 								<span data-letter="m">m</span>
