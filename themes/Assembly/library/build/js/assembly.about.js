@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 10:20 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 10:27 pm - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -138,6 +138,26 @@ var assembly = assembly || {};
 					}
 				},
 				offset: 0 - $('.employee-list').outerHeight()
+			});
+
+			$('.carousel-module, .employees').not('.our-approach').waypoint({
+				handler: function(direction) {
+					console.log(this.element);
+					if(direction === 'down'){
+						$(this.element).addClass('in-view');
+						if(assembly.util.useragent.deviceType === 'mobile'){
+							if($(this.element).find('.carousel').data('mobile-position') === 'left'){
+								console.log('go to next');
+								$(this.element).find('.carousel').slick('slickNext');
+							} else {
+								$(this.element).find('.carousel').slick('slickPrev');
+							}
+						}
+					} else {
+						$(this.element).removeClass('in-view');
+					}
+				},
+				offset: '50%'
 			});
 		}
 	};
