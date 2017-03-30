@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 03:16 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 06:32 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -15384,7 +15384,7 @@ you can add resource intensive styles.
   Footer
   **********************/
   .footer .footer-inner {
-    padding: 34px 3% 8px;
+    padding: 34px 3% 5px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
