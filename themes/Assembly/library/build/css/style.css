@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 01:36 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 09:42 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7868,6 +7868,7 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
+  text-decoration: none;
   color: #000;
   transition: color .5s;
   /* on hover */
@@ -11467,7 +11468,7 @@ ABOUT US Page
 }
 .page-about-us .employees .employee-info .employee-img {
   width: 76%;
-  margin: 25px auto;
+  margin: 25px auto 0;
 }
 .page-about-us .employees .employee-info .employee-about {
   margin-top: 67px;
@@ -12374,6 +12375,13 @@ you can add resource intensive styles.
   .home .years-experience .years-experience-numbers {
     right: 43px;
   }
+  .home .employees {
+    width: 44%;
+    float: right;
+  }
+  .home .employees .nav-arrow-right {
+    display: none;
+  }
 
   /*********************
   PROJECTS SECTION
@@ -13033,9 +13041,6 @@ you can add resource intensive styles.
   /*********************
   Footer
   **********************/
-  .footer a[href*="contact"] {
-    margin-top: 22px;
-  }
 }
 /*********************
 DESKTOP
@@ -13419,8 +13424,12 @@ you can add resource intensive styles.
     margin-left: 52%;
     right: auto;
   }
+  .home .employees .nav-arrow-right {
+    display: block;
+  }
   .home .employees .carousel-inner {
     width: 44%;
+    margin-left: 11%;
     position: relative;
     overflow: hidden;
   }

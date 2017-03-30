@@ -442,8 +442,13 @@ HOME Projects Modules
 		right: auto;
 	}
 
+	.nav-arrow-right {
+		display: block;
+	}
+
 	.carousel-inner {
 		width: 44%;
+		margin-left: 11%;
 		position: relative;
 		overflow: hidden;
 

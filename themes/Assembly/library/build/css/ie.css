@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 01:36 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 09:42 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -385,6 +385,13 @@ HOME PAGE STYLES
 }
 .home .years-experience .years-experience-numbers {
   right: 43px;
+}
+.home .employees {
+  width: 44%;
+  float: right;
+}
+.home .employees .nav-arrow-right {
+  display: none;
 }
 
 /*********************
@@ -1045,10 +1052,6 @@ To Top BTN
 /*********************
 Footer
 **********************/
-.footer a[href*="contact"] {
-  margin-top: 22px;
-}
-
 /******************************************************************
 Stylesheet: Desktop Stylsheet
 
@@ -1424,8 +1427,12 @@ HOME Projects Modules
   margin-left: 52%;
   right: auto;
 }
+.home .employees .nav-arrow-right {
+  display: block;
+}
 .home .employees .carousel-inner {
   width: 44%;
+  margin-left: 11%;
   position: relative;
   overflow: hidden;
 }

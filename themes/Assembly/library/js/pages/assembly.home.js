@@ -19,6 +19,7 @@ var assembly = assembly || {};
 			$('.landing .mesh-bg').data('meshTop', 0);
 
 			this.bindEvents();
+			this.waypoints();
 			this.initializeVideos();
 
 			this.loop();
@@ -105,6 +106,22 @@ var assembly = assembly || {};
 					transform: 'translate3d(0,'+ 0 +'%,0)'
 				});
 			}
+		},
+
+		waypoints: function(){
+			$('.carousel-module').waypoint({
+				handler: function(direction) {
+					if(direction === 'down'){
+						$('.carousel-module').addClass('in-view');
+						if(assembly.util.useragent.deviceType === 'mobile'){
+							$(this.element).find('.carousel').slick('slickNext');
+						}
+					} else {
+						$('.carousel-module').removeClass('in-view');
+					}
+				},
+				offset: '50%'
+			});
 		},
 
 		bindEvents: function(){

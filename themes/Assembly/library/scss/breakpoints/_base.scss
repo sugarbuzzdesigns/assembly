@@ -295,6 +295,7 @@ LINK STYLES
 *********************/
 
 a, a:visited {
+	text-decoration: none;
 	color: $link-color;
 	transition: color .5s;
 

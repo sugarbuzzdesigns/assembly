@@ -177,6 +177,15 @@ HOME PAGE STYLES
 	.years-experience .years-experience-numbers {
 		right: 43px;
 	}
+
+	.employees {
+		width: 44%;
+		float: right;
+
+		.nav-arrow-right {
+			display: none;
+		}
+	}
 }
 
 /*********************
@@ -994,6 +1003,6 @@ Footer
 **********************/
 .footer {
 	a[href*="contact"]{
-		margin-top: 22px;
+
 	}
 }
