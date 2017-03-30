@@ -109,15 +109,21 @@ var assembly = assembly || {};
 		},
 
 		waypoints: function(){
-			$('.carousel-module').waypoint({
+			$('.carousel-module, .employee-carousel-wrapper').waypoint({
 				handler: function(direction) {
+					console.log(this.element);
 					if(direction === 'down'){
-						$('.carousel-module').addClass('in-view');
+						$(this.element).addClass('in-view');
 						if(assembly.util.useragent.deviceType === 'mobile'){
-							$(this.element).find('.carousel').slick('slickNext');
+							if($(this.element).find('.carousel').data('mobile-position') === 'left'){
+								console.log('go to next');
+								$(this.element).find('.carousel').slick('slickNext');
+							} else {
+								$(this.element).find('.carousel').slick('slickPrev');
+							}
 						}
 					} else {
-						$('.carousel-module').removeClass('in-view');
+						$(this.element).removeClass('in-view');
 					}
 				},
 				offset: '50%'

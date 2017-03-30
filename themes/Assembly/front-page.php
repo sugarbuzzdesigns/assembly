@@ -256,7 +256,7 @@
 							</div>
 							<div class="tile carousel-wrapper">
 								<div class="carousel-inner">
-									<a href="about-us#employees" class="carousel employee-carousel carousel-module" data-mobile-position="left" data-mobile-start="front">
+									<a href="about-us#employees" class="carousel employee-carousel" data-mobile-position="left" data-mobile-start="front">
 										<div class="slide employee" data-years-experience="24">
 											<div class="tile-inner">
 												<div class="tile-img">
