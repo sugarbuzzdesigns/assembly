@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 09:42 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 10:06 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -13423,13 +13423,24 @@ you can add resource intensive styles.
   .home .employees .nav-arrow-right {
     margin-left: 52%;
     right: auto;
-  }
-  .home .employees .nav-arrow-right {
     display: block;
   }
+  .home .employees .years-experience {
+    position: absolute;
+    top: 405px;
+  }
+  .home .employees .years-experience .years-experience-numbers {
+    right: 11.4%;
+    top: -172px;
+  }
+  .home .employees .years-experience .years-experience-text {
+    right: -5%;
+  }
   .home .employees .carousel-inner {
-    width: 44%;
-    margin-left: 11%;
+    width: 37.2%;
+    margin-right: 34%;
+    margin-left: 0;
+    float: right;
     position: relative;
     overflow: hidden;
   }

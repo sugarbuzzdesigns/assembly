@@ -155,7 +155,14 @@ var assembly = assembly || {};
 			});
 
 			$employeeCarousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-				// $('.years-experience-numbers').addClass('counting');
+				var $thisCarousel = $(this);
+				var slideCount = $thisCarousel.find('.slide').length;
+
+				if(slideCount === nextSlide + 1){
+					$thisCarousel.closest('.carousel-module').addClass('atEnd');
+				} else {
+					$thisCarousel.closest('.carousel-module').removeClass('atEnd');
+				}
 			});
 
 			$employeeCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){

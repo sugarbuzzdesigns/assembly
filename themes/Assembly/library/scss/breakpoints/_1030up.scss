@@ -440,15 +440,28 @@ HOME Projects Modules
 	.nav-arrow-right {
 		margin-left: 52%;
 		right: auto;
-	}
-
-	.nav-arrow-right {
 		display: block;
 	}
 
+	.years-experience {
+	    position: absolute;
+	    top: 405px;
+
+		.years-experience-numbers {
+		    right: 11.4%;
+		    top: -172px;
+		}
+
+		.years-experience-text {
+    		right: -5%;
+		}
+	}
+
 	.carousel-inner {
-		width: 44%;
-		margin-left: 11%;
+		width: 37.2%;
+		margin-right: 34%;
+		margin-left: 0;
+		float: right;
 		position: relative;
 		overflow: hidden;
 
