@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 06:32 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 06:35 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -3382,7 +3382,7 @@ TO TOP
 Footer
 **********************/
 .footer .footer-inner {
-  padding: 34px 3% 5px;
+  padding: 34px 3.175% 5px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
