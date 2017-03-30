@@ -2577,10 +2577,18 @@ CASE STUDIES Page
     	display: none;
     }
 
-    .container {
+    .container,
+    .wrap {
     	height: 100vh;
     	width: 100vw;
     	overflow: hidden;
+    }
+
+    @at-root {
+    	.landing-closed .wrap {
+    		height: auto;
+    		overflow: auto;
+    	}
     }
 
 	header.scroll-overlay {
