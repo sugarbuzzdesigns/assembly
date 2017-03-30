@@ -55,7 +55,7 @@ if(defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG) {
 	$dir = 'build';
 } else {
 	$suffix = '';
-	$dir = 'build';
+	$dir = 'dist';
 }
 
 function bones_head_cleanup() {

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-29 10:27 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 03:31 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -184,6 +184,17 @@ var assembly = assembly || {};
 			_this.$landing.mousemove(function(){
 				_this.parallaxBg();
 			});
+
+			if(window.location.hash){
+				$('html').on('loaded', function(){
+					setTimeout(function(){
+						$('[data-hash-selector="'+ window.location.hash +'"] .hover-spot').trigger('mouseover');
+						$('[data-hash-selector="'+ window.location.hash +'"]').trigger('click');
+					}, 500);
+				});
+			} else {
+				console.log('no hash');
+			}
 		},
 
 		parallaxBg: function(){
