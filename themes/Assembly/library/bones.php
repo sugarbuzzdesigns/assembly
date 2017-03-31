@@ -54,7 +54,7 @@ if(defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG) {
 	$suffix = '';
 	$dir = 'build';
 } else {
-	$suffix = '';
+	$suffix = '.min';
 	$dir = 'dist';
 }
 
