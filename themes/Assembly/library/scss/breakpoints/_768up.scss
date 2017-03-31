@@ -470,6 +470,16 @@ About Us Page
 			}
 		}
 	}
+
+	a[href="/case-studies"] {
+	    width: 263px;
+	    margin: 0;
+	    clear: both;
+	    float: right;
+	    margin-right: 5.97%;
+	    margin-bottom: 16px;
+	    margin-top: 50px;
+	}
 }
 
 /*********************
@@ -718,6 +728,16 @@ CASE STUDIES Page
 	}
 
 	.landing {
+		h3 {
+    		left: 27.661%;
+		}
+
+		.custom {
+			h3 {
+				left: 27.5%;
+			}
+		}
+
 		.square {
 		    height: 100%;
 		    width: 100%;
