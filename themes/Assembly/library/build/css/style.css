@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 10:22 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-30 10:38 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -13443,7 +13443,6 @@ you can add resource intensive styles.
     margin-left: calc(67%/1440*100);
   }
   .page-case-studies .filter-wrap {
-    padding: 16px 33px 20px 17px;
     background: rgba(255, 255, 255, 0.8);
   }
   .page-case-studies .landing h3 {
@@ -13486,10 +13485,16 @@ you can add resource intensive styles.
   .page-case-studies .content h2 {
     font-size: 4.5rem;
     line-height: 1.043;
-    margin: 0;
+    margin: 0 auto;
     padding-top: 185px;
-    padding-left: 121px;
-    width: 100%;
+    padding-left: 0;
+    width: 77%;
+  }
+  .page-case-studies .content h2 span {
+    margin-left: -7px;
+  }
+  .page-case-studies .content h2 span:nth-child(3) {
+    margin-left: -2px;
   }
   .page-case-studies .content .svg-container .case-study-svg {
     width: calc(1160%/1440*100);
@@ -13505,8 +13510,8 @@ you can add resource intensive styles.
     width: 100%;
   }
   .page-case-studies .content .case-study-desc {
-    width: 60%;
-    margin: 0 auto 50px 90px;
+    width: 77%;
+    margin: 40px auto 50px;
   }
   .page-case-studies .content blockquote {
     width: 22.64%;
@@ -15569,6 +15574,7 @@ you can add resource intensive styles.
   }
   .page-case-studies .content .case-study-desc {
     width: 16.53%;
+    margin: 0 auto 50px 90px;
   }
   .page-case-studies .content .case-study-details {
     margin-top: -110px;

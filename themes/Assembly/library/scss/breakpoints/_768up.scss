@@ -723,7 +723,6 @@ CASE STUDIES Page
 	}
 
 	.filter-wrap {
-		padding: 16px 33px 20px 17px;
 		background: rgba(255,255,255,0.8);
 	}
 
@@ -787,10 +786,18 @@ CASE STUDIES Page
 		h2 {
 			font-size: rem(72);
 			line-height: 1.043;
-		    margin: 0;
+		    margin: 0 auto;
 		    padding-top: 185px;
-		    padding-left: 121px;
-		    width: 100%;
+		    padding-left: 0;
+		    width: 77%;
+
+		    span {
+    			margin-left: -7px;
+		    }
+
+		    span:nth-child(3){
+		    	margin-left: -2px;
+		    }
 		}
 
 		.svg-container {
@@ -814,8 +821,8 @@ CASE STUDIES Page
 		}
 
 		.case-study-desc {
-			width: 60%;
-			margin: 0 auto 50px 90px;
+			width: 77%;
+			margin: 40px auto 50px;
 		}
 
 		blockquote {
