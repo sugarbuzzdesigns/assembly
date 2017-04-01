@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:07 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:29 pm - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18

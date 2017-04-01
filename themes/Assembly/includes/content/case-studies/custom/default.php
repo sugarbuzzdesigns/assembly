@@ -5,11 +5,11 @@
 			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
 		</div>
 		<div class="group">
-			<div class="tile left-margin-med" data-image-ratio="600:433">
-				<div class="tile-img lazy-load">
+			<div class="tile left-margin-med">
+				<div class="tile-img lazy-load"  data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -24,7 +24,7 @@
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-2.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -41,7 +41,7 @@
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Custom-Hospitality-3.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -56,13 +56,13 @@
 			</blockquote>
 		</div>
 		<div class="group">
-			<div data-ratio=".08" class="tile left-margin-med" data-image-ratio="600:433">
+			<div data-ratio=".08" class="tile left-margin-med"  data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -77,7 +77,7 @@
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Custom-Hospitality.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -94,7 +94,7 @@
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">
@@ -109,7 +109,7 @@
 						<div class="inner"></div>
 					</div>
 					<div class="img-container">
-
+						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-3.jpg" alt="">
 					</div>
 				</div>
 				<div class="tile-info">

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:07 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:29 pm - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -32,9 +32,9 @@ var assembly = assembly || {};
 			this.setContainerHeights();
 			this.addClassTileCount();
 
-			$('.tile-img.lazy-load .img-container').eq(0).imagesLoaded().done( function( instance ) {
-    console.log('all images successfully loaded');
-  });
+			// $('.tile-img.lazy-load .img-container').eq(0).imagesLoaded(function(){
+			// 	console.log('loaded');
+			// });
 		},
 
 		initSelect2: function(){
