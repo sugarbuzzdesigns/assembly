@@ -30,6 +30,10 @@ var assembly = assembly || {};
 
 			this.setContainerHeights();
 			this.addClassTileCount();
+
+			$('.tile-img.lazy-load .img-container').eq(0).imagesLoaded().done( function( instance ) {
+    console.log('all images successfully loaded');
+  });
 		},
 
 		initSelect2: function(){
@@ -194,6 +198,25 @@ var assembly = assembly || {};
 			} else {
 				console.log('no hash');
 			}
+
+			$('html').on('loaded', function(){
+				_this.lazyLoadImages();
+			});
+		},
+
+		lazyLoadImages: function(){
+			// $('.tile-img.lazy-load .img-container').eq(0).imagesLoaded(function(img){
+			// 	console.log(img, 'loaded');
+			// });
+
+			// $('.tile-img.lazy-load').each(function(i, tile){
+			// 	var $tile = $(tile);
+			// 	var $imgContainer = $tile.find('.img-container');
+			// 	var $img = $imgContainer.find('img[data-src]');
+			// 	var source = $img.data('src');
+
+			// 	$imgContainer.addClass('is-loading');
+			// });
 		},
 
 		parallaxBg: function(){

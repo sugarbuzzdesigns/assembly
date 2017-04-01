@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 09:37 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:12 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1297,6 +1297,7 @@ Select Box Overrides
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
+  padding: 16px 33px 20px 17px;
 }
 .filter-wrap.show {
   opacity: 1;

@@ -247,6 +247,7 @@ Select Box Overrides
 	opacity: 0;
 	transition: opacity 0.5s;
 	pointer-events: none;
+	padding: 16px 33px 20px 17px;
 
 	&.show {
 		opacity: 1;

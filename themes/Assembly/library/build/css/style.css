@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 09:37 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:12 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7145,6 +7145,32 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+/*********************
+RESPONSIVE LAZY IMAGES
+**********************/
+.lazy-load .image-clip-bg {
+  display: none;
+}
+
+.lazy-load .img-container.is-loading {
+  background-color: #e3e3e3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.lazy-load .img-container img {
+  position: absolute;
+}
+
+[data-image-ratio="600:433"] .img-container {
+  padding-bottom: 72.167%;
+}
+
+[data-image-ratio="3:4"] .img-container {
+  padding-bottom: 133.334%;
+}
+
 @-webkit-keyframes meshpulse {
   0% {
     -webkit-transform: translate3d(-100%, -50%, 0) scale(0.8);
@@ -7159,6 +7185,7 @@ and will be used across all viewports.
             transform: translate3d(-100%, -50%, 0) scale(0.8);
   }
 }
+
 @keyframes meshpulse {
   0% {
     -webkit-transform: translate3d(-100%, -50%, 0) scale(0.8);
@@ -13909,6 +13936,7 @@ you can add resource intensive styles.
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
+    padding: 16px 33px 20px 17px;
   }
   .filter-wrap.show {
     opacity: 1;

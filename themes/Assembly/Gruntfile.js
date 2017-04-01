@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'watch']);
+	grunt.registerTask('default', ['clean', 'jsBuildDist', 'sassBuildDist', 'sassPagesBuildDist', 'watch']);
 
 	grunt.registerTask('dev', ['default', 'browserSync', 'watch']);
 

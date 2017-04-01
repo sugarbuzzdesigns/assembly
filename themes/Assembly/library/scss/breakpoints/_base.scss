@@ -10,6 +10,37 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
+/*********************
+RESPONSIVE LAZY IMAGES
+**********************/
+.lazy-load .image-clip-bg {
+	display: none;
+}
+
+.lazy-load .img-container.is-loading {
+	background-color: #e3e3e3;
+	// background-image: url(../../images/icons/site-icon-wp-grey.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.lazy-load .img-container img {
+	position: absolute;
+}
+
+[data-image-ratio="600:433"] {
+	.img-container {
+		padding-bottom: 72.167%;
+	}
+}
+
+[data-image-ratio="3:4"] {
+	.img-container {
+		padding-bottom: 133.334%;
+	}
+}
+
 // import mixins
 @import "../partials/keyframe_animations";
 $screenWidth: 320;

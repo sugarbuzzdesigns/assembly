@@ -55,7 +55,7 @@ var assembly = assembly || {};
 			$('form').on('submit', function formSubmitHandler(evt){
 				evt.preventDefault();
 
-				alert('form subitted!');
+				_this.showSubmittedFormMessage();
 			});
 
 			_this.$photoOverlayWrap.find('.close-btn').on('click', function overlayPhotoCloseHandler(){
@@ -98,6 +98,10 @@ var assembly = assembly || {};
 
 				_this.removePhotoFromPhotosList($('#' + $(this).closest('.image').data('photo-id')));
 			});
+		},
+
+		showSubmittedFormMessage: function(){
+
 		},
 
 		setInitialSectionHeights: function(){

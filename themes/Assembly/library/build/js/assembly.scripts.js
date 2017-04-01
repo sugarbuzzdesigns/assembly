@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 09:37 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:07 pm - User: Phoydar */
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-hashchange-history-audio-video-input-inputtypes-localstorage-websockets-geolocation-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_mediaqueries-css_regions-css_supports-load
  */
@@ -1182,7 +1182,7 @@ var assembly = assembly || {};
 			$('form').on('submit', function formSubmitHandler(evt){
 				evt.preventDefault();
 
-				alert('form subitted!');
+				_this.showSubmittedFormMessage();
 			});
 
 			_this.$photoOverlayWrap.find('.close-btn').on('click', function overlayPhotoCloseHandler(){
@@ -1225,6 +1225,10 @@ var assembly = assembly || {};
 
 				_this.removePhotoFromPhotosList($('#' + $(this).closest('.image').data('photo-id')));
 			});
+		},
+
+		showSubmittedFormMessage: function(){
+
 		},
 
 		setInitialSectionHeights: function(){

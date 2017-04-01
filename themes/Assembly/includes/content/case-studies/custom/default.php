@@ -5,10 +5,12 @@
 			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
 		</div>
 		<div class="group">
-			<div class="tile left-margin-med">
-				<div class="tile-img">
+			<div class="tile left-margin-med" data-image-ratio="600:433">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -16,12 +18,14 @@
 					</span>
 				</div>
 			</div>
-			<div data-ratio=".08" class="tile left-margin-lrg">
-				<div class="tile-img">
+			<div data-ratio=".08" class="tile left-margin-lrg" data-image-ratio="3:4">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super-2.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -31,12 +35,14 @@
 			</div>
 		</div>
 		<div class="group">
-			<div data-ratio=".02" class="tile left-margin-sm">
-				<div class="tile-img">
+			<div data-ratio=".02" class="tile left-margin-sm" data-image-ratio="3:4">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Custom-Hospitality-3.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -50,12 +56,14 @@
 			</blockquote>
 		</div>
 		<div class="group">
-			<div data-ratio=".08" class="tile left-margin-med">
-				<div class="tile-img">
+			<div data-ratio=".08" class="tile left-margin-med" data-image-ratio="600:433">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -63,12 +71,14 @@
 					</span>
 				</div>
 			</div>
-			<div class="tile left-margin-sm">
-				<div class="tile-img">
+			<div class="tile left-margin-sm" data-image-ratio="3:4">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/02-Custom-Hospitality.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -78,12 +88,14 @@
 			</div>
 		</div>
 		<div class="group">
-			<div data-ratio=".07" class="tile left-margin-lrg">
-				<div class="tile-img">
+			<div data-ratio=".07" class="tile left-margin-lrg" data-image-ratio="3:4">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -91,12 +103,14 @@
 					</span>
 				</div>
 			</div>
-			<div class="tile left-margin-med">
-				<div class="tile-img">
+			<div class="tile left-margin-med" data-image-ratio="3:4">
+				<div class="tile-img lazy-load">
 					<div class="image-clip-bg">
 						<div class="inner"></div>
 					</div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/03-Custom-Experiential-3.jpg" alt="">
+					<div class="img-container">
+
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
