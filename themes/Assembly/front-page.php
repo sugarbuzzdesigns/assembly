@@ -64,7 +64,7 @@
 				<div class="group group-0">
 					<div class="company-statement module">
 						<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
-						<p>assembly creates temporary spaces that leave lasting impressions and inspire designers to rethink the possibilities of short-term space design.</p>
+						<p>assembly creates temporary spaces that leave lasting impressions. We inspire designers to rethink the possibilities of short-term space design.</p>
 					</div>
 				</div>
 
@@ -117,7 +117,7 @@
 											</div>
 											<div class="tile-info">
 												<span class="tile-title">Modular</span>
-												<span class="tile-desc">Lorem ipsume dolor sat</span>
+												<span class="tile-desc">Spaces that click.</span>
 											</div>
 										</div>
 									</div>
@@ -144,7 +144,7 @@
 												</div>
 												<div class="tile-info">
 													<span class="tile-title">Custom</span>
-													<span class="tile-desc">Lorem ipsume dolor sat</span>
+													<span class="tile-desc">The space of your dreams.</span>
 												</div>
 											</div>
 										</div>
@@ -174,7 +174,7 @@
 												</div>
 												<div class="tile-info">
 													<span class="tile-title">Services</span>
-													<span class="tile-desc">Lorem ipsume</span>
+													<span class="tile-desc">From paper to production.</span>
 												</div>
 											</div>
 										</div>
@@ -202,7 +202,7 @@
 												</div>
 												<div class="tile-info">
 													<span class="tile-title">Approach</span>
-													<span class="tile-desc">Lorem ipsume dolor sat</span>
+													<span class="tile-desc">Let’s create a space together.</span>
 												</div>
 											</div>
 										</div>
