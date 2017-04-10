@@ -6,7 +6,7 @@
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">
-				<div class="tile-img lazy-load"  data-image-ratio="600:433">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
 					<div class="img-container">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/01-Custom-Super.jpg" alt="">

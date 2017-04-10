@@ -49,9 +49,11 @@
 		<div class="all-services show" data-service="all">
 			<div data-ratio=".05" class="tile slideInUp visualisation" data-service-id="visualisation">
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/visualisation-mobile.jpg" alt="visualisation"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Visualization.jpg" alt="visualisation">
+					<div class="tile-img lazy-load" data-image-ratio="3:4">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Visualization.jpg" alt="visualisation">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Visualisation</span>
@@ -61,9 +63,11 @@
 			</div>
 			<div data-ratio="-.04" class="tile slideInUp permitting" data-service-id="permitting">
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/permitting-mobile.jpg" alt="permitting"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Permitting.jpg" alt="permitting">
+					<div class="tile-img lazy-load" data-image-ratio="600:433">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Permitting.jpg" alt="permitting">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Permitting</span>
@@ -73,9 +77,11 @@
 			</div>
 			<div class="tile slideInUp engineering" data-service-id="engineering">
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/engineering-mobile.jpg" alt="engineering"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Engineering.jpg" alt="engineering">
+					<div class="tile-img lazy-load" data-image-ratio="600:433">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Engineering.jpg" alt="engineering">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Engineering</span>
@@ -86,9 +92,11 @@
 			<div data-ratio=".03" class="tile slideInUp interior-buildouts" data-service-id="interior-buildouts">
 				<div class="mesh-bg dark wide"></div>
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/interior-buildouts-mobile.jpg" alt="interior-buildouts"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Interior-Buildouts.jpg" alt="interior-buildouts">
+					<div class="tile-img lazy-load" data-image-ratio="3:4">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Interior-Buildouts.jpg" alt="interior-buildouts">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Interior Buildouts</span>
@@ -98,9 +106,11 @@
 			</div>
 			<div data-ratio=".04" class="tile slideInUp team-player" data-service-id="team-player">
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/team-player-mobile.jpg" alt="team-player"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Team-Player.jpg" alt="team-player">
+					<div class="tile-img lazy-load" data-image-ratio="600:433">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Team-Player.jpg" alt="team-player">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
@@ -111,9 +121,11 @@
 			<div data-ratio=".02" class="tile slideInUp imagine-experience" data-service-id="imagine-experience">
 				<div class="mesh-bg dark wide"></div>
 				<div class="tile-inner">
-					<div class="tile-img">
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/final/imagine-experience-mobile.jpg" alt="imagine-experience"> -->
-						<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Imagine-Experience.jpg" alt="imagine-experience">
+					<div class="tile-img lazy-load" data-image-ratio="3:4">
+						<div class="image-clip-bg"><div class="inner"></div></div>
+						<div class="img-container">
+							<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/services/<?php echo $imageDir; ?>/01-Landing-Imagine-Experience.jpg" alt="imagine-experience">
+						</div>
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Imagine Experience</span>

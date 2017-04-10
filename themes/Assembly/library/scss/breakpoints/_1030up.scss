@@ -777,10 +777,9 @@ ABOUT US Page
 	}
 
 	.projects-2 {
-		width: 28.89%;
+		// margin-top: -223px;
 		float: right;
-		margin-right: resp(296);
-		margin-top: -223px;
+		margin-right: calc(296%/1440*100);
 	}
 
 	.inner-callout {
@@ -1463,7 +1462,7 @@ SERVICES Page
 			    margin-right: calc(328%/1440*100);
 			    clear: left;
 			    margin-left: 0;
-			    margin-top: -148px;
+			    margin-top: -100px;
 
 				.mesh-bg {
 				    top: 155px;
@@ -1593,6 +1592,7 @@ SERVICES Page
     			float: left;
 
 				.mesh-bg {
+					display: block;
 				    width: 540px;
 				    right: auto;
 				    bottom: -170px;

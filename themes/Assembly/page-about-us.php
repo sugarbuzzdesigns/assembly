@@ -81,9 +81,8 @@
 		</div>
 	</div>
 	<div class="inner-callout">
-		<p>Lorem Ipsum Dolar Placeholder about Custom / Modular offering Our team boasts more than 80 years of experience creating kits of temporary and custom designed structures.</p>
+		<p>We’re here to meet your challenges and make sure you achieve your goals. We take pride in being a creative, resourceful and involved partner.</p>
 	</div>
-	<div class="clear"></div>
 	<div data-ratio=".08" class="projects module carousel-module projects-2" data-image-ratio="1to1">
 		<div class="tile carousel-wrapper">
 			<div class="carousel-inner">
@@ -159,7 +158,7 @@
 							<svg class="astrisk" viewBox="29 81 25 25" xmlns="http://www.w3.org/2000/svg">
 							  <path fill-rule="evenodd" d="M38.176 95.19l-8.383-2.52 1.388-4.362 8.383 3.143-.283-9.684h4.56l-.283 9.855 8.297-3.114 1.36 4.418-8.553 2.52 5.467 7.647-3.71 2.72-5.126-8.128-4.983 7.9-3.74-2.633"/>
 							</svg>
-							<p>Dominic spends his weekends rescuing injured tigers from poachers.</p>
+							<p>Dominic was a river guide along the Orange River in Namibia, Africa. Fortunately, no one ever had to find out their “river guide” couldn’t even swim.</p>
 						</div>
 					</div>
 					<div class="col employee-years">
@@ -202,7 +201,7 @@
 							<svg class="astrisk" viewBox="29 81 25 25" xmlns="http://www.w3.org/2000/svg">
 							  <path fill-rule="evenodd" d="M38.176 95.19l-8.383-2.52 1.388-4.362 8.383 3.143-.283-9.684h4.56l-.283 9.855 8.297-3.114 1.36 4.418-8.553 2.52 5.467 7.647-3.71 2.72-5.126-8.128-4.983 7.9-3.74-2.633"/>
 							</svg>
-							<p>Dominic spends his weekends rescuing injured tigers from poachers.</p>
+							<p>Emma can recite the alphabet backwards — in eleven languages.</p>
 						</div>
 					</div>
 					<div class="col blank">
@@ -212,7 +211,7 @@
 						<div class="inner">
 							<?php include 'library/images/svg/about-text-svg.svg'; ?>
 							<p>Emma’s meticulous organization ensures projects are delivered in a controlled and efficient manner.</p>
-							<p>Projects Include: The 2006 Farnborough International Airshow (UK), 2010 World Equestrian Games (Lexington, KY) and major golf tournaments such as the 2014, 2015 and 2016 AT&amp;T Pebble Beach National Pro-Am</p>
+							<p>Projects Include: The 2006 Farnborough International Airshow (UK), 2010 World Equestrian Games (Lexington, KY) and major golf tournaments such as the 2014, 2015 and 2016 AT&amp;T Pebble Beach National Pro-Am.</p>
 						</div>
 					</div>
 					<div class="col employee-years">
@@ -254,14 +253,14 @@
 							<svg class="astrisk" viewBox="29 81 25 25" xmlns="http://www.w3.org/2000/svg">
 							  <path fill-rule="evenodd" d="M38.176 95.19l-8.383-2.52 1.388-4.362 8.383 3.143-.283-9.684h4.56l-.283 9.855 8.297-3.114 1.36 4.418-8.553 2.52 5.467 7.647-3.71 2.72-5.126-8.128-4.983 7.9-3.74-2.633"/>
 							</svg>
-							<p>Dominic spends his weekends rescuing injured tigers from poachers.</p>
+							<p>Gordon hasn’t played golf with a PGA pro. He has, however, been squirrel hunting with Boo Weekly. And at Royal Birkdale, no less.</p>
 						</div>
 					</div>
 					<div class="col employee-about">
 						<div class="inner">
 							<?php include 'library/images/svg/about-text-svg.svg'; ?>
-							<p>Dominic offers the ultimate in reliability at delivering projects on site. Conscientious control and attention to quality enable Dominic to implement world class overlays.</p>
-							<p>Projects Include: The AT&amp;T Byron Nelson in 2015 and 2016 (Dallas, TX), Chanel Fashion Shows (Scotland, UK in 2008), the 2002, 2010 and 2012 Farnborough International Airshow (UK) and the Ryder cup in Ireland in 2006.</p>
+							<p>Gordon comes to assembly with a wealth of event execution knowledge and a track record of partnering with marketers to develop event solutions that push the boundaries of temporary structures. He leads client relations and is responsible for quality control and team communications.</p>
+							<p>Projects Include: AT&amp;T Pebble Beach Pro-Am 2014-16, The Shuteye Hotel in North Dakota, Toys ‘R’ Us Temporary store, HP Byron Nelson 2103-16.</p>
 						</div>
 					</div>
 					<div class="col blank">
@@ -306,7 +305,7 @@
 							<svg class="astrisk" viewBox="29 81 25 25" xmlns="http://www.w3.org/2000/svg">
 							  <path fill-rule="evenodd" d="M38.176 95.19l-8.383-2.52 1.388-4.362 8.383 3.143-.283-9.684h4.56l-.283 9.855 8.297-3.114 1.36 4.418-8.553 2.52 5.467 7.647-3.71 2.72-5.126-8.128-4.983 7.9-3.74-2.633"/>
 							</svg>
-							<p>Dominic spends his weekends rescuing injured tigers from poachers.</p>
+							<p>Don’t sleep on Mark’s apple pie. It’s won 17 awards in 3 countries.</p>
 						</div>
 					</div>
 					<div class="col employee-years">
@@ -336,8 +335,8 @@
 					<div class="col employee-about">
 						<div class="inner">
 							<?php include 'library/images/svg/about-text-svg.svg'; ?>
-							<p>Dominic offers the ultimate in reliability at delivering projects on site. Conscientious control and attention to quality enable Dominic to implement world class overlays.</p>
-							<p>Projects Include: The AT&amp;T Byron Nelson in 2015 and 2016 (Dallas, TX), Chanel Fashion Shows (Scotland, UK in 2008), the 2002, 2010 and 2012 Farnborough International Airshow (UK) and the Ryder cup in Ireland in 2006.</p>
+							<p>Mark ensures that all projects are delivered safely, on schedule and on budget. His ability to troubleshoot is second to none. The result: successful projects, regardless of hurdles along the way.</p>
+							<p>Projects Include: The MTV Europe Music Awards (Rome, 2004), Farnborough International Airshow (2002, 2004 and 2006) and major golf tournament overlays like the 2013, 2014, 2015 and 2016 Honda Classic.</p>
 						</div>
 					</div>
 					<div class="col blank">
@@ -447,7 +446,7 @@
 		</div>
 		<div class="copy">
 			<h3>Our Approach</h3>
-			<p>from paper <br>to production</p>
+			<p>going from paper <br>to production</p>
 		</div>
 		<div class="tile carousel-wrapper">
 			<style>
@@ -714,36 +713,36 @@
 				<div class="inner show-me" data-approach-num="1">
 					<div class="info-num">01</div>
 					<div class="info-copy">
-						<h5>Subheadline here</h5>
-						<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+						<h5>Hello.</h5>
+						<p>Meet your Field Services Manager (Site Foreman), the person who will keep your project on track for the day-to-day management of local on-site labor crews.</p>
 					</div>
 				</div>
 				<div class="inner" data-approach-num="2">
 					<div class="info-num">02</div>
 					<div class="info-copy">
-						<h5>Subheadline here</h5>
-						<p>We will utilize critical timelines to optimize your budget and leverage our vast network to ensure consistency and quality at any event in the world.</p>
+						<h5>Planning makes perfect.</h5>
+						<p>We utilize critical timelines to optimize your budget. Our vast network is leveraged to ensure consistency and quality at any event in the world.</p>
 					</div>
 				</div>
 				<div class="inner" data-approach-num="3">
 					<div class="info-num">03</div>
 					<div class="info-copy">
-						<h5>Subheadline here</h5>
+						<h5>We're on it.</h5>
 						<p>Our team applies a comprehensive service approach: planning, creative development, engineering & permitting, on-site operations and logistics to streamline processes and drive quality control.</p>
 					</div>
 				</div>
 				<div class="inner" data-approach-num="4">
 					<div class="info-num">04</div>
 					<div class="info-copy">
-						<h5>Subheadline here</h5>
-						<p>We engineer and produce products with scalability in mind, always seeking efficient alternatives.</p>
+						<h5>Space-saving is money-saving.</h5>
+						<p>We engineer and produce products with scalability in mind. We’re always seeking efficient alternatives.</p>
 					</div>
 				</div>
 				<div class="inner" data-approach-num="5">
 					<div class="info-num">05</div>
 					<div class="info-copy">
-						<h5>Subheadline here</h5>
-						<p>We believe in collaboration. Our team approach to getting the job done leverages everyone’s expertise.</p>
+						<h5>It all comes together.</h5>
+						<p>Collaboration is key. Our team approach to getting the job done leverages everyone’s expertise.</p>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-03-31 11:29 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-10 09:25 am - User: Phoydar */
 /*!
  * Assembly Menu Navigation
  */
@@ -17,6 +17,7 @@ var assembly = assembly || {};
 			this.countTilesAndAddClass();
 			// this.setInitialTranslate();
 			this.$currentServiceContainer = $('.all-services');
+			this.setInitialContainerHeights();
 		},
 
 		initSelect2: function(){
@@ -91,19 +92,44 @@ var assembly = assembly || {};
 				_this.$selectFilter.val($(this).data('service-id')).trigger('change');
 			});
 
-			$('.all-services.show').imagesLoaded( function() {
-			  	_this.setInitialContainerHeights();
-			  	_this.loadServicesImages();
-			});
+			_this.loadServicesImages($('.all-services.show'));
 
-			$('#interior-logo').imagesLoaded( function() {
-				console.log('main logo loaded');
-			});
+			// $('.all-services.show').on('allImagesLoaded', function(){
+			// 	$(this).addClass('imagesLoaded');
+			// });
 		},
 
-		loadServicesImages: function(){
-			$('[data-src]').each(function(i, img){
-				$(img).attr('src', $(img).data('src'));
+		loadServicesImages: function($container){
+			if($container.hasClass('imagesLoaded')){
+				return;
+			}
+
+			var totalImages = $('.tile-img.lazy-load', $container).length;
+			var totalImagesLoaded = 0;
+
+			$('.tile-img.lazy-load', $container).each(function(i, tile){
+				var $tile = $(tile);
+				var $imgContainer = $tile.find('.img-container');
+				var $img = $tile.find('img');
+				var imgSrc = $img.data('src');
+				var imagesLoaded = $tile.imagesLoaded();
+
+				$imgContainer.addClass('is-loading');
+
+				$img.attr('src', imgSrc);
+
+				imagesLoaded.progress(function( loader, image ) {
+					$imgContainer
+						.removeClass('is-loading')
+						.addClass('is-loaded');
+
+					totalImagesLoaded++;
+
+					if(totalImagesLoaded === totalImages){
+						$container.trigger('allImagesLoaded');
+						$container.addClass('imagesLoaded');
+					}
+				});
 			});
 		},
 
@@ -164,6 +190,12 @@ var assembly = assembly || {};
 				$allTiles = $('[data-service]'),
 				$serviceToHide = $('[data-service].show'),
 				$serviceToShow = $('[data-service="'+ option + '"]');
+
+			if($serviceToShow.hasClass('show')){
+				return;
+			}
+
+			_this.loadServicesImages($serviceToShow);
 
 			$serviceToHide.removeClass('show').addClass('hide');
 			$serviceToShow.removeClass('hide').addClass('show');

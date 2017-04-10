@@ -17,16 +17,24 @@ RESPONSIVE LAZY IMAGES
 	display: none;
 }
 
-.lazy-load .img-container.is-loading {
+.lazy-load .img-container {
 	background-color: #e3e3e3;
-	// background-image: url(../../images/icons/site-icon-wp-grey.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+}
+
+.lazy-load .img-container.is-loading {
+	animation-name: loadingPulse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
 }
 
 .lazy-load .img-container img {
 	position: absolute;
+	color: transparent;
+	opacity: 0;
+}
+
+.lazy-load .is-loaded img {
+	opacity: 1;
 }
 
 [data-image-ratio="600:433"] {
@@ -38,6 +46,20 @@ RESPONSIVE LAZY IMAGES
 [data-image-ratio="3:4"] {
 	.img-container {
 		padding-bottom: 133.334%;
+	}
+}
+
+@keyframes loadingPulse {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.7;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -115,6 +137,12 @@ $screenWidth: 320;
 		transform: translate3d(-50%, -50%, 0);
 		text-align: center;
 		transition: opacity 0.5s;
+
+		&.is-loading {
+			animation-name: loadingPulse;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
 	}
 
 	&.ready {
