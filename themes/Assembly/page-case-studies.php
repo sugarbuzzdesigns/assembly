@@ -8,7 +8,7 @@
 	<div class="container">
 		<section class="landing">
 			<div class="landing-inner">
-				<div class="modular case-study-category" data-hash-selector="#modular">
+				<div class="modular case-study-category" data-hash-selector="#modular" data-landing-cat="modular">
 					<div class="square hover-spot"></div>
 					<div class="hover-content">
 						<header>
@@ -56,7 +56,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="custom case-study-category" data-hash-selector="#custom">
+				<div class="custom case-study-category" data-hash-selector="#custom" data-landing-cat="custom">
 					<div class="square hover-spot"></div>
 					<div class="hover-content">
 						<header class="light section-header no-mobile desktop">

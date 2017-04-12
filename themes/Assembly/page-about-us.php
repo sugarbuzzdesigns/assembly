@@ -32,7 +32,7 @@
 			<span>Years Experience</span>
 		</div>
 	</div>
-	<div data-ratio=".08" class="video module">
+	<div data-ratio=".08" class="video module" data-video-id="about-video-reel">
 		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail-mobile.jpg" alt="">
 		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
@@ -946,5 +946,14 @@
 				</g>
 			</svg>
 		</div>
+	</div>
+	<div id="about-video-overlay" class="video-overlay">
+		<video id="about-video-reel" class="video-js vjs-fluid vjs-big-play-centered" controls preload="auto">
+			<source src="<?php echo get_template_directory_uri(); ?>/library/video/Assembly_EditRev003-1080P_web.mp4" type='video/mp4'>
+			<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a web browser that
+				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		</video>
 	</div>
 <?php get_footer(); ?>

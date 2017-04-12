@@ -19,8 +19,6 @@ var assembly = assembly || {};
 					dots = true;
 				}
 
-				console.log('init carousel');
-
 				$carousel = $(module).find('.carousel');
 				$slides = $carousel.find('.slide');
 				numSlides = $slides.length;

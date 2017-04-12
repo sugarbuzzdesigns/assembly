@@ -240,14 +240,14 @@ Select Box Overrides
 .filter-wrap {
 	width: 273px;
 	position: fixed;
-	top: 0;
-	right: 0;
-	margin: 17% 0 0 0;
 	z-index: 4;
 	opacity: 0;
 	transition: opacity 0.5s;
 	pointer-events: none;
 	padding: 16px 33px 20px 17px;
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+    right: calc(100%/1440*100);
 
 	&.show {
 		opacity: 1;
@@ -654,6 +654,10 @@ CASE STUDIES Page
 	}
 
 	.content {
+		h2 {
+		    margin-left: calc(67%/1440*100 + 63px);
+		}
+
 		.case-study-desc {
 			width: 16.53%;
 			margin: 0 auto 50px 90px;

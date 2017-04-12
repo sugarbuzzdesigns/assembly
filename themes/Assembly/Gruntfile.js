@@ -3,7 +3,16 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', ['default', 'browserSync', 'watch']);
 
-	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
+	grunt.registerTask('jsBuildDist', ['eslint', 'copy', 'concat:libs', 'concat:common', 'concat:build', 'uglify:common', 'uglify:pages_all', 'concat:dist', 'clean:tmp', 'usebanner:js', 'growl:jsBuild']);
+
+	grunt.registerTask('jsBuildDist_libs', ['eslint:libs', 'concat:libs']);
+
+	grunt.registerTask('jsBuildDist_common', ['eslint:common', 'concat:common', 'uglify:common', 'concat:dist', 'usebanner:js_common', 'growl:js_common']);
+
+	grunt.registerTask('jsBuildDist_home', ['eslint:home', 'copy:js_home', 'uglify:pages_home', 'usebanner:js_home', 'growl:js_home']);
+	grunt.registerTask('jsBuildDist_about', ['eslint:about', 'copy:js_about', 'uglify:pages_about', 'usebanner:js_about', 'growl:js_about']);
+	grunt.registerTask('jsBuildDist_casestudies', ['eslint:casestudies', 'copy:js_casestudies', 'uglify:pages_casestudies', 'usebanner:js_casestudies', 'growl:js_casestudies']);
+	grunt.registerTask('jsBuildDist_services', ['eslint:services', 'copy:js_services', 'uglify:pages_services', 'usebanner:js_services', 'growl:js_services']);
 
 	grunt.registerTask('sassBuildDist', ['sass:main', 'autoprefixer:main', 'cssmin:main', 'usebanner:css_main', 'growl:cssBuild']);
 	grunt.registerTask('sassPagesBuildDist', ['sass:pages', 'autoprefixer:pages', 'cssmin:pages', 'usebanner:css_pages', 'growl:cssBuild']);
@@ -72,6 +81,66 @@ module.exports = function(grunt) {
 					]
 				}
 			},
+			js_common: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/js/assembly.scripts.js',
+						'library/dist/js/assembly.scripts.min.js'
+					]
+				}
+			},
+			js_home: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/js/assembly.home.js',
+						'library/dist/js/assembly.home.min.js'
+					]
+				}
+			},
+			js_about: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/js/assembly.about.js',
+						'library/dist/js/assembly.about.min.js'
+					]
+				}
+			},
+			js_casestudies: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/js/assembly.casestudies.js',
+						'library/dist/js/assembly.casestudies.min.js'
+					]
+				}
+			},
+			js_services: {
+				options: {
+					banner: '<%= banner %>',
+					linebreak: false
+				},
+				files: {
+					src: [
+						'library/build/js/assembly.services.js',
+						'library/dist/js/assembly.services.min.js'
+					]
+				}
+			},
 			css_main: {
 				options: {
 					banner: '<%= banner %>',
@@ -101,25 +170,17 @@ module.exports = function(grunt) {
 		},
 
 		eslint: {
-			options: {
-
-			},
-			target: ['Gruntfile.js', 'library/js/**/*.js']
-		},
-
-		imagemin: {
-		    dynamic: {                         // Another target
-		    	files: [{
-			        expand: true,                  // Enable dynamic expansion
-			        cwd: 'library/images/pages/services/',                   // Src matches are relative to this path
-			        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-			        dest: 'library/images/pages/services/dist/'                  // Destination path prefix
-		   		}]
-			}
+			all: ['Gruntfile.js', 'library/js/**/*.js'],
+			home: ['Gruntfile.js', 'library/js/pages/assembly.home.js'],
+			about: ['Gruntfile.js', 'library/js/pages/assembly.about.js'],
+			casestudies: ['Gruntfile.js', 'library/js/pages/assembly.casestudies.js'],
+			services: ['Gruntfile.js', 'library/js/pages/assembly.services.js'],
+			common: ['Gruntfile.js', 'library/js/common/*.js', 'library/js/pages/assembly.contact.js'],
+			libs: ['Gruntfile.js', 'library/js/libs/*.js']
 		},
 
 		copy: {
-			js: {
+			js_all: {
 				files: [
 					{
 						expand: false,
@@ -146,6 +207,50 @@ module.exports = function(grunt) {
 						filter: 'isFile'
 					}
 				]
+			},
+
+			js_home: {
+				files: [
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.home.js'],
+						dest: '<%= jsBuildDir %>/assembly.home.js',
+						filter: 'isFile'
+					}
+				]
+			},
+
+			js_about: {
+				files: [
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.about.js'],
+						dest: '<%= jsBuildDir %>/assembly.about.js',
+						filter: 'isFile'
+					}
+				]
+			},
+
+			js_casestudies: {
+				files: [
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.casestudies.js'],
+						dest: '<%= jsBuildDir %>/assembly.casestudies.js',
+						filter: 'isFile'
+					}
+				]
+			},
+
+			js_services: {
+				files: [
+					{
+						expand: false,
+						src: ['<%= jsSrcDir %>/pages/assembly.services.js'],
+						dest: '<%= jsBuildDir %>/assembly.services.js',
+						filter: 'isFile'
+					}
+				]
 			}
 		},
 
@@ -161,39 +266,56 @@ module.exports = function(grunt) {
                	src: ['<%= jsBuildTmpDir %>/assembly.common.js'],
             	dest: '<%= jsBuildTmpDir %>/assembly.common.min.js'
 			},
-			pages: {
+			pages_all: {
 				files: {
 					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js'],
 					'<%= jsDistDir %>/assembly.casestudies.min.js': ['<%= jsSrcDir %>/pages/assembly.casestudies.js'],
 					'<%= jsDistDir %>/assembly.about.min.js': ['<%= jsSrcDir %>/pages/assembly.about.js'],
 					'<%= jsDistDir %>/assembly.home.min.js': ['<%= jsSrcDir %>/pages/assembly.home.js']
 				}
-			}
-		},
-
-		removelogging: {
-			dist: {
-				src: '<%= jsBuildDir %>/**/*.js'
+			},
+			pages_home: {
+				files: {
+					'<%= jsDistDir %>/assembly.home.min.js': ['<%= jsSrcDir %>/pages/assembly.home.js']
+				}
+			},
+			pages_about: {
+				files: {
+					'<%= jsDistDir %>/assembly.about.min.js': ['<%= jsSrcDir %>/pages/assembly.about.js']
+				}
+			},
+			pages_casestudies: {
+				files: {
+					'<%= jsDistDir %>/assembly.casestudies.min.js': ['<%= jsSrcDir %>/pages/assembly.casestudies.js']
+				}
+			},
+			pages_services: {
+				files: {
+					'<%= jsDistDir %>/assembly.services.min.js': ['<%= jsSrcDir %>/pages/assembly.services.js']
+				}
 			}
 		},
 
 		concat: {
 			libs: {
+				options: {
+					// stripBanners: true,
+					// separator: grunt.util.linefeed
+				},
 				src: [
 					// '<%= jsSrcDir %>/libs/jquery.1.12.4.min.js',
 					'<%= jsSrcDir %>/libs/modernizr.custom.min.js',
-					'<%= jsSrcDir %>/libs/jquery.scrollstartstop.min.js',
+					// '<%= jsSrcDir %>/libs/jquery.scrollstartstop.min.js',
 					'<%= jsSrcDir %>/libs/waypoints.jquery.min.js',
-					'<%= jsSrcDir %>/libs/bxslider.min.js',
 					'<%= jsSrcDir %>/libs/slick.min.js',
 					'<%= jsSrcDir %>/libs/owl.min.js',
-					'<%= jsSrcDir %>/libs/jquery.scrollbar.min.js',
+					// '<%= jsSrcDir %>/libs/jquery.scrollbar.min.js',
 					// '<%= jsSrcDir %>/libs/owl.carousel-debug.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
 					'<%= jsSrcDir %>/libs/select2.min.js',
 					'<%= jsSrcDir %>/libs/jquery.countto.min.js'
 				],
-				dest: '<%= jsBuildTmpDir %>/libs.js'
+				dest: '<%= jsDistDir %>/assembly.libs.min.js'
 			},
 		    common: {
 		    	options: {
@@ -212,12 +334,11 @@ module.exports = function(grunt) {
 				dest: '<%= jsBuildTmpDir %>/assembly.common.js'
 		    },
 		    build: {
-		    	src: ['<%= jsBuildTmpDir %>/libs.js', '<%= jsBuildTmpDir %>/assembly.common.js'],
+		    	src: ['<%= jsBuildTmpDir %>/assembly.common.js'],
 		    	dest: '<%= jsBuildDir %>/assembly.scripts.js'
 		    },
 		    dist: {
 				src: [
-					'<%= jsBuildTmpDir %>/libs.js',
 					'<%= jsBuildTmpDir %>/assembly.common.min.js'
 				],
 				dest: '<%= jsDistDir %>/assembly.scripts.min.js'
@@ -253,14 +374,34 @@ module.exports = function(grunt) {
 			}
 		},
 
-	    growl : {
-	        jsBuild : {
-	            message : "Build Done",
-	            title : "JS"
+	    growl: {
+	        jsBuild: {
+	            message: "Build Done",
+	            title: "JS"
 	        },
-	        cssBuild : {
-	            message : "Build Done",
-	            title : "CSS"
+	        cssBuild: {
+	            message: "Build Done",
+	            title: "CSS"
+	        },
+	        js_home: {
+	            message: "Build Done",
+	            title: "HOME JS"
+	        },
+	        js_about: {
+	            message: "Build Done",
+	            title: "ABOUT US JS"
+	        },
+	        js_casestudies: {
+	            message: "Build Done",
+	            title: "CASE STUDIES JS"
+	        },
+	        js_services: {
+	            message: "Build Done",
+	            title: "SERVICES JS"
+	        },
+	        js_common: {
+	            message: "Build Done",
+	            title: "COMMON JS"
 	        }
 	    },
 
@@ -324,14 +465,51 @@ module.exports = function(grunt) {
 				],
 				tasks: ['sassPagesBuildDist']
 			},
-			js: {
+			js_common: {
 				options: {
 					spawn: false
 				},
 				files: [
-					'<%= jsSrcDir %>/**/*.js'
+					'<%= jsSrcDir %>/common/*.js',
+					'<%= jsSrcDir %>/pages/assembly.contact.js'
 				],
-				tasks: ['jsBuildDist']
+				tasks: ['jsBuildDist_common']
+			},
+			js_home: {
+				options: {
+					spawn: false
+				},
+				files: [
+					'<%= jsSrcDir %>/pages/assembly.home.js'
+				],
+				tasks: ['jsBuildDist_home']
+			},
+			js_about: {
+				options: {
+					spawn: false
+				},
+				files: [
+					'<%= jsSrcDir %>/pages/assembly.about.js'
+				],
+				tasks: ['jsBuildDist_about']
+			},
+			js_casestudies: {
+				options: {
+					spawn: false
+				},
+				files: [
+					'<%= jsSrcDir %>/pages/assembly.casestudies.js'
+				],
+				tasks: ['jsBuildDist_casestudies']
+			},
+			js_services: {
+				options: {
+					spawn: false
+				},
+				files: [
+					'<%= jsSrcDir %>/pages/assembly.services.js'
+				],
+				tasks: ['jsBuildDist_services']
 			}
 		}
 	});

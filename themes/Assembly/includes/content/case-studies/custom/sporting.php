@@ -6,9 +6,11 @@
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -17,9 +19,11 @@
 				</div>
 			</div>
 			<div data-ratio=".08" class="tile left-margin-lrg">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-2.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-2.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -30,9 +34,11 @@
 		</div>
 		<div class="group">
 			<div data-ratio=".02" class="tile left-margin-sm">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-3.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-3.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -47,9 +53,11 @@
 		</div>
 		<div class="group">
 			<div data-ratio=".04" class="tile left-margin-med">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-4.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-4.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -58,9 +66,11 @@
 				</div>
 			</div>
 			<div class="tile left-margin-sm">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-5.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-5.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -71,9 +81,11 @@
 		</div>
 		<div class="group">
 			<div data-ratio=".07" class="tile left-margin-sm">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-6.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-6.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
@@ -82,9 +94,11 @@
 				</div>
 			</div>
 			<div class="tile left-margin-sm">
-				<div class="tile-img">
-				<div class="image-clip-bg"><div class="inner"></div></div>
-					<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-7.jpg" alt="">
+				<div class="tile-img lazy-load" data-image-ratio="600:433">
+					<div class="image-clip-bg"><div class="inner"></div></div>
+					<div class="img-container">
+						<img data-src="<?php echo get_template_directory_uri(); ?>/library/images/pages/case-studies/resized/desktop/04-Custom-Sporting-7.jpg" alt="">
+					</div>
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">

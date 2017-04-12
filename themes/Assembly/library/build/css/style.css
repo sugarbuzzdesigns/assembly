@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-10 12:04 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 09:50 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7176,7 +7176,7 @@ RESPONSIVE LAZY IMAGES
 }
 
 [data-image-ratio="600:433"] .img-container {
-  padding-bottom: 72.167%;
+  padding-bottom: 73.83%;
 }
 
 [data-image-ratio="3:4"] .img-container {
@@ -13850,7 +13850,8 @@ you can add resource intensive styles.
   .page-case-studies .content h2 {
     font-size: 4.5rem;
     line-height: 1.043;
-    margin: 0 auto;
+    margin: 0;
+    margin-left: calc(67%/1440*100 + 40px);
     padding-top: 185px;
     padding-left: 0;
     width: 77%;
@@ -13865,6 +13866,7 @@ you can add resource intensive styles.
     width: calc(1160%/1440*100);
     margin: 0 auto;
     position: relative;
+    z-index: 2;
   }
   .page-case-studies .content .svg-container .svg {
     width: 100%;
@@ -14263,14 +14265,15 @@ you can add resource intensive styles.
   .filter-wrap {
     width: 273px;
     position: fixed;
-    top: 0;
-    right: 0;
-    margin: 17% 0 0 0;
     z-index: 4;
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
     padding: 16px 33px 20px 17px;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+    top: 50%;
+    right: calc(100%/1440*100);
   }
   .filter-wrap.show {
     opacity: 1;
@@ -15937,6 +15940,9 @@ you can add resource intensive styles.
 @media only screen and (min-width: 1030px) {
   .page-case-studies .content-header .mesh-bg {
     display: none;
+  }
+  .page-case-studies .content h2 {
+    margin-left: calc(67%/1440*100 + 63px);
   }
   .page-case-studies .content .case-study-desc {
     width: 16.53%;

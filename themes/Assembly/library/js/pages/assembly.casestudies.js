@@ -1,5 +1,5 @@
 /*!
- * Assembly Menu Navigation
+ * Assembly Case Studies Page
  */
 var assembly = assembly || {};
 
@@ -28,7 +28,6 @@ var assembly = assembly || {};
 			this.initSelect2();
 			this.bindEvents();
 
-			this.setContainerHeights();
 			this.addClassTileCount();
 
 			// $('.tile-img.lazy-load .img-container').eq(0).imagesLoaded(function(){
@@ -196,27 +195,46 @@ var assembly = assembly || {};
 					}, 500);
 				});
 			} else {
-				console.log('no hash');
+				// console.log('no hash');
 			}
 
-			$('html').on('loaded', function(){
-				_this.lazyLoadImages();
-			});
+			// $('html').on('loaded', function(){
+			// 	_this.lazyLoadImages();
+			// });
 		},
 
-		lazyLoadImages: function(){
-			// $('.tile-img.lazy-load .img-container').eq(0).imagesLoaded(function(img){
-			// 	console.log(img, 'loaded');
-			// });
+		lazyLoadImages: function($container){
+			if($container.hasClass('imagesLoaded')){
+				return;
+			}
 
-			// $('.tile-img.lazy-load').each(function(i, tile){
-			// 	var $tile = $(tile);
-			// 	var $imgContainer = $tile.find('.img-container');
-			// 	var $img = $imgContainer.find('img[data-src]');
-			// 	var source = $img.data('src');
+			var totalImages = $('.tile-img.lazy-load', $container).length;
+			var totalImagesLoaded = 0;
 
-			// 	$imgContainer.addClass('is-loading');
-			// });
+			$('.tile-img.lazy-load', $container).each(function(i, tile){
+				var $tile = $(tile);
+				var $imgContainer = $tile.find('.img-container');
+				var $img = $tile.find('img');
+				var imgSrc = $img.data('src');
+				var imagesLoaded = $tile.imagesLoaded();
+
+				$imgContainer.addClass('is-loading');
+
+				$img.attr('src', imgSrc);
+
+				imagesLoaded.progress(function( loader, image ) {
+					$imgContainer
+						.removeClass('is-loading')
+						.addClass('is-loaded');
+
+					totalImagesLoaded++;
+
+					if(totalImagesLoaded === totalImages){
+						$container.trigger('allImagesLoaded');
+						$container.addClass('imagesLoaded');
+					}
+				});
+			});
 		},
 
 		parallaxBg: function(){
@@ -225,6 +243,10 @@ var assembly = assembly || {};
 
 		showMainCaseStudies: function($landingTileClicked){
 			var _this = this, $toshow, cat, type;
+
+			cat = $landingTileClicked.data('landing-cat');
+
+			_this.lazyLoadImages($('[data-category="all"][data-kit-type="'+ cat +'"]'));
 
 			_this.currentFilerStatus.category = 'all';
 
@@ -267,19 +289,13 @@ var assembly = assembly || {};
 			});
 
 			$('.landing-inner').addClass('hide');
+			$('.filter-wrap').addClass('show');
 
 			setTimeout(function(){
 				$('.scroll-overlay').addClass('fixme');
 			}, 1500);
 
 			$('html').addClass('landing-closed');
-		},
-
-		setContainerHeights: function(){
-			// this.$mainContent.data('initialheight', this.mainContentHeight);
-			// this.$mainContent.css({
-			// 	height: 0
-			// });
 		},
 
 		addClassTileCount: function(){
@@ -306,7 +322,6 @@ var assembly = assembly || {};
 		},
 
 		filterProjectsByCategory: function(option){
-			console.log(option);
 			this.currentFilerStatus.category = option;
 			this.showCaseStudyContent();
 		},
@@ -330,6 +345,8 @@ var assembly = assembly || {};
 				$svgToShow = $('.case-study-svg.'+ type +' [data-svg-case-study-cat="'+ cat +'"]'),
 				$activeSvg = $('.case-study-svg.'+ type + ' .case-study-svg-cat.active');
 
+			_this.lazyLoadImages($toShow);
+
 			if(this.currentFilerStatus.category === 'all'){
 				$('.case-study-svg.'+ type + ' .case-study-svg-cat').removeClass('inactive hide activate');
 				$activeSvg.removeClass('active');
@@ -344,7 +361,6 @@ var assembly = assembly || {};
 				}
 
 				$svgToShow.one(animationEndEventName, function(evt){
-					console.log('addClass active');
 					$svgStage.addClass('active');
 					$svgToShow.removeClass('activate').addClass('active');
 				});
@@ -377,8 +393,6 @@ var assembly = assembly || {};
 			$('.case-study-details').css({
 				height: $toShow.outerHeight()
 			});
-
-			console.log(type, cat);
 
 			this.$currentCaseStudyContainer = $toShow;
 		}

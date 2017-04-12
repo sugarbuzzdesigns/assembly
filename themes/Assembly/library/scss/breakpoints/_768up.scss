@@ -1153,7 +1153,8 @@ CASE STUDIES Page
 		h2 {
 			font-size: rem(72);
 			line-height: 1.043;
-		    margin: 0 auto;
+		    margin: 0;
+		    margin-left: calc(67%/1440*100 + 40px);
 		    padding-top: 185px;
 		    padding-left: 0;
 		    width: 77%;
@@ -1172,6 +1173,7 @@ CASE STUDIES Page
 				width: resp(1160);
 				margin: 0 auto;
 				position: relative;
+				z-index: 2;
 			}
 
 			.svg {

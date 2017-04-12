@@ -1,5 +1,5 @@
 /*!
- * Assembly Menu Navigation
+ * Assembly Services Page
  */
 var assembly = assembly || {};
 
