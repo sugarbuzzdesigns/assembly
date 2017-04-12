@@ -65,7 +65,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="tile left-margin-sm" data-image-ratio="3:4">
+			<div class="tile left-margin-sm" data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
 					<div class="img-container">
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 		<div class="group">
-			<div data-ratio=".07" class="tile left-margin-lrg" data-image-ratio="3:4">
+			<div data-ratio=".07" class="tile left-margin-lrg" data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
 					<div class="img-container">
@@ -93,7 +93,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="tile left-margin-med" data-image-ratio="3:4">
+			<div class="tile left-margin-med" data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
 					<div class="img-container">
