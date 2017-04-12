@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 03:36 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -16119,37 +16119,37 @@ you can add resource intensive styles.
   .page-services .filter-menu div a {
     letter-spacing: 0.7px;
   }
-  .page-services .tile {
+  .page-services .all-services .tile {
     width: 28.54%;
   }
-  .page-services .tile .tile-inner {
+  .page-services .all-services .tile .tile-inner {
     width: 100%;
     margin: 0;
   }
-  .page-services .tile .tile-inner img {
+  .page-services .all-services .tile .tile-inner img {
     width: 100%;
   }
-  .page-services .tile.visualisation {
+  .page-services .all-services .tile.visualisation {
     margin-left: 15.07%;
     margin-top: 94px;
     margin-bottom: 129px;
     float: left;
   }
-  .page-services .tile.permitting {
+  .page-services .all-services .tile.permitting {
     width: 22.64%;
     float: right;
     margin: 288px 14.86% 0 0;
   }
-  .page-services .tile.engineering {
+  .page-services .all-services .tile.engineering {
     width: 48.4%;
     clear: left;
     float: left;
     margin-bottom: 0;
   }
-  .page-services .tile.engineering .tile-info {
+  .page-services .all-services .tile.engineering .tile-info {
     margin-left: 6.2%;
   }
-  .page-services .tile.interior-buildouts {
+  .page-services .all-services .tile.interior-buildouts {
     float: right;
     width: 32.85%;
     margin-right: 10.63%;
@@ -16157,25 +16157,25 @@ you can add resource intensive styles.
     margin-bottom: 0;
     clear: right;
   }
-  .page-services .tile.interior-buildouts .mesh-bg {
+  .page-services .all-services .tile.interior-buildouts .mesh-bg {
     top: -168px;
     right: -107px;
     width: 335px;
     height: 314px;
   }
-  .page-services .tile.team-player {
+  .page-services .all-services .tile.team-player {
     float: right;
     clear: both;
     margin-right: 9.38%;
     margin-top: 165px;
     margin-bottom: 0;
   }
-  .page-services .tile.imagine-experience {
+  .page-services .all-services .tile.imagine-experience {
     float: left;
     margin-left: 15.07%;
     margin-bottom: 145px;
   }
-  .page-services .tile.imagine-experience .mesh-bg {
+  .page-services .all-services .tile.imagine-experience .mesh-bg {
     left: -96px;
     height: 534px;
     width: 315px;

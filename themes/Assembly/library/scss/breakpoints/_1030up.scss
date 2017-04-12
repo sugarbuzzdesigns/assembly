@@ -1188,76 +1188,78 @@ SERVICES Page
 		}
 	}
 
-	.tile {
-		width: 28.54%;
+	.all-services {
+		.tile {
+			width: 28.54%;
 
-		.tile-inner {
-			width: 100%;
-			margin: 0;
-
-			img {
+			.tile-inner {
 				width: 100%;
+				margin: 0;
+
+				img {
+					width: 100%;
+				}
 			}
-		}
 
-		&.visualisation {
-			margin-left: 15.07%;
-    		margin-top: 94px;
-    		margin-bottom: 129px;
-    		float: left;
-		}
-
-		&.permitting {
-			width: 22.64%;
-			float: right;
-    		margin: 288px 14.86% 0 0;
-		}
-
-		&.engineering {
-    		width: 48.4%;
-		    clear: left;
-		    float: left;
-		    margin-bottom: 0;
-
-		    .tile-info {
-		    	margin-left: 6.2%;
-		    }
-		}
-
-		&.interior-buildouts {
-			float: right;
-			width: 32.85%;
-			margin-right: 10.63%;
-			margin-top: 124px;
-			margin-bottom: 0;
-			clear: right;
-
-			.mesh-bg {
-				top: -168px;
-    			right: -107px;
-    			width: 335px;
-    			height: 314px;
+			&.visualisation {
+				margin-left: 15.07%;
+	    		margin-top: 94px;
+	    		margin-bottom: 129px;
+	    		float: left;
 			}
-		}
 
-		&.team-player {
-			float: right;
-			clear: both;
-			margin-right: 9.38%;
-			margin-top: 165px;
-			margin-bottom: 0;
-		}
+			&.permitting {
+				width: 22.64%;
+				float: right;
+	    		margin: 288px 14.86% 0 0;
+			}
 
-		&.imagine-experience {
-			float: left;
-			margin-left: 15.07%;
-			margin-bottom: 145px;
+			&.engineering {
+	    		width: 48.4%;
+			    clear: left;
+			    float: left;
+			    margin-bottom: 0;
 
-			.mesh-bg {
-			    left: -96px;
-			    height: 534px;
-			    width: 315px;
-			   	top: 233px;
+			    .tile-info {
+			    	margin-left: 6.2%;
+			    }
+			}
+
+			&.interior-buildouts {
+				float: right;
+				width: 32.85%;
+				margin-right: 10.63%;
+				margin-top: 124px;
+				margin-bottom: 0;
+				clear: right;
+
+				.mesh-bg {
+					top: -168px;
+	    			right: -107px;
+	    			width: 335px;
+	    			height: 314px;
+				}
+			}
+
+			&.team-player {
+				float: right;
+				clear: both;
+				margin-right: 9.38%;
+				margin-top: 165px;
+				margin-bottom: 0;
+			}
+
+			&.imagine-experience {
+				float: left;
+				margin-left: 15.07%;
+				margin-bottom: 145px;
+
+				.mesh-bg {
+				    left: -96px;
+				    height: 534px;
+				    width: 315px;
+				   	top: 233px;
+				}
 			}
 		}
 	}
