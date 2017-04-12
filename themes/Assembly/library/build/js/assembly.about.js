@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 11:05 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 02:00 am - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -107,31 +107,60 @@ var assembly = assembly || {};
 				$('.scroll-overlay').removeClass('going-down');
 			});
 
-			$('.employee-info').data('scroll-pos', 0);
+			if(assembly.util.useragent.deviceType === 'mobile'){
+				var start = ($(window).outerWidth() - $('.employee-info .col').outerWidth())/2;
 
-			$('.employee-info').swipe({
-				swipe: function(event, direction, distance, duration, fingerCount, fingerData, currentDirection){
-					var innerWidth = $(this).find('.info-inner').width();
-					var colWidth = innerWidth/4;
-					var scrollPos = $(this).data('scroll-pos');
+				$('.employee-info').each(function(i, info){
+					$(info).data('scroll-pos', start);
+					$(info).data('cur-slide', 0);
 
-					if(direction === 'right'){
-						if(scrollPos === 0){return}
-						scrollPos-=colWidth;
-					} else if(direction === 'left'){
-						if(scrollPos === innerWidth - colWidth){return}
-						scrollPos+=colWidth;
-					}
+					$(info).find('.info-inner').css({
+						transform: 'translate3d('+ start +'px,0,0)'
+					});
+				})
 
-					$(this).data('scroll-pos', scrollPos);
+				$('.employee-info').swipe({
+					swipe: function(event, direction, distance, duration, fingerCount, fingerData, currentDirection){
+						var innerWidth = $(this).find('.info-inner').width();
+						var colWidth = $(this).find('.col').width();
+						var scrollPos = $(this).data('scroll-pos');
+						var curSlide = $(this).data('cur-slide');
 
-					$(this).find('.info-inner').css({
-						transform: 'translate3d('+ -scrollPos +'px,0,0)'
-					})
+						if(direction === 'left'){
+							if(curSlide === 3){
+								return;
+							}
+							curSlide++;
 
-					console.log(innerWidth/4);
-				}, allowPageScroll: 'vertical'
-			});
+							scrollPos = colWidth*curSlide - start;
+
+							$(this).data('cur-slide', curSlide);
+
+							console.log(curSlide);
+						}
+
+						if(direction === 'right'){
+							if(curSlide === 0){
+								return;
+							}
+							curSlide--;
+
+							scrollPos = colWidth*curSlide - start;
+
+							$(this).data('cur-slide', curSlide);
+
+							console.log(curSlide);
+						}
+
+						$(this).data('scroll-pos', scrollPos);
+
+						$(this).find('.info-inner').css({
+							transform: 'translate3d('+ -scrollPos +'px,0,0)'
+						});
+
+					}, allowPageScroll: 'vertical'
+				});
+			}
 		},
 
 		initializeVideos: function(){

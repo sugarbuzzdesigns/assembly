@@ -261,18 +261,10 @@ PROJECTS SECTION
 		z-index: 3;
 		top: 0;
 		left: 0;
-		overflow-x: scroll;
 		width: 100%;
 		visibility: hidden;
+		overflow: visible;
 		background: #fff;
-
-			.close {
-				display: none;
-			}
-
-		.close {
-			display: none;
-		}
 
 		.info-inner {
 			width: 100%;
@@ -299,21 +291,15 @@ PROJECTS SECTION
 
 		.employee-about {
 			margin-top: 81px;
-			padding-left: 29px;
 
 			.inner {
 				background: #fff;
 				padding: 15px 27px 0;
-				width: 244px;
 			}
 		}
 
 		.employee-fun-fact {
-			padding-left: 12px;
-
 			.inner {
-				width: 244px;
-				padding: 80px 20px 130px 30px;
 				background: #fff;
 			}
 		}
@@ -324,6 +310,21 @@ PROJECTS SECTION
 			.numbers {
 				background: #fff;
 			}
+		}
+	}
+}
+.page-about-us {
+	.employees .employee-info .wrapper {
+		overflow: visible;
+
+		.close {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -150%);
+
+		    @include mq(large){
+		    	display: none;
+		    }
 		}
 	}
 }
@@ -374,11 +375,12 @@ About Us Page
 	}
 
 	.employees {
+		overflow: visible;
+
 		.employee-info {
 			width: 100%;
 			left: 0;
 			transform: translate3d(0,0,0);
-			overflow: hidden;
 
 			.info-inner {
 				width: 100%;
@@ -399,7 +401,7 @@ About Us Page
 			cursor: pointer;
 			float: left;
 			width: 16.67%;
-			margin-right: resp(102);
+			margin-right: calc(108%/1440*100);
 			z-index: 4;
 			transition: opacity 0.5s;
 

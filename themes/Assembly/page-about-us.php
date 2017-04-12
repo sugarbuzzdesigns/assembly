@@ -163,7 +163,7 @@
 					</div>
 					<div class="col employee-years">
 						<div class="inner">
-							<svg class="numbers" width="265px" height="319px" viewBox="1068 280 265 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg class="numbers" viewBox="1068 280 265 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <defs>
 							        <rect id="path-1" x="2" y="0" width="242" height="319"></rect>
 							        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="242" height="319" fill="white">
@@ -216,7 +216,7 @@
 					</div>
 					<div class="col employee-years">
 						<div class="inner">
-							<svg class="numbers" width="266" height="320" viewBox="1067 243 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg class="numbers" viewBox="1067 243 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
 									<path id="a" d="M2 0h242v319H2z"/>
 									<mask id="b" x="0" y="0" width="242" height="319" fill="#fff">
@@ -268,7 +268,7 @@
 					</div>
 					<div class="col employee-years">
 						<div class="inner">
-							<svg class="numbers" width="266" height="320" viewBox="1067 249 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg class="numbers" viewBox="1067 249 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
 									<path id="path-26-1" d="M2 0h242v319H2z"/>
 									<mask id="mask-26-2" x="0" y="0" width="242" height="319" fill="#fff">
@@ -310,7 +310,7 @@
 					</div>
 					<div class="col employee-years">
 						<div class="inner">
-							<svg class="numbers" width="266" height="320" viewBox="369 243 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg class="numbers" viewBox="369 243 266 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
 								<path id="path-1-20" d="M2 0h242v319H2z"/>
 									<mask id="mask-2-20" x="0" y="0" width="242" height="319" fill="#fff">

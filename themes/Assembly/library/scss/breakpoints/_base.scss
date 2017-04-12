@@ -3203,14 +3203,18 @@ ABOUT US Page
 			z-index: 3;
 			top: 0;
 			left: 0;
-			overflow-x: scroll;
 			width: 100%;
 			visibility: hidden;
 			background: #fff;
 
 			.wrapper {
-				width: 73%;
-				margin: 0 auto;
+			    width: 100%;
+			    margin: 0 auto;
+			    overflow: hidden;
+
+			    @include mq(medium){
+
+			    }
 			}
 
 			.close {
@@ -3235,7 +3239,7 @@ ABOUT US Page
 			}
 
 			.info-inner {
-				width: 400%;
+				width: 275%;
 				overflow: hidden;
 				background: #fff;
 				transition: transform 0.4s;
@@ -3253,7 +3257,7 @@ ABOUT US Page
 			}
 
 			.employee-img {
-				width: 76%;
+				width: 80%;
 				margin: 25px auto 0;
 			}
 

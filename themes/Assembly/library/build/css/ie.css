@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:06 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 02:19 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -464,16 +464,10 @@ PROJECTS SECTION
   z-index: 3;
   top: 0;
   left: 0;
-  overflow-x: scroll;
   width: 100%;
   visibility: hidden;
+  overflow: visible;
   background: #fff;
-}
-.employees .employee-info .close {
-  display: none;
-}
-.employees .employee-info .close {
-  display: none;
 }
 .employees .employee-info .info-inner {
   width: 100%;
@@ -499,19 +493,12 @@ PROJECTS SECTION
 }
 .employees .employee-info .employee-about {
   margin-top: 81px;
-  padding-left: 29px;
 }
 .employees .employee-info .employee-about .inner {
   background: #fff;
   padding: 15px 27px 0;
-  width: 244px;
-}
-.employees .employee-info .employee-fun-fact {
-  padding-left: 12px;
 }
 .employees .employee-info .employee-fun-fact .inner {
-  width: 244px;
-  padding: 80px 20px 130px 30px;
   background: #fff;
 }
 .employees .employee-info .employee-years {
@@ -519,6 +506,22 @@ PROJECTS SECTION
 }
 .employees .employee-info .employee-years .numbers {
   background: #fff;
+}
+
+.page-about-us .employees .employee-info .wrapper {
+  overflow: visible;
+}
+.page-about-us .employees .employee-info .wrapper .close {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -150%);
+      -ms-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+}
+@media screen and (min-width: 1030px) {
+  .page-about-us .employees .employee-info .wrapper .close {
+    display: none;
+  }
 }
 
 /*********************
@@ -558,12 +561,14 @@ About Us Page
 .page-about-us .scroll-overlay {
   padding-bottom: 20px;
 }
+.page-about-us .employees {
+  overflow: visible;
+}
 .page-about-us .employees .employee-info {
   width: 100%;
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  overflow: hidden;
 }
 .page-about-us .employees .employee-info .info-inner {
   width: 100%;
@@ -581,7 +586,7 @@ About Us Page
   cursor: pointer;
   float: left;
   width: 16.67%;
-  margin-right: resp(102);
+  margin-right: calc(108%/1440*100);
   z-index: 4;
   transition: opacity 0.5s;
 }
