@@ -174,7 +174,7 @@
 												</div>
 												<div class="tile-info">
 													<span class="tile-title">Services</span>
-													<span class="tile-desc">From paper to production.</span>
+													<span class="tile-desc">Paper to production.</span>
 												</div>
 											</div>
 										</div>

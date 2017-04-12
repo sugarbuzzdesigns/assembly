@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 03:36 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 04:08 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9328,6 +9328,7 @@ Tiles
   text-transform: uppercase;
 }
 .tile .tile-desc {
+  font-family: 'roboto_monoregular';
   display: none;
 }
 .tile .tile-desc::before {
@@ -12866,9 +12867,9 @@ you can add resource intensive styles.
   }
 
   .approach {
-    width: 35%;
+    width: 39%;
     float: right;
-    margin-right: 27.1%;
+    margin-right: 18%;
     z-index: 1;
   }
 
@@ -12966,8 +12967,8 @@ you can add resource intensive styles.
     padding: 0;
     clear: left;
     float: left;
-    width: 17.1%;
-    margin-left: 9.03%;
+    width: 28.5%;
+    margin-left: 7.03%;
   }
 
   /*********************

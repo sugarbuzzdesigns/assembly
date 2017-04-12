@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 03:36 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 04:08 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -434,9 +434,9 @@ PROJECTS SECTION
 }
 
 .approach {
-  width: 35%;
+  width: 39%;
   float: right;
-  margin-right: 27.1%;
+  margin-right: 18%;
   z-index: 1;
 }
 
@@ -532,8 +532,8 @@ SERVICES SECTION
   padding: 0;
   clear: left;
   float: left;
-  width: 17.1%;
-  margin-left: 9.03%;
+  width: 28.5%;
+  margin-left: 7.03%;
 }
 
 /*********************
