@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 09:33 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 10:08 pm - User: Phoydar */
 /*!
  * Assembly Case Studies Page
  */
@@ -153,6 +153,8 @@ var assembly = assembly || {};
 				_this.$currentCaseStudyContainer.removeClass('show');
 
 				_this.currentFilerStatus.type = $(this).data('title');
+
+				$('html, body').animate({ scrollTop: 0 }, 1000);
 
 				_this.showCaseStudyContent();
 			});

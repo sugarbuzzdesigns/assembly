@@ -153,6 +153,8 @@ var assembly = assembly || {};
 
 				_this.currentFilerStatus.type = $(this).data('title');
 
+				$('html, body').animate({ scrollTop: 0 }, 1000);
+
 				_this.showCaseStudyContent();
 			});
 
