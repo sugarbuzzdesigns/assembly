@@ -20,9 +20,9 @@
 
 						<div class="col">
 							<ul class="social">
-								<li class="instagram"><a href="#"></a></li><!--
-								--><li class="twitter"><a href="#"></a></li><!--
-								--><li class="linkedin"><a href="#"></a></li>
+								<li class="instagram"><a href="https://www.instagram.com/byassembly" target="_blank"></a></li><!--
+								--><li class="twitter"><a href="https://twitter.com/assemblyspaces" target="_blank"></a></li><!--
+								--><li class="linkedin"><a href="https://www.linkedin.com/company-beta/15154404" target="_blank"></a></li>
 							</ul>
 						</div>
 					</div>
