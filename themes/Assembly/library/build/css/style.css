@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 02:19 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:45 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11850,6 +11850,28 @@ ABOUT US Page
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+}
+.page-about-us .employees .employee-info .info-nav {
+  width: 100%;
+  text-align: center;
+}
+.page-about-us .employees .employee-info .info-nav li {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-right: 20px;
+  background: #cfcecf;
+}
+.page-about-us .employees .employee-info .info-nav li:last-of-type {
+  margin-right: 0;
+}
+.page-about-us .employees .employee-info .info-nav li.active {
+  background: #309ce1;
+}
+@media screen and (min-width: 768px) {
+  .page-about-us .employees .employee-info .info-nav {
+    display: none;
+  }
 }
 .page-about-us .employees .employee-info .close {
   height: 30px;

@@ -3217,6 +3217,31 @@ ABOUT US Page
 			    }
 			}
 
+			.info-nav {
+			    width: 100%;
+			    text-align: center;
+
+				li {
+					display: inline-block;
+					height: 8px;
+					width: 8px;
+					margin-right: 20px;
+					background: #cfcecf;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+
+					&.active {
+						background: #309ce1;
+					}
+				}
+
+				@include mq(medium){
+					display: none;
+				}
+			}
+
 			.close {
 				height: 30px;
 				width: 30px;

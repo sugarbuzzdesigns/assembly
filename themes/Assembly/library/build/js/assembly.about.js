@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 02:00 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:43 pm - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -135,8 +135,6 @@ var assembly = assembly || {};
 							scrollPos = colWidth*curSlide - start;
 
 							$(this).data('cur-slide', curSlide);
-
-							console.log(curSlide);
 						}
 
 						if(direction === 'right'){
@@ -151,6 +149,9 @@ var assembly = assembly || {};
 
 							console.log(curSlide);
 						}
+
+						$('.info-nav li', $(this)).removeClass('active');
+						console.log($('.info-nav li', $(this)).eq(curSlide).addClass('active'));
 
 						$(this).data('scroll-pos', scrollPos);
 

@@ -134,8 +134,6 @@ var assembly = assembly || {};
 							scrollPos = colWidth*curSlide - start;
 
 							$(this).data('cur-slide', curSlide);
-
-							console.log(curSlide);
 						}
 
 						if(direction === 'right'){
@@ -150,6 +148,9 @@ var assembly = assembly || {};
 
 							console.log(curSlide);
 						}
+
+						$('.info-nav li', $(this)).removeClass('active');
+						console.log($('.info-nav li', $(this)).eq(curSlide).addClass('active'));
 
 						$(this).data('scroll-pos', scrollPos);
 

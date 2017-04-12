@@ -188,6 +188,12 @@
 					</div>
 				</div>
 			</div>
+			<ul class="info-nav">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
 		<div class="employee-info" data-employee="emma-slack">
 			<div class="wrapper">
@@ -240,6 +246,12 @@
 					</div>
 				</div>
 			</div>
+			<ul class="info-nav">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
 		<div class="employee-info" data-employee="gordon-machielsen">
 			<div class="wrapper">
@@ -292,6 +304,12 @@
 					</div>
 				</div>
 			</div>
+			<ul class="info-nav">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
 		<div class="employee-info" data-employee="mark-slack">
 			<div class="wrapper">
@@ -344,6 +362,12 @@
 					</div>
 				</div>
 			</div>
+			<ul class="info-nav">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
 		<div class="employee-list no-mobile tablet desktop">
 			<div class="employee" data-employee-name="dominic-bennett" data-start="40">
