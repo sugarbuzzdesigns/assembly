@@ -21,7 +21,8 @@ var assembly = assembly || {};
 
 		initSelect2: function(){
 			this.select2Filter = this.$selectFilter.select2({
-				minimumResultsForSearch: -1
+				minimumResultsForSearch: -1,
+				width: '100%'
 			});
 		},
 

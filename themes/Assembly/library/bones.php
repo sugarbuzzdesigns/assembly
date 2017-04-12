@@ -185,6 +185,9 @@ function bones_scripts_and_styles() {
 		if(is_page('services')){
 			wp_register_script( 'services', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.services' . $suffix . '.js', array( 'jquery' ), '', true );
 			wp_enqueue_script( 'services' );
+
+			wp_register_style( 'services-page', get_stylesheet_directory_uri() . '/library/dist/css/pages/services.min.css', array(), '', 'all' );
+			wp_enqueue_style( 'services-page' );
 		}
 
 		if(is_page('case-studies')){

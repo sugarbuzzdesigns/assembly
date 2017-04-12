@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 10:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:00 am - User: Phoydar */
 /*!
  * Assembly Case Studies Page
  */
@@ -81,6 +81,8 @@ var assembly = assembly || {};
 
 				_this.$selectFilter.val(category).trigger('change');
 				_this.setFilterLinksClass($('[data-value="'+ category +'"]'));
+
+				$('html, body').delay(500).animate({ scrollTop: 0 }, 1000);
 			});
 
 			// main landing screen with two big tiles for Custom/Modular

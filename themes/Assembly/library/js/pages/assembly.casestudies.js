@@ -80,6 +80,8 @@ var assembly = assembly || {};
 
 				_this.$selectFilter.val(category).trigger('change');
 				_this.setFilterLinksClass($('[data-value="'+ category +'"]'));
+
+				$('html, body').delay(500).animate({ scrollTop: 0 }, 1000);
 			});
 
 			// main landing screen with two big tiles for Custom/Modular

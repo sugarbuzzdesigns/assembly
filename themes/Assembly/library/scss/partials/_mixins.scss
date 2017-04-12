@@ -36,7 +36,7 @@ USAGE: @include transition(all 0.2s ease-in-out);
   // defining prefixes so we can use them in mixins below
   $prefixes:      ("-webkit-", "" );
   @each $prefix in $prefixes {
-    #{$prefix}transition: $transition;
+  	#{$prefix}transition: $transition;
   }
 }
 
@@ -102,3 +102,21 @@ probably best not to use it. I mean, were you going to anyway? */
 	}
 }
 
+$breakpoints: (
+	xsmall : 375px,
+	small : 414px,
+	medium: 768px,
+	large : 1030px
+);
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+  	$mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (min-width: #{$mq-breakpoint}) {
+  	@content;
+  }
+}

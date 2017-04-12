@@ -1,0 +1,312 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:05 am - User: Phoydar */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+SERVICES Page
+**********************/
+.page-services {
+  background-color: #fff;
+}
+.page-services .scroll-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.page-services .scroll-overlay.going-down {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+.page-services .scroll-overlay.going-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.page-services .section-header {
+  font-family: 'pangrambold';
+  font-size: rem(32);
+  margin: 24% auto 11%;
+  width: 77%;
+}
+.page-services .filter-wrap {
+  margin-bottom: 11.5%;
+}
+.page-services select {
+  margin-bottom: 0;
+}
+.page-services .mesh-bg {
+  top: 0;
+  margin-top: 20%;
+  width: 85%;
+  height: 60%;
+  z-index: -1;
+}
+.page-services .tile {
+  margin: 0 0 20% 0;
+  float: none;
+  width: auto;
+}
+.page-services .tile .tile-img {
+  margin-bottom: 6%;
+}
+.page-services .service-desc {
+  width: 77%;
+  margin: 0 auto 24%;
+  font-size: rem(13);
+  line-height: 1.76;
+  color: #7D7D7D;
+}
+.page-services [data-service] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50px, 0);
+          transform: translate3d(0, 50px, 0);
+}
+.page-services [data-service] .tile[data-service-id] {
+  cursor: pointer;
+}
+.page-services [data-service].show {
+  pointer-events: auto;
+  -webkit-animation-name: serviceShow;
+          animation-name: serviceShow;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+.page-services [data-service].hide {
+  -webkit-animation-name: serviceHide;
+          animation-name: serviceHide;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.page-services .content {
+  float: left;
+  width: 100%;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+.page-services .content .content-tile {
+  margin-bottom: 30%;
+}
+.page-services .content .permitting-wrapper .intro-tile,
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .engineering-wrapper .intro-tile,
+.page-services .content .interior-buildouts-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content .permitting-wrapper .intro-tile .tile-inner,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner {
+  margin-left: 11.3%;
+  width: 78%;
+}
+.page-services .content .permitting-wrapper .intro-tile .tile-inner img,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner img,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner img,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner img {
+  width: 100%;
+}
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .imagine-experience-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .imagine-experience-wrapper .intro-tile .tile-inner {
+  margin-left: 14.25%;
+  width: 68%;
+}
+.page-services .all-services .tile.visualisation {
+  margin-left: calc(71%/414*100);
+  width: 60.39%;
+}
+.page-services .all-services .tile.permitting {
+  margin-left: calc(56%/414*100);
+  width: 77%;
+}
+.page-services .all-services .tile.engineering {
+  margin-left: calc(38%/414*100);
+  width: calc(322%/414*100);
+}
+.page-services .all-services .tile.interior-buildouts {
+  margin-left: calc(76%/414*100);
+  width: 66%;
+}
+.page-services .all-services .tile.interior-buildouts .mesh-bg {
+  top: -186px;
+  right: -66px;
+  left: auto;
+  height: 429px;
+  width: 283px;
+}
+.page-services .all-services .tile.team-player {
+  margin-left: calc(32%/414*100);
+  width: 77%;
+}
+.page-services .all-services .tile.imagine-experience {
+  margin-left: calc(64%/414*100);
+  margin-bottom: 45.89%;
+  width: 70.29%;
+}
+.page-services .all-services .tile.imagine-experience .mesh-bg {
+  right: auto;
+  left: -55px;
+  height: resppx(466, 414, 320);
+  width: resppx(260, 414, 320);
+  margin: 0;
+  top: 97px;
+}
+.page-services .individual-service .content-1,
+.page-services .individual-service .content-2,
+.page-services .individual-service .content-3,
+.page-services .individual-service .content-4 {
+  width: 78%;
+  margin-left: 13.7%;
+}
+.page-services .individual-service .content-2,
+.page-services .individual-service .content-4 {
+  margin-left: 9%;
+}
+.page-services .visualisation-wrapper .intro-tile {
+  margin-left: calc(71%/414*100);
+  width: 60.39%;
+}
+.page-services .visualisation-wrapper .content-1 {
+  width: 78%;
+  margin-left: 13.7%;
+}
+.page-services .visualisation-wrapper .content-1 .mesh-bg {
+  top: -217px;
+  right: 0;
+  width: 150px;
+  height: 313px;
+}
+.page-services .visualisation-wrapper .content-2 {
+  width: 78%;
+  margin-left: 9%;
+}
+.page-services .visualisation-wrapper .content-2 .mesh-bg {
+  width: 32px;
+  right: auto;
+  left: 10px;
+  height: 300px;
+  top: -110px;
+}
+
+@-webkit-keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
+}
+@keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
+}

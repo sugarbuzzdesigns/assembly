@@ -422,7 +422,8 @@ module.exports = function(grunt) {
 			pages: {
 				files: {
 					'<%= cssDistDir %>/pages/about_us.min.css': '<%= cssBuildDir %>/pages/about_us.css',
-					'<%= cssDistDir %>/pages/case_studies.min.css': '<%= cssBuildDir %>/pages/case_studies.css'
+					'<%= cssDistDir %>/pages/case_studies.min.css': '<%= cssBuildDir %>/pages/case_studies.css',
+					'<%= cssDistDir %>/pages/services.min.css': '<%= cssBuildDir %>/pages/services.css'
 				}
 			}
 		},

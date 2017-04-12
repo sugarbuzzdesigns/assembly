@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-11 03:54 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 12:09 am - User: Phoydar */
 /*!
  * Assembly Services Page
  */
@@ -22,7 +22,8 @@ var assembly = assembly || {};
 
 		initSelect2: function(){
 			this.select2Filter = this.$selectFilter.select2({
-				minimumResultsForSearch: -1
+				minimumResultsForSearch: -1,
+				width: '100%'
 			});
 		},
 
