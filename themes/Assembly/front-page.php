@@ -6,7 +6,7 @@
 } ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
 	<?php $domain = $_SERVER['SERVER_NAME']; ?>
-	<?php if(is_user_logged_in() || $domain == "byassembly.loc" || $domain == "staging.byassembly.com") : ?>
+	<?php if(is_user_logged_in() || $domain == "byassembly.loc" || $domain == "staging.byassembly.com" || $domain == "staging.byassembly.net") : ?>
 	<div class="wrap">
 		<div class="container">
 			<div class="header-mask landing-logo">
