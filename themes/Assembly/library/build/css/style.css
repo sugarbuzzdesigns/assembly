@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:16 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:25 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -12957,8 +12957,11 @@ you can add resource intensive styles.
     display: none;
   }
 }
-
 @media only screen and (min-width: 768px) {
+  .page-about-us .nav-arrow-right {
+    display: block;
+  }
+
   /*********************
   SERVICES SECTION
   - Homepage
@@ -15813,6 +15816,7 @@ you can add resource intensive styles.
   .page-about-us .projects-2 {
     float: right;
     margin-right: calc(296%/1440*100);
+    z-index: 1;
   }
   .page-about-us .inner-callout {
     width: calc(237%/1440*100);

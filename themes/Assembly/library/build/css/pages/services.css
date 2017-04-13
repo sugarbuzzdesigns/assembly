@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:15 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 01:32 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -41,6 +41,51 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
 /*********************
 SERVICES Page
 **********************/
@@ -64,7 +109,7 @@ SERVICES Page
 }
 .page-services .section-header {
   font-family: 'pangrambold';
-  font-size: rem(32);
+  font-size: 2rem;
   margin: 24% auto 11%;
   width: 77%;
 }
@@ -92,7 +137,7 @@ SERVICES Page
 .page-services .service-desc {
   width: 77%;
   margin: 0 auto 24%;
-  font-size: rem(13);
+  font-size: 0.8125rem;
   line-height: 1.76;
   color: #7D7D7D;
 }
@@ -205,8 +250,8 @@ SERVICES Page
 .page-services .all-services .tile.imagine-experience .mesh-bg {
   right: auto;
   left: -55px;
-  height: resppx(466, 414, 320);
-  width: resppx(260, 414, 320);
+  height: calc(466px/414*320);
+  width: calc(260px/414*320);
   margin: 0;
   top: 97px;
 }
@@ -251,6 +296,9 @@ SERVICES Page
   /*********************
   SERVICES Page
   **********************/
+  .page-services .mesh-bg {
+    height: 33%;
+  }
   .page-services .scroll-overlay {
     background: transparent;
   }
@@ -341,7 +389,7 @@ SERVICES Page
   }
   .page-services .all-services .tile.imagine-experience .mesh-bg {
     left: -96px;
-    height: 534px;
+    height: 284px;
     width: 315px;
     top: 233px;
   }
@@ -367,7 +415,7 @@ SERVICES Page
     margin-left: 7.01%;
     margin-top: 260px;
     margin-bottom: 0;
-    font-size: rem(11);
+    font-size: 0.6875rem;
     line-height: 1.82;
     letter-spacing: 0.97px;
   }
@@ -404,7 +452,8 @@ SERVICES Page
     margin-bottom: 0;
   }
   .page-services .content .visualisation-wrapper .service-desc {
-    width: 22.92%;
+    margin-top: 120px;
+    width: 30.92%;
   }
   .page-services .content .visualisation-wrapper .tile-2 {
     float: right;
@@ -417,11 +466,14 @@ SERVICES Page
     margin-top: 290px;
     margin-bottom: 176px;
   }
+  .page-services .content .visualisation-wrapper .content-1 {
+    margin-top: 68px;
+  }
   .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
     top: 45px;
     right: -88px;
     width: 332px;
-    height: 313px;
+    height: 193px;
     margin-top: 0;
   }
   .page-services .content .visualisation-wrapper .content-2 {
@@ -431,7 +483,7 @@ SERVICES Page
     width: 562px;
     right: auto;
     bottom: 0;
-    height: 306px;
+    height: 256px;
     top: auto;
   }
   .page-services .content .permitting-wrapper {
@@ -479,7 +531,8 @@ SERVICES Page
   }
   .page-services .content .team-player-wrapper .service-desc {
     margin-left: calc(102%/1440*100);
-    margin-top: 167px;
+    margin-top: 70px;
+    width: 42.92%;
   }
   .page-services .content .team-player-wrapper .tile {
     margin: 0;
@@ -490,7 +543,7 @@ SERVICES Page
     float: right;
   }
   .page-services .content .team-player-wrapper .intro-tile {
-    width: cacl(28.47222%);
+    width: calc(410%/1440*100);
     margin-left: 9.02%;
   }
   .page-services .content .team-player-wrapper .content-1 {
@@ -498,7 +551,6 @@ SERVICES Page
     margin-right: calc(328%/1440*100);
     clear: left;
     margin-left: 0;
-    margin-top: -100px;
   }
   .page-services .content .team-player-wrapper .content-1 .mesh-bg {
     top: 155px;
@@ -567,7 +619,7 @@ SERVICES Page
     margin-left: auto;
     margin-right: auto;
     margin: 130px auto 0;
-    width: 62.04%;
+    width: 92.04%;
     float: none;
   }
   .page-services .content .interior-buildouts-wrapper .tile.right {
@@ -612,6 +664,7 @@ SERVICES Page
     height: 313px;
     top: auto;
     margin-left: 45.194%;
+    display: none;
   }
   .page-services .content .interior-buildouts-wrapper .content-3 {
     width: calc(410%/1440*100);
@@ -688,6 +741,26 @@ SERVICES Page
     margin-right: 5.97%;
     margin-bottom: 16px;
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .page-services .all-services .tile.interior-buildouts {
+    margin-right: 13.63%;
+  }
+  .page-services .all-services .tile.imagine-experience {
+    margin-left: 11.07%;
+  }
+  .page-services .all-services .tile.team-player {
+    margin-right: 13.38%;
+  }
+  .page-services .content .tile .tile-info {
+    width: 160%;
+  }
+  .page-services .content .visualisation-wrapper .service-desc {
+    margin-top: 140px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
+    display: block;
   }
 }
 @-webkit-keyframes serviceShow {

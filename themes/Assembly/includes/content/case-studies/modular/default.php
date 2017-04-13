@@ -1,8 +1,7 @@
-	<div class="case-study-landing case-study-container" data-kit-type="modular" data-category="all">
+''	<div class="case-study-landing case-study-container" data-kit-type="modular" data-category="all">
 		<div class="case-study-desc">
 			<h4>Modular Kits</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>Our high-quality, modular construction systems offer clients an exceptional variety of sizes, shapes and configuration options. The ClearSpan design, for example, offers an unobstructed room view with no center poles or support columns inside the tent.</p>
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">

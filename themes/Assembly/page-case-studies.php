@@ -111,7 +111,7 @@
 					<h2 data-h2-title="custom">
 						<span>custom</span>
 						<span>kits</span>
-						<span>SPACES YOU WANT TO BE IN</span>
+						<span>THE SPACE OF YOUR DREAMS</span>
 					</h2>
 					<h2 data-h2-title="modular">
 						<span>modular</span>

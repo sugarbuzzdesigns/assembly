@@ -177,6 +177,12 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-libs' );
 		wp_enqueue_script( 'bones-js' );
 
+
+		// enqueue styles and scripts
+		// wp_enqueue_script( 'bones-modernizr' );
+		wp_enqueue_style( 'bones-stylesheet' );
+		wp_enqueue_style( 'bones-ie-only' );
+
 		// if(is_page('contact')){
 		// 	wp_register_script( 'contact', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.contact' . $suffix . '.js', array( 'jquery' ), '', true );
 		// 	wp_enqueue_script( 'contact' );
@@ -213,13 +219,6 @@ function bones_scripts_and_styles() {
 			wp_register_script( 'home', get_template_directory_uri() . '/library/' . $dir . '/js/assembly.home' . $suffix . '.js', array( 'jquery' ), '', true );
 			wp_enqueue_script( 'home' );
 		}
-
-
-
-		// enqueue styles and scripts
-		// wp_enqueue_script( 'bones-modernizr' );
-		wp_enqueue_style( 'bones-stylesheet' );
-		wp_enqueue_style( 'bones-ie-only' );
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 

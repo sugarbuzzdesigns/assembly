@@ -1,8 +1,7 @@
 	<div class="case-study-category case-study-container" data-kit-type="modular" data-category="sporting">
 		<div class="case-study-desc">
 			<h4>Modular Sporting</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>Today’s sports fans expect a premium experience, no matter the location or weather or any other variable. We deliver by creating unique environments that both entertain and support the various needs of brands and their clients and/or associates.</p>
 		</div>
 			<div class="group">
 				<div class="tile left-margin-med">

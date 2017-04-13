@@ -85,7 +85,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Engineering</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">Beauty in safety.</span>
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Interior Buildouts</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">Big and small and anything between.</span>
 					</div>
 				</div>
 			</div>
@@ -114,7 +114,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">Putting things together — <em>together.</em></span>
 					</div>
 				</div>
 			</div>
@@ -129,7 +129,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Imagine Experience</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">A walk down possibility lane.</span>
 					</div>
 				</div>
 			</div>

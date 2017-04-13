@@ -1,8 +1,7 @@
 	<div class="case-study-category case-study-container" data-kit-type="custom" data-category="sporting">
 		<div class="case-study-desc">
 			<h4>Custom Sporting</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>Today’s sports fans expect a premium experience, no matter the location or weather or any other variable. assembly delivers by creating environments that both entertain and support the various needs of brands and their clients and/or associates. The strength and experience of Czarnowski combined with the expertise and unique product of assembly make for endless customizable options.</p>
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">

@@ -9,11 +9,11 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Permitting</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">A remedy to red tape.</span>
 					</div>
 				</div>
 			</div>
-			<p class="service-desc">Anyone can apply for a structure permit, but our vast experience in working with different states and various building departments enables us to navigate the process quickly and efficiently.</p>
+			<p class="service-desc">Anyone can apply for a structure permit, but our vast experience in working with different states and various building departments enables us to navigate the process quickly and efficiently.</p>
 			<div class="tile wide-1 content-tile content-1 right" data-ratio=".07">
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">

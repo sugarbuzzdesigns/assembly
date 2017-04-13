@@ -1,5 +1,6 @@
 // import mixins
 @import "../partials/mixins";
+@import "../partials/functions";
 /*********************
 SERVICES Page
 **********************/
@@ -235,6 +236,9 @@ SERVICES Page
 	SERVICES Page
 	**********************/
 	.page-services {
+		.mesh-bg {
+    		height: 33%;
+		}
 
 		.scroll-overlay {
 			background: transparent;
@@ -344,7 +348,8 @@ SERVICES Page
 
 					.mesh-bg {
 					    left: -96px;
-					    height: 534px;
+					    // height: 534px;
+					    height: 284px;
 					    width: 315px;
 					   	top: 233px;
 					}
@@ -436,7 +441,8 @@ SERVICES Page
 				}
 
 				.service-desc {
-					width: 22.92%;
+					margin-top: 120px;
+					width: 30.92%;
 				}
 
 				.tile-2 {
@@ -453,11 +459,14 @@ SERVICES Page
 				}
 
 				.content-1 {
+					margin-top: 68px;
+
 					.mesh-bg {
 					    top: 45px;
 					    right: -88px;
 					    width: 332px;
-					    height: 313px;
+					    // height: 313px;
+					    height: 193px;
 					    margin-top: 0;
 					}
 				}
@@ -469,7 +478,8 @@ SERVICES Page
 					    width: 562px;
 					    right: auto;
 					    bottom: 0;
-					    height: 306px;
+					    // height: 306px;
+					   	height: 256px;
 					    top: auto;
 					}
 				}
@@ -533,7 +543,9 @@ SERVICES Page
 			.team-player-wrapper {
 				.service-desc {
 					margin-left: calc(102%/1440*100);
-					margin-top: 167px;
+					// margin-top: 167px;
+					margin-top: 70px;
+					width: 42.92%;
 				}
 
 				.tile {
@@ -547,7 +559,7 @@ SERVICES Page
 				}
 
 				.intro-tile {
-					width: cacl(410%/1440*100);
+					width: calc(410%/1440*100);
 					margin-left: 9.02%;
 				}
 
@@ -556,7 +568,7 @@ SERVICES Page
 				    margin-right: calc(328%/1440*100);
 				    clear: left;
 				    margin-left: 0;
-				    margin-top: -100px;
+				    // margin-top: -100px;
 
 					.mesh-bg {
 					    top: 155px;
@@ -640,7 +652,8 @@ SERVICES Page
 					margin-left: auto;
 					margin-right: auto;
 					margin: 130px auto 0;
-					width: 62.04%;
+					// width: 62.04%;
+					width: 92.04%;
 					float: none;
 				}
 
@@ -693,6 +706,7 @@ SERVICES Page
 					    height: 313px;
 					    top: auto;
 					    margin-left: 45.194%;
+					    display: none;
 					}
 				}
 
@@ -795,6 +809,46 @@ SERVICES Page
 			margin-right: 5.97%;
 	    	margin-bottom: 16px;
 	    	margin-top: 0;
+		}
+	}
+}
+
+@include mq(large) {
+	.page-services {
+		.all-services {
+			.tile.interior-buildouts {
+				margin-right: 13.63%;
+			}
+
+			.tile.imagine-experience {
+			    margin-left: 11.07%;
+			}
+
+			.tile.team-player {
+    			margin-right: 13.38%;
+			}
+		}
+
+		 .content {
+		 	.tile .tile-info {
+		 		width: 160%;
+		 	}
+
+		 	.visualisation-wrapper .service-desc {
+		 			margin-top: 140px;
+		 	}
+
+			.team-player-wrapper .content-1 {
+
+			}
+
+			.interior-buildouts-wrapper {
+				.content-2 {
+					.mesh-bg {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 }

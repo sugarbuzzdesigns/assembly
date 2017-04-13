@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:16 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:25 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -522,6 +522,9 @@ PROJECTS SECTION
   .page-about-us .employees .employee-info .wrapper .close {
     display: none;
   }
+}
+.page-about-us .nav-arrow-right {
+  display: block;
 }
 
 /*********************
@@ -3366,6 +3369,7 @@ ABOUT US Page
 .page-about-us .projects-2 {
   float: right;
   margin-right: calc(296%/1440*100);
+  z-index: 1;
 }
 .page-about-us .inner-callout {
   width: resp(237);

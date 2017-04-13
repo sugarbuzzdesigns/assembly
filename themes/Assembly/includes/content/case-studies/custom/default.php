@@ -1,8 +1,7 @@
 	<div class="case-study-landing case-study-container" data-kit-type="custom" data-category="all">
 		<div class="case-study-desc">
 			<h4>Custom Kits</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>We’re bringing a new look &amp; feel to event spaces with custom structures that rival the look and function of normal buildings. assembly is uniquely able to turn a client’s vision into reality. We facilitate every stage of the process: from design to installation and removal.</p>
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">

@@ -21,14 +21,24 @@
 			<div class="form-viewport">
 				<div class="inputs">
 					<label class="active">
-						<p>what impression should your space leave?</p>
+						<p>What type of structure are you looking for?</p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-						<input type="text" name="" value="" placeholder="type here">
+						<input type="text" name="" value="" placeholder="start typing">
 					</label>
 					<label>
-						<p>what are you interested in? </p>
+						<p>Do you have a vision you’d like us to build on? </p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-						<input type="text" name="" value="" placeholder="type here">
+						<input type="text" name="" value="" placeholder="start typing">
+					</label>
+					<label>
+						<p>What impression should your space leave? </p>
+						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+						<input type="text" name="" value="" placeholder="start typing">
+					</label>
+					<label>
+						<p>Please provide your email address and we’ll be in touch. </p>
+						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+						<input type="text" name="" value="" placeholder="start typing">
 					</label>
 				</div>
 				<div class="error-message">Please Fill out the field.</div>
@@ -116,7 +126,7 @@
 <div class="contact-us no-mobile">
 	<a class="col" href="mailto:hello@byassembly.com">hello@byassembly.com</a>
 	<a class="col" href="tel:+01-678-287-7493" title="Phone Number">678.287.7493</a>
-	<span class="col">33.76622 - 84.57548</span>
+	<span class="col">33.7724 - -84.3653</span>
 </div>
 
 <div class="no-mobile to-top-wrap">
@@ -136,7 +146,7 @@
 	var map;
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('contact-map'), {
-			center: {lat: -34.397, lng: 150.644},
+			center: {lat: 33.772465, lng: -84.3653764},
 			zoom: 8,
 			zoomControl: true,
 			mapTypeControl: false,
@@ -148,7 +158,7 @@
 		});
 
 		var marker = new google.maps.Marker({
-			position: {lat: -34.397, lng: 150.644},
+			position: {lat: 33.772465, lng: -84.3653764},
 			map: map,
 			icon: {
 				url: '<?php echo get_template_directory_uri(); ?>/library/images/icons/map-marker.png',

@@ -9,11 +9,11 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Team Player</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">Putting things together — <em>together</em>.</span>
 					</div>
 				</div>
 			</div>
-			<p class="service-desc">We understand we're one part of a larger team. We collaborate with all parties involved to ensure a seamless operation on site. This includes providing technical information in advance and working around your vendors.</p>
+			<p class="service-desc">We understand we're one part of a larger team. We collaborate with all parties involved to ensure a seamless operation on site. This includes providing technical information in advance and working around your vendors.</p>
 			<div class="tile wide-1 content-tile content-1 right" data-ratio=".07">
 				<div class="mesh-bg dark"></div>
 				<div class="tile-inner">

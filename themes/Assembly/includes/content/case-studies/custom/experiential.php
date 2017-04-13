@@ -1,8 +1,7 @@
 	<div class="case-study-category case-study-container" data-kit-type="custom" data-category="experiential">
 		<div class="case-study-desc">
 			<h4>Custom Experiential</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>A unique experience requires a unique structure. Our spaces deliver the unforgettable experience necessary for building the brand/consumer bond required in today’s marketing world. The strength and experience of Czarnowski combined with the expertise and unique product of assembly make for endless customizable options.</p>
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">

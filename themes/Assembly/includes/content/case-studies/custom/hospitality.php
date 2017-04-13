@@ -1,8 +1,7 @@
 	<div class="case-study-category case-study-container" data-kit-type="custom" data-category="hospitality">
 		<div class="case-study-desc">
 			<h4>Custom Hospitality</h4>
-			<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p>
-			<p>tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis.</p>
+			<p>The perfect structure will elevate the presentation of your products and/or services to new or existing clients. And the hospitable experience is only accentuated with one of our differentiating structures. The strength and experience of Czarnowski combined with the expertise and unique product of assembly make for endless customizable options.</p>
 		</div>
 		<div class="group">
 			<div class="tile left-margin-med">

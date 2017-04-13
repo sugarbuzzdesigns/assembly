@@ -9,7 +9,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Engineering</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">Beauty in safety.</span>
 					</div>
 				</div>
 			</div>

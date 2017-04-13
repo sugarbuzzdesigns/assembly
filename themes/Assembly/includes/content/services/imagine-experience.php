@@ -9,7 +9,7 @@
 					</div>
 					<div class="tile-info">
 						<span class="tile-title">Imagine Experience</span>
-						<span class="tile-desc">description</span>
+						<span class="tile-desc">A walk down possibility lane.</span>
 					</div>
 				</div>
 			</div>
