@@ -199,7 +199,14 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			this.scrollYPos = this.env.$win.scrollTop(),
 
 			this.bindEvents();
-			this.setUpLoader();
+			// this.setUpLoader();
+			if(assembly.util.useragent.deviceType === 'desktop'){
+				this.videoLoader();
+			} else {
+				this.staticLoader();
+			}
+
+			$('.loader-wrap .initial span').addClass('start');
 
 			this.intervals = {};
 		},
@@ -416,6 +423,52 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			        currentFrame++;
 			    }
+		},
+
+		videoLoader: function(){
+			$('.loader video').attr('src', $('.loader video').data('src'));
+
+			$('.loader video').data('play-count', 0);
+			$('.loader video').get(0).play();
+
+			setTimeout(function(){
+				$('.loader-wrap').addClass('ready');
+			}, 300);
+
+			$('.loader video').on('ended', function(){
+				var count = $('.loader video').data('play-count');
+				count++;
+
+				if(count < 2){
+					$('.loader video').get(0).play();
+				} else {
+					$('.loader-wrap').addClass('done');
+					$('html').trigger('loaded');
+					setTimeout(function(){
+						$('html').trigger('loader-removed');
+						$('.loader-wrap').hide();
+					}, 500);
+				}
+
+				$('.loader video').data('play-count', count);
+			});
+		},
+
+		staticLoader: function(){
+			$('.loader-img-placeholder').addClass('animate pulse');
+
+			setTimeout(function(){
+				$('.loader-wrap').addClass('ready');
+			}, 300);
+
+			setTimeout(function(){
+				$('.loader-wrap').addClass('done');
+				$('html').trigger('loaded');
+				setTimeout(function(){
+					$('html').trigger('loader-removed');
+					$('.loader-wrap').hide();
+				}, 500);
+			}, 3000);
 		},
 		// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 		timeToWaitForLast: 100,

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 02:56 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:01 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7693,7 +7693,6 @@ SVG Animations
   z-index: 1000000;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  pointer-events: none;
 }
 .loader-wrap.done {
   transition: opacity 0.5s;
@@ -7707,6 +7706,13 @@ SVG Animations
   transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   transition: opacity 0.5s ease, transform 0.5s ease;
   transition-delay: 1s;
+}
+.loader-wrap .initial span {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.loader-wrap .initial span.start {
+  opacity: 1;
 }
 .loader-wrap .loading {
   width: 100%;
@@ -7744,14 +7750,6 @@ SVG Animations
   text-align: center;
   transition: opacity 0.5s;
 }
-.loader-wrap .loader-inner.is-loading {
-  -webkit-animation-name: loadingPulse;
-          animation-name: loadingPulse;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
 .loader-wrap.ready .loader-inner {
   opacity: 1;
 }
@@ -7782,6 +7780,9 @@ SVG Animations
   text-align: center;
   margin: 0 auto 30px;
 }
+.loader-wrap .loader video {
+  width: 100%;
+}
 .loader-wrap .loader img {
   position: absolute;
   top: 0;
@@ -7789,6 +7790,28 @@ SVG Animations
 }
 .loader-wrap .loader .loader-img-placeholder {
   width: 100%;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+  transition: -webkit-transform 0.5s, opacity 1s;
+  transition: transform 0.5s, opacity 1s;
+}
+.loader-wrap .loader .loader-img-placeholder.animate {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.loader-wrap .loader .loader-img-placeholder.animate.pulse {
+  -webkit-animation-name: loaderpulse;
+          animation-name: loaderpulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 .loader-wrap .loader .loader-img {
   width: 800%;
@@ -7816,6 +7839,29 @@ SVG Animations
           animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes loaderpulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loaderpulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .dom-ready div.mesh-bg {
   opacity: 1;
 }
