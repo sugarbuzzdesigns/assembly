@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:01 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:19 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11746,6 +11746,15 @@ CASE STUDIES Page
           transform: translate3d(0, 150px, 0);
   opacity: 0;
   display: none;
+}
+.page-case-studies .case-study-container blockquote[data-ratio] {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page-case-studies .case-study-container blockquote[data-ratio] {
+    opacity: 0;
+    display: block;
+  }
 }
 .page-case-studies .case-study-container.show {
   display: block;

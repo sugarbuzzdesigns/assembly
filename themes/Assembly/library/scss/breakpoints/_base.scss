@@ -3071,6 +3071,16 @@ CASE STUDIES Page
 		transform: translate3d(0,150px,0);
 		opacity: 0;
 		display: none;
+
+		blockquote[data-ratio] {
+			// opacity: 0;
+			display: none;
+
+			@include mq(medium){
+				opacity: 0;
+				display: block;
+			}
+		}
 		// position: absolute;
 		// top: 0;
 		// left: 0;
