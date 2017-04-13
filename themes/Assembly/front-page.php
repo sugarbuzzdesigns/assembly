@@ -5,7 +5,8 @@
 	$devicePrefix = 'desktop';
 } ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
-	<?php if(is_user_logged_in() || $domain = "byassembly.loc" || $domain = "staging.byassembly.com") : ?>
+	<?php $domain = $_SERVER['SERVER_NAME']; ?>
+	<?php if(is_user_logged_in() || $domain == "byassembly.loc" || $domain == "staging.byassembly.com") : ?>
 	<div class="wrap">
 		<div class="container">
 			<div class="header-mask landing-logo">
