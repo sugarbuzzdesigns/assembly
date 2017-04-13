@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 04:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:16 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -809,6 +809,7 @@ SERVICES Page
   width: 100%;
 }
 .page-services .content .visualisation-wrapper .tile {
+  width: 28.85%;
   margin-bottom: 0;
 }
 .page-services .content .visualisation-wrapper .tile.right {
@@ -835,6 +836,7 @@ SERVICES Page
   float: right;
   margin-right: 15.42%;
   margin-left: 0;
+  width: 28.85%;
 }
 .page-services .content .visualisation-wrapper .tile-3 {
   width: 22.22%;
@@ -3782,7 +3784,6 @@ SERVICES Page
   width: 100%;
 }
 .page-services .content .visualisation-wrapper .tile {
-  width: 28.85%;
   margin-left: 15.069%;
   float: left;
   margin-bottom: 0;

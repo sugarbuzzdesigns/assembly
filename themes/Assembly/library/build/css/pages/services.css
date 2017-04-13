@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 03:48 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:15 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -247,7 +247,7 @@ SERVICES Page
   top: -110px;
 }
 
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 768px) {
   /*********************
   SERVICES Page
   **********************/

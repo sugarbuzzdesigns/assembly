@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 04:08 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:16 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -13244,6 +13244,7 @@ you can add resource intensive styles.
     width: 100%;
   }
   .page-services .content .visualisation-wrapper .tile {
+    width: 28.85%;
     margin-bottom: 0;
   }
   .page-services .content .visualisation-wrapper .tile.right {
@@ -13270,6 +13271,7 @@ you can add resource intensive styles.
     float: right;
     margin-right: 15.42%;
     margin-left: 0;
+    width: 28.85%;
   }
   .page-services .content .visualisation-wrapper .tile-3 {
     width: 22.22%;
@@ -16229,7 +16231,6 @@ you can add resource intensive styles.
     width: 100%;
   }
   .page-services .content .visualisation-wrapper .tile {
-    width: 28.85%;
     margin-left: 15.069%;
     float: left;
     margin-bottom: 0;
