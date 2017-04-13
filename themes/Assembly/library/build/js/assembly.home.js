@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:11 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-12 11:54 pm - User: Phoydar */
 /*
 Parallax.js
  */
@@ -228,6 +228,8 @@ var assembly = assembly || {};
 
 		initializeVideos: function(){
 			var _this = this;
+
+			if(!$('#home-video-reel').length){return}
 
 			videojs('home-video-reel', {
 				'autoplay': false,

@@ -228,6 +228,8 @@ var assembly = assembly || {};
 		initializeVideos: function(){
 			var _this = this;
 
+			if(!$('#home-video-reel').length){return}
+
 			videojs('home-video-reel', {
 				'autoplay': false,
 				'controls': true
