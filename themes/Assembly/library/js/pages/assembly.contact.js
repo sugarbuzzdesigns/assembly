@@ -101,7 +101,9 @@ var assembly = assembly || {};
 		},
 
 		showSubmittedFormMessage: function(){
-
+			$('.submit-message').show();
+			$('form').hide();
+			$('.add-photo').hide();
 		},
 
 		setInitialSectionHeights: function(){
@@ -237,7 +239,8 @@ var assembly = assembly || {};
 		},
 
 		showNextFormInput: function($currentInput){
-			var curIndex = $currentInput.index() + 1,
+			var curIndex = $currentInput.index(),
+				curInputNum = curIndex + 1,
 				nextIndex = curIndex + 1;
 
 			if($('form button').is('.submit')){
@@ -245,19 +248,24 @@ var assembly = assembly || {};
 				return;
 			}
 
-			if(curIndex === $('form label').length){
+			$currentInput.removeClass('active');
+			$currentInput.next().addClass('active');
 
-				// $('html, body').animate({
-				// 	scrollTop: $('.add-photo').offset().top
-				// });
-			} else {
-				this.$pagerCurrent.html(curIndex + 1);
-				$currentInput.removeClass('active');
-				$currentInput.next().addClass('active');
+			if(curInputNum === $('form label').length - 1){
 				$('form button .resting').text('submit');
 				$('form button .hover .inner').text('submit');
 				$('form button').addClass('submit');
 			}
+
+			// if(curIndex === $('form label').length){
+			// 	$('form button .resting').text('submit');
+			// 	$('form button .hover .inner').text('submit');
+			// 	$('form button').addClass('submit');
+			// } else {
+
+			// }
+
+			this.$pagerCurrent.html(curInputNum + 1);
 		},
 
 		addPhotoToPhotosList: function(photoId){

@@ -2253,6 +2253,24 @@ CONTACT
 		}
 	}
 
+	.submit-message {
+		display: none;
+	    width: 81.81%;
+	    margin: 0 auto 30px calc((130%/1440) *100);
+		padding-top: 79px;
+	    padding-bottom: 100px;
+
+		p {
+		    font-size: 2.375rem;
+		    line-height: 2.6875rem;
+		    width: 90%;
+		    font-family: pangrambold;
+		    margin: 0;
+		    line-height: 1.13;
+		    color: #fff;
+		}
+	}
+
 	form {
 		width: 80%;
 		margin: 0 auto;

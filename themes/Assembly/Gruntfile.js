@@ -474,7 +474,7 @@ module.exports = function(grunt) {
 					'<%= jsSrcDir %>/common/*.js',
 					'<%= jsSrcDir %>/pages/assembly.contact.js'
 				],
-				tasks: ['jsBuildDist_common']
+				tasks: ['jsBuildDist']
 			},
 			js_home: {
 				options: {

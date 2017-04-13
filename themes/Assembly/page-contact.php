@@ -50,6 +50,10 @@
 				</button>
 			</div>
 		</form>
+		<div class="submit-message">
+			<p>thank you for your entry.</p>
+			<p>we will be in touch soon</p>
+		</div>
 	</div>
 </section>
 <section class="photo-overlay-wrap">

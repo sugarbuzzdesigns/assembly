@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:25 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 02:56 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9680,6 +9680,24 @@ CONTACT
 .page-contact .add-photos-carousel .owl-item > div,
 .contact-content .add-photos-carousel .owl-item > div {
   text-align: center;
+}
+.page-contact .submit-message,
+.contact-content .submit-message {
+  display: none;
+  width: 81.81%;
+  margin: 0 auto 30px calc((130%/1440) *100);
+  padding-top: 79px;
+  padding-bottom: 100px;
+}
+.page-contact .submit-message p,
+.contact-content .submit-message p {
+  font-size: 2.375rem;
+  line-height: 2.6875rem;
+  width: 90%;
+  font-family: pangrambold;
+  margin: 0;
+  line-height: 1.13;
+  color: #fff;
 }
 .page-contact form,
 .contact-content form {
