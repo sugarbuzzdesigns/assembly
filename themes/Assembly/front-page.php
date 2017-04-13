@@ -345,6 +345,10 @@
 		</div>
 	<?php else : ?>
 		<style>
+			.loader-wrap {
+				display: none !important;
+			}
+
 			.footer {
 				display: none;
 			}
