@@ -1771,7 +1771,8 @@ HOME PAGE STYLES
 		z-index: 2;
 
 		.tile-img {
-			background: rgba(0,0,0,.15);
+			// background: rgba(0,0,0,.15);
+			background: #e6e6e6;
 		}
 
 		.tile-img img {
@@ -1813,7 +1814,7 @@ HOME PAGE STYLES
 		}
 
 		.video {
-			background: rgba(0,0,0,.15);
+			background: #e6e6e6;
 			cursor: pointer;
 
 			.image-clip-bg {
@@ -2722,6 +2723,7 @@ CASE STUDIES Page
 	.tile {
 		width: 77.1%;
 		margin-bottom: 18.81%;
+		z-index: 1;
 
 		&.left-margin-sm {
 			margin-left: 10.87%;
@@ -2935,7 +2937,8 @@ CASE STUDIES Page
 			position: relative;
 
 			.group {
-				display: inline;
+				width: 100%;
+				float: left;
 			}
 		}
 
@@ -3020,7 +3023,7 @@ CASE STUDIES Page
 	@at-root .no-touch {
 		.case-study-container {
 			.tile-img {
-				background: rgba(0,0,0,.10);
+				background: #e6e6e6;
 				cursor: pointer;
 
 				img {

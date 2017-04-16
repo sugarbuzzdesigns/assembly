@@ -172,18 +172,18 @@
 					</div>
 				</div>
 				<div class="case-study-details">
-					<?php include 'includes/content/case-studies/custom/default.php' ?>
-					<?php include 'includes/content/case-studies/modular/default.php' ?>
+					<?php include 'includes/content/case-studies/custom/default.php'; ?>
+					<?php include 'includes/content/case-studies/modular/default.php'; ?>
 					<!-- CUSTOM STUDIES -->
-					<?php include 'includes/content/case-studies/custom/super.php' ?>
-					<?php include 'includes/content/case-studies/custom/hospitality.php' ?>
-					<?php include 'includes/content/case-studies/custom/experiential.php' ?>
-					<?php include 'includes/content/case-studies/custom/sporting.php' ?>
+					<?php include 'includes/content/case-studies/custom/super.php'; ?>
+					<?php include 'includes/content/case-studies/custom/hospitality.php'; ?>
+					<?php include 'includes/content/case-studies/custom/experiential.php'; ?>
+					<?php include 'includes/content/case-studies/custom/sporting.php'; ?>
 					<!-- MODULAR STUDIES -->
-					<?php include 'includes/content/case-studies/modular/super.php' ?>
-					<?php include 'includes/content/case-studies/modular/hospitality.php' ?>
-					<?php include 'includes/content/case-studies/modular/experiential.php' ?>
-					<?php include 'includes/content/case-studies/modular/sporting.php' ?>
+					<?php include 'includes/content/case-studies/modular/super.php'; ?>
+					<?php include 'includes/content/case-studies/modular/hospitality.php'; ?>
+					<?php include 'includes/content/case-studies/modular/experiential.php'; ?>
+					<?php include 'includes/content/case-studies/modular/sporting.php'; ?>
 				</div>
 				<a class="view-case-study" href="#" data-title="modular">
 					<?php include 'library/images/svg/view-modular-case-study.svg'; ?>

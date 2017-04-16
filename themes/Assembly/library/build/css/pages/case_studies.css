@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 10:24 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-15 11:42 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -973,5 +973,96 @@ probably best not to use it. I mean, were you going to anyway? */
     opacity: 1;
     -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
             transform: translate3d(-96%, -33%, 0) scale(1);
+  }
+}
+.group {
+  position: relative;
+}
+
+.case-study-landing[data-kit-type="custom"] .group-1 .mesh-bg {
+  top: 320px;
+  right: 0;
+  width: 225px;
+  height: 600px;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="custom"] .group-1 .mesh-bg {
+    top: 209px;
+    right: 9.5%;
+    width: calc(779%/1440*100);
+    height: calc(678%/1440*100);
+  }
+}
+.case-study-landing[data-kit-type="custom"] .group-3 .mesh-bg {
+  top: 130px;
+  left: 6px;
+  right: auto;
+  width: 319px;
+  height: 342px;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="custom"] .group-3 .mesh-bg {
+    top: 12%;
+    left: 3.5%;
+    right: auto;
+    width: 45%;
+    height: 66%;
+  }
+}
+
+.case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+  top: calc(88%/414*100);
+  width: calc(265%/414*100);
+  height: 78%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+    top: 50%;
+    width: 40%;
+    height: 35%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+    top: 48%;
+    width: calc(500%/1440*100);
+    height: 44%;
+  }
+}
+.case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+  top: 18%;
+  right: 4%;
+  width: 88%;
+  height: 110%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+    top: 0;
+    right: 9.5%;
+    width: 60%;
+    height: 110%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+    right: 0.5%;
+    width: 63%;
+    height: 80%;
+  }
+}
+.case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+  top: 56%;
+  height: 37%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+    top: 36%;
+    width: 40%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:03 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 05:54 pm - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -208,6 +208,10 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				this.staticLoader();
 			}
 
+			if(window.location.search.indexOf('loader=false') !== -1){
+				$('.loader-wrap').addClass('remove');
+			}
+
 			$('.loader-wrap .initial span').addClass('start');
 
 			this.intervals = {};
@@ -370,10 +374,6 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			var myImage = new Image();
 			var $loader = $('.loader');
 			var loopCount = 2;
-
-			if(window.location.search.indexOf('loader=false') !== -1){
-				$('.loader-wrap').addClass('remove');
-			}
 
 			$('.loader-img').imagesLoaded( function() {
 				$('.loader-img-placeholder').remove();

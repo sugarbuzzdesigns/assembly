@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-13 12:19 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-15 11:32 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9264,7 +9264,7 @@ HOME PAGE STYLES
 }
 .home .tile .tile-img,
 .home .video .tile-img {
-  background: rgba(0, 0, 0, 0.15);
+  background: #e6e6e6;
 }
 .home .tile .tile-img img,
 .home .video .tile-img img {
@@ -9289,7 +9289,7 @@ HOME PAGE STYLES
   cursor: pointer;
 }
 .no-touch .home .video {
-  background: rgba(0, 0, 0, 0.15);
+  background: #e6e6e6;
   cursor: pointer;
 }
 .no-touch .home .video .image-clip-bg .inner {
@@ -10129,6 +10129,7 @@ CASE STUDIES Page
 .page-case-studies .tile {
   width: 77.1%;
   margin-bottom: 18.81%;
+  z-index: 1;
 }
 .page-case-studies .tile.left-margin-sm {
   margin-left: 10.87%;
@@ -11639,7 +11640,8 @@ CASE STUDIES Page
   position: relative;
 }
 .page-case-studies .content .case-study-details .group {
-  display: inline;
+  width: 100%;
+  float: left;
 }
 .page-case-studies .content .content-header {
   padding-bottom: 20.77%;
@@ -11706,7 +11708,7 @@ CASE STUDIES Page
   background: #fff;
 }
 .no-touch .case-study-container .tile-img {
-  background: rgba(0, 0, 0, 0.1);
+  background: #e6e6e6;
   cursor: pointer;
 }
 .no-touch .case-study-container .tile-img img {

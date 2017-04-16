@@ -3,7 +3,8 @@
 			<h4>Custom Kits</h4>
 			<p>We’re bringing a new look &amp; feel to event spaces with custom structures that rival the look and function of normal buildings. assembly is uniquely able to turn a client’s vision into reality. We facilitate every stage of the process: from design to installation and removal.</p>
 		</div>
-		<div class="group">
+		<div class="group group-1">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-med">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -31,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-2">
 			<div data-ratio=".02" class="tile left-margin-sm" data-image-ratio="3:4">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -50,7 +51,8 @@
 				<p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada ferme ntum nisi vel lobortis heks.</p>
 			</blockquote>
 		</div>
-		<div class="group">
+		<div class="group group-3">
+			<div class="mesh-bg dark wide"></div>
 			<div data-ratio=".08" class="tile left-margin-med"  data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -60,7 +62,7 @@
 				</div>
 				<div class="tile-info">
 					<span class="tile-cat">
-						Super
+						Sporting
 					</span>
 				</div>
 			</div>
@@ -78,7 +80,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-4">
 			<div data-ratio=".07" class="tile left-margin-lrg" data-image-ratio="600:433">
 				<div class="tile-img lazy-load">
 					<div class="image-clip-bg"><div class="inner"></div></div>

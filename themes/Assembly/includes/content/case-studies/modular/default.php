@@ -1,9 +1,10 @@
-''	<div class="case-study-landing case-study-container" data-kit-type="modular" data-category="all">
+	<div class="case-study-landing case-study-container" data-kit-type="modular" data-category="all">
 		<div class="case-study-desc">
 			<h4>Modular Kits</h4>
 			<p>Our high-quality, modular construction systems offer clients an exceptional variety of sizes, shapes and configuration options. The ClearSpan design, for example, offers an unobstructed room view with no center poles or support columns inside the tent.</p>
 		</div>
-		<div class="group">
+		<div class="group group-1">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-med">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -31,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-2">
 			<div data-ratio=".08" class="tile left-margin-med">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -63,7 +64,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-3">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -78,7 +80,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-4">
+			<div class="mesh-bg dark wide"></div>
 			<div data-ratio=".07" class="tile left-margin-lrg">
 				<div class="tile-img lazy-load" data-image-ratio="3:4">
 					<div class="image-clip-bg"><div class="inner"></div></div>

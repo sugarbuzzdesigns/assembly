@@ -206,6 +206,10 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				this.staticLoader();
 			}
 
+			if(window.location.search.indexOf('loader=false') !== -1){
+				$('.loader-wrap').addClass('remove');
+			}
+
 			$('.loader-wrap .initial span').addClass('start');
 
 			this.intervals = {};
@@ -368,10 +372,6 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			var myImage = new Image();
 			var $loader = $('.loader');
 			var loopCount = 2;
-
-			if(window.location.search.indexOf('loader=false') !== -1){
-				$('.loader-wrap').addClass('remove');
-			}
 
 			$('.loader-img').imagesLoaded( function() {
 				$('.loader-img-placeholder').remove();
