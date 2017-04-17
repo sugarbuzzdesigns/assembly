@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-15 11:42 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 10:10 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -42,6 +42,10 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 @media only screen and (min-width: 1030px) {
+  .filter-wrap {
+    z-index: 20;
+  }
+
   .page-case-studies .case-study-svg .back-box {
     display: block;
     width: 3.63%;
@@ -975,6 +979,22 @@ probably best not to use it. I mean, were you going to anyway? */
             transform: translate3d(-96%, -33%, 0) scale(1);
   }
 }
+.content .content-header {
+  position: relative;
+  padding-bottom: 20.77%;
+}
+.content .content-header .mesh-bg {
+  margin-top: calc(97%/414*100);
+  margin-left: 1%;
+  height: 88%;
+  width: calc(362%/414*100);
+}
+@media screen and (min-width: 414px) {
+  .content .content-header .mesh-bg {
+    height: 80%;
+  }
+}
+
 .group {
   position: relative;
 }
@@ -1010,33 +1030,38 @@ probably best not to use it. I mean, were you going to anyway? */
   }
 }
 
-.case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+.case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
   top: calc(88%/414*100);
   width: calc(265%/414*100);
   height: 78%;
 }
 @media screen and (min-width: 768px) {
-  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
     top: 50%;
     width: 40%;
     height: 35%;
   }
 }
 @media screen and (min-width: 1030px) {
-  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
     top: 48%;
     width: calc(500%/1440*100);
     height: 44%;
   }
 }
-.case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+.case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
   top: 18%;
   right: 4%;
   width: 88%;
   height: 110%;
 }
 @media screen and (min-width: 768px) {
-  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
     top: 0;
     right: 9.5%;
     width: 60%;
@@ -1044,25 +1069,29 @@ probably best not to use it. I mean, were you going to anyway? */
   }
 }
 @media screen and (min-width: 1030px) {
-  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
     right: 0.5%;
     width: 63%;
     height: 80%;
   }
 }
-.case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+.case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
   top: 56%;
   height: 37%;
 }
 @media screen and (min-width: 768px) {
-  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
     top: 36%;
     width: 40%;
     height: 100%;
   }
 }
 @media screen and (min-width: 1030px) {
-  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
     display: none;
   }
 }

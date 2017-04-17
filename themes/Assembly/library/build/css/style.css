@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-15 11:32 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 09:58 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11643,15 +11643,6 @@ CASE STUDIES Page
   width: 100%;
   float: left;
 }
-.page-case-studies .content .content-header {
-  padding-bottom: 20.77%;
-}
-.page-case-studies .content .content-header .mesh-bg {
-  margin-top: calc(95%/414*100);
-  margin-left: 10px;
-  height: calc(340px/414*320);
-  width: calc(360px/414*320);
-}
 .page-case-studies .content .content-header span:nth-child(3) {
   font-size: 0.6875rem;
   font-family: 'gridnikregular';
@@ -11747,14 +11738,15 @@ CASE STUDIES Page
   -webkit-transform: translate3d(0, 150px, 0);
           transform: translate3d(0, 150px, 0);
   opacity: 0;
+  width: 100%;
   display: none;
 }
 .page-case-studies .case-study-container blockquote[data-ratio] {
+  opacity: 0;
   display: none;
 }
 @media screen and (min-width: 768px) {
   .page-case-studies .case-study-container blockquote[data-ratio] {
-    opacity: 0;
     display: block;
   }
 }

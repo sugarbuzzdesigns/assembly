@@ -2,8 +2,28 @@
 @import "../partials/mixins";
 
 @media only screen and (min-width: 1030px) {
+	.filter-wrap {
+		z-index: 20;
+	}
+
 	.page-case-studies {
 		@import "../partials/case_study_hover";
+	}
+}
+
+.content .content-header {
+	position: relative;
+	padding-bottom: 20.77%;
+
+	.mesh-bg {
+	    margin-top: calc(97%/414*100);
+	    margin-left: 1%;
+	    height: 88%;
+	    width: calc(362%/414*100);
+
+	    @include mq(small) {
+			height: 80%;
+	    }
 	}
 }
 
@@ -11,7 +31,6 @@
 	position: relative;
 }
 
-// STILL NEED DESKTOP!!!!
 .case-study-landing[data-kit-type="custom"] {
 	.group-1 {
 		.mesh-bg {
@@ -48,7 +67,8 @@
 	}
 }
 
-.case-study-landing[data-kit-type="modular"] {
+.case-study-landing[data-kit-type="modular"],
+.case-study-category[data-kit-type="modular"] {
 	.group-1 {
 		.mesh-bg {
 			top: calc(88%/414*100);
@@ -108,4 +128,8 @@
 			}
 		}
 	}
+}
+
+.case-study-category[data-kit-type="modular"][data-category="hospitality"] {
+
 }

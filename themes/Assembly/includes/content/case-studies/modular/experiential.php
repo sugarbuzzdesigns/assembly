@@ -4,7 +4,8 @@
 			<p>A unique experience requires a unique structure. Our spaces deliver the unforgettable experience necessary for building the brand/consumer bond required in today’s marketing world. </p>
 		</div>
 
-		<div class="group">
+		<div class="group group-1">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-med">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -32,7 +33,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-2">
 			<div data-ratio=".02" class="tile left-margin-sm">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -64,7 +65,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-3">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -79,7 +81,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-4">
+			<div class="mesh-bg dark wide"></div>
 			<div data-ratio=".07" class="tile left-margin-sm">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>

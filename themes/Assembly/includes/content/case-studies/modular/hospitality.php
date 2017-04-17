@@ -3,7 +3,8 @@
 			<h4>Modular Hospitality</h4>
 			<p>The perfect structure will elevate the presentation of your products and/or services to new or existing clients. And the hospitable experience is only accentuated with one of our differentiating structures.  </p>
 		</div>
-		<div class="group">
+		<div class="group group-1">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-med">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
@@ -63,7 +64,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="group">
+		<div class="group group-3">
+			<div class="mesh-bg dark wide"></div>
 			<div class="tile left-margin-sm">
 				<div class="tile-img lazy-load" data-image-ratio="600:433">
 					<div class="image-clip-bg"><div class="inner"></div></div>
