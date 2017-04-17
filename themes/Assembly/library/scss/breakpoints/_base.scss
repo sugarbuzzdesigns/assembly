@@ -1720,6 +1720,13 @@ HOME PAGE STYLES
 		padding-top: calc(120%/414*100);
 	    position: relative;
 	    z-index: 10;
+	    float: left;
+	    width: 100%;
+	}
+
+	.group {
+		width: 100%;
+		float: left;
 	}
 
 	.company-statement {
@@ -3286,17 +3293,18 @@ ABOUT US Page
 
 				li {
 					display: inline-block;
-					height: 8px;
-					width: 8px;
+					height: 7px;
+					width: 7px;
 					margin-right: 20px;
 					background: #cfcecf;
+					border-radius: 50%;
 
 					&:last-of-type {
 						margin-right: 0;
 					}
 
 					&.active {
-						background: #309ce1;
+						background: #98d8dc;
 					}
 				}
 

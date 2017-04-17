@@ -285,7 +285,7 @@
 												<!-- <button type="button">about</button> -->
 											</div>
 										</div>
-										<div class="slide employee" data-years-experience="26">
+										<div class="slide employee" data-years-experience="10">
 											<div class="tile-inner">
 												<div class="tile-img">
 													<div class="image-clip-bg">
@@ -320,17 +320,15 @@
 						</div>
 					</div>
 				</div>
-				<div>
-					<div class="to-top">
-						<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
-							<g fill="none" fill-rule="evenodd">
-								<text font-family="gridnikregular" font-size="12.9199" fill="#000" transform="translate(0 8)">
-									<tspan x=".8313" y=".9988">TOP</tspan>
-								</text>
-								<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>
-							</g>
-						</svg>
-					</div>
+				<div class="to-top">
+					<svg width="26" height="17" viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg">
+						<g fill="none" fill-rule="evenodd">
+							<text font-family="gridnikregular" font-size="12.9199" fill="#000" transform="translate(0 8)">
+								<tspan x=".8313" y=".9988">TOP</tspan>
+							</text>
+							<path d="M.75 16.199H26" stroke="#000" stroke-width=".5" stroke-dasharray="3,4"/>
+						</g>
+					</svg>
 				</div>
 			</section>
 			<div id="home-video-overlay" class="video-overlay">

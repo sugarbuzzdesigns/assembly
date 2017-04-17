@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 09:58 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 10:56 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -360,12 +360,12 @@ HOME PAGE STYLES
 }
 .home .group {
   width: 100%;
-  overflow: hidden;
   padding-top: 80px;
 }
 .home .group-1 {
   position: relative;
   margin-top: -200px;
+  padding-top: 0;
 }
 .home .group-2 {
   margin-bottom: 65px;
@@ -594,7 +594,7 @@ About Us Page
   transition: opacity 0.5s;
 }
 .page-about-us .employee-list .employee .image-wrap {
-  background: rgba(0, 0, 0, 0.15);
+  background: #e3e3e3;
   position: relative;
 }
 .page-about-us .employee-list .employee .image-clip-bg {
@@ -1663,6 +1663,9 @@ Home Page
 }
 .home .main-content {
   padding-top: calc(181%/1440*100);
+}
+.home .company-statement {
+  margin-bottom: 70px;
 }
 .home .company-statement p {
   width: 53%;

@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 09:58 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-16 10:56 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9226,6 +9226,12 @@ HOME PAGE STYLES
   padding-top: calc(120%/414*100);
   position: relative;
   z-index: 10;
+  float: left;
+  width: 100%;
+}
+.home .group {
+  width: 100%;
+  float: left;
 }
 .home .company-statement {
   position: relative;
@@ -11925,16 +11931,17 @@ ABOUT US Page
 }
 .page-about-us .employees .employee-info .info-nav li {
   display: inline-block;
-  height: 8px;
-  width: 8px;
+  height: 7px;
+  width: 7px;
   margin-right: 20px;
   background: #cfcecf;
+  border-radius: 50%;
 }
 .page-about-us .employees .employee-info .info-nav li:last-of-type {
   margin-right: 0;
 }
 .page-about-us .employees .employee-info .info-nav li.active {
-  background: #309ce1;
+  background: #98d8dc;
 }
 @media screen and (min-width: 768px) {
   .page-about-us .employees .employee-info .info-nav {
@@ -12602,10 +12609,6 @@ PLUS SIZE (MOBILE) Iphone #+
     top: 231px;
     right: -23.8%;
   }
-  .page-about-us .our-approach .copy p {
-    font-size: 0.8125rem;
-    line-height: calc(23/13);
-  }
   .page-about-us .our-approach .slide-number {
     font-size: 8.5rem;
   }
@@ -12860,12 +12863,12 @@ you can add resource intensive styles.
   }
   .home .group {
     width: 100%;
-    overflow: hidden;
     padding-top: 80px;
   }
   .home .group-1 {
     position: relative;
     margin-top: -200px;
+    padding-top: 0;
   }
   .home .group-2 {
     margin-bottom: 65px;
@@ -13096,7 +13099,7 @@ you can add resource intensive styles.
     transition: opacity 0.5s;
   }
   .page-about-us .employee-list .employee .image-wrap {
-    background: rgba(0, 0, 0, 0.15);
+    background: #e3e3e3;
     position: relative;
   }
   .page-about-us .employee-list .employee .image-clip-bg {
@@ -14173,6 +14176,9 @@ you can add resource intensive styles.
   }
   .home .main-content {
     padding-top: calc(181%/1440*100);
+  }
+  .home .company-statement {
+    margin-bottom: 70px;
   }
   .home .company-statement p {
     width: 53%;
