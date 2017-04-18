@@ -75,6 +75,12 @@ $screenWidth: 320;
 	display: none;
 }
 
+.touch .loader {
+	video {
+		display: none;
+	}
+}
+
 .loader-wrap {
 	opacity: 1;
 	position: fixed;

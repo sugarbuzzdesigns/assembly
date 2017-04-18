@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 12:33 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 03:33 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7679,6 +7679,10 @@ SVG Animations
 }
 
 .no-mobile {
+  display: none;
+}
+
+.touch .loader video {
   display: none;
 }
 
