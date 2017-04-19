@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 11:09 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:54 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -241,6 +241,12 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 					_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
 					_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 					_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+				}
+
+				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+					$('.vjs-control-bar').css({
+						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+					});
 				}
 			}, 250));
 

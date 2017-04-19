@@ -764,6 +764,10 @@ VIDEO CONTENT
 		display: none;
 	}
 
+	.vjs-play-control {
+		display: block;
+	}
+
 	&.vjs-paused {
 		.vjs-poster,
 		.vjs-big-play-button {

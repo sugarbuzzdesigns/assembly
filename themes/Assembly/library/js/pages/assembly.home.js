@@ -136,6 +136,18 @@ var assembly = assembly || {};
 		bindEvents: function(){
 			var _this = this;
 
+			assembly.util.env.$win.on('windowResize', function(){
+				if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+					$('.vjs-control-bar').css({
+						bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+					});
+				} else {
+					$('.vjs-control-bar').css({
+						bottom: 0
+					});
+				}
+			});
+
 			$('.video-overlay').on('click', function(evt){
 				evt.stopPropagation();
 
@@ -243,6 +255,16 @@ var assembly = assembly || {};
 					$('#home-video-overlay').removeClass('show');
 				});
 			});
+
+			if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				$('.vjs-control-bar').css({
+					bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+				});
+			} else {
+				$('.vjs-control-bar').css({
+					bottom: 0
+				});
+			}
 		},
 
 		attachPlayerEvents: function(player){

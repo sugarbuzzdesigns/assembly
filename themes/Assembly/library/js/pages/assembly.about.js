@@ -22,6 +22,19 @@ var assembly = assembly || {};
 		bindEvents: function(){
 			var _this = this;
 
+			assembly.util.env.$win.on('windowResize', function(){
+				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+					$('.vjs-control-bar').css({
+						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+					});
+				} else {
+					$('.vjs-control-bar').css({
+						bottom: 0
+					});
+				}
+			});
+
+
 			$('.video-overlay').on('click', function(evt){
 				evt.stopPropagation();
 
@@ -179,6 +192,16 @@ var assembly = assembly || {};
 					$('#about-video-overlay').removeClass('show');
 				});
 			});
+
+			if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				$('.vjs-control-bar').css({
+					bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+				});
+			} else {
+				$('.vjs-control-bar').css({
+					bottom: 0
+				});
+			}
 		},
 
 		waypoints: function(){

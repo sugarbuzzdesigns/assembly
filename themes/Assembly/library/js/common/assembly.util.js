@@ -240,6 +240,12 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 					_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
 					_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
 				}
+
+				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+					$('.vjs-control-bar').css({
+						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+					});
+				}
 			}, 250));
 
 			$('html').on('loaded', function(){

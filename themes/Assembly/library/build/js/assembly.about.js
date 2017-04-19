@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 11:09 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:57 am - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -22,6 +22,19 @@ var assembly = assembly || {};
 
 		bindEvents: function(){
 			var _this = this;
+
+			assembly.util.env.$win.on('windowResize', function(){
+				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+					$('.vjs-control-bar').css({
+						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+					});
+				} else {
+					$('.vjs-control-bar').css({
+						bottom: 0
+					});
+				}
+			});
+
 
 			$('.video-overlay').on('click', function(evt){
 				evt.stopPropagation();
@@ -180,6 +193,16 @@ var assembly = assembly || {};
 					$('#about-video-overlay').removeClass('show');
 				});
 			});
+
+			if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				$('.vjs-control-bar').css({
+					bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+				});
+			} else {
+				$('.vjs-control-bar').css({
+					bottom: 0
+				});
+			}
 		},
 
 		waypoints: function(){
