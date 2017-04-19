@@ -1,6 +1,7 @@
 	<div class="case-study-category case-study-container" data-kit-type="modular" data-category="super">
 		<div class="case-study-desc">
 			<h4>Modular Super</h4>
+			<p>coming soon</p>
 			<!-- <p>Lorem ipsum dolor sit amet, consf ectetur adipiscing elit. In tincidunt elementum orci in pretium. Mauris malesuada fermentum nisi vel lobortis heks.</p> -->
 		</div>
 		<div class="group group-1">
