@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:58 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 01:06 am - User: Phoydar */
 /*
 Parallax.js
  */
@@ -153,12 +153,18 @@ var assembly = assembly || {};
 				evt.stopPropagation();
 
 				$(this).removeClass('show');
+
+				setTimeout(function(){
+					$('html').removeClass('video-open');
+				}, 300);
+
 				_this.homeVideoReel.pause();
 			});
 
 			$('.video.module').on('click', function(){
 				var videoId = $(this).data('video-id');
 
+				$('html').addClass('video-open');
 				$('#' + videoId).parent().addClass('show').removeClass('hidden');
 
 				_this.homeVideoReel.play();
@@ -177,6 +183,9 @@ var assembly = assembly || {};
 			});
 
 			$(document).on('escape', function(){
+				setTimeout(function(){
+					$('html').removeClass('video-open');
+				}, 300);
 				$('#home-video-overlay').removeClass('show');
 				_this.homeVideoReel.pause();
 			});
@@ -253,6 +262,9 @@ var assembly = assembly || {};
 				$('#home-video-overlay').data('videojs', this);
 
 				this.on('ended', function(){
+					setTimeout(function(){
+						$('html').removeClass('video-open');
+					}, 300);
 					$('#home-video-overlay').removeClass('show');
 				});
 			});

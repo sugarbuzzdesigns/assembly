@@ -38,6 +38,9 @@ var assembly = assembly || {};
 			$('.video-overlay').on('click', function(evt){
 				evt.stopPropagation();
 
+				setTimeout(function(){
+					$('html').removeClass('video-open');
+				}, 300);
 				$(this).removeClass('show');
 				_this.aboutVideoReel.pause();
 			});
@@ -45,12 +48,16 @@ var assembly = assembly || {};
 			$('.video.module').on('click', function(){
 				var videoId = $(this).data('video-id');
 
+				$('html').addClass('video-open');
 				$('#' + videoId).parent().addClass('show').removeClass('hidden');
 
 				_this.aboutVideoReel.play();
 			});
 
 			$(document).on('escape', function(){
+				setTimeout(function(){
+					$('html').removeClass('video-open');
+				}, 300);
 				$('#about-video-overlay').removeClass('show');
 				_this.aboutVideoReel.pause();
 			});
@@ -190,6 +197,10 @@ var assembly = assembly || {};
 
 				this.on('ended', function(){
 					$('#about-video-overlay').removeClass('show');
+
+					setTimeout(function(){
+						$('html').removeClass('video-open');
+					}, 300);
 				});
 			});
 

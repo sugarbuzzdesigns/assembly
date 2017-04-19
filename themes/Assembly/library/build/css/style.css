@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:17 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 01:03 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8248,6 +8248,10 @@ CAROUSEL MODULES
 /*********************
 VIDEO CONTENT
 **********************/
+html.video-open {
+  cursor: url(../../images/svg/close-x-dark.svg), auto;
+}
+
 .video-overlay {
   position: fixed;
   top: 0;
@@ -8262,7 +8266,6 @@ VIDEO CONTENT
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
   z-index: 1000000;
-  cursor: url(../../images/svg/close-x-dark.svg), auto;
 }
 .video-overlay .video-js {
   position: absolute;
