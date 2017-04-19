@@ -1,0 +1,8 @@
+@import "../partials/mixins";
+@import "../partials/functions";
+
+@include mq(medium) {
+	.page-about-us .projects .carousel .tile-inner {
+		padding: 0;
+	}
+}

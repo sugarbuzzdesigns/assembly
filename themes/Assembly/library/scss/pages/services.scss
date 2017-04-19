@@ -25,6 +25,7 @@ SERVICES Page
 		font-family: 'pangrambold';
 		font-size: rem(32);
 		margin: 24% auto 11%;
+		margin-left: calc(8px/414*100 + 43px);
 		width: 77%;
 	}
 
@@ -249,11 +250,17 @@ SERVICES Page
 		}
 
 		.section-header {
-	    	margin: 242px 0 0 8.43%;
+			font-size: 40px;
+		    margin: 132px 0 30px 8.43%;
+		    margin-left: calc(8px/414*100 + 43px);
 		}
 
 		.mesh-bg {
 			margin-top: 216px;
+		}
+
+		.filter-wrap {
+			width: 88%;
 		}
 
 		.filter-menu {
@@ -819,6 +826,16 @@ SERVICES Page
 
 @include mq(large) {
 	.page-services {
+		.mesh-bg {
+			height: 313px;
+		}
+
+		.section-header {
+			font-size: 72px;
+    		margin: 242px 0 0 8.43%;
+    		margin-left: calc(66%/1440*100 + 66px);
+		}
+
 		.all-services {
 			.tile.interior-buildouts {
 				margin-right: 13.63%;

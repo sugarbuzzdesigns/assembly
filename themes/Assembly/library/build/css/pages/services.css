@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 11:45 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:00 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -111,6 +111,7 @@ SERVICES Page
   font-family: 'pangrambold';
   font-size: 2rem;
   margin: 24% auto 11%;
+  margin-left: calc(8px/414*100 + 43px);
   width: 77%;
 }
 .page-services .filter-wrap {
@@ -307,10 +308,15 @@ SERVICES Page
     background: transparent;
   }
   .page-services .section-header {
-    margin: 242px 0 0 8.43%;
+    font-size: 40px;
+    margin: 132px 0 30px 8.43%;
+    margin-left: calc(8px/414*100 + 43px);
   }
   .page-services .mesh-bg {
     margin-top: 216px;
+  }
+  .page-services .filter-wrap {
+    width: 88%;
   }
   .page-services .filter-menu {
     position: fixed;
@@ -748,6 +754,14 @@ SERVICES Page
   }
 }
 @media screen and (min-width: 1030px) {
+  .page-services .mesh-bg {
+    height: 313px;
+  }
+  .page-services .section-header {
+    font-size: 72px;
+    margin: 242px 0 0 8.43%;
+    margin-left: calc(66%/1440*100 + 66px);
+  }
   .page-services .all-services .tile.interior-buildouts {
     margin-right: 13.63%;
   }
