@@ -432,7 +432,20 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 		},
 
 		videoLoader: function(){
-			$('.loader video').attr('src', $('.loader video').data('src'));
+			$('.loader video').on('canplay', function(){
+				console.log('can play loader');
+				$(this).addClass('canplay');
+				$('.loader-img-placeholder').hide();
+			});
+
+			$('.loader video').on('loadstart', function(){
+				console.log('load start');
+			});
+
+			setTimeout(function(){
+
+				$('.loader video').attr('src', $('.loader video').data('src'));
+			}, 1000);
 
 			$('.loader video').data('play-count', 0);
 			$('.loader video').get(0).play();

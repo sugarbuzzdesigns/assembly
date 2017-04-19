@@ -54,7 +54,7 @@ var assembly = assembly || {};
 				slickCarousel = $carousel.slick({
 					slidesToShow: slidesToShow,
 					initialSlide: start,
-					infinite: false,
+					infinite: true,
 					touchMove: false,
 					arrows: false,
 					easing: 'ease-in',
@@ -108,7 +108,7 @@ var assembly = assembly || {};
 			$ourApproachCarousel.slick({
 				slidesToShow: 1,
 				initialSlide: 0,
-				infinite: false,
+				infinite: true,
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
@@ -146,7 +146,7 @@ var assembly = assembly || {};
 			$employeeCarousel.slick({
 				slidesToShow: 1,
 				initialSlide: 0,
-				infinite: false,
+				infinite: true,
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',

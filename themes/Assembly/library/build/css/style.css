@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 01:03 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 01:51 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7786,20 +7786,35 @@ SVG Animations
 }
 .loader-wrap .loader video {
   width: 100%;
+  transition: opacity 0.5s;
+}
+.loader-wrap .loader video.canplay {
+  opacity: 1;
 }
 .loader-wrap .loader img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .loader-wrap .loader .loader-img-placeholder {
   width: 100%;
   opacity: 0;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+      -ms-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
   transition: -webkit-transform 0.5s, opacity 1s;
   transition: transform 0.5s, opacity 1s;
+}
+@media screen and (min-width: 768px) {
+  .loader-wrap .loader .loader-img-placeholder {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 .loader-wrap .loader .loader-img-placeholder.animate {
   opacity: 1;

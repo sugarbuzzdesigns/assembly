@@ -199,19 +199,30 @@ $screenWidth: 320;
 
 		video {
 			width: 100%;
+			transition: opacity 0.5s;
+
+			&.canplay {
+				opacity: 1;
+			}
 		}
 
 		img {
 			position: absolute;
-			top: 0;
-			left: 0;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
 		}
 
 		.loader-img-placeholder {
 			width: 100%;
 			opacity: 0;
-			transform: scale(0.7);
+			transform: translate(-50%, -50%) scale(0.7);
 			transition: transform 0.5s, opacity 1s;
+
+			@include mq(medium){
+				opacity: 1;
+				transform: translate(-50%, -50%) scale(1);
+			}
 			// animation: ;
 			&.animate {
 				opacity: 1;

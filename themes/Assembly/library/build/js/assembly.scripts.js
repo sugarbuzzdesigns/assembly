@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:54 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 10:48 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -434,7 +434,20 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 		},
 
 		videoLoader: function(){
-			$('.loader video').attr('src', $('.loader video').data('src'));
+			$('.loader video').on('canplay', function(){
+				console.log('can play loader');
+				$(this).addClass('canplay');
+				$('.loader-img-placeholder').hide();
+			});
+
+			$('.loader video').on('loadstart', function(){
+				console.log('load start');
+			});
+
+			setTimeout(function(){
+
+				$('.loader video').attr('src', $('.loader video').data('src'));
+			}, 1000);
 
 			$('.loader video').data('play-count', 0);
 			$('.loader video').get(0).play();
@@ -704,7 +717,7 @@ var assembly = assembly || {};
 				slickCarousel = $carousel.slick({
 					slidesToShow: slidesToShow,
 					initialSlide: start,
-					infinite: false,
+					infinite: true,
 					touchMove: false,
 					arrows: false,
 					easing: 'ease-in',
@@ -758,7 +771,7 @@ var assembly = assembly || {};
 			$ourApproachCarousel.slick({
 				slidesToShow: 1,
 				initialSlide: 0,
-				infinite: false,
+				infinite: true,
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
@@ -796,7 +809,7 @@ var assembly = assembly || {};
 			$employeeCarousel.slick({
 				slidesToShow: 1,
 				initialSlide: 0,
-				infinite: false,
+				infinite: true,
 				touchMove: false,
 				arrows: false,
 				easing: 'ease-in',
