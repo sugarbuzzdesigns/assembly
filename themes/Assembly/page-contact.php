@@ -80,12 +80,14 @@
 				<div class="owl-carousel add-photos-carousel">
 					<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 					<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
-						<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
-						<div class="hover-overlay">
-							<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<div class="close-x">
-									<span></span>
-									<span></span>
+						<div class="image-inner">
+							<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+							<div class="hover-overlay">
+								<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<div class="close-x">
+										<span></span>
+										<span></span>
+									</div>
 								</div>
 							</div>
 						</div>

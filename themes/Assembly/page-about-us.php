@@ -32,7 +32,10 @@
 			<span>Years Experience</span>
 		</div>
 	</div>
-	<div data-ratio=".08" class="video module" data-video-id="about-video-reel">
+	<div data-ratio=".08" class="video video-1 module" data-video-id="about-video-reel">
+		<div class="image-clip-bg">
+			<div class="inner"></div>
+		</div>
 		<img class="mobile-only" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail-mobile.jpg" alt="">
 		<img class="no-mobile desktop" class="video-placeholder" src="<?php echo get_template_directory_uri(); ?>/library/images/00-Video-Thumbnail.jpg" alt="">
 		<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
@@ -46,6 +49,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-1.jpg" alt="">
 							</div>
 							<div class="tile-info">
@@ -57,6 +63,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-2.jpg" alt="">
 							</div>
 							<div class="tile-info">
@@ -68,6 +77,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages//about/01-Modular-Spaces-3.jpg" alt="">
 							</div>
 							<div class="tile-info">
@@ -92,6 +104,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-3.jpg" alt="">
 							</div>
 							<div class="tile-info">
@@ -103,6 +118,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-4.jpg" alt="">
 							</div>
 							<div class="tile-info">
@@ -114,6 +132,9 @@
 					<div class="slide">
 						<div class="tile-inner">
 							<div class="tile-img">
+								<div class="image-clip-bg">
+									<div class="inner"></div>
+								</div>
 								<img src="<?php echo get_template_directory_uri(); ?>/library/images/pages/about/02-Custom-5.jpg" alt="">
 							</div>
 							<div class="tile-info">

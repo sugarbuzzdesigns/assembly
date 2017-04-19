@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 03:32 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 11:45 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -209,6 +209,10 @@ SERVICES Page
 .page-services .content .team-player-wrapper .intro-tile,
 .page-services .content .imagine-experience-wrapper .intro-tile {
   margin-left: 0;
+}
+.page-services .content .team-player-wrapper .intro-tile .tile-info,
+.page-services .content .imagine-experience-wrapper .intro-tile .tile-info {
+  width: 200%;
 }
 .page-services .content .team-player-wrapper .intro-tile .tile-inner,
 .page-services .content .imagine-experience-wrapper .intro-tile .tile-inner {

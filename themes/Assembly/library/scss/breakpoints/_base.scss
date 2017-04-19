@@ -13,6 +13,8 @@ and will be used across all viewports.
 /*********************
 RESPONSIVE LAZY IMAGES
 **********************/
+
+
 .lazy-load .image-clip-bg {
 	display: none;
 }
@@ -1806,11 +1808,59 @@ HOME PAGE STYLES
 	}
 }
 
-.no-touch {
-	.home {
-		.tile {
-			cursor: pointer;
+.no-touch .home,
+.no-touch .page-about-us,
+.no-touch .page-services .all-services,
+.no-touch .page-contact .owl-carousel {
+	.tile,
+	.owl-item {
+		cursor: pointer;
+	}
 
+	.tile .image-clip-bg,
+	.owl-item .image-clip-bg {
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    padding: 20px;
+	    transition: padding .3s;
+	}
+
+	.tile .image-clip-bg .inner,
+	.owl-item .image-clip-bg .inner {
+		height: 100%;
+		width: 100%;
+		background: #fff;
+	}
+
+	.tile .tile-image,
+	.owl-item .image {
+		position: relative;
+	}
+
+	.tile .tile-image img,
+	.owl-item .image img {
+		transition: opacity .3s, clip-path .3s;
+		clip-path: inset(0);
+		width: 100%;
+	}
+
+	.tile .tile-img:hover img {
+	    clip-path: inset(20px);
+	    opacity: .4;
+	}
+
+	.owl-item .image:hover img {
+		clip-path: inset(10px);
+		opacity: .3;
+	}
+}
+
+.no-touch {
+
+		.tile {
 			// .image-clip-bg {
 			// 	opacity: 0;
 			// }
@@ -1854,7 +1904,6 @@ HOME PAGE STYLES
 				}
 			}
 		}
-	}
 }
 
 /*********************
@@ -1920,10 +1969,13 @@ Tiles
 		display: block;
 		margin-bottom: rem(15);
 		position: relative;
+		background: #e3e3e3;
 
 		img {
 			max-width: 100%;
-			transition: opacity 0.5s;
+			transition: opacity .3s, clip-path .3s;
+		    clip-path: inset(0);
+		    width: 100%;
 		}
 	}
 
@@ -2153,6 +2205,11 @@ CONTACT
 			cursor: pointer;
 			position: relative;
 
+			.image-inner {
+				background: #e6e6e6;
+				position: relative;
+			}
+
 			.hover-overlay {
 				transition: opacity 0.5s;
 				opacity: 0;
@@ -2163,7 +2220,7 @@ CONTACT
 				left: 0;
 				right: 0;
 				bottom: 0;
-				background: rgba(255,255,255,.8);
+				// background: rgba(255,255,255,.8);
 			}
 
 			.plus-box {

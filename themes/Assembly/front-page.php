@@ -63,7 +63,7 @@
 					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 				</header>
 				<div class="group group-0">
-					<div class="company-statement module">
+					<div class="company-statement module" data-ratio=".06">
 						<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
 						<p>assembly creates temporary spaces that leave lasting impressions. We inspire designers to rethink the possibilities of short-term space design.</p>
 					</div>
@@ -74,38 +74,6 @@
 						<div class="mesh-bg dark wide"></div>
 						<div class="tile carousel-wrapper">
 							<div class="carousel-inner">
-								<style>
-									.tile .image-clip-bg {
-									    height: 100%;
-									    width: 100%;
-									    position: absolute;
-									    top: 0;
-									    left: 0;
-									    padding: 20px;
-									    transition: padding .3s;
-									}
-
-									.tile .image-clip-bg .inner {
-										height: 100%;
-										width: 100%;
-										background: #fff;
-									}
-
-									.tile .tile-image {
-										position: relative;
-									}
-
-									.tile .tile-image img {
-										transition: opacity .3s, clip-path .3s;
-										clip-path: inset(0);
-										width: 100%;
-									}
-
-									.tile .tile-img:hover img {
-									    clip-path: inset(20px);
-									    opacity: .4;
-									}
-								</style>
 								<a href="/case-studies#modular" class="carousel" data-mobile-position="left" data-mobile-start="front">
 									<?php foreach ($projects1 as $project) : ?>
 									<div class="slide">
@@ -129,7 +97,7 @@
 						</div>
 					</div>
 
-					<div class="projects projects-2 module carousel-module" data-image-ratio="1to1" data-ratio=".12">
+					<div class="projects projects-2 module carousel-module" data-image-ratio="1to1" data-ratio=".07">
 						<div class="tile carousel-wrapper">
 							<div class="carousel-inner">
 								<div class="carousel" data-mobile-position="right" data-mobile-start="end">
@@ -217,7 +185,7 @@
 				</div>
 
 				<div class="group group-3">
-					<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".15">
+					<div class="video video-1 module" data-video-id="home-video-reel" data-ratio=".08">
 						<?php include __DIR__ . '/library/images/svg/play-btn-square.svg'; ?>
 						<div class="image-clip-bg">
 							<div class="inner"></div>

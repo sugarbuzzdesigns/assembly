@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 03:31 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 11:09 pm - User: Phoydar */
 /*
 Parallax.js
  */

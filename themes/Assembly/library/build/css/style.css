@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-18 03:33 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-19 12:05 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9295,25 +9295,101 @@ HOME PAGE STYLES
   transition: padding .3s;
 }
 
-.no-touch .home .tile {
+.no-touch .home .tile,
+.no-touch .home .owl-item,
+.no-touch .page-about-us .tile,
+.no-touch .page-about-us .owl-item,
+.no-touch .page-services .all-services .tile,
+.no-touch .page-services .all-services .owl-item,
+.no-touch .page-contact .owl-carousel .tile,
+.no-touch .page-contact .owl-carousel .owl-item {
   cursor: pointer;
 }
-.no-touch .home .video {
-  background: #e6e6e6;
-  cursor: pointer;
+.no-touch .home .tile .image-clip-bg,
+.no-touch .home .owl-item .image-clip-bg,
+.no-touch .page-about-us .tile .image-clip-bg,
+.no-touch .page-about-us .owl-item .image-clip-bg,
+.no-touch .page-services .all-services .tile .image-clip-bg,
+.no-touch .page-services .all-services .owl-item .image-clip-bg,
+.no-touch .page-contact .owl-carousel .tile .image-clip-bg,
+.no-touch .page-contact .owl-carousel .owl-item .image-clip-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  transition: padding .3s;
 }
-.no-touch .home .video .image-clip-bg .inner {
+.no-touch .home .tile .image-clip-bg .inner,
+.no-touch .home .owl-item .image-clip-bg .inner,
+.no-touch .page-about-us .tile .image-clip-bg .inner,
+.no-touch .page-about-us .owl-item .image-clip-bg .inner,
+.no-touch .page-services .all-services .tile .image-clip-bg .inner,
+.no-touch .page-services .all-services .owl-item .image-clip-bg .inner,
+.no-touch .page-contact .owl-carousel .tile .image-clip-bg .inner,
+.no-touch .page-contact .owl-carousel .owl-item .image-clip-bg .inner {
   height: 100%;
   width: 100%;
   background: #fff;
 }
-.no-touch .home .video img {
+.no-touch .home .tile .tile-image,
+.no-touch .home .owl-item .image,
+.no-touch .page-about-us .tile .tile-image,
+.no-touch .page-about-us .owl-item .image,
+.no-touch .page-services .all-services .tile .tile-image,
+.no-touch .page-services .all-services .owl-item .image,
+.no-touch .page-contact .owl-carousel .tile .tile-image,
+.no-touch .page-contact .owl-carousel .owl-item .image {
+  position: relative;
+}
+.no-touch .home .tile .tile-image img,
+.no-touch .home .owl-item .image img,
+.no-touch .page-about-us .tile .tile-image img,
+.no-touch .page-about-us .owl-item .image img,
+.no-touch .page-services .all-services .tile .tile-image img,
+.no-touch .page-services .all-services .owl-item .image img,
+.no-touch .page-contact .owl-carousel .tile .tile-image img,
+.no-touch .page-contact .owl-carousel .owl-item .image img {
+  transition: opacity .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+  width: 100%;
+}
+.no-touch .home .tile .tile-img:hover img,
+.no-touch .page-about-us .tile .tile-img:hover img,
+.no-touch .page-services .all-services .tile .tile-img:hover img,
+.no-touch .page-contact .owl-carousel .tile .tile-img:hover img {
+  -webkit-clip-path: inset(20px);
+          clip-path: inset(20px);
+  opacity: .4;
+}
+.no-touch .home .owl-item .image:hover img,
+.no-touch .page-about-us .owl-item .image:hover img,
+.no-touch .page-services .all-services .owl-item .image:hover img,
+.no-touch .page-contact .owl-carousel .owl-item .image:hover img {
+  -webkit-clip-path: inset(10px);
+          clip-path: inset(10px);
+  opacity: .3;
+}
+
+.no-touch .video {
+  background: #e6e6e6;
+  cursor: pointer;
+}
+.no-touch .video .image-clip-bg .inner {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.no-touch .video img {
   transition: opacity .3s,-webkit-clip-path .3s;
   transition: opacity .3s,clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
 }
-.no-touch .home .video:hover img {
+.no-touch .video:hover img {
   -webkit-clip-path: inset(20px);
           clip-path: inset(20px);
   opacity: .4;
@@ -9371,10 +9447,15 @@ Tiles
   display: block;
   margin-bottom: 0.9375rem;
   position: relative;
+  background: #e3e3e3;
 }
 .tile .tile-img img {
   max-width: 100%;
-  transition: opacity 0.5s;
+  transition: opacity .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+  width: 100%;
 }
 .tile .tile-info {
   position: relative;
@@ -9579,6 +9660,11 @@ CONTACT
   cursor: pointer;
   position: relative;
 }
+.page-contact .add-photo-overlay .image .image-inner,
+.contact-content .add-photo-overlay .image .image-inner {
+  background: #e6e6e6;
+  position: relative;
+}
 .page-contact .add-photo-overlay .image .hover-overlay,
 .contact-content .add-photo-overlay .image .hover-overlay {
   transition: opacity 0.5s;
@@ -9590,7 +9676,6 @@ CONTACT
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8);
 }
 .page-contact .add-photo-overlay .image .plus-box,
 .contact-content .add-photo-overlay .image .plus-box {
