@@ -48,14 +48,24 @@
 								<div class="form-viewport">
 									<div class="inputs">
 										<label class="active">
-											<p>what impression should your space leave?</p>
+											<p>What type of structure are you looking for?</p>
 											<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-											<input type="text" name="" value="" placeholder="type here">
+											<input type="text" name="" value="" placeholder="start typing">
 										</label>
 										<label>
-											<p>what are you interested in? </p>
+											<p>Do you have a vision you’d like us to build on? </p>
 											<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
-											<input type="text" name="" value="" placeholder="type here">
+											<input type="text" name="" value="" placeholder="start typing">
+										</label>
+										<label>
+											<p>What impression should your space leave? </p>
+											<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+											<input type="text" name="" value="" placeholder="start typing">
+										</label>
+										<label>
+											<p>Please provide your email address and we’ll be in touch. </p>
+											<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
+											<input type="text" name="" value="" placeholder="start typing">
 										</label>
 									</div>
 									<div class="error-message">Please Fill out the field.</div>
@@ -67,16 +77,20 @@
 									</button>
 								</div>
 							</form>
+							<div class="submit-message">
+								<p>thank you for your entry.</p>
+								<p>we will be in touch soon</p>
+							</div>
 						</div>
 					</div>
-					<div class="photo-overlay-wrap">
+					<section class="photo-overlay-wrap">
 						<div class="add-photo-overlay">
 							<div class="mesh-bg dark"></div>
 							<header class="dark">
 								<div class="inner-bg"></div>
 								<h1 class="logo">
 								    <a class="init" href="/">
-								    	<img id="add-photo-overlay-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
+								    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
 								    </a>
 								</h1>
 								<div class="close-btn">
@@ -93,20 +107,17 @@
 									<div class="owl-carousel add-photos-carousel">
 										<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 										<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
-											<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
-											<div class="hover-overlay">
-												<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-													<div class="close-x">
-														<span></span>
-														<span></span>
+											<div class="image-inner">
+												<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+												<div class="hover-overlay">
+													<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+														<div class="close-x">
+															<span></span>
+															<span></span>
+														</div>
 													</div>
 												</div>
 											</div>
-											<style>
-												.plus-box {
-
-												}
-											</style>
 										</div>
 										<?php endforeach; ?>
 									</div>
@@ -125,8 +136,8 @@
 								<span></span>
 							</a>
 						</div>
-					</div>
-					<div class="add-photo">
+					</section>
+					<section class="add-photo">
 						<h3>add photo</h3>
 						<div class="photos-wrap">
 							<div class="inner">
@@ -141,14 +152,14 @@
 								<?php endforeach; ?>
 							</div>
 						</div>
-					</div>
+					</section>
 
 					<div id="contact-map"></div>
 
 					<div class="contact-us no-mobile">
 						<a class="col" href="mailto:hello@byassembly.com">hello@byassembly.com</a>
 						<a class="col" href="tel:+01-678-287-7493" title="Phone Number">678.287.7493</a>
-						<span class="col">33.76622 - 84.57548</span>
+						<span class="col">33.7724 - -84.3653</span>
 					</div>
 
 					<div class="no-mobile to-top-wrap">
@@ -168,7 +179,7 @@
 						var map;
 						function initMap() {
 							map = new google.maps.Map(document.getElementById('contact-map'), {
-								center: {lat: -34.397, lng: 150.644},
+								center: {lat: 33.772465, lng: -84.3653764},
 								zoom: 8,
 								zoomControl: true,
 								mapTypeControl: false,
@@ -180,7 +191,7 @@
 							});
 
 							var marker = new google.maps.Marker({
-								position: {lat: -34.397, lng: 150.644},
+								position: {lat: 33.772465, lng: -84.3653764},
 								map: map,
 								icon: {
 									url: '<?php echo get_template_directory_uri(); ?>/library/images/icons/map-marker.png',
@@ -196,8 +207,9 @@
 						}
 					</script>
 					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOsrcXj4TqrhgGyWE58MMARuDqze0S9Ek&callback=initMap" async defer></script>
+					<?php get_footer('contact'); ?>
 				</div>
-			</div>
+			</div><!-- end contact drawer -->
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 	</body>
