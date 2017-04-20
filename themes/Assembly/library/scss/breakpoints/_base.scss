@@ -744,7 +744,7 @@ html.video-open {
 
 	img {
 		width: 100%;
-		transition: opacity .3s, clip-path .3s;
+		transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 	}
 }
 // play btn svg width="58px" height="58px"
@@ -1809,7 +1809,7 @@ HOME PAGE STYLES
 		}
 
 		.tile-img img {
-			transition: opacity .3s,clip-path .3s;
+			transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 			clip-path: inset(0);
 			width: 100%;
 		}
@@ -1860,7 +1860,7 @@ HOME PAGE STYLES
 
 	.tile .tile-image img,
 	.owl-item .image img {
-		transition: opacity .3s, clip-path .3s;
+		transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 		clip-path: inset(0);
 		width: 100%;
 	}
@@ -1907,7 +1907,7 @@ HOME PAGE STYLES
 			}
 
 			img {
-				transition: opacity .3s,clip-path .3s;
+				transition: opacity .3s,clip-path .3s, -webkit-clip-path .3s;
 				clip-path: inset(0);
 			}
 
@@ -1991,7 +1991,7 @@ Tiles
 
 		img {
 			max-width: 100%;
-			transition: opacity .3s, clip-path .3s;
+			transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 		    clip-path: inset(0);
 		    width: 100%;
 		}
@@ -2085,7 +2085,7 @@ EMPLOYEES
 		}
 
 		.slide img {
-			transition: transform .5s ease-in-out, opacity .5s, clip-path .3s;
+			transition: transform .5s ease-in-out, opacity .5s, clip-path .3s, -webkit-clip-path .3s;
 			transform: translate3d(-40%,0,0);
 		}
 
@@ -3107,7 +3107,7 @@ CASE STUDIES Page
 				cursor: pointer;
 
 				img {
-					transition: opacity .3s,clip-path .3s;
+					transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 					clip-path: inset(0);
 				}
 

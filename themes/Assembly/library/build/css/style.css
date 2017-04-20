@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-20 12:09 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-20 12:16 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -8302,8 +8302,8 @@ html.video-open {
 }
 .video.module img {
   width: 100%;
-  transition: opacity .3s, -webkit-clip-path .3s;
-  transition: opacity .3s, clip-path .3s;
+  transition: opacity .3s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 }
 
 .video-wrapper {
@@ -9299,8 +9299,8 @@ HOME PAGE STYLES
 }
 .home .tile .tile-img img,
 .home .video .tile-img img {
-  transition: opacity .3s,-webkit-clip-path .3s;
-  transition: opacity .3s,clip-path .3s;
+  transition: opacity .3s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
   width: 100%;
@@ -9372,8 +9372,8 @@ HOME PAGE STYLES
 .no-touch .page-services .all-services .owl-item .image img,
 .no-touch .page-contact .owl-carousel .tile .tile-image img,
 .no-touch .page-contact .owl-carousel .owl-item .image img {
-  transition: opacity .3s, -webkit-clip-path .3s;
-  transition: opacity .3s, clip-path .3s;
+  transition: opacity .3s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
   width: 100%;
@@ -9405,8 +9405,8 @@ HOME PAGE STYLES
   background: #fff;
 }
 .no-touch .video img {
-  transition: opacity .3s,-webkit-clip-path .3s;
-  transition: opacity .3s,clip-path .3s;
+  transition: opacity .3s,-webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s,clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
 }
@@ -9472,8 +9472,8 @@ Tiles
 }
 .tile .tile-img img {
   max-width: 100%;
-  transition: opacity .3s, -webkit-clip-path .3s;
-  transition: opacity .3s, clip-path .3s;
+  transition: opacity .3s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
   width: 100%;
@@ -9553,8 +9553,8 @@ EMPLOYEES
   font-size: 0.6875rem;
 }
 .employees .carousel .slide img {
-  transition: -webkit-transform .5s ease-in-out, opacity .5s, -webkit-clip-path .3s;
-  transition: transform .5s ease-in-out, opacity .5s, clip-path .3s;
+  transition: -webkit-transform .5s ease-in-out, opacity .5s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: transform .5s ease-in-out, opacity .5s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-transform: translate3d(-40%, 0, 0);
           transform: translate3d(-40%, 0, 0);
 }
@@ -11820,8 +11820,8 @@ CASE STUDIES Page
   cursor: pointer;
 }
 .no-touch .case-study-container .tile-img img {
-  transition: opacity .3s,-webkit-clip-path .3s;
-  transition: opacity .3s,clip-path .3s;
+  transition: opacity .3s, -webkit-clip-path .3s, -webkit-clip-path .3s;
+  transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
 }
