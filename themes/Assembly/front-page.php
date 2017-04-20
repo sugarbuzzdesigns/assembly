@@ -216,8 +216,8 @@
 						<div class="employee-carousel-wrapper">
 							<div class="years-experience interactive">
 								<div class="years-experience-numbers">
-									<span class="tens">2</span>
-									<span class="ones">6</span>
+									<span class="tens">1</span>
+									<span class="ones">0</span>
 								</div>
 								<div class="years-experience-text">
 									<span>Years Experience</span>
