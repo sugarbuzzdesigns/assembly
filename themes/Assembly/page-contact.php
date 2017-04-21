@@ -81,7 +81,7 @@
 					<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 					<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
 						<div class="image-inner">
-							<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+							<img class="owl-lazy" data-src="<?php echo $photo['src']; ?>" alt="">
 							<div class="hover-overlay">
 								<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<div class="close-x">
@@ -116,7 +116,7 @@
 		<div class="inner">
 			<div class="slide photo open-add-images" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/add_photo_icon.png);"></div>
 			<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
-			<div id="contact-photo-<?php echo $count; ?>" class="photo slide addable-image" style="background-image: url(<?php echo $img_dir . $photo['src']; ?>);">
+			<div id="contact-photo-<?php echo $count; ?>" class="photo slide addable-image" style="background-image: url(<?php echo $photo['src']; ?>);">
 				<a href="#" class="remove-photo">
 					<span></span>
 					<span></span>

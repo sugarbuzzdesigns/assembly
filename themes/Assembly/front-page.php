@@ -13,7 +13,7 @@
 				<header class="light">
 					<h1 class="logo">
 					    <a class="init" href="/">
-					    	<!-- <img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt=""> -->
+					    	<!-- <img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white-resized.png" alt=""> -->
 					    </a>
 					</h1>
 					<?php include __DIR__ . '/includes/menu-btn.php'; ?>

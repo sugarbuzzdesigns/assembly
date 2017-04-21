@@ -156,8 +156,9 @@ var assembly = assembly || {};
 			});
 
 			_this.$addPhotosCarousel.owlCarousel({
-				mouseDrag: false,
+				mouseDrag: true,
 				pullDrag: false,
+				lazyLoad:true,
 				responsive : {
 				    // breakpoint from 0 up
 				    0 : {
@@ -172,11 +173,13 @@ var assembly = assembly || {};
 				    // breakpoint from 768 up
 				    768 : {
 				        items: 3,
+				        slideBy: 3,
 				        stagePadding: 0
 				    },
 				    // breakpoint from 1030 up
 				    1030 : {
 				        items: 5,
+				        slideBy: 5,
 				        stagePadding: 0
 				    }
 				}
