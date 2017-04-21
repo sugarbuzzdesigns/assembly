@@ -38,7 +38,7 @@
 								<header class="light">
 									<h1 class="logo">
 									    <a class="init" href="/">
-									    	<!-- <img id="contact-drawer-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt=""> -->
+									    	<img id="contact-drawer-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
 									    </a>
 									</h1>
 									<?php include __DIR__ . '/includes/menu-btn.php'; ?>
@@ -108,7 +108,7 @@
 										<?php $count = 0; foreach ($contactPhotos as $photo) : $count++; ?>
 										<div class="image" data-photo-id="contact-photo-<?php echo $count; ?>">
 											<div class="image-inner">
-												<img src="<?php echo $img_dir . $photo['src']; ?>" alt="">
+												<img class="owl-lazy" data-src="<?php echo $photo['src']; ?>" alt="">
 												<div class="hover-overlay">
 													<div class="plus-box" viewBox="71 106 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 														<div class="close-x">
