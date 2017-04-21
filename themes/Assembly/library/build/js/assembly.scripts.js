@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-21 11:55 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-21 12:14 pm - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -460,7 +460,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				var count = $('.loader video').data('play-count');
 				count++;
 
-				if(count < 2){
+				if(count < 1){
 					$('.loader video').get(0).play();
 				} else {
 					$('.loader-wrap').addClass('done');
@@ -835,7 +835,10 @@ var assembly = assembly || {};
 					_this.currentEmployeeSlide = currentSlide;
 				}
 
-				var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
+				var num = $(this).find('.slide.slick-current').data('years-experience')*1;
+
+				console.log(num);
+
 				count(num, $('.years-experience.interactive .tens'), $('.years-experience.interactive .ones'));
 			});
 

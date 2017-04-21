@@ -172,7 +172,10 @@ var assembly = assembly || {};
 					_this.currentEmployeeSlide = currentSlide;
 				}
 
-				var num = $(this).find('.slide').eq(currentSlide).data('years-experience')*1;
+				var num = $(this).find('.slide.slick-current').data('years-experience')*1;
+
+				console.log(num);
+
 				count(num, $('.years-experience.interactive .tens'), $('.years-experience.interactive .ones'));
 			});
 

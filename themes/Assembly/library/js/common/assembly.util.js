@@ -458,7 +458,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				var count = $('.loader video').data('play-count');
 				count++;
 
-				if(count < 2){
+				if(count < 1){
 					$('.loader video').get(0).play();
 				} else {
 					$('.loader-wrap').addClass('done');
