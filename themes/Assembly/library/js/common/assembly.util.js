@@ -248,16 +248,16 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				}
 			}, 250));
 
-			// $('html').on('loaded', function(){
-			// 	$(this).addClass('loaded');
+			$('html').on('loaded', function(){
+				$(this).addClass('loaded');
 
-			// 	_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
-			// 	_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
-			// 	_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
-			// 	_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
-			// 	_this.animateSpriteBG(0, 0, $('#contact-drawer-logo'), 37, 9, 11);
-			// 	_this.animateSpriteBG(0, 0, $('#add-photo-overlay-logo'), 37, 9, 11);
-			// });
+				// _this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
+				// _this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
+				// _this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
+				// _this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+				// _this.animateSpriteBG(0, 0, $('#contact-drawer-logo'), 37, 9, 11);
+				// _this.animateSpriteBG(0, 0, $('#add-photo-overlay-logo'), 37, 9, 11);
+			});
 
 			// $('.landing-logo .logo').hover(
 			// 	function(evt){
