@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:20 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:29 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -449,14 +449,14 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			setTimeout(function(){
 				$('.loader-wrap').addClass('ready');
-				$('html').trigger('loaded');
+				// $('html').trigger('loaded');
 			}, 300);
 
 			$('.loader video').on('ended', function(){
 				var count = $('.loader video').data('play-count');
 				count++;
 
-				if(count < 2){
+				if(count < 1){
 					$('.loader video').get(0).play();
 				} else {
 					$('.loader-wrap').addClass('done');

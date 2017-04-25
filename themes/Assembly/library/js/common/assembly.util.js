@@ -447,14 +447,14 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			setTimeout(function(){
 				$('.loader-wrap').addClass('ready');
-				$('html').trigger('loaded');
+				// $('html').trigger('loaded');
 			}, 300);
 
 			$('.loader video').on('ended', function(){
 				var count = $('.loader video').data('play-count');
 				count++;
 
-				if(count < 2){
+				if(count < 1){
 					$('.loader video').get(0).play();
 				} else {
 					$('.loader-wrap').addClass('done');
