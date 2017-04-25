@@ -2896,21 +2896,6 @@ CONTACT
 	overflow: hidden;
 }
 
-.contact-opened {
-	body {
-		overflow: auto;
-	}
-
-	.wrap {
-		display: none;
-	}
-
-	#contact-drawer {
-		height: auto;
-		position: relative;
-	}
-}
-
 .open-contact #page-footer {
 	.col {
 		transform: translate3d(0,-50%,0);
@@ -2927,6 +2912,25 @@ CONTACT
 
 	.contact-content {
 		opacity: 1;
+	}
+}
+
+.contact-opened {
+	body {
+		overflow: auto;
+	}
+
+	// .wrap {
+	// 	display: none;
+	// }
+
+	#contact-drawer {
+		height: auto;
+		position: relative;
+	}
+
+	#page-footer {
+		display: none;
 	}
 }
 

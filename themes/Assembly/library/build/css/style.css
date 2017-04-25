@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:22 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:47 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10271,17 +10271,6 @@ CONTACT
   overflow: hidden;
 }
 
-.contact-opened body {
-  overflow: auto;
-}
-.contact-opened .wrap {
-  display: none;
-}
-.contact-opened #contact-drawer {
-  height: auto;
-  position: relative;
-}
-
 .open-contact #page-footer .col {
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
@@ -10297,6 +10286,17 @@ CONTACT
 }
 .open-contact #contact-drawer .contact-content {
   opacity: 1;
+}
+
+.contact-opened body {
+  overflow: auto;
+}
+.contact-opened #contact-drawer {
+  height: auto;
+  position: relative;
+}
+.contact-opened #page-footer {
+  display: none;
 }
 
 /*********************
