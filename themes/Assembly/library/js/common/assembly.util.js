@@ -532,6 +532,8 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 				$('html').addClass('open-contact');
 
+				var drawerTop = $('#contact-drawer').offset().top;
+
 				$('#contact-drawer').on(transEndEventName, function(evt){
 					if($(evt.target).is('#contact-drawer') && evt.originalEvent.propertyName === 'transform'){
 						$('html,body').scrollTop(0,0);

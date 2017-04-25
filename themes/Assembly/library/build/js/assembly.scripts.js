@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:33 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:00 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -533,6 +533,8 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				evt.preventDefault();
 
 				$('html').addClass('open-contact');
+
+				var drawerTop = $('#contact-drawer').offset().top;
 
 				$('#contact-drawer').on(transEndEventName, function(evt){
 					if($(evt.target).is('#contact-drawer') && evt.originalEvent.propertyName === 'transform'){
