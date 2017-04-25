@@ -2067,6 +2067,7 @@ HOME PAGE STYLES
 			img {
 				transition: opacity .3s,clip-path .3s, -webkit-clip-path .3s;
 				clip-path: inset(0);
+				position: relative;
 			}
 
 			&:hover {
@@ -2152,6 +2153,7 @@ Tiles
 			transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 		    clip-path: inset(0);
 		    width: 100%;
+		    position: relative;
 		}
 	}
 
