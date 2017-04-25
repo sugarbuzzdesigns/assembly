@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:32 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:37 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -10079,7 +10079,7 @@ CONTACT
 }
 .page-contact .add-photo,
 .contact-content .add-photo {
-  overflow: auto;
+  overflow: hidden;
   background-color: #f4f4f4;
 }
 .page-contact .add-photo h3,
