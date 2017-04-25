@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 08:52 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:18 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -977,6 +977,9 @@ probably best not to use it. I mean, were you going to anyway? */
     opacity: 1;
     -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
             transform: translate3d(-96%, -33%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.show .case-study-svg-cat {
+    pointer-events: auto;
   }
 }
 .content .content-header {
