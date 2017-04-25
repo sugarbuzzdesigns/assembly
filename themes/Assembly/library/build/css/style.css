@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:25 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:44 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -11918,6 +11918,7 @@ CASE STUDIES Page
   transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
+  position: absolute;
 }
 .no-touch .case-study-container .tile-img .image-clip-bg {
   position: absolute;

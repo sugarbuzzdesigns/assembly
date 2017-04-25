@@ -3280,6 +3280,7 @@ CASE STUDIES Page
 				img {
 					transition: opacity .3s, clip-path .3s, -webkit-clip-path .3s;
 					clip-path: inset(0);
+					position: absolute;
 				}
 
 				.image-clip-bg {
