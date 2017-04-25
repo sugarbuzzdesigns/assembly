@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:06 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:23 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -275,10 +275,10 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			$('.main-logo .logo').hover(
 				function(evt){
-					$(this).parent().data('tl2').duration(1.2).play();
+					$(this).parent().data('tl2').duration(1).play();
 				},
 				function(evt){
-					$(this).parent().data('tl2').duration(1.5).reverse();
+					$(this).parent().data('tl2').duration(1).reverse();
 				}
 			);
 

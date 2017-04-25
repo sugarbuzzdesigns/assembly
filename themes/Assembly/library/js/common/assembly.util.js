@@ -273,10 +273,10 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			$('.main-logo .logo').hover(
 				function(evt){
-					$(this).parent().data('tl2').duration(1.2).play();
+					$(this).parent().data('tl2').duration(1).play();
 				},
 				function(evt){
-					$(this).parent().data('tl2').duration(1.5).reverse();
+					$(this).parent().data('tl2').duration(1).reverse();
 				}
 			);
 
