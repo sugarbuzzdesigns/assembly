@@ -9,9 +9,10 @@
 					</div>
 
 					<ul class="social dark">
-						<li class="instagram"><a href="#"></a></li><!--
-						--><li class="twitter"><a href="#"></a></li><!--
-						--><li class="linkedin"><a href="#"></a></li>
+						<li class="instagram"><a href="https://www.instagram.com/byassembly" target="_blank"></a></li><!--
+						--><li class="linkedin"><a href="https://www.linkedin.com/company-beta/15154404" target="_blank"></a></li>
+
+						<!-- REMOVED, WAS 2nd in line <li class="twitter"><a href="https://twitter.com/assemblyspaces" target="_blank"></a></li> -->
 					</ul>
 
 					<p class="source-org copyright"><span>&copy; <?php echo date('Y'); ?> assembly</span><span>All Rights Reserved</span></p>
