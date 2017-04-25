@@ -433,6 +433,7 @@ About Us Page
 			img {
 				transition: opacity 0.3s, clip-path 0.3s;
 				clip-path: inset(0px);
+				position: relative;
 			}
 
 			&:hover {
