@@ -7,16 +7,44 @@
 } ?>
 <section class="contact-landing">
 	<div class="inner">
-		<div class="header-mask landing-logo">
-			<header class="light">
-				<h1 class="logo">
-				    <a class="init" href="/">
-				    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
-				    </a>
-				</h1>
-				<?php include __DIR__ . '/includes/menu-btn.php'; ?>
-			</header>
-		</div>
+		<header>
+			<h1 class="main-logo light">
+		  		<a href="/" class="logo">
+		  			<div class="img"></div>
+					<div class="text">
+						<div class="assembly">
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="m">m</span>
+							<span class="letter" data-letter="b">b</span>
+							<span class="letter" data-letter="l">l</span>
+							<span class="letter" data-letter="y">y</span>
+						</div>
+						<div class="temp-spaces">
+							<span class="letter" data-letter="t">t</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="m">m</span>
+							<span class="letter" data-letter="p">p</span>
+							<span class="letter" data-letter="o">o</span>
+							<span class="letter" data-letter="r">r</span>
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="r">r</span>
+							<span class="letter" data-letter="y">y</span>
+							<span class="letter">&nbsp;</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="p">p</span>
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="c">c</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="s">s</span>
+						</div>
+					</div>
+		  		</a>
+		  	</h1>
+		  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+		</header>
 		<form action="" method="post" accept-charset="utf-8">
 			<div class="form-viewport">
 				<div class="inputs">
@@ -60,12 +88,41 @@
 	<div class="add-photo-overlay">
 		<div class="mesh-bg dark"></div>
 		<header class="dark">
-			<div class="inner-bg"></div>
-			<h1 class="logo">
-			    <a class="init" href="/">
-			    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
-			    </a>
-			</h1>
+			<h1 class="main-logo light">
+		  		<a href="/" class="logo">
+		  			<div class="img"></div>
+					<div class="text">
+						<div class="assembly">
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="m">m</span>
+							<span class="letter" data-letter="b">b</span>
+							<span class="letter" data-letter="l">l</span>
+							<span class="letter" data-letter="y">y</span>
+						</div>
+						<div class="temp-spaces">
+							<span class="letter" data-letter="t">t</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="m">m</span>
+							<span class="letter" data-letter="p">p</span>
+							<span class="letter" data-letter="o">o</span>
+							<span class="letter" data-letter="r">r</span>
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="r">r</span>
+							<span class="letter" data-letter="y">y</span>
+							<span class="letter">&nbsp;</span>
+							<span class="letter" data-letter="s">s</span>
+							<span class="letter" data-letter="p">p</span>
+							<span class="letter" data-letter="a">a</span>
+							<span class="letter" data-letter="c">c</span>
+							<span class="letter" data-letter="e">e</span>
+							<span class="letter" data-letter="s">s</span>
+						</div>
+					</div>
+		  		</a>
+		  	</h1>
 			<div class="close-btn">
 				<svg class="close" viewBox="1345 136 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1345.000000, 137.000000)">

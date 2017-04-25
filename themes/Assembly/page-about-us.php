@@ -6,14 +6,43 @@
 	$devicePrefix = 'desktop';
 } ?>
 <div class="wrap">
-	<header class="scroll-overlay dark">
-		<div class="inner-bg"></div>
-		<h1 class="logo">
-		    <a class="init" href="/">
-		    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
-		    </a>
-		</h1>
-		<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+	<header class="fixed dark">
+		<h1 class="main-logo">
+	  		<a href="/" class="logo">
+	  			<div class="img"></div>
+				<div class="text">
+					<div class="assembly">
+						<span class="letter" data-letter="a">a</span>
+						<span class="letter" data-letter="s">s</span>
+						<span class="letter" data-letter="s">s</span>
+						<span class="letter" data-letter="e">e</span>
+						<span class="letter" data-letter="m">m</span>
+						<span class="letter" data-letter="b">b</span>
+						<span class="letter" data-letter="l">l</span>
+						<span class="letter" data-letter="y">y</span>
+					</div>
+					<div class="temp-spaces">
+						<span class="letter" data-letter="t">t</span>
+						<span class="letter" data-letter="e">e</span>
+						<span class="letter" data-letter="m">m</span>
+						<span class="letter" data-letter="p">p</span>
+						<span class="letter" data-letter="o">o</span>
+						<span class="letter" data-letter="r">r</span>
+						<span class="letter" data-letter="a">a</span>
+						<span class="letter" data-letter="r">r</span>
+						<span class="letter" data-letter="y">y</span>
+						<span class="letter">&nbsp;</span>
+						<span class="letter" data-letter="s">s</span>
+						<span class="letter" data-letter="p">p</span>
+						<span class="letter" data-letter="a">a</span>
+						<span class="letter" data-letter="c">c</span>
+						<span class="letter" data-letter="e">e</span>
+						<span class="letter" data-letter="s">s</span>
+					</div>
+				</div>
+	  		</a>
+	  	</h1>
+	  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 	</header>
 	<section class="landing" data-to-top-anchor>
 		<h1 class="section-header">about us</h1>

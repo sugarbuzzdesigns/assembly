@@ -17,6 +17,11 @@ var assembly = assembly || {};
 			this.bindEvents();
 			this.waypoints();
 			this.initializeVideos();
+			this.browserScrolled = false;
+
+			if(assembly.util.env.$win.scrollTop() > 0) {
+				this.browserScrolled = true;
+			}
 		},
 
 		bindEvents: function(){
@@ -33,7 +38,6 @@ var assembly = assembly || {};
 					});
 				}
 			});
-
 
 			$('.video-overlay').on('click', function(evt){
 				evt.stopPropagation();
@@ -102,7 +106,7 @@ var assembly = assembly || {};
 					}, 750);
 				});
 			} else {
-				console.log('no hash');
+				// console.log('no hash');
 			}
 
 			$('.employees').on('click', function openInfoPanelClickHandler(evt){
@@ -117,13 +121,18 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				$('.scroll-overlay').addClass('going-down');
-				$('.scroll-overlay').removeClass('going-up');
+				if(_this.browserScrolled){
+					_this.browserScrolled = false;
+					return;
+				}
+
+				$('header.fixed').addClass('going-down');
+				$('header.fixed').removeClass('going-up');
 			});
 
 			assembly.util.env.$win.on('scroll-up', function(){
-				$('.scroll-overlay').addClass('going-up');
-				$('.scroll-overlay').removeClass('going-down');
+				$('header.fixed').addClass('going-up');
+				$('header.fixed').removeClass('going-down');
 			});
 
 			if(assembly.util.useragent.deviceType === 'mobile'){
@@ -166,11 +175,11 @@ var assembly = assembly || {};
 
 							$(this).data('cur-slide', curSlide);
 
-							console.log(curSlide);
+							// console.log(curSlide);
 						}
 
 						$('.info-nav li', $(this)).removeClass('active');
-						console.log($('.info-nav li', $(this)).eq(curSlide).addClass('active'));
+						$('.info-nav li', $(this)).eq(curSlide).addClass('active');
 
 						$(this).data('scroll-pos', scrollPos);
 
@@ -181,6 +190,12 @@ var assembly = assembly || {};
 					}, allowPageScroll: 'vertical'
 				});
 			}
+
+			$('html').on('loaded', function(){
+				$('.main-logo').each(function(i, mainLogo){
+					window.greensockLogoAnimation($(mainLogo));
+				});
+			});
 		},
 
 		initializeVideos: function(){
@@ -240,12 +255,12 @@ var assembly = assembly || {};
 
 			$('.carousel-module, .employees').not('.our-approach').waypoint({
 				handler: function(direction) {
-					console.log(this.element);
+					// console.log(this.element);
 					if(direction === 'down'){
 						$(this.element).addClass('in-view');
 						if(assembly.util.useragent.deviceType === 'mobile'){
 							if($(this.element).find('.carousel').data('mobile-position') === 'left'){
-								console.log('go to next');
+								// console.log('go to next');
 								$(this.element).find('.carousel').slick('slickNext');
 							} else {
 								$(this.element).find('.carousel').slick('slickPrev');

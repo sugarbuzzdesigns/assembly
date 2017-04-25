@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-21 12:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:20 am - User: Phoydar */
 /*!
  * Assembly Services Page
  */
@@ -18,6 +18,12 @@ var assembly = assembly || {};
 			// this.setInitialTranslate();
 			this.$currentServiceContainer = $('.all-services');
 			this.setInitialContainerHeights();
+
+			this.browserScrolled = false;
+
+			if(assembly.util.env.$win.scrollTop() > 0) {
+				this.browserScrolled = true;
+			}
 		},
 
 		initSelect2: function(){
@@ -51,8 +57,14 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				$('.scroll-overlay').addClass('going-down');
-				$('.scroll-overlay').removeClass('going-up');
+				if(_this.browserScrolled){
+					_this.browserScrolled = false;
+					return;
+				}
+
+				$('header.fixed').addClass('going-down');
+				$('header.fixed').removeClass('going-up');
+
 				if(_this.$filterMenu.hasClass('show') && $(window).scrollTop() > 50){
 					_this.$filterMenu.removeClass('show');
 				}
@@ -60,8 +72,8 @@ var assembly = assembly || {};
 
 			assembly.util.env.$win.on('scroll-up', function(){
 				if(typeof assembly.scrollAnimating !== 'undefined' && assembly.scrollAnimating === false){
-					$('.scroll-overlay').addClass('going-up');
-					$('.scroll-overlay').removeClass('going-down');
+					$('header.fixed').addClass('going-up');
+					$('header.fixed').removeClass('going-down');
 				}
 				if(!_this.$filterMenu.hasClass('show')){
 					_this.$filterMenu.addClass('show');
@@ -98,6 +110,11 @@ var assembly = assembly || {};
 			// $('.all-services.show').on('allImagesLoaded', function(){
 			// 	$(this).addClass('imagesLoaded');
 			// });
+			$('html').on('loaded', function(){
+				$('.main-logo').each(function(i, mainLogo){
+					window.greensockLogoAnimation($(mainLogo));
+				});
+			});
 		},
 
 		loadServicesImages: function($container){

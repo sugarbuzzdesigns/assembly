@@ -9,16 +9,44 @@
 	<?php if(is_user_logged_in() || $domain == "byassembly.loc" || $domain == "staging.byassembly.com" || $domain == "staging.byassembly.net") : ?>
 	<div class="wrap">
 		<div class="container">
-			<div class="header-mask landing-logo">
-				<header class="light">
-					<h1 class="logo">
-					    <a class="init" href="/">
-					    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white-resized.png" alt="">
-					    </a>
-					</h1>
-					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
-				</header>
-			</div>
+			<header class="fixed">
+				<h1 class="main-logo light">
+			  		<a href="/" class="logo">
+			  			<div class="img"></div>
+						<div class="text">
+							<div class="assembly">
+								<span class="letter" data-letter="a">a</span>
+								<span class="letter" data-letter="s">s</span>
+								<span class="letter" data-letter="s">s</span>
+								<span class="letter" data-letter="e">e</span>
+								<span class="letter" data-letter="m">m</span>
+								<span class="letter" data-letter="b">b</span>
+								<span class="letter" data-letter="l">l</span>
+								<span class="letter" data-letter="y">y</span>
+							</div>
+							<div class="temp-spaces">
+								<span class="letter" data-letter="t">t</span>
+								<span class="letter" data-letter="e">e</span>
+								<span class="letter" data-letter="m">m</span>
+								<span class="letter" data-letter="p">p</span>
+								<span class="letter" data-letter="o">o</span>
+								<span class="letter" data-letter="r">r</span>
+								<span class="letter" data-letter="a">a</span>
+								<span class="letter" data-letter="r">r</span>
+								<span class="letter" data-letter="y">y</span>
+								<span class="letter">&nbsp;</span>
+								<span class="letter" data-letter="s">s</span>
+								<span class="letter" data-letter="p">p</span>
+								<span class="letter" data-letter="a">a</span>
+								<span class="letter" data-letter="c">c</span>
+								<span class="letter" data-letter="e">e</span>
+								<span class="letter" data-letter="s">s</span>
+							</div>
+						</div>
+			  		</a>
+			  	</h1>
+			  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+			</header>
 			<section class="landing">
 				<div class="layer" data-depth="0.00"></div>
 				<div class="background layer" data-depth="0.10">
@@ -52,16 +80,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="main-content" data-to-top-anchor>
-				<header class="scroll-overlay dark">
-					<div class="inner-bg"></div>
-					<h1 class="logo">
-					    <a class="init" href="/">
-					    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
-					    </a>
-					</h1>
-					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
-				</header>
+			<section class="main-content" data-to-top-anchor data-midnight="interior dark">
 				<div class="group group-0">
 					<div class="company-statement module" data-ratio=".06">
 						<?php include __DIR__ . '/library/images/svg/bg-shape-1.svg'; ?>
@@ -127,7 +146,7 @@
 				</div>
 
 				<div class="group group-2">
-					<div class="services module carousel-module" data-ratio="-.08">
+					<div class="services module carousel-module" data-ratio=".02">
 						<div class="tile carousel-wrapper">
 							<div class="carousel-inner">
 								<div class="carousel" data-mobile-position="left" data-mobile-start="front">
@@ -300,7 +319,7 @@
 				</div>
 			</section>
 			<div id="home-video-overlay" class="video-overlay">
-				<video id="home-video-reel" class="video-js vjs-fluid vjs-big-play-centered" controls preload="auto">
+				<video id="home-video-reel" class="video-js vjs-fluid vjs-big-play-centelight" controls preload="auto">
 					<source src="<?php echo get_template_directory_uri(); ?>/library/video/Assembly_EditRev003-1080P_web.mp4" type='video/mp4'>
 					<p class="vjs-no-js">
 						To view this video please enable JavaScript, and consider upgrading to a web browser that

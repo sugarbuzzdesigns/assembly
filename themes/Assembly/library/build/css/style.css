@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-20 10:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:15 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -7148,6 +7148,131 @@ and will be used across all viewports.
 /*********************
 RESPONSIVE LAZY IMAGES
 **********************/
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+.main-logo {
+  margin: 0;
+  color: #000;
+  float: left;
+  padding: 10px 0 20px 15px;
+}
+@media screen and (min-width: 1030px) {
+  .main-logo {
+    padding: 67px 0 20px 0;
+    margin-left: calc(87%/1440*100 - 7px);
+  }
+}
+
+.logo {
+  display: block;
+  float: left;
+}
+
+.logo .img {
+  background-image: url(../../images/sprites/_logo_desktop-init-logo.png);
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 40px;
+  background-size: 3600%;
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  margin-top: 14px;
+}
+@media screen and (min-width: 1030px) {
+  .logo .img {
+    width: 45px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
+.light .logo .img {
+  background-image: url(../../images/sprites/_logo_desktop-init-logo-white.png);
+}
+.light .text span {
+  color: #fff;
+}
+
+.dark .logo .img {
+  background-image: url(../../images/sprites/_logo_desktop-init-logo.png);
+}
+.dark .text span {
+  color: #000;
+}
+
+.interior .logo .img {
+  background-position: 0 0;
+}
+.interior .square-btn .bottom-layer .letter {
+  color: #fff;
+}
+
+.logo .text {
+  font-family: 'pangrambold';
+  position: relative;
+  float: left;
+  margin-left: -2.8px;
+  margin-top: 12px;
+}
+@media screen and (min-width: 1030px) {
+  .logo .text {
+    margin-top: 5px;
+  }
+}
+.logo .text span {
+  font-size: 22px;
+  line-height: normal;
+}
+@media screen and (min-width: 1030px) {
+  .logo .text span {
+    font-size: 34px;
+    letter-spacing: -3px;
+  }
+}
+
+.assembly {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.spacer {
+  display: inline-block;
+  width: 50px;
+}
+
+.temp-spaces {
+  float: left;
+}
+.temp-spaces .temp {
+  margin-right: 50px;
+}
+.temp-spaces .letter {
+  opacity: 0;
+}
+
+.letter {
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  display: block;
+  position: relative;
+  float: left;
+  opacity: 0;
+  letter-spacing: -2px;
+}
+
+.buttons {
+  margin-bottom: 50px;
+}
+
 .lazy-load .image-clip-bg {
   display: none;
 }
@@ -8104,6 +8229,12 @@ MENU & NAVIGATION STYLES
   pointer-events: none;
   overflow: hidden;
 }
+.main-menu .menu-inner .letter {
+  color: #fff;
+}
+.main-menu .menu-inner .logo .img {
+  background-image: url(../../images/sprites/_logo_desktop-init-logo-white.png);
+}
 .main-menu .menu-inner .footer {
   background: transparent;
   position: absolute;
@@ -8543,60 +8674,6 @@ header {
   position: relative;
 }
 
-.logo,
-.menu-logo {
-  font-size: 0px;
-  float: left;
-  margin: 0;
-  position: relative;
-  width: 250px;
-  height: 50px;
-  overflow: hidden;
-  margin-top: calc(4px/414*320);
-  margin-left: calc(8px/414*100);
-}
-.logo a,
-.menu-logo a {
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.logo a img {
-  width: 900%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  pointer-events: none;
-}
-.logo img {
-  display: none;
-  width: 900%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.logo a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-.logo .svg-logo {
-  display: none;
-}
-.logo span {
-  font-size: 33px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .header-icon-logo {
   fill: #fff;
 }
@@ -8735,6 +8812,9 @@ header {
 .dark .main-menu-btn .border {
   border: solid 1px #000;
 }
+.dark .main-menu-btn span {
+  background: #000;
+}
 .dark .main-menu-btn .letter {
   color: #000;
 }
@@ -8869,7 +8949,7 @@ header.light .svg-logo .menu-letter, header.light .svg-logo path, header.light .
   fill: #fff;
 }
 
-header.scroll-overlay {
+header.fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -8880,7 +8960,7 @@ header.scroll-overlay {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-header.scroll-overlay .inner-bg {
+header.fixed .inner-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -8890,19 +8970,19 @@ header.scroll-overlay .inner-bg {
           transform: translate3d(0, 100%, 0);
   background: rgba(255, 255, 255, 0.8);
 }
-header.scroll-overlay .main-menu-btn .bottom-layer .letter {
+header.fixed .main-menu-btn .bottom-layer .letter {
   color: #fff;
 }
-header.scroll-overlay.move-out {
+header.fixed.move-out {
   -webkit-transform: translate(0, -100%);
       -ms-transform: translate(0, -100%);
           transform: translate(0, -100%);
 }
-header.scroll-overlay.abs {
+header.fixed.abs {
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
 }
-header.scroll-overlay.abs.going-up {
+header.fixed.abs.going-up {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -10038,8 +10118,9 @@ CONTACT
 }
 .page-contact .add-photo .photos-wrap,
 .contact-content .add-photo .photos-wrap {
-  overflow: scroll;
-  padding-bottom: 7.25%;
+  overflow-x: scroll;
+  padding-bottom: 67px;
+  margin-bottom: -30px;
 }
 .page-contact .add-photo .photos-wrap .inner,
 .contact-content .add-photo .photos-wrap .inner {
@@ -10243,6 +10324,11 @@ CASE STUDIES Page
   font-family: 'pangrambold';
   font-size: 2.9375rem;
 }
+@media screen and (min-width: 1030px) {
+  .page-case-studies .landing .case-study-category .main-menu-btn {
+    margin-right: calc(49%/720*100);
+  }
+}
 .page-case-studies .tile {
   width: 77.1%;
   margin-bottom: 18.81%;
@@ -10333,11 +10419,11 @@ CASE STUDIES Page
 .page-case-studies .landing .hover-content h3 {
   color: #fff;
 }
-.page-case-studies .landing [data-letter] {
+.page-case-studies .landing h3 [data-letter] {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular.selected [data-letter="m"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="m"], .page-case-studies .landing .modular.selected h3 [data-letter="m"] {
   -webkit-animation-name: modularM;
           animation-name: modularM;
   -webkit-animation-duration: 0.2s;
@@ -10347,7 +10433,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular.selected [data-letter="o"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="o"], .page-case-studies .landing .modular.selected h3 [data-letter="o"] {
   -webkit-animation-name: modularO;
           animation-name: modularO;
   -webkit-animation-duration: 0.2s;
@@ -10357,7 +10443,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular.selected [data-letter="d"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="d"], .page-case-studies .landing .modular.selected h3 [data-letter="d"] {
   -webkit-animation-name: modularD;
           animation-name: modularD;
   -webkit-animation-duration: 0.2s;
@@ -10367,7 +10453,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular.selected [data-letter="u"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="u"], .page-case-studies .landing .modular.selected h3 [data-letter="u"] {
   -webkit-animation-name: modularU;
           animation-name: modularU;
   -webkit-animation-duration: 0.2s;
@@ -10377,7 +10463,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular.selected [data-letter="l"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="l"], .page-case-studies .landing .modular.selected h3 [data-letter="l"] {
   -webkit-animation-name: modularL;
           animation-name: modularL;
   -webkit-animation-duration: 0.2s;
@@ -10387,7 +10473,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular.selected [data-letter="a"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="a"], .page-case-studies .landing .modular.selected h3 [data-letter="a"] {
   -webkit-animation-name: modularA;
           animation-name: modularA;
   -webkit-animation-duration: 0.2s;
@@ -10397,7 +10483,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular.selected [data-letter="r"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="r"], .page-case-studies .landing .modular.selected h3 [data-letter="r"] {
   -webkit-animation-name: modularR;
           animation-name: modularR;
   -webkit-animation-duration: 0.2s;
@@ -11025,7 +11111,7 @@ CASE STUDIES Page
     }
   }
 }
-.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom.selected [data-letter="c"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="c"], .page-case-studies .landing .custom.selected h3 [data-letter="c"] {
   -webkit-animation-name: customC;
           animation-name: customC;
   -webkit-animation-duration: 0.2s;
@@ -11035,7 +11121,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom.selected [data-letter="u"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="u"], .page-case-studies .landing .custom.selected h3 [data-letter="u"] {
   -webkit-animation-name: customU;
           animation-name: customU;
   -webkit-animation-duration: 0.2s;
@@ -11045,7 +11131,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom.selected [data-letter="s"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="s"], .page-case-studies .landing .custom.selected h3 [data-letter="s"] {
   -webkit-animation-name: customS;
           animation-name: customS;
   -webkit-animation-duration: 0.2s;
@@ -11055,7 +11141,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom.selected [data-letter="t"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="t"], .page-case-studies .landing .custom.selected h3 [data-letter="t"] {
   -webkit-animation-name: customT;
           animation-name: customT;
   -webkit-animation-duration: 0.2s;
@@ -11065,7 +11151,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom.selected [data-letter="o"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="o"], .page-case-studies .landing .custom.selected h3 [data-letter="o"] {
   -webkit-animation-name: customO;
           animation-name: customO;
   -webkit-animation-duration: 0.2s;
@@ -11075,7 +11161,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom.selected [data-letter="m"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="m"], .page-case-studies .landing .custom.selected h3 [data-letter="m"] {
   -webkit-animation-name: customM;
           animation-name: customM;
   -webkit-animation-duration: 0.2s;
@@ -11913,18 +11999,23 @@ ABOUT US Page
 .page-about-us {
   background: #fff;
 }
-.page-about-us .scroll-overlay {
-  background: rgba(255, 255, 255, 0.8);
+.page-about-us header.fixed {
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
-.page-about-us .scroll-overlay.going-down {
+@media screen and (min-width: 768px) {
+  .page-about-us header.fixed {
+    background-color: transparent;
+  }
+}
+.page-about-us header.fixed.going-down {
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
 }
-.page-about-us .scroll-overlay.going-up {
+.page-about-us header.fixed.going-up {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -12202,6 +12293,9 @@ ABOUT US Page
 .page-about-us .our-approach .up-down-nav {
   display: none;
 }
+.page-about-us .our-approach .carousel .tile-img {
+  background-color: transparent;
+}
 .page-about-us .our-approach .carousel.atEnd .carousel-next path:nth-child(1) {
   fill: #d6d6d6;
   stroke: #d6d6d6;
@@ -12468,11 +12562,6 @@ PLUS SIZE (MOBILE) Iphone #+
   /*********************
   HEADER STYLES
   *********************/
-  .logo {
-    margin-top: calc(7px);
-    margin-left: calc(7px);
-  }
-
   .main-menu-btn {
     margin-top: 25px;
     margin-right: 20px;
@@ -14022,13 +14111,6 @@ you can add resource intensive styles.
   /*********************
   MAIN LOGO
   **********************/
-  .logo,
-  .menu-logo {
-    width: 373px;
-    height: 77px;
-    margin-top: 48px;
-    margin-left: calc(66%/1440*100);
-  }
   .logo .svg-logo,
   .menu-logo .svg-logo {
     display: none;
@@ -14063,11 +14145,8 @@ you can add resource intensive styles.
   .main-menu .menu-inner {
     min-height: 605px;
   }
-  .main-menu .menu-inner .menu-header {
-    padding-left: calc(66%/1440*100);
-  }
   .main-menu .menu-inner .logo {
-    margin-top: 48px;
+    margin-top: 0;
     margin-left: 0;
   }
   .main-menu .menu-inner .footer {
@@ -14194,11 +14273,6 @@ you can add resource intensive styles.
   /*********************
   h1, h2, h3...
   **********************/
-  h1 {
-    font-size: 4.5rem;
-    line-height: 1.44;
-  }
-
   /*********************
   Utility Classes
   **********************/
@@ -14447,10 +14521,6 @@ you can add resource intensive styles.
   /*********************
   CASE STUDIES Page
   **********************/
-  .page-case-studies .logo {
-    margin-top: 50px;
-    margin-left: calc(67%/720*100);
-  }
   .page-case-studies .case-study-svg {
     display: none;
   }
@@ -14464,6 +14534,10 @@ you can add resource intensive styles.
     /**
      * Custom Animations
      */
+  }
+  .page-case-studies .landing .main-logo {
+    padding: 67px 0 20px;
+    margin-left: calc(87%/720*100 - 7px);
   }
   .page-case-studies .landing .section-header {
     z-index: 0;
@@ -14507,10 +14581,6 @@ you can add resource intensive styles.
     transition: -webkit-transform 0.7s;
     transition: transform 0.7s;
   }
-  .page-case-studies .landing .hover-content .logo {
-    margin-top: 50px;
-    margin-left: calc(67%/720*100);
-  }
   .page-case-studies .landing .hover-content .logo img {
     display: block;
   }
@@ -14548,11 +14618,11 @@ you can add resource intensive styles.
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .page-case-studies .landing [data-letter] {
+  .page-case-studies .landing h3 [data-letter] {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  .page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular.selected [data-letter="m"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="m"], .page-case-studies .landing .modular.selected h3 [data-letter="m"] {
     -webkit-animation-name: modularM;
             animation-name: modularM;
     -webkit-animation-duration: 0.2s;
@@ -14562,7 +14632,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular.selected [data-letter="o"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="o"], .page-case-studies .landing .modular.selected h3 [data-letter="o"] {
     -webkit-animation-name: modularO;
             animation-name: modularO;
     -webkit-animation-duration: 0.2s;
@@ -14572,7 +14642,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular.selected [data-letter="d"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="d"], .page-case-studies .landing .modular.selected h3 [data-letter="d"] {
     -webkit-animation-name: modularD;
             animation-name: modularD;
     -webkit-animation-duration: 0.2s;
@@ -14582,7 +14652,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular.selected [data-letter="u"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="u"], .page-case-studies .landing .modular.selected h3 [data-letter="u"] {
     -webkit-animation-name: modularU;
             animation-name: modularU;
     -webkit-animation-duration: 0.2s;
@@ -14592,7 +14662,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular.selected [data-letter="l"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="l"], .page-case-studies .landing .modular.selected h3 [data-letter="l"] {
     -webkit-animation-name: modularL;
             animation-name: modularL;
     -webkit-animation-duration: 0.2s;
@@ -14602,7 +14672,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular.selected [data-letter="a"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="a"], .page-case-studies .landing .modular.selected h3 [data-letter="a"] {
     -webkit-animation-name: modularA;
             animation-name: modularA;
     -webkit-animation-duration: 0.2s;
@@ -14612,7 +14682,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular.selected [data-letter="r"] {
+  .page-case-studies .landing .modular.hover h3 [data-letter="r"], .page-case-studies .landing .modular.selected h3 [data-letter="r"] {
     -webkit-animation-name: modularR;
             animation-name: modularR;
     -webkit-animation-duration: 0.2s;
@@ -15242,7 +15312,7 @@ you can add resource intensive styles.
   }
 }
 @media only screen and (min-width: 1030px) {
-  .page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom.selected [data-letter="c"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="c"], .page-case-studies .landing .custom.selected h3 [data-letter="c"] {
     -webkit-animation-name: customC;
             animation-name: customC;
     -webkit-animation-duration: 0.2s;
@@ -15252,7 +15322,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom.selected [data-letter="u"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="u"], .page-case-studies .landing .custom.selected h3 [data-letter="u"] {
     -webkit-animation-name: customU;
             animation-name: customU;
     -webkit-animation-duration: 0.2s;
@@ -15262,7 +15332,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom.selected [data-letter="s"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="s"], .page-case-studies .landing .custom.selected h3 [data-letter="s"] {
     -webkit-animation-name: customS;
             animation-name: customS;
     -webkit-animation-duration: 0.2s;
@@ -15272,7 +15342,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom.selected [data-letter="t"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="t"], .page-case-studies .landing .custom.selected h3 [data-letter="t"] {
     -webkit-animation-name: customT;
             animation-name: customT;
     -webkit-animation-duration: 0.2s;
@@ -15282,7 +15352,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom.selected [data-letter="o"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="o"], .page-case-studies .landing .custom.selected h3 [data-letter="o"] {
     -webkit-animation-name: customO;
             animation-name: customO;
     -webkit-animation-duration: 0.2s;
@@ -15292,7 +15362,7 @@ you can add resource intensive styles.
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
   }
-  .page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom.selected [data-letter="m"] {
+  .page-case-studies .landing .custom.hover h3 [data-letter="m"], .page-case-studies .landing .custom.selected h3 [data-letter="m"] {
     -webkit-animation-name: customM;
             animation-name: customM;
     -webkit-animation-duration: 0.2s;

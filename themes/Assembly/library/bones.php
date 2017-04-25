@@ -172,10 +172,13 @@ function bones_scripts_and_styles() {
 		//adding scripts file in the footer
 		wp_register_script( 'bones-libs', get_stylesheet_directory_uri() . '/library/dist/js/assembly.libs.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/' . $dir . '/js/assembly.scripts' . $suffix . '.js', array( 'jquery' ), '', true );
+		wp_register_script( 'tweenmax', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array( 'jquery' ), '', true );
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-libs' );
 		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'tweenmax' );
+
 
 
 		// enqueue styles and scripts

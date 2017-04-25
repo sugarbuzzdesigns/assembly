@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-21 12:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:20 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -22,6 +22,8 @@ var raf = window.requestAnimationFrame ||
  */
 var assembly = assembly || {};
 var $ = jQuery;
+
+var rafFunctions = [];
 
 $.easing.jswing = $.easing.swing;
 
@@ -219,7 +221,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 		bindEvents: function(){
 			var _this = this,
-				st;
+				st = 0;
 
 			_this.env.$win.scroll(function(event){
 			   st = $(window).scrollTop();
@@ -237,10 +239,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 				_this.updateViewportDimensions();
 
 				if(assembly.util.useragent === 'desktop'){
-					_this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
-					_this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
-					_this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
-					_this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
+
 				}
 
 				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
@@ -253,33 +252,35 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			$('html').on('loaded', function(){
 				$(this).addClass('loaded');
 
-				// _this.animateSpriteBG(0, 0, $('#landing-logo'), 37, 9, 11);
-				// _this.animateSpriteBG(0, 0, $('#landing-logo-hover-content'), 37, 9, 11);
-				// _this.animateSpriteBG(0, 0, $('#interior-logo'), 37, 9, 11);
-				// _this.animateSpriteBG(0, 0, $('#menu-logo'), 37, 9, 11);
-				// _this.animateSpriteBG(0, 0, $('#contact-drawer-logo'), 37, 9, 11);
-				// _this.animateSpriteBG(0, 0, $('#add-photo-overlay-logo'), 37, 9, 11);
+				// $('.logo').each(function(i, logo){
+				// 	console.log(logo);
+				// });
+
+				// var M1 = TweenMax.to('.logo .img',1.5,{
+				// 	backgroundPosition: "100%",
+				// 	ease: SteppedEase.config(35)
+				// });
+
+				// tl.duration(1.5).play();
 			});
 
-			// $('.landing-logo .logo').hover(
-			// 	function(evt){
-			// 		_this.animateSpriteBG(4, 4, $('#landing-logo'), 27, 9, 11);
-			// 	},
-			// 	function(evt){
-			// 		_this.animateSpriteBG(6, 6, $('#landing-logo'), 36, 9, 11, function(){
-			// 		});
-			// 	}
-			// );
+			$('.landing-logo .logo').hover(
+				function(evt){
 
-			// $('.scroll-overlay .logo').hover(
-			// 	function(evt){
-			// 		_this.animateSpriteBG(4, 4, $('#interior-logo'), 27, 9, 11);
-			// 	},
-			// 	function(evt){
-			// 		_this.animateSpriteBG(6, 6, $('#interior-logo'), 36, 9, 11, function(){
-			// 		});
-			// 	}
-			// );
+				},
+				function(evt){
+
+				}
+			);
+
+			$('.main-logo .logo').hover(
+				function(evt){
+					$(this).parent().data('tl2').duration(1.2).play();
+				},
+				function(evt){
+					$(this).parent().data('tl2').duration(1.5).reverse();
+				}
+			);
 
 			$('.main-menu-btn').hover(
 				function(evt){
@@ -293,82 +294,82 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			);
 		},
 
-		animateSpriteBG: function(startX, startY, $img, totalFrames, framesX, framesY, cb){
-			var _this = this;
-			var id = $img.attr('id');
-			var framesX = framesX;
-			var framesY = framesY;
-			var currentFrame = startX;
-			var totalFrames = totalFrames || 50;
-			var imgSrc = $img.attr('src');
-			var frameWidth = $img.width()/framesX;
-			var frameHeight = $img.height()/framesY;
-			var startX = startX;
-			var startY = startY;
-			var shiftX = startX * frameWidth;
-			var shiftY = startY * frameHeight;
-			var animateInterval;
+		// animateSpriteBG: function(startX, startY, $img, totalFrames, framesX, framesY, cb){
+		// 	var _this = this;
+		// 	var id = $img.attr('id');
+		// 	var framesX = framesX;
+		// 	var framesY = framesY;
+		// 	var currentFrame = startX;
+		// 	var totalFrames = totalFrames || 50;
+		// 	var imgSrc = $img.attr('src');
+		// 	var frameWidth = $img.width()/framesX;
+		// 	var frameHeight = $img.height()/framesY;
+		// 	var startX = startX;
+		// 	var startY = startY;
+		// 	var shiftX = startX * frameWidth;
+		// 	var shiftY = startY * frameHeight;
+		// 	var animateInterval;
 
-			if($img.data('running') === 'true'){
-				clearInterval($img.data('currentInterval'));
-			}
+		// 	if($img.data('running') === 'true'){
+		// 		clearInterval($img.data('currentInterval'));
+		// 	}
 
-			$img.on('load', function(){
-				loadImage(_this, $img);
-			});
+		// 	$img.on('load', function(){
+		// 		loadImage(_this, $img);
+		// 	});
 
-			if (typeof $img[0] != 'undefined' && $img[0].complete) {
-				loadImage(_this, $img);
-			}
+		// 	if (typeof $img[0] != 'undefined' && $img[0].complete) {
+		// 		loadImage(_this, $img);
+		// 	}
 
-			var counter = 0;
+		// 	var counter = 0;
 
-			function loadImage(_this, $img) {
-				$img.data('running', 'true');
+		// 	function loadImage(_this, $img) {
+		// 		$img.data('running', 'true');
 
-				var currentInterval = setInterval(function(){
-					animate($img);
-					counter++;
-				}, 1000/24);
+		// 		var currentInterval = setInterval(function(){
+		// 			animate($img);
+		// 			counter++;
+		// 		}, 1000/24);
 
-				$img.data('currentInterval', currentInterval);
-			}
+		// 		$img.data('currentInterval', currentInterval);
+		// 	}
 
 
-			function animate($img) {
-				currentFrame++;
+		// 	function animate($img) {
+		// 		currentFrame++;
 
-				$img.css({
-					'transform': 'translate3d('+ -shiftX +'px,'+ -shiftY +'px,0)'
-				});
+		// 		$img.css({
+		// 			'transform': 'translate3d('+ -shiftX +'px,'+ -shiftY +'px,0)'
+		// 		});
 
-			    shiftX += frameWidth;
+		// 	    shiftX += frameWidth;
 
-			    if(currentFrame%framesX === 0 && currentFrame !== 0){
-			    	shiftX = 0;
-			    	shiftY += frameHeight;
-			    }
+		// 	    if(currentFrame%framesX === 0 && currentFrame !== 0){
+		// 	    	shiftX = 0;
+		// 	    	shiftY += frameHeight;
+		// 	    }
 
-			    if (currentFrame == totalFrames) {
-			    	$img.data('running', 'false');
-					clearInterval($img.data('currentInterval'));
-			    }
+		// 	    if (currentFrame == totalFrames) {
+		// 	    	$img.data('running', 'false');
+		// 			clearInterval($img.data('currentInterval'));
+		// 	    }
 
-			    /*
-		        Start at the beginning once you've reached the
-		        end of your sprite!
-		        */
-		        if (currentFrame == totalFrames) {
-		        	shiftX = 0;
-		        	shiftY = 0;
-		        	currentFrame = 0;
+		// 	    /*
+		//         Start at the beginning once you've reached the
+		//         end of your sprite!
+		//         */
+		//         if (currentFrame == totalFrames) {
+		//         	shiftX = 0;
+		//         	shiftY = 0;
+		//         	currentFrame = 0;
 
-			        if(typeof cb === 'function'){
-			        	cb();
-			        }
-		        }
-		    }
-		},
+		// 	        if(typeof cb === 'function'){
+		// 	        	cb();
+		// 	        }
+		//         }
+		//     }
+		// },
 
 		setUpLoader: function(){
 			var shift = 0;
@@ -435,17 +436,11 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 		videoLoader: function(){
 			$('.loader video').on('canplay', function(){
-				console.log('can play loader');
 				$(this).addClass('canplay');
 				$('.loader-img-placeholder').hide();
 			});
 
-			$('.loader video').on('loadstart', function(){
-				console.log('load start');
-			});
-
 			setTimeout(function(){
-
 				$('.loader video').attr('src', $('.loader video').data('src'));
 			}, 1000);
 
@@ -454,13 +449,14 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 			setTimeout(function(){
 				$('.loader-wrap').addClass('ready');
+				$('html').trigger('loaded');
 			}, 300);
 
 			$('.loader video').on('ended', function(){
 				var count = $('.loader video').data('play-count');
 				count++;
 
-				if(count < 1){
+				if(count < 2){
 					$('.loader video').get(0).play();
 				} else {
 					$('.loader-wrap').addClass('done');
@@ -485,6 +481,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 			setTimeout(function(){
 				$('.loader-wrap').addClass('done');
 				$('html').trigger('loaded');
+				console.log('loaded from static');
 				setTimeout(function(){
 					$('html').trigger('loader-removed');
 					$('.loader-wrap').hide();
@@ -549,9 +546,358 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 	}
 
 	$(function(){
+		$('html').addClass('dom-ready');
 		assembly.util.init();
 		assembly.contactDrawer.init();
-		$('html').addClass('dom-ready');
+
+		window.greensockLogoAnimation = function($container){
+			// 1. Create a variable
+			var a = $('.assembly [data-letter="a"]', $container);
+			var s = $('.assembly [data-letter="s"]', $container).eq(0);
+			var s2 = $('.assembly [data-letter="s"]', $container).eq(1);
+			var e = $('.assembly [data-letter="e"]', $container);
+			var m = $('.assembly [data-letter="m"]', $container);
+			var b = $('.assembly [data-letter="b"]', $container);
+			var l = $('.assembly [data-letter="l"]', $container);
+			var y = $('.assembly [data-letter="y"]', $container);
+
+			var t_ = $('.temp-spaces [data-letter="t"]', $container);
+			var e_ = $('.temp-spaces [data-letter="e"]', $container).eq(0);
+			var m_ = $('.temp-spaces [data-letter="m"]', $container);
+			var p_ = $('.temp-spaces [data-letter="p"]', $container).eq(0);
+			var o_ = $('.temp-spaces [data-letter="o"]', $container);
+			var r_ = $('.temp-spaces [data-letter="r"]', $container).eq(0);
+			var a_ = $('.temp-spaces [data-letter="a"]', $container);
+			var r2_ = $('.temp-spaces [data-letter="r"]', $container).eq(1);
+			var y_ = $('.temp-spaces [data-letter="y"]', $container);
+
+			var s__ = $('.temp-spaces [data-letter="s"]', $container).eq(0);
+			var p__ = $('.temp-spaces [data-letter="p"]', $container).eq(1);
+			var a__ = $('.temp-spaces [data-letter="a"]', $container).eq(1);
+			var c__ = $('.temp-spaces [data-letter="c"]', $container);
+			var e__ = $('.temp-spaces [data-letter="e"]', $container).eq(1);
+			var s2__ = $('.temp-spaces [data-letter="s"]', $container).eq(1);
+
+			tl = new TimelineLite({ paused:true });
+			tl2 = new TimelineLite({ paused:true });
+
+			$container.data('tl', tl);
+			$container.data('tl2', tl2);
+			// 2. Create tweens for our boxes
+			// TweenLite.from($span, 1, {y: '-=40', autoAlpha: 0, ease:Power4.easeInOut});
+			var space = "+=0.25";
+			// var space = "0";
+
+			tl.to(a, 0, {
+				x:"250%",
+				y:"0",
+				rotation: -90,
+				opacity: 1
+			}, space);
+
+			tl.to(a, 0, {
+				x:"0%",
+				y:"0%",
+				rotation: -180,
+				opacity: 1,
+				delay: 0.5
+			}, space).to(e, 0, {
+				x:"110%",
+				y:"40%",
+				rotation: -90,
+				opacity: 1
+			});
+
+			tl.to(y, 0, {
+				x:"20%",
+				y:"-10%",
+				opacity: 1
+			}, space);
+
+			tl.to(l, 0, {
+				x:"-620%",
+				y:"-20%",
+				rotation: 90,
+				opacity: 1
+			}, space).to(a, 0, {
+				x:"0%",
+				y:"-10%",
+				rotation: 0,
+				opacity: 1
+			});
+
+			tl.to(e, 0, {
+				x:"20%",
+				y:"40%",
+				rotation: -180,
+				opacity: 1
+			}, space);
+
+			tl.to(s, 0, {
+				x:"0%",
+				y:"40%",
+				opacity: 1
+			}, space)
+
+			tl.to(y, 0, {
+				x:"0%",
+				y:"0%",
+				opacity: 1
+			}, "+=0.2");
+
+			tl.to(a, 0, {
+				x:"0%",
+				y:"0%",
+				rotation: 0,
+				opacity: 1
+			}, space);
+
+			tl.to(l, 0, {
+				x:"-120%",
+				y:"10%",
+				opacity: 1
+			}, space);
+
+			tl.to(e, 0, {
+				x:"0%",
+				y:"0%",
+				rotation: 0,
+				opacity: 1
+			}, space);
+
+			tl.to(m, 0, {
+				x:"10%",
+				y:"-50%",
+				rotationY: 180,
+				opacity: 1
+			}, space);
+
+			tl.to(s, 0, {
+				x:"0%",
+				y:"0%",
+				opacity: 1
+			}, space);
+
+			tl.to(m, 0, {
+				x:"0%",
+				rotationY: 0
+			}, space);
+
+			tl.to(b, 0, {
+				x:"0%",
+				y:"20%",
+				opacity: 1
+			}, space).to(l, 0, {
+				x:"0%",
+				y:"-20%",
+				rotation: 0,
+				opacity: 1
+			}, space);
+
+			tl.to(s2, 0, {
+				x:"0%",
+				y:"20%",
+				opacity: 1
+			}, space);
+
+			tl.to(s2, 0, {
+				y:"10%",
+				opacity: 1
+			}, space);
+
+			tl.to(b, 0, {
+				y:"10%"
+			}, space);
+
+			tl.to(m, 0, {
+				y:"0%"
+			}, space);
+
+
+			tl.to(s2, 0, {
+				y:"0%"
+			}, space);
+
+			tl.to(b, 0, {
+				y:"0%"
+			}, space)
+
+			tl.to(l, 0, {
+				x:"0%",
+				y:"0%"
+			}, space);
+
+			//
+			//
+			//
+
+			tl2.to(t_, 0, {
+				y: "75%",
+				opacity: 1
+			}, space).to(a, 0, {
+				opacity: 0
+			}).to(a__, 0, {
+				opacity: 1
+			});
+
+			tl2.to(s, 0, {
+				x: "0%",
+				y: "-50%",
+				opacity: 1
+			}, space);
+
+			tl2.to(s2, 0, {
+				x: "0%",
+				y: "50%",
+				opacity: 1
+			}, space);
+
+			tl2.to(e__, 0, {
+				x: "-340%",
+				opacity: 1
+			}, space);
+
+			// translate(300%, 15%)
+			tl2.to(p__, 0, {
+				x: "300%",
+				y: "16%",
+				rotation: 180,
+				opacity: 1
+			}, space).to(e, 0, {
+				opacity: 0
+			}).to(e_, 0, {
+				y: "50%",
+				opacity: 1
+			}).to(t_, 0, {
+				y: "0%"
+			});
+
+			tl2.to(s2__, 0, {
+				x: "80%",
+				opacity: 1
+			}, space).to(s2, 0, {
+				x: "10%",
+				y: "74%",
+				rotation: 90
+			}).to(b, 0, {
+				x: "8%",
+				y: "16%",
+				rotation: 180
+			}).to(y, 0, {
+				x: "100%"
+			}).to(l, 0, {
+				x: "182%",
+				y: "12%",
+				rotation: 90
+			});
+
+			tl2.to(e__, 0, {
+				x: "-370%",
+				y: "50%",
+				rotation: 90
+			}, space)
+
+			tl2.to(m, 0, {
+				x:"-50%"
+			}, space);
+
+			tl2.to(c__, 0, {
+				opacity: 1
+			}).to(s__, 0, {
+				y: "-50%",
+				opacity: 1
+			}).to(l, 0, {
+				x: "882%",
+				y: "4%",
+				rotation: 90
+			}).to(y, 0, {
+				opacity: 0
+			}).to(y_, 0, {
+				opacity: 1
+			}).to(b, 0, {
+				opacity: 0
+			}).to(p_, 0, {
+				x: "100%",
+				opacity: 1,
+				rotationY: 180
+			});
+
+			tl2.to(s2, 0, {
+				opacity: 0
+			}, space).to(s, 0, {
+				opacity: 0
+			});
+
+			tl2.to(e_, 0, {
+				x: "0%",
+				y: "0%"
+			}, space).to(m, 0, {
+				opacity: 0
+			}).to(m_, 0, {
+				x: "0%",
+				y: "0%",
+				opacity: 1
+			});
+
+			tl2.to(p_, 0, {
+				x: "0%",
+				opacity: 1,
+				rotationY: 0
+			}, space).to(o_, 0, {
+				opacity: 1
+			}).to(r_, 0, {
+				x: "-150%",
+				y: "50%",
+				opacity: 1
+			});
+
+			tl2.to(a_, 0, {
+				opacity: 1
+			}, space);
+
+			tl2.to(l, 0, {
+				opacity: 0
+			}, space).to(s__, 0, {
+				y: "0%"
+			});
+
+			tl2.to(r2_, 0, {
+				opacity: 1
+			}, space);
+
+			tl2.to(p__, 0, {
+				x: "0%",
+				y: "-20%",
+				rotation: 0
+			}, space).to(e__, 0, {
+				x: "0%",
+				y: "0%",
+				rotation: 0
+			});
+
+			tl2.to(s2__, 0, {
+				x: "0%",
+				y: "0%"
+			}, space);
+
+			tl2.to(r_, 0, {
+				x: "0%",
+				y: "0%"
+			}, space);
+
+			tl2.to(p__, 0, {
+				x: "0%",
+				y: "0%",
+				rotation: 0
+			}, space);
+
+			tl.duration(1.5).play();
+
+			var M1 = TweenMax.to($container.find('.logo .img'), 1.5, {
+				backgroundPosition: "100%",
+				ease: SteppedEase.config(35)
+			});
+		};
 	});
 })(jQuery);
 /*! Source: library/js/common/assembly.navigation.js*/
@@ -960,8 +1306,10 @@ var assembly = assembly || {};
 	});
 })(jQuery);
 /*! Source: library/js/common/assembly.parallax.js*/
+var assembly = assembly || {};
+
 (function($){
-	var parallax = {
+	assembly.parallax = {
 		init: function(){
 			this.$win = $(window);
 			this.winHeight = this.$win.height();
@@ -988,6 +1336,8 @@ var assembly = assembly || {};
 			    	$(emp).data('ypos', $(emp).data('start'));
 			    });
 			}
+
+			rafFunctions.push(this.scrollHandler.bind(this));
 		},
 
 		setUpParallax: function(){
@@ -1027,7 +1377,10 @@ var assembly = assembly || {};
 
 				_this.scrollChange = Math.abs(scrollDiff);
 				_this.currentScroll = newScroll;
-				_this.scrollHandler();
+
+				rafFunctions.forEach(function(func){
+					func();
+				});
 
 				raf(_this.loop.bind(this));
 			}
@@ -1093,7 +1446,7 @@ var assembly = assembly || {};
 	};
 
 	$(function(){
-		parallax.init();
+		assembly.parallax.init();
 	});
 
 	// window.onbeforeunload = function () {
@@ -1200,6 +1553,12 @@ var assembly = assembly || {};
 				evt.stopPropagation();
 
 				_this.removePhotoFromPhotosList($('#' + $(this).closest('.image').data('photo-id')));
+			});
+
+			$('html').on('loaded', function(){
+				$('.main-logo').each(function(i, mainLogo){
+					window.greensockLogoAnimation($(mainLogo));
+				});
 			});
 		},
 

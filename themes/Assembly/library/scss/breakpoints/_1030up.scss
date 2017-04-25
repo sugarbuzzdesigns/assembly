@@ -22,10 +22,10 @@ MAIN LOGO
 **********************/
 .logo,
 .menu-logo {
-    width: 373px;
-    height: 77px;
-    margin-top: 48px;
-    margin-left: calc(66%/1440*100);
+    // width: 373px;
+    // height: 77px;
+    // margin-top: 48px;
+    // margin-left: calc(66%/1440*100);
 
     a {
 		img {
@@ -68,11 +68,11 @@ MENU & NAVIGATION STYLES
 		min-height: 605px;
 
 		.menu-header {
-			padding-left: calc(66%/1440*100);
+
 		}
 
 		.logo {
-		    margin-top: 48px;
+		    margin-top: 0;
 		    margin-left: 0;
 		}
 	    .footer {
@@ -217,8 +217,8 @@ SOCIAL SPRITE
 h1, h2, h3...
 **********************/
 h1 {
-	font-size: rem(72);
-	line-height: 1.44;
+	// font-size: rem(72);
+	// line-height: 1.44;
 }
 
 /*********************
@@ -526,8 +526,8 @@ CASE STUDIES Page
 **********************/
 .page-case-studies {
 	.logo {
-	    margin-top: 50px;
-	    margin-left: calc(67%/720*100);
+	    // margin-top: 50px;
+	    // margin-left: calc(67%/720*100);
 	}
 
 	.case-study-svg {
@@ -539,6 +539,11 @@ CASE STUDIES Page
 	}
 
 	.landing {
+		.main-logo {
+		    padding: 67px 0 20px;
+		    margin-left: calc(87%/720*100 - 7px);
+		}
+
 		.section-header {
 			z-index: 0;
 		}
@@ -591,8 +596,8 @@ CASE STUDIES Page
 			transition: transform 0.7s;
 
 			.logo {
-			    margin-top: 50px;
-			    margin-left: calc(67%/720*100);
+			    // margin-top: 50px;
+			    // margin-left: calc(67%/720*100);
 
 				img {
 					display: block;

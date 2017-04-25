@@ -13,6 +13,149 @@ and will be used across all viewports.
 /*********************
 RESPONSIVE LAZY IMAGES
 **********************/
+header.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 12;
+}
+
+.main-logo {
+	margin: 0;
+	color: #000;
+	float: left;
+    padding: 10px 0 20px 15px;
+
+    @include mq(large) {
+    	padding: 67px 0 20px 0;
+    	margin-left: calc(87%/1440*100 - 7px);
+    }
+}
+
+.logo {
+	display: block;
+	float: left;
+}
+
+.logo .img {
+	background-image: url(../../images/sprites/_logo_desktop-init-logo.png);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 40px;
+	background-size: 3600%;
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+    margin-top: 14px;
+
+    @include mq(large){
+	    width: 45px;
+	    height: 40px;
+	    margin-top: 10px;
+    }
+}
+
+.light {
+	.logo .img {
+		background-image: url(../../images/sprites/_logo_desktop-init-logo-white.png);
+	}
+
+	.text {
+		span {
+			color: #fff;
+		}
+	}
+}
+
+.dark {
+	.logo .img {
+		background-image: url(../../images/sprites/_logo_desktop-init-logo.png);
+	}
+
+	.text {
+		span {
+			color: #000;
+		}
+	}
+}
+
+.interior {
+	.logo .img {
+		background-position: 0 0;
+	}
+
+	.square-btn {
+		.bottom-layer .letter {
+			color: #fff;
+		}
+	}
+}
+
+.logo .text {
+	font-family: 'pangrambold';
+	position: relative;
+	float: left;
+	margin-left: -2.8px;
+	margin-top: 12px;
+
+	@include mq(large) {
+		margin-top: 5px;
+	}
+
+	span {
+		font-size: 22px;
+		line-height: normal;
+
+		@include mq(large) {
+			font-size: 34px;
+			letter-spacing: -3px;
+		}
+	}
+}
+
+.assembly {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.spacer {
+	display: inline-block;
+	width: 50px;
+}
+
+.temp-spaces {
+	float: left;
+
+	.temp {
+		margin-right: 50px;
+	}
+
+	.letter {
+		opacity: 0;
+	}
+}
+
+.letter {
+	transform-origin: 50% 50%;
+	display: block;
+	position: relative;
+	float: left;
+	opacity: 0;
+	letter-spacing: -2px;
+}
+
+.buttons {
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+
 
 
 .lazy-load .image-clip-bg {
@@ -525,6 +668,14 @@ MENU & NAVIGATION STYLES
 
 
 	.menu-inner {
+		.letter {
+			color: #fff;
+		}
+
+		.logo .img {
+			background-image: url(../../images/sprites/_logo_desktop-init-logo-white.png);
+		}
+
 	    .footer {
 	    	background: transparent;
 			position: absolute;
@@ -1016,64 +1167,64 @@ header {
 
 .logo,
 .menu-logo {
-	font-size: 0px;
-	float: left;
-	margin: 0;
-    position: relative;
-    width: 250px;
-    height: 50px;
-    overflow: hidden;
-    margin-top: calc(4px/414*320);
-    margin-left: calc(8px/414*100);
+	// font-size: 0px;
+	// float: left;
+	// margin: 0;
+ //    position: relative;
+ //    width: 250px;
+ //    height: 50px;
+ //    overflow: hidden;
+ //    margin-top: calc(4px/414*320);
+ //    margin-left: calc(8px/414*100);
 
     a {
-    	height: 100%;
-    	width: 100%;
-		display: block;
-		position: absolute;
-		overflow: hidden;
-		top: 0;
-		left: 0;
+  //   	height: 100%;
+  //   	width: 100%;
+		// display: block;
+		// position: absolute;
+		// overflow: hidden;
+		// top: 0;
+		// left: 0;
 	}
 }
 
-.logo {
-	a {
-		img {
-			width: 900%;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			transform: translate3d(0,0,0);
-			pointer-events: none;
-		}
-    }
+// .logo {
+// 	a {
+// 		img {
+// 			width: 900%;
+// 			display: block;
+// 			position: absolute;
+// 			top: 0;
+// 			left: 0;
+// 			transform: translate3d(0,0,0);
+// 			pointer-events: none;
+// 		}
+//     }
 
-    img {
-    	display: none;
-		width: 900%;
-		position: absolute;
-		top: 0;
-		left: 0;
-    }
+//     img {
+//     	display: none;
+// 		width: 900%;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+//     }
 
-	a {
-		display: block;
-		height: 100%;
-		width: 100%;
-	}
+// 	a {
+// 		display: block;
+// 		height: 100%;
+// 		width: 100%;
+// 	}
 
-   .svg-logo {
-    	display: none;
-    }
+//    .svg-logo {
+//     	display: none;
+//     }
 
-	span {
-		font-size: 33px;
-		display: inline-block;
-		vertical-align: middle;
-	}
-}
+// 	span {
+// 		font-size: 33px;
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 	}
+// }
 
 .header-icon-logo {
 	fill: #fff;
@@ -1231,6 +1382,10 @@ header {
 			border: solid 1px #000;
 		}
 
+		span {
+			background: #000;
+		}
+
 		.letter {
 			color: #000;
 		}
@@ -1381,7 +1536,7 @@ header.light {
 	}
 }
 
-header.scroll-overlay {
+header.fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -2571,8 +2726,9 @@ CONTACT
 		}
 
 		.photos-wrap {
-			overflow: scroll;
-			padding-bottom: 7.25%;
+			overflow-x: scroll;
+		    padding-bottom: 67px;
+		    margin-bottom: -30px;
 			// padding-right: 10.63%;
 
 			.inner {
@@ -2807,6 +2963,12 @@ CASE STUDIES Page
 		position: relative;
 		font-family: 'pangrambold';
 		font-size: rem(47);
+
+		.main-menu-btn {
+			@include mq(large) {
+		    	margin-right: calc(49%/720*100);
+		    }
+		}
 	}
 
 	.tile {
@@ -3218,10 +3380,14 @@ ABOUT US Page
 .page-about-us {
 	background: #fff;
 
-	.scroll-overlay {
-		background: rgba(255,255,255,0.8);
+	header.fixed {
+		background-color: rgba(255,255,255,0.8);
 		transform: translate3d(0,0,0);
 		transition: transform 0.5s;
+
+		@include mq(medium) {
+			background-color: transparent;
+		}
 
 		&.going-down {
 			transform: translate3d(0,-100%,0);
@@ -3566,6 +3732,9 @@ ABOUT US Page
 		}
 
 		.carousel {
+			.tile-img {
+				background-color: transparent;
+			}
 			// background: url(../../images/svg/our-approach-dot-grid.svg) no-repeat;
 
 			&.atEnd {

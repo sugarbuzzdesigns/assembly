@@ -11,13 +11,42 @@
 				<div class="modular case-study-category" data-hash-selector="#modular" data-landing-cat="modular">
 					<div class="square hover-spot"></div>
 					<div class="hover-content">
-						<header>
-							<h1 class="logo">
-							    <a class="init" href="/">
-							    	<img id="landing-logo-hover-content" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
-							    </a>
-							</h1>
-							<span class="mobile-only"><?php include __DIR__ . '/includes/menu-btn.php'; ?></span>
+						<header class="light">
+							<h1 class="main-logo light">
+						  		<a href="/" class="logo">
+						  			<div class="img"></div>
+									<div class="text">
+										<div class="assembly">
+											<span class="letter" data-letter="a">a</span>
+											<span class="letter" data-letter="s">s</span>
+											<span class="letter" data-letter="s">s</span>
+											<span class="letter" data-letter="e">e</span>
+											<span class="letter" data-letter="m">m</span>
+											<span class="letter" data-letter="b">b</span>
+											<span class="letter" data-letter="l">l</span>
+											<span class="letter" data-letter="y">y</span>
+										</div>
+										<div class="temp-spaces">
+											<span class="letter" data-letter="t">t</span>
+											<span class="letter" data-letter="e">e</span>
+											<span class="letter" data-letter="m">m</span>
+											<span class="letter" data-letter="p">p</span>
+											<span class="letter" data-letter="o">o</span>
+											<span class="letter" data-letter="r">r</span>
+											<span class="letter" data-letter="a">a</span>
+											<span class="letter" data-letter="r">r</span>
+											<span class="letter" data-letter="y">y</span>
+											<span class="letter">&nbsp;</span>
+											<span class="letter" data-letter="s">s</span>
+											<span class="letter" data-letter="p">p</span>
+											<span class="letter" data-letter="a">a</span>
+											<span class="letter" data-letter="c">c</span>
+											<span class="letter" data-letter="e">e</span>
+											<span class="letter" data-letter="s">s</span>
+										</div>
+									</div>
+						  		</a>
+						  	</h1>
 						</header>
 						<h3>
 							<span data-letter="m">m</span>
@@ -36,12 +65,41 @@
 						<div class="bg layer" data-depth="0.10"></div>
 						<div class="inner">
 							<header class="dark">
-								<h1 class="logo">
-								    <a class="init" href="/">
-								    	<img id="landing-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
-								    </a>
-								</h1>
-								<span class="mobile-only"><?php include __DIR__ . '/includes/menu-btn.php'; ?></span>
+								<h1 class="main-logo light">
+							  		<a href="/" class="logo">
+							  			<div class="img"></div>
+										<div class="text">
+											<div class="assembly">
+												<span class="letter" data-letter="a">a</span>
+												<span class="letter" data-letter="s">s</span>
+												<span class="letter" data-letter="s">s</span>
+												<span class="letter" data-letter="e">e</span>
+												<span class="letter" data-letter="m">m</span>
+												<span class="letter" data-letter="b">b</span>
+												<span class="letter" data-letter="l">l</span>
+												<span class="letter" data-letter="y">y</span>
+											</div>
+											<div class="temp-spaces">
+												<span class="letter" data-letter="t">t</span>
+												<span class="letter" data-letter="e">e</span>
+												<span class="letter" data-letter="m">m</span>
+												<span class="letter" data-letter="p">p</span>
+												<span class="letter" data-letter="o">o</span>
+												<span class="letter" data-letter="r">r</span>
+												<span class="letter" data-letter="a">a</span>
+												<span class="letter" data-letter="r">r</span>
+												<span class="letter" data-letter="y">y</span>
+												<span class="letter">&nbsp;</span>
+												<span class="letter" data-letter="s">s</span>
+												<span class="letter" data-letter="p">p</span>
+												<span class="letter" data-letter="a">a</span>
+												<span class="letter" data-letter="c">c</span>
+												<span class="letter" data-letter="e">e</span>
+												<span class="letter" data-letter="s">s</span>
+											</div>
+										</div>
+							  		</a>
+							  	</h1>
 							</header>
 							<h3>
 								<span data-letter="m">m</span>
@@ -97,14 +155,43 @@
 
 		<section class="content" data-to-top-anchor>
 			<div class="content-inner">
-				<header class="scroll-overlay dark">
-					<div class="inner-bg"></div>
-					<h1 class="logo">
-					    <a class="init" href="/">
-					    	<img id="interior-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover.png" alt="">
-					    </a>
-					</h1>
-					<?php include __DIR__ . '/includes/menu-btn.php'; ?>
+				<header class="dark">
+					<h1 class="main-logo">
+				  		<a href="/" class="logo">
+				  			<div class="img"></div>
+							<div class="text">
+								<div class="assembly">
+									<span class="letter" data-letter="a">a</span>
+									<span class="letter" data-letter="s">s</span>
+									<span class="letter" data-letter="s">s</span>
+									<span class="letter" data-letter="e">e</span>
+									<span class="letter" data-letter="m">m</span>
+									<span class="letter" data-letter="b">b</span>
+									<span class="letter" data-letter="l">l</span>
+									<span class="letter" data-letter="y">y</span>
+								</div>
+								<div class="temp-spaces">
+									<span class="letter" data-letter="t">t</span>
+									<span class="letter" data-letter="e">e</span>
+									<span class="letter" data-letter="m">m</span>
+									<span class="letter" data-letter="p">p</span>
+									<span class="letter" data-letter="o">o</span>
+									<span class="letter" data-letter="r">r</span>
+									<span class="letter" data-letter="a">a</span>
+									<span class="letter" data-letter="r">r</span>
+									<span class="letter" data-letter="y">y</span>
+									<span class="letter">&nbsp;</span>
+									<span class="letter" data-letter="s">s</span>
+									<span class="letter" data-letter="p">p</span>
+									<span class="letter" data-letter="a">a</span>
+									<span class="letter" data-letter="c">c</span>
+									<span class="letter" data-letter="e">e</span>
+									<span class="letter" data-letter="s">s</span>
+								</div>
+							</div>
+				  		</a>
+				  	</h1>
+				  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 				</header>
 				<div class="content-header">
 					<div class="mesh-bg dark wide"></div>

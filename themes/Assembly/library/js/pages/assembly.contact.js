@@ -98,6 +98,12 @@ var assembly = assembly || {};
 
 				_this.removePhotoFromPhotosList($('#' + $(this).closest('.image').data('photo-id')));
 			});
+
+			$('html').on('loaded', function(){
+				$('.main-logo').each(function(i, mainLogo){
+					window.greensockLogoAnimation($(mainLogo));
+				});
+			});
 		},
 
 		showSubmittedFormMessage: function(){

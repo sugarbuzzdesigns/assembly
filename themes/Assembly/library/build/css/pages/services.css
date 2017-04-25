@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-20 10:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 08:52 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -92,18 +92,18 @@ SERVICES Page
 .page-services {
   background-color: #fff;
 }
-.page-services .scroll-overlay {
+.page-services header.fixed {
   background: rgba(255, 255, 255, 0.8);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
-.page-services .scroll-overlay.going-down {
+.page-services header.fixed.going-down {
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
 }
-.page-services .scroll-overlay.going-up {
+.page-services header.fixed.going-up {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -304,7 +304,7 @@ SERVICES Page
   .page-services .mesh-bg {
     height: 33%;
   }
-  .page-services .scroll-overlay {
+  .page-services header.fixed {
     background: transparent;
   }
   .page-services .section-header {

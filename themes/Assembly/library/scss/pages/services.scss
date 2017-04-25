@@ -7,7 +7,7 @@ SERVICES Page
 .page-services {
 	background-color: #fff;
 
-	.scroll-overlay {
+	header.fixed {
 		background: rgba(255,255,255,0.8);
 		transform: translate3d(0,0,0);
 		transition: transform 0.5s;
@@ -245,7 +245,7 @@ SERVICES Page
     		height: 33%;
 		}
 
-		.scroll-overlay {
+		header.fixed {
 			background: transparent;
 		}
 

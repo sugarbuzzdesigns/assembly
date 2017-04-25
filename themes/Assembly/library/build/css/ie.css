@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-20 10:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:15 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1398,13 +1398,6 @@ be seen on the Desktop.
 /*********************
 MAIN LOGO
 **********************/
-.logo,
-.menu-logo {
-  width: 373px;
-  height: 77px;
-  margin-top: 48px;
-  margin-left: calc(66%/1440*100);
-}
 .logo .svg-logo,
 .menu-logo .svg-logo {
   display: none;
@@ -1439,11 +1432,8 @@ MENU & NAVIGATION STYLES
 .main-menu .menu-inner {
   min-height: 605px;
 }
-.main-menu .menu-inner .menu-header {
-  padding-left: calc(66%/1440*100);
-}
 .main-menu .menu-inner .logo {
-  margin-top: 48px;
+  margin-top: 0;
   margin-left: 0;
 }
 .main-menu .menu-inner .footer {
@@ -1570,11 +1560,6 @@ SOCIAL SPRITE
 /*********************
 h1, h2, h3...
 **********************/
-h1 {
-  font-size: rem(72);
-  line-height: 1.44;
-}
-
 /*********************
 Utility Classes
 **********************/
@@ -1823,10 +1808,6 @@ Tiles
 /*********************
 CASE STUDIES Page
 **********************/
-.page-case-studies .logo {
-  margin-top: 50px;
-  margin-left: calc(67%/720*100);
-}
 .page-case-studies .case-study-svg {
   display: none;
 }
@@ -1840,6 +1821,10 @@ CASE STUDIES Page
   /**
    * Custom Animations
    */
+}
+.page-case-studies .landing .main-logo {
+  padding: 67px 0 20px;
+  margin-left: calc(87%/720*100 - 7px);
 }
 .page-case-studies .landing .section-header {
   z-index: 0;
@@ -1883,10 +1868,6 @@ CASE STUDIES Page
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
 }
-.page-case-studies .landing .hover-content .logo {
-  margin-top: 50px;
-  margin-left: calc(67%/720*100);
-}
 .page-case-studies .landing .hover-content .logo img {
   display: block;
 }
@@ -1924,11 +1905,11 @@ CASE STUDIES Page
   background-repeat: no-repeat;
   background-size: cover;
 }
-.page-case-studies .landing [data-letter] {
+.page-case-studies .landing h3 [data-letter] {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-.page-case-studies .landing .modular.hover [data-letter="m"], .page-case-studies .landing .modular.selected [data-letter="m"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="m"], .page-case-studies .landing .modular.selected h3 [data-letter="m"] {
   -webkit-animation-name: modularM;
           animation-name: modularM;
   -webkit-animation-duration: 0.2s;
@@ -1938,7 +1919,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="o"], .page-case-studies .landing .modular.selected [data-letter="o"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="o"], .page-case-studies .landing .modular.selected h3 [data-letter="o"] {
   -webkit-animation-name: modularO;
           animation-name: modularO;
   -webkit-animation-duration: 0.2s;
@@ -1948,7 +1929,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="d"], .page-case-studies .landing .modular.selected [data-letter="d"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="d"], .page-case-studies .landing .modular.selected h3 [data-letter="d"] {
   -webkit-animation-name: modularD;
           animation-name: modularD;
   -webkit-animation-duration: 0.2s;
@@ -1958,7 +1939,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="u"], .page-case-studies .landing .modular.selected [data-letter="u"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="u"], .page-case-studies .landing .modular.selected h3 [data-letter="u"] {
   -webkit-animation-name: modularU;
           animation-name: modularU;
   -webkit-animation-duration: 0.2s;
@@ -1968,7 +1949,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="l"], .page-case-studies .landing .modular.selected [data-letter="l"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="l"], .page-case-studies .landing .modular.selected h3 [data-letter="l"] {
   -webkit-animation-name: modularL;
           animation-name: modularL;
   -webkit-animation-duration: 0.2s;
@@ -1978,7 +1959,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="a"], .page-case-studies .landing .modular.selected [data-letter="a"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="a"], .page-case-studies .landing .modular.selected h3 [data-letter="a"] {
   -webkit-animation-name: modularA;
           animation-name: modularA;
   -webkit-animation-duration: 0.2s;
@@ -1988,7 +1969,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .modular.hover [data-letter="r"], .page-case-studies .landing .modular.selected [data-letter="r"] {
+.page-case-studies .landing .modular.hover h3 [data-letter="r"], .page-case-studies .landing .modular.selected h3 [data-letter="r"] {
   -webkit-animation-name: modularR;
           animation-name: modularR;
   -webkit-animation-duration: 0.2s;
@@ -2616,7 +2597,7 @@ CASE STUDIES Page
     }
   }
 }
-.page-case-studies .landing .custom.hover [data-letter="c"], .page-case-studies .landing .custom.selected [data-letter="c"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="c"], .page-case-studies .landing .custom.selected h3 [data-letter="c"] {
   -webkit-animation-name: customC;
           animation-name: customC;
   -webkit-animation-duration: 0.2s;
@@ -2626,7 +2607,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="u"], .page-case-studies .landing .custom.selected [data-letter="u"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="u"], .page-case-studies .landing .custom.selected h3 [data-letter="u"] {
   -webkit-animation-name: customU;
           animation-name: customU;
   -webkit-animation-duration: 0.2s;
@@ -2636,7 +2617,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="s"], .page-case-studies .landing .custom.selected [data-letter="s"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="s"], .page-case-studies .landing .custom.selected h3 [data-letter="s"] {
   -webkit-animation-name: customS;
           animation-name: customS;
   -webkit-animation-duration: 0.2s;
@@ -2646,7 +2627,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="t"], .page-case-studies .landing .custom.selected [data-letter="t"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="t"], .page-case-studies .landing .custom.selected h3 [data-letter="t"] {
   -webkit-animation-name: customT;
           animation-name: customT;
   -webkit-animation-duration: 0.2s;
@@ -2656,7 +2637,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="o"], .page-case-studies .landing .custom.selected [data-letter="o"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="o"], .page-case-studies .landing .custom.selected h3 [data-letter="o"] {
   -webkit-animation-name: customO;
           animation-name: customO;
   -webkit-animation-duration: 0.2s;
@@ -2666,7 +2647,7 @@ CASE STUDIES Page
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.page-case-studies .landing .custom.hover [data-letter="m"], .page-case-studies .landing .custom.selected [data-letter="m"] {
+.page-case-studies .landing .custom.hover h3 [data-letter="m"], .page-case-studies .landing .custom.selected h3 [data-letter="m"] {
   -webkit-animation-name: customM;
           animation-name: customM;
   -webkit-animation-duration: 0.2s;

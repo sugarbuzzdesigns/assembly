@@ -313,7 +313,8 @@ module.exports = function(grunt) {
 					// '<%= jsSrcDir %>/libs/owl.carousel-debug.js',
 					'<%= jsSrcDir %>/libs/videojs.min.js',
 					'<%= jsSrcDir %>/libs/select2.min.js',
-					'<%= jsSrcDir %>/libs/jquery.countto.min.js'
+					'<%= jsSrcDir %>/libs/jquery.countto.min.js',
+					'<%= jsSrcDir %>/libs/midnight.min.js'
 				],
 				dest: '<%= jsDistDir %>/assembly.libs.min.js'
 			},

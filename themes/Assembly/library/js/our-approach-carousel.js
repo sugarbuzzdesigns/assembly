@@ -32,7 +32,7 @@ var ourApproachCarousel = {};
 		},
 
 		bindEvents: function(){
-			console.log('bind events');
+			// console.log('bind events');
 			var _this = this, trackInterval;
 
 			$('.marker').on('click', function(e){
@@ -147,7 +147,7 @@ var ourApproachCarousel = {};
 				        $(elm).addClass('active');
 
 				        if(i+1 === length){
-				        	console.log('about to be done');
+				        	// console.log('about to be done');
 				        }
 
 						next();

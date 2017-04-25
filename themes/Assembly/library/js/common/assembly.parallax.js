@@ -1,5 +1,7 @@
+var assembly = assembly || {};
+
 (function($){
-	var parallax = {
+	assembly.parallax = {
 		init: function(){
 			this.$win = $(window);
 			this.winHeight = this.$win.height();
@@ -26,6 +28,8 @@
 			    	$(emp).data('ypos', $(emp).data('start'));
 			    });
 			}
+
+			rafFunctions.push(this.scrollHandler.bind(this));
 		},
 
 		setUpParallax: function(){
@@ -65,7 +69,10 @@
 
 				_this.scrollChange = Math.abs(scrollDiff);
 				_this.currentScroll = newScroll;
-				_this.scrollHandler();
+
+				rafFunctions.forEach(function(func){
+					func();
+				});
 
 				raf(_this.loop.bind(this));
 			}
@@ -131,7 +138,7 @@
 	};
 
 	$(function(){
-		parallax.init();
+		assembly.parallax.init();
 	});
 
 	// window.onbeforeunload = function () {

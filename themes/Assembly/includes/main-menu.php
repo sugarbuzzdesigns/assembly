@@ -7,12 +7,41 @@
 			<div class="main-menu">
 				<div class="menu-inner">
 					<header class="menu-header">
-						<h1 class="logo">
-						    <a class="init" href="/">
-						    	<img id="menu-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/sprites/Assembly_Logo_TempSpaces-<?php echo $devicePrefix; ?>-hover-white.png" alt="">
-						    </a>
-						</h1>
-
+						<h1 class="main-logo">
+					  		<a href="/" class="logo">
+					  			<div class="img"></div>
+								<div class="text">
+									<div class="assembly">
+										<span class="letter" data-letter="a">a</span>
+										<span class="letter" data-letter="s">s</span>
+										<span class="letter" data-letter="s">s</span>
+										<span class="letter" data-letter="e">e</span>
+										<span class="letter" data-letter="m">m</span>
+										<span class="letter" data-letter="b">b</span>
+										<span class="letter" data-letter="l">l</span>
+										<span class="letter" data-letter="y">y</span>
+									</div>
+									<div class="temp-spaces">
+										<span class="letter" data-letter="t">t</span>
+										<span class="letter" data-letter="e">e</span>
+										<span class="letter" data-letter="m">m</span>
+										<span class="letter" data-letter="p">p</span>
+										<span class="letter" data-letter="o">o</span>
+										<span class="letter" data-letter="r">r</span>
+										<span class="letter" data-letter="a">a</span>
+										<span class="letter" data-letter="r">r</span>
+										<span class="letter" data-letter="y">y</span>
+										<span class="letter">&nbsp;</span>
+										<span class="letter" data-letter="s">s</span>
+										<span class="letter" data-letter="p">p</span>
+										<span class="letter" data-letter="a">a</span>
+										<span class="letter" data-letter="c">c</span>
+										<span class="letter" data-letter="e">e</span>
+										<span class="letter" data-letter="s">s</span>
+									</div>
+								</div>
+					  		</a>
+					  	</h1>
 						<div class="main-menu-btn">
 							<div class="hamburger">
 								<span></span>
@@ -53,8 +82,9 @@
 						<div>
 							<ul class="social">
 								<li class="instagram"><a href="https://www.instagram.com/byassembly" target="_blank"></a></li><!--
-								--><li class="twitter"><a href="https://twitter.com/assemblyspaces" target="_blank"></a></li><!--
 								--><li class="linkedin"><a href="https://www.linkedin.com/company-beta/15154404" target="_blank"></a></li>
+
+								<!-- REMOVED, WAS 2nd in line <li class="twitter"><a href="https://twitter.com/assemblyspaces" target="_blank"></a></li> -->
 							</ul>
 						</div>
 					</footer>

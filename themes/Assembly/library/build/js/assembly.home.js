@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-21 12:14 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:20 am - User: Phoydar */
 /*
 Parallax.js
  */
@@ -20,37 +20,54 @@ var assembly = assembly || {};
 			this.$scrollElement = this.$win;
 			this.currentScroll = this.$scrollElement.scrollTop();
 
+			this.fixedHeaders = $('header.fixed');
+
 			$('.landing .mesh-bg').data('meshTop', 0);
 
 			this.bindEvents();
 			this.waypoints();
 			this.initializeVideos();
 
-			this.loop();
-		},
+			rafFunctions.push(this.landingScrollHandler.bind(this));
 
-		loop: function(){
-			var _this = this,
-				newScroll = _this.$scrollElement.scrollTop(),
-				scrollDiff = _this.currentScroll - newScroll;
+			// this.loop();
+			$('header.fixed').midnight();
 
-			if(_this.currentScroll === newScroll){
-				raf(_this.loop.bind(this));
-				return;
-			} else {
-				if(Math.sign(scrollDiff) === 1){
-					this.scrollDirection = 'down';
-				} else {
-					this.scrollDirection = 'up';
-				}
+			$('html').on('loaded', function(){
+				$('.main-logo').each(function(i, mainLogo){
+					window.greensockLogoAnimation($(mainLogo));
+				});
+			});
 
-				_this.scrollChange = Math.abs(scrollDiff);
-				_this.currentScroll = newScroll;
-				_this.landingScrollHandler();
+			this.browserScrolled = false;
 
-				raf(_this.loop.bind(this));
+			if(assembly.util.env.$win.scrollTop() > 0) {
+				this.browserScrolled = true;
 			}
 		},
+
+		// loop: function(){
+		// 	var _this = this,
+		// 		newScroll = _this.$scrollElement.scrollTop(),
+		// 		scrollDiff = _this.currentScroll - newScroll;
+
+		// 	if(_this.currentScroll === newScroll){
+		// 		raf(_this.loop.bind(this));
+		// 		return;
+		// 	} else {
+		// 		if(Math.sign(scrollDiff) === 1){
+		// 			this.scrollDirection = 'down';
+		// 		} else {
+		// 			this.scrollDirection = 'up';
+		// 		}
+
+		// 		_this.scrollChange = Math.abs(scrollDiff);
+		// 		_this.currentScroll = newScroll;
+		// 		_this.landingScrollHandler();
+
+		// 		raf(_this.loop.bind(this));
+		// 	}
+		// },
 
 		landingScrollHandler: function(){
 			var max = 0.6;
@@ -78,44 +95,18 @@ var assembly = assembly || {};
 				$('.landing .mesh-bg').css({
 					'transform': 'translate('+this.$win.scrollTop()/this.$win.height() * 40+'px,'+this.$win.scrollTop()/this.$win.height() * 40 * -1+'px)'
 				});
+			}
 
-				$('.header-mask').height((1 - this.$win.scrollTop()/this.$win.height()) * 100 + '%');
+			if(assembly.parallax.currentScroll >= ($('.main-content').offset().top + 10)){
+				this.fixedHeaders.addClass('abs');
 			} else {
-				$('.header-mask').height('0%');
-			}
-
-
-			if(this.currentScroll >= ($('.main-content').offset().top + 10)){
-				$('.scroll-overlay').addClass('abs');
-			} else {
-				$('.scroll-overlay').removeClass('abs');
-			}
-
-			var percentage = (1 - (($('.main-content').offset().top - $(window).scrollTop()) / $('.scroll-overlay').height())) * 100;
-
-			if(percentage >= 0 && percentage <= 100){
-				$('.scroll-overlay .inner-bg').css({
-					transform: 'translate3d(0,'+ (100 - percentage) +'%,0)'
-				});
-			}
-
-			if(percentage < 0){
-				$('.scroll-overlay .inner-bg').css({
-					transform: 'translate3d(0,'+ 100 +'%,0)'
-				});
-			}
-
-			if(percentage > 100){
-				$('.scroll-overlay .inner-bg').css({
-					transform: 'translate3d(0,'+ 0 +'%,0)'
-				});
+				this.fixedHeaders.removeClass('abs');
 			}
 		},
 
 		waypoints: function(){
 			$('.carousel-module, .employee-carousel-wrapper').waypoint({
-				handler: function(direction) {
-					console.log(this.element);
+				handler: function(direction) {;
 					if(direction === 'down'){
 						$(this.element).addClass('in-view');
 						if(assembly.util.useragent.deviceType === 'mobile'){
@@ -191,13 +182,18 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				$('.scroll-overlay').addClass('going-down');
-				$('.scroll-overlay').removeClass('going-up');
+				if(this.browserScrolled){
+					this.browserScrolled = false;
+					return;
+				}
+
+				_this.fixedHeaders.addClass('going-down');
+				_this.fixedHeaders.removeClass('going-up');
 			});
 
 			assembly.util.env.$win.on('scroll-up', function(){
-				$('.scroll-overlay').addClass('going-up');
-				$('.scroll-overlay').removeClass('going-down');
+				_this.fixedHeaders.addClass('going-up');
+				_this.fixedHeaders.removeClass('going-down');
 			});
 
 			$('.landing-arrow').on('click', function(){
@@ -207,44 +203,6 @@ var assembly = assembly || {};
 					scrollTop: $('.main-content').offset().top
 				}, 700, 'easeInQuad');
 			});
-		 //   	$('h2').css({
-		 //   		transform: 'translate3d(0,0,0)'
-		 //   	});
-
-		 //   	$winWidth = $(window).width();
-		 //   	$winHeight = $(window).height();
-
-			// $('.landing').mousemove(function(evt){
-			// 	console.log(this.offsetLeft);
-			//     var x = evt.pageX;
-			//     var y = evt.pageY;
-
-			//     if(evt.pageX > $winWidth/2){
-			//     	x = -(evt.pageX - $winWidth/2)/25;
-			//     } else {
-			//     	x = ($winWidth/2 - evt.pageX)/25;
-			//     }
-
-			//     if(evt.pageY > $winHeight/2){
-			//     	y = -(evt.pageY - $winHeight/2)/25;
-			//     } else {
-			//     	y = ($winHeight/2 - evt.pageY)/25;
-			//     }
-
-			//    	$('h2').css({
-			//    		transform: 'translate('+x+'px,'+y+'px)'
-			//    	});
-			// });
-
-			// $('.landing').mouseleave(function(){
-			//    	$('h2').css({
-			//    		transform: 'translate(0,0)'
-			//    	});
-
-			//    	$('.landing .mesh-bg').css({
-			//    		transform: 'translate(0,0)'
-			//    	});
-			// });
 		},
 
 		initializeVideos: function(){
