@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:15 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:32 am - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9467,9 +9467,13 @@ HOME PAGE STYLES
   opacity: .4;
 }
 .no-touch .home .owl-item .image:hover img,
+.no-touch .home .owl-item .image.added img,
 .no-touch .page-about-us .owl-item .image:hover img,
+.no-touch .page-about-us .owl-item .image.added img,
 .no-touch .page-services .all-services .owl-item .image:hover img,
-.no-touch .page-contact .owl-carousel .owl-item .image:hover img {
+.no-touch .page-services .all-services .owl-item .image.added img,
+.no-touch .page-contact .owl-carousel .owl-item .image:hover img,
+.no-touch .page-contact .owl-carousel .owl-item .image.added img {
   -webkit-clip-path: inset(10px);
           clip-path: inset(10px);
   opacity: .3 !important;

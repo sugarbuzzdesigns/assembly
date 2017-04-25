@@ -2025,7 +2025,8 @@ HOME PAGE STYLES
 	    opacity: .4;
 	}
 
-	.owl-item .image:hover img {
+	.owl-item .image:hover img,
+	.owl-item .image.added img {
 		clip-path: inset(10px);
 		opacity: .3 !important;
 	}

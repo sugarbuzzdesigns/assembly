@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:29 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 09:33 am - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -1530,6 +1530,7 @@ var assembly = assembly || {};
 
 			_this.$photosToAdd.on('click', function photoClickHandler(evt){
 				evt.preventDefault();
+				evt.stopPropagation();
 
 				if($(this).is('.added')){
 					_this.removePhotoFromPhotosList($('#' + $(this).data('photo-id')));

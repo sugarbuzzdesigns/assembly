@@ -74,6 +74,7 @@ var assembly = assembly || {};
 
 			_this.$photosToAdd.on('click', function photoClickHandler(evt){
 				evt.preventDefault();
+				evt.stopPropagation();
 
 				if($(this).is('.added')){
 					_this.removePhotoFromPhotosList($('#' + $(this).data('photo-id')));
