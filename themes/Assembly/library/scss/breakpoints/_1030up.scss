@@ -50,18 +50,19 @@ MENU & NAVIGATION STYLES
 }
 
 .main-menu {
-	overflow: auto;
+	overflow: hidden;
 
 	.nav {
 		padding-left: calc(128%/1440*100);
-			li {
-    			padding-left: 58px;
-			}
 
-			li a {
+		li {
+			padding-left: 58px;
+		}
+
+		li a {
 			font-size: 37px;
 	    	letter-spacing: 0.88px;
-	    }
+    	}
 	}
 
 	.menu-inner {

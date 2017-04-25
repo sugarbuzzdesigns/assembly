@@ -1078,7 +1078,7 @@ SERVICES Page
 CASE STUDIES Page
 **********************/
 .page-case-studies {
-	header.scroll-overlay {
+	.content-inner header {
 		position: absolute;
 		// background: rgba(255,255,255,0.8);
 		transform: translate3d(0,0,0);
@@ -1093,7 +1093,7 @@ CASE STUDIES Page
 		}
 	}
 
-	header.scroll-overlay h1 {
+	header h1 {
 		margin-left: calc(67%/1440*100);
 	}
 

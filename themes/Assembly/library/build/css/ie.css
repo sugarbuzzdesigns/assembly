@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:47 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 11:09 am - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -1127,21 +1127,21 @@ SERVICES Page
 /*********************
 CASE STUDIES Page
 **********************/
-.page-case-studies header.scroll-overlay {
+.page-case-studies .content-inner header {
   position: absolute;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: -webkit-transform 0.5s linear;
   transition: transform 0.5s linear;
 }
-.page-case-studies header.scroll-overlay.fixme {
+.page-case-studies .content-inner header.fixme {
   position: fixed;
 }
-.page-case-studies header.scroll-overlay.fixme.going-down {
+.page-case-studies .content-inner header.fixme.going-down {
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
 }
-.page-case-studies header.scroll-overlay h1 {
+.page-case-studies header h1 {
   margin-left: calc(67%/1440*100);
 }
 .page-case-studies .filter-wrap {
@@ -1417,7 +1417,7 @@ MENU & NAVIGATION STYLES
 }
 
 .main-menu {
-  overflow: auto;
+  overflow: hidden;
 }
 .main-menu .nav {
   padding-left: calc(128%/1440*100);
