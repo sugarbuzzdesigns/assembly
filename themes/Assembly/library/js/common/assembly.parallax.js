@@ -61,7 +61,7 @@ var assembly = assembly || {};
 				raf(_this.loop.bind(this));
 				return;
 			} else {
-				if(Math.sign(scrollDiff) === 1){
+				if(scrollDiff > 0){
 					this.scrollDirection = 'up';
 				} else {
 					this.scrollDirection = 'down';

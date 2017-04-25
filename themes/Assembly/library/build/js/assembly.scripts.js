@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 10:51 am - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:22 pm - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -1371,7 +1371,7 @@ var assembly = assembly || {};
 				raf(_this.loop.bind(this));
 				return;
 			} else {
-				if(Math.sign(scrollDiff) === 1){
+				if(scrollDiff > 0){
 					this.scrollDirection = 'up';
 				} else {
 					this.scrollDirection = 'down';
