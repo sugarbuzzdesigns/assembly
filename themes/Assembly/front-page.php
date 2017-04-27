@@ -5,8 +5,6 @@
 	$devicePrefix = 'desktop';
 } ?>
 	<?php include 'includes/page-data/front-page-data.php'; ?>
-	<?php $domain = $_SERVER['SERVER_NAME']; ?>
-	<?php if(is_user_logged_in() || $domain == "byassembly.loc" || $domain == "staging.byassembly.com" || $domain == "staging.byassembly.net") : ?>
 	<div class="wrap">
 		<div class="container">
 			<header class="fixed">
@@ -328,83 +326,4 @@
 				</video>
 			</div>
 		</div>
-	<?php else : ?>
-		<style>
-			.loader-wrap {
-				display: none !important;
-			}
-
-			.footer {
-				display: none;
-			}
-
-			body {
-				background: url(<?php echo get_template_directory_uri(); ?>/library/images/backgrounds/pre-release-bg.jpg) no-repeat;
-				background-size: cover;
-				background-position: 50% 50%;
-				height: 100vh;
-				width: 100vw;
-			}
-
-			.pre-release {
-    			padding: 40px 60px 60px 60px;
-			}
-
-			img {
-				max-height: 88px;
-				position: absolute;
-				top: 50%;
-				transform: translate(0, -50%);
-			}
-
-			.contact {
-				position: absolute;
-				bottom: 35px;
-			}
-
-			.contact a {
-				color: #fff;
-			}
-
-			.contact li {
-				display: inline-block;
-			}
-
-			a {
-				font-size: 13px;
-				text-decoration: none;
-				letter-spacing: 1px;
-				-webkit-transition: opacity 100ms ease-in-out;
-				-moz-transition: opacity 100ms ease-in-out;
-				-ms-transition: opacity 100ms ease-in-out;
-				-o-transition: opacity 100ms ease-in-out;
-				transition: opacity 100ms ease-in-out;
-			}
-
-			a:hover {
-				opacity: 0.6;
-				text-decoration: none;
-			}
-
-			a[href="mailto:hello@byassembly.com"]{
-				font-family: 'roboto_monoregular';
-				margin-right: 30px;
-			}
-
-			a[href="tel:+16782877493"]{
-				font-family: 'gridnikregular';
-			}
-		</style>
-	<div class="pre-release">
-		<img src="<?php echo get_template_directory_uri(); ?>/library/images/pre-release-logo.png" alt="">
-		<ul class="contact">
-			<li>
-				<a href="mailto:hello@byassembly.com" target="_blank">hello@byassembly.com</a>
-			</li>
-			<li>
-				<a href="tel:+16782877493" target="_blank"> 678.287.7493 </a>
-			</li>
-		</ul>
-	</div>
-	<?php endif;  ?>
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
