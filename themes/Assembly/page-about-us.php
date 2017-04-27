@@ -969,8 +969,8 @@
 								<?php include 'library/images/svg/our-approach-1a.svg'; ?>
 							</div>
 							<div class="tile-copy">
-								<h4>Subheadline Here</h4>
-								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+								<h4>Hello.</h4>
+								<p>Meet your Field Services Manager (Site Foreman), the person who will keep your project on track for the day-to-day management of local on-site labor crews.</p>
 							</div>
 						</div>
 					</div>
@@ -980,8 +980,8 @@
 								<?php include 'library/images/svg/our-approach-2a.svg'; ?>
 							</div>
 							<div class="tile-copy">
-								<h4>Subheadline Here</h4>
-								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+								<h4>Planning makes perfect.</h4>
+								<p>We utilize critical timelines to optimize your budget. Our vast network is leveraged to ensure consistency and quality at any event in the world.</p>
 							</div>
 						</div>
 					</div>
@@ -991,8 +991,8 @@
 								<?php include 'library/images/svg/our-approach-3a.svg'; ?>
 							</div>
 							<div class="tile-copy">
-								<h4>Subheadline Here</h4>
-								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+								<h4>We're on it.</h4>
+								<p>Our team applies a comprehensive service approach: planning, creative development, engineering & permitting, on-site operations and logistics to streamline processes and drive quality control.</p>
 							</div>
 						</div>
 					</div>
@@ -1002,8 +1002,8 @@
 								<?php include 'library/images/svg/our-approach-4a.svg'; ?>
 							</div>
 							<div class="tile-copy">
-								<h4>Subheadline Here</h4>
-								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+								<h4>Space-saving is money-saving.</h4>
+								<p>We engineer and produce products with scalability in mind. We’re always seeking efficient alternatives.</p>
 							</div>
 						</div>
 					</div>
@@ -1013,8 +1013,8 @@
 								<?php include 'library/images/svg/our-approach-5a.svg'; ?>
 							</div>
 							<div class="tile-copy">
-								<h4>Subheadline Here</h4>
-								<p>The Field Services Manager (Site Foreman) will work to keep projects on track for the day-to-day management of local on-site labor crews.</p>
+								<h4>It all comes together.</h4>
+								<p>Collaboration is key. Our team approach to getting the job done leverages everyone’s expertise.</p>
 							</div>
 						</div>
 					</div>
