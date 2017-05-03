@@ -62,9 +62,9 @@ var assembly = assembly || {};
 				return;
 			} else {
 				if(scrollDiff > 0){
-					this.scrollDirection = 'up';
+					_this.scrollDirection = 'up';
 				} else {
-					this.scrollDirection = 'down';
+					_this.scrollDirection = 'down';
 				}
 
 				_this.scrollChange = Math.abs(scrollDiff);

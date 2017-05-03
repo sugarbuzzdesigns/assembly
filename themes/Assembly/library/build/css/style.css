@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:44 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-05-02 10:10 pm - User: Phoydar */
 @charset "UTF-8";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
@@ -9950,22 +9950,22 @@ CONTACT
   line-height: 1.13;
   color: #fff;
 }
-.page-contact form,
-.contact-content form {
+.page-contact #contact-form,
+.contact-content #contact-form {
   width: 80%;
   margin: 0 auto;
 }
-.page-contact form .error-message,
-.contact-content form .error-message {
+.page-contact #contact-form .error-message,
+.contact-content #contact-form .error-message {
   display: none;
 }
-.page-contact form .inputs,
-.contact-content form .inputs {
+.page-contact #contact-form .inputs,
+.contact-content #contact-form .inputs {
   overflow: hidden;
   position: relative;
 }
-.page-contact form label,
-.contact-content form label {
+.page-contact #contact-form label,
+.contact-content #contact-form label {
   position: absolute;
   top: 0;
   left: 0;
@@ -9974,45 +9974,45 @@ CONTACT
   opacity: 0;
   pointer-events: none;
 }
-.page-contact form label.active,
-.contact-content form label.active {
+.page-contact #contact-form label.active,
+.contact-content #contact-form label.active {
   opacity: 1;
   position: relative;
   pointer-events: auto;
 }
-.page-contact form p,
-.contact-content form p {
+.page-contact #contact-form p,
+.contact-content #contact-form p {
   color: #fff;
   line-height: 2.125rem;
   font-family: 'pangrambold';
   font-size: 1.875rem;
   margin: 0;
 }
-.page-contact form p:first-child,
-.contact-content form p:first-child {
+.page-contact #contact-form p:first-child,
+.contact-content #contact-form p:first-child {
   padding-top: 16%;
 }
-.page-contact form .pager,
-.contact-content form .pager {
+.page-contact #contact-form .pager,
+.contact-content #contact-form .pager {
   font-family: 'gridnikregular';
   font-size: 0.75rem;
 }
-.page-contact form button,
-.contact-content form button {
+.page-contact #contact-form button,
+.contact-content #contact-form button {
   position: relative;
   padding: 0;
   border: solid .75px #a7a6a6;
   margin-top: 6%;
 }
-.page-contact form button .resting,
-.contact-content form button .resting {
+.page-contact #contact-form button .resting,
+.contact-content #contact-form button .resting {
   height: 100%;
   width: 100%;
   padding: 14px 28px 13px;
   display: block;
 }
-.page-contact form button .hover,
-.contact-content form button .hover {
+.page-contact #contact-form button .hover,
+.contact-content #contact-form button .hover {
   color: #000;
   background: #fff;
   display: block;
@@ -10024,43 +10024,43 @@ CONTACT
   overflow: hidden;
   transition: height 0.35s;
 }
-.page-contact form button .hover .inner,
-.contact-content form button .hover .inner {
+.page-contact #contact-form button .hover .inner,
+.contact-content #contact-form button .hover .inner {
   padding: 14px 28px 13px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.no-touch form button:hover .hover {
+.no-touch #contact-form button:hover .hover {
   height: 100%;
 }
-.page-contact form button.disabled,
-.contact-content form button.disabled {
+.page-contact #contact-form button.disabled,
+.contact-content #contact-form button.disabled {
   opacity: 0.3;
   pointer-events: none;
 }
-.page-contact form ::-webkit-input-placeholder,
-.contact-content form ::-webkit-input-placeholder {
+.page-contact #contact-form ::-webkit-input-placeholder,
+.contact-content #contact-form ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #282828;
 }
-.page-contact form ::-moz-placeholder,
-.contact-content form ::-moz-placeholder {
+.page-contact #contact-form ::-moz-placeholder,
+.contact-content #contact-form ::-moz-placeholder {
   /* Firefox 19+ */
   color: #282828;
 }
-.page-contact form :-ms-input-placeholder,
-.contact-content form :-ms-input-placeholder {
+.page-contact #contact-form :-ms-input-placeholder,
+.contact-content #contact-form :-ms-input-placeholder {
   /* IE 10+ */
   color: #282828;
 }
-.page-contact form :-moz-placeholder,
-.contact-content form :-moz-placeholder {
+.page-contact #contact-form :-moz-placeholder,
+.contact-content #contact-form :-moz-placeholder {
   /* Firefox 18- */
   color: #282828;
 }
-.page-contact form input,
-.contact-content form input {
+.page-contact #contact-form input,
+.contact-content #contact-form input {
   background-color: transparent;
   font-family: 'pangrambold';
   padding: 0 0 6px;
@@ -10071,9 +10071,9 @@ CONTACT
   -webkit-appearance: none;
   border-radius: 0;
 }
-.page-contact form input:focus, .page-contact form input:active,
-.contact-content form input:focus,
-.contact-content form input:active {
+.page-contact #contact-form input:focus, .page-contact #contact-form input:active,
+.contact-content #contact-form input:focus,
+.contact-content #contact-form input:active {
   background: transparent;
 }
 .page-contact .add-photo-icon,
@@ -12844,14 +12844,14 @@ PLUS SIZE (MOBILE) Iphone #+
     height: 60px;
     width: 60px;
   }
-  .page-contact form p,
-  .contact-content form p {
+  .page-contact #contact-form p,
+  .contact-content #contact-form p {
     font-size: 2.375rem;
     line-height: 2.6875rem;
     width: 90%;
   }
-  .page-contact form .pager,
-  .contact-content form .pager {
+  .page-contact #contact-form .pager,
+  .contact-content #contact-form .pager {
     margin-top: 20px;
   }
 }
@@ -16804,28 +16804,28 @@ you can add resource intensive styles.
     background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
     background-size: 54%;
   }
-  .page-contact form,
-  .contact-content form {
+  .page-contact #contact-form,
+  .contact-content #contact-form {
     padding-top: 79px;
     width: 81.81%;
     margin: 0 auto 30px calc((130%/1440) *100);
   }
-  .page-contact form .pager,
-  .contact-content form .pager {
+  .page-contact #contact-form .pager,
+  .contact-content #contact-form .pager {
     margin-top: 22px;
     margin-bottom: 19px;
   }
-  .page-contact form p,
-  .contact-content form p {
+  .page-contact #contact-form p,
+  .contact-content #contact-form p {
     width: 54.15%;
     line-height: 1.13;
   }
-  .page-contact form p:first-child,
-  .contact-content form p:first-child {
+  .page-contact #contact-form p:first-child,
+  .contact-content #contact-form p:first-child {
     padding-top: 0;
   }
-  .page-contact form input,
-  .contact-content form input {
+  .page-contact #contact-form input,
+  .contact-content #contact-form input {
     font-size: 2.375rem;
     line-height: 1.45;
     letter-spacing: 0.37px;
@@ -16833,8 +16833,8 @@ you can add resource intensive styles.
     width: 100%;
     height: auto;
   }
-  .page-contact form button,
-  .contact-content form button {
+  .page-contact #contact-form button,
+  .contact-content #contact-form button {
     margin-top: 38px;
     font-family: 'gridnikregular';
     font-size: 0.8125rem;

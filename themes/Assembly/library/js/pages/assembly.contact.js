@@ -7,6 +7,7 @@ var assembly = assembly || {};
 	assembly.contact = {
 		init: function(){
 
+			this.$contactForm = $('#contact-form');
 			this.$landingSection = $('.contact-landing');
 			this.landingSectionHeight = this.$landingSection.outerHeight(true);
 			this.$addPhotoSection = $('.add-photo');
@@ -43,8 +44,18 @@ var assembly = assembly || {};
 		bindEvents: function(){
 			var _this = this;
 
-			$('form button').on('click', function formButtonHandler(){
-				if(_this.validField($(this).closest('form').find('.active input').val())){
+			_this.$contactForm.find('button').on('click', function formButtonHandler(){
+				var $curInput = _this.$contactForm.find('.active input');
+				var fieldName = _this.$contactForm.find('.active').data('field-name');
+				var value = $curInput.val();
+
+				if(!value){
+					value = 'N/A';
+				}
+
+				$('.wpcf7-form .' + fieldName).find('input').val(value);
+
+				if(_this.validField(value)){
 					_this.showNextFormInput($(this).closest('form').find('.active'));
 					$('form .error-message').hide();
 				} else {
@@ -52,7 +63,7 @@ var assembly = assembly || {};
 				}
 			});
 
-			$('form').on('submit', function formSubmitHandler(evt){
+			_this.$contactForm.on('submit', function formSubmitHandler(evt){
 				evt.preventDefault();
 
 				_this.showSubmittedFormMessage();
@@ -108,8 +119,8 @@ var assembly = assembly || {};
 		},
 
 		showSubmittedFormMessage: function(){
+			this.$contactForm.hide();
 			$('.submit-message').show();
-			$('form').hide();
 			$('.add-photo').hide();
 		},
 
@@ -229,7 +240,7 @@ var assembly = assembly || {};
 
 		initContactForm: function(){
 			var _this = this,
-				formFields = $('form label'),
+				formFields = _this.$contactForm.find('label'),
 				numFormFields = formFields.length,
 				$cur = this.$pagerCurrent,
 				$total = $('.pager .total');
@@ -249,22 +260,23 @@ var assembly = assembly || {};
 		},
 
 		showNextFormInput: function($currentInput){
-			var curIndex = $currentInput.index(),
+			var _this = this,
+				curIndex = $currentInput.index(),
 				curInputNum = curIndex + 1,
 				nextIndex = curIndex + 1;
 
-			if($('form button').is('.submit')){
-				$('form').submit();
+			if(_this.$contactForm.find('button').is('.submit')){
+				_this.$contactForm.submit();
 				return;
 			}
 
 			$currentInput.removeClass('active');
 			$currentInput.next().addClass('active');
 
-			if(curInputNum === $('form label').length - 1){
-				$('form button .resting').text('submit');
-				$('form button .hover .inner').text('submit');
-				$('form button').addClass('submit');
+			if(curInputNum === _this.$contactForm.find('label').length - 1){
+				_this.$contactForm.find('button .resting').text('submit');
+				_this.$contactForm.find('button .hover .inner').text('submit');
+				_this.$contactForm.find('button').addClass('submit');
 			}
 
 			// if(curIndex === $('form label').length){

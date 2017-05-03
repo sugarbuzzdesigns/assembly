@@ -121,7 +121,7 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				if(_this.browserScrolled){
+				if(_this.browserScrolled || assembly.parallax.$scrollElement.scrollTop() <= 0){
 					_this.browserScrolled = false;
 					return;
 				}

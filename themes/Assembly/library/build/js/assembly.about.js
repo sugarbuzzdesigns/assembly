@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:22 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-05-02 10:24 pm - User: Phoydar */
 /*!
  * @fileOverview TouchSwipe - jQuery Plugin
  * @version 1.6.18
@@ -122,7 +122,7 @@ var assembly = assembly || {};
 			});
 
 			assembly.util.env.$win.on('scroll-down', function(){
-				if(_this.browserScrolled){
+				if(_this.browserScrolled || assembly.parallax.$scrollElement.scrollTop() <= 0){
 					_this.browserScrolled = false;
 					return;
 				}

@@ -5,6 +5,19 @@
 } else {
 	$devicePrefix = 'desktop';
 } ?>
+
+<?php
+// TO SHOW THE PAGE CONTENTS
+while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
+    <div style="display:none;" class="contact-form">
+        <?php the_content(); ?> <!-- Page Content -->
+    </div><!-- .entry-content-page -->
+
+<?php
+endwhile; //resetting the page loop
+wp_reset_query(); //resetting the page query
+?>
+
 <section class="contact-landing">
 	<div class="inner">
 		<header>
@@ -45,25 +58,25 @@
 		  	</h1>
 		  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 		</header>
-		<form action="" method="post" accept-charset="utf-8">
+		<form id="contact-form" action="" method="post" accept-charset="utf-8">
 			<div class="form-viewport">
 				<div class="inputs">
-					<label class="active">
+					<label data-field-name="type-of-structure" class="active">
 						<p>What type of structure are you looking for?</p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 						<input type="text" name="" value="" placeholder="start typing">
 					</label>
-					<label>
+					<label data-field-name="your-vision">
 						<p>Do you have a vision you’d like us to build on? </p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 						<input type="text" name="" value="" placeholder="start typing">
 					</label>
-					<label>
+					<label data-field-name="your-space-impression">
 						<p>What impression should your space leave? </p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 						<input type="text" name="" value="" placeholder="start typing">
 					</label>
-					<label>
+					<label data-field-name="your-email">
 						<p>Please provide your email address and we’ll be in touch. </p>
 						<p class="pager"><span class="current">1</span>/<span class="total">6</span></p>
 						<input type="text" name="" value="" placeholder="start typing">

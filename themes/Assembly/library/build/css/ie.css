@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:44 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-05-02 10:10 pm - User: Phoydar */
 /******************************************************************
 Site Name:
 Author:
@@ -4078,28 +4078,28 @@ CONTACT
   background: url(../../images/backgrounds/contact-bg-large-repeat.jpg);
   background-size: 54%;
 }
-.page-contact form,
-.contact-content form {
+.page-contact #contact-form,
+.contact-content #contact-form {
   padding-top: 79px;
   width: 81.81%;
   margin: 0 auto 30px calc((130%/1440) *100);
 }
-.page-contact form .pager,
-.contact-content form .pager {
+.page-contact #contact-form .pager,
+.contact-content #contact-form .pager {
   margin-top: 22px;
   margin-bottom: 19px;
 }
-.page-contact form p,
-.contact-content form p {
+.page-contact #contact-form p,
+.contact-content #contact-form p {
   width: 54.15%;
   line-height: 1.13;
 }
-.page-contact form p:first-child,
-.contact-content form p:first-child {
+.page-contact #contact-form p:first-child,
+.contact-content #contact-form p:first-child {
   padding-top: 0;
 }
-.page-contact form input,
-.contact-content form input {
+.page-contact #contact-form input,
+.contact-content #contact-form input {
   font-size: rem(38);
   line-height: 1.45;
   letter-spacing: 0.37px;
@@ -4107,8 +4107,8 @@ CONTACT
   width: 100%;
   height: auto;
 }
-.page-contact form button,
-.contact-content form button {
+.page-contact #contact-form button,
+.contact-content #contact-form button {
   margin-top: 38px;
   font-family: 'gridnikregular';
   font-size: rem(13);

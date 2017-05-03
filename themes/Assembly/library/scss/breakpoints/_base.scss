@@ -2561,7 +2561,7 @@ CONTACT
 		}
 	}
 
-	form {
+	#contact-form {
 		width: 80%;
 		margin: 0 auto;
 
@@ -2643,7 +2643,7 @@ CONTACT
 			}
 
 			@at-root {
-				.no-touch form button:hover {
+				.no-touch #contact-form button:hover {
 					.hover {
 						height: 100%;
 					}

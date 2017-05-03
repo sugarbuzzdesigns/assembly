@@ -124,6 +124,10 @@ var assembly = assembly || {};
 			};
 
 			assembly.util.env.$win.on('scroll-down', function(){
+				if(assembly.parallax.$scrollElement.scrollTop() <= 0){
+					return;
+				}
+
 				$('.content-inner header').addClass('going-down');
 				$('.content-inner header').removeClass('going-up');
 

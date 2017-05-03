@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-04-25 01:22 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-05-02 10:23 pm - User: Phoydar */
 /*!
  * Assembly Case Studies Page
  */
@@ -125,6 +125,10 @@ var assembly = assembly || {};
 			};
 
 			assembly.util.env.$win.on('scroll-down', function(){
+				if(assembly.parallax.$scrollElement.scrollTop() <= 0){
+					return;
+				}
+
 				$('.content-inner header').addClass('going-down');
 				$('.content-inner header').removeClass('going-up');
 
