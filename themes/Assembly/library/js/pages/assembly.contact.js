@@ -63,6 +63,17 @@ var assembly = assembly || {};
 				}
 			});
 
+			$('#contact-form input').keypress(function(){
+				var value = $(this).val();
+				var fieldName = _this.$contactForm.find('.active').data('field-name');
+
+				console.log($('.wpcf7-form .' + fieldName).find('input').val(value));
+			});
+
+			document.addEventListener( 'wpcf7mailsent', function( event ) {
+			  alert( "Fire!" );
+			}, false );
+
 			_this.$contactForm.on('submit', function formSubmitHandler(evt){
 				evt.preventDefault();
 
