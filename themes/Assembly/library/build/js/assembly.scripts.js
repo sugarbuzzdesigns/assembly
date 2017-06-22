@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-06-08 11:41 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-06-22 12:36 pm - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -242,7 +242,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 				}
 
-				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				if($('#about-video-overlay').length && ($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0)){
 					$('.vjs-control-bar').css({
 						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
 					});

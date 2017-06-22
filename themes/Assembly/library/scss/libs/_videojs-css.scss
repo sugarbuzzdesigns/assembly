@@ -360,13 +360,13 @@ body.vjs-full-window {
   line-height: 1.5em;
   height: 1.5em;
   width: 3em;
-  display: block;
+  display: none !important;
   position: absolute;
   top: 10px;
   left: 10px;
   padding: 0;
   cursor: pointer;
-  opacity: 1;
+  opacity: 0;
   border: 0.06666em solid #fff;
   background-color: #2B333F;
   background-color: rgba(43, 51, 63, 0.7);

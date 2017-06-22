@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-06-08 11:41 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-06-22 12:46 pm - User: Phoydar */
 /*
 Parallax.js
  */
@@ -129,18 +129,22 @@ var assembly = assembly || {};
 			var _this = this;
 
 			assembly.util.env.$win.on('windowResize', function(){
-				if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
-					$('.vjs-control-bar').css({
-						bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
-					});
-				} else {
-					$('.vjs-control-bar').css({
-						bottom: 0
-					});
-				}
+				// if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				// 	$('.vjs-control-bar').css({
+				// 		bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+				// 	});
+				// } else {
+				// 	$('.vjs-control-bar').css({
+				// 		bottom: 0
+				// 	});
+				// }
 			});
 
 			$('.video-overlay').on('click', function(evt){
+				if($(evt.target).is('.vjs-control')){
+					console.log('dont close');
+					return;
+				}
 				evt.stopPropagation();
 
 				$(this).removeClass('show');
@@ -227,15 +231,15 @@ var assembly = assembly || {};
 				});
 			});
 
-			if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
-				$('.vjs-control-bar').css({
-					bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
-				});
-			} else {
-				$('.vjs-control-bar').css({
-					bottom: 0
-				});
-			}
+			// if($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+			// 	$('.vjs-control-bar').css({
+			// 		bottom: Math.abs(($('#home-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
+			// 	});
+			// } else {
+			// 	$('.vjs-control-bar').css({
+			// 		bottom: 0
+			// 	});
+			// }
 		},
 
 		attachPlayerEvents: function(player){

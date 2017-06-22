@@ -240,7 +240,7 @@ animationEndEventName = animationEndEventNames[ Modernizr.prefixed('animation') 
 
 				}
 
-				if($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0){
+				if($('#about-video-overlay').length && ($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight() < 0)){
 					$('.vjs-control-bar').css({
 						bottom: Math.abs(($('#about-video-overlay').outerHeight() - $('.video-js').outerHeight())/2)
 					});
