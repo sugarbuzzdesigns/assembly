@@ -1,4 +1,4 @@
-/* repo: assembly/ - Package Version: 1.0.0 - 2017-07-10 09:44 pm - User: Phoydar */
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-07-10 10:24 pm - User: Phoydar */
 /*! Source: library/js/common/assembly.util.js*/
 /*!
  * imagesLoaded PACKAGED v4.1.1
@@ -1532,7 +1532,7 @@ var assembly = assembly || {};
 			});
 
 			document.addEventListener( 'wpcf7mailsent', function( event ) {
-			  alert( "Fire!" );
+			  // alert( "Fire!" );
 			}, false );
 
 			_this.$contactForm.on('submit', function formSubmitHandler(evt){

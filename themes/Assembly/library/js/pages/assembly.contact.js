@@ -74,7 +74,7 @@ var assembly = assembly || {};
 			});
 
 			document.addEventListener( 'wpcf7mailsent', function( event ) {
-			  alert( "Fire!" );
+			  // alert( "Fire!" );
 			}, false );
 
 			_this.$contactForm.on('submit', function formSubmitHandler(evt){
