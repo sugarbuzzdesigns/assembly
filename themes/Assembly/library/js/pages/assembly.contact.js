@@ -29,6 +29,9 @@ var assembly = assembly || {};
 			this.$addedPhotosList = $('.photos-wrap .photos');
 			// keep a list of photos that have been added
 			this.addedPhotosArray = [];
+			// list of photo urls, so I don't have to
+			// change addedPhotosArray to an array of objects
+			this.addedPhotosUrlsArray = [];
 
 			this.photosListCarouselCurSlide = '';
 			this.addPhotosCarouselCurSlide = '';
@@ -131,6 +134,7 @@ var assembly = assembly || {};
 
 		showSubmittedFormMessage: function(){
 			this.$contactForm.hide();
+			$('.wpcf7-form').submit();
 			$('.submit-message').show();
 			$('.add-photo').hide();
 		},
@@ -304,8 +308,11 @@ var assembly = assembly || {};
 		addPhotoToPhotosList: function(photoId){
 			var numSlides = $('.photos-wrap .photo').length,
 				photoId = photoId,
+				photoUrl = window.location.origin + $('[data-photo-id="'+ photoId +'"]').find('img').attr('src'),
 				photoWidth = $('#' + photoId).outerWidth(true),
 				stageWidth = $('.add-photo .inner').width(),
+				$textArea = $('.wpcf7-form textarea'),
+				textAreaText = $textArea.val(),
 				newWidth;
 
 			newWidth = Math.ceil($('.add-photo .inner').width()) + Math.ceil($('#' + photoId).outerWidth(true));
@@ -322,18 +329,40 @@ var assembly = assembly || {};
 			$('.add-photo .inner').width(newWidth);
 
 			this.addedPhotosArray.push(photoId);
+			this.addedPhotosUrlsArray.push(photoUrl);
+
+			this.setTextAreaText($textArea);
+
 			$('.add-photo-btn').addClass('disabled');
 		},
 
+		setTextAreaText: function ($textArea) {
+			var textAreaString = '';
+
+			this.addedPhotosUrlsArray.forEach(function (url, i) {
+				textAreaString += url + ';';
+			});
+
+			$textArea.val(textAreaString);
+		},
+
 		removePhotoFromPhotosList: function($photo){
+			var photoId = $photo.attr('id');
+			var photoUrl = window.location.origin + $('[data-photo-id="'+ photoId +'"]').find('img').attr('src');
+			var $textArea = $('.wpcf7-form textarea');
+			var newWidth;
+
 			$photo.removeClass('show');
 			$('[data-photo-id="'+ $photo.attr('id') +'"]').removeClass('added');
 
-			var newWidth = Math.ceil($('.add-photo .inner').outerWidth()) - Math.ceil($photo.outerWidth(true));
+			newWidth = Math.ceil($('.add-photo .inner').outerWidth()) - Math.ceil($photo.outerWidth(true));
 			$('.add-photo .inner').width(newWidth);
 			$('.add-photo-btn').removeClass('disabled');
 
 			this.addedPhotosArray.splice($.inArray($photo.attr('id'), this.addedPhotosArray), 1);
+			this.addedPhotosUrlsArray.splice($.inArray(photoUrl, this.addedPhotosUrlsArray), 1);
+
+			this.setTextAreaText($textArea);
 		}
 	};
 
