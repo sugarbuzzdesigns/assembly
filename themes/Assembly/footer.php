@@ -73,7 +73,7 @@
 							  	</h1>
 							  	<?php include __DIR__ . '/includes/menu-btn.php'; ?>
 							</header>
-							<form action="" method="post" accept-charset="utf-8">
+							<form action="" method="post" accept-charset="utf-8" id="contact-form">
 								<div class="form-viewport">
 									<div class="inputs">
 										<label class="active">
