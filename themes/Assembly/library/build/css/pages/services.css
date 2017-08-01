@@ -1,0 +1,848 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-08-01 09:07 am - User: Phoydar */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/*********************
+SERVICES Page
+**********************/
+.page-services {
+  background-color: #fff;
+}
+.page-services header.fixed {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+.page-services header.fixed.going-down {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+.page-services header.fixed.going-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.page-services .section-header {
+  font-family: 'pangrambold';
+  font-size: 2rem;
+  margin: 24% auto 11%;
+  margin-left: calc(8px/414*100 + 43px);
+  width: 77%;
+}
+.page-services .filter-wrap {
+  margin-bottom: 11.5%;
+}
+.page-services select {
+  margin-bottom: 0;
+}
+.page-services .mesh-bg {
+  top: 0;
+  margin-top: 20%;
+  width: 85%;
+  height: 60%;
+  z-index: -1;
+}
+.page-services .tile {
+  margin: 0 0 20% 0;
+  float: none;
+  width: auto;
+}
+.page-services .tile .tile-img {
+  margin-bottom: 6%;
+}
+.page-services .tile .tile-img img {
+  position: absolute;
+}
+.page-services .service-desc {
+  width: 77%;
+  margin: 0 auto 24%;
+  font-size: 0.8125rem;
+  line-height: 1.76;
+  color: #7D7D7D;
+}
+.page-services [data-service] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50px, 0);
+          transform: translate3d(0, 50px, 0);
+}
+.page-services [data-service] .tile[data-service-id] {
+  cursor: pointer;
+}
+.page-services [data-service].show {
+  pointer-events: auto;
+  -webkit-animation-name: serviceShow;
+          animation-name: serviceShow;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+.page-services [data-service].hide {
+  -webkit-animation-name: serviceHide;
+          animation-name: serviceHide;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.page-services .content {
+  float: left;
+  width: 100%;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+.page-services .content .content-tile {
+  margin-bottom: 30%;
+}
+.page-services .content .permitting-wrapper .intro-tile,
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .engineering-wrapper .intro-tile,
+.page-services .content .interior-buildouts-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content .permitting-wrapper .intro-tile .tile-inner,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner {
+  margin-left: 11.3%;
+  width: 78%;
+}
+.page-services .content .permitting-wrapper .intro-tile .tile-inner img,
+.page-services .content .team-player-wrapper .intro-tile .tile-inner img,
+.page-services .content .engineering-wrapper .intro-tile .tile-inner img,
+.page-services .content .interior-buildouts-wrapper .intro-tile .tile-inner img {
+  width: 100%;
+}
+.page-services .content .team-player-wrapper .intro-tile,
+.page-services .content .imagine-experience-wrapper .intro-tile {
+  margin-left: 0;
+}
+.page-services .content .team-player-wrapper .intro-tile .tile-info,
+.page-services .content .imagine-experience-wrapper .intro-tile .tile-info {
+  width: 200%;
+}
+.page-services .content .team-player-wrapper .intro-tile .tile-inner,
+.page-services .content .imagine-experience-wrapper .intro-tile .tile-inner {
+  margin-left: 14.25%;
+  width: 68%;
+}
+.page-services .all-services .tile.visualisation {
+  margin-left: calc(71%/414*100);
+  width: 60.39%;
+}
+.page-services .all-services .tile.permitting {
+  margin-left: calc(56%/414*100);
+  width: 77%;
+}
+.page-services .all-services .tile.engineering {
+  margin-left: calc(38%/414*100);
+  width: calc(322%/414*100);
+}
+.page-services .all-services .tile.interior-buildouts {
+  margin-left: calc(76%/414*100);
+  width: 66%;
+}
+.page-services .all-services .tile.interior-buildouts .mesh-bg {
+  top: -186px;
+  right: -66px;
+  left: auto;
+  height: 429px;
+  width: 283px;
+}
+.page-services .all-services .tile.team-player {
+  margin-left: calc(32%/414*100);
+  width: 77%;
+}
+.page-services .all-services .tile.imagine-experience {
+  margin-left: calc(64%/414*100);
+  margin-bottom: 45.89%;
+  width: 70.29%;
+}
+.page-services .all-services .tile.imagine-experience .mesh-bg {
+  right: auto;
+  left: -55px;
+  height: calc(466px/414*320);
+  width: calc(260px/414*320);
+  margin: 0;
+  top: 97px;
+}
+.page-services .individual-service .content-1,
+.page-services .individual-service .content-2,
+.page-services .individual-service .content-3,
+.page-services .individual-service .content-4 {
+  width: 78%;
+  margin-left: 13.7%;
+}
+.page-services .individual-service .content-2,
+.page-services .individual-service .content-4 {
+  margin-left: 9%;
+}
+.page-services .visualisation-wrapper .intro-tile {
+  margin-left: calc(71%/414*100);
+  width: 60.39%;
+}
+.page-services .visualisation-wrapper .content-1 {
+  width: 78%;
+  margin-left: 13.7%;
+}
+.page-services .visualisation-wrapper .content-1 .mesh-bg {
+  top: -217px;
+  right: 0;
+  width: 150px;
+  height: 313px;
+}
+.page-services .visualisation-wrapper .content-2 {
+  width: 78%;
+  margin-left: 9%;
+}
+.page-services .visualisation-wrapper .content-2 .mesh-bg {
+  width: 32px;
+  right: auto;
+  left: 10px;
+  height: 300px;
+  top: -110px;
+}
+
+@media screen and (min-width: 768px) {
+  /*********************
+  SERVICES Page
+  **********************/
+  .page-services .mesh-bg {
+    height: 33%;
+  }
+  .page-services header.fixed {
+    background: transparent;
+  }
+  .page-services .section-header {
+    font-size: 40px;
+    margin: 132px 0 30px 8.43%;
+    margin-left: calc(8px/414*100 + 43px);
+  }
+  .page-services .mesh-bg {
+    margin-top: 216px;
+  }
+  .page-services .filter-wrap {
+    width: 88%;
+  }
+  .page-services .filter-menu {
+    position: fixed;
+    right: 0;
+    top: 168px;
+    margin-right: 7.82%;
+    padding: 16px 33px 20px 17px;
+    z-index: 10;
+    opacity: 0;
+    background: #fff;
+    pointer-events: none;
+  }
+  .page-services .filter-menu.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .page-services .filter-menu div a {
+    letter-spacing: 0.7px;
+  }
+  .page-services .all-services .tile {
+    width: 28.54%;
+  }
+  .page-services .all-services .tile .tile-inner {
+    width: 100%;
+    margin: 0;
+  }
+  .page-services .all-services .tile .tile-inner img {
+    width: 100%;
+  }
+  .page-services .all-services .tile.visualisation {
+    margin-left: 15.07%;
+    margin-top: 94px;
+    margin-bottom: 129px;
+    float: left;
+    width: 28.54%;
+  }
+  .page-services .all-services .tile.permitting {
+    width: 22.64%;
+    float: right;
+    margin: 288px 14.86% 0 0;
+  }
+  .page-services .all-services .tile.engineering {
+    width: 48.4%;
+    clear: left;
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .page-services .all-services .tile.engineering .tile-info {
+    margin-left: 6.2%;
+  }
+  .page-services .all-services .tile.interior-buildouts {
+    float: right;
+    width: 32.85%;
+    margin-left: 0;
+    margin-right: 10.63%;
+    margin-top: 124px;
+    margin-bottom: 0;
+    clear: right;
+  }
+  .page-services .all-services .tile.interior-buildouts .mesh-bg {
+    top: -168px;
+    right: -107px;
+    width: 335px;
+    height: 314px;
+  }
+  .page-services .all-services .tile.team-player {
+    float: right;
+    clear: both;
+    margin-right: 9.38%;
+    margin-top: 165px;
+    margin-bottom: 0;
+    width: 28.54%;
+  }
+  .page-services .all-services .tile.imagine-experience {
+    float: left;
+    margin-left: 15.07%;
+    margin-bottom: 145px;
+    width: 28.54%;
+  }
+  .page-services .all-services .tile.imagine-experience .mesh-bg {
+    left: -96px;
+    height: 284px;
+    width: 315px;
+    top: 233px;
+  }
+  .page-services .content {
+    clear: both;
+  }
+  .page-services .content .tile .tile-info {
+    margin-top: 20px;
+  }
+  .page-services .content .tile .tile-img {
+    margin-bottom: 0;
+  }
+  .page-services .content .tile img {
+    width: 100%;
+    margin: 0;
+  }
+  .page-services .content .tile.right {
+    float: right;
+  }
+  .page-services .content .individual-service .service-desc {
+    width: 22.92%;
+    float: left;
+    margin-left: 7.01%;
+    margin-top: 260px;
+    margin-bottom: 0;
+    font-size: 0.6875rem;
+    line-height: 1.82;
+    letter-spacing: 0.97px;
+  }
+  .page-services .content .individual-service .tile .tile-inner {
+    margin: 0;
+    width: 100%;
+  }
+  .page-services .content .individual-service .intro-tile {
+    float: left;
+  }
+  .page-services .content .individual-service .tile-1 {
+    margin-bottom: 0;
+  }
+  .page-services .content .individual-service .tile-2 {
+    float: right;
+    clear: left;
+  }
+  .page-services .content .individual-service .tile-3 {
+    float: left;
+  }
+  .page-services .content .visualisation-wrapper {
+    width: 100%;
+  }
+  .page-services .content .visualisation-wrapper .tile {
+    width: 28.85%;
+    margin-left: 15.069%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .visualisation-wrapper .intro-tile {
+    width: calc(410%/1440*100);
+    margin-left: calc(217%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .visualisation-wrapper .service-desc {
+    margin-top: 120px;
+    width: 30.92%;
+  }
+  .page-services .content .visualisation-wrapper .tile-2 {
+    float: right;
+    margin-right: 15.42%;
+    margin-left: 0;
+  }
+  .page-services .content .visualisation-wrapper .tile-3 {
+    width: 22.22%;
+    margin-left: 21.39%;
+    margin-top: 290px;
+    margin-bottom: 176px;
+  }
+  .page-services .content .visualisation-wrapper .content-1 {
+    margin-top: 68px;
+  }
+  .page-services .content .visualisation-wrapper .content-1 .mesh-bg {
+    top: 45px;
+    right: -88px;
+    width: 332px;
+    height: 193px;
+    margin-top: 0;
+  }
+  .page-services .content .visualisation-wrapper .content-2 {
+    padding-bottom: 170px;
+  }
+  .page-services .content .visualisation-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 256px;
+    top: auto;
+  }
+  .page-services .content .permitting-wrapper {
+    width: 100%;
+  }
+  .page-services .content .permitting-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 167px;
+  }
+  .page-services .content .permitting-wrapper .tile {
+    width: 34.514%;
+    margin-left: calc(44%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .permitting-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .permitting-wrapper .content-1 {
+    width: 22.64%;
+    margin-right: calc(302%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .permitting-wrapper .content-2 {
+    width: 22.5%;
+    margin-left: calc(302%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 126px;
+  }
+  .page-services .content .permitting-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .permitting-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: auto;
+  }
+  .page-services .content .team-player-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 70px;
+    width: 42.92%;
+  }
+  .page-services .content .team-player-wrapper .tile {
+    margin: 0;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .team-player-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .team-player-wrapper .intro-tile {
+    width: calc(410%/1440*100);
+    margin-left: 9.02%;
+  }
+  .page-services .content .team-player-wrapper .content-1 {
+    width: calc(383%/1440*100);
+    margin-right: calc(328%/1440*100);
+    clear: left;
+    margin-left: 0;
+  }
+  .page-services .content .team-player-wrapper .content-1 .mesh-bg {
+    top: 155px;
+    right: -168px;
+    width: 337px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .team-player-wrapper .content-2 {
+    clear: both;
+    margin-right: calc(388%/1440*100);
+    width: calc(495%/1440*100);
+    margin-top: 146px;
+    margin-bottom: 200px;
+    float: right;
+  }
+  .page-services .content .engineering-wrapper .service-desc {
+    margin-left: calc(102%/1440*100);
+    margin-top: 210px;
+  }
+  .page-services .content .engineering-wrapper .intro-tile {
+    width: calc(695%/1440*100);
+    margin-left: 0;
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .engineering-wrapper .intro-tile .tile-info {
+    margin-left: 47px;
+  }
+  .page-services .content .engineering-wrapper .intro-tile.right {
+    float: right;
+  }
+  .page-services .content .engineering-wrapper .content-1 {
+    width: calc(506%/1440*100);
+    margin-right: calc(214%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 98px;
+  }
+  .page-services .content .engineering-wrapper .content-1 .mesh-bg {
+    top: -63px;
+    right: -78px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+    float: right;
+  }
+  .page-services .content .engineering-wrapper .content-2 {
+    width: calc(323%/1440*100);
+    margin-left: calc(219%/1440*100);
+    margin-top: 274px;
+    margin-bottom: 126px;
+    float: left;
+  }
+  .page-services .content .engineering-wrapper .content-2 .mesh-bg {
+    width: 562px;
+    right: auto;
+    bottom: 0;
+    height: 306px;
+    top: 0;
+    margin-top: 202px;
+    margin-left: 47.194%;
+  }
+  .page-services .content .interior-buildouts-wrapper .service-desc {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 130px auto 0;
+    width: 92.04%;
+    float: none;
+  }
+  .page-services .content .interior-buildouts-wrapper .tile.right {
+    float: right;
+  }
+  .page-services .content .interior-buildouts-wrapper .tile.middle {
+    float: none;
+    margin: 0 auto;
+    clear: both;
+  }
+  .page-services .content .interior-buildouts-wrapper .intro-tile {
+    width: calc(495%/1440*100);
+    margin-left: calc(131%/1440*100);
+    margin-bottom: 244px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-1 {
+    width: calc(410%/1440*100);
+    margin-right: calc(216%/1440*100);
+    margin-left: 0;
+    margin-top: 186px;
+    margin-bottom: 283px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-1 .mesh-bg {
+    top: 535px;
+    right: -80px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 {
+    width: calc(410%/1440*100);
+    margin-left: calc(214%/1440*100);
+    margin-top: 0;
+    margin-bottom: 222px;
+    float: left;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
+    display: block;
+    width: 540px;
+    right: auto;
+    bottom: -170px;
+    height: 313px;
+    top: auto;
+    margin-left: 45.194%;
+    display: none;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-3 {
+    width: calc(410%/1440*100);
+    margin-left: auto;
+    margin-right: calc(129%/1440*100);
+    margin-bottom: 126px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-3 .mesh-bg {
+    display: none;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-4 {
+    width: calc(495%/1440*100);
+    margin: 0 auto;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-4.middle {
+    margin-bottom: 118px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-4 .mesh-bg {
+    display: none;
+  }
+  .page-services .content .imagine-experience-wrapper .service-desc {
+    margin-left: calc(232%/1440*100);
+    margin-top: 197px;
+  }
+  .page-services .content .imagine-experience-wrapper .intro-tile {
+    width: calc(330%/1440*100);
+    margin-left: calc(253%/1440*100);
+    float: left;
+    margin-bottom: 0;
+  }
+  .page-services .content .imagine-experience-wrapper .intro-tile.right {
+    float: right;
+  }
+  .page-services .content .imagine-experience-wrapper .content-1 {
+    width: calc(566%/1440*100);
+    margin-right: calc(144%/1440*100);
+    clear: left;
+    margin-left: 0;
+    margin-top: 79px;
+  }
+  .page-services .content .imagine-experience-wrapper .content-1 .mesh-bg {
+    top: 228px;
+    right: -94px;
+    width: 332px;
+    height: 313px;
+    margin-top: 0;
+  }
+  .page-services .content .imagine-experience-wrapper .content-2 {
+    width: calc(497%/1440*100);
+    margin-left: calc(45%/1440*100);
+    margin-top: 249px;
+    margin-bottom: 216px;
+    float: left;
+  }
+  .page-services .content .imagine-experience-wrapper .content-2 .mesh-bg {
+    width: 336px;
+    height: 318px;
+    right: auto;
+    bottom: -160px;
+    top: auto;
+    margin-left: -40px;
+  }
+  .page-services .individual-service {
+    padding-top: 93px;
+    float: left;
+    width: 100%;
+    clear: both;
+  }
+  .page-services a[href="/case-studies"] {
+    width: 263px;
+    margin: 0;
+    clear: both;
+    float: right;
+    margin-right: 5.97%;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .page-services .mesh-bg {
+    height: 313px;
+  }
+  .page-services .section-header {
+    font-size: 72px;
+    margin: 242px 0 0 8.43%;
+    margin-left: calc(66%/1440*100 + 66px);
+  }
+  .page-services .all-services .tile.interior-buildouts {
+    margin-right: 13.63%;
+  }
+  .page-services .all-services .tile.imagine-experience {
+    margin-left: 11.07%;
+  }
+  .page-services .all-services .tile.team-player {
+    margin-right: 13.38%;
+  }
+  .page-services .content .tile .tile-info {
+    width: 160%;
+  }
+  .page-services .content .visualisation-wrapper .service-desc {
+    margin-top: 140px;
+  }
+  .page-services .content .interior-buildouts-wrapper .content-2 .mesh-bg {
+    display: block;
+  }
+}
+@-webkit-keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes serviceShow {
+  0% {
+    display: block;
+  }
+  1% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
+}
+@keyframes serviceHide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+  }
+  100% {
+    pointer-events: none;
+    display: none;
+  }
+}

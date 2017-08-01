@@ -1,0 +1,1100 @@
+/* repo: assembly/ - Package Version: 1.0.0 - 2017-08-01 09:07 am - User: Phoydar */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@media only screen and (min-width: 1030px) {
+  .filter-wrap {
+    z-index: 20;
+  }
+
+  .page-case-studies .case-study-svg .back-box {
+    display: block;
+    width: 3.63%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transition: opacity .5s;
+    opacity: 0;
+    -webkit-transform: translate(-161%, -7%);
+        -ms-transform: translate(-161%, -7%);
+            transform: translate(-161%, -7%);
+    cursor: pointer;
+  }
+  .page-case-studies .case-study-svg .back-box .box-cls-1 {
+    fill: #fff;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat {
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    opacity: 1;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat .main {
+    display: block;
+    position: relative;
+    transition: -webkit-transform 0.3s ease-out 0.45s;
+    transition: transform 0.3s ease-out 0.45s;
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+    pointer-events: bounding-box;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat .vertical-line {
+    transition: stroke-dashoffset .25s linear .22s;
+    stroke-dasharray: 150;
+    stroke-dashoffset: -150;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat .word-box {
+    opacity: 0;
+    transition: opacity 0.25s linear 0s;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat .text {
+    opacity: 0;
+    transition: opacity 0.25s linear 0s;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat circle {
+    transition: opacity 0.25s linear;
+    opacity: 0;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hover .main {
+    transition: -webkit-transform 0.3s ease-out 0s;
+    transition: transform 0.3s ease-out 0s;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hover circle {
+    transition: opacity 0.3s ease-out 0.2s;
+    opacity: 1;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hover .vertical-line {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset .25s linear 0.5s;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hover .word-box,
+  .page-case-studies .case-study-svg .case-study-svg-cat.hover .text {
+    transition: opacity 0.3s ease-out 0.55s;
+    opacity: 1;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.inactive {
+    opacity: 0;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.activate.super-hover {
+    -webkit-animation-name: "showApproachSVGSuper";
+            animation-name: "showApproachSVGSuper";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.activate.hospitality-hover {
+    -webkit-animation-name: "showApproachSVGHospitality";
+            animation-name: "showApproachSVGHospitality";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.activate.experiential-hover {
+    -webkit-animation-name: "showApproachSVGExperiential";
+            animation-name: "showApproachSVGExperiential";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.activate.sporting-hover {
+    -webkit-animation-name: "showApproachSVGSporting";
+            animation-name: "showApproachSVGSporting";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hide.super-hover {
+    -webkit-animation-name: "hideApproachSVGSuper";
+            animation-name: "hideApproachSVGSuper";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hide.hospitality-hover {
+    -webkit-animation-name: "hideApproachSVGHospitality";
+            animation-name: "hideApproachSVGHospitality";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hide.experiential-hover {
+    -webkit-animation-name: "hideApproachSVGExperiential";
+            animation-name: "hideApproachSVGExperiential";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.hide.sporting-hover {
+    -webkit-animation-name: "hideApproachSVGSporting";
+            animation-name: "hideApproachSVGSporting";
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.active.super-hover {
+    -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+            transform: translate3d(-40%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.active.hospitality-hover {
+    -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+            transform: translate3d(103%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.active.experiential-hover {
+    -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+            transform: translate3d(59%, -38%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg .case-study-svg-cat.active.sporting-hover {
+    -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+            transform: translate3d(-96%, -33%, 0) scale(1);
+  }
+  @-webkit-keyframes showApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+  }
+  @keyframes showApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+  }
+  @keyframes showApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+  }
+  @keyframes showApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+  }
+  @keyframes showApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideInactiveApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideInactiveApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideInactiveApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideInactiveApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideInactiveApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideInactiveApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes hideInactiveApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @keyframes hideInactiveApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.6);
+              transform: translate3d(0, 0, 0) scale(0.6);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showInactiveApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+  }
+  @keyframes showInactiveApproachSVGSuper {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(0.6);
+              transform: translate3d(-40%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+              transform: translate3d(-40%, 30%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showInactiveApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+  }
+  @keyframes showInactiveApproachSVGHospitality {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(0.6);
+              transform: translate3d(103%, 30%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+              transform: translate3d(103%, 30%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showInactiveApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+  }
+  @keyframes showInactiveApproachSVGExperiential {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(0.6);
+              transform: translate3d(59%, -38%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+              transform: translate3d(59%, -38%, 0) scale(1);
+    }
+  }
+  @-webkit-keyframes showInactiveApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+  }
+  @keyframes showInactiveApproachSVGSporting {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+    25% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(0.6);
+              transform: translate3d(-96%, -33%, 0) scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+              transform: translate3d(-96%, -33%, 0) scale(1);
+    }
+  }
+  .page-case-studies .case-study-svg.active .back-box {
+    opacity: 1;
+  }
+  .page-case-studies .case-study-svg.active .inactive.super-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+            transform: translate3d(-40%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .inactive.hospitality-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+            transform: translate3d(103%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .inactive.experiential-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+            transform: translate3d(59%, -38%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .inactive.sporting-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+            transform: translate3d(-96%, -33%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .activate.super-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    opacity: 1;
+    -webkit-transform: translate3d(-40%, 30%, 0) scale(1);
+            transform: translate3d(-40%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .activate.hospitality-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    opacity: 1;
+    -webkit-transform: translate3d(103%, 30%, 0) scale(1);
+            transform: translate3d(103%, 30%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .activate.experiential-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    opacity: 1;
+    -webkit-transform: translate3d(59%, -38%, 0) scale(1);
+            transform: translate3d(59%, -38%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.active .activate.sporting-hover {
+    -webkit-animation-name: none;
+            animation-name: none;
+    opacity: 1;
+    -webkit-transform: translate3d(-96%, -33%, 0) scale(1);
+            transform: translate3d(-96%, -33%, 0) scale(1);
+  }
+  .page-case-studies .case-study-svg.show .case-study-svg-cat {
+    pointer-events: auto;
+  }
+}
+.content .content-header {
+  position: relative;
+  padding-bottom: 20.77%;
+}
+.content .content-header .mesh-bg {
+  margin-top: calc(97%/414*100);
+  margin-left: 1%;
+  height: 88%;
+  width: calc(362%/414*100);
+}
+@media screen and (min-width: 414px) {
+  .content .content-header .mesh-bg {
+    height: 80%;
+  }
+}
+
+.group {
+  position: relative;
+}
+
+.case-study-landing[data-kit-type="custom"] .group-1 .mesh-bg {
+  top: 320px;
+  right: 0;
+  width: 225px;
+  height: 600px;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="custom"] .group-1 .mesh-bg {
+    top: 209px;
+    right: 9.5%;
+    width: calc(779%/1440*100);
+    height: calc(678%/1440*100);
+  }
+}
+.case-study-landing[data-kit-type="custom"] .group-3 .mesh-bg {
+  top: 130px;
+  left: 6px;
+  right: auto;
+  width: 319px;
+  height: 342px;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="custom"] .group-3 .mesh-bg {
+    top: 12%;
+    left: 3.5%;
+    right: auto;
+    width: 45%;
+    height: 66%;
+  }
+}
+
+.case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
+  top: calc(88%/414*100);
+  width: calc(265%/414*100);
+  height: 78%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
+    top: 50%;
+    width: 40%;
+    height: 35%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-1 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-1 .mesh-bg {
+    top: 48%;
+    width: calc(500%/1440*100);
+    height: 44%;
+  }
+}
+.case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
+  top: 18%;
+  right: 4%;
+  width: 88%;
+  height: 110%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
+    top: 0;
+    right: 9.5%;
+    width: 60%;
+    height: 110%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-3 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-3 .mesh-bg {
+    right: 0.5%;
+    width: 63%;
+    height: 80%;
+  }
+}
+.case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+.case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
+  top: 56%;
+  height: 37%;
+}
+@media screen and (min-width: 768px) {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
+    top: 36%;
+    width: 40%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .case-study-landing[data-kit-type="modular"] .group-4 .mesh-bg,
+  .case-study-category[data-kit-type="modular"] .group-4 .mesh-bg {
+    display: none;
+  }
+}
